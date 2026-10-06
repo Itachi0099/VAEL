@@ -67,7 +67,12 @@ export class ClimateFabricRules {
       }
 
       if (garment.breathability === 'high') {
-        comfortNotes.push(`High breathability (${garment.material}) supports natural airflow in hot conditions.`);
+        const isTropicalWool = garment.material.toLowerCase().includes('tropical') && garment.material.toLowerCase().includes('wool');
+        if (isTropicalWool) {
+          comfortNotes.push(`High-twist tropical wool weave provides active thermal regulation and crisp ventilation up to 28°C.`);
+        } else {
+          comfortNotes.push(`High breathability (${garment.material}) supports natural airflow in hot conditions.`);
+        }
       }
 
       if (humidity === 'high' && garment.humidityTolerance === 'dry-only') {

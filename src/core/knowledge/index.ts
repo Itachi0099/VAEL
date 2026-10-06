@@ -11,6 +11,7 @@ import { Garment } from '../domain/fashion';
 export * from './color-theory';
 export * from './silhouettes';
 export * from './climate';
+export * from './layering';
 export * from './styles.data';
 export * from './hairstyles.data';
 export * from './beards.data';

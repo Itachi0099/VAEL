@@ -274,6 +274,7 @@ export class VaelStylingEngine {
     const top = garments.find((g) => g.category === 'top');
     const bottom = garments.find((g) => g.category === 'bottom');
     const outer = garments.find((g) => g.category === 'outerwear');
+    const onePiece = garments.find((g) => g.category === 'one-piece');
 
     // 1. Style Vector Affinity (Weight: 3.5)
     const styleFamily = knowledgeBase.getStyleBySlug(outfit.primaryStyleSlug);
@@ -292,7 +293,7 @@ export class VaelStylingEngine {
     }
 
     // 2. Silhouette & Proportion Harmony (Weight: 3.0)
-    const silEval = SilhouetteProportionRules.evaluate(top, bottom, outer, preferences.fitProportions);
+    const silEval = SilhouetteProportionRules.evaluate(top, bottom, outer, preferences.fitProportions, onePiece);
     factors.push({
       category: 'silhouette_balance',
       weight: 3.0,
@@ -822,6 +823,108 @@ export class VaelStylingEngine {
       silhouetteBalance: 'Longline vertical dignity with clean structured collar line',
       colorStory: 'Raw silk black outer framing ivory and ecru organic layers',
     });
+
+    // Outfit 9: R1 Feminine Minimal Tailored Evening Look
+    const dress9 = knowledgeBase.getGarmentBySlug('bias-cut-silk-slip-dress-black');
+    const outer9 = knowledgeBase.getGarmentBySlug('hourglass-tailored-blazer-black');
+    const shoes9 = knowledgeBase.getGarmentBySlug('pointed-slingback-pumps-black');
+    const bag9 = knowledgeBase.getGarmentBySlug('sculpted-leather-shoulder-bag-black');
+    const earrings9 = knowledgeBase.getGarmentBySlug('chunky-gold-hoop-earrings-18k');
+    if (dress9 && shoes9) {
+      outfits.push({
+        id: 'outfit_feminine_slip_evening_01',
+        title: 'Sculpted Hourglass & Silk Slip Monolith',
+        description: 'Fluid bias-cut silk charmeuse column balanced by razor-sharp hourglass tailoring, pointed slingbacks, and warm gold accents.',
+        items: [
+          { garment: dress9, layerPosition: 0, stylingNote: 'Continuous fluid column beneath tailored frame' },
+          ...(outer9 ? [{ garment: outer9, layerPosition: 1, stylingNote: 'Sculpted waist definition with open front' }] : []),
+          { garment: shoes9, layerPosition: 0, stylingNote: 'Elongated toe line' },
+          ...(bag9 ? [{ garment: bag9, layerPosition: 0, stylingNote: 'Underarm architectural carry' }] : []),
+          ...(earrings9 ? [{ garment: earrings9, layerPosition: 0, stylingNote: 'Subtle warm gold illumination' }] : []),
+        ],
+        primaryStyleSlug: 'minimal',
+        formality: 4,
+        compatibleOccasions: ['dinner', 'date', 'social', 'wedding-guest'],
+        seasonality: ['all-season', 'spring', 'fall'],
+        silhouetteBalance: 'Cinched architectural waist framing a liquid bias-cut silk column',
+        colorStory: 'Monochromatic obsidian black enriched with 18k gold vermeil hardware',
+      });
+    }
+
+    // Outfit 10: R1 Smart Casual / Workplace Shirt Dress
+    const dress10 = knowledgeBase.getGarmentBySlug('architectural-poplin-shirt-dress-white');
+    const shoes10 = knowledgeBase.getGarmentBySlug('unstructured-leather-ballet-flats-black');
+    const belt10 = knowledgeBase.getGarmentBySlug('fine-calfskin-belt-gold-buckle-black');
+    const sunglasses10 = knowledgeBase.getGarmentBySlug('cat-eye-acetate-sunglasses-black');
+    if (dress10 && shoes10) {
+      outfits.push({
+        id: 'outfit_poplin_shirt_dress_01',
+        title: 'Architectural Poplin & Glove Leather Cadence',
+        description: 'High-density crisp cotton poplin midi shirt dress cinched with fine calfskin, grounded with minimalist glove-leather ballet flats.',
+        items: [
+          { garment: dress10, layerPosition: 0, stylingNote: 'Sharp collar spread, rolled sleeves' },
+          { garment: shoes10, layerPosition: 0, stylingNote: 'Unstructured flat grounding' },
+          ...(belt10 ? [{ garment: belt10, layerPosition: 0, stylingNote: 'Define waistline architecture' }] : []),
+          ...(sunglasses10 ? [{ garment: sunglasses10, layerPosition: 0, stylingNote: 'Beveled geometric uplift' }] : []),
+        ],
+        primaryStyleSlug: 'smart-casual',
+        formality: 3,
+        compatibleOccasions: ['office', 'casual', 'social', 'travel'],
+        seasonality: ['spring', 'summer', 'fall'],
+        silhouetteBalance: 'Volumetric crisp pleated shirt skirt grounded with sleek ballet flats',
+        colorStory: 'Stark optic white anchored by fine black calfskin and brass hardware',
+      });
+    }
+
+    // Outfit 11: R1 Pleated Midi Skirt & Draped Blouse (Classic / Dark Academia / Smart Casual)
+    const top11 = knowledgeBase.getGarmentBySlug('asymmetric-draped-wrap-blouse-ecru');
+    const skirt11 = knowledgeBase.getGarmentBySlug('knife-pleated-midi-skirt-navy');
+    const boots11 = knowledgeBase.getGarmentBySlug('straight-shaft-riding-boots-brown');
+    const scarf11 = knowledgeBase.getGarmentBySlug('printed-silk-twill-scarf-70cm');
+    if (top11 && skirt11 && boots11) {
+      outfits.push({
+        id: 'outfit_pleated_skirt_riding_boot_01',
+        title: 'Pleated Wool Gabardine & Tuscan Leather',
+        description: 'Fluid ecru wrap blouse tucked into knife-pleated midnight navy wool gabardine, grounded by tall straight-shaft riding boots.',
+        items: [
+          { garment: top11, layerPosition: 0, stylingNote: 'Tucked cleanly into waistband' },
+          { garment: skirt11, layerPosition: 0, stylingNote: 'Sharp knife pleats breaking over boot tops' },
+          { garment: boots11, layerPosition: 0, stylingNote: 'Seamless vertical lower leg line' },
+          ...(scarf11 ? [{ garment: scarf11, layerPosition: 0, stylingNote: 'Tied close at neck for heritage poise' }] : []),
+        ],
+        primaryStyleSlug: 'old-money',
+        formality: 3,
+        compatibleOccasions: ['office', 'dinner', 'job-interview', 'social'],
+        seasonality: ['fall', 'winter', 'spring'],
+        silhouetteBalance: 'Draped surplice blouse anchored by structured pleated A-line and tall boots',
+        colorStory: 'Ecru and midnight navy grounded by cognac Tuscan leather and silk twill',
+      });
+    }
+
+    // Outfit 12: R1 All-Weather Wet/Cold Transit Ensemble
+    const top12 = knowledgeBase.getGarmentBySlug('merino-crewneck-heather-grey') || knowledgeBase.getAllGarments()[0];
+    const bot12 = knowledgeBase.getGarmentBySlug('selvedge-denim-raw-indigo') || knowledgeBase.getAllGarments()[1];
+    const shoes12 = knowledgeBase.getGarmentBySlug('waterproof-lug-sole-chelsea-boots-black');
+    const outer12 = knowledgeBase.getGarmentBySlug('waterproof-commuter-parka-black');
+    if (shoes12) {
+      outfits.push({
+        id: 'outfit_waterproof_cold_transit_01',
+        title: 'Lug-Sole Waterproof Urban Transit',
+        description: 'Dense merino knit and heavy selvedge denim shielded by a waterproof commuter parka and Vibram lug-sole chelseas.',
+        items: [
+          { garment: top12, layerPosition: 0 },
+          ...(outer12 ? [{ garment: outer12, layerPosition: 1, stylingNote: 'Fully zipped for moisture barrier' }] : []),
+          { garment: bot12, layerPosition: 0, stylingNote: 'Slight roll above boot collar' },
+          { garment: shoes12, layerPosition: 0, stylingNote: 'Waterproof cleated traction' },
+        ],
+        primaryStyleSlug: 'techwear',
+        formality: 2,
+        compatibleOccasions: ['casual', 'travel', 'office'],
+        seasonality: ['fall', 'winter', 'spring'],
+        silhouetteBalance: 'Shielded straight utility with solid high-traction base',
+        colorStory: 'Matte black, heather grey, and deep raw indigo',
+      });
+    }
 
     return outfits;
   }

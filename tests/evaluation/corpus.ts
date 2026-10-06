@@ -1649,4 +1649,244 @@ export const EVALUATION_CORPUS: EvaluationScenario[] = [
       },
     ],
   },
+  // =========================================================================
+  // R1 EXPANSION SCENARIOS (41 - 45)
+  // =========================================================================
+  {
+    id: 'case_41_feminine_slip_evening_dinner',
+    name: 'Feminine Tailored Evening Dinner Look (R1 Expansion)',
+    category: 'occasion_formality',
+    description: 'Feminine evening dinner query. System recommends monolithic silk slip column balanced by structured hourglass tailoring and slingbacks.',
+    user: {
+      id: 'eval_user_41',
+      name: 'Evening Diner',
+      handle: 'evening_diner',
+      createdAt: '2026-10-01',
+      styleProfile: {
+        id: 'sp_41',
+        userId: 'eval_user_41',
+        dominantAestheticSlugs: ['minimal', 'smart-casual'],
+        styleVector: {
+          ...BASE_STYLE_VECTOR,
+          genderCoding: 'feminine',
+        },
+        preferences: {
+          ...BASE_PREFERENCES,
+          preferredStyleSlugs: ['minimal', 'smart-casual'],
+          genderCodingDirection: 'feminine',
+        },
+        feedbackProfile: BASE_FEEDBACK,
+        updatedAt: '2026-10-01',
+      },
+    },
+    context: {
+      occasion: knowledgeBase.getOccasionBySlug('dinner')!,
+      weather: 'mild',
+      temperatureCelsius: 20,
+      targetFormality: 4,
+    },
+    assertions: (topThree) => [
+      {
+        passed: [topThree.safe, topThree.bestMatch, topThree.stretch].some((look) =>
+          look.outfit.item.items.some((i) => i.garment.category === 'one-piece' || i.garment.genderCoding === 'feminine')
+        ),
+        message: 'Recommendations must include feminine/one-piece tailoring options.',
+      },
+      {
+        passed: topThree.bestMatch.outfit.item.items.some((i) => i.garment.category === 'footwear'),
+        message: 'Must include complete footwear anchor.',
+      },
+    ],
+  },
+  {
+    id: 'case_42_feminine_pleated_skirt_workplace',
+    name: 'Feminine Pleated Midi Skirt Professional Presence (R1 Expansion)',
+    category: 'occasion_formality',
+    description: 'Workplace office context with feminine styling direction. Validates pleated wool midi skirt with tailored structure.',
+    user: {
+      id: 'eval_user_42',
+      name: 'Professional Stylist',
+      handle: 'prof_stylist',
+      createdAt: '2026-10-01',
+      styleProfile: {
+        id: 'sp_42',
+        userId: 'eval_user_42',
+        dominantAestheticSlugs: ['old-money', 'smart-casual'],
+        styleVector: {
+          ...BASE_STYLE_VECTOR,
+          genderCoding: 'feminine',
+        },
+        preferences: {
+          ...BASE_PREFERENCES,
+          preferredStyleSlugs: ['old-money', 'smart-casual'],
+          genderCodingDirection: 'feminine',
+        },
+        feedbackProfile: BASE_FEEDBACK,
+        updatedAt: '2026-10-01',
+      },
+    },
+    context: {
+      occasion: knowledgeBase.getOccasionBySlug('office')!,
+      weather: 'mild',
+      temperatureCelsius: 16,
+      targetFormality: 3,
+    },
+    assertions: (topThree) => [
+      {
+        passed: [topThree.safe, topThree.bestMatch, topThree.stretch].some((look) =>
+          look.outfit.item.items.some((i) => i.garment.subcategory === 'skirt' || i.garment.subcategory === 'dress')
+        ),
+        message: 'Presents feminine skirt or dress silhouette options for workplace.',
+      },
+      {
+        passed: topThree.bestMatch.outfit.item.formality >= 3 && topThree.bestMatch.outfit.item.formality <= 4,
+        message: 'Maintains professional formality band 3-4.',
+      },
+    ],
+  },
+  {
+    id: 'case_43_tropical_wool_warm_temperature',
+    name: 'Tropical Wool Permissible in Warm Temperatures (24°C)',
+    category: 'physics_climate',
+    description: 'High-twist tropical wool is permitted in warm temperatures (up to 28°C) due to high breathability and weave porosity.',
+    user: {
+      id: 'eval_user_43',
+      name: 'Warm Weather Guest',
+      handle: 'warm_guest',
+      createdAt: '2026-10-01',
+      styleProfile: {
+        id: 'sp_43',
+        userId: 'eval_user_43',
+        dominantAestheticSlugs: ['korean-minimal', 'smart-casual'],
+        styleVector: BASE_STYLE_VECTOR,
+        preferences: {
+          ...BASE_PREFERENCES,
+          preferredStyleSlugs: ['korean-minimal', 'smart-casual'],
+        },
+        feedbackProfile: BASE_FEEDBACK,
+        updatedAt: '2026-10-01',
+      },
+    },
+    context: {
+      occasion: knowledgeBase.getOccasionBySlug('dinner')!,
+      weather: 'warm',
+      temperatureCelsius: 24,
+      isWeatherConfirmed: true,
+      targetFormality: 3,
+    },
+    assertions: (topThree) => [
+      {
+        passed: topThree.bestMatch.outfit.item.items.every(
+          (i) => !(i.garment.fabricWeight === 'heavyweight' && i.garment.material.toLowerCase().includes('fleece'))
+        ),
+        message: 'No heavy fleece or unventilated winter outerwear at 24°C.',
+      },
+      {
+        passed: topThree.bestMatch.confidence.state === 'STRONG' || topThree.bestMatch.confidence.state === 'GOOD',
+        message: 'Confirmed climate yields high confidence.',
+      },
+    ],
+  },
+  {
+    id: 'case_44_lug_sole_cold_rain_transit',
+    name: 'Lug-Sole Waterproof Traction in Cold Rain (6°C)',
+    category: 'physics_climate',
+    description: 'Cold rainy city commute. System must prioritize waterproof footwear and shield against wet conditions without open footwear.',
+    user: {
+      id: 'eval_user_44',
+      name: 'Rainy Commuter',
+      handle: 'rain_commute',
+      createdAt: '2026-10-01',
+      styleProfile: {
+        id: 'sp_44',
+        userId: 'eval_user_44',
+        dominantAestheticSlugs: ['techwear', 'minimal'],
+        styleVector: BASE_STYLE_VECTOR,
+        preferences: {
+          ...BASE_PREFERENCES,
+          preferredStyleSlugs: ['techwear', 'minimal'],
+        },
+        feedbackProfile: BASE_FEEDBACK,
+        updatedAt: '2026-10-01',
+      },
+    },
+    context: {
+      occasion: knowledgeBase.getOccasionBySlug('casual')!,
+      weather: 'rainy',
+      condition: 'rain',
+      temperatureCelsius: 6,
+      isWeatherConfirmed: true,
+      targetFormality: 2,
+    },
+    assertions: (topThree) => [
+      {
+        passed: !topThree.bestMatch.outfit.item.items.some(
+          (i) => i.garment.subcategory === 'sandals' || i.garment.subcategory === 'ballet-flat'
+        ),
+        message: 'Open sandals and unlined ballet flats vetoed in 6°C rain.',
+      },
+      {
+        passed: [topThree.safe, topThree.bestMatch, topThree.stretch].some((look) =>
+          look.outfit.item.items.some((i) => i.garment.waterResistance === 'waterproof' || i.garment.subcategory === 'boot')
+        ),
+        message: 'Protective waterproof boots or water-resistant footwear recommended.',
+      },
+    ],
+  },
+  {
+    id: 'case_45_complete_look_composition_integrity',
+    name: 'Complete Look Structural Composition Verification',
+    category: 'silhouette_proportions',
+    description: 'Ensures that every recommended look meets complete editorial integrity: Foundation (Top+Bottom or OnePiece) + Footwear + max 3 accessories.',
+    user: {
+      id: 'eval_user_45',
+      name: 'Ensemble Verifier',
+      handle: 'ensemble_verifier',
+      createdAt: '2026-10-01',
+      styleProfile: {
+        id: 'sp_45',
+        userId: 'eval_user_45',
+        dominantAestheticSlugs: ['minimal', 'smart-casual', 'old-money'],
+        styleVector: BASE_STYLE_VECTOR,
+        preferences: BASE_PREFERENCES,
+        feedbackProfile: BASE_FEEDBACK,
+        updatedAt: '2026-10-01',
+      },
+    },
+    context: {
+      occasion: knowledgeBase.getOccasionBySlug('dinner')!,
+      weather: 'mild',
+      targetFormality: 3,
+    },
+    assertions: (topThree) => {
+      const looks = [topThree.safe, topThree.bestMatch, topThree.stretch];
+      const allHaveFootwear = looks.every((l) =>
+        l.outfit.item.items.some((i) => i.garment.category === 'footwear')
+      );
+      const allHaveFoundation = looks.every((l) => {
+        const garments = l.outfit.item.items.map((i) => i.garment);
+        const hasTopBottom = garments.some((g) => g.category === 'top') && garments.some((g) => g.category === 'bottom');
+        const hasOnePiece = garments.some((g) => g.category === 'one-piece');
+        return hasTopBottom || hasOnePiece;
+      });
+      const allAccessoryCapPassed = looks.every((l) =>
+        l.outfit.item.items.filter((i) => i.garment.category === 'accessory').length <= 3
+      );
+      return [
+        {
+          passed: allHaveFootwear,
+          message: 'Every recommended look contains a dedicated footwear anchor.',
+        },
+        {
+          passed: allHaveFoundation,
+          message: 'Every recommended look contains complete foundation (top+bottom or one-piece).',
+        },
+        {
+          passed: allAccessoryCapPassed,
+          message: 'Accessories are capped at maximum 3 per look for editorial clarity.',
+        },
+      ];
+    },
+  },
 ];
+

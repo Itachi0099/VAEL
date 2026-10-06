@@ -23,8 +23,39 @@ export class SilhouetteProportionRules {
     top?: Garment,
     bottom?: Garment,
     outer?: Garment,
-    userFitPrefs?: FitProportionProfile
+    userFitPrefs?: FitProportionProfile,
+    onePiece?: Garment
   ): SilhouetteEvaluation {
+    // If a one-piece (dress/jumpsuit) is present, evaluate its standalone or layered proportion
+    if (onePiece) {
+      const isOuterLong = outer && (outer.length === 'extended' || outer.silhouette.includes('longline'));
+      const isOuterCropped = outer && (outer.length === 'cropped' || outer.silhouette.includes('cropped'));
+      const advice: string[] = [];
+      let harmonyScore = 0.92;
+      let structureDescription = `Unified ${onePiece.silhouette.replace(/-/g, ' ')} column`;
+
+      if (outer) {
+        if (isOuterLong) {
+          harmonyScore = 0.95;
+          structureDescription = 'Monolithic vertical cadence: longline outer architectural frame over full-length dress';
+          advice.push('Leaves outer front unfastened to maintain visual vertical movement.');
+        } else if (isOuterCropped) {
+          harmonyScore = 0.94;
+          structureDescription = 'High waistline definition: cropped jacket breaks and elevates continuous one-piece line';
+          advice.push('Accentuates natural high waist break against fluid dress line.');
+        } else {
+          structureDescription = 'Cohesive layered silhouette with balanced mid-length outer structure';
+        }
+      }
+
+      return {
+        harmonyScore,
+        isProportional: true,
+        structureDescription,
+        advice,
+      };
+    }
+
     if (!top || !bottom) {
       return {
         harmonyScore: 0.7,

@@ -38,6 +38,13 @@ export const STYLE_FAMILIES: StyleFamily[] = [
       visualCharacter: ['architectural', 'austere', 'precise', 'uncluttered'],
     },
     characteristicGarments: ['minimal-leather-sneaker', 'tailored-slacks', 'mockneck-knit', 'clean-overcoat'],
+    antiSignals: [
+      'graphic prints or prominent logos',
+      'heavily distressed fabrics or raw frayed hems',
+      'loud primary chromatic clashes',
+      'excessive ornamental hardware, chains, or studs',
+      'slouchy unstructured loungewear'
+    ],
     relatedStyleSlugs: ['korean-minimal', 'smart-casual'],
     keyInspirations: ['Jil Sander', 'Lemaire', 'The Row'],
     timelessOrTrend: 'TIMELESS',
@@ -82,6 +89,13 @@ export const STYLE_FAMILIES: StyleFamily[] = [
       visualCharacter: ['fluid', 'draped', 'relaxed-tailoring', 'tactile'],
     },
     characteristicGarments: ['wide-pleated-trousers', 'boxy-tee', 'deconstructed-blazer', 'chunky-derbies'],
+    antiSignals: [
+      'rigid stiff suiting canvas',
+      'skinny spray-on denim or tapered joggers',
+      'harsh contrast neons',
+      'corporate executive ties or formal evening studs',
+      'sharp military pocket webbing'
+    ],
     relatedStyleSlugs: ['minimal', 'smart-casual'],
     keyInspirations: ['Ader Error', 'Nothing Written', 'Solid Homme'],
     timelessOrTrend: 'TREND',
@@ -126,6 +140,13 @@ export const STYLE_FAMILIES: StyleFamily[] = [
       visualCharacter: ['approachable', 'sharp', 'balanced', 'versatile'],
     },
     characteristicGarments: ['knit-polo', 'oxford-shirt', 'tailored-chinos', 'penny-loafers'],
+    antiSignals: [
+      'athletic gymwear, track pants, or graphic hoodies',
+      'extreme deconstructed distressing or raw hems',
+      'black-tie evening tuxedos or opera pumps',
+      'tactical molle webbing or heavy cargo pouches',
+      'high-sheen plastic outerwear'
+    ],
     relatedStyleSlugs: ['minimal', 'old-money'],
     keyInspirations: ['Brunello Cucinelli', 'Club Monaco', "Drake's"],
     timelessOrTrend: 'TIMELESS',
@@ -170,6 +191,13 @@ export const STYLE_FAMILIES: StyleFamily[] = [
       visualCharacter: ['patrimonial', 'understated', 'classic', 'patina'],
     },
     characteristicGarments: ['cable-knit-cashmere', 'wool-blazer', 'pleated-wool-trousers', 'horsebit-loafers'],
+    antiSignals: [
+      'synthetic technical shells (nylon gore-tex)',
+      'loud streetwear graphics and logo tees',
+      'chunky rubber platform soles or foam slip-ons',
+      'distressed acid-wash denim',
+      'cybernetic hardware or utilitarian webbing'
+    ],
     relatedStyleSlugs: ['smart-casual', 'formal'],
     keyInspirations: ['Ralph Lauren Purple Label', 'Loro Piana', 'Savile Row'],
     timelessOrTrend: 'TIMELESS',
@@ -214,6 +242,12 @@ export const STYLE_FAMILIES: StyleFamily[] = [
       visualCharacter: ['bold', 'volumetric', 'graphic', 'rebellious'],
     },
     characteristicGarments: ['heavy-hoodie', 'carpenter-pants', 'skate-sneakers', 'crossbody-bag'],
+    antiSignals: [
+      'stiff corporate suiting ties or dinner jackets',
+      'high-heeled patent stilettos or formal opera pumps',
+      'conservative equestrian tweed jackets',
+      'dainty fragile lace blouses'
+    ],
     relatedStyleSlugs: ['techwear', 'workwear'],
     keyInspirations: ['Stüssy', 'Fear of God', 'Supreme'],
     timelessOrTrend: 'TREND',
@@ -258,6 +292,12 @@ export const STYLE_FAMILIES: StyleFamily[] = [
       visualCharacter: ['rugged', 'tactile', 'grounded', 'durable'],
     },
     characteristicGarments: ['duck-canvas-chore-coat', 'selvedge-denim', 'flannel-shirt', 'service-boots'],
+    antiSignals: [
+      'fragile liquid silk or sheer chiffon',
+      'patent black-tie evening shoes',
+      'sleek bonded neoprene technical membranes',
+      'tailored satin dinner lapels'
+    ],
     relatedStyleSlugs: ['vintage', 'streetwear'],
     keyInspirations: ['Carhartt WIP', 'Engineered Garments', 'Post Overalls'],
     timelessOrTrend: 'TIMELESS',
@@ -302,6 +342,12 @@ export const STYLE_FAMILIES: StyleFamily[] = [
       visualCharacter: ['sleek', 'armored', 'functional', 'futuristic'],
     },
     characteristicGarments: ['technical-shell', 'articulated-cargos', 'trail-runners', 'messenger-bag'],
+    antiSignals: [
+      'vintage hand-knit cable sweaters or tweed blazers',
+      'romantic floral prints or pastel ruffles',
+      'delicate thin-soled loafers or suede espadrilles',
+      'classic heritage wax canvas jackets'
+    ],
     relatedStyleSlugs: ['streetwear', 'minimal'],
     keyInspirations: ['Acronym', "Arc'teryx Veilance", 'Stone Island Shadow Project'],
     timelessOrTrend: 'TREND',
@@ -346,6 +392,13 @@ export const STYLE_FAMILIES: StyleFamily[] = [
       visualCharacter: ['scholarly', 'nostalgic', 'moody', 'intellectual'],
     },
     characteristicGarments: ['tweed-blazer', 'corduroy-trousers', 'lambswool-scarf', 'oxford-shoes'],
+    antiSignals: [
+      'bright synthetic neon activewear',
+      'futuristic techwear webbing or metallic accents',
+      'beachwear, espadrilles, or flip-flops',
+      'ultra-minimalist stark white sneakers',
+      'boxy graphic skate tees'
+    ],
     relatedStyleSlugs: ['old-money', 'vintage'],
     keyInspirations: ['Donna Tartt aesthetic', 'Margaret Howell', 'Boglioli'],
     timelessOrTrend: 'TIMELESS',
@@ -390,6 +443,13 @@ export const STYLE_FAMILIES: StyleFamily[] = [
       visualCharacter: ['eccentric', 'archival', 'tactile', 'personal'],
     },
     characteristicGarments: ['aged-leather-jacket', 'faded-denim', 'retro-trainers', 'camp-collar-shirt'],
+    antiSignals: [
+      'pristine seamless synthetic performance shells',
+      'corporate executive pinstripes',
+      'ultra-sleek minimalist seamless bonded footwear',
+      'pure modern techwear membranes'
+    ],
+    eraTendencies: ['50s', '60s', '70s', '80s', '90s'],
     relatedStyleSlugs: ['workwear', 'dark-academia'],
     keyInspirations: ['Bode', 'Kapital', 'Our Legacy'],
     timelessOrTrend: 'TIMELESS',
@@ -434,6 +494,12 @@ export const STYLE_FAMILIES: StyleFamily[] = [
       visualCharacter: ['avant-garde', 'provocative', 'sculptural', 'bold'],
     },
     characteristicGarments: ['asymmetric-drape-coat', 'dropped-crotch-trousers', 'sculptural-boots', 'raw-hem-tunic'],
+    antiSignals: [
+      'conventional business-casual chinos and polos',
+      'predictable preppy cable-knits',
+      'plain athletic gym shorts',
+      'mass-market suburban department store basics'
+    ],
     relatedStyleSlugs: ['techwear', 'minimal'],
     keyInspirations: ['Rick Owens', 'Yohji Yamamoto', 'Maison Margiela'],
     timelessOrTrend: 'TREND',

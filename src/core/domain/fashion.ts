@@ -37,13 +37,22 @@ export interface Garment {
   maxTemperatureC?: number; // Maximum recommended ambient temperature in Celsius
   humidityTolerance: 'all' | 'dry-only' | 'high-humidity-friendly';
 
-  pattern: 'solid' | 'subtle-stripe' | 'houndstooth' | 'plaid' | 'graphic' | 'textured-weave';
+  pattern: 'solid' | 'subtle-stripe' | 'houndstooth' | 'plaid' | 'graphic' | 'textured-weave' | 'floral' | 'polka-dot';
   formality: FormalityLevel;
 
   // Style axis ratings for the garment
   structure: number; // 1-5
   volume: number; // 1-5
   texture: number; // 1-5
+
+  // Additional R1 reasoning attributes
+  drape?: 'fluid' | 'moderate' | 'stiff';
+  lining?: 'unlined' | 'half-lined' | 'fully-lined' | 'shearling-lined';
+  insulation?: 'none' | 'light' | 'moderate' | 'heavy';
+  ornamentation?: number; // 1-5
+  budgetTier?: 'accessible' | 'elevated' | 'investment';
+  walkabilityScore?: number; // 1-5 (for footwear)
+  metalTone?: 'silver' | 'gold' | 'brass' | 'blackened' | 'mixed'; // for accessories/jewelry
 
   modestyRating: ModestyLevel;
   genderCoding: GenderCodingDirection;

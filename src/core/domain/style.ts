@@ -27,6 +27,8 @@ export interface StyleFamily {
   styleVector: StyleVector; // 11-dimensional formal style coordinate
   attributes: StyleAttributes;
   characteristicGarments: string[]; // subcategory slugs typically associated
+  antiSignals?: string[]; // Attributes or items that strongly contradict this archetype
+  eraTendencies?: string[]; // Historic eras referenced (e.g. ['50s', '70s', '90s'])
   relatedStyleSlugs: string[];
   keyInspirations: string[];
   timelessOrTrend: 'TIMELESS' | 'TREND';
