@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { X, Check } from 'lucide-react';
 import {
   FaceShape,
@@ -75,6 +75,15 @@ export function ProfileModal({
     ...DEFAULT_PROFILE_FORM,
     ...initialData,
   });
+
+  useEffect(() => {
+    if (isOpen) {
+      setFormData({
+        ...DEFAULT_PROFILE_FORM,
+        ...initialData,
+      });
+    }
+  }, [isOpen, initialData]);
 
   if (!isOpen) return null;
 

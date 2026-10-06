@@ -712,7 +712,7 @@ export const HAIRSTYLES: HairStyle[] = [
   // 27
   {
     id: 'hair_undercut_fade_long_top',
-    name: 'Disconneced Undercut with Flow',
+    name: 'Disconnected Undercut with Flow',
     slug: 'disconnected-undercut-flow',
     description:
       'Long scissor-cut top left flowing loosely over tight clippered sides and back. High visual contrast between sleek sides and textured crown.',
