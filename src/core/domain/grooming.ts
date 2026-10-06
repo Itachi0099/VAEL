@@ -9,7 +9,9 @@ import {
   MaintenanceLevel,
   StylingDifficulty,
   FormalityLevel,
+  TimelessTrendTag,
 } from './types';
+import { GenderCodingDirection } from './style-axis';
 
 export interface HairStyle {
   id: ID;
@@ -19,15 +21,23 @@ export interface HairStyle {
   targetLength: HairLength;
   compatibleTextures: HairTexture[];
   compatibleDensities: HairDensity[];
-  compatibleFaceShapes: FaceShape[];
+  compatibleFaceShapes: FaceShape[]; // Used strictly as a SOFT signal, never a hard veto
   incompatibleFaceShapes?: FaceShape[];
   maintenance: MaintenanceLevel;
   stylingDifficulty: StylingDifficulty;
   formalityRange: [FormalityLevel, FormalityLevel];
-  compatibleStyleSlugs: string[]; // references style families e.g. 'minimal', 'streetwear'
+  compatibleStyleSlugs: string[]; // references style families
   silhouetteCharacter: 'tight' | 'balanced' | 'voluminous' | 'angular' | 'flowing';
   visualTags: string[];
   stylingTips: string[];
+  protectiveStyle?: boolean;
+  genderCoding?: GenderCodingDirection;
+
+  // Knowledge versioning
+  timelessOrTrend: TimelessTrendTag;
+  reviewDate: string;
+  createdAt: string;
+  updatedAt: string;
 }
 
 export interface BeardStyle {
@@ -44,6 +54,12 @@ export interface BeardStyle {
   formalityRange: [FormalityLevel, FormalityLevel];
   visualTags: string[];
   groomingTips: string[];
+
+  // Knowledge versioning
+  timelessOrTrend: TimelessTrendTag;
+  reviewDate: string;
+  createdAt: string;
+  updatedAt: string;
 }
 
 export interface GroomingPairing {

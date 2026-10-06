@@ -1,4 +1,5 @@
 import { ID, FitType, FormalityLevel } from './types';
+import { StyleVector } from './style-axis';
 
 export interface StyleAttributes {
   primarySilhouettes: string[]; // e.g. ['relaxed-top-wide-bottom', 'box-cut-cropped']
@@ -23,7 +24,13 @@ export interface StyleFamily {
   name: string;
   editorialSubtitle: string;
   description: string;
+  styleVector: StyleVector; // 11-dimensional formal style coordinate
   attributes: StyleAttributes;
+  characteristicGarments: string[]; // subcategory slugs typically associated
   relatedStyleSlugs: string[];
   keyInspirations: string[];
+  timelessOrTrend: 'TIMELESS' | 'TREND';
+  reviewDate: string; // ISO date format YYYY-MM-DD
+  createdAt: string;
+  updatedAt: string;
 }

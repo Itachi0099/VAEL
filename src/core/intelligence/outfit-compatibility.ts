@@ -150,6 +150,10 @@ export class OutfitCompatibilityEvaluator {
 
     const { finalScore } = computeWeightedScore(factors);
 
+    const hasVisual = !!options.visual?.body;
+    const hasPreferences = (options.preferences?.preferredStyleSlugs?.length ?? 0) > 0;
+    const hasWeather = !!options.context?.weather;
+
     return {
       id: `rec_outfit_${outfit.id}_${Date.now()}`,
       item: outfit,
@@ -158,6 +162,13 @@ export class OutfitCompatibilityEvaluator {
       reasons: Array.from(new Set(reasons)),
       cautions: cautions.length > 0 ? Array.from(new Set(cautions)) : undefined,
       stylingAdvice: Array.from(new Set(stylingAdvice)),
+      confidence: {
+        state: hasVisual && hasPreferences && hasWeather ? 'STRONG' : hasPreferences ? 'GOOD' : 'EXPLORATORY',
+        explanation: hasVisual && hasPreferences
+          ? 'Calibrated with verified proportions, style affinities, and occasion constraints.'
+          : 'Grounded in style archetype principles; personalize with body silhouette and confirmed climate.',
+        toIncreaseConfidence: !hasWeather ? 'Confirm local weather conditions to optimize thermal and fabric layering.' : undefined,
+      },
       generatedAt: new Date().toISOString(),
     };
   }

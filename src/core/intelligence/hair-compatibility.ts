@@ -151,6 +151,9 @@ export class HairCompatibilityEvaluator {
 
     const { finalScore } = computeWeightedScore(factors);
 
+    const hasVisual = !!options.visual?.hair;
+    const hasPreferences = (options.preferences?.preferredStyleSlugs?.length ?? 0) > 0;
+
     return {
       id: `rec_hair_${style.id}_${Date.now()}`,
       item: style,
@@ -159,6 +162,13 @@ export class HairCompatibilityEvaluator {
       reasons: Array.from(new Set(reasons)),
       cautions: cautions.length > 0 ? Array.from(new Set(cautions)) : undefined,
       stylingAdvice,
+      confidence: {
+        state: hasVisual && hasPreferences ? 'STRONG' : hasVisual ? 'GOOD' : 'EXPLORATORY',
+        explanation: hasVisual
+          ? 'Calibrated directly against observed hair texture, density, and maintenance comfort.'
+          : 'Based on baseline hair geometry without verified visual texture analysis.',
+        toIncreaseConfidence: hasVisual ? undefined : 'Confirm natural hair texture and density in your profile to refine cut precision.',
+      },
       generatedAt: new Date().toISOString(),
     };
   }

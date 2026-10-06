@@ -25,6 +25,19 @@ describe('Preference & Feedback Intelligence', () => {
       dislikedFits: ['tailored'],
       preferredSilhouettes: ['dropped-shoulder-fluid'],
       dislikedSilhouettes: [],
+      fitProportions: {
+        preferredFits: ['oversized', 'relaxed'],
+        dislikedFits: ['tailored'],
+        topVolume: 4,
+        bottomVolume: 4,
+        preferredSilhouettes: ['dropped-shoulder-fluid'],
+        dislikedSilhouettes: [],
+        layeringPreference: 'moderate',
+        garmentLengthPreferences: {},
+      },
+      modestyLevel: 'standard',
+      userConfirmedUndertone: 'neutral',
+      genderCodingDirection: 'androgynous',
       preferredFormalityRange: [2, 3],
       maxMaintenanceTolerance: 'moderate',
       accessoryAffinities: [],
@@ -40,6 +53,19 @@ describe('Preference & Feedback Intelligence', () => {
       dislikedFits: ['oversized'],
       preferredSilhouettes: ['traditional-tailored'],
       dislikedSilhouettes: [],
+      fitProportions: {
+        preferredFits: ['tailored', 'regular'],
+        dislikedFits: ['oversized'],
+        topVolume: 2,
+        bottomVolume: 2,
+        preferredSilhouettes: ['traditional-tailored'],
+        dislikedSilhouettes: [],
+        layeringPreference: 'moderate',
+        garmentLengthPreferences: {},
+      },
+      modestyLevel: 'standard',
+      userConfirmedUndertone: 'warm',
+      genderCodingDirection: 'masculine',
       preferredFormalityRange: [3, 5],
       maxMaintenanceTolerance: 'moderate',
       accessoryAffinities: [],
@@ -48,13 +74,13 @@ describe('Preference & Feedback Intelligence', () => {
     const recsA = recommendationService.generateHairRecommendations({
       visual: baseVisual,
       preferences: koreanPref,
-      limit: 20,
+      limit: 50,
     });
 
     const recsB = recommendationService.generateHairRecommendations({
       visual: baseVisual,
       preferences: oldMoneyPref,
-      limit: 20,
+      limit: 50,
     });
 
     const curtainsInA = recsA.recommendations.find((r) => r.item.slug === 'middle-part-curtains');

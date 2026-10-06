@@ -74,6 +74,6 @@ describe('Context and Occasion Sensitivity', () => {
     });
 
     expect(weddingOutfit.item.formality).toBeGreaterThan(casualOutfit.item.formality);
-    expect(weddingOutfit.item.compatibleOccasions).toContain('wedding');
+    expect(weddingOutfit.item.compatibleOccasions).toContain('wedding-guest');
   });
 });

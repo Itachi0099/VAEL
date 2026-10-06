@@ -10,11 +10,13 @@ import { Garment } from '../domain/fashion';
 
 export * from './color-theory';
 export * from './silhouettes';
+export * from './climate';
 export * from './styles.data';
 export * from './hairstyles.data';
 export * from './beards.data';
 export * from './occasions.data';
 export * from './garments.data';
+export * from './validator';
 
 export class FashionKnowledgeBase {
   private styles = new Map<string, StyleFamily>();
@@ -64,7 +66,19 @@ export class FashionKnowledgeBase {
   }
 
   getOccasionBySlug(slug: string): Occasion | undefined {
-    return this.occasions.get(slug);
+    if (this.occasions.has(slug)) return this.occasions.get(slug);
+    // Legacy / shorthand slug aliases
+    const aliases: Record<string, string> = {
+      'interview': 'job-interview',
+      'casual-day': 'casual',
+      'wedding': 'wedding-guest',
+      'college': 'university-college',
+    };
+    const targetSlug = aliases[slug];
+    if (targetSlug && this.occasions.has(targetSlug)) {
+      return this.occasions.get(targetSlug);
+    }
+    return undefined;
   }
 
   // --- GARMENTS ---

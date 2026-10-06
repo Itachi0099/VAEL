@@ -69,3 +69,9 @@ export type WeatherCondition =
 export type MaintenanceLevel = 'minimal' | 'moderate' | 'high';
 
 export type StylingDifficulty = 'easy' | 'moderate' | 'advanced';
+
+export type TimelessTrendTag = 'TIMELESS' | 'TREND';
+
+export type ModestyLevel = 'unrestricted' | 'low-coverage' | 'standard' | 'high-coverage';
+
+export type UndertonePreference = 'warm' | 'cool' | 'neutral' | 'unspecified';

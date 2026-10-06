@@ -1,6 +1,29 @@
-import { ID, FitType, FormalityLevel, MaintenanceLevel } from './types';
+import {
+  ID,
+  FitType,
+  FormalityLevel,
+  MaintenanceLevel,
+  ModestyLevel,
+  UndertonePreference,
+} from './types';
 import { VisualProfile } from './visual';
 import { Feedback } from './feedback';
+import { StyleVector, GenderCodingDirection } from './style-axis';
+import { EvidenceSignal } from './evidence';
+
+export interface FitProportionProfile {
+  preferredFits: FitType[];
+  dislikedFits: FitType[];
+  topVolume: number; // 1 (close/fitted) to 5 (oversized/voluminous)
+  bottomVolume: number; // 1 (slim/fitted) to 5 (wide/draped)
+  preferredSilhouettes: string[];
+  dislikedSilhouettes: string[];
+  layeringPreference: 'minimal' | 'moderate' | 'complex';
+  garmentLengthPreferences: {
+    top?: 'cropped' | 'regular' | 'extended';
+    bottom?: 'ankle' | 'regular' | 'full-break';
+  };
+}
 
 export interface PreferenceProfile {
   preferredStyleSlugs: string[];
@@ -11,6 +34,10 @@ export interface PreferenceProfile {
   dislikedFits: FitType[];
   preferredSilhouettes: string[];
   dislikedSilhouettes: string[];
+  fitProportions: FitProportionProfile;
+  modestyLevel: ModestyLevel;
+  userConfirmedUndertone: UndertonePreference;
+  genderCodingDirection: GenderCodingDirection;
   preferredFormalityRange: [FormalityLevel, FormalityLevel];
   maxMaintenanceTolerance: MaintenanceLevel;
   budgetTier?: 'accessible' | 'elevated' | 'investment';
@@ -24,14 +51,29 @@ export interface FeedbackProfile {
   learnedColorAffinities: Record<string, number>; // color -> score offset [-1.0, 1.0]
   learnedSilhouetteAffinities: Record<string, number>;
   learnedFitAffinities: Record<string, number>;
+  repeatPassCount: {
+    oversized?: number;
+    brightColors?: number;
+    tailored?: number;
+    highMaintenance?: number;
+    [key: string]: number | undefined;
+  };
 }
 
 export interface StyleProfile {
   id: ID;
   userId: ID;
   dominantAestheticSlugs: string[];
+  styleVector: StyleVector;
   preferences: PreferenceProfile;
   feedbackProfile: FeedbackProfile;
+  evidenceSignals?: {
+    hairTexture?: EvidenceSignal<string>;
+    faceShape?: EvidenceSignal<string>;
+    undertone?: EvidenceSignal<string>;
+    styleVector?: EvidenceSignal<StyleVector>;
+    modesty?: EvidenceSignal<ModestyLevel>;
+  };
   updatedAt: string;
 }
 

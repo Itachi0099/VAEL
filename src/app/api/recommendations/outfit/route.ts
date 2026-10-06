@@ -27,7 +27,22 @@ export async function POST(request: Request) {
       feedback: user?.styleProfile.feedbackProfile,
     });
 
-    return NextResponse.json({ success: true, data: recommendation });
+    // If user exists, also generate the flagship Top 3 Looks (Safe, Best Match, Stretch)
+    let topThree = null;
+    if (user) {
+      topThree = recommendationService.generateTopThreeLooks({
+        user,
+        context,
+      });
+    }
+
+    return NextResponse.json({
+      success: true,
+      data: {
+        recommendation,
+        topThree,
+      },
+    });
   } catch (error: any) {
     return NextResponse.json({ error: error.message }, { status: 400 });
   }

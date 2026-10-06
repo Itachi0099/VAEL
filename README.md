@@ -92,6 +92,18 @@ npm install
 npm run test
 ```
 
+### Running the Fashion Evaluation Suite
+
+```bash
+npm run eval
+```
+
+### Running Typechecks
+
+```bash
+npm run typecheck
+```
+
 ### Running the Development Server
 
 ```bash

@@ -1,4 +1,6 @@
 export * from './types';
+export * from './evidence';
+export * from './style-axis';
 export * from './visual';
 export * from './grooming';
 export * from './fashion';

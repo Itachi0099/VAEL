@@ -3,12 +3,14 @@ import { Outfit, Garment } from '../domain/fashion';
 import { Context } from '../domain/context';
 import { VisualProfile } from '../domain/visual';
 import { PreferenceProfile, FeedbackProfile } from '../domain/user';
-import { RankedResults, Recommendation } from '../domain/recommendation';
+import { RankedResults, Recommendation, TopThreeLooks } from '../domain/recommendation';
+import { User } from '../domain/user';
 import { knowledgeBase } from '../knowledge';
 import { HairCompatibilityEvaluator } from '../intelligence/hair-compatibility';
 import { GroomingCompatibilityEvaluator } from '../intelligence/grooming-compatibility';
 import { OutfitCompatibilityEvaluator } from '../intelligence/outfit-compatibility';
 import { StyleCompatibilityEngine, StyleMatchResult } from '../intelligence/style-compatibility';
+import { VaelStylingEngine, LookEngineQuery } from '../intelligence/engine';
 
 export interface RecommendationQueryOptions {
   visual?: VisualProfile;
@@ -304,6 +306,14 @@ export class RecommendationService {
       ...match,
       gatewayGarments,
     };
+  }
+
+  /**
+   * 7. generateTopThreeLooks
+   * Generates Safe, Best Match, and Stretch complete looks using the 3-Step VaelStylingEngine.
+   */
+  generateTopThreeLooks(query: LookEngineQuery): TopThreeLooks {
+    return VaelStylingEngine.generateTopThreeLooks(query);
   }
 }
 
