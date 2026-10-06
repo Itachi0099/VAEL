@@ -72,6 +72,18 @@ export type StylingDifficulty = 'easy' | 'moderate' | 'advanced';
 
 export type TimelessTrendTag = 'TIMELESS' | 'TREND';
 
-export type ModestyLevel = 'unrestricted' | 'low-coverage' | 'standard' | 'high-coverage';
+export type ModestyLevel = 'unrestricted' | 'low-coverage' | 'standard' | 'high-coverage' | 'covered-arms' | 'covered-legs' | 'covered-both';
 
 export type UndertonePreference = 'warm' | 'cool' | 'neutral' | 'unspecified';
+
+export type ContrastLevel = 'low' | 'medium' | 'high' | 'unspecified';
+
+export type HeightRange = 'compact' | 'average' | 'tall' | 'unspecified';
+
+export type TorsoLegPreference = 'balanced' | 'longer-torso' | 'longer-legs' | 'unspecified';
+
+export type ShoulderHipBalance = 'broad-shoulders' | 'balanced' | 'wider-hips' | 'unspecified';
+
+export type TemperatureLevel = 'cold' | 'cool' | 'mild' | 'warm' | 'hot';
+
+export type WeatherConditionType = 'dry' | 'rain' | 'unspecified';

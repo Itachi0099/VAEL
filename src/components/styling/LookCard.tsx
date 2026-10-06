@@ -192,13 +192,29 @@ export function LookCard({ look, isExpanded = false }: LookCardProps) {
           <span className="text-[10px] uppercase tracking-widest text-neutral-400 font-semibold block mb-1.5">
             WHY THIS WORKS (HONEST REASONS)
           </span>
-          <ul className="space-y-1 text-[11px] text-neutral-700">
-            {reasons.slice(0, 3).map((r, idx) => (
-              <li key={idx} className="flex items-start gap-1.5">
-                <span className="text-neutral-400 font-bold">•</span>
-                <span>{r}</span>
-              </li>
-            ))}
+          <ul className="space-y-1.5 text-[11px] text-neutral-700">
+            {look.traceableReasons && look.traceableReasons.length > 0 ? (
+              look.traceableReasons.slice(0, 3).map((tr) => (
+                <li key={tr.reasonId} className="flex items-start gap-1.5">
+                  <span className="text-neutral-400 font-bold">•</span>
+                  <div className="grow">
+                    <span>{tr.text}</span>
+                    {tr.isAssumed && (
+                      <span className="ml-1.5 px-1 py-0.2 bg-neutral-100 text-neutral-500 text-[9px] uppercase tracking-wider border border-neutral-200">
+                        ASSUMED DEFAULT
+                      </span>
+                    )}
+                  </div>
+                </li>
+              ))
+            ) : (
+              reasons.slice(0, 3).map((r, idx) => (
+                <li key={idx} className="flex items-start gap-1.5">
+                  <span className="text-neutral-400 font-bold">•</span>
+                  <span>{r}</span>
+                </li>
+              ))
+            )}
           </ul>
         </div>
 

@@ -31,7 +31,7 @@ export function ProfileHeader({
               </span>
             </div>
             <p className="text-[11px] text-neutral-500 mt-1 max-w-md normal-case font-sans">
-              Build your profile to generate calibrated looks. VAEL does not make assumptions without evidence.
+              Tell us a little about you to get looks that fit. Anything we don't know, we'll say so.
             </p>
           </div>
           <div className="flex items-center gap-2.5">

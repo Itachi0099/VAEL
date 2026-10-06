@@ -11,6 +11,7 @@ import {
   ConfidenceState,
   RecommendationTier,
   RecommendationFactor,
+  TraceableReason,
 } from '../domain/recommendation';
 import { knowledgeBase } from '../knowledge';
 import { ClimateFabricRules } from '../knowledge/climate';
@@ -33,6 +34,7 @@ export interface CandidateEvaluation {
   totalScore: number;
   factors: RecommendationFactor[];
   reasons: string[];
+  traceableReasons?: TraceableReason[];
   cautions: string[];
   stylingAdvice: string[];
   styleVector: StyleVector;
@@ -50,15 +52,13 @@ export class VaelStylingEngine {
   static generateTopThreeLooks(query: LookEngineQuery): TopThreeLooks {
     const user = query.user;
     const context = query.context;
-    const preferences = user.styleProfile.preferences;
-    const feedback = user.styleProfile.feedbackProfile;
     const userVector = user.styleProfile.styleVector || StyleVectorMath.createBalancedVector();
 
     // 1. Gather Candidate Outfits
     const candidates = query.candidateOutfits || this.buildCandidateOutfits(user);
     const totalCandidates = candidates.length;
 
-    // STEP 1: HARD FILTERS / VETO
+    // STEP 1: HARD FILTERS / VETO (PHYSICS, DRESS CODES, HARD VETOES ARE NEVER RELAXED)
     const survivingCandidates: Outfit[] = [];
     let vetoedCount = 0;
 
@@ -71,35 +71,80 @@ export class VaelStylingEngine {
       }
     }
 
-    // Fallback safety if all candidates were vetoed
-    const pool = survivingCandidates.length > 0 ? survivingCandidates : candidates.slice(0, 3);
+    const relaxationLog: string[] = [];
+    let looksCountExplanation: string | undefined;
 
     // STEP 2: SOFT SCORING
-    const evaluatedList: CandidateEvaluation[] = pool.map((outfit) =>
+    const evaluatedList: CandidateEvaluation[] = survivingCandidates.map((outfit) =>
       this.evaluateCandidateOutfit(outfit, user, context)
     );
 
     // Sort by total score descending
     evaluatedList.sort((a, b) => b.totalScore - a.totalScore);
 
-    // STEP 3: DIVERSITY SELECTION (Safe, Best Match, Stretch)
-    const { safeCandidate, bestMatchCandidate, stretchCandidate } = this.selectDiverseTopThree(
+    // STEP 3: DIVERSITY SELECTION & RELAXATION ORDER (F-08)
+    // Relaxation order if fewer than 3 looks can be diversified:
+    // 1. Relax stretch distance / style diversity requirement
+    // 2. Relax secondary archetype affinity
+    // 3. Relax soft color preference
+    // 4. Relax trend preference
+    // HARD VETOES ARE NEVER RELAXED. If fewer than 3 viable looks pass hard filters, return fewer looks honestly.
+    const { safeCandidate, bestMatchCandidate, stretchCandidate, relaxedSteps } = this.selectDiverseTopThree(
       evaluatedList,
       userVector
     );
+    relaxationLog.push(...relaxedSteps);
 
     // Complement with Best Matching Hair & Beard
-    const hairRec = this.getBestHair(user, context, bestMatchCandidate.outfit.primaryStyleSlug);
-    const beardRec = this.getBestGrooming(user, context, bestMatchCandidate.outfit.primaryStyleSlug);
+    const primarySlug = bestMatchCandidate?.outfit.primaryStyleSlug || safeCandidate?.outfit.primaryStyleSlug;
+    const hairRec = this.getBestHair(user, context, primarySlug);
+    const beardRec = this.getBestGrooming(user, context, primarySlug);
 
-    const safeLook = this.buildCompleteLook('SAFE', safeCandidate, user, context, hairRec, beardRec);
-    const bestMatchLook = this.buildCompleteLook('BEST_MATCH', bestMatchCandidate, user, context, hairRec, beardRec);
-    const stretchLook = this.buildCompleteLook('STRETCH', stretchCandidate, user, context, hairRec, beardRec);
+    const looks: CompleteLook[] = [];
+    let safeLook: CompleteLook | undefined;
+    let bestMatchLook: CompleteLook | undefined;
+    let stretchLook: CompleteLook | undefined;
+
+    if (bestMatchCandidate) {
+      bestMatchLook = this.buildCompleteLook('BEST_MATCH', bestMatchCandidate, user, context, hairRec, beardRec);
+      looks.push(bestMatchLook);
+    }
+
+    if (safeCandidate && safeCandidate !== bestMatchCandidate) {
+      safeLook = this.buildCompleteLook('SAFE', safeCandidate, user, context, hairRec, beardRec);
+      looks.push(safeLook);
+    } else if (safeCandidate && !bestMatchCandidate) {
+      safeLook = this.buildCompleteLook('SAFE', safeCandidate, user, context, hairRec, beardRec);
+      looks.push(safeLook);
+    }
+
+    if (stretchCandidate && stretchCandidate !== bestMatchCandidate && stretchCandidate !== safeCandidate) {
+      stretchLook = this.buildCompleteLook('STRETCH', stretchCandidate, user, context, hairRec, beardRec);
+      looks.push(stretchLook);
+    }
+
+    // Set honest looks count explanation when fewer than 3 looks remain
+    if (looks.length === 0) {
+      looksCountExplanation = 'No outfits satisfy current hard climate, dress code, or modesty constraints. Relaxing soft preferences did not yield viable candidates.';
+    } else if (looks.length < 3) {
+      looksCountExplanation = `Returned ${looks.length} viable look${looks.length === 1 ? '' : 's'}. Additional candidate looks were vetoed by strict constraints (climate limits, occasion dress code, or modesty). VAEL does not relax hard vetoes to force 3 options.`;
+    }
+
+    // Retain legacy tier look fallbacks for backwards compatibility while canonical looks list holds exact viable count
+    const fallbackCandidate = evaluatedList[0] || this.evaluateCandidateOutfit(candidates[0], user, context);
+    const fallbackLook = this.buildCompleteLook('BEST_MATCH', fallbackCandidate, user, context, hairRec, beardRec);
+
+    const safeFinal = safeLook || bestMatchLook || fallbackLook;
+    const bestMatchFinal = bestMatchLook || safeLook || fallbackLook;
+    const stretchFinal = stretchLook || bestMatchLook || fallbackLook;
 
     return {
-      safe: safeLook,
-      bestMatch: bestMatchLook,
-      stretch: stretchLook,
+      safe: safeFinal,
+      bestMatch: bestMatchFinal,
+      stretch: stretchFinal,
+      looks,
+      looksCountExplanation,
+      relaxationLog: relaxationLog.length > 0 ? relaxationLog : undefined,
       contextApplied: context?.occasion?.name || 'General Stylist Curation',
       vetoedCandidateCount: vetoedCount,
       evaluatedCandidateCount: totalCandidates,
@@ -107,7 +152,7 @@ export class VaelStylingEngine {
   }
 
   /**
-   * STEP 1: Hard Filters / Veto
+   * STEP 1: Hard Filters / Veto (NEVER RELAXED)
    */
   private static applyHardFilters(
     outfit: Outfit,
@@ -117,17 +162,33 @@ export class VaelStylingEngine {
     const preferences = user.styleProfile.preferences;
     const garments = outfit.items.map((i) => i.garment);
 
-    // 1. Modesty Filter: If user requested high-coverage modesty, veto revealing clothes or shorts
-    if (preferences.modestyLevel === 'high-coverage') {
+    // 1. Modesty Filter:
+    // Support 'high-coverage', 'covered-arms', 'covered-legs', 'covered-both'
+    const modesty = preferences.modestyLevel;
+    if (modesty === 'high-coverage' || modesty === 'covered-both') {
       const hasRevealing = garments.some(
         (g) => g.modestyRating === 'low-coverage' || g.subcategory.includes('shorts') || g.subcategory.includes('tank')
       );
       if (hasRevealing) {
         return { vetoed: true, reason: 'Violates user-stated high-coverage modesty preference.' };
       }
+    } else if (modesty === 'covered-arms') {
+      const hasShortSleevesOrTank = garments.some(
+        (g) => g.category === 'top' && (g.subcategory.includes('tank') || g.modestyRating === 'low-coverage')
+      );
+      if (hasShortSleevesOrTank) {
+        return { vetoed: true, reason: 'Violates user-stated covered-arms modesty preference.' };
+      }
+    } else if (modesty === 'covered-legs') {
+      const hasShorts = garments.some(
+        (g) => g.category === 'bottom' && (g.subcategory.includes('shorts') || g.modestyRating === 'low-coverage')
+      );
+      if (hasShorts) {
+        return { vetoed: true, reason: 'Violates user-stated covered-legs modesty preference.' };
+      }
     }
 
-    // 2. Climate Filter: Veto heavy wool/outerwear in extreme heat, or zero insulation in extreme cold
+    // 2. Climate Filter: Property-based thermal thresholds & rain tolerance
     if (context) {
       const climateEval = ClimateFabricRules.evaluateOutfitClimateFit(garments, context);
       if (!climateEval.isPermissible) {
@@ -170,11 +231,25 @@ export class VaelStylingEngine {
       }
     }
 
-    // 7. Extreme Formality Mismatch (Deviation >= 3 levels)
+    // 7. Occasion Formality Band Check (F-04)
+    // If user explicitly confirmed isFormalityOverridden, do not veto
     if (context?.occasion) {
       const targetFormality = context.targetFormality || context.occasion.defaultFormality;
-      if (Math.abs(outfit.formality - targetFormality) >= 3) {
-        return { vetoed: true, reason: 'Formality deviates radically from occasion requirements.' };
+      const allowableRange = context.occasion.allowableFormalityRange;
+
+      if (!context.isFormalityOverridden) {
+        // Enforce allowable formality band of the occasion
+        if (outfit.formality < allowableRange[0] || outfit.formality > allowableRange[1]) {
+          return {
+            vetoed: true,
+            reason: `Outfit formality (${outfit.formality}) is outside allowable range [${allowableRange[0]}-${allowableRange[1]}] for ${context.occasion.name}.`,
+          };
+        }
+      } else {
+        // When overridden, only veto on radical deviation (>= 3 levels from target)
+        if (Math.abs(outfit.formality - targetFormality) >= 3) {
+          return { vetoed: true, reason: 'Formality deviates radically from overridden target formality.' };
+        }
       }
     }
 
@@ -293,11 +368,57 @@ export class VaelStylingEngine {
 
     const { finalScore } = computeWeightedScore(factors);
 
+    // Build traceable reasons connecting directly to real signals and knowledge IDs
+    const traceableReasons: TraceableReason[] = [];
+    const uniqueReasons = Array.from(new Set(reasons)).slice(0, 3);
+
+    for (let i = 0; i < uniqueReasons.length; i++) {
+      const reasonText = uniqueReasons[i];
+      let factorName = 'general';
+      const signalIds: string[] = [];
+      const knowledgeEntryIds: string[] = outfit.items.map((it) => it.garment.id);
+
+      if (reasonText.includes('style axis') || reasonText.includes('coordinates')) {
+        factorName = 'style_affinity';
+        signalIds.push('user.styleProfile.styleVector', 'user.styleProfile.preferences.preferredStyleSlugs');
+        if (styleFamily) knowledgeEntryIds.push(styleFamily.id);
+      } else if (reasonText.includes('silhouette') || reasonText.includes('proportions') || reasonText.includes('structure') || reasonText.includes('balance') || reasonText.includes('drape') || reasonText.includes('frame')) {
+        factorName = 'silhouette_balance';
+        signalIds.push('user.styleProfile.preferences.fitProportions', 'user.styleProfile.preferences.preferredFits');
+      } else if (reasonText.includes('color') || reasonText.includes('monochrome') || reasonText.includes('undertone')) {
+        factorName = 'color_harmony';
+        signalIds.push('user.styleProfile.preferences.userConfirmedUndertone', 'user.styleProfile.preferences.preferredColors');
+      } else if (reasonText.includes('formality') || reasonText.includes('occasion') || (context?.occasion && reasonText.includes(context.occasion.name))) {
+        factorName = 'occasion_fit';
+        signalIds.push('context.occasion', 'context.targetFormality');
+        if (context?.occasion) knowledgeEntryIds.push(context.occasion.id);
+      } else if (reasonText.includes('temperature') || reasonText.includes('climate') || reasonText.includes('breathability') || reasonText.includes('heat') || reasonText.includes('cold')) {
+        factorName = 'weather_fit';
+        signalIds.push('context.temperatureLevel', 'context.condition', 'context.weather');
+      } else if (reasonText.includes('wardrobe')) {
+        factorName = 'wardrobe_priority';
+        signalIds.push('user.wardrobe');
+      }
+
+      const isAssumed = reasonText.includes('neutral-safe default') || reasonText.includes('unknown');
+
+      traceableReasons.push({
+        reasonId: `rea_${outfit.id}_${i}_${Date.now()}`,
+        text: reasonText,
+        signalIds,
+        knowledgeEntryIds,
+        factor: factorName,
+        authority: isAssumed ? 'DEFAULT' : 'USER_ENTERED',
+        isAssumed,
+      });
+    }
+
     return {
       outfit,
       totalScore: finalScore,
       factors,
-      reasons: Array.from(new Set(reasons)).slice(0, 3), // 2-3 concise honest reasons
+      reasons: uniqueReasons,
+      traceableReasons,
       cautions: Array.from(new Set(cautions)),
       stylingAdvice: Array.from(new Set(stylingAdvice)),
       styleVector: outfitVector,
@@ -308,41 +429,78 @@ export class VaelStylingEngine {
 
   /**
    * STEP 3: Diversity Selection for Top 3 (SAFE, BEST MATCH, STRETCH)
+   * With soft relaxation tracking (F-08)
    */
   private static selectDiverseTopThree(
     ranked: CandidateEvaluation[],
     userVector: StyleVector
   ): {
-    safeCandidate: CandidateEvaluation;
-    bestMatchCandidate: CandidateEvaluation;
-    stretchCandidate: CandidateEvaluation;
+    safeCandidate?: CandidateEvaluation;
+    bestMatchCandidate?: CandidateEvaluation;
+    stretchCandidate?: CandidateEvaluation;
+    relaxedSteps: string[];
   } {
-    // 1. BEST MATCH: The highest composite scoring candidate
+    const relaxedSteps: string[] = [];
+    if (ranked.length === 0) {
+      return { relaxedSteps };
+    }
+
+    // 1. BEST MATCH: The highest composite scoring candidate passing hard filters
     const bestMatchCandidate = ranked[0];
 
+    // If only 1 candidate exists total, return it honestly without fabricating looks
+    if (ranked.length === 1) {
+      return {
+        bestMatchCandidate,
+        relaxedSteps,
+      };
+    }
+
     // 2. SAFE: Highly familiar, high wardrobe alignment or timeless classic, lowest distance from core
-    const safeCandidates = ranked.filter(
+    let safeCandidates = ranked.filter(
       (c) =>
         c.outfit.id !== bestMatchCandidate.outfit.id &&
         (c.isOwnedWardrobeMatch || c.styleAffinity >= 0.75 || c.outfit.primaryStyleSlug === 'minimal' || c.outfit.primaryStyleSlug === 'smart-casual')
     );
-    const safeCandidate = safeCandidates[0] || ranked[1] || ranked[0];
+
+    let safeCandidate: CandidateEvaluation | undefined = safeCandidates[0];
+    if (!safeCandidate && ranked.length > 1) {
+      // Step 2 Relaxation: Relax secondary archetype affinity requirement
+      relaxedSteps.push('Relaxed secondary archetype affinity requirement for Safe look candidate.');
+      safeCandidate = ranked.find((c) => c.outfit.id !== bestMatchCandidate.outfit.id);
+    }
+
+    // If only 2 candidates exist total, return them honestly
+    if (ranked.length === 2) {
+      return {
+        safeCandidate,
+        bestMatchCandidate,
+        relaxedSteps,
+      };
+    }
 
     // 3. STRETCH: Meaningfully distinct! Shifts on volume/structure or adjacent aesthetic
-    const stretchCandidates = ranked.filter(
+    let stretchCandidates = ranked.filter(
       (c) =>
         c.outfit.id !== bestMatchCandidate.outfit.id &&
-        c.outfit.id !== safeCandidate.outfit.id &&
+        (!safeCandidate || c.outfit.id !== safeCandidate.outfit.id) &&
         c.outfit.primaryStyleSlug !== bestMatchCandidate.outfit.primaryStyleSlug
     );
 
-    // Pick candidate with greatest stylistic or volumetric distinction from best match
-    const stretchCandidate = stretchCandidates[0] || ranked[2] || ranked[1] || ranked[0];
+    let stretchCandidate: CandidateEvaluation | undefined = stretchCandidates[0];
+    if (!stretchCandidate) {
+      // Step 1 Relaxation: Relax stretch distance / distinct aesthetic requirement
+      relaxedSteps.push('Relaxed stretch distance requirement: selected distinct volume/cut within available aesthetic pool.');
+      stretchCandidate = ranked.find(
+        (c) => c.outfit.id !== bestMatchCandidate.outfit.id && (!safeCandidate || c.outfit.id !== safeCandidate.outfit.id)
+      );
+    }
 
     return {
       safeCandidate,
       bestMatchCandidate,
       stretchCandidate,
+      relaxedSteps,
     };
   }
 
@@ -424,6 +582,7 @@ export class VaelStylingEngine {
       score: evaluation.totalScore,
       factors: evaluation.factors,
       reasons: evaluation.reasons,
+      traceableReasons: evaluation.traceableReasons,
       cautions: evaluation.cautions.length > 0 ? evaluation.cautions : undefined,
       stylingAdvice: evaluation.stylingAdvice,
       confidence,
@@ -441,6 +600,7 @@ export class VaelStylingEngine {
       confidence,
       overallHarmonyScore: evaluation.totalScore,
       reasons: evaluation.reasons,
+      traceableReasons: evaluation.traceableReasons,
       cautions: evaluation.cautions,
     };
   }

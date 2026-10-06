@@ -242,8 +242,14 @@ export default function VaelShell() {
             layeringPreference: 'moderate',
             garmentLengthPreferences: { top: 'regular', bottom: 'regular' },
           },
-          modestyLevel: 'standard',
-          userConfirmedUndertone: 'unspecified',
+          modestyLevel: formData.modestyLevel || 'unrestricted',
+          userConfirmedUndertone: formData.undertone || 'unspecified',
+          contrastLevel: formData.contrastLevel || 'unspecified',
+          traditionConstraint: formData.traditionConstraint || undefined,
+          budgetTier: formData.budgetTier || 'unspecified',
+          heightRange: formData.heightRange || 'unspecified',
+          torsoLegPreference: formData.torsoLegPreference || 'unspecified',
+          shoulderHipBalance: formData.shoulderHipBalance || 'unspecified',
           genderCodingDirection: formData.genderDirection,
           preferredFormalityRange: [2, 4],
           maxMaintenanceTolerance: formData.maintenanceTolerance,
@@ -354,11 +360,11 @@ export default function VaelShell() {
               VAEL
             </h1>
             <span className="font-editorial-mono text-xs px-2.5 py-1 bg-black text-white rounded-full">
-              STYLING ENGINE v1.0
+              EARLY ACCESS
             </span>
           </div>
           <p className="text-xs uppercase tracking-widest text-neutral-500 mt-2 font-editorial-mono">
-            PERSONAL STYLING ARTIST. REASONING OVER GENERATION.
+            Your style, interpreted.
           </p>
         </div>
 
@@ -411,11 +417,11 @@ export default function VaelShell() {
           <div className="text-neutral-500 text-[11px]">
             {isGenerating ? (
               <span className="text-neutral-900 font-semibold animate-pulse">
-                • CALIBRATING YOUR LOOKS...
+                • Building your looks...
               </span>
             ) : (
               <span>
-                • READY — 122 GARMENTS · 30 HAIRSTYLES · 20 BEARDS HARMONIZED
+                • READY — CURATED LOOK PROPOSALS
               </span>
             )}
           </div>
@@ -436,7 +442,7 @@ export default function VaelShell() {
         {[
           { id: 'LOOKS', label: 'TOP 3 LOOKS (FLAGSHIP)' },
           { id: 'HAIR', label: 'HAIR COMPATIBILITY' },
-          { id: 'GROOMING', label: 'BEARD & GROOMING' },
+          { id: 'GROOMING', label: 'GROOMING' },
           { id: 'STYLE LAB', label: 'STYLE TAXONOMY' },
         ].map((tab) => (
           <button
@@ -470,22 +476,40 @@ export default function VaelShell() {
             <div className="space-y-6">
               <div className="flex items-center justify-between font-editorial-mono text-xs text-neutral-500 pb-2 border-b border-neutral-100">
                 <span className="uppercase tracking-widest text-[11px]">
-                  THREE COMPLETE PERSPECTIVES: SAFE · BEST MATCH · STRETCH
+                  {topThreeLooks.looks?.length === 3
+                    ? 'THREE COMPLETE PERSPECTIVES: SAFE · BEST MATCH · STRETCH'
+                    : `VIABLE PERSPECTIVES (${topThreeLooks.looks?.length || 3} RETURNED)`}
                 </span>
                 <span className="text-[10px]">
                   EVALUATED: {topThreeLooks.evaluatedCandidateCount} · VETOED: {topThreeLooks.vetoedCandidateCount}
                 </span>
               </div>
 
+              {/* Honest Explanation when fewer than 3 looks returned */}
+              {topThreeLooks.looksCountExplanation && (
+                <div className="p-3 bg-neutral-100 border border-neutral-300 text-[11px] text-neutral-800 font-editorial-mono">
+                  <span className="font-semibold block mb-0.5 uppercase tracking-wide">NOTICE:</span>
+                  {topThreeLooks.looksCountExplanation}
+                </div>
+              )}
+
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-                <LookCard look={topThreeLooks.safe} />
-                <LookCard look={topThreeLooks.bestMatch} isExpanded={true} />
-                <LookCard look={topThreeLooks.stretch} />
+                {topThreeLooks.looks && topThreeLooks.looks.length > 0 ? (
+                  topThreeLooks.looks.map((l, idx) => (
+                    <LookCard key={l.id} look={l} isExpanded={l.tier === 'BEST_MATCH' || idx === 0} />
+                  ))
+                ) : (
+                  <>
+                    <LookCard look={topThreeLooks.safe} />
+                    <LookCard look={topThreeLooks.bestMatch} isExpanded={true} />
+                    <LookCard look={topThreeLooks.stretch} />
+                  </>
+                )}
               </div>
             </div>
           ) : (
             <div className="p-12 text-center text-xs font-editorial-mono text-neutral-400">
-              Generating calibrated recommendations...
+              Building your looks...
             </div>
           )}
         </div>

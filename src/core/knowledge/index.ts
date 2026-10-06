@@ -90,6 +90,10 @@ export class FashionKnowledgeBase {
     return this.garments.get(slug);
   }
 
+  getGarmentById(id: string): Garment | undefined {
+    return Array.from(this.garments.values()).find((g) => g.id === id);
+  }
+
   getGarmentsByCategory(category: Garment['category']): Garment[] {
     return Array.from(this.garments.values()).filter((g) => g.category === category);
   }

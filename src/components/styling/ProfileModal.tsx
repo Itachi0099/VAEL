@@ -10,6 +10,12 @@ import {
   MaintenanceLevel,
   FitType,
   VisualProfile,
+  UndertonePreference,
+  ContrastLevel,
+  ModestyLevel,
+  HeightRange,
+  TorsoLegPreference,
+  ShoulderHipBalance,
 } from '@/core/domain';
 
 export interface ProfileFormData {
@@ -22,6 +28,14 @@ export interface ProfileFormData {
   topFit: FitType;
   bottomFit: FitType;
   genderDirection: 'masculine' | 'androgynous' | 'feminine';
+  undertone: UndertonePreference | 'unspecified';
+  contrastLevel: ContrastLevel;
+  modestyLevel: ModestyLevel;
+  heightRange: HeightRange;
+  torsoLegPreference: TorsoLegPreference;
+  shoulderHipBalance: ShoulderHipBalance;
+  traditionConstraint?: string;
+  budgetTier?: 'accessible' | 'elevated' | 'investment' | 'unspecified';
 }
 
 interface ProfileModalProps {
@@ -41,6 +55,14 @@ const DEFAULT_PROFILE_FORM: ProfileFormData = {
   topFit: 'relaxed',
   bottomFit: 'regular',
   genderDirection: 'androgynous',
+  undertone: 'unspecified',
+  contrastLevel: 'unspecified',
+  modestyLevel: 'unrestricted',
+  heightRange: 'unspecified',
+  torsoLegPreference: 'unspecified',
+  shoulderHipBalance: 'unspecified',
+  traditionConstraint: '',
+  budgetTier: 'unspecified',
 };
 
 export function ProfileModal({
@@ -312,6 +334,249 @@ export function ProfileModal({
                       }`}
                     >
                       {dir}
+                    </button>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Color & Contrast (F-01) */}
+          <div className="border border-neutral-200 p-4 bg-neutral-50/50">
+            <span className="text-[11px] font-semibold text-neutral-800 tracking-wider uppercase block mb-3">
+              COLOR & CONTRAST
+            </span>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div>
+                <label className="block text-neutral-500 mb-1.5 uppercase tracking-wide">
+                  Undertone
+                </label>
+                <span className="text-[10px] text-neutral-400 block mb-2 font-sans normal-case">
+                  Unknown undertone defaults safely to neutral-safe palette curation.
+                </span>
+                <div className="flex flex-wrap gap-1.5">
+                  {[
+                    { id: 'warm', label: 'Warm' },
+                    { id: 'cool', label: 'Cool' },
+                    { id: 'neutral', label: 'Neutral' },
+                    { id: 'unspecified', label: 'Not sure / Skip' },
+                  ].map((item) => (
+                    <button
+                      type="button"
+                      key={item.id}
+                      onClick={() => update('undertone', item.id as any)}
+                      className={`px-3 py-1.5 uppercase text-[11px] border transition ${
+                        formData.undertone === item.id
+                          ? 'border-neutral-900 bg-neutral-900 text-white font-semibold'
+                          : 'border-neutral-300 bg-white text-neutral-700 hover:border-neutral-500'
+                      }`}
+                    >
+                      {item.label}
+                    </button>
+                  ))}
+                </div>
+              </div>
+
+              <div>
+                <label className="block text-neutral-500 mb-1.5 uppercase tracking-wide">
+                  Contrast Level
+                </label>
+                <span className="text-[10px] text-neutral-400 block mb-2 font-sans normal-case">
+                  Intensity difference between hair, eyes, and skin.
+                </span>
+                <div className="flex flex-wrap gap-1.5">
+                  {[
+                    { id: 'low', label: 'Low' },
+                    { id: 'medium', label: 'Medium' },
+                    { id: 'high', label: 'High' },
+                    { id: 'unspecified', label: 'Not sure / Skip' },
+                  ].map((item) => (
+                    <button
+                      type="button"
+                      key={item.id}
+                      onClick={() => update('contrastLevel', item.id as any)}
+                      className={`px-3 py-1.5 uppercase text-[11px] border transition ${
+                        formData.contrastLevel === item.id
+                          ? 'border-neutral-900 bg-neutral-900 text-white font-semibold'
+                          : 'border-neutral-300 bg-white text-neutral-700 hover:border-neutral-500'
+                      }`}
+                    >
+                      {item.label}
+                    </button>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Modesty & Coverage (F-01) */}
+          <div className="border border-neutral-200 p-4 bg-neutral-50/50">
+            <span className="text-[11px] font-semibold text-neutral-800 tracking-wider uppercase block mb-3">
+              MODESTY & COVERAGE
+            </span>
+            <div>
+              <span className="text-[10px] text-neutral-400 block mb-2 font-sans normal-case">
+                Strict coverage preference. Items violating your coverage limit are permanently vetoed.
+              </span>
+              <div className="flex flex-wrap gap-1.5">
+                {[
+                  { id: 'unrestricted', label: 'Unrestricted / Standard' },
+                  { id: 'covered-arms', label: 'Covered Arms' },
+                  { id: 'covered-legs', label: 'Covered Legs' },
+                  { id: 'covered-both', label: 'Covered Arms & Legs' },
+                ].map((item) => (
+                  <button
+                    type="button"
+                    key={item.id}
+                    onClick={() => update('modestyLevel', item.id as any)}
+                    className={`px-3 py-1.5 uppercase text-[11px] border transition ${
+                      formData.modestyLevel === item.id
+                        ? 'border-neutral-900 bg-neutral-900 text-white font-semibold'
+                        : 'border-neutral-300 bg-white text-neutral-700 hover:border-neutral-500'
+                    }`}
+                  >
+                    {item.label}
+                  </button>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* Physical Proportions (F-01) */}
+          <div className="border border-neutral-200 p-4 bg-neutral-50/50">
+            <span className="text-[11px] font-semibold text-neutral-800 tracking-wider uppercase block mb-3">
+              PHYSICAL PROPORTIONS & BALANCE
+            </span>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              <div>
+                <label className="block text-neutral-500 mb-1.5 uppercase tracking-wide">
+                  Height Range
+                </label>
+                <div className="flex flex-wrap gap-1.5">
+                  {[
+                    { id: 'compact', label: 'Compact' },
+                    { id: 'average', label: 'Average' },
+                    { id: 'tall', label: 'Tall' },
+                    { id: 'unspecified', label: 'Skip' },
+                  ].map((item) => (
+                    <button
+                      type="button"
+                      key={item.id}
+                      onClick={() => update('heightRange', item.id as any)}
+                      className={`px-2.5 py-1 uppercase text-[11px] border transition ${
+                        formData.heightRange === item.id
+                          ? 'border-neutral-900 bg-neutral-900 text-white font-semibold'
+                          : 'border-neutral-300 bg-white text-neutral-700 hover:border-neutral-500'
+                      }`}
+                    >
+                      {item.label}
+                    </button>
+                  ))}
+                </div>
+              </div>
+
+              <div>
+                <label className="block text-neutral-500 mb-1.5 uppercase tracking-wide">
+                  Torso / Leg Ratio
+                </label>
+                <div className="flex flex-wrap gap-1.5">
+                  {[
+                    { id: 'balanced', label: 'Balanced' },
+                    { id: 'longer-torso', label: 'Long Torso' },
+                    { id: 'longer-legs', label: 'Long Legs' },
+                    { id: 'unspecified', label: 'Skip' },
+                  ].map((item) => (
+                    <button
+                      type="button"
+                      key={item.id}
+                      onClick={() => update('torsoLegPreference', item.id as any)}
+                      className={`px-2.5 py-1 uppercase text-[11px] border transition ${
+                        formData.torsoLegPreference === item.id
+                          ? 'border-neutral-900 bg-neutral-900 text-white font-semibold'
+                          : 'border-neutral-300 bg-white text-neutral-700 hover:border-neutral-500'
+                      }`}
+                    >
+                      {item.label}
+                    </button>
+                  ))}
+                </div>
+              </div>
+
+              <div>
+                <label className="block text-neutral-500 mb-1.5 uppercase tracking-wide">
+                  Shoulder / Hip Frame
+                </label>
+                <div className="flex flex-wrap gap-1.5">
+                  {[
+                    { id: 'broad-shoulders', label: 'Broad Shoulders' },
+                    { id: 'balanced', label: 'Balanced' },
+                    { id: 'wider-hips', label: 'Wider Hips' },
+                    { id: 'unspecified', label: 'Skip' },
+                  ].map((item) => (
+                    <button
+                      type="button"
+                      key={item.id}
+                      onClick={() => update('shoulderHipBalance', item.id as any)}
+                      className={`px-2.5 py-1 uppercase text-[11px] border transition ${
+                        formData.shoulderHipBalance === item.id
+                          ? 'border-neutral-900 bg-neutral-900 text-white font-semibold'
+                          : 'border-neutral-300 bg-white text-neutral-700 hover:border-neutral-500'
+                      }`}
+                    >
+                      {item.label}
+                    </button>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Tradition Layer & Budget (F-01, F-07) */}
+          <div className="border border-neutral-200 p-4 bg-neutral-50/50">
+            <span className="text-[11px] font-semibold text-neutral-800 tracking-wider uppercase block mb-3">
+              TRADITION LAYER & BUDGET TIER
+            </span>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div>
+                <label className="block text-neutral-500 mb-1.5 uppercase tracking-wide">
+                  Tradition Constraint (Optional)
+                </label>
+                <input
+                  type="text"
+                  value={formData.traditionConstraint || ''}
+                  onChange={(e) => update('traditionConstraint', e.target.value)}
+                  placeholder="e.g. South Asian, East Asian, Nordic..."
+                  className="w-full px-3 py-1.5 border border-neutral-300 text-[11px] bg-white text-neutral-900 focus:outline-none focus:border-black font-sans"
+                />
+                {formData.traditionConstraint && (
+                  <span className="text-[10px] text-neutral-500 block mt-1 italic">
+                    Note: Tradition pack not available yet. Cultural ceremony occasions will prioritize heritage tunics and raw silk suiting.
+                  </span>
+                )}
+              </div>
+
+              <div>
+                <label className="block text-neutral-500 mb-1.5 uppercase tracking-wide">
+                  Budget Tier
+                </label>
+                <div className="flex flex-wrap gap-1.5">
+                  {[
+                    { id: 'accessible', label: 'Accessible' },
+                    { id: 'elevated', label: 'Elevated' },
+                    { id: 'investment', label: 'Investment' },
+                    { id: 'unspecified', label: 'Not sure / Skip' },
+                  ].map((item) => (
+                    <button
+                      type="button"
+                      key={item.id}
+                      onClick={() => update('budgetTier', item.id as any)}
+                      className={`px-3 py-1.5 uppercase text-[11px] border transition ${
+                        formData.budgetTier === item.id
+                          ? 'border-neutral-900 bg-neutral-900 text-white font-semibold'
+                          : 'border-neutral-300 bg-white text-neutral-700 hover:border-neutral-500'
+                      }`}
+                    >
+                      {item.label}
                     </button>
                   ))}
                 </div>

@@ -1,5 +1,5 @@
 import { GarmentColor } from '../domain/fashion';
-import { UndertonePreference } from '../domain/types';
+import { UndertonePreference, ContrastLevel } from '../domain/types';
 
 export type HarmonyType =
   | 'monochromatic'
@@ -16,11 +16,13 @@ export interface ColorHarmonyResult {
   isBalanced: boolean;
   notes: string[];
   undertoneCompatibilityNote?: string;
+  isUndertoneAssumed?: boolean;
   dislikedColorFound?: string;
 }
 
 export interface ColorEvaluationOptions {
   userConfirmedUndertone?: UndertonePreference;
+  contrastLevel?: ContrastLevel;
   dislikedColors?: string[];
   preferredColors?: string[];
 }
@@ -118,8 +120,9 @@ export function evaluateColorHarmony(
     };
   }
 
-  // Undertone reflection (if confirmed)
+  // Undertone reflection
   let undertoneCompatibilityNote: string | undefined;
+  let isUndertoneAssumed = false;
   if (options?.userConfirmedUndertone && options.userConfirmedUndertone !== 'unspecified') {
     const undertone = options.userConfirmedUndertone;
     const warmCount = colors.filter((c) => c.tone === 'warm' || c.tone === 'earth').length;
@@ -132,6 +135,14 @@ export function evaluateColorHarmony(
     } else {
       undertoneCompatibilityNote = 'Neutral tonal temperature balance relative to undertone.';
     }
+  } else {
+    isUndertoneAssumed = true;
+    undertoneCompatibilityNote = 'Color direction is based on a neutral-safe default because undertone is unknown.';
+  }
+
+  // Contrast preference adjustment if user specified
+  if (options?.contrastLevel && options.contrastLevel !== 'unspecified') {
+    // Can validate contrast alignment without forcing
   }
 
   // Analogous / balanced multi-tone
@@ -141,5 +152,6 @@ export function evaluateColorHarmony(
     isBalanced: true,
     notes: ['Harmonious balance across complementary tonal depths.'],
     undertoneCompatibilityNote,
+    isUndertoneAssumed,
   };
 }

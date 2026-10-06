@@ -33,27 +33,33 @@ export class ClimateFabricRules {
     }
 
     const temp = context.temperatureCelsius;
-    const weather = context.weather;
+    const tempLevel = context.temperatureLevel || (
+      temp !== undefined
+        ? temp >= 28 ? 'hot' : temp >= 20 ? 'warm' : temp >= 14 ? 'mild' : temp >= 8 ? 'cool' : 'cold'
+        : context.weather === 'hot' ? 'hot'
+        : context.weather === 'warm' ? 'warm'
+        : context.weather === 'cool' ? 'cool'
+        : context.weather === 'cold' ? 'cold'
+        : 'mild'
+    );
+    const isRain = context.condition === 'rain' || context.weather === 'rainy';
     const humidity = context.humidity;
     const isConfirmed = context.isWeatherConfirmed ?? true;
 
-    // --- 1. EXTREME HEAT / HOT WEATHER (> 28°C or weather === 'hot') ---
-    const isHot = (temp !== undefined && temp >= 28) || weather === 'hot';
+    // --- 1. EXTREME HEAT / HOT WEATHER (> 28°C or tempLevel === 'hot') ---
+    const isHot = (temp !== undefined && temp >= 28) || tempLevel === 'hot';
     if (isHot) {
-      // VETO CONDITION: Heavyweight fabrics, wool outer/knit, leather outerwear in extreme heat
+      // Functional property-based evaluation:
+      // Heavyweight non-breathable fabrics, heavily lined outerwear, down, or low-temp ceiling garments
       const isExcessivelyHeavy = garment.fabricWeight === 'heavyweight' && garment.category !== 'bottom';
-      const isHeatIncompatibleMaterial =
-        garment.material.toLowerCase().includes('melton wool') ||
-        garment.material.toLowerCase().includes('boiled wool') ||
-        garment.material.toLowerCase().includes('down') ||
-        garment.material.toLowerCase().includes('heavyweight fleece') ||
-        (garment.category === 'outerwear' && garment.material.toLowerCase().includes('leather'));
+      const hasSevereHeatRestriction = garment.maxTemperatureC !== undefined && garment.maxTemperatureC < 25;
+      const isImpermeableOuter = garment.category === 'outerwear' && garment.breathability === 'low' && garment.fabricWeight === 'heavyweight';
 
-      if (isHeatIncompatibleMaterial || (garment.maxTemperatureC !== undefined && garment.maxTemperatureC < 25)) {
+      if (isExcessivelyHeavy || hasSevereHeatRestriction || isImpermeableOuter) {
         return {
           score: 0.1,
           isPermissible: false,
-          vetoReason: `Vetoed for extreme heat: ${garment.name} (${garment.material}) will cause severe thermal discomfort above 28°C.`,
+          vetoReason: `Vetoed for extreme heat: ${garment.name} (${garment.fabricWeight}, ${garment.breathability} breathability) causes thermal discomfort above 28°C.`,
           comfortNotes: [],
           cautions: [`Incompatible with high ambient temperature.`],
           climateUncertainty: !isConfirmed,
@@ -69,35 +75,35 @@ export class ClimateFabricRules {
       }
     }
 
-    // --- 2. COLD WEATHER (< 10°C or weather === 'cold') ---
-    const isCold = (temp !== undefined && temp <= 10) || weather === 'cold';
+    // --- 2. COLD WEATHER (< 10°C or tempLevel === 'cold') ---
+    const isCold = (temp !== undefined && temp <= 10) || tempLevel === 'cold';
     if (isCold) {
-      // VETO CONDITION: Shorts, open sandals, or ultra-lightweight standalone summer pieces in sub-10°C cold
+      // Property and coverage check: zero thermal protection, standalone shorts, open sandals
       const isSubZeroUnsuitable =
         garment.subcategory.includes('shorts') ||
         garment.subcategory.includes('sandals') ||
-        (garment.material.toLowerCase().includes('linen') && garment.layeringRole === 'standalone');
+        (garment.fabricWeight === 'lightweight' && garment.layeringRole === 'standalone');
 
       if (isSubZeroUnsuitable || (garment.minTemperatureC !== undefined && garment.minTemperatureC > 16)) {
         return {
           score: 0.1,
           isPermissible: false,
-          vetoReason: `Vetoed for cold weather: ${garment.name} provides zero thermal insulation below 10°C.`,
+          vetoReason: `Vetoed for cold weather: ${garment.name} provides insufficient thermal barrier below 10°C.`,
           comfortNotes: [],
           cautions: [`Insufficient thermal barrier against cold.`],
           climateUncertainty: !isConfirmed,
         };
       }
 
-      if (garment.fabricWeight === 'heavyweight' || garment.material.toLowerCase().includes('wool')) {
+      if (garment.fabricWeight === 'heavyweight' || garment.breathability === 'low') {
         comfortNotes.push(`Dense thermal barrier (${garment.material}) shields against cold ambient temps.`);
       }
     }
 
     // --- 3. RAIN / WET CONDITIONS ---
-    if (weather === 'rainy') {
+    if (isRain) {
       if (garment.category === 'footwear') {
-        if (garment.material.toLowerCase().includes('suede') || garment.material.toLowerCase().includes('canvas')) {
+        if (garment.waterResistance === 'none' || garment.material.toLowerCase().includes('suede') || garment.material.toLowerCase().includes('canvas')) {
           cautions.push(`Porous ${garment.material} footwear will absorb rainwater without protective treatment.`);
         }
       }

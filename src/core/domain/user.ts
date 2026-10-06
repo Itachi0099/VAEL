@@ -5,6 +5,10 @@ import {
   MaintenanceLevel,
   ModestyLevel,
   UndertonePreference,
+  ContrastLevel,
+  HeightRange,
+  TorsoLegPreference,
+  ShoulderHipBalance,
 } from './types';
 import { VisualProfile } from './visual';
 import { Feedback } from './feedback';
@@ -37,10 +41,15 @@ export interface PreferenceProfile {
   fitProportions: FitProportionProfile;
   modestyLevel: ModestyLevel;
   userConfirmedUndertone: UndertonePreference;
+  contrastLevel?: ContrastLevel;
+  traditionConstraint?: string; // Optional tradition layer constraint (e.g. 'unspecified', or specific heritage)
   genderCodingDirection: GenderCodingDirection;
+  heightRange?: HeightRange;
+  torsoLegPreference?: TorsoLegPreference;
+  shoulderHipBalance?: ShoulderHipBalance;
   preferredFormalityRange: [FormalityLevel, FormalityLevel];
   maxMaintenanceTolerance: MaintenanceLevel;
-  budgetTier?: 'accessible' | 'elevated' | 'investment';
+  budgetTier?: 'accessible' | 'elevated' | 'investment' | 'unspecified';
   accentColorTolerance?: 'monochromatic' | 'subtle-accents' | 'bold-accents';
   accessoryAffinities: string[];
 }
