@@ -27,11 +27,11 @@ export function ProfileHeader({
             <div className="flex items-center gap-2">
               <span className="w-2 h-2 rounded-full bg-neutral-400"></span>
               <span className="uppercase tracking-widest font-semibold text-neutral-700">
-                PROFILE NOT SET
+                PROFILE REQUIRED
               </span>
             </div>
             <p className="text-[11px] text-neutral-500 mt-1 max-w-md normal-case font-sans">
-              VAEL does not guess what it has not observed or received. Enter your physical features or load sample profile to begin.
+              Build your profile to generate calibrated looks. VAEL does not make assumptions without evidence.
             </p>
           </div>
           <div className="flex items-center gap-2.5">
@@ -117,7 +117,7 @@ export function ProfileHeader({
           <span className="font-semibold uppercase">{hairTexture}</span> ({hairDensity})
         </div>
         <div>
-          <span className="text-neutral-400 block uppercase text-[10px]">GROOMING</span>
+          <span className="text-neutral-400 block uppercase text-[10px]">CURRENT FACIAL HAIR</span>
           <span className="font-semibold uppercase">{facialHair}</span>
         </div>
         <div>

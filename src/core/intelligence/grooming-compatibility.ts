@@ -58,8 +58,9 @@ export class GroomingCompatibilityEvaluator {
       const meetsDensity = densityRank[observedDensity] >= densityRank[style.minimumDensity];
       const densityScore = meetsDensity ? 0.95 : 0.25;
 
+      const sourceDesc = options.visual.source === 'user_input' ? 'entered' : 'observed';
       if (meetsDensity) {
-        reasons.push(`Easily achievable with your observed ${observedDensity} facial hair density.`);
+        reasons.push(`Easily achievable with your ${sourceDesc} ${observedDensity} facial hair density.`);
       } else {
         cautions.push(`Requires ${style.minimumDensity} density to look full; current growth pattern may appear sparse.`);
       }

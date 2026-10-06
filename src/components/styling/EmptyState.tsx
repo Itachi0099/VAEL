@@ -18,11 +18,10 @@ export function EmptyState({ onOpenEditor, onUseDemo }: EmptyStateProps) {
 
         <div>
           <h2 className="text-xl md:text-2xl font-editorial-title uppercase tracking-widest text-neutral-900">
-            PROFILE NOT INITIALIZED
+            PROFILE REQUIRED
           </h2>
           <p className="text-xs text-neutral-500 font-sans mt-2 leading-relaxed">
-            VAEL requires your visual features or stylistic preferences before generating calibrated looks.
-            No assumptions are made without evidence.
+            Build your profile to generate calibrated looks.
           </p>
         </div>
 

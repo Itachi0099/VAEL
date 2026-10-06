@@ -62,12 +62,13 @@ export class HairCompatibilityEvaluator {
       const densityMatches = style.compatibleDensities.includes(density);
 
       let textureScore = 0.3;
+      const sourceDesc = options.visual.source === 'user_input' ? 'entered' : 'observed';
       if (textureMatches && densityMatches) {
         textureScore = 0.95;
-        reasons.push(`Optimized for your observed ${texture} texture and ${density} density.`);
+        reasons.push(`Optimized for your ${sourceDesc} ${texture} texture and ${density} density.`);
       } else if (textureMatches) {
         textureScore = 0.75;
-        reasons.push(`Natural fit for ${texture} hair texture.`);
+        reasons.push(`Natural fit for your ${sourceDesc} ${texture} hair texture.`);
       } else if (densityMatches) {
         textureScore = 0.65;
         cautions.push(`Designed primarily for ${style.compatibleTextures.join('/')} hair; may require heat or texturizing product.`);

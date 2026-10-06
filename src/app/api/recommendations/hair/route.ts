@@ -7,11 +7,6 @@ import { Context } from '@/core/domain';
 export async function POST(request: Request) {
   try {
     const body = await request.json().catch(() => ({}));
-    const userId = body.userId || 'usr_vael_curator';
-
-    const user = await defaultStore.getUser(userId);
-
-    // Build context if occasion provided
     let context: Context | undefined;
     if (body.occasionSlug) {
       const occasion = knowledgeBase.getOccasionBySlug(body.occasionSlug);
@@ -24,12 +19,33 @@ export async function POST(request: Request) {
       }
     }
 
+    let targetVisual = body.visual;
+    let targetPreferences = body.preferences;
+    let targetFeedback = body.feedback;
+
+    if (body.customUser) {
+      targetVisual = targetVisual || body.customUser.visualProfile;
+      targetPreferences = targetPreferences || body.customUser.styleProfile?.preferences;
+      targetFeedback = targetFeedback || body.customUser.styleProfile?.feedbackProfile;
+    } else if (body.userId) {
+      const user = await defaultStore.getUser(body.userId);
+      targetVisual = targetVisual || user?.visualProfile;
+      targetPreferences = targetPreferences || user?.styleProfile.preferences;
+      targetFeedback = targetFeedback || user?.styleProfile.feedbackProfile;
+    } else if (!body.isExplicitEmpty) {
+      // Default demo curator only if no custom user specified and not explicitly empty
+      const user = await defaultStore.getUser('usr_vael_curator');
+      targetVisual = targetVisual || user?.visualProfile;
+      targetPreferences = targetPreferences || user?.styleProfile.preferences;
+      targetFeedback = targetFeedback || user?.styleProfile.feedbackProfile;
+    }
+
     const recommendations = recommendationService.generateHairRecommendations({
-      visual: body.visual || user?.visualProfile,
+      visual: targetVisual,
       context,
-      preferences: body.preferences || user?.styleProfile.preferences,
-      feedback: user?.styleProfile.feedbackProfile,
-      limit: body.limit || 5,
+      preferences: targetPreferences,
+      feedback: targetFeedback,
+      limit: body.limit || 6,
     });
 
     return NextResponse.json({ success: true, data: recommendations });

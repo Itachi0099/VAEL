@@ -191,8 +191,11 @@ export function ProfileModal({
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
                 <label className="block text-neutral-500 mb-1.5 uppercase tracking-wide">
-                  Facial Hair
+                  Current Facial Hair
                 </label>
+                <span className="text-[10px] text-neutral-400 block mb-2 font-sans normal-case">
+                  Describes your present grooming baseline, not an immutable styling limit.
+                </span>
                 <div className="flex flex-wrap gap-1.5">
                   {[
                     { id: 'clean-shaven', label: 'Clean-shaven' },

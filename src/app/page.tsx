@@ -123,10 +123,16 @@ export default function VaelShell() {
 
   const fetchHair = async (user?: any, occ = selectedOccasion) => {
     try {
+      const payload: any = { occasionSlug: occ };
+      if (profileMode === 'CONFIGURED' && user) {
+        payload.customUser = user;
+      } else if (profileMode === 'EMPTY') {
+        payload.isExplicitEmpty = true;
+      }
       const res = await fetch('/api/recommendations/hair', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ occasionSlug: occ }),
+        body: JSON.stringify(payload),
       });
       const data = await res.json();
       if (data.data) {
@@ -139,10 +145,16 @@ export default function VaelShell() {
 
   const fetchGrooming = async (user?: any, occ = selectedOccasion) => {
     try {
+      const payload: any = { occasionSlug: occ };
+      if (profileMode === 'CONFIGURED' && user) {
+        payload.customUser = user;
+      } else if (profileMode === 'EMPTY') {
+        payload.isExplicitEmpty = true;
+      }
       const res = await fetch('/api/recommendations/grooming', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ occasionSlug: occ }),
+        body: JSON.stringify(payload),
       });
       const data = await res.json();
       if (data.data) {
@@ -399,7 +411,7 @@ export default function VaelShell() {
           <div className="text-neutral-500 text-[11px]">
             {isGenerating ? (
               <span className="text-neutral-900 font-semibold animate-pulse">
-                • DETERMINISTIC ENGINE COMPUTING TOP 3 LOOKS...
+                • CALIBRATING YOUR LOOKS...
               </span>
             ) : (
               <span>
@@ -528,7 +540,9 @@ export default function VaelShell() {
 
                 <div className="mt-4 pt-3 border-t border-neutral-100 flex items-center justify-between text-[10px] text-neutral-500">
                   <span className="uppercase">MAINTENANCE: {rec.item.maintenance}</span>
-                  <span className="uppercase">LENGTH: {rec.item.length}</span>
+                  {(rec.item.targetLength || rec.item.length) && (
+                    <span className="uppercase">LENGTH: {rec.item.targetLength || rec.item.length}</span>
+                  )}
                 </div>
               </div>
             ))}
@@ -584,7 +598,9 @@ export default function VaelShell() {
                 </div>
 
                 <div className="mt-4 pt-3 border-t border-neutral-100 flex items-center justify-between text-[10px] text-neutral-500">
-                  <span className="uppercase">LENGTH: {rec.item.length}</span>
+                  {(rec.item.targetLength || rec.item.length) && (
+                    <span className="uppercase">LENGTH: {rec.item.targetLength || rec.item.length}</span>
+                  )}
                   <span className="uppercase">MAINTENANCE: {rec.item.maintenance}</span>
                 </div>
               </div>
