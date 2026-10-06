@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+:root {
+  --background: #fafaf9;
+  --foreground: #121212;
+  --editorial-muted: #737373;
+  --border-subtle: #e5e5e5;
+  --border-strong: #171717;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  letter-spacing: -0.01em;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Editorial typography utilities */
+.font-editorial-title {
+  font-family: "Didot", "Bodoni MT", "Cinzel", "Playfair Display", Georgia, serif;
+  letter-spacing: 0.15em;
+}
+
+.font-editorial-mono {
+  font-family: "SF Mono", Monaco, "Courier New", monospace;
+  letter-spacing: 0.05em;
+}
+
+/* Subtle hand-drawn border effect */
+.doodle-border {
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+}
