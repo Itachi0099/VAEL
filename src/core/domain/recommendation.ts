@@ -27,6 +27,7 @@ export interface RecommendationFactor {
     | 'silhouette_balance'
     | 'preference_reinforcement'
     | 'modesty_compliance'
+    | 'expression_affinity'
     | 'wardrobe_priority'
     | 'proportion_balance';
   weight: number;

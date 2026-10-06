@@ -16,6 +16,8 @@ import {
   HeightRange,
   TorsoLegPreference,
   ShoulderHipBalance,
+  GenderIdentity,
+  StyleExpression,
 } from '@/core/domain';
 
 export interface ProfileFormData {
@@ -27,6 +29,8 @@ export interface ProfileFormData {
   faceShape: FaceShape;
   topFit: FitType;
   bottomFit: FitType;
+  genderIdentity?: GenderIdentity;
+  styleExpression?: StyleExpression;
   genderDirection: 'masculine' | 'androgynous' | 'feminine';
   undertone: UndertonePreference | 'unspecified';
   contrastLevel: ContrastLevel;
@@ -125,90 +129,114 @@ export function ProfileModal({
             </span>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
-                <label className="block text-neutral-500 mb-1.5 uppercase tracking-wide">
+                <label id="hair-texture-label" className="block text-neutral-500 mb-1.5 uppercase tracking-wide">
                   Texture
                 </label>
-                <div className="flex flex-wrap gap-1.5">
-                  {(['straight', 'wavy', 'curly', 'coily'] as HairTexture[]).map((t) => (
-                    <button
-                      type="button"
-                      key={t}
-                      onClick={() => update('hairTexture', t)}
-                      className={`px-3 py-1.5 uppercase text-[11px] border transition ${
-                        formData.hairTexture === t
-                          ? 'border-neutral-900 bg-neutral-900 text-white font-semibold'
-                          : 'border-neutral-300 bg-white text-neutral-700 hover:border-neutral-500'
-                      }`}
-                    >
-                      {t}
-                    </button>
-                  ))}
+                <div role="radiogroup" aria-labelledby="hair-texture-label" className="flex flex-wrap gap-1.5">
+                  {(['straight', 'wavy', 'curly', 'coily'] as HairTexture[]).map((t) => {
+                    const isSelected = formData.hairTexture === t;
+                    return (
+                      <button
+                        type="button"
+                        key={t}
+                        role="radio"
+                        aria-checked={isSelected}
+                        onClick={() => update('hairTexture', t)}
+                        className={`px-3 py-1.5 uppercase text-[11px] border transition flex items-center gap-1 ${
+                          isSelected
+                            ? 'border-neutral-900 bg-neutral-900 text-white font-semibold'
+                            : 'border-neutral-300 bg-white text-neutral-700 hover:border-neutral-500'
+                        }`}
+                      >
+                        {isSelected && <span className="inline-block w-1.5 h-1.5 rounded-full bg-white mr-0.5" aria-hidden="true" />}
+                        {t}
+                      </button>
+                    );
+                  })}
                 </div>
               </div>
 
               <div>
-                <label className="block text-neutral-500 mb-1.5 uppercase tracking-wide">
+                <label id="hair-length-label" className="block text-neutral-500 mb-1.5 uppercase tracking-wide">
                   Length
                 </label>
-                <div className="flex flex-wrap gap-1.5">
-                  {(['buzz', 'short', 'medium', 'long'] as HairLength[]).map((l) => (
-                    <button
-                      type="button"
-                      key={l}
-                      onClick={() => update('hairLength', l)}
-                      className={`px-3 py-1.5 uppercase text-[11px] border transition ${
-                        formData.hairLength === l
-                          ? 'border-neutral-900 bg-neutral-900 text-white font-semibold'
-                          : 'border-neutral-300 bg-white text-neutral-700 hover:border-neutral-500'
-                      }`}
-                    >
-                      {l}
-                    </button>
-                  ))}
+                <div role="radiogroup" aria-labelledby="hair-length-label" className="flex flex-wrap gap-1.5">
+                  {(['buzz', 'short', 'medium', 'long'] as HairLength[]).map((l) => {
+                    const isSelected = formData.hairLength === l;
+                    return (
+                      <button
+                        type="button"
+                        key={l}
+                        role="radio"
+                        aria-checked={isSelected}
+                        onClick={() => update('hairLength', l)}
+                        className={`px-3 py-1.5 uppercase text-[11px] border transition flex items-center gap-1 ${
+                          isSelected
+                            ? 'border-neutral-900 bg-neutral-900 text-white font-semibold'
+                            : 'border-neutral-300 bg-white text-neutral-700 hover:border-neutral-500'
+                        }`}
+                      >
+                        {isSelected && <span className="inline-block w-1.5 h-1.5 rounded-full bg-white mr-0.5" aria-hidden="true" />}
+                        {l}
+                      </button>
+                    );
+                  })}
                 </div>
               </div>
 
               <div>
-                <label className="block text-neutral-500 mb-1.5 uppercase tracking-wide">
+                <label id="hair-density-label" className="block text-neutral-500 mb-1.5 uppercase tracking-wide">
                   Density
                 </label>
-                <div className="flex flex-wrap gap-1.5">
-                  {(['low', 'medium', 'high'] as HairDensity[]).map((d) => (
-                    <button
-                      type="button"
-                      key={d}
-                      onClick={() => update('hairDensity', d)}
-                      className={`px-3 py-1.5 uppercase text-[11px] border transition ${
-                        formData.hairDensity === d
-                          ? 'border-neutral-900 bg-neutral-900 text-white font-semibold'
-                          : 'border-neutral-300 bg-white text-neutral-700 hover:border-neutral-500'
-                      }`}
-                    >
-                      {d}
-                    </button>
-                  ))}
+                <div role="radiogroup" aria-labelledby="hair-density-label" className="flex flex-wrap gap-1.5">
+                  {(['low', 'medium', 'high'] as HairDensity[]).map((d) => {
+                    const isSelected = formData.hairDensity === d;
+                    return (
+                      <button
+                        type="button"
+                        key={d}
+                        role="radio"
+                        aria-checked={isSelected}
+                        onClick={() => update('hairDensity', d)}
+                        className={`px-3 py-1.5 uppercase text-[11px] border transition flex items-center gap-1 ${
+                          isSelected
+                            ? 'border-neutral-900 bg-neutral-900 text-white font-semibold'
+                            : 'border-neutral-300 bg-white text-neutral-700 hover:border-neutral-500'
+                        }`}
+                      >
+                        {isSelected && <span className="inline-block w-1.5 h-1.5 rounded-full bg-white mr-0.5" aria-hidden="true" />}
+                        {d}
+                      </button>
+                    );
+                  })}
                 </div>
               </div>
 
               <div>
-                <label className="block text-neutral-500 mb-1.5 uppercase tracking-wide">
+                <label id="hair-maintenance-label" className="block text-neutral-500 mb-1.5 uppercase tracking-wide">
                   Maintenance Tolerance
                 </label>
-                <div className="flex flex-wrap gap-1.5">
-                  {(['minimal', 'moderate', 'high'] as MaintenanceLevel[]).map((m) => (
-                    <button
-                      type="button"
-                      key={m}
-                      onClick={() => update('maintenanceTolerance', m)}
-                      className={`px-3 py-1.5 uppercase text-[11px] border transition ${
-                        formData.maintenanceTolerance === m
-                          ? 'border-neutral-900 bg-neutral-900 text-white font-semibold'
-                          : 'border-neutral-300 bg-white text-neutral-700 hover:border-neutral-500'
-                      }`}
-                    >
-                      {m}
-                    </button>
-                  ))}
+                <div role="radiogroup" aria-labelledby="hair-maintenance-label" className="flex flex-wrap gap-1.5">
+                  {(['minimal', 'moderate', 'high'] as MaintenanceLevel[]).map((m) => {
+                    const isSelected = formData.maintenanceTolerance === m;
+                    return (
+                      <button
+                        type="button"
+                        key={m}
+                        role="radio"
+                        aria-checked={isSelected}
+                        onClick={() => update('maintenanceTolerance', m)}
+                        className={`px-3 py-1.5 uppercase text-[11px] border transition flex items-center gap-1 ${
+                          isSelected
+                            ? 'border-neutral-900 bg-neutral-900 text-white font-semibold'
+                            : 'border-neutral-300 bg-white text-neutral-700 hover:border-neutral-500'
+                        }`}
+                      >
+                        {isSelected && <span className="inline-block w-1.5 h-1.5 rounded-full bg-white mr-0.5" aria-hidden="true" />}
+                        {m}
+                      </button>
+                    );
+                  })}
                 </div>
               </div>
             </div>
@@ -221,13 +249,13 @@ export function ProfileModal({
             </span>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
-                <label className="block text-neutral-500 mb-1.5 uppercase tracking-wide">
+                <label id="facial-hair-label" className="block text-neutral-500 mb-1.5 uppercase tracking-wide">
                   Current Facial Hair
                 </label>
                 <span className="text-[10px] text-neutral-400 block mb-2 font-sans normal-case">
                   Describes your present grooming baseline, not an immutable styling limit.
                 </span>
-                <div className="flex flex-wrap gap-1.5">
+                <div role="radiogroup" aria-labelledby="facial-hair-label" className="flex flex-wrap gap-1.5">
                   {[
                     { id: 'clean-shaven', label: 'Clean-shaven' },
                     { id: 'stubble', label: 'Stubble' },
@@ -235,42 +263,54 @@ export function ProfileModal({
                     { id: 'medium-beard', label: 'Medium Beard' },
                     { id: 'full-beard', label: 'Full Beard' },
                     { id: 'moustache', label: 'Moustache' },
-                  ].map((item) => (
-                    <button
-                      type="button"
-                      key={item.id}
-                      onClick={() => update('facialHair', item.id as any)}
-                      className={`px-3 py-1.5 uppercase text-[11px] border transition ${
-                        formData.facialHair === item.id
-                          ? 'border-neutral-900 bg-neutral-900 text-white font-semibold'
-                          : 'border-neutral-300 bg-white text-neutral-700 hover:border-neutral-500'
-                      }`}
-                    >
-                      {item.label}
-                    </button>
-                  ))}
+                  ].map((item) => {
+                    const isSelected = formData.facialHair === item.id;
+                    return (
+                      <button
+                        type="button"
+                        key={item.id}
+                        role="radio"
+                        aria-checked={isSelected}
+                        onClick={() => update('facialHair', item.id as any)}
+                        className={`px-3 py-1.5 uppercase text-[11px] border transition flex items-center gap-1 ${
+                          isSelected
+                            ? 'border-neutral-900 bg-neutral-900 text-white font-semibold'
+                            : 'border-neutral-300 bg-white text-neutral-700 hover:border-neutral-500'
+                        }`}
+                      >
+                        {isSelected && <span className="inline-block w-1.5 h-1.5 rounded-full bg-white mr-0.5" aria-hidden="true" />}
+                        {item.label}
+                      </button>
+                    );
+                  })}
                 </div>
               </div>
 
               <div>
-                <label className="block text-neutral-500 mb-1.5 uppercase tracking-wide">
+                <label id="face-shape-label" className="block text-neutral-500 mb-1.5 uppercase tracking-wide">
                   Face Shape
                 </label>
-                <div className="flex flex-wrap gap-1.5">
-                  {(['oval', 'square', 'round', 'rectangle', 'heart', 'diamond'] as FaceShape[]).map((shape) => (
-                    <button
-                      type="button"
-                      key={shape}
-                      onClick={() => update('faceShape', shape)}
-                      className={`px-3 py-1.5 uppercase text-[11px] border transition ${
-                        formData.faceShape === shape
-                          ? 'border-neutral-900 bg-neutral-900 text-white font-semibold'
-                          : 'border-neutral-300 bg-white text-neutral-700 hover:border-neutral-500'
-                      }`}
-                    >
-                      {shape}
-                    </button>
-                  ))}
+                <div role="radiogroup" aria-labelledby="face-shape-label" className="flex flex-wrap gap-1.5">
+                  {(['oval', 'square', 'round', 'rectangle', 'heart', 'diamond'] as FaceShape[]).map((shape) => {
+                    const isSelected = formData.faceShape === shape;
+                    return (
+                      <button
+                        type="button"
+                        key={shape}
+                        role="radio"
+                        aria-checked={isSelected}
+                        onClick={() => update('faceShape', shape)}
+                        className={`px-3 py-1.5 uppercase text-[11px] border transition flex items-center gap-1 ${
+                          isSelected
+                            ? 'border-neutral-900 bg-neutral-900 text-white font-semibold'
+                            : 'border-neutral-300 bg-white text-neutral-700 hover:border-neutral-500'
+                        }`}
+                      >
+                        {isSelected && <span className="inline-block w-1.5 h-1.5 rounded-full bg-white mr-0.5" aria-hidden="true" />}
+                        {shape}
+                      </button>
+                    );
+                  })}
                 </div>
               </div>
             </div>
@@ -283,69 +323,150 @@ export function ProfileModal({
             </span>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               <div>
-                <label className="block text-neutral-500 mb-1.5 uppercase tracking-wide">
+                <label id="top-fit-label" className="block text-neutral-500 mb-1.5 uppercase tracking-wide">
                   Top Fit
                 </label>
-                <div className="flex flex-wrap gap-1.5">
-                  {(['slim', 'regular', 'relaxed', 'boxy', 'oversized'] as FitType[]).map((fit) => (
-                    <button
-                      type="button"
-                      key={fit}
-                      onClick={() => update('topFit', fit)}
-                      className={`px-2.5 py-1 uppercase text-[11px] border transition ${
-                        formData.topFit === fit
-                          ? 'border-neutral-900 bg-neutral-900 text-white font-semibold'
-                          : 'border-neutral-300 bg-white text-neutral-700 hover:border-neutral-500'
-                      }`}
-                    >
-                      {fit}
-                    </button>
-                  ))}
+                <div role="radiogroup" aria-labelledby="top-fit-label" className="flex flex-wrap gap-1.5">
+                  {(['slim', 'regular', 'relaxed', 'boxy', 'oversized'] as FitType[]).map((fit) => {
+                    const isSelected = formData.topFit === fit;
+                    return (
+                      <button
+                        type="button"
+                        key={fit}
+                        role="radio"
+                        aria-checked={isSelected}
+                        onClick={() => update('topFit', fit)}
+                        className={`px-2.5 py-1 uppercase text-[11px] border transition flex items-center gap-1 ${
+                          isSelected
+                            ? 'border-neutral-900 bg-neutral-900 text-white font-semibold'
+                            : 'border-neutral-300 bg-white text-neutral-700 hover:border-neutral-500'
+                        }`}
+                      >
+                        {isSelected && <span className="inline-block w-1.5 h-1.5 rounded-full bg-white mr-0.5" aria-hidden="true" />}
+                        {fit}
+                      </button>
+                    );
+                  })}
                 </div>
               </div>
 
               <div>
-                <label className="block text-neutral-500 mb-1.5 uppercase tracking-wide">
+                <label id="bottom-fit-label" className="block text-neutral-500 mb-1.5 uppercase tracking-wide">
                   Bottom Fit
                 </label>
-                <div className="flex flex-wrap gap-1.5">
-                  {(['slim', 'regular', 'relaxed', 'tailored', 'oversized'] as FitType[]).map((fit) => (
-                    <button
-                      type="button"
-                      key={fit}
-                      onClick={() => update('bottomFit', fit)}
-                      className={`px-2.5 py-1 uppercase text-[11px] border transition ${
-                        formData.bottomFit === fit
-                          ? 'border-neutral-900 bg-neutral-900 text-white font-semibold'
-                          : 'border-neutral-300 bg-white text-neutral-700 hover:border-neutral-500'
-                      }`}
-                    >
-                      {fit}
-                    </button>
-                  ))}
+                <div role="radiogroup" aria-labelledby="bottom-fit-label" className="flex flex-wrap gap-1.5">
+                  {(['slim', 'regular', 'relaxed', 'tailored', 'oversized'] as FitType[]).map((fit) => {
+                    const isSelected = formData.bottomFit === fit;
+                    return (
+                      <button
+                        type="button"
+                        key={fit}
+                        role="radio"
+                        aria-checked={isSelected}
+                        onClick={() => update('bottomFit', fit)}
+                        className={`px-2.5 py-1 uppercase text-[11px] border transition flex items-center gap-1 ${
+                          isSelected
+                            ? 'border-neutral-900 bg-neutral-900 text-white font-semibold'
+                            : 'border-neutral-300 bg-white text-neutral-700 hover:border-neutral-500'
+                        }`}
+                      >
+                        {isSelected && <span className="inline-block w-1.5 h-1.5 rounded-full bg-white mr-0.5" aria-hidden="true" />}
+                        {fit}
+                      </button>
+                    );
+                  })}
                 </div>
               </div>
 
               <div>
-                <label className="block text-neutral-500 mb-1.5 uppercase tracking-wide">
-                  Expression
+                <label id="style-expression-label" className="block text-neutral-500 mb-1.5 uppercase tracking-wide">
+                  Style Expression
                 </label>
-                <div className="flex flex-wrap gap-1.5">
-                  {(['masculine', 'androgynous', 'feminine'] as const).map((dir) => (
+                <span className="text-[10px] text-neutral-400 block mb-2 font-sans normal-case">
+                  Soft presentation preference. Never hard-filters clothing items.
+                </span>
+                <div
+                  role="radiogroup"
+                  aria-labelledby="style-expression-label"
+                  className="flex flex-wrap gap-1.5"
+                >
+                  {[
+                    { id: 'masculine', label: 'Masculine' },
+                    { id: 'feminine', label: 'Feminine' },
+                    { id: 'androgynous', label: 'Androgynous' },
+                    { id: 'no-preference', label: 'No Preference' },
+                  ].map((item) => {
+                    const isSelected =
+                      (formData.styleExpression || formData.genderDirection) === item.id ||
+                      (item.id === 'no-preference' && !formData.styleExpression && formData.genderDirection === 'androgynous');
+
+                    return (
+                      <button
+                        type="button"
+                        key={item.id}
+                        role="radio"
+                        aria-checked={isSelected}
+                        onClick={() => {
+                          update('styleExpression', item.id as StyleExpression);
+                          if (item.id !== 'no-preference') {
+                            update('genderDirection', item.id as 'masculine' | 'androgynous' | 'feminine');
+                          }
+                        }}
+                        className={`px-2.5 py-1 uppercase text-[11px] border transition flex items-center gap-1 ${
+                          isSelected
+                            ? 'border-neutral-900 bg-neutral-900 text-white font-semibold'
+                            : 'border-neutral-300 bg-white text-neutral-700 hover:border-neutral-500'
+                        }`}
+                      >
+                        {isSelected && <span className="inline-block w-1.5 h-1.5 rounded-full bg-white mr-0.5" aria-hidden="true" />}
+                        {item.label}
+                      </button>
+                    );
+                  })}
+                </div>
+              </div>
+            </div>
+
+            {/* Optional Gender Identity Context (ZERO Scoring Weight) */}
+            <div className="mt-4 pt-3 border-t border-neutral-200">
+              <label id="gender-identity-label" className="block text-neutral-500 mb-1 uppercase tracking-wide">
+                Gender Identity (Optional Context — 0 Scoring Weight)
+              </label>
+              <span className="text-[10px] text-neutral-400 block mb-2 font-sans normal-case">
+                VAEL styles people. Gender identity carries strictly zero scoring weight and never filters clothing.
+              </span>
+              <div
+                role="radiogroup"
+                aria-labelledby="gender-identity-label"
+                className="flex flex-wrap gap-1.5"
+              >
+                {[
+                  { id: 'man', label: 'Man' },
+                  { id: 'woman', label: 'Woman' },
+                  { id: 'non-binary', label: 'Non-binary' },
+                  { id: 'prefer-not-to-specify', label: 'Prefer not to specify' },
+                  { id: 'self-describe', label: 'Self-describe' },
+                  { id: 'unspecified', label: 'Skip / Unanswered' },
+                ].map((item) => {
+                  const isSelected = (formData.genderIdentity || 'unspecified') === item.id;
+                  return (
                     <button
                       type="button"
-                      key={dir}
-                      onClick={() => update('genderDirection', dir)}
-                      className={`px-2.5 py-1 uppercase text-[11px] border transition ${
-                        formData.genderDirection === dir
+                      key={item.id}
+                      role="radio"
+                      aria-checked={isSelected}
+                      onClick={() => update('genderIdentity', item.id as GenderIdentity)}
+                      className={`px-2.5 py-1 uppercase text-[11px] border transition flex items-center gap-1 ${
+                        isSelected
                           ? 'border-neutral-900 bg-neutral-900 text-white font-semibold'
                           : 'border-neutral-300 bg-white text-neutral-700 hover:border-neutral-500'
                       }`}
                     >
-                      {dir}
+                      {isSelected && <span className="inline-block w-1.5 h-1.5 rounded-full bg-white mr-0.5" aria-hidden="true" />}
+                      {item.label}
                     </button>
-                  ))}
-                </div>
+                  );
+                })}
               </div>
             </div>
           </div>

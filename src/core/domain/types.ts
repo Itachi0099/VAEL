@@ -87,3 +87,7 @@ export type ShoulderHipBalance = 'broad-shoulders' | 'balanced' | 'wider-hips' |
 export type TemperatureLevel = 'cold' | 'cool' | 'mild' | 'warm' | 'hot';
 
 export type WeatherConditionType = 'dry' | 'rain' | 'unspecified';
+
+export type GenderIdentity = 'man' | 'woman' | 'non-binary' | 'prefer-not-to-specify' | 'self-describe' | 'unspecified';
+
+export type StyleExpression = 'masculine' | 'feminine' | 'androgynous' | 'no-preference';

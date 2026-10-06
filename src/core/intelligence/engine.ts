@@ -367,6 +367,33 @@ export class VaelStylingEngine {
       reasons.push('Features signature pieces from your existing wardrobe.');
     }
 
+    // 7. Style Expression Soft Affinity (Weight: 1.0, Soft Cap: <= 0.15 effective impact)
+    // Expression must NEVER outweigh climate, occasion, or explicit dislikes.
+    // Gender identity has strictly ZERO weight and is never read here.
+    const expr = preferences.styleExpression || preferences.genderCodingDirection;
+    if (expr && expr !== 'no-preference' && expr !== 'unspecified') {
+      const garmentsWithCoding = outfit.items.map((it) => it.garment);
+      let matchCount = 0;
+      for (const g of garmentsWithCoding) {
+        if (expr === 'androgynous' && (g.genderCoding === 'androgynous' || g.fluidTag || g.garmentCoding === 0)) {
+          matchCount++;
+        } else if (expr === 'masculine' && (g.genderCoding === 'masculine' || (g.garmentCoding !== undefined && g.garmentCoding < 0))) {
+          matchCount++;
+        } else if (expr === 'feminine' && (g.genderCoding === 'feminine' || (g.garmentCoding !== undefined && g.garmentCoding > 0))) {
+          matchCount++;
+        }
+      }
+      const matchRatio = garmentsWithCoding.length > 0 ? matchCount / garmentsWithCoding.length : 0.5;
+      // Soft affinity between 0.5 and 0.8 (bounded soft influence, capped <= 0.15 net score difference)
+      const exprAffinityScore = 0.5 + Math.min(0.3, matchRatio * 0.3);
+      factors.push({
+        category: 'expression_affinity',
+        weight: 1.0,
+        score: exprAffinityScore,
+        reason: `Soft expression alignment with ${expr} presentation preference.`,
+      });
+    }
+
     const { finalScore } = computeWeightedScore(factors);
 
     // Build traceable reasons connecting directly to real signals and knowledge IDs

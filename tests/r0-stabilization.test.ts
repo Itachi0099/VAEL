@@ -16,6 +16,12 @@ describe('R0 Stabilization & Integrity Test Suite', () => {
       'unattractive',
       'flattering',
       'flatter your',
+      'for men',
+      'for women',
+      "men's",
+      "women's",
+      "because you're a man",
+      "because you're a woman",
     ];
 
     // Check all occasion guidelines

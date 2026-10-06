@@ -1,0 +1,11 @@
+id,slug,name,formalityRange,primarySilhouettes,dominantFits
+"style_minimal","minimal","Minimal","2-4","clean-linear;relaxed-tailored","tailored;regular;relaxed"
+"style_korean_minimal","korean-minimal","Korean Minimal","2-3","dropped-shoulder-fluid;wide-leg-break","oversized;boxy;relaxed"
+"style_smart_casual","smart-casual","Smart Casual","2-4","structured-tapered;clean-tailored","tailored;regular;slim"
+"style_old_money","old-money","Old Money","3-5","traditional-tailored;pleated-straight","tailored;regular"
+"style_streetwear","streetwear","Streetwear","1-2","boxy-oversized;stacked-cargo","oversized;boxy;relaxed"
+"style_workwear","workwear","Workwear","1-3","straight-rugged;box-cut-work","relaxed;regular"
+"style_techwear","techwear","Techwear","1-2","articulated-taper;modular-outer","tailored;relaxed"
+"style_dark_academia","dark-academia","Dark Academia","2-4","layered-tailored;high-waisted-pleat","tailored;regular;relaxed"
+"style_vintage","vintage","Vintage","1-3","high-waist-wide-leg;cropped-boxy-leather","relaxed;regular;boxy"
+"style_experimental","experimental","Experimental","2-4","asymmetric-drape;volumetric-cocoon","oversized;boxy"

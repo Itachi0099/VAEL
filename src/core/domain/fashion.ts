@@ -55,7 +55,9 @@ export interface Garment {
   metalTone?: 'silver' | 'gold' | 'brass' | 'blackened' | 'mixed'; // for accessories/jewelry
 
   modestyRating: ModestyLevel;
-  genderCoding: GenderCodingDirection;
+  genderCoding: GenderCodingDirection; // Backwards-compatible enum ('masculine' | 'feminine' | 'androgynous' | 'unspecified')
+  garmentCoding?: number; // Numeric scalar -1.0 (masculine-coded) .. 0.0 (neutral/unclassified) .. +1.0 (feminine-coded)
+  fluidTag?: boolean; // True if intentionally fluid/androgynous cross-style garment
 
   seasons: Season[];
   compatibleWeather: WeatherCondition[];

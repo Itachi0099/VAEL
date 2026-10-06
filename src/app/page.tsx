@@ -250,6 +250,8 @@ export default function VaelShell() {
           heightRange: formData.heightRange || 'unspecified',
           torsoLegPreference: formData.torsoLegPreference || 'unspecified',
           shoulderHipBalance: formData.shoulderHipBalance || 'unspecified',
+          genderIdentity: formData.genderIdentity || 'unspecified',
+          styleExpression: formData.styleExpression || formData.genderDirection,
           genderCodingDirection: formData.genderDirection,
           preferredFormalityRange: [2, 4],
           maxMaintenanceTolerance: formData.maintenanceTolerance,

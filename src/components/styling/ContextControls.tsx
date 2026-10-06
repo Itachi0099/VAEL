@@ -96,7 +96,11 @@ export function ContextControls({
             12 OCCASIONS REGISTERED
           </span>
         </div>
-        <div className="flex flex-wrap gap-1.5">
+        <div
+          role="radiogroup"
+          aria-label="Occasion Selection"
+          className="flex flex-wrap gap-1.5"
+        >
           {ALL_OCCASIONS.map((occ) => {
             const isSelected =
               selectedOccasion === occ.slug ||
@@ -106,13 +110,17 @@ export function ContextControls({
             return (
               <button
                 key={occ.slug}
+                type="button"
+                role="radio"
+                aria-checked={isSelected}
                 onClick={() => onSelectOccasion(occ.slug)}
-                className={`px-2.5 py-1.5 uppercase tracking-wider text-[11px] border transition ${
+                className={`px-2.5 py-1.5 uppercase tracking-wider text-[11px] border transition flex items-center gap-1.5 ${
                   isSelected
                     ? 'border-neutral-900 bg-neutral-900 text-white font-semibold'
                     : 'border-neutral-200 bg-white text-neutral-700 hover:border-neutral-400'
                 }`}
               >
+                {isSelected && <span className="inline-block w-1.5 h-1.5 rounded-full bg-white mr-0.5" aria-hidden="true" />}
                 {occ.name}
               </button>
             );
@@ -147,12 +155,16 @@ export function ContextControls({
       {/* Climate: Split Temperature & Rain Condition (F-05) */}
       <div className="flex flex-wrap items-center justify-between gap-4 pt-3 border-t border-neutral-100">
         <div className="flex flex-wrap items-center gap-4">
-          {/* Temperature Levels */}
+          {/* Temperature Levels (Strict Single-Select Radio Group) */}
           <div className="flex items-center gap-2">
-            <span className="text-[10px] uppercase tracking-wider text-neutral-400">
+            <span id="temperature-group-label" className="text-[10px] uppercase tracking-wider text-neutral-400">
               TEMPERATURE:
             </span>
-            <div className="flex items-center gap-1">
+            <div
+              role="radiogroup"
+              aria-labelledby="temperature-group-label"
+              className="flex items-center gap-1"
+            >
               {(
                 [
                   { id: 'cold', label: 'Cold' },
@@ -161,52 +173,71 @@ export function ContextControls({
                   { id: 'warm', label: 'Warm' },
                   { id: 'hot', label: 'Hot' },
                 ] as const
-              ).map((t) => (
-                <button
-                  key={t.id}
-                  onClick={() => {
-                    if (onSelectTemperatureLevel) onSelectTemperatureLevel(t.id);
-                    if (onSelectWeather) onSelectWeather(t.id);
-                  }}
-                  className={`px-2 py-0.5 uppercase text-[10px] border transition ${
-                    (temperatureLevel === t.id || weather === t.id)
-                      ? 'border-neutral-900 bg-neutral-900 text-white font-semibold'
-                      : 'border-neutral-200 bg-white text-neutral-600 hover:border-neutral-400'
-                  }`}
-                >
-                  {t.label}
-                </button>
-              ))}
+              ).map((t) => {
+                const isSelected = temperatureLevel === t.id;
+                return (
+                  <button
+                    key={t.id}
+                    type="button"
+                    role="radio"
+                    aria-checked={isSelected}
+                    onClick={() => {
+                      if (onSelectTemperatureLevel) onSelectTemperatureLevel(t.id);
+                      if (onSelectWeather) onSelectWeather(t.id);
+                    }}
+                    className={`px-2 py-0.5 uppercase text-[10px] border transition flex items-center gap-1 ${
+                      isSelected
+                        ? 'border-neutral-900 bg-neutral-900 text-white font-semibold'
+                        : 'border-neutral-200 bg-white text-neutral-600 hover:border-neutral-400'
+                    }`}
+                  >
+                    {isSelected && <span className="inline-block w-1.5 h-1.5 rounded-full bg-white mr-0.5" aria-hidden="true" />}
+                    {t.label}
+                  </button>
+                );
+              })}
             </div>
           </div>
 
-          {/* Condition: Dry vs Rain */}
+          {/* Condition: Dry vs Rain (Strict Single-Select Radio Group) */}
           <div className="flex items-center gap-2">
-            <span className="text-[10px] uppercase tracking-wider text-neutral-400">
+            <span id="condition-group-label" className="text-[10px] uppercase tracking-wider text-neutral-400">
               CONDITION:
             </span>
-            <div className="flex items-center gap-1">
+            <div
+              role="radiogroup"
+              aria-labelledby="condition-group-label"
+              className="flex items-center gap-1"
+            >
               {(
                 [
                   { id: 'dry', label: 'Dry' },
                   { id: 'rain', label: 'Rain' },
                 ] as const
-              ).map((c) => (
-                <button
-                  key={c.id}
-                  onClick={() => {
-                    if (onSelectWeatherCondition) onSelectWeatherCondition(c.id);
-                    if (c.id === 'rain' && onSelectWeather) onSelectWeather('rainy');
-                  }}
-                  className={`px-2 py-0.5 uppercase text-[10px] border transition ${
-                    (weatherCondition === c.id || (c.id === 'rain' && weather === 'rainy'))
-                      ? 'border-neutral-900 bg-neutral-900 text-white font-semibold'
-                      : 'border-neutral-200 bg-white text-neutral-600 hover:border-neutral-400'
-                  }`}
-                >
-                  {c.label}
-                </button>
-              ))}
+              ).map((c) => {
+                const isSelected = weatherCondition === c.id;
+                return (
+                  <button
+                    key={c.id}
+                    type="button"
+                    role="radio"
+                    aria-checked={isSelected}
+                    onClick={() => {
+                      if (onSelectWeatherCondition) onSelectWeatherCondition(c.id);
+                      if (c.id === 'rain' && onSelectWeather) onSelectWeather('rainy');
+                      else if (c.id === 'dry' && onSelectWeather) onSelectWeather(temperatureLevel);
+                    }}
+                    className={`px-2 py-0.5 uppercase text-[10px] border transition flex items-center gap-1 ${
+                      isSelected
+                        ? 'border-neutral-900 bg-neutral-900 text-white font-semibold'
+                        : 'border-neutral-200 bg-white text-neutral-600 hover:border-neutral-400'
+                    }`}
+                  >
+                    {isSelected && <span className="inline-block w-1.5 h-1.5 rounded-full bg-white mr-0.5" aria-hidden="true" />}
+                    {c.label}
+                  </button>
+                );
+              })}
             </div>
           </div>
         </div>
@@ -214,17 +245,24 @@ export function ContextControls({
         {/* Formality Slider with Occasion Band Enforced (F-04) */}
         {onSelectFormality && (
           <div className="flex items-center gap-2">
-            <span className="text-[10px] uppercase tracking-wider text-neutral-400">
+            <span id="formality-group-label" className="text-[10px] uppercase tracking-wider text-neutral-400">
               FORMALITY (BAND {minAllowed}–{maxAllowed}):
             </span>
-            <div className="flex items-center gap-1">
+            <div
+              role="radiogroup"
+              aria-labelledby="formality-group-label"
+              className="flex items-center gap-1"
+            >
               {([1, 2, 3, 4, 5] as FormalityLevel[]).map((lvl) => {
-                const isCurrent = formalityOverride === lvl;
+                const isCurrent = (formalityOverride || currentOccasion.defaultFormality) === lvl;
                 const isOutOfBand = lvl < minAllowed || lvl > maxAllowed;
 
                 return (
                   <button
                     key={lvl}
+                    type="button"
+                    role="radio"
+                    aria-checked={isCurrent}
                     onClick={() => handleFormalityClick(lvl)}
                     className={`w-5 h-5 flex items-center justify-center text-[10px] border transition ${
                       isCurrent

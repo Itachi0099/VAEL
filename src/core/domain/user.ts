@@ -9,6 +9,8 @@ import {
   HeightRange,
   TorsoLegPreference,
   ShoulderHipBalance,
+  GenderIdentity,
+  StyleExpression,
 } from './types';
 import { VisualProfile } from './visual';
 import { Feedback } from './feedback';
@@ -43,7 +45,9 @@ export interface PreferenceProfile {
   userConfirmedUndertone: UndertonePreference;
   contrastLevel?: ContrastLevel;
   traditionConstraint?: string; // Optional tradition layer constraint (e.g. 'unspecified', or specific heritage)
-  genderCodingDirection: GenderCodingDirection;
+  genderIdentity?: GenderIdentity; // Optional gender context (ZERO scoring weight, does not filter garments)
+  genderCodingDirection: GenderCodingDirection; // Backwards compatible with existing evaluation corpus
+  styleExpression?: StyleExpression; // Stated style expression ('masculine' | 'feminine' | 'androgynous' | 'no-preference')
   heightRange?: HeightRange;
   torsoLegPreference?: TorsoLegPreference;
   shoulderHipBalance?: ShoulderHipBalance;
