@@ -29,7 +29,8 @@ export interface RecommendationFactor {
     | 'modesty_compliance'
     | 'expression_affinity'
     | 'wardrobe_priority'
-    | 'proportion_balance';
+    | 'proportion_balance'
+    | 'accessory_coherence';
   weight: number;
   score: number; // 0.0 - 1.0
   reason: string;

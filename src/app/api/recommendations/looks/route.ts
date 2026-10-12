@@ -17,6 +17,7 @@ export async function POST(request: Request) {
       targetFormality,
       activeStyles,
       fitProportions,
+      subParameter,
     } = body;
 
     const occasion =
@@ -29,6 +30,7 @@ export async function POST(request: Request) {
       weather: weather || 'mild',
       temperatureCelsius: temperature !== undefined ? Number(temperature) : undefined,
       targetFormality: targetFormality || occasion.defaultFormality,
+      subParameter: subParameter || undefined,
     };
 
     let userToEvaluate: User | null = null;
@@ -52,7 +54,9 @@ export async function POST(request: Request) {
           userId: customUser.id || 'usr_adhoc_session',
           dominantAestheticSlugs: preferredStyles,
           styleVector: customUser.styleProfile?.styleVector || styleFamily.styleVector || StyleVectorMath.createBalancedVector(),
+          evidenceSignals: customUser.styleProfile?.evidenceSignals,
           preferences: {
+            ...customUser.styleProfile?.preferences,
             preferredStyleSlugs: preferredStyles,
             dislikedStyleSlugs: customUser.styleProfile?.preferences?.dislikedStyleSlugs || [],
             preferredColors: customUser.styleProfile?.preferences?.preferredColors || ['black', 'white', 'charcoal', 'navy'],
@@ -61,6 +65,7 @@ export async function POST(request: Request) {
             dislikedFits: customUser.styleProfile?.preferences?.dislikedFits || ['skinny'],
             preferredSilhouettes: customUser.styleProfile?.preferences?.preferredSilhouettes || [],
             dislikedSilhouettes: customUser.styleProfile?.preferences?.dislikedSilhouettes || [],
+            dislikedCategories: customUser.styleProfile?.preferences?.dislikedCategories || [],
             fitProportions: fitProportions || customUser.styleProfile?.preferences?.fitProportions || {
               preferredFits: ['relaxed', 'tailored'],
               dislikedFits: ['skinny'],
@@ -71,9 +76,18 @@ export async function POST(request: Request) {
               layeringPreference: 'moderate',
               garmentLengthPreferences: { top: 'regular', bottom: 'regular' },
             },
-            modestyLevel: customUser.styleProfile?.preferences?.modestyLevel || 'standard',
+            modestyLevel: customUser.styleProfile?.preferences?.modestyLevel || 'unrestricted',
             userConfirmedUndertone: customUser.styleProfile?.preferences?.userConfirmedUndertone || 'unspecified',
             genderCodingDirection: customUser.styleProfile?.preferences?.genderCodingDirection || 'androgynous',
+            styleExpression: customUser.styleProfile?.preferences?.styleExpression || 'unspecified',
+            genderIdentity: customUser.styleProfile?.preferences?.genderIdentity || 'unspecified',
+            skinDepth: customUser.styleProfile?.preferences?.skinDepth || 'unspecified',
+            contrastLevel: customUser.styleProfile?.preferences?.contrastLevel || 'unspecified',
+            heightRange: customUser.styleProfile?.preferences?.heightRange || 'unspecified',
+            torsoLegPreference: customUser.styleProfile?.preferences?.torsoLegPreference || 'unspecified',
+            shoulderHipBalance: customUser.styleProfile?.preferences?.shoulderHipBalance || 'unspecified',
+            budgetTier: customUser.styleProfile?.preferences?.budgetTier || 'unspecified',
+            budgetBand: customUser.styleProfile?.preferences?.budgetBand || 'unspecified',
             preferredFormalityRange: customUser.styleProfile?.preferences?.preferredFormalityRange || [
               occasion.allowableFormalityRange[0],
               occasion.allowableFormalityRange[1],

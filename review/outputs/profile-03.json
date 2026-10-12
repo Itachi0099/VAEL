@@ -1,0 +1,718 @@
+{
+  "profileId": "usr_p03",
+  "title": "Profile 03: Round face, curly, low density, full beard, Workplace",
+  "profile": {
+    "user": {
+      "id": "usr_p03",
+      "name": "Round Face Full Beard",
+      "handle": "p03",
+      "createdAt": "2026-10-12T00:00:00.000Z",
+      "styleProfile": {
+        "id": "sty_usr_p03",
+        "userId": "usr_p03",
+        "dominantAestheticSlugs": [
+          "minimal"
+        ],
+        "styleVector": {
+          "formality": 3,
+          "structure": 3,
+          "volume": 3,
+          "colorIntensity": 1,
+          "contrast": 3,
+          "pattern": 1,
+          "texture": 2,
+          "ornamentation": 1,
+          "classicTrend": 3,
+          "utilityPolish": 3,
+          "genderCoding": "androgynous"
+        },
+        "preferences": {
+          "preferredStyleSlugs": [
+            "minimal"
+          ],
+          "dislikedStyleSlugs": [],
+          "preferredColors": [
+            "black",
+            "white",
+            "charcoal"
+          ],
+          "dislikedColors": [],
+          "preferredFits": [
+            "relaxed",
+            "regular"
+          ],
+          "dislikedFits": [],
+          "preferredSilhouettes": [],
+          "dislikedSilhouettes": [],
+          "fitProportions": {
+            "preferredFits": [
+              "relaxed",
+              "regular"
+            ],
+            "dislikedFits": [],
+            "topVolume": 3,
+            "bottomVolume": 3,
+            "preferredSilhouettes": [],
+            "dislikedSilhouettes": [],
+            "layeringPreference": "moderate",
+            "garmentLengthPreferences": {
+              "top": "regular",
+              "bottom": "regular"
+            }
+          },
+          "modestyLevel": "unrestricted",
+          "userConfirmedUndertone": "neutral",
+          "genderCodingDirection": "androgynous",
+          "styleExpression": "androgynous",
+          "preferredFormalityRange": [
+            2,
+            4
+          ],
+          "maxMaintenanceTolerance": "moderate",
+          "accessoryAffinities": []
+        },
+        "feedbackProfile": {
+          "history": [],
+          "learnedStyleAffinities": {},
+          "learnedColorAffinities": {},
+          "learnedSilhouetteAffinities": {},
+          "learnedFitAffinities": {},
+          "repeatPassCount": {}
+        },
+        "evidenceSignals": {
+          "hairTexture": {
+            "value": "straight",
+            "authority": "USER_ENTERED",
+            "confidence": 1,
+            "source": "manual_input",
+            "updatedAt": "2026-10-12T00:00:00.000Z"
+          }
+        },
+        "updatedAt": "2026-10-12T00:00:00.000Z"
+      },
+      "visualProfile": {
+        "id": "vis_p03",
+        "userId": "usr_p03",
+        "face": {
+          "shape": "round",
+          "jaw": "soft",
+          "hasFacialHair": true,
+          "beardCharacteristics": {
+            "currentLength": "full",
+            "observedDensity": "thick",
+            "growthPattern": "full"
+          }
+        },
+        "hair": {
+          "texture": "curly",
+          "density": "low",
+          "length": "medium",
+          "volume": "moderate"
+        },
+        "body": {
+          "silhouette": "rectangle"
+        },
+        "source": "user_input",
+        "confidenceScore": 1,
+        "lastObservedAt": "2026-10-12T00:00:00.000Z"
+      }
+    },
+    "evidenceHierarchy": {
+      "userConfirmedUndertone": "neutral",
+      "modestyLevel": "unrestricted",
+      "styleExpression": "androgynous",
+      "evidenceSignals": {
+        "hairTexture": {
+          "value": "straight",
+          "authority": "USER_ENTERED",
+          "confidence": 1,
+          "source": "manual_input",
+          "updatedAt": "2026-10-12T00:00:00.000Z"
+        }
+      }
+    }
+  },
+  "context": {
+    "occasion": {
+      "id": "occ_office",
+      "slug": "office",
+      "name": "Modern Office / Workplace",
+      "category": "professional",
+      "defaultFormality": 3,
+      "allowableFormalityRange": [
+        2,
+        4
+      ],
+      "guidelines": [
+        "Balance comfort and professional authority",
+        "Knit polos, tailored trousers, clean derbies or minimal leather sneakers",
+        "Neutral and earth tones communicate competence and calm"
+      ],
+      "restrictedGarmentCategories": [
+        "athletic-shorts",
+        "flip-flops",
+        "loud-graphics",
+        "tank-tops"
+      ],
+      "keyStyleAffinities": [
+        "smart-casual",
+        "minimal",
+        "korean-minimal"
+      ],
+      "subParameters": [
+        "corporate",
+        "creative",
+        "startup"
+      ],
+      "timelessOrTrend": "TIMELESS",
+      "reviewDate": "2026-10-01",
+      "createdAt": "2026-10-01",
+      "updatedAt": "2026-10-01"
+    },
+    "targetFormality": 3,
+    "temperatureLevel": "mild",
+    "isWeatherConfirmed": true
+  },
+  "result": {
+    "looksCount": 3,
+    "contextApplied": "Modern Office / Workplace",
+    "vetoedCandidateCount": 4,
+    "evaluatedCandidateCount": 15,
+    "looks": [
+      {
+        "tier": "BEST_MATCH",
+        "tierRationale": "Optimal convergence of your 10D style vector, event formality, and physical proportions.",
+        "confidence": {
+          "state": "STRONG",
+          "explanation": "Supported by verified user formality, confirmed climate, explicit style vector, and grooming inputs.",
+          "toIncreaseConfidence": "Add specific footwear preferences to further personalize lower-leg grounding."
+        },
+        "overallHarmonyScore": 0.88,
+        "reasons": [
+          "Cropped upper proportion offset by expansive lower volume",
+          "Strong contrast between light and deep neutral values establishes crisp visual separation.",
+          "Aligned to Modern Office / Workplace formality."
+        ],
+        "cautions": [],
+        "outfit": {
+          "id": "outfit_korean_minimal_01",
+          "title": "Monochrome Fluid Tailoring",
+          "primaryStyleSlug": "korean-minimal",
+          "formality": 3,
+          "score": 0.88,
+          "items": [
+            {
+              "category": "top",
+              "subcategory": "t-shirt",
+              "name": "Heavyweight Boxy Tee (Off-White)",
+              "material": "300gsm combed organic cotton",
+              "color": "off-white",
+              "fit": "boxy",
+              "modestyRating": "standard",
+              "genderCoding": "androgynous",
+              "layerPosition": 0
+            },
+            {
+              "category": "outerwear",
+              "subcategory": "blazer",
+              "name": "Deconstructed Wool Blazer",
+              "material": "tropical virgin wool",
+              "color": "charcoal",
+              "fit": "relaxed",
+              "modestyRating": "high-coverage",
+              "genderCoding": "androgynous",
+              "layerPosition": 1
+            },
+            {
+              "category": "bottom",
+              "subcategory": "trousers",
+              "name": "Double-Pleated Wide-Leg Trousers",
+              "material": "wool gabardine blend",
+              "color": "pitch-black",
+              "fit": "relaxed",
+              "modestyRating": "high-coverage",
+              "genderCoding": "androgynous",
+              "layerPosition": 0
+            },
+            {
+              "category": "footwear",
+              "subcategory": "derbies",
+              "name": "Commando-Sole Leather Derbies",
+              "material": "polished binder calf leather, Vibram lug sole",
+              "color": "polished-black",
+              "fit": "regular",
+              "modestyRating": "standard",
+              "genderCoding": "androgynous",
+              "layerPosition": 0
+            }
+          ],
+          "factors": [
+            {
+              "category": "style_affinity",
+              "weight": 3.5,
+              "score": 0.79,
+              "reason": "Coordinate affinity (79%) with your 10D style vector."
+            },
+            {
+              "category": "silhouette_balance",
+              "weight": 3,
+              "score": 0.96,
+              "reason": "Cropped upper proportion offset by expansive lower volume"
+            },
+            {
+              "category": "color_harmony",
+              "weight": 3,
+              "score": 0.94,
+              "reason": "Color story: strong-contrast"
+            },
+            {
+              "category": "occasion_fit",
+              "weight": 2.5,
+              "score": 1,
+              "reason": "Formality fit for Modern Office / Workplace (Level 3)"
+            },
+            {
+              "category": "weather_fit",
+              "weight": 2,
+              "score": 0.75,
+              "reason": "Ambient temperature and breathability calibration"
+            },
+            {
+              "category": "expression_affinity",
+              "weight": 1,
+              "score": 0.8,
+              "reason": "Soft expression alignment with androgynous presentation preference."
+            }
+          ],
+          "traceableReasons": [
+            {
+              "reasonId": "rea_outfit_korean_minimal_01_0_1791829636669",
+              "text": "Cropped upper proportion offset by expansive lower volume",
+              "signalIds": [
+                "user.styleProfile.preferences.preferredStyleSlugs",
+                "context.occasion"
+              ],
+              "knowledgeEntryIds": [
+                "gar_box_tee_white",
+                "gar_deconstructed_blazer_charcoal",
+                "gar_wide_trousers_black",
+                "gar_chunky_derbies_black"
+              ],
+              "factor": "general",
+              "authority": "USER_ENTERED",
+              "isAssumed": false
+            },
+            {
+              "reasonId": "rea_outfit_korean_minimal_01_1_1791829636669",
+              "text": "Strong contrast between light and deep neutral values establishes crisp visual separation.",
+              "signalIds": [
+                "user.styleProfile.preferences.preferredStyleSlugs",
+                "context.occasion"
+              ],
+              "knowledgeEntryIds": [
+                "gar_box_tee_white",
+                "gar_deconstructed_blazer_charcoal",
+                "gar_wide_trousers_black",
+                "gar_chunky_derbies_black"
+              ],
+              "factor": "general",
+              "authority": "USER_ENTERED",
+              "isAssumed": false
+            },
+            {
+              "reasonId": "rea_outfit_korean_minimal_01_2_1791829636669",
+              "text": "Aligned to Modern Office / Workplace formality.",
+              "signalIds": [
+                "context.occasion",
+                "context.targetFormality"
+              ],
+              "knowledgeEntryIds": [
+                "gar_box_tee_white",
+                "gar_deconstructed_blazer_charcoal",
+                "gar_wide_trousers_black",
+                "gar_chunky_derbies_black",
+                "occ_office"
+              ],
+              "factor": "occasion_fit",
+              "authority": "USER_ENTERED",
+              "isAssumed": false
+            }
+          ],
+          "stylingAdvice": [
+            "Accentuates waistline geometry and creates an elongated vertical lower line."
+          ]
+        },
+        "hairStyle": {
+          "name": "Short Sculpted Locs with Taper",
+          "slug": "short-locs-taper",
+          "score": 0.86,
+          "reasons": [
+            "Complements your round face geometry by balancing facial thirds.",
+            "Natural fit for your entered curly hair texture.",
+            "Fits within your preferred moderate maintenance threshold.",
+            "Appropriate formality for Modern Office / Workplace.",
+            "Directly aligns with your preferred minimal aesthetic"
+          ]
+        },
+        "groomingStyle": {
+          "name": "Designer Stubble (3-Day Shadow)",
+          "slug": "designer-stubble",
+          "score": 0.91,
+          "reasons": [
+            "Accentuates and sculpts your round face shape and soft jawline.",
+            "Easily achievable with your entered thick facial hair density.",
+            "Conforms with your moderate grooming maintenance routine.",
+            "Appropriate grooming polish for Modern Office / Workplace.",
+            "Directly aligns with your preferred minimal aesthetic"
+          ]
+        }
+      },
+      {
+        "tier": "SAFE",
+        "tierRationale": "High familiarity and effortless ease. Relies on proven proportions and classic foundational tones.",
+        "confidence": {
+          "state": "STRONG",
+          "explanation": "Supported by verified user formality, confirmed climate, explicit style vector, and grooming inputs.",
+          "toIncreaseConfidence": "Add specific footwear preferences to further personalize lower-leg grounding."
+        },
+        "overallHarmonyScore": 0.87,
+        "reasons": [
+          "Directly mirrors your personal style axis coordinates.",
+          "Balanced regular configuration",
+          "Strong contrast between light and deep neutral values establishes crisp visual separation."
+        ],
+        "cautions": [],
+        "outfit": {
+          "id": "outfit_minimal_01",
+          "title": "All-Black Architectural Column",
+          "primaryStyleSlug": "minimal",
+          "formality": 3,
+          "score": 0.87,
+          "items": [
+            {
+              "category": "top",
+              "subcategory": "knitwear",
+              "name": "Minimal Ribbed Mock Neck",
+              "material": "compact modal-wool jersey",
+              "color": "jet-black",
+              "fit": "slim",
+              "modestyRating": "high-coverage",
+              "genderCoding": "androgynous",
+              "layerPosition": 0
+            },
+            {
+              "category": "bottom",
+              "subcategory": "trousers",
+              "name": "Clean Ankle-Cropped Trousers (Black)",
+              "material": "stretch wool-twill",
+              "color": "black",
+              "fit": "regular",
+              "modestyRating": "standard",
+              "genderCoding": "androgynous",
+              "layerPosition": 0
+            },
+            {
+              "category": "footwear",
+              "subcategory": "sneakers",
+              "name": "Minimal Calfskin Low-Top Sneakers",
+              "material": "Italian Nappa leather, Margom rubber sole",
+              "color": "pure-white",
+              "fit": "regular",
+              "modestyRating": "standard",
+              "genderCoding": "androgynous",
+              "layerPosition": 0
+            }
+          ],
+          "factors": [
+            {
+              "category": "style_affinity",
+              "weight": 3.5,
+              "score": 0.84,
+              "reason": "Coordinate affinity (84%) with your 10D style vector."
+            },
+            {
+              "category": "silhouette_balance",
+              "weight": 3,
+              "score": 0.85,
+              "reason": "Balanced regular configuration"
+            },
+            {
+              "category": "color_harmony",
+              "weight": 3,
+              "score": 0.94,
+              "reason": "Color story: strong-contrast"
+            },
+            {
+              "category": "occasion_fit",
+              "weight": 2.5,
+              "score": 1,
+              "reason": "Formality fit for Modern Office / Workplace (Level 3)"
+            },
+            {
+              "category": "weather_fit",
+              "weight": 2,
+              "score": 0.75,
+              "reason": "Ambient temperature and breathability calibration"
+            },
+            {
+              "category": "expression_affinity",
+              "weight": 1,
+              "score": 0.8,
+              "reason": "Soft expression alignment with androgynous presentation preference."
+            }
+          ],
+          "traceableReasons": [
+            {
+              "reasonId": "rea_outfit_minimal_01_0_1791829636669",
+              "text": "Directly mirrors your personal style axis coordinates.",
+              "signalIds": [
+                "user.styleProfile.styleVector",
+                "user.styleProfile.preferences.preferredStyleSlugs"
+              ],
+              "knowledgeEntryIds": [
+                "gar_mockneck_black",
+                "gar_cropped_trousers_black",
+                "gar_minimal_sneaker_white",
+                "style_minimal"
+              ],
+              "factor": "style_affinity",
+              "authority": "USER_ENTERED",
+              "isAssumed": false
+            },
+            {
+              "reasonId": "rea_outfit_minimal_01_1_1791829636669",
+              "text": "Balanced regular configuration",
+              "signalIds": [
+                "user.styleProfile.preferences.preferredStyleSlugs",
+                "context.occasion"
+              ],
+              "knowledgeEntryIds": [
+                "gar_mockneck_black",
+                "gar_cropped_trousers_black",
+                "gar_minimal_sneaker_white"
+              ],
+              "factor": "general",
+              "authority": "USER_ENTERED",
+              "isAssumed": false
+            },
+            {
+              "reasonId": "rea_outfit_minimal_01_2_1791829636669",
+              "text": "Strong contrast between light and deep neutral values establishes crisp visual separation.",
+              "signalIds": [
+                "user.styleProfile.preferences.preferredStyleSlugs",
+                "context.occasion"
+              ],
+              "knowledgeEntryIds": [
+                "gar_mockneck_black",
+                "gar_cropped_trousers_black",
+                "gar_minimal_sneaker_white"
+              ],
+              "factor": "general",
+              "authority": "USER_ENTERED",
+              "isAssumed": false
+            }
+          ],
+          "stylingAdvice": []
+        },
+        "hairStyle": {
+          "name": "Short Sculpted Locs with Taper",
+          "slug": "short-locs-taper",
+          "score": 0.86,
+          "reasons": [
+            "Complements your round face geometry by balancing facial thirds.",
+            "Natural fit for your entered curly hair texture.",
+            "Fits within your preferred moderate maintenance threshold.",
+            "Appropriate formality for Modern Office / Workplace.",
+            "Directly aligns with your preferred minimal aesthetic"
+          ]
+        },
+        "groomingStyle": {
+          "name": "Designer Stubble (3-Day Shadow)",
+          "slug": "designer-stubble",
+          "score": 0.91,
+          "reasons": [
+            "Accentuates and sculpts your round face shape and soft jawline.",
+            "Easily achievable with your entered thick facial hair density.",
+            "Conforms with your moderate grooming maintenance routine.",
+            "Appropriate grooming polish for Modern Office / Workplace.",
+            "Directly aligns with your preferred minimal aesthetic"
+          ]
+        }
+      },
+      {
+        "tier": "STRETCH",
+        "tierRationale": "Curated directional exploration. Pushes volume and textural depth while strictly respecting dress codes.",
+        "confidence": {
+          "state": "STRONG",
+          "explanation": "Supported by verified user formality, confirmed climate, explicit style vector, and grooming inputs.",
+          "toIncreaseConfidence": "Add specific footwear preferences to further personalize lower-leg grounding."
+        },
+        "overallHarmonyScore": 0.86,
+        "reasons": [
+          "Harmonious classic proportion with uniform clean linear cadence",
+          "Tonal neutral palette ensures high versatility and effortless visual cohesion.",
+          "Aligned to Modern Office / Workplace formality."
+        ],
+        "cautions": [],
+        "outfit": {
+          "id": "outfit_smart_casual_01",
+          "title": "Textured Knit & Tailored Line",
+          "primaryStyleSlug": "smart-casual",
+          "formality": 3,
+          "score": 0.86,
+          "items": [
+            {
+              "category": "top",
+              "subcategory": "polo",
+              "name": "Textured Open-Collar Knit Polo",
+              "material": "silk-cotton blend knit",
+              "color": "olive",
+              "fit": "regular",
+              "modestyRating": "standard",
+              "genderCoding": "androgynous",
+              "layerPosition": 0
+            },
+            {
+              "category": "bottom",
+              "subcategory": "trousers",
+              "name": "Flat-Front Tailored Wool Slacks",
+              "material": "100% Super 120s wool",
+              "color": "charcoal",
+              "fit": "tailored",
+              "modestyRating": "high-coverage",
+              "genderCoding": "unspecified",
+              "layerPosition": 0
+            },
+            {
+              "category": "footwear",
+              "subcategory": "loafers",
+              "name": "Cordovan Penny Loafers",
+              "material": "Horween shell cordovan",
+              "color": "deep-burgundy",
+              "fit": "regular",
+              "modestyRating": "standard",
+              "genderCoding": "unspecified",
+              "layerPosition": 0
+            }
+          ],
+          "factors": [
+            {
+              "category": "style_affinity",
+              "weight": 3.5,
+              "score": 0.76,
+              "reason": "Coordinate affinity (76%) with your 10D style vector."
+            },
+            {
+              "category": "silhouette_balance",
+              "weight": 3,
+              "score": 0.9,
+              "reason": "Harmonious classic proportion with uniform clean linear cadence"
+            },
+            {
+              "category": "color_harmony",
+              "weight": 3,
+              "score": 0.92,
+              "reason": "Color story: tonal-neutral"
+            },
+            {
+              "category": "occasion_fit",
+              "weight": 2.5,
+              "score": 1,
+              "reason": "Formality fit for Modern Office / Workplace (Level 3)"
+            },
+            {
+              "category": "weather_fit",
+              "weight": 2,
+              "score": 0.75,
+              "reason": "Ambient temperature and breathability calibration"
+            },
+            {
+              "category": "expression_affinity",
+              "weight": 1,
+              "score": 0.8,
+              "reason": "Soft expression alignment with androgynous presentation preference."
+            }
+          ],
+          "traceableReasons": [
+            {
+              "reasonId": "rea_outfit_smart_casual_01_0_1791829636669",
+              "text": "Harmonious classic proportion with uniform clean linear cadence",
+              "signalIds": [
+                "user.styleProfile.preferences.preferredStyleSlugs",
+                "context.occasion"
+              ],
+              "knowledgeEntryIds": [
+                "gar_knit_polo_olive",
+                "gar_tailored_slacks_charcoal",
+                "gar_penny_loafer_burgundy"
+              ],
+              "factor": "general",
+              "authority": "USER_ENTERED",
+              "isAssumed": false
+            },
+            {
+              "reasonId": "rea_outfit_smart_casual_01_1_1791829636669",
+              "text": "Tonal neutral palette ensures high versatility and effortless visual cohesion.",
+              "signalIds": [
+                "user.styleProfile.preferences.preferredStyleSlugs",
+                "context.occasion"
+              ],
+              "knowledgeEntryIds": [
+                "gar_knit_polo_olive",
+                "gar_tailored_slacks_charcoal",
+                "gar_penny_loafer_burgundy"
+              ],
+              "factor": "general",
+              "authority": "USER_ENTERED",
+              "isAssumed": false
+            },
+            {
+              "reasonId": "rea_outfit_smart_casual_01_2_1791829636669",
+              "text": "Aligned to Modern Office / Workplace formality.",
+              "signalIds": [
+                "context.occasion",
+                "context.targetFormality"
+              ],
+              "knowledgeEntryIds": [
+                "gar_knit_polo_olive",
+                "gar_tailored_slacks_charcoal",
+                "gar_penny_loafer_burgundy",
+                "occ_office"
+              ],
+              "factor": "occasion_fit",
+              "authority": "USER_ENTERED",
+              "isAssumed": false
+            }
+          ],
+          "stylingAdvice": [
+            "Elevate with subtle texture contrast between top and lower fabrication."
+          ]
+        },
+        "hairStyle": {
+          "name": "Short Sculpted Locs with Taper",
+          "slug": "short-locs-taper",
+          "score": 0.86,
+          "reasons": [
+            "Complements your round face geometry by balancing facial thirds.",
+            "Natural fit for your entered curly hair texture.",
+            "Fits within your preferred moderate maintenance threshold.",
+            "Appropriate formality for Modern Office / Workplace.",
+            "Directly aligns with your preferred minimal aesthetic"
+          ]
+        },
+        "groomingStyle": {
+          "name": "Designer Stubble (3-Day Shadow)",
+          "slug": "designer-stubble",
+          "score": 0.91,
+          "reasons": [
+            "Accentuates and sculpts your round face shape and soft jawline.",
+            "Easily achievable with your entered thick facial hair density.",
+            "Conforms with your moderate grooming maintenance routine.",
+            "Appropriate grooming polish for Modern Office / Workplace.",
+            "Directly aligns with your preferred minimal aesthetic"
+          ]
+        }
+      }
+    ]
+  }
+}

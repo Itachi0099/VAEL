@@ -90,4 +90,11 @@ export type WeatherConditionType = 'dry' | 'rain' | 'unspecified';
 
 export type GenderIdentity = 'man' | 'woman' | 'non-binary' | 'prefer-not-to-specify' | 'self-describe' | 'unspecified';
 
-export type StyleExpression = 'masculine' | 'feminine' | 'androgynous' | 'no-preference';
+export type StyleExpression = 'masculine' | 'feminine' | 'androgynous' | 'no-preference' | 'unspecified';
+
+export type SkinDepth = 'fair' | 'light' | 'medium' | 'tan' | 'deep' | 'unspecified';
+
+export type BudgetBand = 'value' | 'mid' | 'premium' | 'unspecified';
+
+export type VintageEra = '50s' | '70s' | '90s' | 'unspecified';
+

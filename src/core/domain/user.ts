@@ -11,6 +11,10 @@ import {
   ShoulderHipBalance,
   GenderIdentity,
   StyleExpression,
+  SkinDepth,
+  BudgetBand,
+  VintageEra,
+  GarmentCategory,
 } from './types';
 import { VisualProfile } from './visual';
 import { Feedback } from './feedback';
@@ -40,20 +44,24 @@ export interface PreferenceProfile {
   dislikedFits: FitType[];
   preferredSilhouettes: string[];
   dislikedSilhouettes: string[];
+  dislikedCategories?: string[];
   fitProportions: FitProportionProfile;
   modestyLevel: ModestyLevel;
   userConfirmedUndertone: UndertonePreference;
+  skinDepth?: SkinDepth;
   contrastLevel?: ContrastLevel;
   traditionConstraint?: string; // Optional tradition layer constraint (e.g. 'unspecified', or specific heritage)
   genderIdentity?: GenderIdentity; // Optional gender context (ZERO scoring weight, does not filter garments)
   genderCodingDirection: GenderCodingDirection; // Backwards compatible with existing evaluation corpus
   styleExpression?: StyleExpression; // Stated style expression ('masculine' | 'feminine' | 'androgynous' | 'no-preference')
+  vintageEra?: VintageEra; // Stated vintage era ('50s' | '70s' | '90s' | 'unspecified')
   heightRange?: HeightRange;
   torsoLegPreference?: TorsoLegPreference;
   shoulderHipBalance?: ShoulderHipBalance;
   preferredFormalityRange: [FormalityLevel, FormalityLevel];
   maxMaintenanceTolerance: MaintenanceLevel;
   budgetTier?: 'accessible' | 'elevated' | 'investment' | 'unspecified';
+  budgetBand?: BudgetBand;
   accentColorTolerance?: 'monochromatic' | 'subtle-accents' | 'bold-accents';
   accessoryAffinities: string[];
 }

@@ -17,13 +17,14 @@ import { ContextControls } from '@/components/styling/ContextControls';
 import { StylePreferences } from '@/components/styling/StylePreferences';
 import { LookCard } from '@/components/styling/LookCard';
 import { EmptyState } from '@/components/styling/EmptyState';
-import { TopThreeLooks, WeatherCondition, FormalityLevel, VisualProfile, User } from '@/core/domain';
+import { TopThreeLooks, WeatherCondition, FormalityLevel, VisualProfile, User, sanitizeProfileImport } from '@/core/domain';
+import { BUILD_INFO } from '@/core/version';
 
 type ActiveView = 'LOOKS' | 'HAIR' | 'GROOMING' | 'STYLE LAB';
 
 export default function VaelShell() {
   const [activeView, setActiveView] = useState<ActiveView>('LOOKS');
-  const [profileMode, setProfileMode] = useState<'EMPTY' | 'DEMO' | 'CONFIGURED'>('DEMO');
+  const [profileMode, setProfileMode] = useState<'EMPTY' | 'DEMO' | 'CONFIGURED'>('EMPTY');
   const [isProfileModalOpen, setIsProfileModalOpen] = useState(false);
 
   // Active User / Profile State
@@ -34,7 +35,7 @@ export default function VaelShell() {
   const [selectedOccasion, setSelectedOccasion] = useState<string>('dinner');
   const [selectedWeather, setSelectedWeather] = useState<WeatherCondition>('mild');
   const [formalityOverride, setFormalityOverride] = useState<FormalityLevel | undefined>(undefined);
-  const [selectedStyles, setSelectedStyles] = useState<string[]>(['korean-minimal', 'minimal']);
+  const [selectedStyles, setSelectedStyles] = useState<string[]>([]);
   const [dislikedStyles, setDislikedStyles] = useState<string[]>([]);
 
   // Engine Output State
@@ -42,32 +43,52 @@ export default function VaelShell() {
   const [hairRecs, setHairRecs] = useState<any[]>([]);
   const [beardRecs, setBeardRecs] = useState<any[]>([]);
   const [styleFamilies, setStyleFamilies] = useState<any[]>([]);
-  const [selectedStyleSlug, setSelectedStyleSlug] = useState<string>('korean-minimal');
+  const [selectedStyleSlug, setSelectedStyleSlug] = useState<string>('minimal');
   const [styleExploration, setStyleExploration] = useState<any>(null);
 
   // UI state
   const [isGenerating, setIsGenerating] = useState(false);
   const [feedbackNotice, setFeedbackNotice] = useState<string | null>(null);
 
-  // Initialize demo data on load
+  // Initialize data on load (with localStorage check)
   useEffect(() => {
     initializeVael();
   }, []);
 
   const initializeVael = async () => {
     try {
-      const pRes = await fetch('/api/profile');
-      const pData = await pRes.json();
-      if (pData.data) {
-        setActiveUser(pData.data);
-      }
-
       const stylesRes = await fetch('/api/styles');
       const stylesData = await stylesRes.json();
       setStyleFamilies(stylesData.data || []);
 
-      // Generate initial flagship looks
-      generateLooksForContext(pData.data, 'dinner', 'mild', ['korean-minimal', 'minimal']);
+      // Check localStorage for saved user profile
+      let savedUser: User | null = null;
+      let savedMode: 'EMPTY' | 'DEMO' | 'CONFIGURED' = 'EMPTY';
+      try {
+        const rawUser = localStorage.getItem('vael_user_profile');
+        const rawMode = localStorage.getItem('vael_profile_mode');
+        if (rawUser) {
+          savedUser = sanitizeProfileImport(JSON.parse(rawUser));
+          if (rawMode === 'CONFIGURED' || rawMode === 'DEMO') {
+            savedMode = rawMode;
+          }
+        }
+      } catch (err) {
+        console.warn('LocalStorage read bypassed:', err);
+      }
+
+      if (savedUser && savedMode === 'CONFIGURED') {
+        setActiveUser(savedUser);
+        setProfileMode('CONFIGURED');
+        const userStyles = savedUser.styleProfile?.dominantAestheticSlugs || [];
+        setSelectedStyles(userStyles);
+        generateLooksForContext(savedUser, 'dinner', 'mild', userStyles);
+      } else {
+        // Fresh load: EMPTY profile, 0 / 3 styles selected
+        setProfileMode('EMPTY');
+        setActiveUser(null);
+        setSelectedStyles([]);
+      }
     } catch (err) {
       console.error('Failed to initialize VAEL:', err);
     }
@@ -270,6 +291,12 @@ export default function VaelShell() {
     };
 
     setActiveUser(newUser);
+    try {
+      localStorage.setItem('vael_user_profile', JSON.stringify(newUser));
+      localStorage.setItem('vael_profile_mode', 'CONFIGURED');
+    } catch (e) {
+      console.warn('LocalStorage save bypassed:', e);
+    }
     generateLooksForContext(newUser, selectedOccasion, selectedWeather, selectedStyles);
     setFeedbackNotice('Profile updated with your physical characteristics.');
     setTimeout(() => setFeedbackNotice(null), 4000);
@@ -295,6 +322,13 @@ export default function VaelShell() {
     setProfileMode('EMPTY');
     setActiveUser(null);
     setTopThreeLooks(null);
+    setSelectedStyles([]);
+    try {
+      localStorage.removeItem('vael_user_profile');
+      localStorage.setItem('vael_profile_mode', 'EMPTY');
+    } catch (e) {
+      console.warn('LocalStorage clear bypassed:', e);
+    }
     setFeedbackNotice('Profile reset. Please set your characteristics or load demo.');
     setTimeout(() => setFeedbackNotice(null), 4000);
   };
@@ -302,7 +336,6 @@ export default function VaelShell() {
   const handleToggleStyle = (slug: string) => {
     let next: string[];
     if (selectedStyles.includes(slug)) {
-      if (selectedStyles.length === 1) return; // Keep at least one
       next = selectedStyles.filter((s) => s !== slug);
     } else {
       if (selectedStyles.length >= 3) {
@@ -352,6 +385,59 @@ export default function VaelShell() {
     }
   };
 
+  const handleExportProfile = () => {
+    if (!activeUser) {
+      setFeedbackNotice('No active profile to export.');
+      setTimeout(() => setFeedbackNotice(null), 3000);
+      return;
+    }
+    try {
+      const jsonStr = JSON.stringify(activeUser, null, 2);
+      const blob = new Blob([jsonStr], { type: 'application/json' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `vael-profile-${activeUser.handle || 'user'}.json`;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+      setFeedbackNotice('Profile exported successfully.');
+      setTimeout(() => setFeedbackNotice(null), 3000);
+    } catch (e: any) {
+      console.error('Export error:', e);
+      setFeedbackNotice('Failed to export profile.');
+      setTimeout(() => setFeedbackNotice(null), 3000);
+    }
+  };
+
+  const handleImportProfile = (file: File) => {
+    const reader = new FileReader();
+    reader.onload = (e) => {
+      try {
+        const text = e.target?.result as string;
+        const parsed = JSON.parse(text);
+        const sanitized = sanitizeProfileImport(parsed);
+        setActiveUser(sanitized);
+        setProfileMode('CONFIGURED');
+        try {
+          localStorage.setItem('vael_user_profile', JSON.stringify(sanitized));
+          localStorage.setItem('vael_profile_mode', 'CONFIGURED');
+        } catch (err) {
+          console.warn('Could not persist to localStorage:', err);
+        }
+        generateLooksForContext(sanitized, selectedOccasion, selectedWeather, sanitized.styleProfile?.dominantAestheticSlugs || selectedStyles);
+        setFeedbackNotice('Profile imported and verified successfully.');
+        setTimeout(() => setFeedbackNotice(null), 3000);
+      } catch (err: any) {
+        console.error('Import error:', err);
+        setFeedbackNotice(`Import failed: ${err.message || 'Invalid JSON format'}`);
+        setTimeout(() => setFeedbackNotice(null), 4000);
+      }
+    };
+    reader.readAsText(file);
+  };
+
   return (
     <div className="max-w-6xl mx-auto px-6 py-12">
       {/* Brand & Editorial Masthead */}
@@ -378,6 +464,8 @@ export default function VaelShell() {
             onOpenEditor={() => setIsProfileModalOpen(true)}
             onResetProfile={handleResetProfile}
             onUseDemo={handleUseDemo}
+            onExportProfile={activeUser ? handleExportProfile : undefined}
+            onImportProfile={handleImportProfile}
           />
         </div>
       </header>
@@ -757,7 +845,12 @@ export default function VaelShell() {
 
       {/* Minimal Editorial Footer */}
       <footer className="mt-20 pt-8 border-t border-neutral-200 text-center text-xs font-editorial-mono text-neutral-400 flex flex-col md:flex-row justify-between items-center gap-4">
-        <div>VAEL © 2026. AUTONOMOUS STYLING ARTIST.</div>
+        <div className="flex flex-col sm:flex-row items-center gap-2">
+          <span>VAEL © 2026. Your style, interpreted.</span>
+          <span className="text-[10px] text-neutral-400 border border-neutral-200 px-1.5 py-0.5 rounded-xs">
+            BUILD {BUILD_INFO.commitHash} · {BUILD_INFO.buildDate}
+          </span>
+        </div>
         <div className="flex items-center gap-4 text-neutral-500">
           <span>SAFE · BEST MATCH · STRETCH</span>
           <span>•</span>

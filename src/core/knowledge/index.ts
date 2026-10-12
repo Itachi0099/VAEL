@@ -17,6 +17,7 @@ export * from './hairstyles.data';
 export * from './beards.data';
 export * from './occasions.data';
 export * from './garments.data';
+export * from './traditions.data';
 export * from './validator';
 
 export class FashionKnowledgeBase {

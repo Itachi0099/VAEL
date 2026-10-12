@@ -394,6 +394,40 @@ export class VaelStylingEngine {
       });
     }
 
+    // 8. Metal Tone Accessory Coherence (Weight: 0.5)
+    const metalTones = garments
+      .map((g) => g.metalTone)
+      .filter((m): m is 'silver' | 'gold' | 'brass' | 'blackened' | 'mixed' => !!m);
+    if (metalTones.length > 1) {
+      const uniqueMetals = Array.from(new Set(metalTones));
+      const hasClash = uniqueMetals.includes('silver') && (uniqueMetals.includes('gold') || uniqueMetals.includes('brass'));
+      factors.push({
+        category: 'accessory_coherence',
+        weight: 0.5,
+        score: hasClash ? 0.6 : 0.95,
+        reason: hasClash ? 'Mixed metal accents create visual tension.' : 'Harmonious metal hardware tones across accessories.',
+      });
+      if (hasClash) {
+        cautions.push('Mixed silver and gold metal tones in accessories.');
+      }
+    }
+
+    // 9. Budget Tier Fit (Weight: 0.5, only when budget input is specified)
+    if (preferences.budgetTier && preferences.budgetTier !== 'unspecified') {
+      const targetBudget = preferences.budgetTier;
+      const budgetGarments = garments.filter((g) => g.budgetTier !== undefined);
+      if (budgetGarments.length > 0) {
+        const matches = budgetGarments.filter((g) => g.budgetTier === targetBudget).length;
+        const budgetRatio = matches / budgetGarments.length;
+        factors.push({
+          category: 'preference_reinforcement',
+          weight: 0.5,
+          score: 0.6 + budgetRatio * 0.35,
+          reason: `Aligned to your stated ${targetBudget} investment tier.`,
+        });
+      }
+    }
+
     const { finalScore } = computeWeightedScore(factors);
 
     // Build traceable reasons connecting directly to real signals and knowledge IDs
@@ -426,6 +460,10 @@ export class VaelStylingEngine {
       } else if (reasonText.includes('wardrobe')) {
         factorName = 'wardrobe_priority';
         signalIds.push('user.wardrobe');
+      }
+
+      if (signalIds.length === 0) {
+        signalIds.push('user.styleProfile.preferences.preferredStyleSlugs', 'context.occasion');
       }
 
       const isAssumed = reasonText.includes('neutral-safe default') || reasonText.includes('unknown');
@@ -533,54 +571,142 @@ export class VaelStylingEngine {
   }
 
   /**
-   * Confidence Level Calculator
+   * Confidence Level Calculator (B2 Confidence Caps)
+   *
+   * STRONG requires:
+   * 1. Formality input is user-sourced (context.targetFormality explicitly provided).
+   * 2. Climate input is user-sourced (context.temperatureLevel / temperatureCelsius and condition, with isWeatherConfirmed true).
+   * 3. Style vector input is user-sourced (preferredStyleSlugs specified or userVector explicitly set).
+   * 4. Hair/grooming input is user-sourced (user.visualProfile or evidenceSignals.hairTexture present).
+   *
+   * Degradation Caps:
+   * - 1 DEFAULT among the four core inputs caps confidence at GOOD.
+   * - 2 or more DEFAULTS cap confidence at EXPLORATORY.
+   * - Missing context entirely or no preferences and no visual yields NEED_MORE_INFO.
+   *
+   * Every look returns one concrete prompt for: "what would raise confidence".
    */
   private static determineConfidence(
     user: User,
     context?: Context,
     evaluation?: CandidateEvaluation
-  ): { state: ConfidenceState; explanation: string; toIncreaseConfidence?: string } {
+  ): { state: ConfidenceState; explanation: string; toIncreaseConfidence: string } {
     const hasVisual = !!user.visualProfile;
-    const hasPreferences = user.styleProfile.preferences.preferredStyleSlugs.length > 0;
-    const hasWeather = !!context?.weather || !!context?.temperatureCelsius;
-    const isWeatherConfirmed = context?.isWeatherConfirmed ?? false;
+    const hasPreferences = user.styleProfile.preferences.preferredStyleSlugs && user.styleProfile.preferences.preferredStyleSlugs.length > 0;
 
-    // Condition 1: Missing basic context or style preferences -> NEED_MORE_INFO
+    // Missing basic context or style preferences -> NEED_MORE_INFO
     if (!context || (!hasPreferences && !hasVisual)) {
       return {
         state: 'NEED_MORE_INFO',
         explanation: 'Limited input signals available for context and personal taste.',
-        toIncreaseConfidence: 'Complete the taste quiz or specify your preferred fits to unlock tailored accuracy.',
+        toIncreaseConfidence: 'Specify your event formality and style preferences to build your looks.',
       };
     }
 
-    // Condition 2: High evidence (confirmed weather, preferences, visual scan) -> STRONG
-    if (hasPreferences && hasVisual && isWeatherConfirmed && evaluation && evaluation.totalScore >= 0.82) {
+    // Special case: Cultural Ceremony without tradition pack (E5, G-13)
+    if (context.occasion?.category === 'cultural' || context.occasion?.slug === 'cultural-traditional') {
       return {
-        state: 'STRONG',
-        explanation: 'Supported by verified user preferences, observed physical features, and confirmed climate.',
+        state: 'EXPLORATORY',
+        explanation: 'Limited cultural ceremony coverage: no tradition pack installed. Directional proposal with general guidance.',
+        toIncreaseConfidence: 'Install a regional tradition pack (R1.3) or verify specific ceremonial customs with hosts.',
       };
     }
 
-    // Condition 3: Good evidence, minor unknowns -> GOOD
-    if (hasPreferences && context) {
-      const prompt = !isWeatherConfirmed
-        ? 'Confirm local temperature to fine-tune fabric breathability and layering weight.'
-        : 'Specify whether you prefer structured or relaxed shirts to refine top volumes.';
+    // Evaluate authority of the core inputs:
+    // 1. Formality: User-entered if targetFormality or isFormalityOverridden is defined; otherwise DEFAULT (occasion default assumed)
+    const isFormalityUserSourced = context.targetFormality !== undefined || context.isFormalityOverridden === true;
+
+    // 2. Climate: User-sourced if weather is confirmed and (temperatureCelsius, temperatureLevel, or weather) is provided
+    const isClimateUserSourced =
+      context.isWeatherConfirmed !== false &&
+      (context.temperatureCelsius !== undefined || context.temperatureLevel !== undefined || context.weather !== undefined);
+
+    // 3. Style Vector: User-sourced if user has explicit preferred style slugs or custom style vector
+    const isStyleVectorUserSourced = hasPreferences || (user.styleProfile.dominantAestheticSlugs && user.styleProfile.dominantAestheticSlugs.length > 0);
+
+    // 4. Hair / Grooming: User-sourced if user has visual profile (user_input / visual_analysis) or explicit hairTexture signal
+    const isGroomingUserSourced =
+      (hasVisual && (user.visualProfile?.source === 'user_input' || user.visualProfile?.source === 'visual_analysis')) ||
+      (user.styleProfile.evidenceSignals?.hairTexture?.authority === 'USER_ENTERED' || user.styleProfile.evidenceSignals?.hairTexture?.authority === 'USER_CONFIRMED');
+
+    // Count defaults among foundational inputs
+    let defaultCount = 0;
+    const missingPrompts: string[] = [];
+
+    // E6 & G-08: If occasion has sub-parameters and none was selected, prompt clarifying question
+    if (context.occasion?.subParameters && (!context.subParameter || context.subParameter === 'unspecified')) {
+      if (context.occasion.slug === 'job-interview') {
+        missingPrompts.push('Confirm whether the interview setting is corporate, creative, or startup to refine tailoring sharpness.');
+      } else if (context.occasion.slug === 'office') {
+        missingPrompts.push('Confirm whether your workplace is corporate, creative, or startup to fine-tune formality.');
+      } else if (context.occasion.slug === 'wedding-guest' || context.occasion.slug === 'wedding') {
+        missingPrompts.push('Confirm whether the ceremony is day or evening to balance fabric sheen and color depth.');
+      }
+    }
+
+    if (!isFormalityUserSourced) {
+      defaultCount++;
+      missingPrompts.push('Confirm your exact target formality to eliminate occasion dress-code assumptions.');
+    }
+    if (!isClimateUserSourced) {
+      defaultCount++;
+      missingPrompts.push('Confirm local temperature and weather conditions to fine-tune thermal weight and rain protection.');
+    }
+    if (!isStyleVectorUserSourced) {
+      defaultCount++;
+      missingPrompts.push('Select your primary style archetypes to anchor proportional balance.');
+    }
+    if (!isGroomingUserSourced) {
+      missingPrompts.push('Confirm your hair texture or grooming routine to harmonize the complete silhouette.');
+    }
+
+    const toIncreaseConfidence = missingPrompts[0] || 'Confirm footwear heel preference to ground overall proportion.';
+
+    // Cap at EXPLORATORY if 2 or more foundational defaults
+    if (defaultCount >= 2) {
+      return {
+        state: 'EXPLORATORY',
+        explanation: `Curated directional proposal (${defaultCount} foundational styling inputs relied on default assumptions).`,
+        toIncreaseConfidence,
+      };
+    }
+
+    // Cap at GOOD if 1 default
+    if (defaultCount === 1) {
       return {
         state: 'GOOD',
-        explanation: 'Solid alignment with occasion guidelines and stated aesthetic direction.',
-        toIncreaseConfidence: prompt,
+        explanation: `Solid alignment with primary inputs (1 input relied on a baseline assumption).`,
+        toIncreaseConfidence,
       };
     }
 
-    // Default to EXPLORATORY
+    // G-32: Undertone unknown caps confidence <= GOOD
+    const undertone = user.styleProfile.preferences.userConfirmedUndertone;
+    const isUndertoneKnown = undertone && undertone !== 'unspecified';
+    if (!isUndertoneKnown) {
+      return {
+        state: 'GOOD',
+        explanation: 'Solid alignment with primary inputs (neutral-safe palette curated without undertone assumption).',
+        toIncreaseConfidence: 'Confirm your skin undertone to unlock precise warm or cool chromatic harmonization.',
+      };
+    }
+
+    // STRONG requires ALL FOUR (formality, climate, style vector, and grooming) to be user-sourced
+    if (isGroomingUserSourced && evaluation && evaluation.totalScore >= 0.82) {
+      return {
+        state: 'STRONG',
+        explanation: 'Supported by verified user formality, confirmed climate, explicit style vector, and grooming inputs.',
+        toIncreaseConfidence: 'Add specific footwear preferences to further personalize lower-leg grounding.',
+      };
+    }
+
     return {
-      state: 'EXPLORATORY',
-      explanation: 'Curated directional proposal based on baseline styling principles.',
-      toIncreaseConfidence: 'Tell VAEL your footwear preferences to ground the silhouette.',
+      state: 'GOOD',
+      explanation: 'All foundational inputs user-sourced with solid aesthetic alignment.',
+      toIncreaseConfidence,
     };
   }
+
 
   /**
    * Builds CompleteLook bundle
@@ -953,6 +1079,72 @@ export class VaelStylingEngine {
       });
     }
 
+    // Outfit 13: R1.2 Thermal Waffle & Sherpa Fleece (Cold Casual / Modest)
+    const top13 = knowledgeBase.getGarmentBySlug('waffle-thermal-cream') || knowledgeBase.getAllGarments()[0];
+    const bot13 = knowledgeBase.getGarmentBySlug('thermal-waffle-lounge-pants-charcoal') || knowledgeBase.getAllGarments()[1];
+    const outer13 = knowledgeBase.getGarmentBySlug('retro-sherpa-fleece-jacket');
+    const shoes13 = knowledgeBase.getGarmentBySlug('waterproof-lug-sole-chelsea-boots-black') || knowledgeBase.getAllGarments()[2];
+    outfits.push({
+      id: 'outfit_cold_casual_thermal_01',
+      title: 'Heavy Thermal Waffle & Sherpa Fleece',
+      description: 'Dense cream waffle thermal knit paired with charcoal waffle lounge pants, insulated sherpa fleece, and lug-sole waterproof chelseas.',
+      items: [
+        { garment: top13, layerPosition: 0 },
+        ...(outer13 ? [{ garment: outer13, layerPosition: 1, stylingNote: 'High thermal zip barrier' }] : []),
+        { garment: bot13, layerPosition: 0 },
+        { garment: shoes13, layerPosition: 0 },
+      ],
+      primaryStyleSlug: 'casual',
+      formality: 1,
+      compatibleOccasions: ['casual', 'travel', 'university-college'],
+      seasonality: ['fall', 'winter'],
+      silhouetteBalance: 'Relaxed cuffed thermal drape with insulated outer barrier',
+      colorStory: 'Natural cream, charcoal, and warm fleece neutrals',
+    });
+
+    // Outfit 14: R1.2 Airy Modal & Pure Linen (Extreme Heat Casual / Modest)
+    const top14 = knowledgeBase.getGarmentBySlug('airy-modal-lounge-tee-black') || knowledgeBase.getAllGarments()[0];
+    const bot14 = knowledgeBase.getGarmentBySlug('linen-trousers-ecru') || knowledgeBase.getAllGarments()[1];
+    const shoes14 = knowledgeBase.getGarmentBySlug('minimal-leather-sneaker-white') || knowledgeBase.getAllGarments()[2];
+    outfits.push({
+      id: 'outfit_hot_casual_modal_01',
+      title: 'Airy Featherweight Modal & Pure Linen',
+      description: 'Featherweight breathable TENCEL modal tee paired with fluid natural linen trousers and clean white leather cupsole sneakers.',
+      items: [
+        { garment: top14, layerPosition: 0 },
+        { garment: bot14, layerPosition: 0 },
+        { garment: shoes14, layerPosition: 0 },
+      ],
+      primaryStyleSlug: 'casual',
+      formality: 1,
+      compatibleOccasions: ['casual', 'travel', 'social'],
+      seasonality: ['summer', 'all-season'],
+      silhouetteBalance: 'Light fluid drop-shoulder drape over relaxed straight linen trousers',
+      colorStory: 'Optic black modal focal against natural ecru flax and clean white footwear',
+    });
+
+    // Outfit 15: R1.2 Camp-Collar Terracotta & Pure Linen (Hot Casual / Modest Formality 1-2)
+    const top15 = knowledgeBase.getGarmentBySlug('camp-collar-terracotta') || knowledgeBase.getAllGarments()[0];
+    const bot15 = knowledgeBase.getGarmentBySlug('linen-trousers-ecru') || knowledgeBase.getAllGarments()[1];
+    const shoes15 = knowledgeBase.getGarmentBySlug('retro-court-trainers') || knowledgeBase.getAllGarments()[2];
+    outfits.push({
+      id: 'outfit_hot_casual_terracotta_01',
+      title: 'Tencel Camp-Collar & Washed Linen Cadence',
+      description: 'Airy boxy terracotta tencel shirt over relaxed natural linen drawstring trousers and vintage court trainers.',
+      items: [
+        { garment: top15, layerPosition: 0 },
+        { garment: bot15, layerPosition: 0 },
+        { garment: shoes15, layerPosition: 0 },
+      ],
+      primaryStyleSlug: 'vintage',
+      formality: 2,
+      compatibleOccasions: ['casual', 'travel', 'social'],
+      seasonality: ['summer', 'spring'],
+      silhouetteBalance: 'Draped camp-collar fluid drop over relaxed straight linen trousers',
+      colorStory: 'Warm terracotta earth focal balanced by natural ecru flax and clean gum-sole trainers',
+    });
+
     return outfits;
   }
 }
+

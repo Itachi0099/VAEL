@@ -68,6 +68,7 @@ export interface Garment {
   // Knowledge versioning & review
   timelessOrTrend: TimelessTrendTag;
   reviewDate: string; // ISO date format YYYY-MM-DD
+  reviewed_by?: string;
   createdAt: string;
   updatedAt: string;
   sourceNotes?: string;

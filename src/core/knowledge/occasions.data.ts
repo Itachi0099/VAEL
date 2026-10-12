@@ -174,7 +174,7 @@ export const OCCASIONS: Occasion[] = [
   {
     id: 'occ_cultural_traditional',
     slug: 'cultural-traditional',
-    name: 'Cultural / Traditional Ceremony',
+    name: 'Cultural Ceremony',
     category: 'cultural',
     defaultFormality: 4,
     allowableFormalityRange: [3, 5],

@@ -1,0 +1,702 @@
+{
+  "profileId": "usr_p11",
+  "title": "Profile 11: Cultural Ceremony, no tradition pack",
+  "profile": {
+    "user": {
+      "id": "usr_p11",
+      "name": "Cultural Ceremony Guest",
+      "handle": "p11",
+      "createdAt": "2026-10-12T00:00:00.000Z",
+      "styleProfile": {
+        "id": "sty_usr_p11",
+        "userId": "usr_p11",
+        "dominantAestheticSlugs": [
+          "minimal"
+        ],
+        "styleVector": {
+          "formality": 3,
+          "structure": 3,
+          "volume": 3,
+          "colorIntensity": 1,
+          "contrast": 3,
+          "pattern": 1,
+          "texture": 2,
+          "ornamentation": 1,
+          "classicTrend": 3,
+          "utilityPolish": 3,
+          "genderCoding": "androgynous"
+        },
+        "preferences": {
+          "preferredStyleSlugs": [
+            "minimal"
+          ],
+          "dislikedStyleSlugs": [],
+          "preferredColors": [
+            "black",
+            "white",
+            "charcoal"
+          ],
+          "dislikedColors": [],
+          "preferredFits": [
+            "relaxed",
+            "regular"
+          ],
+          "dislikedFits": [],
+          "preferredSilhouettes": [],
+          "dislikedSilhouettes": [],
+          "fitProportions": {
+            "preferredFits": [
+              "relaxed",
+              "regular"
+            ],
+            "dislikedFits": [],
+            "topVolume": 3,
+            "bottomVolume": 3,
+            "preferredSilhouettes": [],
+            "dislikedSilhouettes": [],
+            "layeringPreference": "moderate",
+            "garmentLengthPreferences": {
+              "top": "regular",
+              "bottom": "regular"
+            }
+          },
+          "modestyLevel": "unrestricted",
+          "userConfirmedUndertone": "neutral",
+          "genderCodingDirection": "androgynous",
+          "styleExpression": "androgynous",
+          "preferredFormalityRange": [
+            2,
+            4
+          ],
+          "maxMaintenanceTolerance": "moderate",
+          "accessoryAffinities": []
+        },
+        "feedbackProfile": {
+          "history": [],
+          "learnedStyleAffinities": {},
+          "learnedColorAffinities": {},
+          "learnedSilhouetteAffinities": {},
+          "learnedFitAffinities": {},
+          "repeatPassCount": {}
+        },
+        "evidenceSignals": {
+          "hairTexture": {
+            "value": "straight",
+            "authority": "USER_ENTERED",
+            "confidence": 1,
+            "source": "manual_input",
+            "updatedAt": "2026-10-12T00:00:00.000Z"
+          }
+        },
+        "updatedAt": "2026-10-12T00:00:00.000Z"
+      }
+    },
+    "evidenceHierarchy": {
+      "userConfirmedUndertone": "neutral",
+      "modestyLevel": "unrestricted",
+      "styleExpression": "androgynous",
+      "evidenceSignals": {
+        "hairTexture": {
+          "value": "straight",
+          "authority": "USER_ENTERED",
+          "confidence": 1,
+          "source": "manual_input",
+          "updatedAt": "2026-10-12T00:00:00.000Z"
+        }
+      }
+    }
+  },
+  "context": {
+    "occasion": {
+      "id": "occ_cultural_traditional",
+      "slug": "cultural-traditional",
+      "name": "Cultural Ceremony",
+      "category": "cultural",
+      "defaultFormality": 4,
+      "allowableFormalityRange": [
+        3,
+        5
+      ],
+      "isCulturalOrTraditional": true,
+      "guidelines": [
+        "Honors heritage textiles, bespoke regional drapery, and ceremonial reverence",
+        "Welcomes sherwani, kurta, bandhgala, barong tagalog, hanbok, kimono, bespoke linen tunics, and cultural formalwear",
+        "System does NOT default automatically to Western business suiting when cultural context is selected"
+      ],
+      "restrictedGarmentCategories": [
+        "distressed-denim",
+        "gym-shorts",
+        "graphic-hoodies"
+      ],
+      "keyStyleAffinities": [
+        "old-money",
+        "formal",
+        "minimal",
+        "smart-casual"
+      ],
+      "timelessOrTrend": "TIMELESS",
+      "reviewDate": "2026-10-01",
+      "createdAt": "2026-10-01",
+      "updatedAt": "2026-10-01"
+    },
+    "targetFormality": 4,
+    "temperatureLevel": "mild",
+    "isWeatherConfirmed": true
+  },
+  "result": {
+    "looksCount": 3,
+    "contextApplied": "Cultural Ceremony",
+    "vetoedCandidateCount": 6,
+    "evaluatedCandidateCount": 15,
+    "looks": [
+      {
+        "tier": "BEST_MATCH",
+        "tierRationale": "Optimal convergence of your 10D style vector, event formality, and physical proportions.",
+        "confidence": {
+          "state": "EXPLORATORY",
+          "explanation": "Limited cultural ceremony coverage: no tradition pack installed. Directional proposal with general guidance.",
+          "toIncreaseConfidence": "Install a regional tradition pack (R1.3) or verify specific ceremonial customs with hosts."
+        },
+        "overallHarmonyScore": 0.84,
+        "reasons": [
+          "Cropped upper proportion offset by expansive lower volume",
+          "Strong contrast between light and deep neutral values establishes crisp visual separation.",
+          "Default climate baseline assumed; weather context was not specified."
+        ],
+        "cautions": [],
+        "outfit": {
+          "id": "outfit_korean_minimal_01",
+          "title": "Monochrome Fluid Tailoring",
+          "primaryStyleSlug": "korean-minimal",
+          "formality": 3,
+          "score": 0.84,
+          "items": [
+            {
+              "category": "top",
+              "subcategory": "t-shirt",
+              "name": "Heavyweight Boxy Tee (Off-White)",
+              "material": "300gsm combed organic cotton",
+              "color": "off-white",
+              "fit": "boxy",
+              "modestyRating": "standard",
+              "genderCoding": "androgynous",
+              "layerPosition": 0
+            },
+            {
+              "category": "outerwear",
+              "subcategory": "blazer",
+              "name": "Deconstructed Wool Blazer",
+              "material": "tropical virgin wool",
+              "color": "charcoal",
+              "fit": "relaxed",
+              "modestyRating": "high-coverage",
+              "genderCoding": "androgynous",
+              "layerPosition": 1
+            },
+            {
+              "category": "bottom",
+              "subcategory": "trousers",
+              "name": "Double-Pleated Wide-Leg Trousers",
+              "material": "wool gabardine blend",
+              "color": "pitch-black",
+              "fit": "relaxed",
+              "modestyRating": "high-coverage",
+              "genderCoding": "androgynous",
+              "layerPosition": 0
+            },
+            {
+              "category": "footwear",
+              "subcategory": "derbies",
+              "name": "Commando-Sole Leather Derbies",
+              "material": "polished binder calf leather, Vibram lug sole",
+              "color": "polished-black",
+              "fit": "regular",
+              "modestyRating": "standard",
+              "genderCoding": "androgynous",
+              "layerPosition": 0
+            }
+          ],
+          "factors": [
+            {
+              "category": "style_affinity",
+              "weight": 3.5,
+              "score": 0.79,
+              "reason": "Coordinate affinity (79%) with your 10D style vector."
+            },
+            {
+              "category": "silhouette_balance",
+              "weight": 3,
+              "score": 0.96,
+              "reason": "Cropped upper proportion offset by expansive lower volume"
+            },
+            {
+              "category": "color_harmony",
+              "weight": 3,
+              "score": 0.94,
+              "reason": "Color story: strong-contrast"
+            },
+            {
+              "category": "occasion_fit",
+              "weight": 2.5,
+              "score": 0.75,
+              "reason": "Formality fit for Cultural Ceremony (Level 3)"
+            },
+            {
+              "category": "weather_fit",
+              "weight": 2,
+              "score": 0.75,
+              "reason": "Ambient temperature and breathability calibration"
+            },
+            {
+              "category": "expression_affinity",
+              "weight": 1,
+              "score": 0.8,
+              "reason": "Soft expression alignment with androgynous presentation preference."
+            }
+          ],
+          "traceableReasons": [
+            {
+              "reasonId": "rea_outfit_korean_minimal_01_0_1791829636673",
+              "text": "Cropped upper proportion offset by expansive lower volume",
+              "signalIds": [
+                "user.styleProfile.preferences.preferredStyleSlugs",
+                "context.occasion"
+              ],
+              "knowledgeEntryIds": [
+                "gar_box_tee_white",
+                "gar_deconstructed_blazer_charcoal",
+                "gar_wide_trousers_black",
+                "gar_chunky_derbies_black"
+              ],
+              "factor": "general",
+              "authority": "USER_ENTERED",
+              "isAssumed": false
+            },
+            {
+              "reasonId": "rea_outfit_korean_minimal_01_1_1791829636673",
+              "text": "Strong contrast between light and deep neutral values establishes crisp visual separation.",
+              "signalIds": [
+                "user.styleProfile.preferences.preferredStyleSlugs",
+                "context.occasion"
+              ],
+              "knowledgeEntryIds": [
+                "gar_box_tee_white",
+                "gar_deconstructed_blazer_charcoal",
+                "gar_wide_trousers_black",
+                "gar_chunky_derbies_black"
+              ],
+              "factor": "general",
+              "authority": "USER_ENTERED",
+              "isAssumed": false
+            },
+            {
+              "reasonId": "rea_outfit_korean_minimal_01_2_1791829636673",
+              "text": "Default climate baseline assumed; weather context was not specified.",
+              "signalIds": [
+                "context.temperatureLevel",
+                "context.condition",
+                "context.weather"
+              ],
+              "knowledgeEntryIds": [
+                "gar_box_tee_white",
+                "gar_deconstructed_blazer_charcoal",
+                "gar_wide_trousers_black",
+                "gar_chunky_derbies_black"
+              ],
+              "factor": "weather_fit",
+              "authority": "USER_ENTERED",
+              "isAssumed": false
+            }
+          ],
+          "stylingAdvice": [
+            "Accentuates waistline geometry and creates an elongated vertical lower line."
+          ]
+        },
+        "hairStyle": {
+          "name": "Textured French Crop",
+          "slug": "textured-crop",
+          "score": 0.84,
+          "reasons": [
+            "Fits within your preferred moderate maintenance threshold.",
+            "Appropriate formality for Cultural Ceremony.",
+            "Directly aligns with your preferred minimal aesthetic"
+          ]
+        },
+        "groomingStyle": {
+          "name": "Designer Stubble (3-Day Shadow)",
+          "slug": "designer-stubble",
+          "score": 0.84,
+          "reasons": [
+            "Conforms with your moderate grooming maintenance routine.",
+            "Appropriate grooming polish for Cultural Ceremony.",
+            "Directly aligns with your preferred minimal aesthetic"
+          ]
+        }
+      },
+      {
+        "tier": "SAFE",
+        "tierRationale": "High familiarity and effortless ease. Relies on proven proportions and classic foundational tones.",
+        "confidence": {
+          "state": "EXPLORATORY",
+          "explanation": "Limited cultural ceremony coverage: no tradition pack installed. Directional proposal with general guidance.",
+          "toIncreaseConfidence": "Install a regional tradition pack (R1.3) or verify specific ceremonial customs with hosts."
+        },
+        "overallHarmonyScore": 0.84,
+        "reasons": [
+          "Directly mirrors your personal style axis coordinates.",
+          "Cohesive layered silhouette with balanced mid-length outer structure",
+          "Harmonious balance across complementary tonal depths."
+        ],
+        "cautions": [],
+        "outfit": {
+          "id": "outfit_feminine_slip_evening_01",
+          "title": "Sculpted Hourglass & Silk Slip Monolith",
+          "primaryStyleSlug": "minimal",
+          "formality": 4,
+          "score": 0.84,
+          "items": [
+            {
+              "category": "one-piece",
+              "subcategory": "dress",
+              "name": "Bias-Cut Silk Charmeuse Slip Dress",
+              "material": "100% heavyweight 22mm silk charmeuse",
+              "color": "black",
+              "fit": "slim",
+              "modestyRating": "low-coverage",
+              "genderCoding": "feminine",
+              "layerPosition": 0
+            },
+            {
+              "category": "outerwear",
+              "subcategory": "blazer",
+              "name": "Cinched Hourglass Tailored Wool Blazer",
+              "material": "high-twist tropical wool with structured canvas interlining",
+              "color": "black",
+              "fit": "tailored",
+              "modestyRating": "covered-arms",
+              "genderCoding": "feminine",
+              "layerPosition": 1
+            },
+            {
+              "category": "footwear",
+              "subcategory": "heel",
+              "name": "Pointed-Toe Leather Slingback Pumps (45mm)",
+              "material": "semi-gloss Italian box calfskin",
+              "color": "black",
+              "fit": "slim",
+              "modestyRating": "standard",
+              "genderCoding": "feminine",
+              "layerPosition": 0
+            },
+            {
+              "category": "accessory",
+              "subcategory": "bag",
+              "name": "Sculpted Minimalist Leather Shoulder Bag",
+              "material": "smooth semi-patent calfskin, tonal nappa lining",
+              "color": "black",
+              "fit": "regular",
+              "modestyRating": "standard",
+              "genderCoding": "feminine",
+              "layerPosition": 0
+            },
+            {
+              "category": "accessory",
+              "subcategory": "jewelry",
+              "name": "18k Vermeil Hollow Bold Hoop Earrings",
+              "material": "18k gold vermeil over 925 recycled sterling silver",
+              "color": "warm-gold",
+              "fit": "regular",
+              "modestyRating": "standard",
+              "genderCoding": "feminine",
+              "layerPosition": 0
+            }
+          ],
+          "factors": [
+            {
+              "category": "style_affinity",
+              "weight": 3.5,
+              "score": 0.84,
+              "reason": "Coordinate affinity (84%) with your 10D style vector."
+            },
+            {
+              "category": "silhouette_balance",
+              "weight": 3,
+              "score": 0.92,
+              "reason": "Cohesive layered silhouette with balanced mid-length outer structure"
+            },
+            {
+              "category": "color_harmony",
+              "weight": 3,
+              "score": 0.82,
+              "reason": "Color story: analogous"
+            },
+            {
+              "category": "occasion_fit",
+              "weight": 2.5,
+              "score": 1,
+              "reason": "Formality fit for Cultural Ceremony (Level 4)"
+            },
+            {
+              "category": "weather_fit",
+              "weight": 2,
+              "score": 0.75,
+              "reason": "Ambient temperature and breathability calibration"
+            },
+            {
+              "category": "expression_affinity",
+              "weight": 1,
+              "score": 0.5,
+              "reason": "Soft expression alignment with androgynous presentation preference."
+            }
+          ],
+          "traceableReasons": [
+            {
+              "reasonId": "rea_outfit_feminine_slip_evening_01_0_1791829636673",
+              "text": "Directly mirrors your personal style axis coordinates.",
+              "signalIds": [
+                "user.styleProfile.styleVector",
+                "user.styleProfile.preferences.preferredStyleSlugs"
+              ],
+              "knowledgeEntryIds": [
+                "gar_slip_dress_silk_black",
+                "gar_sculpted_blazer_hourglass_black",
+                "gar_slingback_kitten_heel_black",
+                "gar_leather_shoulder_bag_baguette",
+                "gar_gold_hoop_earrings_chunky",
+                "style_minimal"
+              ],
+              "factor": "style_affinity",
+              "authority": "USER_ENTERED",
+              "isAssumed": false
+            },
+            {
+              "reasonId": "rea_outfit_feminine_slip_evening_01_1_1791829636673",
+              "text": "Cohesive layered silhouette with balanced mid-length outer structure",
+              "signalIds": [
+                "user.styleProfile.preferences.fitProportions",
+                "user.styleProfile.preferences.preferredFits"
+              ],
+              "knowledgeEntryIds": [
+                "gar_slip_dress_silk_black",
+                "gar_sculpted_blazer_hourglass_black",
+                "gar_slingback_kitten_heel_black",
+                "gar_leather_shoulder_bag_baguette",
+                "gar_gold_hoop_earrings_chunky"
+              ],
+              "factor": "silhouette_balance",
+              "authority": "USER_ENTERED",
+              "isAssumed": false
+            },
+            {
+              "reasonId": "rea_outfit_feminine_slip_evening_01_2_1791829636673",
+              "text": "Harmonious balance across complementary tonal depths.",
+              "signalIds": [
+                "user.styleProfile.preferences.fitProportions",
+                "user.styleProfile.preferences.preferredFits"
+              ],
+              "knowledgeEntryIds": [
+                "gar_slip_dress_silk_black",
+                "gar_sculpted_blazer_hourglass_black",
+                "gar_slingback_kitten_heel_black",
+                "gar_leather_shoulder_bag_baguette",
+                "gar_gold_hoop_earrings_chunky"
+              ],
+              "factor": "silhouette_balance",
+              "authority": "USER_ENTERED",
+              "isAssumed": false
+            }
+          ],
+          "stylingAdvice": []
+        },
+        "hairStyle": {
+          "name": "Textured French Crop",
+          "slug": "textured-crop",
+          "score": 0.84,
+          "reasons": [
+            "Fits within your preferred moderate maintenance threshold.",
+            "Appropriate formality for Cultural Ceremony.",
+            "Directly aligns with your preferred minimal aesthetic"
+          ]
+        },
+        "groomingStyle": {
+          "name": "Designer Stubble (3-Day Shadow)",
+          "slug": "designer-stubble",
+          "score": 0.84,
+          "reasons": [
+            "Conforms with your moderate grooming maintenance routine.",
+            "Appropriate grooming polish for Cultural Ceremony.",
+            "Directly aligns with your preferred minimal aesthetic"
+          ]
+        }
+      },
+      {
+        "tier": "STRETCH",
+        "tierRationale": "Curated directional exploration. Pushes volume and textural depth while strictly respecting dress codes.",
+        "confidence": {
+          "state": "EXPLORATORY",
+          "explanation": "Limited cultural ceremony coverage: no tradition pack installed. Directional proposal with general guidance.",
+          "toIncreaseConfidence": "Install a regional tradition pack (R1.3) or verify specific ceremonial customs with hosts."
+        },
+        "overallHarmonyScore": 0.83,
+        "reasons": [
+          "Directly mirrors your personal style axis coordinates.",
+          "Balanced regular configuration",
+          "Strong contrast between light and deep neutral values establishes crisp visual separation."
+        ],
+        "cautions": [],
+        "outfit": {
+          "id": "outfit_minimal_01",
+          "title": "All-Black Architectural Column",
+          "primaryStyleSlug": "minimal",
+          "formality": 3,
+          "score": 0.83,
+          "items": [
+            {
+              "category": "top",
+              "subcategory": "knitwear",
+              "name": "Minimal Ribbed Mock Neck",
+              "material": "compact modal-wool jersey",
+              "color": "jet-black",
+              "fit": "slim",
+              "modestyRating": "high-coverage",
+              "genderCoding": "androgynous",
+              "layerPosition": 0
+            },
+            {
+              "category": "bottom",
+              "subcategory": "trousers",
+              "name": "Clean Ankle-Cropped Trousers (Black)",
+              "material": "stretch wool-twill",
+              "color": "black",
+              "fit": "regular",
+              "modestyRating": "standard",
+              "genderCoding": "androgynous",
+              "layerPosition": 0
+            },
+            {
+              "category": "footwear",
+              "subcategory": "sneakers",
+              "name": "Minimal Calfskin Low-Top Sneakers",
+              "material": "Italian Nappa leather, Margom rubber sole",
+              "color": "pure-white",
+              "fit": "regular",
+              "modestyRating": "standard",
+              "genderCoding": "androgynous",
+              "layerPosition": 0
+            }
+          ],
+          "factors": [
+            {
+              "category": "style_affinity",
+              "weight": 3.5,
+              "score": 0.84,
+              "reason": "Coordinate affinity (84%) with your 10D style vector."
+            },
+            {
+              "category": "silhouette_balance",
+              "weight": 3,
+              "score": 0.85,
+              "reason": "Balanced regular configuration"
+            },
+            {
+              "category": "color_harmony",
+              "weight": 3,
+              "score": 0.94,
+              "reason": "Color story: strong-contrast"
+            },
+            {
+              "category": "occasion_fit",
+              "weight": 2.5,
+              "score": 0.75,
+              "reason": "Formality fit for Cultural Ceremony (Level 3)"
+            },
+            {
+              "category": "weather_fit",
+              "weight": 2,
+              "score": 0.75,
+              "reason": "Ambient temperature and breathability calibration"
+            },
+            {
+              "category": "expression_affinity",
+              "weight": 1,
+              "score": 0.8,
+              "reason": "Soft expression alignment with androgynous presentation preference."
+            }
+          ],
+          "traceableReasons": [
+            {
+              "reasonId": "rea_outfit_minimal_01_0_1791829636673",
+              "text": "Directly mirrors your personal style axis coordinates.",
+              "signalIds": [
+                "user.styleProfile.styleVector",
+                "user.styleProfile.preferences.preferredStyleSlugs"
+              ],
+              "knowledgeEntryIds": [
+                "gar_mockneck_black",
+                "gar_cropped_trousers_black",
+                "gar_minimal_sneaker_white",
+                "style_minimal"
+              ],
+              "factor": "style_affinity",
+              "authority": "USER_ENTERED",
+              "isAssumed": false
+            },
+            {
+              "reasonId": "rea_outfit_minimal_01_1_1791829636673",
+              "text": "Balanced regular configuration",
+              "signalIds": [
+                "user.styleProfile.preferences.preferredStyleSlugs",
+                "context.occasion"
+              ],
+              "knowledgeEntryIds": [
+                "gar_mockneck_black",
+                "gar_cropped_trousers_black",
+                "gar_minimal_sneaker_white"
+              ],
+              "factor": "general",
+              "authority": "USER_ENTERED",
+              "isAssumed": false
+            },
+            {
+              "reasonId": "rea_outfit_minimal_01_2_1791829636673",
+              "text": "Strong contrast between light and deep neutral values establishes crisp visual separation.",
+              "signalIds": [
+                "user.styleProfile.preferences.preferredStyleSlugs",
+                "context.occasion"
+              ],
+              "knowledgeEntryIds": [
+                "gar_mockneck_black",
+                "gar_cropped_trousers_black",
+                "gar_minimal_sneaker_white"
+              ],
+              "factor": "general",
+              "authority": "USER_ENTERED",
+              "isAssumed": false
+            }
+          ],
+          "stylingAdvice": []
+        },
+        "hairStyle": {
+          "name": "Textured French Crop",
+          "slug": "textured-crop",
+          "score": 0.84,
+          "reasons": [
+            "Fits within your preferred moderate maintenance threshold.",
+            "Appropriate formality for Cultural Ceremony.",
+            "Directly aligns with your preferred minimal aesthetic"
+          ]
+        },
+        "groomingStyle": {
+          "name": "Designer Stubble (3-Day Shadow)",
+          "slug": "designer-stubble",
+          "score": 0.84,
+          "reasons": [
+            "Conforms with your moderate grooming maintenance routine.",
+            "Appropriate grooming polish for Cultural Ceremony.",
+            "Directly aligns with your preferred minimal aesthetic"
+          ]
+        }
+      }
+    ]
+  }
+}

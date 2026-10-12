@@ -1,0 +1,672 @@
+{
+  "profileId": "usr_p10",
+  "title": "Profile 10: Streetwear + Techwear selected, hot",
+  "profile": {
+    "user": {
+      "id": "usr_p10",
+      "name": "Hot Weather Techwear",
+      "handle": "p10",
+      "createdAt": "2026-10-12T00:00:00.000Z",
+      "styleProfile": {
+        "id": "sty_usr_p10",
+        "userId": "usr_p10",
+        "dominantAestheticSlugs": [
+          "minimal"
+        ],
+        "styleVector": {
+          "formality": 3,
+          "structure": 3,
+          "volume": 3,
+          "colorIntensity": 1,
+          "contrast": 3,
+          "pattern": 1,
+          "texture": 2,
+          "ornamentation": 1,
+          "classicTrend": 3,
+          "utilityPolish": 3,
+          "genderCoding": "androgynous"
+        },
+        "preferences": {
+          "preferredStyleSlugs": [
+            "streetwear",
+            "techwear"
+          ],
+          "dislikedStyleSlugs": [],
+          "preferredColors": [
+            "black",
+            "white",
+            "charcoal"
+          ],
+          "dislikedColors": [],
+          "preferredFits": [
+            "relaxed",
+            "regular"
+          ],
+          "dislikedFits": [],
+          "preferredSilhouettes": [],
+          "dislikedSilhouettes": [],
+          "fitProportions": {
+            "preferredFits": [
+              "relaxed",
+              "regular"
+            ],
+            "dislikedFits": [],
+            "topVolume": 3,
+            "bottomVolume": 3,
+            "preferredSilhouettes": [],
+            "dislikedSilhouettes": [],
+            "layeringPreference": "moderate",
+            "garmentLengthPreferences": {
+              "top": "regular",
+              "bottom": "regular"
+            }
+          },
+          "modestyLevel": "unrestricted",
+          "userConfirmedUndertone": "neutral",
+          "genderCodingDirection": "androgynous",
+          "styleExpression": "androgynous",
+          "preferredFormalityRange": [
+            2,
+            4
+          ],
+          "maxMaintenanceTolerance": "moderate",
+          "accessoryAffinities": []
+        },
+        "feedbackProfile": {
+          "history": [],
+          "learnedStyleAffinities": {},
+          "learnedColorAffinities": {},
+          "learnedSilhouetteAffinities": {},
+          "learnedFitAffinities": {},
+          "repeatPassCount": {}
+        },
+        "evidenceSignals": {
+          "hairTexture": {
+            "value": "straight",
+            "authority": "USER_ENTERED",
+            "confidence": 1,
+            "source": "manual_input",
+            "updatedAt": "2026-10-12T00:00:00.000Z"
+          }
+        },
+        "updatedAt": "2026-10-12T00:00:00.000Z"
+      }
+    },
+    "evidenceHierarchy": {
+      "userConfirmedUndertone": "neutral",
+      "modestyLevel": "unrestricted",
+      "styleExpression": "androgynous",
+      "evidenceSignals": {
+        "hairTexture": {
+          "value": "straight",
+          "authority": "USER_ENTERED",
+          "confidence": 1,
+          "source": "manual_input",
+          "updatedAt": "2026-10-12T00:00:00.000Z"
+        }
+      }
+    }
+  },
+  "context": {
+    "occasion": {
+      "id": "occ_casual_day",
+      "slug": "casual",
+      "name": "Everyday Casual / Weekend",
+      "category": "casual",
+      "defaultFormality": 1,
+      "allowableFormalityRange": [
+        1,
+        2
+      ],
+      "guidelines": [
+        "Effortless silhouettes with high breathability and walkability",
+        "Boxy cut tees, relaxed chinos, unbuttoned lightweight overshirts"
+      ],
+      "restrictedGarmentCategories": [
+        "rigid-suits",
+        "dress-shoes",
+        "tuxedos"
+      ],
+      "keyStyleAffinities": [
+        "casual",
+        "korean-minimal",
+        "workwear",
+        "minimal"
+      ],
+      "timelessOrTrend": "TIMELESS",
+      "reviewDate": "2026-10-01",
+      "createdAt": "2026-10-01",
+      "updatedAt": "2026-10-01"
+    },
+    "temperatureLevel": "hot",
+    "temperatureCelsius": 31,
+    "targetFormality": 2,
+    "isWeatherConfirmed": true
+  },
+  "result": {
+    "looksCount": 3,
+    "relaxationLog": [
+      "Relaxed secondary archetype affinity requirement for Safe look candidate."
+    ],
+    "contextApplied": "Everyday Casual / Weekend",
+    "vetoedCandidateCount": 12,
+    "evaluatedCandidateCount": 15,
+    "looks": [
+      {
+        "tier": "BEST_MATCH",
+        "tierRationale": "Optimal convergence of your 10D style vector, event formality, and physical proportions.",
+        "confidence": {
+          "state": "STRONG",
+          "explanation": "Supported by verified user formality, confirmed climate, explicit style vector, and grooming inputs.",
+          "toIncreaseConfidence": "Add specific footwear preferences to further personalize lower-leg grounding."
+        },
+        "overallHarmonyScore": 0.9,
+        "reasons": [
+          "Balanced regular configuration",
+          "Tonal neutral palette ensures high versatility and effortless visual cohesion.",
+          "Aligned to Everyday Casual / Weekend formality."
+        ],
+        "cautions": [],
+        "outfit": {
+          "id": "outfit_summer_linen_01",
+          "title": "Breezy Natural Linen Flow",
+          "primaryStyleSlug": "korean-minimal",
+          "formality": 2,
+          "score": 0.9,
+          "items": [
+            {
+              "category": "top",
+              "subcategory": "t-shirt",
+              "name": "Relaxed Slub Linen Tee",
+              "material": "100% Belgian slub linen jersey",
+              "color": "natural-flax",
+              "fit": "relaxed",
+              "modestyRating": "standard",
+              "genderCoding": "androgynous",
+              "layerPosition": 0
+            },
+            {
+              "category": "bottom",
+              "subcategory": "trousers",
+              "name": "Relaxed Linen Drawstring Trousers",
+              "material": "100% Belgian washed linen",
+              "color": "ecru",
+              "fit": "relaxed",
+              "modestyRating": "high-coverage",
+              "genderCoding": "androgynous",
+              "layerPosition": 0
+            },
+            {
+              "category": "footwear",
+              "subcategory": "sandals",
+              "name": "Jute-Sole Suede Espadrilles (Sand)",
+              "material": "unlined Spanish suede, braided jute rope sole",
+              "color": "sand",
+              "fit": "regular",
+              "modestyRating": "standard",
+              "genderCoding": "androgynous",
+              "layerPosition": 0
+            }
+          ],
+          "factors": [
+            {
+              "category": "style_affinity",
+              "weight": 3.5,
+              "score": 0.79,
+              "reason": "Coordinate affinity (79%) with your 10D style vector."
+            },
+            {
+              "category": "silhouette_balance",
+              "weight": 3,
+              "score": 0.93,
+              "reason": "Balanced regular configuration"
+            },
+            {
+              "category": "color_harmony",
+              "weight": 3,
+              "score": 0.92,
+              "reason": "Color story: tonal-neutral"
+            },
+            {
+              "category": "occasion_fit",
+              "weight": 2.5,
+              "score": 1,
+              "reason": "Formality fit for Everyday Casual / Weekend (Level 2)"
+            },
+            {
+              "category": "weather_fit",
+              "weight": 2,
+              "score": 0.98,
+              "reason": "Ambient temperature and breathability calibration"
+            },
+            {
+              "category": "expression_affinity",
+              "weight": 1,
+              "score": 0.8,
+              "reason": "Soft expression alignment with androgynous presentation preference."
+            }
+          ],
+          "traceableReasons": [
+            {
+              "reasonId": "rea_outfit_summer_linen_01_0_1791829636672",
+              "text": "Balanced regular configuration",
+              "signalIds": [
+                "user.styleProfile.preferences.preferredStyleSlugs",
+                "context.occasion"
+              ],
+              "knowledgeEntryIds": [
+                "gar_linen_tee_natural",
+                "gar_linen_drawstring_ecru",
+                "gar_suede_espadrilles_sand"
+              ],
+              "factor": "general",
+              "authority": "USER_ENTERED",
+              "isAssumed": false
+            },
+            {
+              "reasonId": "rea_outfit_summer_linen_01_1_1791829636672",
+              "text": "Tonal neutral palette ensures high versatility and effortless visual cohesion.",
+              "signalIds": [
+                "user.styleProfile.preferences.preferredStyleSlugs",
+                "context.occasion"
+              ],
+              "knowledgeEntryIds": [
+                "gar_linen_tee_natural",
+                "gar_linen_drawstring_ecru",
+                "gar_suede_espadrilles_sand"
+              ],
+              "factor": "general",
+              "authority": "USER_ENTERED",
+              "isAssumed": false
+            },
+            {
+              "reasonId": "rea_outfit_summer_linen_01_2_1791829636672",
+              "text": "Aligned to Everyday Casual / Weekend formality.",
+              "signalIds": [
+                "context.occasion",
+                "context.targetFormality"
+              ],
+              "knowledgeEntryIds": [
+                "gar_linen_tee_natural",
+                "gar_linen_drawstring_ecru",
+                "gar_suede_espadrilles_sand",
+                "occ_casual_day"
+              ],
+              "factor": "occasion_fit",
+              "authority": "USER_ENTERED",
+              "isAssumed": false
+            }
+          ],
+          "stylingAdvice": [
+            "Aligns with your preferred fit geometry."
+          ]
+        },
+        "hairStyle": {
+          "name": "Architectural Buzz Cut",
+          "slug": "tapered-buzz",
+          "score": 0.89,
+          "reasons": [
+            "Fits within your preferred moderate maintenance threshold.",
+            "Appropriate formality for Everyday Casual / Weekend.",
+            "Directly aligns with your preferred techwear aesthetic",
+            "Directly aligns with your preferred streetwear aesthetic"
+          ]
+        },
+        "groomingStyle": {
+          "name": "Tapered Fade Beard",
+          "slug": "tapered-fade-beard",
+          "score": 0.89,
+          "reasons": [
+            "Conforms with your moderate grooming maintenance routine.",
+            "Appropriate grooming polish for Everyday Casual / Weekend.",
+            "Directly aligns with your preferred streetwear aesthetic",
+            "Directly aligns with your preferred techwear aesthetic"
+          ]
+        }
+      },
+      {
+        "tier": "SAFE",
+        "tierRationale": "High familiarity and effortless ease. Relies on proven proportions and classic foundational tones.",
+        "confidence": {
+          "state": "STRONG",
+          "explanation": "Supported by verified user formality, confirmed climate, explicit style vector, and grooming inputs.",
+          "toIncreaseConfidence": "Add specific footwear preferences to further personalize lower-leg grounding."
+        },
+        "overallHarmonyScore": 0.85,
+        "reasons": [
+          "Balanced regular configuration",
+          "Strong contrast between light and deep neutral values establishes crisp visual separation.",
+          "High breathability (140gsm ultra-breathable TENCEL modal jersey) supports natural airflow in hot conditions."
+        ],
+        "cautions": [],
+        "outfit": {
+          "id": "outfit_hot_casual_modal_01",
+          "title": "Airy Featherweight Modal & Pure Linen",
+          "primaryStyleSlug": "casual",
+          "formality": 1,
+          "score": 0.85,
+          "items": [
+            {
+              "category": "top",
+              "subcategory": "t-shirt",
+              "name": "Airy Featherweight Modal Lounge Tee (Black)",
+              "material": "140gsm ultra-breathable TENCEL modal jersey",
+              "color": "pitch-black",
+              "fit": "relaxed",
+              "modestyRating": "covered-both",
+              "genderCoding": "androgynous",
+              "layerPosition": 0
+            },
+            {
+              "category": "bottom",
+              "subcategory": "trousers",
+              "name": "Relaxed Linen Drawstring Trousers",
+              "material": "100% Belgian washed linen",
+              "color": "ecru",
+              "fit": "relaxed",
+              "modestyRating": "high-coverage",
+              "genderCoding": "androgynous",
+              "layerPosition": 0
+            },
+            {
+              "category": "footwear",
+              "subcategory": "sneakers",
+              "name": "Minimal Calfskin Low-Top Sneakers",
+              "material": "Italian Nappa leather, Margom rubber sole",
+              "color": "pure-white",
+              "fit": "regular",
+              "modestyRating": "standard",
+              "genderCoding": "androgynous",
+              "layerPosition": 0
+            }
+          ],
+          "factors": [
+            {
+              "category": "style_affinity",
+              "weight": 3.5,
+              "score": 0.71,
+              "reason": "Coordinate affinity (71%) with your 10D style vector."
+            },
+            {
+              "category": "silhouette_balance",
+              "weight": 3,
+              "score": 0.93,
+              "reason": "Balanced regular configuration"
+            },
+            {
+              "category": "color_harmony",
+              "weight": 3,
+              "score": 0.94,
+              "reason": "Color story: strong-contrast"
+            },
+            {
+              "category": "occasion_fit",
+              "weight": 2.5,
+              "score": 0.75,
+              "reason": "Formality fit for Everyday Casual / Weekend (Level 1)"
+            },
+            {
+              "category": "weather_fit",
+              "weight": 2,
+              "score": 0.98,
+              "reason": "Ambient temperature and breathability calibration"
+            },
+            {
+              "category": "expression_affinity",
+              "weight": 1,
+              "score": 0.8,
+              "reason": "Soft expression alignment with androgynous presentation preference."
+            }
+          ],
+          "traceableReasons": [
+            {
+              "reasonId": "rea_outfit_hot_casual_modal_01_0_1791829636672",
+              "text": "Balanced regular configuration",
+              "signalIds": [
+                "user.styleProfile.preferences.preferredStyleSlugs",
+                "context.occasion"
+              ],
+              "knowledgeEntryIds": [
+                "gar_breathable_modal_lounge_tee_black",
+                "gar_linen_drawstring_ecru",
+                "gar_minimal_sneaker_white"
+              ],
+              "factor": "general",
+              "authority": "USER_ENTERED",
+              "isAssumed": false
+            },
+            {
+              "reasonId": "rea_outfit_hot_casual_modal_01_1_1791829636672",
+              "text": "Strong contrast between light and deep neutral values establishes crisp visual separation.",
+              "signalIds": [
+                "user.styleProfile.preferences.preferredStyleSlugs",
+                "context.occasion"
+              ],
+              "knowledgeEntryIds": [
+                "gar_breathable_modal_lounge_tee_black",
+                "gar_linen_drawstring_ecru",
+                "gar_minimal_sneaker_white"
+              ],
+              "factor": "general",
+              "authority": "USER_ENTERED",
+              "isAssumed": false
+            },
+            {
+              "reasonId": "rea_outfit_hot_casual_modal_01_2_1791829636672",
+              "text": "High breathability (140gsm ultra-breathable TENCEL modal jersey) supports natural airflow in hot conditions.",
+              "signalIds": [
+                "context.temperatureLevel",
+                "context.condition",
+                "context.weather"
+              ],
+              "knowledgeEntryIds": [
+                "gar_breathable_modal_lounge_tee_black",
+                "gar_linen_drawstring_ecru",
+                "gar_minimal_sneaker_white"
+              ],
+              "factor": "weather_fit",
+              "authority": "USER_ENTERED",
+              "isAssumed": false
+            }
+          ],
+          "stylingAdvice": [
+            "Aligns with your preferred fit geometry."
+          ]
+        },
+        "hairStyle": {
+          "name": "Architectural Buzz Cut",
+          "slug": "tapered-buzz",
+          "score": 0.89,
+          "reasons": [
+            "Fits within your preferred moderate maintenance threshold.",
+            "Appropriate formality for Everyday Casual / Weekend.",
+            "Directly aligns with your preferred techwear aesthetic",
+            "Directly aligns with your preferred streetwear aesthetic"
+          ]
+        },
+        "groomingStyle": {
+          "name": "Tapered Fade Beard",
+          "slug": "tapered-fade-beard",
+          "score": 0.89,
+          "reasons": [
+            "Conforms with your moderate grooming maintenance routine.",
+            "Appropriate grooming polish for Everyday Casual / Weekend.",
+            "Directly aligns with your preferred streetwear aesthetic",
+            "Directly aligns with your preferred techwear aesthetic"
+          ]
+        }
+      },
+      {
+        "tier": "STRETCH",
+        "tierRationale": "Curated directional exploration. Pushes volume and textural depth while strictly respecting dress codes.",
+        "confidence": {
+          "state": "STRONG",
+          "explanation": "Supported by verified user formality, confirmed climate, explicit style vector, and grooming inputs.",
+          "toIncreaseConfidence": "Add specific footwear preferences to further personalize lower-leg grounding."
+        },
+        "overallHarmonyScore": 0.85,
+        "reasons": [
+          "Contemporary dual-volume drape with intentional spatial presence",
+          "Harmonious balance across complementary tonal depths.",
+          "Neutral tonal temperature balance relative to undertone."
+        ],
+        "cautions": [],
+        "outfit": {
+          "id": "outfit_hot_casual_terracotta_01",
+          "title": "Tencel Camp-Collar & Washed Linen Cadence",
+          "primaryStyleSlug": "vintage",
+          "formality": 2,
+          "score": 0.85,
+          "items": [
+            {
+              "category": "top",
+              "subcategory": "button-down",
+              "name": "Tencel Camp-Collar Shirt",
+              "material": "100% lyocell tencel",
+              "color": "terracotta",
+              "fit": "boxy",
+              "modestyRating": "standard",
+              "genderCoding": "androgynous",
+              "layerPosition": 0
+            },
+            {
+              "category": "bottom",
+              "subcategory": "trousers",
+              "name": "Relaxed Linen Drawstring Trousers",
+              "material": "100% Belgian washed linen",
+              "color": "ecru",
+              "fit": "relaxed",
+              "modestyRating": "high-coverage",
+              "genderCoding": "androgynous",
+              "layerPosition": 0
+            },
+            {
+              "category": "footwear",
+              "subcategory": "sneakers",
+              "name": "Vintage Suede & Mesh Court Trainers",
+              "material": "split suede, nylon mesh, gum rubber",
+              "color": "vintage-grey-cream",
+              "fit": "regular",
+              "modestyRating": "standard",
+              "genderCoding": "androgynous",
+              "layerPosition": 0
+            }
+          ],
+          "factors": [
+            {
+              "category": "style_affinity",
+              "weight": 3.5,
+              "score": 0.65,
+              "reason": "Coordinate affinity (65%) with your 10D style vector."
+            },
+            {
+              "category": "silhouette_balance",
+              "weight": 3,
+              "score": 0.92,
+              "reason": "Contemporary dual-volume drape with intentional spatial presence"
+            },
+            {
+              "category": "color_harmony",
+              "weight": 3,
+              "score": 0.82,
+              "reason": "Color story: analogous"
+            },
+            {
+              "category": "occasion_fit",
+              "weight": 2.5,
+              "score": 1,
+              "reason": "Formality fit for Everyday Casual / Weekend (Level 2)"
+            },
+            {
+              "category": "weather_fit",
+              "weight": 2,
+              "score": 0.98,
+              "reason": "Ambient temperature and breathability calibration"
+            },
+            {
+              "category": "expression_affinity",
+              "weight": 1,
+              "score": 0.8,
+              "reason": "Soft expression alignment with androgynous presentation preference."
+            }
+          ],
+          "traceableReasons": [
+            {
+              "reasonId": "rea_outfit_hot_casual_terracotta_01_0_1791829636672",
+              "text": "Contemporary dual-volume drape with intentional spatial presence",
+              "signalIds": [
+                "user.styleProfile.preferences.fitProportions",
+                "user.styleProfile.preferences.preferredFits"
+              ],
+              "knowledgeEntryIds": [
+                "gar_camp_collar_shirt_terracotta",
+                "gar_linen_drawstring_ecru",
+                "gar_retro_court_sneaker"
+              ],
+              "factor": "silhouette_balance",
+              "authority": "USER_ENTERED",
+              "isAssumed": false
+            },
+            {
+              "reasonId": "rea_outfit_hot_casual_terracotta_01_1_1791829636672",
+              "text": "Harmonious balance across complementary tonal depths.",
+              "signalIds": [
+                "user.styleProfile.preferences.fitProportions",
+                "user.styleProfile.preferences.preferredFits"
+              ],
+              "knowledgeEntryIds": [
+                "gar_camp_collar_shirt_terracotta",
+                "gar_linen_drawstring_ecru",
+                "gar_retro_court_sneaker"
+              ],
+              "factor": "silhouette_balance",
+              "authority": "USER_ENTERED",
+              "isAssumed": false
+            },
+            {
+              "reasonId": "rea_outfit_hot_casual_terracotta_01_2_1791829636672",
+              "text": "Neutral tonal temperature balance relative to undertone.",
+              "signalIds": [
+                "user.styleProfile.preferences.fitProportions",
+                "user.styleProfile.preferences.preferredFits"
+              ],
+              "knowledgeEntryIds": [
+                "gar_camp_collar_shirt_terracotta",
+                "gar_linen_drawstring_ecru",
+                "gar_retro_court_sneaker"
+              ],
+              "factor": "silhouette_balance",
+              "authority": "USER_ENTERED",
+              "isAssumed": false
+            }
+          ],
+          "stylingAdvice": [
+            "Ground with substantial footwear (chunky derbies, solid boots) to anchor the fluid hemline."
+          ]
+        },
+        "hairStyle": {
+          "name": "Architectural Buzz Cut",
+          "slug": "tapered-buzz",
+          "score": 0.89,
+          "reasons": [
+            "Fits within your preferred moderate maintenance threshold.",
+            "Appropriate formality for Everyday Casual / Weekend.",
+            "Directly aligns with your preferred techwear aesthetic",
+            "Directly aligns with your preferred streetwear aesthetic"
+          ]
+        },
+        "groomingStyle": {
+          "name": "Tapered Fade Beard",
+          "slug": "tapered-fade-beard",
+          "score": 0.89,
+          "reasons": [
+            "Conforms with your moderate grooming maintenance routine.",
+            "Appropriate grooming polish for Everyday Casual / Weekend.",
+            "Directly aligns with your preferred streetwear aesthetic",
+            "Directly aligns with your preferred techwear aesthetic"
+          ]
+        }
+      }
+    ]
+  }
+}

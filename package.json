@@ -1,7 +1,7 @@
 {
   "name": "vael",
   "version": "0.1.0",
-  "description": "VAEL — Personal Styling Artist & Intelligence Backbone",
+  "description": "VAEL — Personal visual styling system",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -9,7 +9,8 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "typecheck": "tsc --noEmit",
-    "eval": "tsx tests/evaluation/eval-runner.ts"
+    "eval": "tsx tests/evaluation/eval-runner.ts",
+    "export:review": "tsx scripts/export-review.ts"
   },
   "keywords": [
     "vael",

@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { X, Check } from 'lucide-react';
+import { X, Check, ChevronDown, ChevronUp } from 'lucide-react';
 import {
   FaceShape,
   HairTexture,
@@ -18,6 +18,7 @@ import {
   ShoulderHipBalance,
   GenderIdentity,
   StyleExpression,
+  SkinDepth,
 } from '@/core/domain';
 
 export interface ProfileFormData {
@@ -32,6 +33,7 @@ export interface ProfileFormData {
   genderIdentity?: GenderIdentity;
   styleExpression?: StyleExpression;
   genderDirection: 'masculine' | 'androgynous' | 'feminine';
+  skinDepth: SkinDepth;
   undertone: UndertonePreference | 'unspecified';
   contrastLevel: ContrastLevel;
   modestyLevel: ModestyLevel;
@@ -40,6 +42,9 @@ export interface ProfileFormData {
   shoulderHipBalance: ShoulderHipBalance;
   traditionConstraint?: string;
   budgetTier?: 'accessible' | 'elevated' | 'investment' | 'unspecified';
+  dislikedColors: string[];
+  dislikedFits: FitType[];
+  dislikedCategories: string[];
 }
 
 interface ProfileModalProps {
@@ -59,6 +64,9 @@ const DEFAULT_PROFILE_FORM: ProfileFormData = {
   topFit: 'relaxed',
   bottomFit: 'regular',
   genderDirection: 'androgynous',
+  genderIdentity: 'unspecified',
+  styleExpression: 'unspecified',
+  skinDepth: 'unspecified',
   undertone: 'unspecified',
   contrastLevel: 'unspecified',
   modestyLevel: 'unrestricted',
@@ -67,6 +75,9 @@ const DEFAULT_PROFILE_FORM: ProfileFormData = {
   shoulderHipBalance: 'unspecified',
   traditionConstraint: '',
   budgetTier: 'unspecified',
+  dislikedColors: [],
+  dislikedFits: [],
+  dislikedCategories: [],
 };
 
 export function ProfileModal({
@@ -79,6 +90,17 @@ export function ProfileModal({
     ...DEFAULT_PROFILE_FORM,
     ...initialData,
   });
+
+  const [expandedSections, setExpandedSections] = useState<Record<string, boolean>>({
+    colorContrast: false,
+    proportions: false,
+    budget: false,
+    dislikes: false,
+  });
+
+  const toggleSection = (section: string) => {
+    setExpandedSections((prev) => ({ ...prev, [section]: !prev[section] }));
+  };
 
   useEffect(() => {
     if (isOpen) {
@@ -395,10 +417,10 @@ export function ProfileModal({
                     { id: 'feminine', label: 'Feminine' },
                     { id: 'androgynous', label: 'Androgynous' },
                     { id: 'no-preference', label: 'No Preference' },
+                    { id: 'unspecified', label: 'Unspecified' },
                   ].map((item) => {
                     const isSelected =
-                      (formData.styleExpression || formData.genderDirection) === item.id ||
-                      (item.id === 'no-preference' && !formData.styleExpression && formData.genderDirection === 'androgynous');
+                      (formData.styleExpression || 'unspecified') === item.id;
 
                     return (
                       <button
@@ -408,7 +430,7 @@ export function ProfileModal({
                         aria-checked={isSelected}
                         onClick={() => {
                           update('styleExpression', item.id as StyleExpression);
-                          if (item.id !== 'no-preference') {
+                          if (item.id === 'masculine' || item.id === 'feminine' || item.id === 'androgynous') {
                             update('genderDirection', item.id as 'masculine' | 'androgynous' | 'feminine');
                           }
                         }}
@@ -471,75 +493,7 @@ export function ProfileModal({
             </div>
           </div>
 
-          {/* Color & Contrast (F-01) */}
-          <div className="border border-neutral-200 p-4 bg-neutral-50/50">
-            <span className="text-[11px] font-semibold text-neutral-800 tracking-wider uppercase block mb-3">
-              COLOR & CONTRAST
-            </span>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div>
-                <label className="block text-neutral-500 mb-1.5 uppercase tracking-wide">
-                  Undertone
-                </label>
-                <span className="text-[10px] text-neutral-400 block mb-2 font-sans normal-case">
-                  Unknown undertone defaults safely to neutral-safe palette curation.
-                </span>
-                <div className="flex flex-wrap gap-1.5">
-                  {[
-                    { id: 'warm', label: 'Warm' },
-                    { id: 'cool', label: 'Cool' },
-                    { id: 'neutral', label: 'Neutral' },
-                    { id: 'unspecified', label: 'Not sure / Skip' },
-                  ].map((item) => (
-                    <button
-                      type="button"
-                      key={item.id}
-                      onClick={() => update('undertone', item.id as any)}
-                      className={`px-3 py-1.5 uppercase text-[11px] border transition ${
-                        formData.undertone === item.id
-                          ? 'border-neutral-900 bg-neutral-900 text-white font-semibold'
-                          : 'border-neutral-300 bg-white text-neutral-700 hover:border-neutral-500'
-                      }`}
-                    >
-                      {item.label}
-                    </button>
-                  ))}
-                </div>
-              </div>
-
-              <div>
-                <label className="block text-neutral-500 mb-1.5 uppercase tracking-wide">
-                  Contrast Level
-                </label>
-                <span className="text-[10px] text-neutral-400 block mb-2 font-sans normal-case">
-                  Intensity difference between hair, eyes, and skin.
-                </span>
-                <div className="flex flex-wrap gap-1.5">
-                  {[
-                    { id: 'low', label: 'Low' },
-                    { id: 'medium', label: 'Medium' },
-                    { id: 'high', label: 'High' },
-                    { id: 'unspecified', label: 'Not sure / Skip' },
-                  ].map((item) => (
-                    <button
-                      type="button"
-                      key={item.id}
-                      onClick={() => update('contrastLevel', item.id as any)}
-                      className={`px-3 py-1.5 uppercase text-[11px] border transition ${
-                        formData.contrastLevel === item.id
-                          ? 'border-neutral-900 bg-neutral-900 text-white font-semibold'
-                          : 'border-neutral-300 bg-white text-neutral-700 hover:border-neutral-500'
-                      }`}
-                    >
-                      {item.label}
-                    </button>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Modesty & Coverage (F-01) */}
+          {/* Modesty & Coverage (Always Accessible) */}
           <div className="border border-neutral-200 p-4 bg-neutral-50/50">
             <span className="text-[11px] font-semibold text-neutral-800 tracking-wider uppercase block mb-3">
               MODESTY & COVERAGE
@@ -572,146 +526,412 @@ export function ProfileModal({
             </div>
           </div>
 
-          {/* Physical Proportions (F-01) */}
-          <div className="border border-neutral-200 p-4 bg-neutral-50/50">
-            <span className="text-[11px] font-semibold text-neutral-800 tracking-wider uppercase block mb-3">
-              PHYSICAL PROPORTIONS & BALANCE
-            </span>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          {/* Collapsible Section 1: Color & Contrast */}
+          <div className="border border-neutral-200 bg-neutral-50/50">
+            <button
+              type="button"
+              onClick={() => toggleSection('colorContrast')}
+              className="w-full p-4 flex items-center justify-between text-left hover:bg-neutral-100/50 transition"
+            >
               <div>
-                <label className="block text-neutral-500 mb-1.5 uppercase tracking-wide">
-                  Height Range
-                </label>
-                <div className="flex flex-wrap gap-1.5">
-                  {[
-                    { id: 'compact', label: 'Compact' },
-                    { id: 'average', label: 'Average' },
-                    { id: 'tall', label: 'Tall' },
-                    { id: 'unspecified', label: 'Skip' },
-                  ].map((item) => (
-                    <button
-                      type="button"
-                      key={item.id}
-                      onClick={() => update('heightRange', item.id as any)}
-                      className={`px-2.5 py-1 uppercase text-[11px] border transition ${
-                        formData.heightRange === item.id
-                          ? 'border-neutral-900 bg-neutral-900 text-white font-semibold'
-                          : 'border-neutral-300 bg-white text-neutral-700 hover:border-neutral-500'
-                      }`}
-                    >
-                      {item.label}
-                    </button>
-                  ))}
-                </div>
+                <span className="text-[11px] font-semibold text-neutral-800 tracking-wider uppercase block">
+                  COLOR & CONTRAST
+                </span>
+                <span className="text-[10px] text-neutral-400 font-sans block mt-0.5">
+                  Undertone: {formData.undertone} · Contrast: {formData.contrastLevel} · Skin Depth: {formData.skinDepth}
+                </span>
               </div>
+              {expandedSections.colorContrast ? (
+                <ChevronUp className="w-4 h-4 text-neutral-500" />
+              ) : (
+                <ChevronDown className="w-4 h-4 text-neutral-500" />
+              )}
+            </button>
 
-              <div>
-                <label className="block text-neutral-500 mb-1.5 uppercase tracking-wide">
-                  Torso / Leg Ratio
-                </label>
-                <div className="flex flex-wrap gap-1.5">
-                  {[
-                    { id: 'balanced', label: 'Balanced' },
-                    { id: 'longer-torso', label: 'Long Torso' },
-                    { id: 'longer-legs', label: 'Long Legs' },
-                    { id: 'unspecified', label: 'Skip' },
-                  ].map((item) => (
-                    <button
-                      type="button"
-                      key={item.id}
-                      onClick={() => update('torsoLegPreference', item.id as any)}
-                      className={`px-2.5 py-1 uppercase text-[11px] border transition ${
-                        formData.torsoLegPreference === item.id
-                          ? 'border-neutral-900 bg-neutral-900 text-white font-semibold'
-                          : 'border-neutral-300 bg-white text-neutral-700 hover:border-neutral-500'
-                      }`}
-                    >
-                      {item.label}
-                    </button>
-                  ))}
+            {expandedSections.colorContrast && (
+              <div className="p-4 pt-0 border-t border-neutral-200/60 grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div>
+                  <label className="block text-neutral-500 mb-1.5 uppercase tracking-wide">
+                    Skin Depth
+                  </label>
+                  <div className="flex flex-wrap gap-1.5">
+                    {[
+                      { id: 'fair', label: 'Fair' },
+                      { id: 'light', label: 'Light' },
+                      { id: 'medium', label: 'Medium' },
+                      { id: 'tan', label: 'Tan' },
+                      { id: 'deep', label: 'Deep' },
+                      { id: 'unspecified', label: 'Not sure / Skip' },
+                    ].map((item) => (
+                      <button
+                        type="button"
+                        key={item.id}
+                        onClick={() => update('skinDepth', item.id as any)}
+                        className={`px-2.5 py-1 uppercase text-[11px] border transition ${
+                          formData.skinDepth === item.id
+                            ? 'border-neutral-900 bg-neutral-900 text-white font-semibold'
+                            : 'border-neutral-300 bg-white text-neutral-700 hover:border-neutral-500'
+                        }`}
+                      >
+                        {item.label}
+                      </button>
+                    ))}
+                  </div>
                 </div>
-              </div>
 
-              <div>
-                <label className="block text-neutral-500 mb-1.5 uppercase tracking-wide">
-                  Shoulder / Hip Frame
-                </label>
-                <div className="flex flex-wrap gap-1.5">
-                  {[
-                    { id: 'broad-shoulders', label: 'Broad Shoulders' },
-                    { id: 'balanced', label: 'Balanced' },
-                    { id: 'wider-hips', label: 'Wider Hips' },
-                    { id: 'unspecified', label: 'Skip' },
-                  ].map((item) => (
-                    <button
-                      type="button"
-                      key={item.id}
-                      onClick={() => update('shoulderHipBalance', item.id as any)}
-                      className={`px-2.5 py-1 uppercase text-[11px] border transition ${
-                        formData.shoulderHipBalance === item.id
-                          ? 'border-neutral-900 bg-neutral-900 text-white font-semibold'
-                          : 'border-neutral-300 bg-white text-neutral-700 hover:border-neutral-500'
-                      }`}
-                    >
-                      {item.label}
-                    </button>
-                  ))}
+                <div>
+                  <label className="block text-neutral-500 mb-1.5 uppercase tracking-wide">
+                    Undertone
+                  </label>
+                  <div className="flex flex-wrap gap-1.5">
+                    {[
+                      { id: 'warm', label: 'Warm' },
+                      { id: 'cool', label: 'Cool' },
+                      { id: 'neutral', label: 'Neutral' },
+                      { id: 'olive', label: 'Olive' },
+                      { id: 'unspecified', label: 'Not sure / Skip' },
+                    ].map((item) => (
+                      <button
+                        type="button"
+                        key={item.id}
+                        onClick={() => update('undertone', item.id as any)}
+                        className={`px-2.5 py-1 uppercase text-[11px] border transition ${
+                          formData.undertone === item.id
+                            ? 'border-neutral-900 bg-neutral-900 text-white font-semibold'
+                            : 'border-neutral-300 bg-white text-neutral-700 hover:border-neutral-500'
+                        }`}
+                      >
+                        {item.label}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+
+                <div>
+                  <label className="block text-neutral-500 mb-1.5 uppercase tracking-wide">
+                    Contrast Level
+                  </label>
+                  <div className="flex flex-wrap gap-1.5">
+                    {[
+                      { id: 'low', label: 'Low' },
+                      { id: 'medium', label: 'Medium' },
+                      { id: 'high', label: 'High' },
+                      { id: 'unspecified', label: 'Not sure / Skip' },
+                    ].map((item) => (
+                      <button
+                        type="button"
+                        key={item.id}
+                        onClick={() => update('contrastLevel', item.id as any)}
+                        className={`px-2.5 py-1 uppercase text-[11px] border transition ${
+                          formData.contrastLevel === item.id
+                            ? 'border-neutral-900 bg-neutral-900 text-white font-semibold'
+                            : 'border-neutral-300 bg-white text-neutral-700 hover:border-neutral-500'
+                        }`}
+                      >
+                        {item.label}
+                      </button>
+                    ))}
+                  </div>
                 </div>
               </div>
-            </div>
+            )}
           </div>
 
-          {/* Tradition Layer & Budget (F-01, F-07) */}
-          <div className="border border-neutral-200 p-4 bg-neutral-50/50">
-            <span className="text-[11px] font-semibold text-neutral-800 tracking-wider uppercase block mb-3">
-              TRADITION LAYER & BUDGET TIER
-            </span>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {/* Collapsible Section 2: Proportions & Balance */}
+          <div className="border border-neutral-200 bg-neutral-50/50">
+            <button
+              type="button"
+              onClick={() => toggleSection('proportions')}
+              className="w-full p-4 flex items-center justify-between text-left hover:bg-neutral-100/50 transition"
+            >
               <div>
-                <label className="block text-neutral-500 mb-1.5 uppercase tracking-wide">
-                  Tradition Constraint (Optional)
-                </label>
-                <input
-                  type="text"
-                  value={formData.traditionConstraint || ''}
-                  onChange={(e) => update('traditionConstraint', e.target.value)}
-                  placeholder="e.g. South Asian, East Asian, Nordic..."
-                  className="w-full px-3 py-1.5 border border-neutral-300 text-[11px] bg-white text-neutral-900 focus:outline-none focus:border-black font-sans"
-                />
-                {formData.traditionConstraint && (
-                  <span className="text-[10px] text-neutral-500 block mt-1 italic">
-                    Note: Tradition pack not available yet. Cultural ceremony occasions will prioritize heritage tunics and raw silk suiting.
-                  </span>
-                )}
+                <span className="text-[11px] font-semibold text-neutral-800 tracking-wider uppercase block">
+                  PHYSICAL PROPORTIONS & BALANCE
+                </span>
+                <span className="text-[10px] text-neutral-400 font-sans block mt-0.5">
+                  Height: {formData.heightRange} · Ratio: {formData.torsoLegPreference} · Frame: {formData.shoulderHipBalance}
+                </span>
               </div>
+              {expandedSections.proportions ? (
+                <ChevronUp className="w-4 h-4 text-neutral-500" />
+              ) : (
+                <ChevronDown className="w-4 h-4 text-neutral-500" />
+              )}
+            </button>
 
-              <div>
-                <label className="block text-neutral-500 mb-1.5 uppercase tracking-wide">
-                  Budget Tier
-                </label>
-                <div className="flex flex-wrap gap-1.5">
-                  {[
-                    { id: 'accessible', label: 'Accessible' },
-                    { id: 'elevated', label: 'Elevated' },
-                    { id: 'investment', label: 'Investment' },
-                    { id: 'unspecified', label: 'Not sure / Skip' },
-                  ].map((item) => (
-                    <button
-                      type="button"
-                      key={item.id}
-                      onClick={() => update('budgetTier', item.id as any)}
-                      className={`px-3 py-1.5 uppercase text-[11px] border transition ${
-                        formData.budgetTier === item.id
-                          ? 'border-neutral-900 bg-neutral-900 text-white font-semibold'
-                          : 'border-neutral-300 bg-white text-neutral-700 hover:border-neutral-500'
-                      }`}
-                    >
-                      {item.label}
-                    </button>
-                  ))}
+            {expandedSections.proportions && (
+              <div className="p-4 pt-0 border-t border-neutral-200/60 grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div>
+                  <label className="block text-neutral-500 mb-1.5 uppercase tracking-wide">
+                    Height Range
+                  </label>
+                  <div className="flex flex-wrap gap-1.5">
+                    {[
+                      { id: 'compact', label: 'Compact' },
+                      { id: 'average', label: 'Average' },
+                      { id: 'tall', label: 'Tall' },
+                      { id: 'unspecified', label: 'Not sure / Skip' },
+                    ].map((item) => (
+                      <button
+                        type="button"
+                        key={item.id}
+                        onClick={() => update('heightRange', item.id as any)}
+                        className={`px-2.5 py-1 uppercase text-[11px] border transition ${
+                          formData.heightRange === item.id
+                            ? 'border-neutral-900 bg-neutral-900 text-white font-semibold'
+                            : 'border-neutral-300 bg-white text-neutral-700 hover:border-neutral-500'
+                        }`}
+                      >
+                        {item.label}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+
+                <div>
+                  <label className="block text-neutral-500 mb-1.5 uppercase tracking-wide">
+                    Torso / Leg Ratio
+                  </label>
+                  <div className="flex flex-wrap gap-1.5">
+                    {[
+                      { id: 'balanced', label: 'Balanced' },
+                      { id: 'longer-torso', label: 'Long Torso' },
+                      { id: 'longer-legs', label: 'Long Legs' },
+                      { id: 'unspecified', label: 'Not sure / Skip' },
+                    ].map((item) => (
+                      <button
+                        type="button"
+                        key={item.id}
+                        onClick={() => update('torsoLegPreference', item.id as any)}
+                        className={`px-2.5 py-1 uppercase text-[11px] border transition ${
+                          formData.torsoLegPreference === item.id
+                            ? 'border-neutral-900 bg-neutral-900 text-white font-semibold'
+                            : 'border-neutral-300 bg-white text-neutral-700 hover:border-neutral-500'
+                        }`}
+                      >
+                        {item.label}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+
+                <div>
+                  <label className="block text-neutral-500 mb-1.5 uppercase tracking-wide">
+                    Shoulder / Hip Frame
+                  </label>
+                  <div className="flex flex-wrap gap-1.5">
+                    {[
+                      { id: 'broad-shoulders', label: 'Broad Shoulders' },
+                      { id: 'balanced', label: 'Balanced' },
+                      { id: 'wider-hips', label: 'Wider Hips' },
+                      { id: 'unspecified', label: 'Not sure / Skip' },
+                    ].map((item) => (
+                      <button
+                        type="button"
+                        key={item.id}
+                        onClick={() => update('shoulderHipBalance', item.id as any)}
+                        className={`px-2.5 py-1 uppercase text-[11px] border transition ${
+                          formData.shoulderHipBalance === item.id
+                            ? 'border-neutral-900 bg-neutral-900 text-white font-semibold'
+                            : 'border-neutral-300 bg-white text-neutral-700 hover:border-neutral-500'
+                        }`}
+                      >
+                        {item.label}
+                      </button>
+                    ))}
+                  </div>
                 </div>
               </div>
-            </div>
+            )}
+          </div>
+
+          {/* Collapsible Section 3: Budget Tier & Tradition */}
+          <div className="border border-neutral-200 bg-neutral-50/50">
+            <button
+              type="button"
+              onClick={() => toggleSection('budget')}
+              className="w-full p-4 flex items-center justify-between text-left hover:bg-neutral-100/50 transition"
+            >
+              <div>
+                <span className="text-[11px] font-semibold text-neutral-800 tracking-wider uppercase block">
+                  BUDGET & INVESTMENT TIER
+                </span>
+                <span className="text-[10px] text-neutral-400 font-sans block mt-0.5">
+                  Tier: {formData.budgetTier || 'unspecified'}
+                </span>
+              </div>
+              {expandedSections.budget ? (
+                <ChevronUp className="w-4 h-4 text-neutral-500" />
+              ) : (
+                <ChevronDown className="w-4 h-4 text-neutral-500" />
+              )}
+            </button>
+
+            {expandedSections.budget && (
+              <div className="p-4 pt-0 border-t border-neutral-200/60 grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                  <label className="block text-neutral-500 mb-1.5 uppercase tracking-wide">
+                    Budget Band
+                  </label>
+                  <div className="flex flex-wrap gap-1.5">
+                    {[
+                      { id: 'accessible', label: 'Value / Accessible' },
+                      { id: 'elevated', label: 'Mid / Elevated' },
+                      { id: 'investment', label: 'Premium / Investment' },
+                      { id: 'unspecified', label: 'Not sure / Skip' },
+                    ].map((item) => (
+                      <button
+                        type="button"
+                        key={item.id}
+                        onClick={() => update('budgetTier', item.id as any)}
+                        className={`px-3 py-1.5 uppercase text-[11px] border transition ${
+                          formData.budgetTier === item.id
+                            ? 'border-neutral-900 bg-neutral-900 text-white font-semibold'
+                            : 'border-neutral-300 bg-white text-neutral-700 hover:border-neutral-500'
+                        }`}
+                      >
+                        {item.label}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+
+                <div>
+                  <label className="block text-neutral-500 mb-1.5 uppercase tracking-wide">
+                    Tradition Context (Optional)
+                  </label>
+                  <input
+                    type="text"
+                    value={formData.traditionConstraint || ''}
+                    onChange={(e) => update('traditionConstraint', e.target.value)}
+                    placeholder="e.g. South Asian, East Asian, Nordic..."
+                    className="w-full px-3 py-1.5 border border-neutral-300 text-[11px] bg-white text-neutral-900 focus:outline-none focus:border-black font-sans"
+                  />
+                  {formData.traditionConstraint && (
+                    <span className="text-[10px] text-neutral-500 block mt-1 italic">
+                      Tradition packs deferred to R1.3. Cultural occasions provide general guidance.
+                    </span>
+                  )}
+                </div>
+              </div>
+            )}
+          </div>
+
+          {/* Collapsible Section 4: Dislikes & Exclusions */}
+          <div className="border border-neutral-200 bg-neutral-50/50">
+            <button
+              type="button"
+              onClick={() => toggleSection('dislikes')}
+              className="w-full p-4 flex items-center justify-between text-left hover:bg-neutral-100/50 transition"
+            >
+              <div>
+                <span className="text-[11px] font-semibold text-neutral-800 tracking-wider uppercase block">
+                  DISLIKES & BOUNDARIES
+                </span>
+                <span className="text-[10px] text-neutral-400 font-sans block mt-0.5">
+                  Colors: {formData.dislikedColors.length} · Fits: {formData.dislikedFits.length} · Categories: {formData.dislikedCategories.length}
+                </span>
+              </div>
+              {expandedSections.dislikes ? (
+                <ChevronUp className="w-4 h-4 text-neutral-500" />
+              ) : (
+                <ChevronDown className="w-4 h-4 text-neutral-500" />
+              )}
+            </button>
+
+            {expandedSections.dislikes && (
+              <div className="p-4 pt-0 border-t border-neutral-200/60 space-y-4">
+                <div>
+                  <label className="block text-neutral-500 mb-1.5 uppercase tracking-wide">
+                    Disliked Colors (Hard Veto)
+                  </label>
+                  <div className="flex flex-wrap gap-1.5">
+                    {['red', 'yellow', 'pink', 'orange', 'purple', 'green', 'brown', 'beige'].map((color) => {
+                      const isDisliked = formData.dislikedColors.includes(color);
+                      return (
+                        <button
+                          type="button"
+                          key={color}
+                          onClick={() => {
+                            const next = isDisliked
+                              ? formData.dislikedColors.filter((c) => c !== color)
+                              : [...formData.dislikedColors, color];
+                            update('dislikedColors', next);
+                          }}
+                          className={`px-2.5 py-1 uppercase text-[11px] border transition ${
+                            isDisliked
+                              ? 'border-neutral-900 bg-neutral-900 text-white font-semibold'
+                              : 'border-neutral-300 bg-white text-neutral-700 hover:border-neutral-500'
+                          }`}
+                        >
+                          {color}
+                        </button>
+                      );
+                    })}
+                  </div>
+                </div>
+
+                <div>
+                  <label className="block text-neutral-500 mb-1.5 uppercase tracking-wide">
+                    Disliked Fits (Hard Veto)
+                  </label>
+                  <div className="flex flex-wrap gap-1.5">
+                    {(['skinny', 'slim', 'regular', 'relaxed', 'oversized', 'boxy'] as FitType[]).map((fit) => {
+                      const isDisliked = formData.dislikedFits.includes(fit);
+                      return (
+                        <button
+                          type="button"
+                          key={fit}
+                          onClick={() => {
+                            const next = isDisliked
+                              ? formData.dislikedFits.filter((f) => f !== fit)
+                              : [...formData.dislikedFits, fit];
+                            update('dislikedFits', next);
+                          }}
+                          className={`px-2.5 py-1 uppercase text-[11px] border transition ${
+                            isDisliked
+                              ? 'border-neutral-900 bg-neutral-900 text-white font-semibold'
+                              : 'border-neutral-300 bg-white text-neutral-700 hover:border-neutral-500'
+                          }`}
+                        >
+                          {fit}
+                        </button>
+                      );
+                    })}
+                  </div>
+                </div>
+
+                <div>
+                  <label className="block text-neutral-500 mb-1.5 uppercase tracking-wide">
+                    Disliked Garment Categories (Hard Veto)
+                  </label>
+                  <div className="flex flex-wrap gap-1.5">
+                    {['shorts', 'tanks', 'hoodies', 'graphics', 'sandals', 'distressed'].map((cat) => {
+                      const isDisliked = formData.dislikedCategories.includes(cat);
+                      return (
+                        <button
+                          type="button"
+                          key={cat}
+                          onClick={() => {
+                            const next = isDisliked
+                              ? formData.dislikedCategories.filter((c) => c !== cat)
+                              : [...formData.dislikedCategories, cat];
+                            update('dislikedCategories', next);
+                          }}
+                          className={`px-2.5 py-1 uppercase text-[11px] border transition ${
+                            isDisliked
+                              ? 'border-neutral-900 bg-neutral-900 text-white font-semibold'
+                              : 'border-neutral-300 bg-white text-neutral-700 hover:border-neutral-500'
+                          }`}
+                        >
+                          {cat}
+                        </button>
+                      );
+                    })}
+                  </div>
+                </div>
+              </div>
+            )}
           </div>
 
           {/* Action Buttons */}

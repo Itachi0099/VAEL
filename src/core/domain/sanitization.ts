@@ -112,6 +112,7 @@ export function sanitizeProfileState(raw: any): any {
     'non-binary',
     'prefer-not-to-specify',
     'self-describe',
+    'unspecified',
   ].includes(preferences.genderIdentity)
     ? preferences.genderIdentity
     : 'unspecified';
@@ -121,9 +122,10 @@ export function sanitizeProfileState(raw: any): any {
     'feminine',
     'androgynous',
     'no-preference',
+    'unspecified',
   ].includes(preferences.styleExpression || preferences.genderCodingDirection)
     ? (preferences.styleExpression || preferences.genderCodingDirection)
-    : 'androgynous';
+    : 'unspecified';
 
   return {
     ...raw,
@@ -137,8 +139,27 @@ export function sanitizeProfileState(raw: any): any {
         modestyLevel: modesty,
         genderIdentity,
         styleExpression,
-        genderCodingDirection: styleExpression === 'no-preference' ? 'unspecified' : styleExpression,
+        genderCodingDirection: styleExpression === 'no-preference' || styleExpression === 'unspecified' ? 'unspecified' : styleExpression,
       },
     },
   };
+}
+
+/**
+ * Validates and sanitizes imported profile JSON.
+ * Ensures no prototype pollution, invalid data structures, or malicious injections.
+ * NOTE for owner: TODO - Implement formal product age policy (e.g. minimum age verification, COPPA/GDPR-K compliance).
+ */
+export function sanitizeProfileImport(importedJson: any): any {
+  if (!importedJson || typeof importedJson !== 'object') {
+    throw new Error('Invalid profile format: root must be a JSON object.');
+  }
+
+  // Sanitize with base profile state sanitizer
+  const sanitized = sanitizeProfileState(importedJson);
+  if (!sanitized) {
+    throw new Error('Failed to sanitize imported profile.');
+  }
+
+  return sanitized;
 }

@@ -1,7 +1,7 @@
 'use client';
 
-import React from 'react';
-import { Sparkles, Edit3, CheckCircle2, RotateCcw } from 'lucide-react';
+import React, { useRef } from 'react';
+import { Sparkles, Edit3, CheckCircle2, RotateCcw, Download, Upload } from 'lucide-react';
 import { VisualProfile } from '@/core/domain';
 
 interface ProfileHeaderProps {
@@ -10,6 +10,8 @@ interface ProfileHeaderProps {
   onOpenEditor: () => void;
   onResetProfile: () => void;
   onUseDemo: () => void;
+  onExportProfile?: () => void;
+  onImportProfile?: (file: File) => void;
 }
 
 export function ProfileHeader({
@@ -18,7 +20,10 @@ export function ProfileHeader({
   onOpenEditor,
   onResetProfile,
   onUseDemo,
+  onExportProfile,
+  onImportProfile,
 }: ProfileHeaderProps) {
+  const fileInputRef = useRef<HTMLInputElement>(null);
   if (mode === 'EMPTY' || !visual) {
     return (
       <div className="border border-neutral-300 bg-neutral-50/60 p-5 font-editorial-mono text-xs">
@@ -95,6 +100,43 @@ export function ProfileHeader({
               <Edit3 className="w-3 h-3" />
               EDIT PROFILE
             </button>
+          )}
+
+          {onExportProfile && (
+            <button
+              onClick={onExportProfile}
+              title="Export profile JSON"
+              className="inline-flex items-center gap-1 text-[10px] px-2 py-1 border border-neutral-300 hover:border-black text-neutral-700 transition tracking-wider uppercase"
+            >
+              <Download className="w-3 h-3" />
+              EXPORT
+            </button>
+          )}
+
+          {onImportProfile && (
+            <>
+              <input
+                ref={fileInputRef}
+                type="file"
+                accept=".json,application/json"
+                className="hidden"
+                onChange={(e) => {
+                  const file = e.target.files?.[0];
+                  if (file) {
+                    onImportProfile(file);
+                    e.target.value = '';
+                  }
+                }}
+              />
+              <button
+                onClick={() => fileInputRef.current?.click()}
+                title="Import profile JSON"
+                className="inline-flex items-center gap-1 text-[10px] px-2 py-1 border border-neutral-300 hover:border-black text-neutral-700 transition tracking-wider uppercase"
+              >
+                <Upload className="w-3 h-3" />
+                IMPORT
+              </button>
+            </>
           )}
 
           <button

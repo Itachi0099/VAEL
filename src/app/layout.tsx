@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'VAEL — Personal Styling Artist',
+  title: 'VAEL — Personal Visual Styling System',
   description: 'Personal styling, explained. Tell VAEL who you are and where you\'re going.',
 };
 

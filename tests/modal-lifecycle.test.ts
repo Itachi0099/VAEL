@@ -22,6 +22,10 @@ describe('Part 4 — Modal Draft Lifecycle (Transactional Behavior)', () => {
     shoulderHipBalance: 'balanced',
     traditionConstraint: '',
     budgetTier: 'accessible',
+    skinDepth: 'unspecified',
+    dislikedColors: [],
+    dislikedFits: [],
+    dislikedCategories: [],
   };
 
   it('A. Edit -> Cancel -> Reopen shows original saved state (draft discarded)', () => {

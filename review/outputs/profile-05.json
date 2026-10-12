@@ -1,0 +1,696 @@
+{
+  "profileId": "usr_p05",
+  "title": "Profile 05: Modesty covered-both + hot + Wedding Guest (evening)",
+  "profile": {
+    "user": {
+      "id": "usr_p05",
+      "name": "Modest Evening Wedding",
+      "handle": "p05",
+      "createdAt": "2026-10-12T00:00:00.000Z",
+      "styleProfile": {
+        "id": "sty_usr_p05",
+        "userId": "usr_p05",
+        "dominantAestheticSlugs": [
+          "minimal"
+        ],
+        "styleVector": {
+          "formality": 3,
+          "structure": 3,
+          "volume": 3,
+          "colorIntensity": 1,
+          "contrast": 3,
+          "pattern": 1,
+          "texture": 2,
+          "ornamentation": 1,
+          "classicTrend": 3,
+          "utilityPolish": 3,
+          "genderCoding": "androgynous"
+        },
+        "preferences": {
+          "preferredStyleSlugs": [
+            "minimal"
+          ],
+          "dislikedStyleSlugs": [],
+          "preferredColors": [
+            "black",
+            "white",
+            "charcoal"
+          ],
+          "dislikedColors": [],
+          "preferredFits": [
+            "relaxed",
+            "regular"
+          ],
+          "dislikedFits": [],
+          "preferredSilhouettes": [],
+          "dislikedSilhouettes": [],
+          "fitProportions": {
+            "preferredFits": [
+              "relaxed",
+              "regular"
+            ],
+            "dislikedFits": [],
+            "topVolume": 3,
+            "bottomVolume": 3,
+            "preferredSilhouettes": [],
+            "dislikedSilhouettes": [],
+            "layeringPreference": "moderate",
+            "garmentLengthPreferences": {
+              "top": "regular",
+              "bottom": "regular"
+            }
+          },
+          "modestyLevel": "covered-both",
+          "userConfirmedUndertone": "neutral",
+          "genderCodingDirection": "androgynous",
+          "styleExpression": "androgynous",
+          "preferredFormalityRange": [
+            2,
+            4
+          ],
+          "maxMaintenanceTolerance": "moderate",
+          "accessoryAffinities": []
+        },
+        "feedbackProfile": {
+          "history": [],
+          "learnedStyleAffinities": {},
+          "learnedColorAffinities": {},
+          "learnedSilhouetteAffinities": {},
+          "learnedFitAffinities": {},
+          "repeatPassCount": {}
+        },
+        "evidenceSignals": {
+          "hairTexture": {
+            "value": "straight",
+            "authority": "USER_ENTERED",
+            "confidence": 1,
+            "source": "manual_input",
+            "updatedAt": "2026-10-12T00:00:00.000Z"
+          }
+        },
+        "updatedAt": "2026-10-12T00:00:00.000Z"
+      }
+    },
+    "evidenceHierarchy": {
+      "userConfirmedUndertone": "neutral",
+      "modestyLevel": "covered-both",
+      "styleExpression": "androgynous",
+      "evidenceSignals": {
+        "hairTexture": {
+          "value": "straight",
+          "authority": "USER_ENTERED",
+          "confidence": 1,
+          "source": "manual_input",
+          "updatedAt": "2026-10-12T00:00:00.000Z"
+        }
+      }
+    }
+  },
+  "context": {
+    "occasion": {
+      "id": "occ_wedding",
+      "slug": "wedding-guest",
+      "name": "Wedding Guest",
+      "category": "ceremony",
+      "defaultFormality": 4,
+      "allowableFormalityRange": [
+        3,
+        5
+      ],
+      "guidelines": [
+        "Honor ceremonial formality without overshadowing the hosts",
+        "Never wear all-white; choose rich navy, charcoal, or refined earthy linen suits",
+        "Pair with polished oxfords or dress loafers"
+      ],
+      "restrictedGarmentCategories": [
+        "casual-denim",
+        "sneakers",
+        "t-shirts",
+        "shorts",
+        "hoodies"
+      ],
+      "keyStyleAffinities": [
+        "formal",
+        "old-money",
+        "smart-casual"
+      ],
+      "subParameters": [
+        "day",
+        "evening"
+      ],
+      "timelessOrTrend": "TIMELESS",
+      "reviewDate": "2026-10-01",
+      "createdAt": "2026-10-01",
+      "updatedAt": "2026-10-01"
+    },
+    "targetFormality": 4,
+    "temperatureLevel": "hot",
+    "temperatureCelsius": 30,
+    "subParameter": "evening",
+    "isWeatherConfirmed": true
+  },
+  "result": {
+    "looksCount": 3,
+    "contextApplied": "Wedding Guest",
+    "vetoedCandidateCount": 12,
+    "evaluatedCandidateCount": 15,
+    "looks": [
+      {
+        "tier": "BEST_MATCH",
+        "tierRationale": "Optimal convergence of your 10D style vector, event formality, and physical proportions.",
+        "confidence": {
+          "state": "STRONG",
+          "explanation": "Supported by verified user formality, confirmed climate, explicit style vector, and grooming inputs.",
+          "toIncreaseConfidence": "Add specific footwear preferences to further personalize lower-leg grounding."
+        },
+        "overallHarmonyScore": 0.84,
+        "reasons": [
+          "Balanced regular configuration",
+          "Strong contrast between light and deep neutral values establishes crisp visual separation.",
+          "High breathability (washed pure linen) supports natural airflow in hot conditions."
+        ],
+        "cautions": [],
+        "outfit": {
+          "id": "outfit_cultural_traditional_01",
+          "title": "Heritage Raw Silk & Linen Ceremony Look",
+          "primaryStyleSlug": "formal",
+          "formality": 5,
+          "score": 0.84,
+          "items": [
+            {
+              "category": "top",
+              "subcategory": "tunic",
+              "name": "Mandarin Collar Linen Tunic (Kurta)",
+              "material": "washed pure linen",
+              "color": "ecru",
+              "fit": "relaxed",
+              "modestyRating": "high-coverage",
+              "genderCoding": "androgynous",
+              "layerPosition": 0
+            },
+            {
+              "category": "outerwear",
+              "subcategory": "jacket",
+              "name": "Bespoke Raw Silk Bandhgala / Sherwani Jacket",
+              "material": "handwoven Matka raw silk, full silk lining",
+              "color": "matte-black",
+              "fit": "tailored",
+              "modestyRating": "high-coverage",
+              "genderCoding": "unspecified",
+              "layerPosition": 1
+            },
+            {
+              "category": "bottom",
+              "subcategory": "trousers",
+              "name": "Handwoven Khadi Cotton Lounge Trousers",
+              "material": "100% handloom khadi cotton",
+              "color": "pure-white",
+              "fit": "relaxed",
+              "modestyRating": "high-coverage",
+              "genderCoding": "androgynous",
+              "layerPosition": 0
+            },
+            {
+              "category": "footwear",
+              "subcategory": "loafers",
+              "name": "Cordovan Penny Loafers",
+              "material": "Horween shell cordovan",
+              "color": "deep-burgundy",
+              "fit": "regular",
+              "modestyRating": "standard",
+              "genderCoding": "unspecified",
+              "layerPosition": 0
+            }
+          ],
+          "factors": [
+            {
+              "category": "style_affinity",
+              "weight": 3.5,
+              "score": 0.71,
+              "reason": "Coordinate affinity (71%) with your 10D style vector."
+            },
+            {
+              "category": "silhouette_balance",
+              "weight": 3,
+              "score": 0.93,
+              "reason": "Balanced regular configuration"
+            },
+            {
+              "category": "color_harmony",
+              "weight": 3,
+              "score": 0.94,
+              "reason": "Color story: strong-contrast"
+            },
+            {
+              "category": "occasion_fit",
+              "weight": 2.5,
+              "score": 0.75,
+              "reason": "Formality fit for Wedding Guest (Level 5)"
+            },
+            {
+              "category": "weather_fit",
+              "weight": 2,
+              "score": 0.94,
+              "reason": "Ambient temperature and breathability calibration"
+            },
+            {
+              "category": "expression_affinity",
+              "weight": 1,
+              "score": 0.8,
+              "reason": "Soft expression alignment with androgynous presentation preference."
+            }
+          ],
+          "traceableReasons": [
+            {
+              "reasonId": "rea_outfit_cultural_traditional_01_0_1791829636670",
+              "text": "Balanced regular configuration",
+              "signalIds": [
+                "user.styleProfile.preferences.preferredStyleSlugs",
+                "context.occasion"
+              ],
+              "knowledgeEntryIds": [
+                "gar_kurta_tunic_ecru",
+                "gar_sherwani_jacket_bespoke",
+                "gar_khadi_cotton_pajama_pants",
+                "gar_penny_loafer_burgundy"
+              ],
+              "factor": "general",
+              "authority": "USER_ENTERED",
+              "isAssumed": false
+            },
+            {
+              "reasonId": "rea_outfit_cultural_traditional_01_1_1791829636670",
+              "text": "Strong contrast between light and deep neutral values establishes crisp visual separation.",
+              "signalIds": [
+                "user.styleProfile.preferences.preferredStyleSlugs",
+                "context.occasion"
+              ],
+              "knowledgeEntryIds": [
+                "gar_kurta_tunic_ecru",
+                "gar_sherwani_jacket_bespoke",
+                "gar_khadi_cotton_pajama_pants",
+                "gar_penny_loafer_burgundy"
+              ],
+              "factor": "general",
+              "authority": "USER_ENTERED",
+              "isAssumed": false
+            },
+            {
+              "reasonId": "rea_outfit_cultural_traditional_01_2_1791829636670",
+              "text": "High breathability (washed pure linen) supports natural airflow in hot conditions.",
+              "signalIds": [
+                "context.temperatureLevel",
+                "context.condition",
+                "context.weather"
+              ],
+              "knowledgeEntryIds": [
+                "gar_kurta_tunic_ecru",
+                "gar_sherwani_jacket_bespoke",
+                "gar_khadi_cotton_pajama_pants",
+                "gar_penny_loafer_burgundy"
+              ],
+              "factor": "weather_fit",
+              "authority": "USER_ENTERED",
+              "isAssumed": false
+            }
+          ],
+          "stylingAdvice": [
+            "Aligns with your preferred fit geometry."
+          ]
+        },
+        "hairStyle": {
+          "name": "Textured French Crop",
+          "slug": "textured-crop",
+          "score": 0.84,
+          "reasons": [
+            "Fits within your preferred moderate maintenance threshold.",
+            "Appropriate formality for Wedding Guest.",
+            "Directly aligns with your preferred minimal aesthetic"
+          ]
+        },
+        "groomingStyle": {
+          "name": "Designer Stubble (3-Day Shadow)",
+          "slug": "designer-stubble",
+          "score": 0.84,
+          "reasons": [
+            "Conforms with your moderate grooming maintenance routine.",
+            "Appropriate grooming polish for Wedding Guest.",
+            "Directly aligns with your preferred minimal aesthetic"
+          ]
+        }
+      },
+      {
+        "tier": "SAFE",
+        "tierRationale": "High familiarity and effortless ease. Relies on proven proportions and classic foundational tones.",
+        "confidence": {
+          "state": "STRONG",
+          "explanation": "Supported by verified user formality, confirmed climate, explicit style vector, and grooming inputs.",
+          "toIncreaseConfidence": "Add specific footwear preferences to further personalize lower-leg grounding."
+        },
+        "overallHarmonyScore": 0.84,
+        "reasons": [
+          "Unified crisp a line pleated waist column",
+          "Strong contrast between light and deep neutral values establishes crisp visual separation.",
+          "High breathability (100% high-density cotton poplin) supports natural airflow in hot conditions."
+        ],
+        "cautions": [],
+        "outfit": {
+          "id": "outfit_poplin_shirt_dress_01",
+          "title": "Architectural Poplin & Glove Leather Cadence",
+          "primaryStyleSlug": "smart-casual",
+          "formality": 3,
+          "score": 0.84,
+          "items": [
+            {
+              "category": "one-piece",
+              "subcategory": "dress",
+              "name": "Architectural Poplin Midi Shirt Dress",
+              "material": "100% high-density cotton poplin",
+              "color": "crisp-white",
+              "fit": "relaxed",
+              "modestyRating": "covered-arms",
+              "genderCoding": "feminine",
+              "layerPosition": 0
+            },
+            {
+              "category": "footwear",
+              "subcategory": "ballet-flat",
+              "name": "Unstructured Butter Calfskin Ballet Flats",
+              "material": "glove-tanned calfskin, leather sole",
+              "color": "black",
+              "fit": "regular",
+              "modestyRating": "standard",
+              "genderCoding": "feminine",
+              "layerPosition": 0
+            },
+            {
+              "category": "accessory",
+              "subcategory": "belt",
+              "name": "25mm Fine Calfskin Belt with Chiseled Brass Buckle",
+              "material": "French box calf with solid brushed brass hardware",
+              "color": "black-gold",
+              "fit": "regular",
+              "modestyRating": "standard",
+              "genderCoding": "androgynous",
+              "layerPosition": 0
+            },
+            {
+              "category": "accessory",
+              "subcategory": "sunglasses",
+              "name": "Beveled Cat-Eye Bio-Acetate Sunglasses",
+              "material": "Mazzucchelli 8mm bio-acetate, Carl Zeiss polarized lenses",
+              "color": "black",
+              "fit": "regular",
+              "modestyRating": "standard",
+              "genderCoding": "feminine",
+              "layerPosition": 0
+            }
+          ],
+          "factors": [
+            {
+              "category": "style_affinity",
+              "weight": 3.5,
+              "score": 0.76,
+              "reason": "Coordinate affinity (76%) with your 10D style vector."
+            },
+            {
+              "category": "silhouette_balance",
+              "weight": 3,
+              "score": 0.92,
+              "reason": "Unified crisp a line pleated waist column"
+            },
+            {
+              "category": "color_harmony",
+              "weight": 3,
+              "score": 0.94,
+              "reason": "Color story: strong-contrast"
+            },
+            {
+              "category": "occasion_fit",
+              "weight": 2.5,
+              "score": 0.75,
+              "reason": "Formality fit for Wedding Guest (Level 3)"
+            },
+            {
+              "category": "weather_fit",
+              "weight": 2,
+              "score": 0.94,
+              "reason": "Ambient temperature and breathability calibration"
+            },
+            {
+              "category": "expression_affinity",
+              "weight": 1,
+              "score": 0.575,
+              "reason": "Soft expression alignment with androgynous presentation preference."
+            }
+          ],
+          "traceableReasons": [
+            {
+              "reasonId": "rea_outfit_poplin_shirt_dress_01_0_1791829636670",
+              "text": "Unified crisp a line pleated waist column",
+              "signalIds": [
+                "user.styleProfile.preferences.preferredStyleSlugs",
+                "context.occasion"
+              ],
+              "knowledgeEntryIds": [
+                "gar_shirt_dress_cotton_poplin",
+                "gar_ballet_flat_leather_black",
+                "gar_fine_leather_belt_gold_buckle",
+                "gar_acetate_cat_eye_sunglasses_black"
+              ],
+              "factor": "general",
+              "authority": "USER_ENTERED",
+              "isAssumed": false
+            },
+            {
+              "reasonId": "rea_outfit_poplin_shirt_dress_01_1_1791829636670",
+              "text": "Strong contrast between light and deep neutral values establishes crisp visual separation.",
+              "signalIds": [
+                "user.styleProfile.preferences.preferredStyleSlugs",
+                "context.occasion"
+              ],
+              "knowledgeEntryIds": [
+                "gar_shirt_dress_cotton_poplin",
+                "gar_ballet_flat_leather_black",
+                "gar_fine_leather_belt_gold_buckle",
+                "gar_acetate_cat_eye_sunglasses_black"
+              ],
+              "factor": "general",
+              "authority": "USER_ENTERED",
+              "isAssumed": false
+            },
+            {
+              "reasonId": "rea_outfit_poplin_shirt_dress_01_2_1791829636670",
+              "text": "High breathability (100% high-density cotton poplin) supports natural airflow in hot conditions.",
+              "signalIds": [
+                "context.temperatureLevel",
+                "context.condition",
+                "context.weather"
+              ],
+              "knowledgeEntryIds": [
+                "gar_shirt_dress_cotton_poplin",
+                "gar_ballet_flat_leather_black",
+                "gar_fine_leather_belt_gold_buckle",
+                "gar_acetate_cat_eye_sunglasses_black"
+              ],
+              "factor": "weather_fit",
+              "authority": "USER_ENTERED",
+              "isAssumed": false
+            }
+          ],
+          "stylingAdvice": []
+        },
+        "hairStyle": {
+          "name": "Textured French Crop",
+          "slug": "textured-crop",
+          "score": 0.84,
+          "reasons": [
+            "Fits within your preferred moderate maintenance threshold.",
+            "Appropriate formality for Wedding Guest.",
+            "Directly aligns with your preferred minimal aesthetic"
+          ]
+        },
+        "groomingStyle": {
+          "name": "Designer Stubble (3-Day Shadow)",
+          "slug": "designer-stubble",
+          "score": 0.84,
+          "reasons": [
+            "Conforms with your moderate grooming maintenance routine.",
+            "Appropriate grooming polish for Wedding Guest.",
+            "Directly aligns with your preferred minimal aesthetic"
+          ]
+        }
+      },
+      {
+        "tier": "STRETCH",
+        "tierRationale": "Curated directional exploration. Pushes volume and textural depth while strictly respecting dress codes.",
+        "confidence": {
+          "state": "STRONG",
+          "explanation": "Supported by verified user formality, confirmed climate, explicit style vector, and grooming inputs.",
+          "toIncreaseConfidence": "Add specific footwear preferences to further personalize lower-leg grounding."
+        },
+        "overallHarmonyScore": 0.83,
+        "reasons": [
+          "Harmonious classic proportion with uniform clean linear cadence",
+          "Tonal neutral palette ensures high versatility and effortless visual cohesion.",
+          "High breathability (silk-cotton blend knit) supports natural airflow in hot conditions."
+        ],
+        "cautions": [],
+        "outfit": {
+          "id": "outfit_smart_casual_01",
+          "title": "Textured Knit & Tailored Line",
+          "primaryStyleSlug": "smart-casual",
+          "formality": 3,
+          "score": 0.83,
+          "items": [
+            {
+              "category": "top",
+              "subcategory": "polo",
+              "name": "Textured Open-Collar Knit Polo",
+              "material": "silk-cotton blend knit",
+              "color": "olive",
+              "fit": "regular",
+              "modestyRating": "standard",
+              "genderCoding": "androgynous",
+              "layerPosition": 0
+            },
+            {
+              "category": "bottom",
+              "subcategory": "trousers",
+              "name": "Flat-Front Tailored Wool Slacks",
+              "material": "100% Super 120s wool",
+              "color": "charcoal",
+              "fit": "tailored",
+              "modestyRating": "high-coverage",
+              "genderCoding": "unspecified",
+              "layerPosition": 0
+            },
+            {
+              "category": "footwear",
+              "subcategory": "loafers",
+              "name": "Cordovan Penny Loafers",
+              "material": "Horween shell cordovan",
+              "color": "deep-burgundy",
+              "fit": "regular",
+              "modestyRating": "standard",
+              "genderCoding": "unspecified",
+              "layerPosition": 0
+            }
+          ],
+          "factors": [
+            {
+              "category": "style_affinity",
+              "weight": 3.5,
+              "score": 0.76,
+              "reason": "Coordinate affinity (76%) with your 10D style vector."
+            },
+            {
+              "category": "silhouette_balance",
+              "weight": 3,
+              "score": 0.9,
+              "reason": "Harmonious classic proportion with uniform clean linear cadence"
+            },
+            {
+              "category": "color_harmony",
+              "weight": 3,
+              "score": 0.92,
+              "reason": "Color story: tonal-neutral"
+            },
+            {
+              "category": "occasion_fit",
+              "weight": 2.5,
+              "score": 0.75,
+              "reason": "Formality fit for Wedding Guest (Level 3)"
+            },
+            {
+              "category": "weather_fit",
+              "weight": 2,
+              "score": 0.81,
+              "reason": "Ambient temperature and breathability calibration"
+            },
+            {
+              "category": "expression_affinity",
+              "weight": 1,
+              "score": 0.8,
+              "reason": "Soft expression alignment with androgynous presentation preference."
+            }
+          ],
+          "traceableReasons": [
+            {
+              "reasonId": "rea_outfit_smart_casual_01_0_1791829636670",
+              "text": "Harmonious classic proportion with uniform clean linear cadence",
+              "signalIds": [
+                "user.styleProfile.preferences.preferredStyleSlugs",
+                "context.occasion"
+              ],
+              "knowledgeEntryIds": [
+                "gar_knit_polo_olive",
+                "gar_tailored_slacks_charcoal",
+                "gar_penny_loafer_burgundy"
+              ],
+              "factor": "general",
+              "authority": "USER_ENTERED",
+              "isAssumed": false
+            },
+            {
+              "reasonId": "rea_outfit_smart_casual_01_1_1791829636670",
+              "text": "Tonal neutral palette ensures high versatility and effortless visual cohesion.",
+              "signalIds": [
+                "user.styleProfile.preferences.preferredStyleSlugs",
+                "context.occasion"
+              ],
+              "knowledgeEntryIds": [
+                "gar_knit_polo_olive",
+                "gar_tailored_slacks_charcoal",
+                "gar_penny_loafer_burgundy"
+              ],
+              "factor": "general",
+              "authority": "USER_ENTERED",
+              "isAssumed": false
+            },
+            {
+              "reasonId": "rea_outfit_smart_casual_01_2_1791829636670",
+              "text": "High breathability (silk-cotton blend knit) supports natural airflow in hot conditions.",
+              "signalIds": [
+                "context.temperatureLevel",
+                "context.condition",
+                "context.weather"
+              ],
+              "knowledgeEntryIds": [
+                "gar_knit_polo_olive",
+                "gar_tailored_slacks_charcoal",
+                "gar_penny_loafer_burgundy"
+              ],
+              "factor": "weather_fit",
+              "authority": "USER_ENTERED",
+              "isAssumed": false
+            }
+          ],
+          "stylingAdvice": [
+            "Elevate with subtle texture contrast between top and lower fabrication."
+          ]
+        },
+        "hairStyle": {
+          "name": "Textured French Crop",
+          "slug": "textured-crop",
+          "score": 0.84,
+          "reasons": [
+            "Fits within your preferred moderate maintenance threshold.",
+            "Appropriate formality for Wedding Guest.",
+            "Directly aligns with your preferred minimal aesthetic"
+          ]
+        },
+        "groomingStyle": {
+          "name": "Designer Stubble (3-Day Shadow)",
+          "slug": "designer-stubble",
+          "score": 0.84,
+          "reasons": [
+            "Conforms with your moderate grooming maintenance routine.",
+            "Appropriate grooming polish for Wedding Guest.",
+            "Directly aligns with your preferred minimal aesthetic"
+          ]
+        }
+      }
+    ]
+  }
+}

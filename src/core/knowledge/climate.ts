@@ -66,6 +66,19 @@ export class ClimateFabricRules {
         };
       }
 
+      // Heavy or full lining check in hot weather
+      const isHeavilyLined = garment.lining === 'fully-lined' || garment.lining === 'shearling-lined';
+      if (isHeavilyLined && garment.category !== 'footwear') {
+        return {
+          score: 0.1,
+          isPermissible: false,
+          vetoReason: `Vetoed for extreme heat: ${garment.name} (${garment.lining}) causes thermal trap in ambient heat.`,
+          comfortNotes: [],
+          cautions: [`Heavy lining traps heat in high temperatures.`],
+          climateUncertainty: !isConfirmed,
+        };
+      }
+
       if (garment.breathability === 'high') {
         const isTropicalWool = garment.material.toLowerCase().includes('tropical') && garment.material.toLowerCase().includes('wool');
         if (isTropicalWool) {
@@ -98,6 +111,11 @@ export class ClimateFabricRules {
           cautions: [`Insufficient thermal barrier against cold.`],
           climateUncertainty: !isConfirmed,
         };
+      }
+
+      // Reward insulation in cold weather
+      if (garment.insulation === 'heavy' || garment.insulation === 'moderate') {
+        comfortNotes.push(`Thermal insulation (${garment.insulation}) maintains core warmth in cold conditions.`);
       }
 
       if (garment.fabricWeight === 'heavyweight' || garment.breathability === 'low') {

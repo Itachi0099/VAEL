@@ -1,0 +1,695 @@
+{
+  "profileId": "usr_p12",
+  "title": "Profile 12: Avoid Minimal, minimal-leaning occasion",
+  "profile": {
+    "user": {
+      "id": "usr_p12",
+      "name": "Avoid Minimal User",
+      "handle": "p12",
+      "createdAt": "2026-10-12T00:00:00.000Z",
+      "styleProfile": {
+        "id": "sty_usr_p12",
+        "userId": "usr_p12",
+        "dominantAestheticSlugs": [
+          "minimal"
+        ],
+        "styleVector": {
+          "formality": 3,
+          "structure": 3,
+          "volume": 3,
+          "colorIntensity": 1,
+          "contrast": 3,
+          "pattern": 1,
+          "texture": 2,
+          "ornamentation": 1,
+          "classicTrend": 3,
+          "utilityPolish": 3,
+          "genderCoding": "androgynous"
+        },
+        "preferences": {
+          "preferredStyleSlugs": [
+            "smart-casual",
+            "vintage"
+          ],
+          "dislikedStyleSlugs": [
+            "minimal"
+          ],
+          "preferredColors": [
+            "black",
+            "white",
+            "charcoal"
+          ],
+          "dislikedColors": [],
+          "preferredFits": [
+            "relaxed",
+            "regular"
+          ],
+          "dislikedFits": [],
+          "preferredSilhouettes": [],
+          "dislikedSilhouettes": [],
+          "fitProportions": {
+            "preferredFits": [
+              "relaxed",
+              "regular"
+            ],
+            "dislikedFits": [],
+            "topVolume": 3,
+            "bottomVolume": 3,
+            "preferredSilhouettes": [],
+            "dislikedSilhouettes": [],
+            "layeringPreference": "moderate",
+            "garmentLengthPreferences": {
+              "top": "regular",
+              "bottom": "regular"
+            }
+          },
+          "modestyLevel": "unrestricted",
+          "userConfirmedUndertone": "neutral",
+          "genderCodingDirection": "androgynous",
+          "styleExpression": "androgynous",
+          "preferredFormalityRange": [
+            2,
+            4
+          ],
+          "maxMaintenanceTolerance": "moderate",
+          "accessoryAffinities": []
+        },
+        "feedbackProfile": {
+          "history": [],
+          "learnedStyleAffinities": {},
+          "learnedColorAffinities": {},
+          "learnedSilhouetteAffinities": {},
+          "learnedFitAffinities": {},
+          "repeatPassCount": {}
+        },
+        "evidenceSignals": {
+          "hairTexture": {
+            "value": "straight",
+            "authority": "USER_ENTERED",
+            "confidence": 1,
+            "source": "manual_input",
+            "updatedAt": "2026-10-12T00:00:00.000Z"
+          }
+        },
+        "updatedAt": "2026-10-12T00:00:00.000Z"
+      }
+    },
+    "evidenceHierarchy": {
+      "userConfirmedUndertone": "neutral",
+      "modestyLevel": "unrestricted",
+      "styleExpression": "androgynous",
+      "evidenceSignals": {
+        "hairTexture": {
+          "value": "straight",
+          "authority": "USER_ENTERED",
+          "confidence": 1,
+          "source": "manual_input",
+          "updatedAt": "2026-10-12T00:00:00.000Z"
+        }
+      }
+    }
+  },
+  "context": {
+    "occasion": {
+      "id": "occ_dinner",
+      "slug": "dinner",
+      "name": "Fine Dining / Dinner Party",
+      "category": "evening",
+      "defaultFormality": 4,
+      "allowableFormalityRange": [
+        3,
+        5
+      ],
+      "guidelines": [
+        "Sophisticated layering, structured outerwear, and immaculate footwear",
+        "Drape and fabric texture are paramount under warm ambient restaurant lighting"
+      ],
+      "restrictedGarmentCategories": [
+        "sweatpants",
+        "running-shoes",
+        "distressed-shorts",
+        "gym-wear"
+      ],
+      "keyStyleAffinities": [
+        "minimal",
+        "smart-casual",
+        "old-money",
+        "formal"
+      ],
+      "timelessOrTrend": "TIMELESS",
+      "reviewDate": "2026-10-01",
+      "createdAt": "2026-10-01",
+      "updatedAt": "2026-10-01"
+    },
+    "targetFormality": 3,
+    "temperatureLevel": "mild",
+    "isWeatherConfirmed": true
+  },
+  "result": {
+    "looksCount": 3,
+    "contextApplied": "Fine Dining / Dinner Party",
+    "vetoedCandidateCount": 8,
+    "evaluatedCandidateCount": 15,
+    "looks": [
+      {
+        "tier": "BEST_MATCH",
+        "tierRationale": "Optimal convergence of your 10D style vector, event formality, and physical proportions.",
+        "confidence": {
+          "state": "STRONG",
+          "explanation": "Supported by verified user formality, confirmed climate, explicit style vector, and grooming inputs.",
+          "toIncreaseConfidence": "Add specific footwear preferences to further personalize lower-leg grounding."
+        },
+        "overallHarmonyScore": 0.88,
+        "reasons": [
+          "Cropped upper proportion offset by expansive lower volume",
+          "Strong contrast between light and deep neutral values establishes crisp visual separation.",
+          "Aligned to Fine Dining / Dinner Party formality."
+        ],
+        "cautions": [],
+        "outfit": {
+          "id": "outfit_korean_minimal_01",
+          "title": "Monochrome Fluid Tailoring",
+          "primaryStyleSlug": "korean-minimal",
+          "formality": 3,
+          "score": 0.88,
+          "items": [
+            {
+              "category": "top",
+              "subcategory": "t-shirt",
+              "name": "Heavyweight Boxy Tee (Off-White)",
+              "material": "300gsm combed organic cotton",
+              "color": "off-white",
+              "fit": "boxy",
+              "modestyRating": "standard",
+              "genderCoding": "androgynous",
+              "layerPosition": 0
+            },
+            {
+              "category": "outerwear",
+              "subcategory": "blazer",
+              "name": "Deconstructed Wool Blazer",
+              "material": "tropical virgin wool",
+              "color": "charcoal",
+              "fit": "relaxed",
+              "modestyRating": "high-coverage",
+              "genderCoding": "androgynous",
+              "layerPosition": 1
+            },
+            {
+              "category": "bottom",
+              "subcategory": "trousers",
+              "name": "Double-Pleated Wide-Leg Trousers",
+              "material": "wool gabardine blend",
+              "color": "pitch-black",
+              "fit": "relaxed",
+              "modestyRating": "high-coverage",
+              "genderCoding": "androgynous",
+              "layerPosition": 0
+            },
+            {
+              "category": "footwear",
+              "subcategory": "derbies",
+              "name": "Commando-Sole Leather Derbies",
+              "material": "polished binder calf leather, Vibram lug sole",
+              "color": "polished-black",
+              "fit": "regular",
+              "modestyRating": "standard",
+              "genderCoding": "androgynous",
+              "layerPosition": 0
+            }
+          ],
+          "factors": [
+            {
+              "category": "style_affinity",
+              "weight": 3.5,
+              "score": 0.79,
+              "reason": "Coordinate affinity (79%) with your 10D style vector."
+            },
+            {
+              "category": "silhouette_balance",
+              "weight": 3,
+              "score": 0.96,
+              "reason": "Cropped upper proportion offset by expansive lower volume"
+            },
+            {
+              "category": "color_harmony",
+              "weight": 3,
+              "score": 0.94,
+              "reason": "Color story: strong-contrast"
+            },
+            {
+              "category": "occasion_fit",
+              "weight": 2.5,
+              "score": 1,
+              "reason": "Formality fit for Fine Dining / Dinner Party (Level 3)"
+            },
+            {
+              "category": "weather_fit",
+              "weight": 2,
+              "score": 0.75,
+              "reason": "Ambient temperature and breathability calibration"
+            },
+            {
+              "category": "expression_affinity",
+              "weight": 1,
+              "score": 0.8,
+              "reason": "Soft expression alignment with androgynous presentation preference."
+            }
+          ],
+          "traceableReasons": [
+            {
+              "reasonId": "rea_outfit_korean_minimal_01_0_1791829636673",
+              "text": "Cropped upper proportion offset by expansive lower volume",
+              "signalIds": [
+                "user.styleProfile.preferences.preferredStyleSlugs",
+                "context.occasion"
+              ],
+              "knowledgeEntryIds": [
+                "gar_box_tee_white",
+                "gar_deconstructed_blazer_charcoal",
+                "gar_wide_trousers_black",
+                "gar_chunky_derbies_black"
+              ],
+              "factor": "general",
+              "authority": "USER_ENTERED",
+              "isAssumed": false
+            },
+            {
+              "reasonId": "rea_outfit_korean_minimal_01_1_1791829636673",
+              "text": "Strong contrast between light and deep neutral values establishes crisp visual separation.",
+              "signalIds": [
+                "user.styleProfile.preferences.preferredStyleSlugs",
+                "context.occasion"
+              ],
+              "knowledgeEntryIds": [
+                "gar_box_tee_white",
+                "gar_deconstructed_blazer_charcoal",
+                "gar_wide_trousers_black",
+                "gar_chunky_derbies_black"
+              ],
+              "factor": "general",
+              "authority": "USER_ENTERED",
+              "isAssumed": false
+            },
+            {
+              "reasonId": "rea_outfit_korean_minimal_01_2_1791829636673",
+              "text": "Aligned to Fine Dining / Dinner Party formality.",
+              "signalIds": [
+                "context.occasion",
+                "context.targetFormality"
+              ],
+              "knowledgeEntryIds": [
+                "gar_box_tee_white",
+                "gar_deconstructed_blazer_charcoal",
+                "gar_wide_trousers_black",
+                "gar_chunky_derbies_black",
+                "occ_dinner"
+              ],
+              "factor": "occasion_fit",
+              "authority": "USER_ENTERED",
+              "isAssumed": false
+            }
+          ],
+          "stylingAdvice": [
+            "Accentuates waistline geometry and creates an elongated vertical lower line."
+          ]
+        },
+        "hairStyle": {
+          "name": "Classic Tapered Side Part",
+          "slug": "classic-side-part",
+          "score": 0.84,
+          "reasons": [
+            "Fits within your preferred moderate maintenance threshold.",
+            "Appropriate formality for Fine Dining / Dinner Party.",
+            "Directly aligns with your preferred smart-casual aesthetic"
+          ]
+        },
+        "groomingStyle": {
+          "name": "Heavy Stubble (5-Day Shadow)",
+          "slug": "heavy-stubble",
+          "score": 0.89,
+          "reasons": [
+            "Conforms with your moderate grooming maintenance routine.",
+            "Appropriate grooming polish for Fine Dining / Dinner Party.",
+            "Directly aligns with your preferred smart-casual aesthetic",
+            "Directly aligns with your preferred vintage aesthetic"
+          ]
+        }
+      },
+      {
+        "tier": "SAFE",
+        "tierRationale": "High familiarity and effortless ease. Relies on proven proportions and classic foundational tones.",
+        "confidence": {
+          "state": "STRONG",
+          "explanation": "Supported by verified user formality, confirmed climate, explicit style vector, and grooming inputs.",
+          "toIncreaseConfidence": "Add specific footwear preferences to further personalize lower-leg grounding."
+        },
+        "overallHarmonyScore": 0.86,
+        "reasons": [
+          "Harmonious classic proportion with uniform clean linear cadence",
+          "Tonal neutral palette ensures high versatility and effortless visual cohesion.",
+          "Aligned to Fine Dining / Dinner Party formality."
+        ],
+        "cautions": [],
+        "outfit": {
+          "id": "outfit_smart_casual_01",
+          "title": "Textured Knit & Tailored Line",
+          "primaryStyleSlug": "smart-casual",
+          "formality": 3,
+          "score": 0.86,
+          "items": [
+            {
+              "category": "top",
+              "subcategory": "polo",
+              "name": "Textured Open-Collar Knit Polo",
+              "material": "silk-cotton blend knit",
+              "color": "olive",
+              "fit": "regular",
+              "modestyRating": "standard",
+              "genderCoding": "androgynous",
+              "layerPosition": 0
+            },
+            {
+              "category": "bottom",
+              "subcategory": "trousers",
+              "name": "Flat-Front Tailored Wool Slacks",
+              "material": "100% Super 120s wool",
+              "color": "charcoal",
+              "fit": "tailored",
+              "modestyRating": "high-coverage",
+              "genderCoding": "unspecified",
+              "layerPosition": 0
+            },
+            {
+              "category": "footwear",
+              "subcategory": "loafers",
+              "name": "Cordovan Penny Loafers",
+              "material": "Horween shell cordovan",
+              "color": "deep-burgundy",
+              "fit": "regular",
+              "modestyRating": "standard",
+              "genderCoding": "unspecified",
+              "layerPosition": 0
+            }
+          ],
+          "factors": [
+            {
+              "category": "style_affinity",
+              "weight": 3.5,
+              "score": 0.76,
+              "reason": "Coordinate affinity (76%) with your 10D style vector."
+            },
+            {
+              "category": "silhouette_balance",
+              "weight": 3,
+              "score": 0.9,
+              "reason": "Harmonious classic proportion with uniform clean linear cadence"
+            },
+            {
+              "category": "color_harmony",
+              "weight": 3,
+              "score": 0.92,
+              "reason": "Color story: tonal-neutral"
+            },
+            {
+              "category": "occasion_fit",
+              "weight": 2.5,
+              "score": 1,
+              "reason": "Formality fit for Fine Dining / Dinner Party (Level 3)"
+            },
+            {
+              "category": "weather_fit",
+              "weight": 2,
+              "score": 0.75,
+              "reason": "Ambient temperature and breathability calibration"
+            },
+            {
+              "category": "expression_affinity",
+              "weight": 1,
+              "score": 0.8,
+              "reason": "Soft expression alignment with androgynous presentation preference."
+            }
+          ],
+          "traceableReasons": [
+            {
+              "reasonId": "rea_outfit_smart_casual_01_0_1791829636673",
+              "text": "Harmonious classic proportion with uniform clean linear cadence",
+              "signalIds": [
+                "user.styleProfile.preferences.preferredStyleSlugs",
+                "context.occasion"
+              ],
+              "knowledgeEntryIds": [
+                "gar_knit_polo_olive",
+                "gar_tailored_slacks_charcoal",
+                "gar_penny_loafer_burgundy"
+              ],
+              "factor": "general",
+              "authority": "USER_ENTERED",
+              "isAssumed": false
+            },
+            {
+              "reasonId": "rea_outfit_smart_casual_01_1_1791829636673",
+              "text": "Tonal neutral palette ensures high versatility and effortless visual cohesion.",
+              "signalIds": [
+                "user.styleProfile.preferences.preferredStyleSlugs",
+                "context.occasion"
+              ],
+              "knowledgeEntryIds": [
+                "gar_knit_polo_olive",
+                "gar_tailored_slacks_charcoal",
+                "gar_penny_loafer_burgundy"
+              ],
+              "factor": "general",
+              "authority": "USER_ENTERED",
+              "isAssumed": false
+            },
+            {
+              "reasonId": "rea_outfit_smart_casual_01_2_1791829636673",
+              "text": "Aligned to Fine Dining / Dinner Party formality.",
+              "signalIds": [
+                "context.occasion",
+                "context.targetFormality"
+              ],
+              "knowledgeEntryIds": [
+                "gar_knit_polo_olive",
+                "gar_tailored_slacks_charcoal",
+                "gar_penny_loafer_burgundy",
+                "occ_dinner"
+              ],
+              "factor": "occasion_fit",
+              "authority": "USER_ENTERED",
+              "isAssumed": false
+            }
+          ],
+          "stylingAdvice": [
+            "Elevate with subtle texture contrast between top and lower fabrication."
+          ]
+        },
+        "hairStyle": {
+          "name": "Classic Tapered Side Part",
+          "slug": "classic-side-part",
+          "score": 0.84,
+          "reasons": [
+            "Fits within your preferred moderate maintenance threshold.",
+            "Appropriate formality for Fine Dining / Dinner Party.",
+            "Directly aligns with your preferred smart-casual aesthetic"
+          ]
+        },
+        "groomingStyle": {
+          "name": "Heavy Stubble (5-Day Shadow)",
+          "slug": "heavy-stubble",
+          "score": 0.89,
+          "reasons": [
+            "Conforms with your moderate grooming maintenance routine.",
+            "Appropriate grooming polish for Fine Dining / Dinner Party.",
+            "Directly aligns with your preferred smart-casual aesthetic",
+            "Directly aligns with your preferred vintage aesthetic"
+          ]
+        }
+      },
+      {
+        "tier": "STRETCH",
+        "tierRationale": "Curated directional exploration. Pushes volume and textural depth while strictly respecting dress codes.",
+        "confidence": {
+          "state": "STRONG",
+          "explanation": "Supported by verified user formality, confirmed climate, explicit style vector, and grooming inputs.",
+          "toIncreaseConfidence": "Add specific footwear preferences to further personalize lower-leg grounding."
+        },
+        "overallHarmonyScore": 0.85,
+        "reasons": [
+          "Unified crisp a line pleated waist column",
+          "Strong contrast between light and deep neutral values establishes crisp visual separation.",
+          "Aligned to Fine Dining / Dinner Party formality."
+        ],
+        "cautions": [],
+        "outfit": {
+          "id": "outfit_poplin_shirt_dress_01",
+          "title": "Architectural Poplin & Glove Leather Cadence",
+          "primaryStyleSlug": "smart-casual",
+          "formality": 3,
+          "score": 0.85,
+          "items": [
+            {
+              "category": "one-piece",
+              "subcategory": "dress",
+              "name": "Architectural Poplin Midi Shirt Dress",
+              "material": "100% high-density cotton poplin",
+              "color": "crisp-white",
+              "fit": "relaxed",
+              "modestyRating": "covered-arms",
+              "genderCoding": "feminine",
+              "layerPosition": 0
+            },
+            {
+              "category": "footwear",
+              "subcategory": "ballet-flat",
+              "name": "Unstructured Butter Calfskin Ballet Flats",
+              "material": "glove-tanned calfskin, leather sole",
+              "color": "black",
+              "fit": "regular",
+              "modestyRating": "standard",
+              "genderCoding": "feminine",
+              "layerPosition": 0
+            },
+            {
+              "category": "accessory",
+              "subcategory": "belt",
+              "name": "25mm Fine Calfskin Belt with Chiseled Brass Buckle",
+              "material": "French box calf with solid brushed brass hardware",
+              "color": "black-gold",
+              "fit": "regular",
+              "modestyRating": "standard",
+              "genderCoding": "androgynous",
+              "layerPosition": 0
+            },
+            {
+              "category": "accessory",
+              "subcategory": "sunglasses",
+              "name": "Beveled Cat-Eye Bio-Acetate Sunglasses",
+              "material": "Mazzucchelli 8mm bio-acetate, Carl Zeiss polarized lenses",
+              "color": "black",
+              "fit": "regular",
+              "modestyRating": "standard",
+              "genderCoding": "feminine",
+              "layerPosition": 0
+            }
+          ],
+          "factors": [
+            {
+              "category": "style_affinity",
+              "weight": 3.5,
+              "score": 0.76,
+              "reason": "Coordinate affinity (76%) with your 10D style vector."
+            },
+            {
+              "category": "silhouette_balance",
+              "weight": 3,
+              "score": 0.92,
+              "reason": "Unified crisp a line pleated waist column"
+            },
+            {
+              "category": "color_harmony",
+              "weight": 3,
+              "score": 0.94,
+              "reason": "Color story: strong-contrast"
+            },
+            {
+              "category": "occasion_fit",
+              "weight": 2.5,
+              "score": 1,
+              "reason": "Formality fit for Fine Dining / Dinner Party (Level 3)"
+            },
+            {
+              "category": "weather_fit",
+              "weight": 2,
+              "score": 0.75,
+              "reason": "Ambient temperature and breathability calibration"
+            },
+            {
+              "category": "expression_affinity",
+              "weight": 1,
+              "score": 0.575,
+              "reason": "Soft expression alignment with androgynous presentation preference."
+            }
+          ],
+          "traceableReasons": [
+            {
+              "reasonId": "rea_outfit_poplin_shirt_dress_01_0_1791829636673",
+              "text": "Unified crisp a line pleated waist column",
+              "signalIds": [
+                "user.styleProfile.preferences.preferredStyleSlugs",
+                "context.occasion"
+              ],
+              "knowledgeEntryIds": [
+                "gar_shirt_dress_cotton_poplin",
+                "gar_ballet_flat_leather_black",
+                "gar_fine_leather_belt_gold_buckle",
+                "gar_acetate_cat_eye_sunglasses_black"
+              ],
+              "factor": "general",
+              "authority": "USER_ENTERED",
+              "isAssumed": false
+            },
+            {
+              "reasonId": "rea_outfit_poplin_shirt_dress_01_1_1791829636673",
+              "text": "Strong contrast between light and deep neutral values establishes crisp visual separation.",
+              "signalIds": [
+                "user.styleProfile.preferences.preferredStyleSlugs",
+                "context.occasion"
+              ],
+              "knowledgeEntryIds": [
+                "gar_shirt_dress_cotton_poplin",
+                "gar_ballet_flat_leather_black",
+                "gar_fine_leather_belt_gold_buckle",
+                "gar_acetate_cat_eye_sunglasses_black"
+              ],
+              "factor": "general",
+              "authority": "USER_ENTERED",
+              "isAssumed": false
+            },
+            {
+              "reasonId": "rea_outfit_poplin_shirt_dress_01_2_1791829636673",
+              "text": "Aligned to Fine Dining / Dinner Party formality.",
+              "signalIds": [
+                "context.occasion",
+                "context.targetFormality"
+              ],
+              "knowledgeEntryIds": [
+                "gar_shirt_dress_cotton_poplin",
+                "gar_ballet_flat_leather_black",
+                "gar_fine_leather_belt_gold_buckle",
+                "gar_acetate_cat_eye_sunglasses_black",
+                "occ_dinner"
+              ],
+              "factor": "occasion_fit",
+              "authority": "USER_ENTERED",
+              "isAssumed": false
+            }
+          ],
+          "stylingAdvice": []
+        },
+        "hairStyle": {
+          "name": "Classic Tapered Side Part",
+          "slug": "classic-side-part",
+          "score": 0.84,
+          "reasons": [
+            "Fits within your preferred moderate maintenance threshold.",
+            "Appropriate formality for Fine Dining / Dinner Party.",
+            "Directly aligns with your preferred smart-casual aesthetic"
+          ]
+        },
+        "groomingStyle": {
+          "name": "Heavy Stubble (5-Day Shadow)",
+          "slug": "heavy-stubble",
+          "score": 0.89,
+          "reasons": [
+            "Conforms with your moderate grooming maintenance routine.",
+            "Appropriate grooming polish for Fine Dining / Dinner Party.",
+            "Directly aligns with your preferred smart-casual aesthetic",
+            "Directly aligns with your preferred vintage aesthetic"
+          ]
+        }
+      }
+    ]
+  }
+}

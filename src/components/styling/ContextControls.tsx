@@ -246,7 +246,7 @@ export function ContextControls({
         {onSelectFormality && (
           <div className="flex items-center gap-2">
             <span id="formality-group-label" className="text-[10px] uppercase tracking-wider text-neutral-400">
-              FORMALITY (BAND {minAllowed}–{maxAllowed}):
+              FORMALITY (SUGGESTED RANGE FOR {currentOccasion.name.toUpperCase()}: {minAllowed}–{maxAllowed}):
             </span>
             <div
               role="radiogroup"

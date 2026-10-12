@@ -1,0 +1,695 @@
+{
+  "profileId": "usr_p14",
+  "title": "Profile 14: Everything unknown except occasion",
+  "profile": {
+    "user": {
+      "id": "usr_p14",
+      "name": "Total Unknown User",
+      "handle": "p14",
+      "createdAt": "2026-10-12T00:00:00.000Z",
+      "styleProfile": {
+        "id": "sty_usr_p14",
+        "userId": "usr_p14",
+        "dominantAestheticSlugs": [
+          "minimal"
+        ],
+        "styleVector": {
+          "formality": 3,
+          "structure": 3,
+          "volume": 3,
+          "colorIntensity": 1,
+          "contrast": 3,
+          "pattern": 1,
+          "texture": 2,
+          "ornamentation": 1,
+          "classicTrend": 3,
+          "utilityPolish": 3,
+          "genderCoding": "androgynous"
+        },
+        "preferences": {
+          "preferredStyleSlugs": [],
+          "dislikedStyleSlugs": [],
+          "preferredColors": [
+            "black",
+            "white",
+            "charcoal"
+          ],
+          "dislikedColors": [],
+          "preferredFits": [
+            "relaxed",
+            "regular"
+          ],
+          "dislikedFits": [],
+          "preferredSilhouettes": [],
+          "dislikedSilhouettes": [],
+          "fitProportions": {
+            "preferredFits": [
+              "relaxed",
+              "regular"
+            ],
+            "dislikedFits": [],
+            "topVolume": 3,
+            "bottomVolume": 3,
+            "preferredSilhouettes": [],
+            "dislikedSilhouettes": [],
+            "layeringPreference": "moderate",
+            "garmentLengthPreferences": {
+              "top": "regular",
+              "bottom": "regular"
+            }
+          },
+          "modestyLevel": "unrestricted",
+          "userConfirmedUndertone": "unspecified",
+          "genderCodingDirection": "androgynous",
+          "styleExpression": "unspecified",
+          "preferredFormalityRange": [
+            2,
+            4
+          ],
+          "maxMaintenanceTolerance": "moderate",
+          "accessoryAffinities": [],
+          "contrastLevel": "unspecified",
+          "heightRange": "unspecified",
+          "torsoLegPreference": "unspecified",
+          "shoulderHipBalance": "unspecified",
+          "genderIdentity": "unspecified"
+        },
+        "feedbackProfile": {
+          "history": [],
+          "learnedStyleAffinities": {},
+          "learnedColorAffinities": {},
+          "learnedSilhouetteAffinities": {},
+          "learnedFitAffinities": {},
+          "repeatPassCount": {}
+        },
+        "evidenceSignals": {
+          "hairTexture": {
+            "value": "straight",
+            "authority": "USER_ENTERED",
+            "confidence": 1,
+            "source": "manual_input",
+            "updatedAt": "2026-10-12T00:00:00.000Z"
+          }
+        },
+        "updatedAt": "2026-10-12T00:00:00.000Z"
+      }
+    },
+    "evidenceHierarchy": {
+      "userConfirmedUndertone": "unspecified",
+      "modestyLevel": "unrestricted",
+      "styleExpression": "unspecified",
+      "genderIdentity": "unspecified",
+      "evidenceSignals": {
+        "hairTexture": {
+          "value": "straight",
+          "authority": "USER_ENTERED",
+          "confidence": 1,
+          "source": "manual_input",
+          "updatedAt": "2026-10-12T00:00:00.000Z"
+        }
+      }
+    }
+  },
+  "context": {
+    "occasion": {
+      "id": "occ_dinner",
+      "slug": "dinner",
+      "name": "Fine Dining / Dinner Party",
+      "category": "evening",
+      "defaultFormality": 4,
+      "allowableFormalityRange": [
+        3,
+        5
+      ],
+      "guidelines": [
+        "Sophisticated layering, structured outerwear, and immaculate footwear",
+        "Drape and fabric texture are paramount under warm ambient restaurant lighting"
+      ],
+      "restrictedGarmentCategories": [
+        "sweatpants",
+        "running-shoes",
+        "distressed-shorts",
+        "gym-wear"
+      ],
+      "keyStyleAffinities": [
+        "minimal",
+        "smart-casual",
+        "old-money",
+        "formal"
+      ],
+      "timelessOrTrend": "TIMELESS",
+      "reviewDate": "2026-10-01",
+      "createdAt": "2026-10-01",
+      "updatedAt": "2026-10-01"
+    },
+    "isWeatherConfirmed": false
+  },
+  "result": {
+    "looksCount": 3,
+    "contextApplied": "Fine Dining / Dinner Party",
+    "vetoedCandidateCount": 6,
+    "evaluatedCandidateCount": 15,
+    "looks": [
+      {
+        "tier": "BEST_MATCH",
+        "tierRationale": "Optimal convergence of your 10D style vector, event formality, and physical proportions.",
+        "confidence": {
+          "state": "NEED_MORE_INFO",
+          "explanation": "Limited input signals available for context and personal taste.",
+          "toIncreaseConfidence": "Specify your event formality and style preferences to build your looks."
+        },
+        "overallHarmonyScore": 0.87,
+        "reasons": [
+          "Directly mirrors your personal style axis coordinates.",
+          "Cohesive layered silhouette with balanced mid-length outer structure",
+          "Harmonious balance across complementary tonal depths."
+        ],
+        "cautions": [],
+        "outfit": {
+          "id": "outfit_feminine_slip_evening_01",
+          "title": "Sculpted Hourglass & Silk Slip Monolith",
+          "primaryStyleSlug": "minimal",
+          "formality": 4,
+          "score": 0.87,
+          "items": [
+            {
+              "category": "one-piece",
+              "subcategory": "dress",
+              "name": "Bias-Cut Silk Charmeuse Slip Dress",
+              "material": "100% heavyweight 22mm silk charmeuse",
+              "color": "black",
+              "fit": "slim",
+              "modestyRating": "low-coverage",
+              "genderCoding": "feminine",
+              "layerPosition": 0
+            },
+            {
+              "category": "outerwear",
+              "subcategory": "blazer",
+              "name": "Cinched Hourglass Tailored Wool Blazer",
+              "material": "high-twist tropical wool with structured canvas interlining",
+              "color": "black",
+              "fit": "tailored",
+              "modestyRating": "covered-arms",
+              "genderCoding": "feminine",
+              "layerPosition": 1
+            },
+            {
+              "category": "footwear",
+              "subcategory": "heel",
+              "name": "Pointed-Toe Leather Slingback Pumps (45mm)",
+              "material": "semi-gloss Italian box calfskin",
+              "color": "black",
+              "fit": "slim",
+              "modestyRating": "standard",
+              "genderCoding": "feminine",
+              "layerPosition": 0
+            },
+            {
+              "category": "accessory",
+              "subcategory": "bag",
+              "name": "Sculpted Minimalist Leather Shoulder Bag",
+              "material": "smooth semi-patent calfskin, tonal nappa lining",
+              "color": "black",
+              "fit": "regular",
+              "modestyRating": "standard",
+              "genderCoding": "feminine",
+              "layerPosition": 0
+            },
+            {
+              "category": "accessory",
+              "subcategory": "jewelry",
+              "name": "18k Vermeil Hollow Bold Hoop Earrings",
+              "material": "18k gold vermeil over 925 recycled sterling silver",
+              "color": "warm-gold",
+              "fit": "regular",
+              "modestyRating": "standard",
+              "genderCoding": "feminine",
+              "layerPosition": 0
+            }
+          ],
+          "factors": [
+            {
+              "category": "style_affinity",
+              "weight": 3.5,
+              "score": 0.84,
+              "reason": "Coordinate affinity (84%) with your 10D style vector."
+            },
+            {
+              "category": "silhouette_balance",
+              "weight": 3,
+              "score": 0.92,
+              "reason": "Cohesive layered silhouette with balanced mid-length outer structure"
+            },
+            {
+              "category": "color_harmony",
+              "weight": 3,
+              "score": 0.82,
+              "reason": "Color story: analogous"
+            },
+            {
+              "category": "occasion_fit",
+              "weight": 2.5,
+              "score": 1,
+              "reason": "Formality fit for Fine Dining / Dinner Party (Level 4)"
+            },
+            {
+              "category": "weather_fit",
+              "weight": 2,
+              "score": 0.75,
+              "reason": "Ambient temperature and breathability calibration"
+            }
+          ],
+          "traceableReasons": [
+            {
+              "reasonId": "rea_outfit_feminine_slip_evening_01_0_1791829636674",
+              "text": "Directly mirrors your personal style axis coordinates.",
+              "signalIds": [
+                "user.styleProfile.styleVector",
+                "user.styleProfile.preferences.preferredStyleSlugs"
+              ],
+              "knowledgeEntryIds": [
+                "gar_slip_dress_silk_black",
+                "gar_sculpted_blazer_hourglass_black",
+                "gar_slingback_kitten_heel_black",
+                "gar_leather_shoulder_bag_baguette",
+                "gar_gold_hoop_earrings_chunky",
+                "style_minimal"
+              ],
+              "factor": "style_affinity",
+              "authority": "USER_ENTERED",
+              "isAssumed": false
+            },
+            {
+              "reasonId": "rea_outfit_feminine_slip_evening_01_1_1791829636674",
+              "text": "Cohesive layered silhouette with balanced mid-length outer structure",
+              "signalIds": [
+                "user.styleProfile.preferences.fitProportions",
+                "user.styleProfile.preferences.preferredFits"
+              ],
+              "knowledgeEntryIds": [
+                "gar_slip_dress_silk_black",
+                "gar_sculpted_blazer_hourglass_black",
+                "gar_slingback_kitten_heel_black",
+                "gar_leather_shoulder_bag_baguette",
+                "gar_gold_hoop_earrings_chunky"
+              ],
+              "factor": "silhouette_balance",
+              "authority": "USER_ENTERED",
+              "isAssumed": false
+            },
+            {
+              "reasonId": "rea_outfit_feminine_slip_evening_01_2_1791829636674",
+              "text": "Harmonious balance across complementary tonal depths.",
+              "signalIds": [
+                "user.styleProfile.preferences.fitProportions",
+                "user.styleProfile.preferences.preferredFits"
+              ],
+              "knowledgeEntryIds": [
+                "gar_slip_dress_silk_black",
+                "gar_sculpted_blazer_hourglass_black",
+                "gar_slingback_kitten_heel_black",
+                "gar_leather_shoulder_bag_baguette",
+                "gar_gold_hoop_earrings_chunky"
+              ],
+              "factor": "silhouette_balance",
+              "authority": "USER_ENTERED",
+              "isAssumed": false
+            }
+          ],
+          "stylingAdvice": []
+        },
+        "hairStyle": {
+          "name": "Textured French Crop",
+          "slug": "textured-crop",
+          "score": 0.79,
+          "reasons": [
+            "Fits within your preferred moderate maintenance threshold.",
+            "Appropriate formality for Fine Dining / Dinner Party."
+          ]
+        },
+        "groomingStyle": {
+          "name": "Designer Stubble (3-Day Shadow)",
+          "slug": "designer-stubble",
+          "score": 0.8,
+          "reasons": [
+            "Conforms with your moderate grooming maintenance routine.",
+            "Appropriate grooming polish for Fine Dining / Dinner Party."
+          ]
+        }
+      },
+      {
+        "tier": "SAFE",
+        "tierRationale": "High familiarity and effortless ease. Relies on proven proportions and classic foundational tones.",
+        "confidence": {
+          "state": "NEED_MORE_INFO",
+          "explanation": "Limited input signals available for context and personal taste.",
+          "toIncreaseConfidence": "Specify your event formality and style preferences to build your looks."
+        },
+        "overallHarmonyScore": 0.85,
+        "reasons": [
+          "Cropped upper proportion offset by expansive lower volume",
+          "Strong contrast between light and deep neutral values establishes crisp visual separation.",
+          "Default climate baseline assumed; weather context was not specified."
+        ],
+        "cautions": [],
+        "outfit": {
+          "id": "outfit_korean_minimal_01",
+          "title": "Monochrome Fluid Tailoring",
+          "primaryStyleSlug": "korean-minimal",
+          "formality": 3,
+          "score": 0.85,
+          "items": [
+            {
+              "category": "top",
+              "subcategory": "t-shirt",
+              "name": "Heavyweight Boxy Tee (Off-White)",
+              "material": "300gsm combed organic cotton",
+              "color": "off-white",
+              "fit": "boxy",
+              "modestyRating": "standard",
+              "genderCoding": "androgynous",
+              "layerPosition": 0
+            },
+            {
+              "category": "outerwear",
+              "subcategory": "blazer",
+              "name": "Deconstructed Wool Blazer",
+              "material": "tropical virgin wool",
+              "color": "charcoal",
+              "fit": "relaxed",
+              "modestyRating": "high-coverage",
+              "genderCoding": "androgynous",
+              "layerPosition": 1
+            },
+            {
+              "category": "bottom",
+              "subcategory": "trousers",
+              "name": "Double-Pleated Wide-Leg Trousers",
+              "material": "wool gabardine blend",
+              "color": "pitch-black",
+              "fit": "relaxed",
+              "modestyRating": "high-coverage",
+              "genderCoding": "androgynous",
+              "layerPosition": 0
+            },
+            {
+              "category": "footwear",
+              "subcategory": "derbies",
+              "name": "Commando-Sole Leather Derbies",
+              "material": "polished binder calf leather, Vibram lug sole",
+              "color": "polished-black",
+              "fit": "regular",
+              "modestyRating": "standard",
+              "genderCoding": "androgynous",
+              "layerPosition": 0
+            }
+          ],
+          "factors": [
+            {
+              "category": "style_affinity",
+              "weight": 3.5,
+              "score": 0.79,
+              "reason": "Coordinate affinity (79%) with your 10D style vector."
+            },
+            {
+              "category": "silhouette_balance",
+              "weight": 3,
+              "score": 0.96,
+              "reason": "Cropped upper proportion offset by expansive lower volume"
+            },
+            {
+              "category": "color_harmony",
+              "weight": 3,
+              "score": 0.94,
+              "reason": "Color story: strong-contrast"
+            },
+            {
+              "category": "occasion_fit",
+              "weight": 2.5,
+              "score": 0.75,
+              "reason": "Formality fit for Fine Dining / Dinner Party (Level 3)"
+            },
+            {
+              "category": "weather_fit",
+              "weight": 2,
+              "score": 0.75,
+              "reason": "Ambient temperature and breathability calibration"
+            }
+          ],
+          "traceableReasons": [
+            {
+              "reasonId": "rea_outfit_korean_minimal_01_0_1791829636673",
+              "text": "Cropped upper proportion offset by expansive lower volume",
+              "signalIds": [
+                "user.styleProfile.preferences.preferredStyleSlugs",
+                "context.occasion"
+              ],
+              "knowledgeEntryIds": [
+                "gar_box_tee_white",
+                "gar_deconstructed_blazer_charcoal",
+                "gar_wide_trousers_black",
+                "gar_chunky_derbies_black"
+              ],
+              "factor": "general",
+              "authority": "USER_ENTERED",
+              "isAssumed": false
+            },
+            {
+              "reasonId": "rea_outfit_korean_minimal_01_1_1791829636673",
+              "text": "Strong contrast between light and deep neutral values establishes crisp visual separation.",
+              "signalIds": [
+                "user.styleProfile.preferences.preferredStyleSlugs",
+                "context.occasion"
+              ],
+              "knowledgeEntryIds": [
+                "gar_box_tee_white",
+                "gar_deconstructed_blazer_charcoal",
+                "gar_wide_trousers_black",
+                "gar_chunky_derbies_black"
+              ],
+              "factor": "general",
+              "authority": "USER_ENTERED",
+              "isAssumed": false
+            },
+            {
+              "reasonId": "rea_outfit_korean_minimal_01_2_1791829636673",
+              "text": "Default climate baseline assumed; weather context was not specified.",
+              "signalIds": [
+                "context.temperatureLevel",
+                "context.condition",
+                "context.weather"
+              ],
+              "knowledgeEntryIds": [
+                "gar_box_tee_white",
+                "gar_deconstructed_blazer_charcoal",
+                "gar_wide_trousers_black",
+                "gar_chunky_derbies_black"
+              ],
+              "factor": "weather_fit",
+              "authority": "USER_ENTERED",
+              "isAssumed": false
+            }
+          ],
+          "stylingAdvice": [
+            "Accentuates waistline geometry and creates an elongated vertical lower line."
+          ]
+        },
+        "hairStyle": {
+          "name": "Textured French Crop",
+          "slug": "textured-crop",
+          "score": 0.79,
+          "reasons": [
+            "Fits within your preferred moderate maintenance threshold.",
+            "Appropriate formality for Fine Dining / Dinner Party."
+          ]
+        },
+        "groomingStyle": {
+          "name": "Designer Stubble (3-Day Shadow)",
+          "slug": "designer-stubble",
+          "score": 0.8,
+          "reasons": [
+            "Conforms with your moderate grooming maintenance routine.",
+            "Appropriate grooming polish for Fine Dining / Dinner Party."
+          ]
+        }
+      },
+      {
+        "tier": "STRETCH",
+        "tierRationale": "Curated directional exploration. Pushes volume and textural depth while strictly respecting dress codes.",
+        "confidence": {
+          "state": "NEED_MORE_INFO",
+          "explanation": "Limited input signals available for context and personal taste.",
+          "toIncreaseConfidence": "Specify your event formality and style preferences to build your looks."
+        },
+        "overallHarmonyScore": 0.83,
+        "reasons": [
+          "Harmonious classic proportion with uniform clean linear cadence",
+          "Harmonious balance across complementary tonal depths.",
+          "Color direction is based on a neutral-safe default because undertone is unknown."
+        ],
+        "cautions": [],
+        "outfit": {
+          "id": "outfit_old_money_01",
+          "title": "Harris Tweed & Cashmere Poise",
+          "primaryStyleSlug": "old-money",
+          "formality": 4,
+          "score": 0.83,
+          "items": [
+            {
+              "category": "top",
+              "subcategory": "knitwear",
+              "name": "Merino Wool Rollneck (Camel)",
+              "material": "100% extrafine merino wool",
+              "color": "camel",
+              "fit": "regular",
+              "modestyRating": "high-coverage",
+              "genderCoding": "androgynous",
+              "layerPosition": 0
+            },
+            {
+              "category": "outerwear",
+              "subcategory": "blazer",
+              "name": "Harris Tweed 2-Button Blazer (Heather Brown)",
+              "material": "100% pure virgin Scottish wool tweed",
+              "color": "heather-brown",
+              "fit": "regular",
+              "modestyRating": "high-coverage",
+              "genderCoding": "unspecified",
+              "layerPosition": 1
+            },
+            {
+              "category": "bottom",
+              "subcategory": "trousers",
+              "name": "Single-Pleat Wool Flannel Slacks (Light Grey)",
+              "material": "Fox Brothers woolen flannel",
+              "color": "light-grey",
+              "fit": "regular",
+              "modestyRating": "high-coverage",
+              "genderCoding": "unspecified",
+              "layerPosition": 0
+            },
+            {
+              "category": "footwear",
+              "subcategory": "loafers",
+              "name": "Gold-Hardware Horsebit Loafers (Black)",
+              "material": "calfskin leather, stitched leather sole",
+              "color": "polished-black",
+              "fit": "regular",
+              "modestyRating": "standard",
+              "genderCoding": "unspecified",
+              "layerPosition": 0
+            }
+          ],
+          "factors": [
+            {
+              "category": "style_affinity",
+              "weight": 3.5,
+              "score": 0.64,
+              "reason": "Coordinate affinity (64%) with your 10D style vector."
+            },
+            {
+              "category": "silhouette_balance",
+              "weight": 3,
+              "score": 0.98,
+              "reason": "Harmonious classic proportion with uniform clean linear cadence"
+            },
+            {
+              "category": "color_harmony",
+              "weight": 3,
+              "score": 0.82,
+              "reason": "Color story: analogous"
+            },
+            {
+              "category": "occasion_fit",
+              "weight": 2.5,
+              "score": 1,
+              "reason": "Formality fit for Fine Dining / Dinner Party (Level 4)"
+            },
+            {
+              "category": "weather_fit",
+              "weight": 2,
+              "score": 0.75,
+              "reason": "Ambient temperature and breathability calibration"
+            }
+          ],
+          "traceableReasons": [
+            {
+              "reasonId": "rea_outfit_old_money_01_0_1791829636673",
+              "text": "Harmonious classic proportion with uniform clean linear cadence",
+              "signalIds": [
+                "user.styleProfile.preferences.preferredStyleSlugs",
+                "context.occasion"
+              ],
+              "knowledgeEntryIds": [
+                "gar_turtleneck_camel",
+                "gar_tweed_blazer_brown",
+                "gar_pleated_flannel_slacks_grey",
+                "gar_horsebit_loafer_black"
+              ],
+              "factor": "general",
+              "authority": "USER_ENTERED",
+              "isAssumed": false
+            },
+            {
+              "reasonId": "rea_outfit_old_money_01_1_1791829636673",
+              "text": "Harmonious balance across complementary tonal depths.",
+              "signalIds": [
+                "user.styleProfile.preferences.fitProportions",
+                "user.styleProfile.preferences.preferredFits"
+              ],
+              "knowledgeEntryIds": [
+                "gar_turtleneck_camel",
+                "gar_tweed_blazer_brown",
+                "gar_pleated_flannel_slacks_grey",
+                "gar_horsebit_loafer_black"
+              ],
+              "factor": "silhouette_balance",
+              "authority": "USER_ENTERED",
+              "isAssumed": false
+            },
+            {
+              "reasonId": "rea_outfit_old_money_01_2_1791829636673",
+              "text": "Color direction is based on a neutral-safe default because undertone is unknown.",
+              "signalIds": [
+                "user.styleProfile.preferences.userConfirmedUndertone",
+                "user.styleProfile.preferences.preferredColors"
+              ],
+              "knowledgeEntryIds": [
+                "gar_turtleneck_camel",
+                "gar_tweed_blazer_brown",
+                "gar_pleated_flannel_slacks_grey",
+                "gar_horsebit_loafer_black"
+              ],
+              "factor": "color_harmony",
+              "authority": "DEFAULT",
+              "isAssumed": true
+            }
+          ],
+          "stylingAdvice": [
+            "Elevate with subtle texture contrast between top and lower fabrication.",
+            "Aligns with your preferred fit geometry."
+          ]
+        },
+        "hairStyle": {
+          "name": "Textured French Crop",
+          "slug": "textured-crop",
+          "score": 0.79,
+          "reasons": [
+            "Fits within your preferred moderate maintenance threshold.",
+            "Appropriate formality for Fine Dining / Dinner Party."
+          ]
+        },
+        "groomingStyle": {
+          "name": "Designer Stubble (3-Day Shadow)",
+          "slug": "designer-stubble",
+          "score": 0.8,
+          "reasons": [
+            "Conforms with your moderate grooming maintenance routine.",
+            "Appropriate grooming polish for Fine Dining / Dinner Party."
+          ]
+        }
+      }
+    ]
+  }
+}
