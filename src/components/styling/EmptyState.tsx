@@ -21,7 +21,7 @@ export function EmptyState({ onOpenEditor, onUseDemo }: EmptyStateProps) {
             PROFILE REQUIRED
           </h2>
           <p className="text-xs text-neutral-500 font-sans mt-2 leading-relaxed">
-            Build your profile to generate calibrated looks.
+            Build your profile to generate tailored looks.
           </p>
         </div>
 

@@ -194,7 +194,7 @@ export const OCCASIONS: Occasion[] = [
   {
     id: 'occ_travel',
     slug: 'travel',
-    name: 'Airport / Travel Transit',
+    name: 'Travel',
     category: 'casual',
     defaultFormality: 2,
     allowableFormalityRange: [1, 3],
@@ -212,7 +212,7 @@ export const OCCASIONS: Occasion[] = [
   {
     id: 'occ_custom',
     slug: 'custom',
-    name: 'Custom Curated Event',
+    name: 'Custom',
     category: 'social',
     defaultFormality: 3,
     allowableFormalityRange: [1, 5],

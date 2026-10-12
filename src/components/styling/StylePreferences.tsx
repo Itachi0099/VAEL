@@ -11,9 +11,9 @@ export interface StyleOption {
 
 export const ARCHETYPES: StyleOption[] = [
   { slug: 'minimal', name: 'Minimal', subtitle: 'Purity of line, stripped utility' },
-  { slug: 'korean-minimal', name: 'Korean Minimal', subtitle: 'Fluid drapery, soft neutral harmonies' },
+  { slug: 'korean-minimal', name: 'Soft Minimal (Korean-influenced)', subtitle: 'Fluid drapery, soft neutral harmonies' },
   { slug: 'smart-casual', name: 'Smart Casual', subtitle: 'Versatile tailoring, elevated knitwear' },
-  { slug: 'old-money', name: 'Old Money', subtitle: 'Heritage fabrics, collegiate polish' },
+  { slug: 'old-money', name: 'Heritage Classic', subtitle: 'Heritage fabrics, collegiate polish' },
   { slug: 'streetwear', name: 'Streetwear', subtitle: 'Oversized drape, sneaker focus' },
   { slug: 'workwear', name: 'Workwear', subtitle: 'Utilitarian canvas, chore coats, selvedge' },
   { slug: 'techwear', name: 'Techwear', subtitle: 'Weatherproof technical membranes' },

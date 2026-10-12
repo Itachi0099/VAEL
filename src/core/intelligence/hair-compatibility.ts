@@ -166,7 +166,7 @@ export class HairCompatibilityEvaluator {
       confidence: {
         state: hasVisual && hasPreferences ? 'STRONG' : hasVisual ? 'GOOD' : 'EXPLORATORY',
         explanation: hasVisual
-          ? 'Calibrated directly against observed hair texture, density, and maintenance comfort.'
+          ? 'Tailored directly against observed hair texture, density, and maintenance comfort.'
           : 'Based on baseline hair geometry without verified visual texture analysis.',
         toIncreaseConfidence: hasVisual ? undefined : 'Confirm natural hair texture and density in your profile to refine cut precision.',
       },

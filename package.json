@@ -1,7 +1,7 @@
 {
   "name": "vael",
   "version": "0.1.0",
-  "description": "VAEL — Autonomous Personal Styling Artist & Intelligence Backbone",
+  "description": "VAEL — Personal Styling Artist & Intelligence Backbone",
   "scripts": {
     "dev": "next dev",
     "build": "next build",

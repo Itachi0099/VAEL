@@ -337,7 +337,7 @@ export class VaelStylingEngine {
         reason: `Formality fit for ${context.occasion.name} (Level ${outfit.formality})`,
       });
       if (diff === 0) {
-        reasons.push(`Precisely calibrated to ${context.occasion.name} formality.`);
+        reasons.push(`Aligned to ${context.occasion.name} formality.`);
       }
     }
 

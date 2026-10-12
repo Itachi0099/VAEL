@@ -76,7 +76,7 @@ export class OutfitCompatibilityEvaluator {
         occasionScore = 0.2;
         cautions.push(`Contains elements discouraged for ${occasion.name}.`);
       } else if (formalityDiff === 0) {
-        reasons.push(`Precisely calibrated for ${occasion.name} formality (Level ${outfit.formality}).`);
+        reasons.push(`Tailored precisely for ${occasion.name} formality (Level ${outfit.formality}).`);
       } else if (formalityDiff <= 1) {
         reasons.push(`Appropriately flexible for ${occasion.name}.`);
       } else {
@@ -165,7 +165,7 @@ export class OutfitCompatibilityEvaluator {
       confidence: {
         state: hasVisual && hasPreferences && hasWeather ? 'STRONG' : hasPreferences ? 'GOOD' : 'EXPLORATORY',
         explanation: hasVisual && hasPreferences
-          ? 'Calibrated with verified proportions, style affinities, and occasion constraints.'
+          ? 'Aligned with verified proportions, style affinities, and occasion constraints.'
           : 'Grounded in style archetype principles; personalize with body silhouette and confirmed climate.',
         toIncreaseConfidence: !hasWeather ? 'Confirm local weather conditions to optimize thermal and fabric layering.' : undefined,
       },

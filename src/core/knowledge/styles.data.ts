@@ -55,7 +55,8 @@ export const STYLE_FAMILIES: StyleFamily[] = [
   {
     id: 'style_korean_minimal',
     slug: 'korean-minimal',
-    name: 'Korean Minimal',
+    name: 'Soft Minimal (Korean-influenced)',
+    aliases: ['Korean Minimal'],
     editorialSubtitle: 'Fluid drapery, soft neutral harmonies, dropped shoulder softness.',
     description:
       'Blends Scandinavian restraint with Seoul streetwear proportions—oversized fluid drape, soft ecru/sage tones, and intentional volume play.',
@@ -157,7 +158,8 @@ export const STYLE_FAMILIES: StyleFamily[] = [
   {
     id: 'style_old_money',
     slug: 'old-money',
-    name: 'Old Money',
+    name: 'Heritage Classic',
+    aliases: ['Old Money'],
     editorialSubtitle: 'Subdued heritage, collegiate poise, timeless noble fabrication.',
     description:
       'Rooted in bespoke generational elegance—cable-knit cashmere, pleats, signet rings, rich navy blazers, and loafers with quiet pedigree.',

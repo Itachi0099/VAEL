@@ -80,10 +80,10 @@ npm run test
 
 ---
 
-## 3. Stylist Endorsement Standard
+## 3. Engineer-Authored Corpus Standard
 
-The evaluation suite requires **>= 80% pass rate** for stylist endorsement. Current automated suite performance:
-- **Scenarios Evaluated**: 40 / 40
-- **Scenarios Passed**: 40 / 40 (100%)
-- **Individual Assertions Passed**: 61 / 61 (100%)
+The evaluation suite tests against the engineer-authored corpus:
+- **Scenarios Evaluated**: 45 / 45
+- **Scenarios Passed**: 45 / 45 (100%)
+- **Individual Assertions Passed**: 72 / 72 (100%)
 - **Contradictions in Knowledge Base**: 0

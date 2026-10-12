@@ -152,7 +152,7 @@ export class GroomingCompatibilityEvaluator {
       confidence: {
         state: hasVisual && hasPreferences ? 'STRONG' : hasVisual ? 'GOOD' : 'EXPLORATORY',
         explanation: hasVisual
-          ? 'Calibrated directly against observed facial architecture and grooming density.'
+          ? 'Tailored directly against observed facial architecture and grooming density.'
           : 'Based on baseline geometry without verified visual facial scan.',
         toIncreaseConfidence: hasVisual ? undefined : 'Confirm face shape and facial hair density to lock in grooming geometry.',
       },

@@ -59,7 +59,7 @@ describe('Part 4 — Modal Draft Lifecycle (Transactional Behavior)', () => {
 
     // User edits draft
     draftState.hairTexture = 'wavy';
-    draftState.bottomFit = 'relaxed';
+    draftState.bottomFit = 'wide-leg' as any;
     draftState.styleExpression = 'feminine';
 
     // User hits SAVE: writes draft to canonical state exactly once

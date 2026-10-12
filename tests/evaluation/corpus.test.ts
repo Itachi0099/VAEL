@@ -15,7 +15,7 @@ describe('Golden Evaluation Corpus Validation Suite', () => {
     expect(report.totalOccasions).toBe(12);
   });
 
-  describe('Autonomous Scenario Evaluation', () => {
+  describe('Corpus Scenario Evaluation', () => {
     EVALUATION_CORPUS.forEach((scenario) => {
       it(`[${scenario.id}] ${scenario.name}`, () => {
         const topThree = VaelStylingEngine.generateTopThreeLooks({

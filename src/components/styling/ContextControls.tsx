@@ -23,8 +23,8 @@ export const ALL_OCCASIONS: OccasionItem[] = [
   { slug: 'casual', name: 'Everyday Casual', defaultFormality: 1, allowableRange: [1, 2] },
   { slug: 'university-college', name: 'Campus / College', defaultFormality: 2, allowableRange: [1, 3] },
   { slug: 'cultural-traditional', name: 'Cultural Ceremony', defaultFormality: 4, allowableRange: [3, 5] },
-  { slug: 'travel', name: 'Airport Transit', defaultFormality: 2, allowableRange: [1, 3] },
-  { slug: 'custom', name: 'Custom Curated Event', defaultFormality: 3, allowableRange: [1, 5] },
+  { slug: 'travel', name: 'Travel', defaultFormality: 2, allowableRange: [1, 3] },
+  { slug: 'custom', name: 'Custom', defaultFormality: 3, allowableRange: [1, 5] },
 ];
 
 interface ContextControlsProps {
@@ -93,7 +93,7 @@ export function ContextControls({
             WHERE ARE YOU GOING?
           </span>
           <span className="text-[10px] text-neutral-400 uppercase">
-            12 OCCASIONS REGISTERED
+            OCCASION
           </span>
         </div>
         <div

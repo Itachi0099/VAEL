@@ -1187,7 +1187,7 @@ export const EVALUATION_CORPUS: EvaluationScenario[] = [
     id: 'case_28_workwear_weekend_craft',
     name: 'Rugged Workwear Weekend Exploration',
     category: 'occasion_formality',
-    description: 'Duck canvas, selvedge denim, and service boots calibrated for weekend durability.',
+    description: 'Duck canvas, selvedge denim, and service boots tailored for weekend durability.',
     user: {
       id: 'eval_user_28',
       name: 'Workwear Builder',

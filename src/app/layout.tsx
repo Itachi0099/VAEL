@@ -3,7 +3,7 @@ import './globals.css';
 
 export const metadata: Metadata = {
   title: 'VAEL — Personal Styling Artist',
-  description: 'Your style, interpreted. Autonomous styling intelligence backbone.',
+  description: 'Personal styling, explained. Tell VAEL who you are and where you\'re going.',
 };
 
 export default function RootLayout({

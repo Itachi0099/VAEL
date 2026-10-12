@@ -1,6 +1,6 @@
 # VAEL
 
-> **Autonomous Personal Styling Artist & Intelligence Backbone**  
+> **Personal Styling Artist & Intelligence Backbone**  
 > *"Your style, interpreted."*
 
 VAEL is not an AI chatbot, not a generic fashion recommendation website, and not merely an image generator. VAEL is designed as a personal styling artist—an intelligent system that learns how a user presents themselves, what they like and dislike, and what works harmoniously for them across grooming, hairstyles, silhouette architecture, and occasion-specific styling.

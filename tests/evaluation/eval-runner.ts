@@ -93,12 +93,11 @@ export function runEvaluationSuite(): {
   const assertionPassRate = Math.round((assertionsPassed / totalAssertions) * 100);
 
   console.log('\n======================================================================');
-  console.log('                        EVALUATION SUMMARY                            ');
+  console.log('         ENGINEER-AUTHORED EVALUATION CORPUS SUMMARY                  ');
   console.log('======================================================================');
   console.log(`Total Scenarios Evaluated:  ${results.length}`);
   console.log(`Scenarios Passed:           ${scenariosPassed} / ${results.length} (${passRate}%)`);
   console.log(`Individual Assertions:      ${assertionsPassed} / ${totalAssertions} (${assertionPassRate}%)`);
-  console.log(`Stylist Endorsement Rate:   >= 80% Threshold (${passRate >= 80 ? 'MET ✓' : 'FAILED ✗'})`);
   console.log('======================================================================\n');
 
   return {

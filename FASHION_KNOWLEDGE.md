@@ -6,7 +6,7 @@
 
 ## 1. Product Identity & Core Principles
 
-VAEL is an autonomous personal styling artist. It is not an AI chatbot, not a generic fast-fashion recommendation directory, and not an unconstrained diffusion generator.
+VAEL is a personal visual styling system. It is not an AI chatbot, not a generic fast-fashion recommendation directory, and not an unconstrained diffusion generator.
 
 VAEL operates on foundational principles:
 1. **USER > AI**: Explicit user inputs always take precedence over inferences or vision estimations.
