@@ -1,7 +1,7 @@
 {
   "name": "vael",
   "version": "0.1.0",
-  "description": "VAEL — Personal visual styling system",
+  "description": "VAEL — Personal Styling Intelligence & Curated Visual Architecture",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
