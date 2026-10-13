@@ -28,7 +28,7 @@
     "texture": 3,
     "modestyRating": "standard",
     "genderCoding": "masculine",
-    "garmentCoding": -1,
+    "garmentCoding": -0.5,
     "fluidTag": false,
     "vintageEra": "50s",
     "seasons": [
@@ -46,56 +46,6 @@
       "minimal"
     ],
     "layeringRole": "standalone",
-    "timelessOrTrend": "TIMELESS",
-    "reviewDate": "2026-10-01",
-    "createdAt": "2026-10-01",
-    "updatedAt": "2026-10-01"
-  },
-  {
-    "id": "gar_oxford_shirt_blue",
-    "name": "Classic Oxford Button-Down (Sky Blue)",
-    "slug": "classic-oxford-blue",
-    "category": "top",
-    "subcategory": "button-down",
-    "fit": "regular",
-    "silhouette": "natural-shoulder-straight",
-    "length": "regular",
-    "color": {
-      "name": "sky-blue",
-      "hex": "#87CEEB",
-      "tone": "cool",
-      "isBaseColor": true
-    },
-    "material": "pinpoint oxford cotton",
-    "fabricWeight": "midweight",
-    "breathability": "moderate",
-    "waterResistance": "none",
-    "minTemperatureC": 12,
-    "maxTemperatureC": 26,
-    "humidityTolerance": "all",
-    "pattern": "solid",
-    "formality": 3,
-    "structure": 3,
-    "volume": 3,
-    "texture": 2,
-    "modestyRating": "standard",
-    "genderCoding": "masculine",
-    "garmentCoding": -1,
-    "fluidTag": true,
-    "seasons": [
-      "all-season"
-    ],
-    "compatibleWeather": [
-      "mild",
-      "cool",
-      "warm"
-    ],
-    "compatibleStyleSlugs": [
-      "old-money",
-      "smart-casual",
-      "dark-academia"
-    ],
-    "layeringRole": "mid",
     "timelessOrTrend": "TIMELESS",
     "reviewDate": "2026-10-01",
     "createdAt": "2026-10-01",
@@ -130,7 +80,7 @@
     "texture": 1,
     "modestyRating": "standard",
     "genderCoding": "masculine",
-    "garmentCoding": -1,
+    "garmentCoding": -0.5,
     "fluidTag": false,
     "seasons": [
       "all-season"
@@ -180,7 +130,7 @@
     "texture": 4,
     "modestyRating": "standard",
     "genderCoding": "masculine",
-    "garmentCoding": -1,
+    "garmentCoding": -0.5,
     "fluidTag": false,
     "seasons": [
       "summer",
@@ -381,7 +331,7 @@
     "texture": 3,
     "modestyRating": "standard",
     "genderCoding": "masculine",
-    "garmentCoding": -1,
+    "garmentCoding": -0.5,
     "fluidTag": false,
     "vintageEra": "70s",
     "seasons": [
@@ -451,108 +401,6 @@
     "updatedAt": "2026-10-01"
   },
   {
-    "id": "gar_tailored_slacks_charcoal",
-    "name": "Flat-Front Tailored Wool Slacks",
-    "slug": "tailored-slacks-charcoal",
-    "category": "bottom",
-    "subcategory": "trousers",
-    "fit": "tailored",
-    "silhouette": "clean-taper-no-break",
-    "length": "ankle",
-    "color": {
-      "name": "charcoal",
-      "hex": "#333333",
-      "tone": "neutral",
-      "isBaseColor": true
-    },
-    "material": "100% Super 120s wool",
-    "fabricWeight": "midweight",
-    "breathability": "high",
-    "waterResistance": "none",
-    "minTemperatureC": 8,
-    "maxTemperatureC": 25,
-    "humidityTolerance": "all",
-    "pattern": "solid",
-    "formality": 4,
-    "structure": 4,
-    "volume": 2,
-    "texture": 2,
-    "modestyRating": "high-coverage",
-    "genderCoding": "masculine",
-    "garmentCoding": -1,
-    "fluidTag": true,
-    "seasons": [
-      "all-season"
-    ],
-    "compatibleWeather": [
-      "mild",
-      "cool",
-      "cold"
-    ],
-    "compatibleStyleSlugs": [
-      "formal",
-      "smart-casual",
-      "old-money"
-    ],
-    "layeringRole": "standalone",
-    "timelessOrTrend": "TIMELESS",
-    "reviewDate": "2026-10-01",
-    "createdAt": "2026-10-01",
-    "updatedAt": "2026-10-01"
-  },
-  {
-    "id": "gar_classic_chinos_khaki",
-    "name": "Mid-Rise Tapered Chinos (British Khaki)",
-    "slug": "tapered-chinos-khaki",
-    "category": "bottom",
-    "subcategory": "chinos",
-    "fit": "regular",
-    "silhouette": "clean-linear-mid-rise",
-    "length": "regular",
-    "color": {
-      "name": "british-khaki",
-      "hex": "#C3B091",
-      "tone": "earth",
-      "isBaseColor": false
-    },
-    "material": "combed cotton twill with light peach finish",
-    "fabricWeight": "midweight",
-    "breathability": "high",
-    "waterResistance": "none",
-    "minTemperatureC": 0,
-    "maxTemperatureC": 28,
-    "humidityTolerance": "all",
-    "pattern": "solid",
-    "formality": 2,
-    "structure": 3,
-    "volume": 3,
-    "texture": 2,
-    "modestyRating": "high-coverage",
-    "genderCoding": "masculine",
-    "garmentCoding": -1,
-    "fluidTag": false,
-    "seasons": [
-      "all-season"
-    ],
-    "compatibleWeather": [
-      "cold",
-      "cool",
-      "mild",
-      "warm"
-    ],
-    "compatibleStyleSlugs": [
-      "smart-casual",
-      "old-money",
-      "casual",
-      "minimal"
-    ],
-    "layeringRole": "standalone",
-    "timelessOrTrend": "TIMELESS",
-    "reviewDate": "2026-10-01",
-    "createdAt": "2026-10-01",
-    "updatedAt": "2026-10-01"
-  },
-  {
     "id": "gar_tailored_shorts_navy",
     "name": "Pleated Linen-Cotton Shorts (Navy)",
     "slug": "pleated-shorts-navy",
@@ -581,7 +429,7 @@
     "texture": 3,
     "modestyRating": "standard",
     "genderCoding": "masculine",
-    "garmentCoding": -1,
+    "garmentCoding": -0.5,
     "fluidTag": false,
     "seasons": [
       "summer"
@@ -677,7 +525,7 @@
     "texture": 4,
     "modestyRating": "high-coverage",
     "genderCoding": "masculine",
-    "garmentCoding": -1,
+    "garmentCoding": -0.5,
     "fluidTag": false,
     "seasons": [
       "spring",
@@ -727,7 +575,7 @@
     "texture": 4,
     "modestyRating": "high-coverage",
     "genderCoding": "masculine",
-    "garmentCoding": -1,
+    "garmentCoding": -0.5,
     "fluidTag": false,
     "seasons": [
       "fall",
@@ -777,7 +625,7 @@
     "texture": 5,
     "modestyRating": "high-coverage",
     "genderCoding": "masculine",
-    "garmentCoding": -1,
+    "garmentCoding": -0.5,
     "fluidTag": false,
     "seasons": [
       "fall",
@@ -827,7 +675,7 @@
     "texture": 2,
     "modestyRating": "high-coverage",
     "genderCoding": "masculine",
-    "garmentCoding": -1,
+    "garmentCoding": -0.5,
     "fluidTag": false,
     "seasons": [
       "all-season"
@@ -876,7 +724,7 @@
     "texture": 4,
     "modestyRating": "high-coverage",
     "genderCoding": "masculine",
-    "garmentCoding": -1,
+    "garmentCoding": -0.5,
     "fluidTag": false,
     "seasons": [
       "summer"
@@ -973,7 +821,7 @@
     "texture": 2,
     "modestyRating": "high-coverage",
     "genderCoding": "masculine",
-    "garmentCoding": -1,
+    "garmentCoding": -0.5,
     "fluidTag": false,
     "vintageEra": "50s",
     "seasons": [
@@ -1027,7 +875,7 @@
     "lining": "fully-lined",
     "modestyRating": "high-coverage",
     "genderCoding": "masculine",
-    "garmentCoding": -1,
+    "garmentCoding": -0.5,
     "fluidTag": false,
     "seasons": [
       "fall",
@@ -1077,7 +925,7 @@
     "texture": 4,
     "modestyRating": "high-coverage",
     "genderCoding": "masculine",
-    "garmentCoding": -1,
+    "garmentCoding": -0.5,
     "fluidTag": false,
     "seasons": [
       "fall",
@@ -1131,7 +979,7 @@
     "texture": 4,
     "modestyRating": "high-coverage",
     "genderCoding": "masculine",
-    "garmentCoding": -1,
+    "garmentCoding": -0.5,
     "fluidTag": false,
     "seasons": [
       "winter"
@@ -1202,109 +1050,6 @@
     "updatedAt": "2026-10-01"
   },
   {
-    "id": "gar_penny_loafer_burgundy",
-    "name": "Cordovan Penny Loafers",
-    "slug": "penny-loafer-burgundy",
-    "category": "footwear",
-    "subcategory": "loafers",
-    "fit": "regular",
-    "silhouette": "classic-almond-toe-leather-sole",
-    "color": {
-      "name": "deep-burgundy",
-      "hex": "#800020",
-      "tone": "earth",
-      "isBaseColor": false
-    },
-    "material": "Horween shell cordovan",
-    "fabricWeight": "midweight",
-    "breathability": "moderate",
-    "waterResistance": "water-resistant",
-    "minTemperatureC": 8,
-    "maxTemperatureC": 30,
-    "humidityTolerance": "all",
-    "pattern": "solid",
-    "formality": 4,
-    "structure": 4,
-    "volume": 2,
-    "texture": 2,
-    "modestyRating": "standard",
-    "genderCoding": "masculine",
-    "garmentCoding": -1,
-    "fluidTag": false,
-    "vintageEra": "50s",
-    "seasons": [
-      "spring",
-      "summer",
-      "fall"
-    ],
-    "compatibleWeather": [
-      "mild",
-      "warm",
-      "cool"
-    ],
-    "compatibleStyleSlugs": [
-      "old-money",
-      "smart-casual",
-      "dark-academia"
-    ],
-    "layeringRole": "standalone",
-    "timelessOrTrend": "TIMELESS",
-    "reviewDate": "2026-10-01",
-    "createdAt": "2026-10-01",
-    "updatedAt": "2026-10-01"
-  },
-  {
-    "id": "gar_chelsea_boot_suede_tobacco",
-    "name": "Tobacco Suede Chelsea Boots",
-    "slug": "chelsea-boots-suede-tobacco",
-    "category": "footwear",
-    "subcategory": "boots",
-    "fit": "slim",
-    "silhouette": "tapered-sleek-shaft",
-    "color": {
-      "name": "tobacco-brown",
-      "hex": "#71523B",
-      "tone": "earth",
-      "isBaseColor": false
-    },
-    "material": "waxed repello suede, crepe sole",
-    "fabricWeight": "midweight",
-    "breathability": "moderate",
-    "waterResistance": "none",
-    "minTemperatureC": 5,
-    "maxTemperatureC": 22,
-    "humidityTolerance": "dry-only",
-    "pattern": "solid",
-    "formality": 3,
-    "structure": 3,
-    "volume": 3,
-    "texture": 4,
-    "modestyRating": "standard",
-    "genderCoding": "masculine",
-    "garmentCoding": -1,
-    "fluidTag": true,
-    "seasons": [
-      "fall",
-      "winter",
-      "spring"
-    ],
-    "compatibleWeather": [
-      "cool",
-      "cold",
-      "mild"
-    ],
-    "compatibleStyleSlugs": [
-      "smart-casual",
-      "minimal",
-      "vintage"
-    ],
-    "layeringRole": "standalone",
-    "timelessOrTrend": "TIMELESS",
-    "reviewDate": "2026-10-01",
-    "createdAt": "2026-10-01",
-    "updatedAt": "2026-10-01"
-  },
-  {
     "id": "gar_service_boots_brown",
     "name": "Goodyear-Welted Service Boots",
     "slug": "service-boots-brown",
@@ -1332,7 +1077,7 @@
     "texture": 4,
     "modestyRating": "standard",
     "genderCoding": "masculine",
-    "garmentCoding": -1,
+    "garmentCoding": -0.5,
     "fluidTag": false,
     "seasons": [
       "fall",
@@ -1404,55 +1149,6 @@
     "updatedAt": "2026-10-01"
   },
   {
-    "id": "gar_horsebit_loafer_black",
-    "name": "Gold-Hardware Horsebit Loafers (Black)",
-    "slug": "horsebit-loafer-black",
-    "category": "footwear",
-    "subcategory": "loafers",
-    "fit": "regular",
-    "silhouette": "almond-toe-brass-horsebit",
-    "color": {
-      "name": "polished-black",
-      "hex": "#111111",
-      "tone": "neutral",
-      "isBaseColor": true
-    },
-    "material": "calfskin leather, stitched leather sole",
-    "fabricWeight": "midweight",
-    "breathability": "moderate",
-    "waterResistance": "none",
-    "minTemperatureC": 10,
-    "maxTemperatureC": 30,
-    "humidityTolerance": "all",
-    "pattern": "solid",
-    "formality": 4,
-    "structure": 3,
-    "volume": 2,
-    "texture": 2,
-    "modestyRating": "standard",
-    "genderCoding": "masculine",
-    "garmentCoding": -1,
-    "fluidTag": false,
-    "seasons": [
-      "spring",
-      "summer",
-      "fall"
-    ],
-    "compatibleWeather": [
-      "mild",
-      "warm"
-    ],
-    "compatibleStyleSlugs": [
-      "old-money",
-      "smart-casual"
-    ],
-    "layeringRole": "standalone",
-    "timelessOrTrend": "TIMELESS",
-    "reviewDate": "2026-10-01",
-    "createdAt": "2026-10-01",
-    "updatedAt": "2026-10-01"
-  },
-  {
     "id": "gar_monk_strap_shoes_brown",
     "name": "Double Monk-Strap Dress Shoes (Burnished Brown)",
     "slug": "double-monk-strap-brown",
@@ -1496,56 +1192,6 @@
       "smart-casual",
       "old-money",
       "dark-academia"
-    ],
-    "layeringRole": "standalone",
-    "timelessOrTrend": "TIMELESS",
-    "reviewDate": "2026-10-01",
-    "createdAt": "2026-10-01",
-    "updatedAt": "2026-10-01"
-  },
-  {
-    "id": "gar_desert_boot_beeswax",
-    "name": "Original Crepe-Sole Desert Boots (Beeswax Leather)",
-    "slug": "desert-boots-beeswax",
-    "category": "footwear",
-    "subcategory": "boots",
-    "fit": "regular",
-    "silhouette": "two-eyelet-chukka-height",
-    "color": {
-      "name": "beeswax-brown",
-      "hex": "#7E4B29",
-      "tone": "earth",
-      "isBaseColor": false
-    },
-    "material": "full-grain pull-up leather, plantation crepe sole",
-    "fabricWeight": "midweight",
-    "breathability": "moderate",
-    "waterResistance": "water-resistant",
-    "minTemperatureC": 8,
-    "maxTemperatureC": 24,
-    "humidityTolerance": "dry-only",
-    "pattern": "solid",
-    "formality": 2,
-    "structure": 3,
-    "volume": 3,
-    "texture": 3,
-    "modestyRating": "standard",
-    "genderCoding": "masculine",
-    "garmentCoding": -1,
-    "fluidTag": false,
-    "vintageEra": "70s",
-    "seasons": [
-      "all-season"
-    ],
-    "compatibleWeather": [
-      "mild",
-      "cool"
-    ],
-    "compatibleStyleSlugs": [
-      "vintage",
-      "smart-casual",
-      "workwear",
-      "casual"
     ],
     "layeringRole": "standalone",
     "timelessOrTrend": "TIMELESS",

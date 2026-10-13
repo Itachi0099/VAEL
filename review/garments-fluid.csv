@@ -1,111 +1,41 @@
-id,name,slug,category,genderCoding,garmentCoding,fluidTag
-gar_box_tee_white,"Heavyweight Boxy Tee (Off-White)",heavyweight-boxy-tee-offwhite,top,androgynous,0,true
-gar_box_tee_black,"Heavyweight Boxy Tee (Faded Black)",heavyweight-boxy-tee-black,top,androgynous,0,true
-gar_linen_tee_natural,"Relaxed Slub Linen Tee",slub-linen-tee-natural,top,androgynous,0,true
-gar_knit_polo_olive,"Textured Open-Collar Knit Polo",knit-polo-olive,top,androgynous,0,true
-gar_oxford_shirt_white,"Relaxed Oxford Button-Down Shirt",relaxed-oxford-white,top,androgynous,0,true
-gar_oxford_shirt_blue,"Classic Oxford Button-Down (Sky Blue)",classic-oxford-blue,top,masculine,-1,true
-gar_camp_collar_shirt_terracotta,"Tencel Camp-Collar Shirt",camp-collar-terracotta,top,androgynous,0,true
-gar_cashmere_crew_charcoal,"Fine Merino Cashmere Crewneck",merino-cashmere-charcoal,top,androgynous,0,true
-gar_mockneck_black,"Minimal Ribbed Mock Neck",mockneck-black,top,androgynous,0,true
-gar_turtleneck_camel,"Merino Wool Rollneck (Camel)",rollneck-merino-camel,top,androgynous,0,true
-gar_cable_knit_cream,"Heavy Fisherman Cable-Knit Sweater",cable-knit-cream,top,androgynous,0,true
-gar_hoodie_heather_grey,"500GSM Loopback Oversized Hoodie",heavy-hoodie-grey,top,androgynous,0,true
-gar_hoodie_washed_black,"Boxy Cropped Zip Hoodie (Washed Black)",zip-hoodie-washed-black,top,androgynous,0,true
-gar_crewneck_sweatshirt_navy,"Vintage V-Insert Sweatshirt (Faded Navy)",vintage-crewneck-navy,top,androgynous,0,true
-gar_cardigan_mohair_olive,"Brushed Mohair Cardigan (Olive Melange)",mohair-cardigan-olive,top,androgynous,0,true
-gar_flannel_shirt_plaid,"Heavy Ombre Flannel Overshirt",ombre-flannel-overshirt,top,androgynous,0,true
-gar_kurta_tunic_ecru,"Mandarin Collar Linen Tunic (Kurta)",linen-kurta-tunic-ecru,top,androgynous,0,true
-gar_ribbed_tank_white,"Fine Ribbed Athletic Tank (Chalk White)",ribbed-tank-white,top,androgynous,0,true
-gar_silk_crepe_shirt_black,"Fluid Silk Crepe Evening Shirt",silk-crepe-shirt-black,top,androgynous,0,true
-gar_heavy_overshirt_boiled_wool,"Boiled Wool Snap Overshirt (Charcoal)",boiled-wool-overshirt-charcoal,top,androgynous,0,true
-gar_waffle_longsleeve_cream,"Heavy Waffle Thermal Longsleeve",waffle-thermal-cream,top,androgynous,0,true
-gar_breton_stripe_longsleeve,"Classic Nautical Breton Longsleeve",breton-stripe-longsleeve,top,androgynous,0,true
-gar_raw_edge_tunic_experimental,"Asymmetric Raw-Hem Linen Tunic",asymmetric-linen-tunic-black,top,androgynous,0,true
-gar_crochet_shirt_sand,"Open-Weave Crochet Short-Sleeve Shirt",crochet-shirt-sand,top,androgynous,0,true
-gar_merino_vest_slate,"Sleeveless Merino Knit Vest (Slate)",merino-knit-vest-slate,top,androgynous,0,true
-gar_silk_band_collar_ivory,"Silk-Cotton Band Collar Shirt (Ivory)",band-collar-shirt-ivory,top,androgynous,0,true
-gar_graphic_vintage_tee,"Faded Archival Graphic Tee",vintage-graphic-tee,top,androgynous,0,true
-gar_alpaca_crew_forest,"Brushed Baby Alpaca Crewneck (Forest Green)",alpaca-crewneck-forest,top,androgynous,0,true
-gar_technical_base_longsleeve,"Merino-Synthetic Articulated Baselayer",technical-articulated-baselayer,top,androgynous,0,true
-gar_boucle_crewneck_taupe,"Textured Bouclé Crewneck Sweater (Taupe)",boucle-crewneck-taupe,top,androgynous,0,true
-gar_wide_trousers_black,"Double-Pleated Wide-Leg Trousers",wide-pleated-trousers-black,bottom,androgynous,0,true
-gar_raw_denim_indigo,"Straight-Leg 14oz Selvedge Denim",selvedge-denim-raw-indigo,bottom,androgynous,0,true
-gar_tailored_slacks_charcoal,"Flat-Front Tailored Wool Slacks",tailored-slacks-charcoal,bottom,masculine,-1,true
-gar_carpenter_pant_canvas,"Relaxed Double-Knee Carpenter Pants",double-knee-carpenter-tan,bottom,androgynous,0,true
-gar_corduroy_trousers_olive,"Wide-Wale Pleated Corduroy Trousers",corduroy-trousers-olive,bottom,androgynous,0,true
-gar_cargo_pants_black,"Articulated Technical Cargo Pants",articulated-cargos-black,bottom,androgynous,0,true
-gar_linen_drawstring_ecru,"Relaxed Linen Drawstring Trousers",linen-trousers-ecru,bottom,androgynous,0,true
-gar_sweatpants_grey_terry,"Heavyweight Loopback Sweatpants",loopback-sweatpants-grey,bottom,androgynous,0,true
-gar_black_washed_denim,"Washed Black Loose-Fit Denim",washed-black-loose-denim,bottom,androgynous,0,true
-gar_leather_trousers_black,"Straight-Leg Lambskin Leather Trousers",lambskin-trousers-black,bottom,androgynous,0,true
-gar_drawstring_fluid_trousers_navy,"Fluid Crepe Drawstring Trousers",fluid-crepe-trousers-navy,bottom,androgynous,0,true
-gar_distressed_vintage_jeans,"90s Relaxed Faded Blue Jeans",vintage-faded-blue-jeans,bottom,androgynous,0,true
-gar_pleated_wool_skirt_culotte,"Architectural Pleated Wool Culotte / Midi",pleated-wool-culotte-black,bottom,androgynous,0,true
-gar_sweat_shorts_black,"Heavy Cotton French Terry Sweat Shorts",sweat-shorts-black,bottom,androgynous,0,true
-gar_track_pants_side_tape_black,"Straight-Leg Tricot Track Pants with Tonal Stripe",tricot-track-pants-black,bottom,androgynous,0,true
-gar_khadi_cotton_pajama_pants,"Handwoven Khadi Cotton Lounge Trousers",khadi-cotton-trousers-white,bottom,androgynous,0,true
-gar_ecru_painter_pants,"Ecru Bull Denim Painter Trousers",ecru-painter-pants,bottom,androgynous,0,true
-gar_parachute_pants_olive,"Baggy Ripstop Parachute Pants (Olive)",ripstop-parachute-pants-olive,bottom,androgynous,0,true
-gar_raw_hem_shorts_denim,"Vintage Cut-Off Denim Shorts",vintage-cutoff-denim-shorts,bottom,androgynous,0,true
-gar_cropped_trousers_black,"Clean Ankle-Cropped Trousers (Black)",cropped-ankle-trousers-black,bottom,androgynous,0,true
-gar_deconstructed_blazer_charcoal,"Deconstructed Wool Blazer",deconstructed-blazer-charcoal,outerwear,androgynous,0,true
-gar_wool_overcoat_camel,"Double-Breasted Wool Overcoat",double-breasted-overcoat-camel,outerwear,androgynous,0,true
-gar_chore_coat_tan,"Duck Canvas Chore Coat",chore-coat-duck-tan,outerwear,androgynous,0,true
-gar_leather_biker_black,"Cropped Calfskin Leather Jacket",cropped-leather-biker-black,outerwear,androgynous,0,true
-gar_trench_coat_khaki,"Belted Gabardine Trench Coat",gabardine-trench-khaki,outerwear,androgynous,0,true
-gar_tech_shell_black,"3-Layer Weatherproof Technical Shell",tech-shell-black,outerwear,androgynous,0,true
-gar_down_puffer_matte_black,"Matte Lightweight Down Puffer",matte-down-puffer-black,outerwear,androgynous,0,true
-gar_linen_blazer_sand,"Unstructured Washed Linen Blazer (Sand)",unstructured-linen-blazer-sand,outerwear,androgynous,0,true
-gar_sherpa_fleece_jacket,"Deep-Pile Retro Fleece Jacket",retro-sherpa-fleece-jacket,outerwear,androgynous,0,true
-gar_type3_denim_jacket,"Type III Selvedge Denim Trucker Jacket",type3-denim-trucker-raw,outerwear,androgynous,0,true
-gar_bomber_ma1_sage,"MA-1 Flight Bomber Jacket (Sage Green)",ma1-flight-bomber-sage,outerwear,androgynous,0,true
-gar_mac_coat_waterproof_black,"Minimalist Bonded Cotton Mac Coat",bonded-mac-coat-black,outerwear,androgynous,0,true
-gar_kimono_noragi_charcoal,"Minimalist Noragi Jacket (Charcoal Wool)",noragi-jacket-charcoal,outerwear,androgynous,0,true
-gar_coach_jacket_nylon_black,"Snap-Button Nylon Coach Jacket",nylon-coach-jacket-black,outerwear,androgynous,0,true
-gar_m65_field_jacket_olive,"Vintage M-65 Military Field Coat",m65-field-jacket-olive,outerwear,androgynous,0,true
-gar_corduroy_overshirt_jacket,"Chunky 6-Wale Corduroy Overshirt Jacket",chunky-corduroy-overshirt-tan,outerwear,androgynous,0,true
-gar_houndstooth_raglan_coat,"Oversized Houndstooth Raglan Coat",houndstooth-raglan-coat-grey,outerwear,androgynous,0,true
-gar_cropped_blouson_black_wool,"Cropped Zip Blouson in Tropical Wool",cropped-zip-blouson-black,outerwear,androgynous,0,true
-gar_minimal_sneaker_white,"Minimal Calfskin Low-Top Sneakers",minimal-leather-sneaker-white,footwear,androgynous,0,true
-gar_chunky_derbies_black,"Commando-Sole Leather Derbies",chunky-derbies-black,footwear,androgynous,0,true
-gar_chelsea_boot_suede_tobacco,"Tobacco Suede Chelsea Boots",chelsea-boots-suede-tobacco,footwear,masculine,-1,true
-gar_retro_court_sneaker,"Vintage Suede & Mesh Court Trainers",retro-court-trainers,footwear,androgynous,0,true
-gar_trail_runner_goretex,"All-Terrain Gore-Tex Trail Runner",goretex-trail-runner-black,footwear,androgynous,0,true
-gar_leather_mules_black,"Square-Toe Backless Leather Mules",backless-leather-mules-black,footwear,androgynous,0,true
-gar_combat_boots_vibram,"8-Eyelet Lug-Sole Combat Boots",lug-combat-boots-black,footwear,androgynous,0,true
-gar_canvas_skate_sneakers,"Low-Profile Canvas Skate Shoes (Black/White)",canvas-skate-shoes-black,footwear,androgynous,0,true
-gar_suede_espadrilles_sand,"Jute-Sole Suede Espadrilles (Sand)",suede-espadrilles-sand,footwear,androgynous,0,true
-gar_leather_fisherman_sandals,"Woven Leather Fisherman Sandals (Espresso)",fisherman-sandals-espresso,footwear,androgynous,0,true
-gar_tabi_split_toe_boot,"Split-Toe Tabi Ankle Boots (Black)",split-toe-tabi-boots-black,footwear,androgynous,0,true
-gar_leather_tote_black,"Structured Architectural Leather Tote",architectural-leather-tote,accessory,androgynous,0,true
-gar_silver_signet_ring,"Brushed Sterling Silver Signet Ring",silver-signet-ring,accessory,androgynous,0,true
-gar_wool_scarf_charcoal,"Fringed Lambswool Scarf (Charcoal)",lambswool-scarf-charcoal,accessory,androgynous,0,true
-gar_dress_watch_gold_leather,"Vintage Dress Watch with Alligator Strap",vintage-dress-watch-gold,accessory,androgynous,0,true
-gar_leather_belt_brass,"1.25"" Vegetable-Tanned Bridle Leather Belt",bridle-leather-belt-brass,accessory,androgynous,0,true
-gar_crossbody_bag_nylon_black,"Technical Ergonomic Crossbody Sling Bag",technical-crossbody-bag-black,accessory,androgynous,0,true
-gar_beanie_wool_black,"Ribbed Merino Fisherman Beanie (Black)",ribbed-merino-beanie-black,accessory,androgynous,0,true
-gar_sunglasses_acetate_tortoise,"Architectural Acetate Sunglasses (Dark Tortoise)",acetate-sunglasses-tortoise,accessory,androgynous,0,true
-gar_ballcap_washed_cotton,"Unstructured 6-Panel Dad Cap (Washed Olive)",unstructured-ballcap-olive,accessory,androgynous,0,true
-gar_silver_chain_curb,"4mm Solid Sterling Silver Curb Chain",silver-curb-chain-4mm,accessory,androgynous,0,true
-gar_canvas_weekender_bag,"Heavy 18oz Duck Canvas Weekender Duffel",canvas-weekender-duffel-tan,accessory,androgynous,0,true
-gar_panama_hat_straw,"Genuine Handwoven Toquilla Straw Panama Hat",panama-hat-straw,accessory,androgynous,0,true
-gar_leather_gloves_cashmere_lined,"Cashmere-Lined Deerskin Leather Gloves",deerskin-gloves-black,accessory,androgynous,0,true
-gar_jumpsuit_utilitarian_black,"Minimal Structured Twill Jumpsuit",structured-twill-jumpsuit-black,one-piece,androgynous,0,true
-gar_strappy_leather_sandal_tan,"Minimalist Asymmetric Leather Flat Sandals",minimalist-leather-flat-sandals-tan,footwear,androgynous,0,true
-gar_chelsea_boot_lug_sole_black,"Commando Lug-Sole Waterproof Chelsea Boots",waterproof-lug-sole-chelsea-boots-black,footwear,androgynous,0,true
-gar_boston_clog_taupe,"Suede Ergonomic Closed-Toe Clogs",suede-ergonomic-clogs-taupe,footwear,androgynous,0,true
-gar_minimal_runner_retro_white,"Low-Profile Retro Suede & Nylon Runners",retro-suede-nylon-runners-white,footwear,androgynous,0,true
-gar_canvas_leather_tote_large,"Architectural Canvas & Saddle Leather Tote",canvas-saddle-leather-tote-ecru,accessory,androgynous,0,true
-gar_silk_twill_foulard_scarf,"Printed Silk Twill Square Scarf (70cm)",printed-silk-twill-scarf-70cm,accessory,androgynous,0,true
-gar_fine_leather_belt_gold_buckle,"25mm Fine Calfskin Belt with Chiseled Brass Buckle",fine-calfskin-belt-gold-buckle-black,accessory,androgynous,0,true
-gar_thermal_waffle_lounge_pant_charcoal,"Heavy Thermal Waffle Lounge Pants (Charcoal)",thermal-waffle-lounge-pants-charcoal,bottom,androgynous,0,true
-gar_breathable_modal_lounge_tee_black,"Airy Featherweight Modal Lounge Tee (Black)",airy-modal-lounge-tee-black,top,androgynous,0,true
-gar_tailored_crepe_jumpsuit_black,"Wide-Leg Tailored Crepe Jumpsuit with Belt (Black)",tailored-crepe-jumpsuit-black,one-piece,feminine,1,true
-gar_utility_linen_jumpsuit_olive,"Long-Sleeve Relaxed Utility Linen Jumpsuit (Washed Olive)",utility-linen-jumpsuit-olive,one-piece,androgynous,0,true
-gar_fluid_unstructured_double_breasted_suit_jacket_taupe,"Unstructured Double-Breasted Fluid Jacket (Warm Taupe)",unstructured-db-jacket-taupe,outerwear,androgynous,0,true
-gar_fluid_relaxed_drape_trousers_taupe,"Double-Pleat Fluid Drape Trousers (Warm Taupe)",fluid-drape-trousers-taupe,bottom,androgynous,0,true
-gar_fluid_cocoon_wool_coat_heather_grey,"Oversized Cocoon Silhouette Wool Overcoat (Heather Grey)",cocoon-wool-overcoat-grey,outerwear,androgynous,0,true
-gar_leather_structured_tote_black,"Architectural Box-Calf Minimal Tote Bag (Black)",box-calf-structured-tote-black,accessory,androgynous,0,true
-gar_minimalist_gold_hoops,"18k Gold Vermeil Architectural Huggie Hoops",gold-vermeil-huggie-hoops,accessory,feminine,1,true
-gar_waterproof_riding_boots_black,"Waterproof Treated Leather Tall Riding Boots (Black)",waterproof-tall-riding-boots-black,footwear,feminine,1,true
+id,name,slug,category,genderCoding,garmentCoding,fluidTag,rationale
+gar_camp_collar_shirt_terracotta,"Tencel Camp-Collar Shirt",camp-collar-terracotta,top,androgynous,0,true,"Deliberately cross-coded / unisex fluid foundation piece"
+gar_cable_knit_cream,"Heavy Fisherman Cable-Knit Sweater",cable-knit-cream,top,androgynous,0,true,"Deliberately cross-coded / unisex fluid foundation piece"
+gar_kurta_tunic_ecru,"Mandarin Collar Linen Tunic (Kurta)",linen-kurta-tunic-ecru,top,androgynous,0,true,"Deliberately cross-coded / unisex fluid foundation piece"
+gar_silk_crepe_shirt_black,"Fluid Silk Crepe Evening Shirt",silk-crepe-shirt-black,top,androgynous,0,true,"Deliberately cross-coded / unisex fluid foundation piece"
+gar_raw_edge_tunic_experimental,"Asymmetric Raw-Hem Linen Tunic",asymmetric-linen-tunic-black,top,androgynous,0,true,"Deliberately cross-coded / unisex fluid foundation piece"
+gar_crochet_shirt_sand,"Open-Weave Crochet Short-Sleeve Shirt",crochet-shirt-sand,top,androgynous,0,true,"Deliberately cross-coded / unisex fluid foundation piece"
+gar_wide_trousers_black,"Double-Pleated Wide-Leg Trousers",wide-pleated-trousers-black,bottom,androgynous,0,true,"Deliberately cross-coded / unisex fluid foundation piece"
+gar_linen_drawstring_ecru,"Relaxed Linen Drawstring Trousers",linen-trousers-ecru,bottom,androgynous,0,true,"Deliberately cross-coded / unisex fluid foundation piece"
+gar_drawstring_fluid_trousers_navy,"Fluid Crepe Drawstring Trousers",fluid-crepe-trousers-navy,bottom,androgynous,0,true,"Deliberately cross-coded / unisex fluid foundation piece"
+gar_pleated_wool_skirt_culotte,"Architectural Pleated Wool Culotte / Midi",pleated-wool-culotte-black,bottom,androgynous,0,true,"Deliberately cross-coded / unisex fluid foundation piece"
+gar_down_puffer_matte_black,"Matte Lightweight Down Puffer",matte-down-puffer-black,outerwear,androgynous,0,true,"Deliberately cross-coded / unisex fluid foundation piece"
+gar_kimono_noragi_charcoal,"Minimalist Noragi Jacket (Charcoal Wool)",noragi-jacket-charcoal,outerwear,androgynous,0,true,"Deliberately cross-coded / unisex fluid foundation piece"
+gar_houndstooth_raglan_coat,"Oversized Houndstooth Raglan Coat",houndstooth-raglan-coat-grey,outerwear,androgynous,0,true,"Deliberately cross-coded / unisex fluid foundation piece"
+gar_leather_mules_black,"Square-Toe Backless Leather Mules",backless-leather-mules-black,footwear,androgynous,0,true,"Deliberately cross-coded / unisex fluid foundation piece"
+gar_suede_espadrilles_sand,"Jute-Sole Suede Espadrilles (Sand)",suede-espadrilles-sand,footwear,androgynous,0,true,"Deliberately cross-coded / unisex fluid foundation piece"
+gar_leather_fisherman_sandals,"Woven Leather Fisherman Sandals (Espresso)",fisherman-sandals-espresso,footwear,androgynous,0,true,"Deliberately cross-coded / unisex fluid foundation piece"
+gar_tabi_split_toe_boot,"Split-Toe Tabi Ankle Boots (Black)",split-toe-tabi-boots-black,footwear,androgynous,0,true,"Deliberately cross-coded / unisex fluid foundation piece"
+gar_beanie_wool_black,"Ribbed Merino Fisherman Beanie (Black)",ribbed-merino-beanie-black,accessory,androgynous,0,true,"Deliberately cross-coded / unisex fluid foundation piece"
+gar_jumpsuit_utilitarian_black,"Minimal Structured Twill Jumpsuit",structured-twill-jumpsuit-black,one-piece,androgynous,0,true,"Deliberately cross-coded / unisex fluid foundation piece"
+gar_tailored_crepe_jumpsuit_black,"Wide-Leg Tailored Crepe Jumpsuit with Belt (Black)",tailored-crepe-jumpsuit-black,one-piece,feminine,1,true,"Deliberately cross-coded / unisex fluid foundation piece"
+gar_utility_linen_jumpsuit_olive,"Long-Sleeve Relaxed Utility Linen Jumpsuit (Washed Olive)",utility-linen-jumpsuit-olive,one-piece,androgynous,0,true,"Deliberately cross-coded / unisex fluid foundation piece"
+gar_fluid_unstructured_double_breasted_suit_jacket_taupe,"Unstructured Double-Breasted Fluid Jacket (Warm Taupe)",unstructured-db-jacket-taupe,outerwear,androgynous,0,true,"Deliberately cross-coded / unisex fluid foundation piece"
+gar_fluid_relaxed_drape_trousers_taupe,"Double-Pleat Fluid Drape Trousers (Warm Taupe)",fluid-drape-trousers-taupe,bottom,androgynous,0,true,"Deliberately cross-coded / unisex fluid foundation piece"
+gar_fluid_cocoon_wool_coat_heather_grey,"Oversized Cocoon Silhouette Wool Overcoat (Heather Grey)",cocoon-wool-overcoat-grey,outerwear,androgynous,0,true,"Deliberately cross-coded / unisex fluid foundation piece"
+gar_minimalist_gold_hoops,"18k Gold Vermeil Architectural Huggie Hoops",gold-vermeil-huggie-hoops,accessory,feminine,1,true,"Deliberately cross-coded / unisex fluid foundation piece"
+gar_waterproof_riding_boots_black,"Waterproof Treated Leather Tall Riding Boots (Black)",waterproof-tall-riding-boots-black,footwear,feminine,1,true,"Deliberately cross-coded / unisex fluid foundation piece"
+gar_fluid_satin_evening_shirt_black,"Fluid Silk-Satin Covered-Placket Evening Shirt (Noir)",fluid-satin-evening-shirt-noir,top,androgynous,0,true,"Deliberately cross-coded / unisex fluid foundation piece"
+gar_fluid_tuxedo_jacket_black,"Soft-Tailored Shawl-Collar Crepe Tuxedo Jacket (Black)",soft-shawl-tuxedo-jacket-black,outerwear,androgynous,0,true,"Deliberately cross-coded / unisex fluid foundation piece"
+gar_fluid_evening_trousers_black,"High-Waist Fluid Wool Crepe Pleated Evening Trousers (Black)",fluid-crepe-evening-trousers-black,bottom,androgynous,0,true,"Deliberately cross-coded / unisex fluid foundation piece"
+gar_fluid_tunic_overcoat_black,"Longline Architectural Fluid Wool Tunic Coat (Black)",fluid-tunic-overcoat-black,outerwear,androgynous,0,true,"Deliberately cross-coded / unisex fluid foundation piece"
+gar_fluid_linen_wide_trousers_sand,"Fluid Double-Pleat Pure Linen Wide Trousers (Natural Sand)",fluid-linen-wide-trousers-sand,bottom,androgynous,0,true,"Deliberately cross-coded / unisex fluid foundation piece"
+gar_fluid_camp_shirt_ecru,"Boxy Draped Silk-Tencel Camp-Collar Shirt (Ecru)",fluid-camp-shirt-ecru,top,androgynous,0,true,"Deliberately cross-coded / unisex fluid foundation piece"
+gar_fluid_open_weave_shirt_white,"Open-Weave Cotton-Linen Knit Resort Shirt (Optic White)",fluid-open-weave-shirt-white,top,androgynous,0,true,"Deliberately cross-coded / unisex fluid foundation piece"
+gar_fluid_heavy_flannel_trousers_charcoal,"Heavy Pleated Flannel Wide-Drape Trousers (Charcoal Melange)",fluid-heavy-flannel-trousers-charcoal,bottom,androgynous,0,true,"Deliberately cross-coded / unisex fluid foundation piece"
+gar_fluid_leather_slide_sandals,"Minimalist Asymmetric Padded Leather Slide Mules (Espresso)",fluid-leather-slide-mules-espresso,footwear,androgynous,0,true,"Deliberately cross-coded / unisex fluid foundation piece"
+gar_fluid_woven_loafers_black,"Breathable Hand-Woven Nappa Leather Loafers (Black)",fluid-woven-leather-loafers-black,footwear,androgynous,0,true,"Deliberately cross-coded / unisex fluid foundation piece"
+gar_fluid_evening_slippers_black,"Soft Calfskin Formal Evening Venetian Loafers (Black)",fluid-evening-venetian-slippers-black,footwear,androgynous,0,true,"Deliberately cross-coded / unisex fluid foundation piece"
+gar_fluid_all_weather_chelsea_boots_black,"Weatherproof Sculpted Fluid Chelsea Boots (Pitch Black)",fluid-weatherproof-chelsea-boots-black,footwear,androgynous,0,true,"Deliberately cross-coded / unisex fluid foundation piece"
+gar_fluid_mesh_knit_derbies_black,"Technical Knit & Calfskin Hybrid Derbies (Black)",fluid-knit-hybrid-derbies-black,footwear,androgynous,0,true,"Deliberately cross-coded / unisex fluid foundation piece"
+gar_fluid_lug_sole_monk_strap_shoes_black,"Single-Strap Minimalist Monk Shoes on Commando Sole (Black)",fluid-commando-monk-strap-black,footwear,androgynous,0,true,"Deliberately cross-coded / unisex fluid foundation piece"

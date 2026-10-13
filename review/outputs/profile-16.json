@@ -1,0 +1,743 @@
+{
+  "profileId": "usr_p16",
+  "title": "Profile 16: Androgynous + Wedding Guest evening",
+  "profile": {
+    "user": {
+      "id": "usr_p16",
+      "name": "Androgynous Evening Wedding User",
+      "handle": "p16",
+      "createdAt": "2026-10-12T00:00:00.000Z",
+      "styleProfile": {
+        "id": "sty_usr_p16",
+        "userId": "usr_p16",
+        "dominantAestheticSlugs": [
+          "minimal"
+        ],
+        "styleVector": {
+          "formality": 3,
+          "structure": 3,
+          "volume": 3,
+          "colorIntensity": 1,
+          "contrast": 3,
+          "pattern": 1,
+          "texture": 2,
+          "ornamentation": 1,
+          "classicTrend": 3,
+          "utilityPolish": 3,
+          "genderCoding": "androgynous"
+        },
+        "preferences": {
+          "preferredStyleSlugs": [
+            "minimal"
+          ],
+          "dislikedStyleSlugs": [],
+          "preferredColors": [
+            "black",
+            "white",
+            "charcoal"
+          ],
+          "dislikedColors": [],
+          "preferredFits": [
+            "relaxed",
+            "regular"
+          ],
+          "dislikedFits": [],
+          "preferredSilhouettes": [],
+          "dislikedSilhouettes": [],
+          "fitProportions": {
+            "preferredFits": [
+              "relaxed",
+              "regular"
+            ],
+            "dislikedFits": [],
+            "topVolume": 3,
+            "bottomVolume": 3,
+            "preferredSilhouettes": [],
+            "dislikedSilhouettes": [],
+            "layeringPreference": "moderate",
+            "garmentLengthPreferences": {
+              "top": "regular",
+              "bottom": "regular"
+            }
+          },
+          "modestyLevel": "unrestricted",
+          "userConfirmedUndertone": "neutral",
+          "genderCodingDirection": "androgynous",
+          "styleExpression": "androgynous",
+          "preferredFormalityRange": [
+            4,
+            5
+          ],
+          "maxMaintenanceTolerance": "moderate",
+          "accessoryAffinities": []
+        },
+        "feedbackProfile": {
+          "history": [],
+          "learnedStyleAffinities": {},
+          "learnedColorAffinities": {},
+          "learnedSilhouetteAffinities": {},
+          "learnedFitAffinities": {},
+          "repeatPassCount": {}
+        },
+        "evidenceSignals": {
+          "hairTexture": {
+            "value": "straight",
+            "authority": "USER_ENTERED",
+            "confidence": 1,
+            "source": "manual_input",
+            "updatedAt": "2026-10-12T00:00:00.000Z"
+          }
+        },
+        "updatedAt": "2026-10-12T00:00:00.000Z"
+      }
+    },
+    "evidenceHierarchy": {
+      "userConfirmedUndertone": "neutral",
+      "modestyLevel": "unrestricted",
+      "styleExpression": "androgynous",
+      "evidenceSignals": {
+        "hairTexture": {
+          "value": "straight",
+          "authority": "USER_ENTERED",
+          "confidence": 1,
+          "source": "manual_input",
+          "updatedAt": "2026-10-12T00:00:00.000Z"
+        }
+      }
+    }
+  },
+  "context": {
+    "occasion": {
+      "id": "occ_wedding",
+      "slug": "wedding-guest",
+      "name": "Wedding Guest",
+      "category": "ceremony",
+      "defaultFormality": 4,
+      "allowableFormalityRange": [
+        3,
+        5
+      ],
+      "guidelines": [
+        "Honor ceremonial formality without overshadowing the hosts",
+        "Never wear all-white; choose rich navy, charcoal, or refined earthy linen suits",
+        "Pair with polished oxfords or dress loafers"
+      ],
+      "restrictedGarmentCategories": [
+        "casual-denim",
+        "sneakers",
+        "t-shirts",
+        "shorts",
+        "hoodies"
+      ],
+      "keyStyleAffinities": [
+        "formal",
+        "old-money",
+        "smart-casual"
+      ],
+      "subParameters": [
+        "day",
+        "evening"
+      ],
+      "timelessOrTrend": "TIMELESS",
+      "reviewDate": "2026-10-01",
+      "createdAt": "2026-10-01",
+      "updatedAt": "2026-10-01"
+    },
+    "targetFormality": 4,
+    "temperatureLevel": "mild",
+    "condition": "dry",
+    "isWeatherConfirmed": true
+  },
+  "result": {
+    "looksCount": 3,
+    "contextApplied": "Wedding Guest",
+    "vetoedCandidateCount": 19,
+    "evaluatedCandidateCount": 51,
+    "looks": [
+      {
+        "tier": "BEST_MATCH",
+        "tierRationale": "Optimal convergence of your 10D style vector, event formality, and physical proportions.",
+        "confidence": {
+          "state": "STRONG",
+          "explanation": "Supported by verified user formality, confirmed climate, explicit style vector, and grooming inputs.",
+          "toIncreaseConfidence": "Add specific footwear preferences to further personalize lower-leg grounding."
+        },
+        "overallHarmonyScore": 0.85,
+        "reasons": [
+          "Directly mirrors your personal style axis coordinates.",
+          "Balanced regular configuration",
+          "Tonal neutral palette ensures high versatility and effortless visual cohesion."
+        ],
+        "cautions": [],
+        "outfit": {
+          "id": "outfit_fluid_cold_formal_tunic_01",
+          "title": "Longline Architectural Fluid Tunic Coat & Evening Slacks",
+          "primaryStyleSlug": "minimal",
+          "formality": 5,
+          "score": 0.85,
+          "items": [
+            {
+              "category": "top",
+              "subcategory": "dress-shirt",
+              "name": "Fluid Silk-Satin Covered-Placket Evening Shirt (Noir)",
+              "material": "220gsm heavy silk-satin with liquid drape",
+              "color": "noir-black",
+              "fit": "relaxed",
+              "modestyRating": "covered-arms",
+              "genderCoding": "androgynous",
+              "layerPosition": 0
+            },
+            {
+              "category": "outerwear",
+              "subcategory": "overcoat",
+              "name": "Longline Architectural Fluid Wool Tunic Coat (Black)",
+              "material": "360gsm double-faced soft wool-cashmere",
+              "color": "black",
+              "fit": "relaxed",
+              "modestyRating": "covered-both",
+              "genderCoding": "androgynous",
+              "layerPosition": 1
+            },
+            {
+              "category": "bottom",
+              "subcategory": "trousers",
+              "name": "High-Waist Fluid Wool Crepe Pleated Evening Trousers (Black)",
+              "material": "290gsm high-twist wool crepe with fluid drape",
+              "color": "black",
+              "fit": "relaxed",
+              "modestyRating": "high-coverage",
+              "genderCoding": "androgynous",
+              "layerPosition": 0
+            },
+            {
+              "category": "footwear",
+              "subcategory": "boots",
+              "name": "Weatherproof Sculpted Fluid Chelsea Boots (Pitch Black)",
+              "material": "Weatherproof hydrophobized calfskin leather",
+              "color": "black",
+              "fit": "regular",
+              "modestyRating": "high-coverage",
+              "genderCoding": "androgynous",
+              "layerPosition": 0
+            }
+          ],
+          "factors": [
+            {
+              "category": "style_affinity",
+              "weight": 3.5,
+              "score": 0.84,
+              "reason": "Coordinate affinity (84%) with your 10D style vector."
+            },
+            {
+              "category": "silhouette_balance",
+              "weight": 3,
+              "score": 0.93,
+              "reason": "Balanced regular configuration"
+            },
+            {
+              "category": "color_harmony",
+              "weight": 3,
+              "score": 0.92,
+              "reason": "Color story: tonal-neutral"
+            },
+            {
+              "category": "occasion_fit",
+              "weight": 2.5,
+              "score": 0.75,
+              "reason": "Formality fit for Wedding Guest (Level 5)"
+            },
+            {
+              "category": "weather_fit",
+              "weight": 2,
+              "score": 0.75,
+              "reason": "Ambient temperature and breathability calibration"
+            },
+            {
+              "category": "expression_affinity",
+              "weight": 1,
+              "score": 0.8,
+              "reason": "Soft expression alignment with androgynous presentation preference."
+            },
+            {
+              "category": "preference_reinforcement",
+              "weight": 0.5,
+              "score": 0.9,
+              "reason": "Echoes complexion undertone with balanced face-framing values."
+            }
+          ],
+          "traceableReasons": [
+            {
+              "reasonId": "rea_outfit_fluid_cold_formal_tunic_01_0_1791915078516",
+              "text": "Directly mirrors your personal style axis coordinates.",
+              "signalIds": [
+                "user.styleProfile.styleVector",
+                "user.styleProfile.preferences.preferredStyleSlugs"
+              ],
+              "knowledgeEntryIds": [
+                "gar_fluid_satin_evening_shirt_black",
+                "gar_fluid_tunic_overcoat_black",
+                "gar_fluid_evening_trousers_black",
+                "gar_fluid_all_weather_chelsea_boots_black",
+                "style_minimal"
+              ],
+              "factor": "style_affinity",
+              "authority": "USER_ENTERED",
+              "isAssumed": false
+            },
+            {
+              "reasonId": "rea_outfit_fluid_cold_formal_tunic_01_1_1791915078516",
+              "text": "Balanced regular configuration",
+              "signalIds": [
+                "user.styleProfile.preferences.preferredStyleSlugs",
+                "context.occasion"
+              ],
+              "knowledgeEntryIds": [
+                "gar_fluid_satin_evening_shirt_black",
+                "gar_fluid_tunic_overcoat_black",
+                "gar_fluid_evening_trousers_black",
+                "gar_fluid_all_weather_chelsea_boots_black"
+              ],
+              "factor": "general",
+              "authority": "USER_ENTERED",
+              "isAssumed": false
+            },
+            {
+              "reasonId": "rea_outfit_fluid_cold_formal_tunic_01_2_1791915078516",
+              "text": "Tonal neutral palette ensures high versatility and effortless visual cohesion.",
+              "signalIds": [
+                "user.styleProfile.preferences.preferredStyleSlugs",
+                "context.occasion"
+              ],
+              "knowledgeEntryIds": [
+                "gar_fluid_satin_evening_shirt_black",
+                "gar_fluid_tunic_overcoat_black",
+                "gar_fluid_evening_trousers_black",
+                "gar_fluid_all_weather_chelsea_boots_black"
+              ],
+              "factor": "general",
+              "authority": "USER_ENTERED",
+              "isAssumed": false
+            }
+          ],
+          "stylingAdvice": [
+            "Aligns with your preferred fit geometry."
+          ]
+        },
+        "hairStyle": {
+          "name": "Textured French Crop",
+          "slug": "textured-crop",
+          "score": 0.85,
+          "reasons": [
+            "Fits within your preferred moderate maintenance threshold.",
+            "Appropriate formality for Wedding Guest.",
+            "Directly aligns with your preferred minimal aesthetic"
+          ]
+        },
+        "groomingStyle": {
+          "name": "Designer Stubble (3-Day Shadow)",
+          "slug": "designer-stubble",
+          "score": 0.84,
+          "reasons": [
+            "Conforms with your moderate grooming maintenance routine.",
+            "Appropriate grooming polish for Wedding Guest.",
+            "Directly aligns with your preferred minimal aesthetic"
+          ]
+        }
+      },
+      {
+        "tier": "SAFE",
+        "tierRationale": "High familiarity and effortless ease. Relies on proven proportions and classic foundational tones.",
+        "confidence": {
+          "state": "STRONG",
+          "explanation": "Supported by verified user formality, confirmed climate, explicit style vector, and grooming inputs.",
+          "toIncreaseConfidence": "Add specific footwear preferences to further personalize lower-leg grounding."
+        },
+        "overallHarmonyScore": 0.84,
+        "reasons": [
+          "Cropped upper proportion offset by expansive lower volume",
+          "Strong contrast between light and deep neutral values establishes crisp visual separation.",
+          "Default climate baseline assumed; weather context was not specified."
+        ],
+        "cautions": [],
+        "outfit": {
+          "id": "outfit_korean_minimal_01",
+          "title": "Monochrome Fluid Tailoring",
+          "primaryStyleSlug": "korean-minimal",
+          "formality": 3,
+          "score": 0.84,
+          "items": [
+            {
+              "category": "top",
+              "subcategory": "t-shirt",
+              "name": "Heavyweight Boxy Tee (Off-White)",
+              "material": "300gsm combed organic cotton",
+              "color": "off-white",
+              "fit": "boxy",
+              "modestyRating": "standard",
+              "genderCoding": "androgynous",
+              "layerPosition": 0
+            },
+            {
+              "category": "outerwear",
+              "subcategory": "blazer",
+              "name": "Deconstructed Wool Blazer",
+              "material": "tropical virgin wool",
+              "color": "charcoal",
+              "fit": "relaxed",
+              "modestyRating": "high-coverage",
+              "genderCoding": "androgynous",
+              "layerPosition": 1
+            },
+            {
+              "category": "bottom",
+              "subcategory": "trousers",
+              "name": "Double-Pleated Wide-Leg Trousers",
+              "material": "wool gabardine blend",
+              "color": "pitch-black",
+              "fit": "relaxed",
+              "modestyRating": "high-coverage",
+              "genderCoding": "androgynous",
+              "layerPosition": 0
+            },
+            {
+              "category": "footwear",
+              "subcategory": "derbies",
+              "name": "Commando-Sole Leather Derbies",
+              "material": "polished binder calf leather, Vibram lug sole",
+              "color": "polished-black",
+              "fit": "regular",
+              "modestyRating": "standard",
+              "genderCoding": "androgynous",
+              "layerPosition": 0
+            }
+          ],
+          "factors": [
+            {
+              "category": "style_affinity",
+              "weight": 3.5,
+              "score": 0.79,
+              "reason": "Coordinate affinity (79%) with your 10D style vector."
+            },
+            {
+              "category": "silhouette_balance",
+              "weight": 3,
+              "score": 0.96,
+              "reason": "Cropped upper proportion offset by expansive lower volume"
+            },
+            {
+              "category": "color_harmony",
+              "weight": 3,
+              "score": 0.94,
+              "reason": "Color story: strong-contrast"
+            },
+            {
+              "category": "occasion_fit",
+              "weight": 2.5,
+              "score": 0.75,
+              "reason": "Formality fit for Wedding Guest (Level 3)"
+            },
+            {
+              "category": "weather_fit",
+              "weight": 2,
+              "score": 0.75,
+              "reason": "Ambient temperature and breathability calibration"
+            },
+            {
+              "category": "expression_affinity",
+              "weight": 1,
+              "score": 0.8,
+              "reason": "Soft expression alignment with androgynous presentation preference."
+            },
+            {
+              "category": "preference_reinforcement",
+              "weight": 0.5,
+              "score": 0.9,
+              "reason": "Echoes complexion undertone with balanced face-framing values."
+            }
+          ],
+          "traceableReasons": [
+            {
+              "reasonId": "rea_outfit_korean_minimal_01_0_1791915078516",
+              "text": "Cropped upper proportion offset by expansive lower volume",
+              "signalIds": [
+                "user.styleProfile.preferences.preferredStyleSlugs",
+                "context.occasion"
+              ],
+              "knowledgeEntryIds": [
+                "gar_box_tee_white",
+                "gar_deconstructed_blazer_charcoal",
+                "gar_wide_trousers_black",
+                "gar_chunky_derbies_black"
+              ],
+              "factor": "general",
+              "authority": "USER_ENTERED",
+              "isAssumed": false
+            },
+            {
+              "reasonId": "rea_outfit_korean_minimal_01_1_1791915078516",
+              "text": "Strong contrast between light and deep neutral values establishes crisp visual separation.",
+              "signalIds": [
+                "user.styleProfile.preferences.preferredStyleSlugs",
+                "context.occasion"
+              ],
+              "knowledgeEntryIds": [
+                "gar_box_tee_white",
+                "gar_deconstructed_blazer_charcoal",
+                "gar_wide_trousers_black",
+                "gar_chunky_derbies_black"
+              ],
+              "factor": "general",
+              "authority": "USER_ENTERED",
+              "isAssumed": false
+            },
+            {
+              "reasonId": "rea_outfit_korean_minimal_01_2_1791915078516",
+              "text": "Default climate baseline assumed; weather context was not specified.",
+              "signalIds": [
+                "context.temperatureLevel",
+                "context.condition",
+                "context.weather"
+              ],
+              "knowledgeEntryIds": [
+                "gar_box_tee_white",
+                "gar_deconstructed_blazer_charcoal",
+                "gar_wide_trousers_black",
+                "gar_chunky_derbies_black"
+              ],
+              "factor": "weather_fit",
+              "authority": "USER_ENTERED",
+              "isAssumed": false
+            }
+          ],
+          "stylingAdvice": [
+            "Accentuates waistline geometry and creates an elongated vertical lower line."
+          ]
+        },
+        "hairStyle": {
+          "name": "Textured French Crop",
+          "slug": "textured-crop",
+          "score": 0.85,
+          "reasons": [
+            "Fits within your preferred moderate maintenance threshold.",
+            "Appropriate formality for Wedding Guest.",
+            "Directly aligns with your preferred minimal aesthetic"
+          ]
+        },
+        "groomingStyle": {
+          "name": "Designer Stubble (3-Day Shadow)",
+          "slug": "designer-stubble",
+          "score": 0.84,
+          "reasons": [
+            "Conforms with your moderate grooming maintenance routine.",
+            "Appropriate grooming polish for Wedding Guest.",
+            "Directly aligns with your preferred minimal aesthetic"
+          ]
+        }
+      },
+      {
+        "tier": "STRETCH",
+        "tierRationale": "Curated directional exploration. Pushes volume and textural depth while strictly respecting dress codes.",
+        "confidence": {
+          "state": "STRONG",
+          "explanation": "Supported by verified user formality, confirmed climate, explicit style vector, and grooming inputs.",
+          "toIncreaseConfidence": "Add specific footwear preferences to further personalize lower-leg grounding."
+        },
+        "overallHarmonyScore": 0.84,
+        "reasons": [
+          "Structured upper anchor balanced with fluid wide-leg lower volume",
+          "Tonal neutral palette ensures high versatility and effortless visual cohesion.",
+          "Default climate baseline assumed; weather context was not specified."
+        ],
+        "cautions": [],
+        "outfit": {
+          "id": "outfit_fluid_cold_cocoon_coat_01",
+          "title": "Cocoon Wool Overcoat & Double-Pleated Trousers",
+          "primaryStyleSlug": "korean-minimal",
+          "formality": 3,
+          "score": 0.84,
+          "items": [
+            {
+              "category": "top",
+              "subcategory": "knitwear",
+              "name": "Minimal Ribbed Mock Neck",
+              "material": "compact modal-wool jersey",
+              "color": "jet-black",
+              "fit": "slim",
+              "modestyRating": "high-coverage",
+              "genderCoding": "androgynous",
+              "layerPosition": 0
+            },
+            {
+              "category": "outerwear",
+              "subcategory": "overcoat",
+              "name": "Oversized Cocoon Silhouette Wool Overcoat (Heather Grey)",
+              "material": "460gsm boiled virgin wool",
+              "color": "heather-grey",
+              "fit": "oversized",
+              "modestyRating": "covered-both",
+              "genderCoding": "androgynous",
+              "layerPosition": 1
+            },
+            {
+              "category": "bottom",
+              "subcategory": "trousers",
+              "name": "Double-Pleated Wide-Leg Trousers",
+              "material": "wool gabardine blend",
+              "color": "pitch-black",
+              "fit": "relaxed",
+              "modestyRating": "high-coverage",
+              "genderCoding": "androgynous",
+              "layerPosition": 0
+            },
+            {
+              "category": "footwear",
+              "subcategory": "boot",
+              "name": "Commando Lug-Sole Waterproof Chelsea Boots",
+              "material": "hydrophobic full-grain calf leather, Vibram lug sole",
+              "color": "matte-black",
+              "fit": "regular",
+              "modestyRating": "standard",
+              "genderCoding": "androgynous",
+              "layerPosition": 0
+            },
+            {
+              "category": "accessory",
+              "subcategory": "bag",
+              "name": "Architectural Box-Calf Minimal Tote Bag (Black)",
+              "material": "Smooth Italian calfskin with microfiber lining",
+              "color": "black",
+              "fit": "regular",
+              "modestyRating": "unrestricted",
+              "genderCoding": "androgynous",
+              "layerPosition": 0
+            }
+          ],
+          "factors": [
+            {
+              "category": "style_affinity",
+              "weight": 3.5,
+              "score": 0.79,
+              "reason": "Coordinate affinity (79%) with your 10D style vector."
+            },
+            {
+              "category": "silhouette_balance",
+              "weight": 3,
+              "score": 0.95,
+              "reason": "Structured upper anchor balanced with fluid wide-leg lower volume"
+            },
+            {
+              "category": "color_harmony",
+              "weight": 3,
+              "score": 0.92,
+              "reason": "Color story: tonal-neutral"
+            },
+            {
+              "category": "occasion_fit",
+              "weight": 2.5,
+              "score": 0.75,
+              "reason": "Formality fit for Wedding Guest (Level 3)"
+            },
+            {
+              "category": "weather_fit",
+              "weight": 2,
+              "score": 0.75,
+              "reason": "Ambient temperature and breathability calibration"
+            },
+            {
+              "category": "expression_affinity",
+              "weight": 1,
+              "score": 0.8,
+              "reason": "Soft expression alignment with androgynous presentation preference."
+            },
+            {
+              "category": "preference_reinforcement",
+              "weight": 0.5,
+              "score": 0.9,
+              "reason": "Echoes complexion undertone with balanced face-framing values."
+            }
+          ],
+          "traceableReasons": [
+            {
+              "reasonId": "rea_outfit_fluid_cold_cocoon_coat_01_0_1791915078516",
+              "text": "Structured upper anchor balanced with fluid wide-leg lower volume",
+              "signalIds": [
+                "user.styleProfile.preferences.fitProportions",
+                "user.styleProfile.preferences.preferredFits"
+              ],
+              "knowledgeEntryIds": [
+                "gar_mockneck_black",
+                "gar_fluid_cocoon_wool_coat_heather_grey",
+                "gar_wide_trousers_black",
+                "gar_chelsea_boot_lug_sole_black",
+                "gar_leather_structured_tote_black"
+              ],
+              "factor": "silhouette_balance",
+              "authority": "USER_ENTERED",
+              "isAssumed": false
+            },
+            {
+              "reasonId": "rea_outfit_fluid_cold_cocoon_coat_01_1_1791915078516",
+              "text": "Tonal neutral palette ensures high versatility and effortless visual cohesion.",
+              "signalIds": [
+                "user.styleProfile.preferences.preferredStyleSlugs",
+                "context.occasion"
+              ],
+              "knowledgeEntryIds": [
+                "gar_mockneck_black",
+                "gar_fluid_cocoon_wool_coat_heather_grey",
+                "gar_wide_trousers_black",
+                "gar_chelsea_boot_lug_sole_black",
+                "gar_leather_structured_tote_black"
+              ],
+              "factor": "general",
+              "authority": "USER_ENTERED",
+              "isAssumed": false
+            },
+            {
+              "reasonId": "rea_outfit_fluid_cold_cocoon_coat_01_2_1791915078516",
+              "text": "Default climate baseline assumed; weather context was not specified.",
+              "signalIds": [
+                "context.temperatureLevel",
+                "context.condition",
+                "context.weather"
+              ],
+              "knowledgeEntryIds": [
+                "gar_mockneck_black",
+                "gar_fluid_cocoon_wool_coat_heather_grey",
+                "gar_wide_trousers_black",
+                "gar_chelsea_boot_lug_sole_black",
+                "gar_leather_structured_tote_black"
+              ],
+              "factor": "weather_fit",
+              "authority": "USER_ENTERED",
+              "isAssumed": false
+            }
+          ],
+          "stylingAdvice": [
+            "Tucking the top defines the waistline and emphasizes the architectural drape of trousers."
+          ]
+        },
+        "hairStyle": {
+          "name": "Textured French Crop",
+          "slug": "textured-crop",
+          "score": 0.85,
+          "reasons": [
+            "Fits within your preferred moderate maintenance threshold.",
+            "Appropriate formality for Wedding Guest.",
+            "Directly aligns with your preferred minimal aesthetic"
+          ]
+        },
+        "groomingStyle": {
+          "name": "Designer Stubble (3-Day Shadow)",
+          "slug": "designer-stubble",
+          "score": 0.84,
+          "reasons": [
+            "Conforms with your moderate grooming maintenance routine.",
+            "Appropriate grooming polish for Wedding Guest.",
+            "Directly aligns with your preferred minimal aesthetic"
+          ]
+        }
+      }
+    ]
+  }
+}

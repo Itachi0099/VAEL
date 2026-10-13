@@ -147,8 +147,8 @@
   "result": {
     "looksCount": 3,
     "contextApplied": "University / College Campus",
-    "vetoedCandidateCount": 29,
-    "evaluatedCandidateCount": 39,
+    "vetoedCandidateCount": 36,
+    "evaluatedCandidateCount": 51,
     "looks": [
       {
         "tier": "BEST_MATCH",
@@ -161,13 +161,13 @@
         "overallHarmonyScore": 0.91,
         "reasons": [
           "Directly mirrors your personal style axis coordinates.",
-          "Balanced regular configuration",
+          "Contemporary dual-volume drape with intentional spatial presence",
           "Tonal neutral palette ensures high versatility and effortless visual cohesion."
         ],
         "cautions": [],
         "outfit": {
-          "id": "outfit_masculine_hot_casual_linen_01",
-          "title": "Fine Irish Linen Guayabera & Trousers",
+          "id": "outfit_fluid_hot_resort_linen_01",
+          "title": "Draped Silk-Tencel Camp Shirt & Wide Linen Trousers",
           "primaryStyleSlug": "minimal",
           "formality": 2,
           "score": 0.91,
@@ -175,20 +175,20 @@
             {
               "category": "top",
               "subcategory": "button-down",
-              "name": "Traditional Pleated Guayabera (White)",
-              "material": "100% fine Irish linen",
-              "color": "white",
-              "fit": "relaxed",
+              "name": "Boxy Draped Silk-Tencel Camp-Collar Shirt (Ecru)",
+              "material": "160gsm silk-tencel fluid twill",
+              "color": "ecru",
+              "fit": "boxy",
               "modestyRating": "standard",
-              "genderCoding": "masculine",
+              "genderCoding": "androgynous",
               "layerPosition": 0
             },
             {
               "category": "bottom",
               "subcategory": "trousers",
-              "name": "Relaxed Linen Drawstring Trousers",
-              "material": "100% Belgian washed linen",
-              "color": "ecru",
+              "name": "Fluid Double-Pleat Pure Linen Wide Trousers (Natural Sand)",
+              "material": "210gsm washed Normandy flax linen",
+              "color": "sand",
               "fit": "relaxed",
               "modestyRating": "high-coverage",
               "genderCoding": "androgynous",
@@ -196,10 +196,10 @@
             },
             {
               "category": "footwear",
-              "subcategory": "sneakers",
-              "name": "Minimal Calfskin Low-Top Sneakers",
-              "material": "Italian Nappa leather, Margom rubber sole",
-              "color": "pure-white",
+              "subcategory": "sandals",
+              "name": "Minimalist Asymmetric Padded Leather Slide Mules (Espresso)",
+              "material": "Soft vegetable-tanned calfskin with cushioned footbed",
+              "color": "espresso",
               "fit": "regular",
               "modestyRating": "standard",
               "genderCoding": "androgynous",
@@ -216,8 +216,8 @@
             {
               "category": "silhouette_balance",
               "weight": 3,
-              "score": 0.93,
-              "reason": "Balanced regular configuration"
+              "score": 0.92,
+              "reason": "Contemporary dual-volume drape with intentional spatial presence"
             },
             {
               "category": "color_harmony",
@@ -240,7 +240,7 @@
             {
               "category": "expression_affinity",
               "weight": 1,
-              "score": 0.7,
+              "score": 0.8,
               "reason": "Soft expression alignment with androgynous presentation preference."
             },
             {
@@ -252,16 +252,16 @@
           ],
           "traceableReasons": [
             {
-              "reasonId": "rea_outfit_masculine_hot_casual_linen_01_0_1791900814824",
+              "reasonId": "rea_outfit_fluid_hot_resort_linen_01_0_1791915078512",
               "text": "Directly mirrors your personal style axis coordinates.",
               "signalIds": [
                 "user.styleProfile.styleVector",
                 "user.styleProfile.preferences.preferredStyleSlugs"
               ],
               "knowledgeEntryIds": [
-                "gar_guayabera_linen_white",
-                "gar_linen_drawstring_ecru",
-                "gar_minimal_sneaker_white",
+                "gar_fluid_camp_shirt_ecru",
+                "gar_fluid_linen_wide_trousers_sand",
+                "gar_fluid_leather_slide_sandals",
                 "style_minimal"
               ],
               "factor": "style_affinity",
@@ -269,32 +269,32 @@
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_masculine_hot_casual_linen_01_1_1791900814824",
-              "text": "Balanced regular configuration",
+              "reasonId": "rea_outfit_fluid_hot_resort_linen_01_1_1791915078512",
+              "text": "Contemporary dual-volume drape with intentional spatial presence",
               "signalIds": [
-                "user.styleProfile.preferences.preferredStyleSlugs",
-                "context.occasion"
+                "user.styleProfile.preferences.fitProportions",
+                "user.styleProfile.preferences.preferredFits"
               ],
               "knowledgeEntryIds": [
-                "gar_guayabera_linen_white",
-                "gar_linen_drawstring_ecru",
-                "gar_minimal_sneaker_white"
+                "gar_fluid_camp_shirt_ecru",
+                "gar_fluid_linen_wide_trousers_sand",
+                "gar_fluid_leather_slide_sandals"
               ],
-              "factor": "general",
+              "factor": "silhouette_balance",
               "authority": "USER_ENTERED",
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_masculine_hot_casual_linen_01_2_1791900814824",
+              "reasonId": "rea_outfit_fluid_hot_resort_linen_01_2_1791915078512",
               "text": "Tonal neutral palette ensures high versatility and effortless visual cohesion.",
               "signalIds": [
                 "user.styleProfile.preferences.preferredStyleSlugs",
                 "context.occasion"
               ],
               "knowledgeEntryIds": [
-                "gar_guayabera_linen_white",
-                "gar_linen_drawstring_ecru",
-                "gar_minimal_sneaker_white"
+                "gar_fluid_camp_shirt_ecru",
+                "gar_fluid_linen_wide_trousers_sand",
+                "gar_fluid_leather_slide_sandals"
               ],
               "factor": "general",
               "authority": "USER_ENTERED",
@@ -302,7 +302,7 @@
             }
           ],
           "stylingAdvice": [
-            "Aligns with your preferred fit geometry."
+            "Ground with substantial footwear (chunky derbies, solid boots) to anchor the fluid hemline."
           ]
         },
         "hairStyle": {
@@ -430,7 +430,7 @@
           ],
           "traceableReasons": [
             {
-              "reasonId": "rea_outfit_summer_linen_01_0_1791900814824",
+              "reasonId": "rea_outfit_summer_linen_01_0_1791915078512",
               "text": "Balanced regular configuration",
               "signalIds": [
                 "user.styleProfile.preferences.preferredStyleSlugs",
@@ -446,7 +446,7 @@
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_summer_linen_01_1_1791900814824",
+              "reasonId": "rea_outfit_summer_linen_01_1_1791915078512",
               "text": "Tonal neutral palette ensures high versatility and effortless visual cohesion.",
               "signalIds": [
                 "user.styleProfile.preferences.preferredStyleSlugs",
@@ -462,7 +462,7 @@
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_summer_linen_01_2_1791900814824",
+              "reasonId": "rea_outfit_summer_linen_01_2_1791915078512",
               "text": "Aligned to University / College Campus formality.",
               "signalIds": [
                 "context.occasion",
@@ -512,61 +512,48 @@
           "explanation": "Supported by verified user formality, confirmed climate, explicit style vector, and grooming inputs.",
           "toIncreaseConfidence": "Add specific footwear preferences to further personalize lower-leg grounding."
         },
-        "overallHarmonyScore": 0.87,
+        "overallHarmonyScore": 0.85,
         "reasons": [
-          "Harmonious classic proportion with uniform clean linear cadence",
-          "Harmonious balance across complementary tonal depths.",
-          "Neutral tonal temperature balance relative to undertone."
+          "Balanced regular configuration",
+          "Strong contrast between light and deep neutral values establishes crisp visual separation.",
+          "High breathability (140gsm ultra-breathable TENCEL modal jersey) supports natural airflow in hot conditions."
         ],
-        "cautions": [
-          "May hold moisture under high humidity."
-        ],
+        "cautions": [],
         "outfit": {
-          "id": "outfit_masculine_summer_seersucker_01",
-          "title": "Breathable Seersucker Summer Set",
-          "primaryStyleSlug": "smart-casual",
-          "formality": 2,
-          "score": 0.87,
+          "id": "outfit_hot_casual_modal_01",
+          "title": "Airy Featherweight Modal & Pure Linen",
+          "primaryStyleSlug": "casual",
+          "formality": 1,
+          "score": 0.85,
           "items": [
             {
               "category": "top",
-              "subcategory": "button-down",
-              "name": "Textured Seersucker Short-Sleeve Shirt",
-              "material": "100% puckered cotton seersucker",
-              "color": "deep-navy",
-              "fit": "regular",
-              "modestyRating": "standard",
-              "genderCoding": "masculine",
+              "subcategory": "t-shirt",
+              "name": "Airy Featherweight Modal Lounge Tee (Black)",
+              "material": "140gsm ultra-breathable TENCEL modal jersey",
+              "color": "pitch-black",
+              "fit": "relaxed",
+              "modestyRating": "covered-both",
+              "genderCoding": "androgynous",
               "layerPosition": 0
             },
             {
               "category": "bottom",
               "subcategory": "trousers",
-              "name": "Pleated Seersucker Summer Trousers",
-              "material": "100% cotton seersucker",
-              "color": "blue-and-white-stripe",
-              "fit": "regular",
+              "name": "Relaxed Linen Drawstring Trousers",
+              "material": "100% Belgian washed linen",
+              "color": "ecru",
+              "fit": "relaxed",
               "modestyRating": "high-coverage",
-              "genderCoding": "masculine",
+              "genderCoding": "androgynous",
               "layerPosition": 0
             },
             {
               "category": "footwear",
-              "subcategory": "loafers",
-              "name": "Gold-Hardware Horsebit Loafers (Black)",
-              "material": "calfskin leather, stitched leather sole",
-              "color": "polished-black",
-              "fit": "regular",
-              "modestyRating": "standard",
-              "genderCoding": "masculine",
-              "layerPosition": 0
-            },
-            {
-              "category": "accessory",
-              "subcategory": "hat",
-              "name": "Genuine Handwoven Toquilla Straw Panama Hat",
-              "material": "100% Ecuadorian toquilla palm straw",
-              "color": "natural-straw",
+              "subcategory": "sneakers",
+              "name": "Minimal Calfskin Low-Top Sneakers",
+              "material": "Italian Nappa leather, Margom rubber sole",
+              "color": "pure-white",
               "fit": "regular",
               "modestyRating": "standard",
               "genderCoding": "androgynous",
@@ -577,37 +564,37 @@
             {
               "category": "style_affinity",
               "weight": 3.5,
-              "score": 0.76,
-              "reason": "Coordinate affinity (76%) with your 10D style vector."
+              "score": 0.71,
+              "reason": "Coordinate affinity (71%) with your 10D style vector."
             },
             {
               "category": "silhouette_balance",
               "weight": 3,
-              "score": 0.98,
-              "reason": "Harmonious classic proportion with uniform clean linear cadence"
+              "score": 0.93,
+              "reason": "Balanced regular configuration"
             },
             {
               "category": "color_harmony",
               "weight": 3,
-              "score": 0.82,
-              "reason": "Color story: analogous"
+              "score": 0.94,
+              "reason": "Color story: strong-contrast"
             },
             {
               "category": "occasion_fit",
               "weight": 2.5,
-              "score": 1,
-              "reason": "Formality fit for University / College Campus (Level 2)"
+              "score": 0.75,
+              "reason": "Formality fit for University / College Campus (Level 1)"
             },
             {
               "category": "weather_fit",
               "weight": 2,
-              "score": 0.94,
+              "score": 0.98,
               "reason": "Ambient temperature and breathability calibration"
             },
             {
               "category": "expression_affinity",
               "weight": 1,
-              "score": 0.575,
+              "score": 0.8,
               "reason": "Soft expression alignment with androgynous presentation preference."
             },
             {
@@ -619,59 +606,56 @@
           ],
           "traceableReasons": [
             {
-              "reasonId": "rea_outfit_masculine_summer_seersucker_01_0_1791900814824",
-              "text": "Harmonious classic proportion with uniform clean linear cadence",
+              "reasonId": "rea_outfit_hot_casual_modal_01_0_1791915078512",
+              "text": "Balanced regular configuration",
               "signalIds": [
                 "user.styleProfile.preferences.preferredStyleSlugs",
                 "context.occasion"
               ],
               "knowledgeEntryIds": [
-                "gar_seersucker_shirt_navy",
-                "gar_seersucker_trousers_sky_blue",
-                "gar_horsebit_loafer_black",
-                "gar_panama_hat_straw"
+                "gar_breathable_modal_lounge_tee_black",
+                "gar_linen_drawstring_ecru",
+                "gar_minimal_sneaker_white"
               ],
               "factor": "general",
               "authority": "USER_ENTERED",
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_masculine_summer_seersucker_01_1_1791900814824",
-              "text": "Harmonious balance across complementary tonal depths.",
+              "reasonId": "rea_outfit_hot_casual_modal_01_1_1791915078512",
+              "text": "Strong contrast between light and deep neutral values establishes crisp visual separation.",
               "signalIds": [
-                "user.styleProfile.preferences.fitProportions",
-                "user.styleProfile.preferences.preferredFits"
+                "user.styleProfile.preferences.preferredStyleSlugs",
+                "context.occasion"
               ],
               "knowledgeEntryIds": [
-                "gar_seersucker_shirt_navy",
-                "gar_seersucker_trousers_sky_blue",
-                "gar_horsebit_loafer_black",
-                "gar_panama_hat_straw"
+                "gar_breathable_modal_lounge_tee_black",
+                "gar_linen_drawstring_ecru",
+                "gar_minimal_sneaker_white"
               ],
-              "factor": "silhouette_balance",
+              "factor": "general",
               "authority": "USER_ENTERED",
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_masculine_summer_seersucker_01_2_1791900814824",
-              "text": "Neutral tonal temperature balance relative to undertone.",
+              "reasonId": "rea_outfit_hot_casual_modal_01_2_1791915078512",
+              "text": "High breathability (140gsm ultra-breathable TENCEL modal jersey) supports natural airflow in hot conditions.",
               "signalIds": [
-                "user.styleProfile.preferences.fitProportions",
-                "user.styleProfile.preferences.preferredFits"
+                "context.temperatureLevel",
+                "context.condition",
+                "context.weather"
               ],
               "knowledgeEntryIds": [
-                "gar_seersucker_shirt_navy",
-                "gar_seersucker_trousers_sky_blue",
-                "gar_horsebit_loafer_black",
-                "gar_panama_hat_straw"
+                "gar_breathable_modal_lounge_tee_black",
+                "gar_linen_drawstring_ecru",
+                "gar_minimal_sneaker_white"
               ],
-              "factor": "silhouette_balance",
+              "factor": "weather_fit",
               "authority": "USER_ENTERED",
               "isAssumed": false
             }
           ],
           "stylingAdvice": [
-            "Elevate with subtle texture contrast between top and lower fabrication.",
             "Aligns with your preferred fit geometry."
           ]
         },

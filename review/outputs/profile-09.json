@@ -152,12 +152,202 @@
   "result": {
     "looksCount": 3,
     "contextApplied": "Modern Office / Workplace",
-    "vetoedCandidateCount": 20,
-    "evaluatedCandidateCount": 39,
+    "vetoedCandidateCount": 32,
+    "evaluatedCandidateCount": 51,
     "looks": [
       {
         "tier": "BEST_MATCH",
         "tierRationale": "Optimal convergence of your 10D style vector, event formality, and physical proportions.",
+        "confidence": {
+          "state": "STRONG",
+          "explanation": "Supported by verified user formality, confirmed climate, explicit style vector, and grooming inputs.",
+          "toIncreaseConfidence": "Add specific footwear preferences to further personalize lower-leg grounding."
+        },
+        "overallHarmonyScore": 0.9,
+        "reasons": [
+          "Structured upper anchor balanced with fluid wide-leg lower volume",
+          "Tonal neutral palette ensures high versatility and effortless visual cohesion.",
+          "Aligned to Modern Office / Workplace formality."
+        ],
+        "cautions": [],
+        "outfit": {
+          "id": "outfit_fluid_cold_flannel_drape_01",
+          "title": "Cocoon Wool Coat & Heavy Pleated Flannel Trousers",
+          "primaryStyleSlug": "korean-minimal",
+          "formality": 3,
+          "score": 0.9,
+          "items": [
+            {
+              "category": "top",
+              "subcategory": "knitwear",
+              "name": "Minimal Ribbed Mock Neck",
+              "material": "compact modal-wool jersey",
+              "color": "jet-black",
+              "fit": "slim",
+              "modestyRating": "high-coverage",
+              "genderCoding": "androgynous",
+              "layerPosition": 0
+            },
+            {
+              "category": "outerwear",
+              "subcategory": "overcoat",
+              "name": "Oversized Cocoon Silhouette Wool Overcoat (Heather Grey)",
+              "material": "460gsm boiled virgin wool",
+              "color": "heather-grey",
+              "fit": "oversized",
+              "modestyRating": "covered-both",
+              "genderCoding": "androgynous",
+              "layerPosition": 1
+            },
+            {
+              "category": "bottom",
+              "subcategory": "trousers",
+              "name": "Heavy Pleated Flannel Wide-Drape Trousers (Charcoal Melange)",
+              "material": "380gsm woolen flannel with thermal silk lining",
+              "color": "charcoal",
+              "fit": "relaxed",
+              "modestyRating": "covered-both",
+              "genderCoding": "androgynous",
+              "layerPosition": 0
+            },
+            {
+              "category": "footwear",
+              "subcategory": "boots",
+              "name": "Weatherproof Sculpted Fluid Chelsea Boots (Pitch Black)",
+              "material": "Weatherproof hydrophobized calfskin leather",
+              "color": "black",
+              "fit": "regular",
+              "modestyRating": "high-coverage",
+              "genderCoding": "androgynous",
+              "layerPosition": 0
+            }
+          ],
+          "factors": [
+            {
+              "category": "style_affinity",
+              "weight": 3.5,
+              "score": 0.79,
+              "reason": "Coordinate affinity (79%) with your 10D style vector."
+            },
+            {
+              "category": "silhouette_balance",
+              "weight": 3,
+              "score": 0.95,
+              "reason": "Structured upper anchor balanced with fluid wide-leg lower volume"
+            },
+            {
+              "category": "color_harmony",
+              "weight": 3,
+              "score": 0.92,
+              "reason": "Color story: tonal-neutral"
+            },
+            {
+              "category": "occasion_fit",
+              "weight": 2.5,
+              "score": 1,
+              "reason": "Formality fit for Modern Office / Workplace (Level 3)"
+            },
+            {
+              "category": "weather_fit",
+              "weight": 2,
+              "score": 0.91,
+              "reason": "Ambient temperature and breathability calibration"
+            },
+            {
+              "category": "expression_affinity",
+              "weight": 1,
+              "score": 0.8,
+              "reason": "Soft expression alignment with androgynous presentation preference."
+            },
+            {
+              "category": "preference_reinforcement",
+              "weight": 0.5,
+              "score": 0.9,
+              "reason": "Echoes complexion undertone with balanced face-framing values."
+            }
+          ],
+          "traceableReasons": [
+            {
+              "reasonId": "rea_outfit_fluid_cold_flannel_drape_01_0_1791915078513",
+              "text": "Structured upper anchor balanced with fluid wide-leg lower volume",
+              "signalIds": [
+                "user.styleProfile.preferences.fitProportions",
+                "user.styleProfile.preferences.preferredFits"
+              ],
+              "knowledgeEntryIds": [
+                "gar_mockneck_black",
+                "gar_fluid_cocoon_wool_coat_heather_grey",
+                "gar_fluid_heavy_flannel_trousers_charcoal",
+                "gar_fluid_all_weather_chelsea_boots_black"
+              ],
+              "factor": "silhouette_balance",
+              "authority": "USER_ENTERED",
+              "isAssumed": false
+            },
+            {
+              "reasonId": "rea_outfit_fluid_cold_flannel_drape_01_1_1791915078513",
+              "text": "Tonal neutral palette ensures high versatility and effortless visual cohesion.",
+              "signalIds": [
+                "user.styleProfile.preferences.preferredStyleSlugs",
+                "context.occasion"
+              ],
+              "knowledgeEntryIds": [
+                "gar_mockneck_black",
+                "gar_fluid_cocoon_wool_coat_heather_grey",
+                "gar_fluid_heavy_flannel_trousers_charcoal",
+                "gar_fluid_all_weather_chelsea_boots_black"
+              ],
+              "factor": "general",
+              "authority": "USER_ENTERED",
+              "isAssumed": false
+            },
+            {
+              "reasonId": "rea_outfit_fluid_cold_flannel_drape_01_2_1791915078513",
+              "text": "Aligned to Modern Office / Workplace formality.",
+              "signalIds": [
+                "context.occasion",
+                "context.targetFormality"
+              ],
+              "knowledgeEntryIds": [
+                "gar_mockneck_black",
+                "gar_fluid_cocoon_wool_coat_heather_grey",
+                "gar_fluid_heavy_flannel_trousers_charcoal",
+                "gar_fluid_all_weather_chelsea_boots_black",
+                "occ_office"
+              ],
+              "factor": "occasion_fit",
+              "authority": "USER_ENTERED",
+              "isAssumed": false
+            }
+          ],
+          "stylingAdvice": [
+            "Tucking the top defines the waistline and emphasizes the architectural drape of trousers."
+          ]
+        },
+        "hairStyle": {
+          "name": "Textured French Crop",
+          "slug": "textured-crop",
+          "score": 0.85,
+          "reasons": [
+            "Fits within your preferred moderate maintenance threshold.",
+            "Appropriate formality for Modern Office / Workplace.",
+            "Directly aligns with your preferred minimal aesthetic"
+          ]
+        },
+        "groomingStyle": {
+          "name": "Designer Stubble (3-Day Shadow)",
+          "slug": "designer-stubble",
+          "score": 0.84,
+          "reasons": [
+            "Conforms with your moderate grooming maintenance routine.",
+            "Appropriate grooming polish for Modern Office / Workplace.",
+            "Directly aligns with your preferred minimal aesthetic"
+          ]
+        }
+      },
+      {
+        "tier": "SAFE",
+        "tierRationale": "High familiarity and effortless ease. Relies on proven proportions and classic foundational tones.",
         "confidence": {
           "state": "STRONG",
           "explanation": "Supported by verified user formality, confirmed climate, explicit style vector, and grooming inputs.",
@@ -279,7 +469,7 @@
           ],
           "traceableReasons": [
             {
-              "reasonId": "rea_outfit_fluid_cold_cocoon_coat_01_0_1791900814825",
+              "reasonId": "rea_outfit_fluid_cold_cocoon_coat_01_0_1791915078513",
               "text": "Structured upper anchor balanced with fluid wide-leg lower volume",
               "signalIds": [
                 "user.styleProfile.preferences.fitProportions",
@@ -297,7 +487,7 @@
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_fluid_cold_cocoon_coat_01_1_1791900814825",
+              "reasonId": "rea_outfit_fluid_cold_cocoon_coat_01_1_1791915078513",
               "text": "Tonal neutral palette ensures high versatility and effortless visual cohesion.",
               "signalIds": [
                 "user.styleProfile.preferences.preferredStyleSlugs",
@@ -315,7 +505,7 @@
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_fluid_cold_cocoon_coat_01_2_1791900814825",
+              "reasonId": "rea_outfit_fluid_cold_cocoon_coat_01_2_1791915078513",
               "text": "Aligned to Modern Office / Workplace formality.",
               "signalIds": [
                 "context.occasion",
@@ -360,47 +550,47 @@
         }
       },
       {
-        "tier": "SAFE",
-        "tierRationale": "High familiarity and effortless ease. Relies on proven proportions and classic foundational tones.",
+        "tier": "STRETCH",
+        "tierRationale": "Curated directional exploration. Pushes volume and textural depth while strictly respecting dress codes.",
         "confidence": {
           "state": "STRONG",
           "explanation": "Supported by verified user formality, confirmed climate, explicit style vector, and grooming inputs.",
           "toIncreaseConfidence": "Add specific footwear preferences to further personalize lower-leg grounding."
         },
-        "overallHarmonyScore": 0.87,
+        "overallHarmonyScore": 0.84,
         "reasons": [
-          "Cropped upper proportion offset by expansive lower volume",
-          "Strong contrast between light and deep neutral values establishes crisp visual separation.",
-          "Aligned to Modern Office / Workplace formality."
+          "Directly mirrors your personal style axis coordinates.",
+          "Structured upper anchor balanced with fluid wide-leg lower volume",
+          "Harmonious balance across complementary tonal depths."
         ],
         "cautions": [],
         "outfit": {
-          "id": "outfit_korean_minimal_01",
-          "title": "Monochrome Fluid Tailoring",
-          "primaryStyleSlug": "korean-minimal",
-          "formality": 3,
-          "score": 0.87,
+          "id": "outfit_feminine_cold_casual_wrap_01",
+          "title": "Wool Wrap Coat & Wide Trousers",
+          "primaryStyleSlug": "minimal",
+          "formality": 2,
+          "score": 0.84,
           "items": [
             {
               "category": "top",
-              "subcategory": "t-shirt",
-              "name": "Heavyweight Boxy Tee (Off-White)",
-              "material": "300gsm combed organic cotton",
-              "color": "off-white",
-              "fit": "boxy",
-              "modestyRating": "standard",
+              "subcategory": "knitwear",
+              "name": "Minimal Ribbed Mock Neck",
+              "material": "compact modal-wool jersey",
+              "color": "jet-black",
+              "fit": "slim",
+              "modestyRating": "high-coverage",
               "genderCoding": "androgynous",
               "layerPosition": 0
             },
             {
               "category": "outerwear",
-              "subcategory": "blazer",
-              "name": "Deconstructed Wool Blazer",
-              "material": "tropical virgin wool",
-              "color": "charcoal",
-              "fit": "relaxed",
-              "modestyRating": "high-coverage",
-              "genderCoding": "androgynous",
+              "subcategory": "overcoat",
+              "name": "Belted Double-Faced Cashmere-Wool Wrap Coat (Camel)",
+              "material": "520gsm double-faced cashmere and virgin wool",
+              "color": "camel",
+              "fit": "regular",
+              "modestyRating": "covered-both",
+              "genderCoding": "feminine",
               "layerPosition": 1
             },
             {
@@ -416,189 +606,10 @@
             },
             {
               "category": "footwear",
-              "subcategory": "derbies",
-              "name": "Commando-Sole Leather Derbies",
-              "material": "polished binder calf leather, Vibram lug sole",
-              "color": "polished-black",
-              "fit": "regular",
-              "modestyRating": "standard",
-              "genderCoding": "androgynous",
-              "layerPosition": 0
-            }
-          ],
-          "factors": [
-            {
-              "category": "style_affinity",
-              "weight": 3.5,
-              "score": 0.79,
-              "reason": "Coordinate affinity (79%) with your 10D style vector."
-            },
-            {
-              "category": "silhouette_balance",
-              "weight": 3,
-              "score": 0.96,
-              "reason": "Cropped upper proportion offset by expansive lower volume"
-            },
-            {
-              "category": "color_harmony",
-              "weight": 3,
-              "score": 0.94,
-              "reason": "Color story: strong-contrast"
-            },
-            {
-              "category": "occasion_fit",
-              "weight": 2.5,
-              "score": 1,
-              "reason": "Formality fit for Modern Office / Workplace (Level 3)"
-            },
-            {
-              "category": "weather_fit",
-              "weight": 2,
-              "score": 0.62,
-              "reason": "Ambient temperature and breathability calibration"
-            },
-            {
-              "category": "expression_affinity",
-              "weight": 1,
-              "score": 0.8,
-              "reason": "Soft expression alignment with androgynous presentation preference."
-            },
-            {
-              "category": "preference_reinforcement",
-              "weight": 0.5,
-              "score": 0.9,
-              "reason": "Echoes complexion undertone with balanced face-framing values."
-            }
-          ],
-          "traceableReasons": [
-            {
-              "reasonId": "rea_outfit_korean_minimal_01_0_1791900814825",
-              "text": "Cropped upper proportion offset by expansive lower volume",
-              "signalIds": [
-                "user.styleProfile.preferences.preferredStyleSlugs",
-                "context.occasion"
-              ],
-              "knowledgeEntryIds": [
-                "gar_box_tee_white",
-                "gar_deconstructed_blazer_charcoal",
-                "gar_wide_trousers_black",
-                "gar_chunky_derbies_black"
-              ],
-              "factor": "general",
-              "authority": "USER_ENTERED",
-              "isAssumed": false
-            },
-            {
-              "reasonId": "rea_outfit_korean_minimal_01_1_1791900814825",
-              "text": "Strong contrast between light and deep neutral values establishes crisp visual separation.",
-              "signalIds": [
-                "user.styleProfile.preferences.preferredStyleSlugs",
-                "context.occasion"
-              ],
-              "knowledgeEntryIds": [
-                "gar_box_tee_white",
-                "gar_deconstructed_blazer_charcoal",
-                "gar_wide_trousers_black",
-                "gar_chunky_derbies_black"
-              ],
-              "factor": "general",
-              "authority": "USER_ENTERED",
-              "isAssumed": false
-            },
-            {
-              "reasonId": "rea_outfit_korean_minimal_01_2_1791900814825",
-              "text": "Aligned to Modern Office / Workplace formality.",
-              "signalIds": [
-                "context.occasion",
-                "context.targetFormality"
-              ],
-              "knowledgeEntryIds": [
-                "gar_box_tee_white",
-                "gar_deconstructed_blazer_charcoal",
-                "gar_wide_trousers_black",
-                "gar_chunky_derbies_black",
-                "occ_office"
-              ],
-              "factor": "occasion_fit",
-              "authority": "USER_ENTERED",
-              "isAssumed": false
-            }
-          ],
-          "stylingAdvice": [
-            "Accentuates waistline geometry and creates an elongated vertical lower line."
-          ]
-        },
-        "hairStyle": {
-          "name": "Textured French Crop",
-          "slug": "textured-crop",
-          "score": 0.85,
-          "reasons": [
-            "Fits within your preferred moderate maintenance threshold.",
-            "Appropriate formality for Modern Office / Workplace.",
-            "Directly aligns with your preferred minimal aesthetic"
-          ]
-        },
-        "groomingStyle": {
-          "name": "Designer Stubble (3-Day Shadow)",
-          "slug": "designer-stubble",
-          "score": 0.84,
-          "reasons": [
-            "Conforms with your moderate grooming maintenance routine.",
-            "Appropriate grooming polish for Modern Office / Workplace.",
-            "Directly aligns with your preferred minimal aesthetic"
-          ]
-        }
-      },
-      {
-        "tier": "STRETCH",
-        "tierRationale": "Curated directional exploration. Pushes volume and textural depth while strictly respecting dress codes.",
-        "confidence": {
-          "state": "STRONG",
-          "explanation": "Supported by verified user formality, confirmed climate, explicit style vector, and grooming inputs.",
-          "toIncreaseConfidence": "Add specific footwear preferences to further personalize lower-leg grounding."
-        },
-        "overallHarmonyScore": 0.87,
-        "reasons": [
-          "Directly mirrors your personal style axis coordinates.",
-          "Balanced regular configuration",
-          "Strong contrast between light and deep neutral values establishes crisp visual separation."
-        ],
-        "cautions": [],
-        "outfit": {
-          "id": "outfit_minimal_01",
-          "title": "All-Black Architectural Column",
-          "primaryStyleSlug": "minimal",
-          "formality": 3,
-          "score": 0.87,
-          "items": [
-            {
-              "category": "top",
-              "subcategory": "knitwear",
-              "name": "Minimal Ribbed Mock Neck",
-              "material": "compact modal-wool jersey",
-              "color": "jet-black",
-              "fit": "slim",
-              "modestyRating": "high-coverage",
-              "genderCoding": "androgynous",
-              "layerPosition": 0
-            },
-            {
-              "category": "bottom",
-              "subcategory": "trousers",
-              "name": "Clean Ankle-Cropped Trousers (Black)",
-              "material": "stretch wool-twill",
-              "color": "black",
-              "fit": "regular",
-              "modestyRating": "standard",
-              "genderCoding": "androgynous",
-              "layerPosition": 0
-            },
-            {
-              "category": "footwear",
-              "subcategory": "sneakers",
-              "name": "Minimal Calfskin Low-Top Sneakers",
-              "material": "Italian Nappa leather, Margom rubber sole",
-              "color": "pure-white",
+              "subcategory": "boot",
+              "name": "Commando Lug-Sole Waterproof Chelsea Boots",
+              "material": "hydrophobic full-grain calf leather, Vibram lug sole",
+              "color": "matte-black",
               "fit": "regular",
               "modestyRating": "standard",
               "genderCoding": "androgynous",
@@ -615,31 +626,31 @@
             {
               "category": "silhouette_balance",
               "weight": 3,
-              "score": 0.85,
-              "reason": "Balanced regular configuration"
+              "score": 0.95,
+              "reason": "Structured upper anchor balanced with fluid wide-leg lower volume"
             },
             {
               "category": "color_harmony",
               "weight": 3,
-              "score": 0.94,
-              "reason": "Color story: strong-contrast"
+              "score": 0.82,
+              "reason": "Color story: analogous"
             },
             {
               "category": "occasion_fit",
               "weight": 2.5,
-              "score": 1,
-              "reason": "Formality fit for Modern Office / Workplace (Level 3)"
+              "score": 0.75,
+              "reason": "Formality fit for Modern Office / Workplace (Level 2)"
             },
             {
               "category": "weather_fit",
               "weight": 2,
-              "score": 0.68,
+              "score": 0.84,
               "reason": "Ambient temperature and breathability calibration"
             },
             {
               "category": "expression_affinity",
               "weight": 1,
-              "score": 0.8,
+              "score": 0.725,
               "reason": "Soft expression alignment with androgynous presentation preference."
             },
             {
@@ -651,7 +662,7 @@
           ],
           "traceableReasons": [
             {
-              "reasonId": "rea_outfit_minimal_01_0_1791900814825",
+              "reasonId": "rea_outfit_feminine_cold_casual_wrap_01_0_1791915078513",
               "text": "Directly mirrors your personal style axis coordinates.",
               "signalIds": [
                 "user.styleProfile.styleVector",
@@ -659,8 +670,9 @@
               ],
               "knowledgeEntryIds": [
                 "gar_mockneck_black",
-                "gar_cropped_trousers_black",
-                "gar_minimal_sneaker_white",
+                "gar_feminine_belted_wool_wrap_coat_camel",
+                "gar_wide_trousers_black",
+                "gar_chelsea_boot_lug_sole_black",
                 "style_minimal"
               ],
               "factor": "style_affinity",
@@ -668,39 +680,43 @@
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_minimal_01_1_1791900814825",
-              "text": "Balanced regular configuration",
+              "reasonId": "rea_outfit_feminine_cold_casual_wrap_01_1_1791915078513",
+              "text": "Structured upper anchor balanced with fluid wide-leg lower volume",
               "signalIds": [
-                "user.styleProfile.preferences.preferredStyleSlugs",
-                "context.occasion"
+                "user.styleProfile.preferences.fitProportions",
+                "user.styleProfile.preferences.preferredFits"
               ],
               "knowledgeEntryIds": [
                 "gar_mockneck_black",
-                "gar_cropped_trousers_black",
-                "gar_minimal_sneaker_white"
+                "gar_feminine_belted_wool_wrap_coat_camel",
+                "gar_wide_trousers_black",
+                "gar_chelsea_boot_lug_sole_black"
               ],
-              "factor": "general",
+              "factor": "silhouette_balance",
               "authority": "USER_ENTERED",
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_minimal_01_2_1791900814825",
-              "text": "Strong contrast between light and deep neutral values establishes crisp visual separation.",
+              "reasonId": "rea_outfit_feminine_cold_casual_wrap_01_2_1791915078513",
+              "text": "Harmonious balance across complementary tonal depths.",
               "signalIds": [
-                "user.styleProfile.preferences.preferredStyleSlugs",
-                "context.occasion"
+                "user.styleProfile.preferences.fitProportions",
+                "user.styleProfile.preferences.preferredFits"
               ],
               "knowledgeEntryIds": [
                 "gar_mockneck_black",
-                "gar_cropped_trousers_black",
-                "gar_minimal_sneaker_white"
+                "gar_feminine_belted_wool_wrap_coat_camel",
+                "gar_wide_trousers_black",
+                "gar_chelsea_boot_lug_sole_black"
               ],
-              "factor": "general",
+              "factor": "silhouette_balance",
               "authority": "USER_ENTERED",
               "isAssumed": false
             }
           ],
-          "stylingAdvice": []
+          "stylingAdvice": [
+            "Tucking the top defines the waistline and emphasizes the architectural drape of trousers."
+          ]
         },
         "hairStyle": {
           "name": "Textured French Crop",

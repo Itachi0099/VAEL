@@ -174,8 +174,8 @@
   "result": {
     "looksCount": 3,
     "contextApplied": "Job Interview",
-    "vetoedCandidateCount": 15,
-    "evaluatedCandidateCount": 39,
+    "vetoedCandidateCount": 18,
+    "evaluatedCandidateCount": 51,
     "looks": [
       {
         "tier": "BEST_MATCH",
@@ -301,7 +301,7 @@
           ],
           "traceableReasons": [
             {
-              "reasonId": "rea_outfit_feminine_slip_evening_01_0_1791900814823",
+              "reasonId": "rea_outfit_feminine_slip_evening_01_0_1791915078510",
               "text": "Directly mirrors your personal style axis coordinates.",
               "signalIds": [
                 "user.styleProfile.styleVector",
@@ -320,7 +320,7 @@
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_feminine_slip_evening_01_1_1791900814823",
+              "reasonId": "rea_outfit_feminine_slip_evening_01_1_1791915078510",
               "text": "Cohesive layered silhouette with balanced mid-length outer structure",
               "signalIds": [
                 "user.styleProfile.preferences.fitProportions",
@@ -338,7 +338,7 @@
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_feminine_slip_evening_01_2_1791900814823",
+              "reasonId": "rea_outfit_feminine_slip_evening_01_2_1791915078510",
               "text": "Harmonious balance across complementary tonal depths.",
               "signalIds": [
                 "user.styleProfile.preferences.fitProportions",
@@ -506,7 +506,7 @@
           ],
           "traceableReasons": [
             {
-              "reasonId": "rea_outfit_feminine_tailored_suit_workplace_01_0_1791900814823",
+              "reasonId": "rea_outfit_feminine_tailored_suit_workplace_01_0_1791915078511",
               "text": "Directly mirrors your personal style axis coordinates.",
               "signalIds": [
                 "user.styleProfile.styleVector",
@@ -525,7 +525,7 @@
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_feminine_tailored_suit_workplace_01_1_1791900814823",
+              "reasonId": "rea_outfit_feminine_tailored_suit_workplace_01_1_1791915078511",
               "text": "Balanced regular configuration",
               "signalIds": [
                 "user.styleProfile.preferences.preferredStyleSlugs",
@@ -543,7 +543,7 @@
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_feminine_tailored_suit_workplace_01_2_1791900814823",
+              "reasonId": "rea_outfit_feminine_tailored_suit_workplace_01_2_1791915078511",
               "text": "Strong contrast between light and deep neutral values establishes crisp visual separation.",
               "signalIds": [
                 "user.styleProfile.preferences.preferredStyleSlugs",
@@ -595,39 +595,39 @@
           "explanation": "Supported by verified user formality, confirmed climate, explicit style vector, and grooming inputs.",
           "toIncreaseConfidence": "Add specific footwear preferences to further personalize lower-leg grounding."
         },
-        "overallHarmonyScore": 0.84,
+        "overallHarmonyScore": 0.86,
         "reasons": [
-          "Longline architectural outerwear framing a streamlined linear base",
-          "Harmonious balance across complementary tonal depths.",
-          "Neutral tonal temperature balance relative to undertone."
+          "Balanced regular configuration",
+          "Tonal neutral palette ensures high versatility and effortless visual cohesion.",
+          "Aligned to Job Interview formality."
         ],
         "cautions": [],
         "outfit": {
-          "id": "outfit_feminine_cold_wool_crepe_maxi_01",
-          "title": "Wool Crepe Maxi Skirt & Camel Cashmere Wrap",
-          "primaryStyleSlug": "old-money",
+          "id": "outfit_feminine_tie_neck_maxi_separates_01",
+          "title": "Silk Lavallière Blouse & Structured Wool Crepe Maxi Skirt",
+          "primaryStyleSlug": "formal",
           "formality": 4,
-          "score": 0.84,
+          "score": 0.86,
           "items": [
             {
               "category": "top",
               "subcategory": "blouse",
-              "name": "Asymmetric Draped Georgette Wrap Blouse",
-              "material": "fluid viscose-silk georgette",
-              "color": "ecru",
+              "name": "Silk Georgette Lavallière Tie-Neck Blouse (Ivory)",
+              "material": "100% 16mm Mulberry silk georgette",
+              "color": "ivory",
               "fit": "relaxed",
-              "modestyRating": "standard",
+              "modestyRating": "covered-arms",
               "genderCoding": "feminine",
               "layerPosition": 0
             },
             {
               "category": "outerwear",
-              "subcategory": "overcoat",
-              "name": "Belted Double-Faced Cashmere-Wool Wrap Coat (Camel)",
-              "material": "520gsm double-faced cashmere and virgin wool",
-              "color": "camel",
-              "fit": "regular",
-              "modestyRating": "covered-both",
+              "subcategory": "blazer",
+              "name": "Waist-defined Single-Breasted Wool Crepe Blazer (Black)",
+              "material": "290gsm Italian virgin wool crepe",
+              "color": "black",
+              "fit": "tailored",
+              "modestyRating": "covered-arms",
               "genderCoding": "feminine",
               "layerPosition": 1
             },
@@ -644,23 +644,12 @@
             },
             {
               "category": "footwear",
-              "subcategory": "boots",
-              "name": "50mm Block-Heel Glove Calfskin Ankle Boots (Black)",
-              "material": "Soft Italian glove calfskin with leather sole",
+              "subcategory": "heels",
+              "name": "40mm Pointed-Toe Leather Kitten Heel Pumps (Black)",
+              "material": "Smooth French calfskin with cushioned insole",
               "color": "black",
               "fit": "tailored",
-              "modestyRating": "covered-both",
-              "genderCoding": "feminine",
-              "layerPosition": 0
-            },
-            {
-              "category": "accessory",
-              "subcategory": "hosiery",
-              "name": "80D Matte Opaque Thermal Wool Tights (Black)",
-              "material": "Merino wool and microfiber blend with flat seams",
-              "color": "black",
-              "fit": "skinny",
-              "modestyRating": "covered-both",
+              "modestyRating": "standard",
               "genderCoding": "feminine",
               "layerPosition": 0
             }
@@ -669,20 +658,20 @@
             {
               "category": "style_affinity",
               "weight": 3.5,
-              "score": 0.64,
-              "reason": "Coordinate affinity (64%) with your 10D style vector."
+              "score": 0.71,
+              "reason": "Coordinate affinity (71%) with your 10D style vector."
             },
             {
               "category": "silhouette_balance",
               "weight": 3,
-              "score": 1,
-              "reason": "Longline architectural outerwear framing a streamlined linear base"
+              "score": 0.93,
+              "reason": "Balanced regular configuration"
             },
             {
               "category": "color_harmony",
               "weight": 3,
-              "score": 0.82,
-              "reason": "Color story: analogous"
+              "score": 0.92,
+              "reason": "Color story: tonal-neutral"
             },
             {
               "category": "occasion_fit",
@@ -711,62 +700,59 @@
           ],
           "traceableReasons": [
             {
-              "reasonId": "rea_outfit_feminine_cold_wool_crepe_maxi_01_0_1791900814823",
-              "text": "Longline architectural outerwear framing a streamlined linear base",
+              "reasonId": "rea_outfit_feminine_tie_neck_maxi_separates_01_0_1791915078511",
+              "text": "Balanced regular configuration",
               "signalIds": [
                 "user.styleProfile.preferences.preferredStyleSlugs",
                 "context.occasion"
               ],
               "knowledgeEntryIds": [
-                "gar_draped_wrap_blouse_ecru",
-                "gar_feminine_belted_wool_wrap_coat_camel",
+                "gar_silk_tie_neck_blouse_ivory",
+                "gar_feminine_wool_blazer_black",
                 "gar_wool_crepe_a_line_maxi_skirt_black",
-                "gar_feminine_heeled_ankle_boots_black",
-                "gar_opaque_thermal_tights_black"
+                "gar_feminine_pointed_kitten_heels_black"
               ],
               "factor": "general",
               "authority": "USER_ENTERED",
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_feminine_cold_wool_crepe_maxi_01_1_1791900814823",
-              "text": "Harmonious balance across complementary tonal depths.",
+              "reasonId": "rea_outfit_feminine_tie_neck_maxi_separates_01_1_1791915078511",
+              "text": "Tonal neutral palette ensures high versatility and effortless visual cohesion.",
               "signalIds": [
-                "user.styleProfile.preferences.fitProportions",
-                "user.styleProfile.preferences.preferredFits"
+                "user.styleProfile.preferences.preferredStyleSlugs",
+                "context.occasion"
               ],
               "knowledgeEntryIds": [
-                "gar_draped_wrap_blouse_ecru",
-                "gar_feminine_belted_wool_wrap_coat_camel",
+                "gar_silk_tie_neck_blouse_ivory",
+                "gar_feminine_wool_blazer_black",
                 "gar_wool_crepe_a_line_maxi_skirt_black",
-                "gar_feminine_heeled_ankle_boots_black",
-                "gar_opaque_thermal_tights_black"
+                "gar_feminine_pointed_kitten_heels_black"
               ],
-              "factor": "silhouette_balance",
+              "factor": "general",
               "authority": "USER_ENTERED",
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_feminine_cold_wool_crepe_maxi_01_2_1791900814823",
-              "text": "Neutral tonal temperature balance relative to undertone.",
+              "reasonId": "rea_outfit_feminine_tie_neck_maxi_separates_01_2_1791915078511",
+              "text": "Aligned to Job Interview formality.",
               "signalIds": [
-                "user.styleProfile.preferences.fitProportions",
-                "user.styleProfile.preferences.preferredFits"
+                "context.occasion",
+                "context.targetFormality"
               ],
               "knowledgeEntryIds": [
-                "gar_draped_wrap_blouse_ecru",
-                "gar_feminine_belted_wool_wrap_coat_camel",
+                "gar_silk_tie_neck_blouse_ivory",
+                "gar_feminine_wool_blazer_black",
                 "gar_wool_crepe_a_line_maxi_skirt_black",
-                "gar_feminine_heeled_ankle_boots_black",
-                "gar_opaque_thermal_tights_black"
+                "gar_feminine_pointed_kitten_heels_black",
+                "occ_interview"
               ],
-              "factor": "silhouette_balance",
+              "factor": "occasion_fit",
               "authority": "USER_ENTERED",
               "isAssumed": false
             }
           ],
           "stylingAdvice": [
-            "Creates a continuous vertical frame; leave outer layer unbuttoned during motion.",
             "Aligns with your preferred fit geometry."
           ]
         },

@@ -29,7 +29,7 @@
     "modestyRating": "standard",
     "genderCoding": "androgynous",
     "garmentCoding": 0,
-    "fluidTag": true,
+    "fluidTag": false,
     "seasons": [
       "spring",
       "summer",
@@ -83,7 +83,7 @@
     "modestyRating": "standard",
     "genderCoding": "androgynous",
     "garmentCoding": 0,
-    "fluidTag": true,
+    "fluidTag": false,
     "seasons": [
       "spring",
       "summer",
@@ -137,7 +137,7 @@
     "modestyRating": "standard",
     "genderCoding": "androgynous",
     "garmentCoding": 0,
-    "fluidTag": true,
+    "fluidTag": false,
     "seasons": [
       "summer",
       "spring"
@@ -187,7 +187,7 @@
     "modestyRating": "standard",
     "genderCoding": "androgynous",
     "garmentCoding": 0,
-    "fluidTag": true,
+    "fluidTag": false,
     "seasons": [
       "spring",
       "summer",
@@ -237,7 +237,7 @@
     "texture": 3,
     "modestyRating": "standard",
     "genderCoding": "masculine",
-    "garmentCoding": -1,
+    "garmentCoding": -0.5,
     "fluidTag": false,
     "vintageEra": "50s",
     "seasons": [
@@ -290,7 +290,7 @@
     "modestyRating": "standard",
     "genderCoding": "androgynous",
     "garmentCoding": 0,
-    "fluidTag": true,
+    "fluidTag": false,
     "seasons": [
       "all-season"
     ],
@@ -339,9 +339,9 @@
     "volume": 3,
     "texture": 2,
     "modestyRating": "standard",
-    "genderCoding": "masculine",
-    "garmentCoding": -1,
-    "fluidTag": true,
+    "genderCoding": "unspecified",
+    "garmentCoding": 0,
+    "fluidTag": false,
     "seasons": [
       "all-season"
     ],
@@ -440,7 +440,7 @@
     "texture": 1,
     "modestyRating": "standard",
     "genderCoding": "masculine",
-    "garmentCoding": -1,
+    "garmentCoding": -0.5,
     "fluidTag": false,
     "seasons": [
       "all-season"
@@ -491,7 +491,7 @@
     "modestyRating": "standard",
     "genderCoding": "androgynous",
     "garmentCoding": 0,
-    "fluidTag": true,
+    "fluidTag": false,
     "seasons": [
       "fall",
       "winter",
@@ -543,7 +543,7 @@
     "modestyRating": "high-coverage",
     "genderCoding": "androgynous",
     "garmentCoding": 0,
-    "fluidTag": true,
+    "fluidTag": false,
     "seasons": [
       "fall",
       "winter",
@@ -595,7 +595,7 @@
     "modestyRating": "high-coverage",
     "genderCoding": "androgynous",
     "garmentCoding": 0,
-    "fluidTag": true,
+    "fluidTag": false,
     "seasons": [
       "fall",
       "winter"
@@ -696,7 +696,7 @@
     "modestyRating": "high-coverage",
     "genderCoding": "androgynous",
     "garmentCoding": 0,
-    "fluidTag": true,
+    "fluidTag": false,
     "seasons": [
       "fall",
       "winter",
@@ -748,7 +748,7 @@
     "modestyRating": "standard",
     "genderCoding": "androgynous",
     "garmentCoding": 0,
-    "fluidTag": true,
+    "fluidTag": false,
     "seasons": [
       "spring",
       "fall",
@@ -799,7 +799,7 @@
     "modestyRating": "standard",
     "genderCoding": "androgynous",
     "garmentCoding": 0,
-    "fluidTag": true,
+    "fluidTag": false,
     "seasons": [
       "fall",
       "winter",
@@ -851,7 +851,7 @@
     "modestyRating": "standard",
     "genderCoding": "androgynous",
     "garmentCoding": 0,
-    "fluidTag": true,
+    "fluidTag": false,
     "seasons": [
       "fall",
       "winter"
@@ -902,7 +902,7 @@
     "modestyRating": "standard",
     "genderCoding": "androgynous",
     "garmentCoding": 0,
-    "fluidTag": true,
+    "fluidTag": false,
     "seasons": [
       "fall",
       "winter",
@@ -1004,7 +1004,7 @@
     "texture": 4,
     "modestyRating": "standard",
     "genderCoding": "masculine",
-    "garmentCoding": -1,
+    "garmentCoding": -0.5,
     "fluidTag": false,
     "seasons": [
       "summer",
@@ -1055,7 +1055,7 @@
     "modestyRating": "low-coverage",
     "genderCoding": "androgynous",
     "garmentCoding": 0,
-    "fluidTag": true,
+    "fluidTag": false,
     "seasons": [
       "summer",
       "spring"
@@ -1155,7 +1155,7 @@
     "modestyRating": "high-coverage",
     "genderCoding": "androgynous",
     "garmentCoding": 0,
-    "fluidTag": true,
+    "fluidTag": false,
     "seasons": [
       "fall",
       "winter"
@@ -1207,7 +1207,7 @@
     "modestyRating": "high-coverage",
     "genderCoding": "androgynous",
     "garmentCoding": 0,
-    "fluidTag": true,
+    "fluidTag": false,
     "seasons": [
       "fall",
       "winter",
@@ -1258,7 +1258,7 @@
     "modestyRating": "standard",
     "genderCoding": "androgynous",
     "garmentCoding": 0,
-    "fluidTag": true,
+    "fluidTag": false,
     "seasons": [
       "spring",
       "summer",
@@ -1460,7 +1460,7 @@
     "modestyRating": "standard",
     "genderCoding": "androgynous",
     "garmentCoding": 0,
-    "fluidTag": true,
+    "fluidTag": false,
     "seasons": [
       "spring",
       "fall"
@@ -1562,7 +1562,7 @@
     "modestyRating": "standard",
     "genderCoding": "androgynous",
     "garmentCoding": 0,
-    "fluidTag": true,
+    "fluidTag": false,
     "seasons": [
       "spring",
       "summer"
@@ -1612,7 +1612,7 @@
     "modestyRating": "standard",
     "genderCoding": "androgynous",
     "garmentCoding": 0,
-    "fluidTag": true,
+    "fluidTag": false,
     "seasons": [
       "spring",
       "summer",
@@ -1714,7 +1714,7 @@
     "modestyRating": "high-coverage",
     "genderCoding": "androgynous",
     "garmentCoding": 0,
-    "fluidTag": true,
+    "fluidTag": false,
     "seasons": [
       "winter"
     ],
@@ -1762,7 +1762,7 @@
     "modestyRating": "high-coverage",
     "genderCoding": "androgynous",
     "garmentCoding": 0,
-    "fluidTag": true,
+    "fluidTag": false,
     "seasons": [
       "fall",
       "winter",
@@ -1812,7 +1812,7 @@
     "texture": 3,
     "modestyRating": "standard",
     "genderCoding": "masculine",
-    "garmentCoding": -1,
+    "garmentCoding": -0.5,
     "fluidTag": false,
     "vintageEra": "70s",
     "seasons": [
@@ -1863,7 +1863,7 @@
     "modestyRating": "standard",
     "genderCoding": "androgynous",
     "garmentCoding": 0,
-    "fluidTag": true,
+    "fluidTag": false,
     "seasons": [
       "fall",
       "winter"
@@ -2012,7 +2012,7 @@
     "modestyRating": "high-coverage",
     "genderCoding": "androgynous",
     "garmentCoding": 0,
-    "fluidTag": true,
+    "fluidTag": false,
     "seasons": [
       "all-season"
     ],
@@ -2061,9 +2061,9 @@
     "volume": 2,
     "texture": 2,
     "modestyRating": "high-coverage",
-    "genderCoding": "masculine",
-    "garmentCoding": -1,
-    "fluidTag": true,
+    "genderCoding": "unspecified",
+    "garmentCoding": 0,
+    "fluidTag": false,
     "seasons": [
       "all-season"
     ],
@@ -2113,7 +2113,7 @@
     "modestyRating": "high-coverage",
     "genderCoding": "androgynous",
     "garmentCoding": 0,
-    "fluidTag": true,
+    "fluidTag": false,
     "seasons": [
       "all-season"
     ],
@@ -2163,7 +2163,7 @@
     "modestyRating": "high-coverage",
     "genderCoding": "androgynous",
     "garmentCoding": 0,
-    "fluidTag": true,
+    "fluidTag": false,
     "seasons": [
       "fall",
       "winter"
@@ -2213,7 +2213,7 @@
     "modestyRating": "high-coverage",
     "genderCoding": "androgynous",
     "garmentCoding": 0,
-    "fluidTag": true,
+    "fluidTag": false,
     "seasons": [
       "all-season"
     ],
@@ -2312,8 +2312,8 @@
     "volume": 3,
     "texture": 2,
     "modestyRating": "high-coverage",
-    "genderCoding": "masculine",
-    "garmentCoding": -1,
+    "genderCoding": "unspecified",
+    "garmentCoding": 0,
     "fluidTag": false,
     "seasons": [
       "all-season"
@@ -2365,7 +2365,7 @@
     "texture": 3,
     "modestyRating": "standard",
     "genderCoding": "masculine",
-    "garmentCoding": -1,
+    "garmentCoding": -0.5,
     "fluidTag": false,
     "seasons": [
       "summer"
@@ -2415,7 +2415,7 @@
     "modestyRating": "high-coverage",
     "genderCoding": "androgynous",
     "garmentCoding": 0,
-    "fluidTag": true,
+    "fluidTag": false,
     "seasons": [
       "fall",
       "winter",
@@ -2465,7 +2465,7 @@
     "modestyRating": "high-coverage",
     "genderCoding": "androgynous",
     "garmentCoding": 0,
-    "fluidTag": true,
+    "fluidTag": false,
     "seasons": [
       "all-season"
     ],
@@ -2561,7 +2561,7 @@
     "texture": 4,
     "modestyRating": "high-coverage",
     "genderCoding": "masculine",
-    "garmentCoding": -1,
+    "garmentCoding": -0.5,
     "fluidTag": false,
     "seasons": [
       "spring",
@@ -2612,7 +2612,7 @@
     "modestyRating": "high-coverage",
     "genderCoding": "androgynous",
     "garmentCoding": 0,
-    "fluidTag": true,
+    "fluidTag": false,
     "seasons": [
       "fall",
       "winter"
@@ -2662,7 +2662,7 @@
     "texture": 4,
     "modestyRating": "high-coverage",
     "genderCoding": "masculine",
-    "garmentCoding": -1,
+    "garmentCoding": -0.5,
     "fluidTag": false,
     "seasons": [
       "fall",
@@ -2763,7 +2763,7 @@
     "modestyRating": "high-coverage",
     "genderCoding": "androgynous",
     "garmentCoding": 0,
-    "fluidTag": true,
+    "fluidTag": false,
     "seasons": [
       "all-season"
     ],
@@ -2863,7 +2863,7 @@
     "texture": 5,
     "modestyRating": "high-coverage",
     "genderCoding": "masculine",
-    "garmentCoding": -1,
+    "garmentCoding": -0.5,
     "fluidTag": false,
     "seasons": [
       "fall",
@@ -2914,7 +2914,7 @@
     "modestyRating": "standard",
     "genderCoding": "androgynous",
     "garmentCoding": 0,
-    "fluidTag": true,
+    "fluidTag": false,
     "seasons": [
       "summer"
     ],
@@ -2962,7 +2962,7 @@
     "modestyRating": "high-coverage",
     "genderCoding": "androgynous",
     "garmentCoding": 0,
-    "fluidTag": true,
+    "fluidTag": false,
     "seasons": [
       "all-season"
     ],
@@ -3012,7 +3012,7 @@
     "modestyRating": "high-coverage",
     "genderCoding": "androgynous",
     "garmentCoding": 0,
-    "fluidTag": true,
+    "fluidTag": false,
     "seasons": [
       "summer",
       "spring"
@@ -3062,7 +3062,7 @@
     "modestyRating": "high-coverage",
     "genderCoding": "androgynous",
     "garmentCoding": 0,
-    "fluidTag": true,
+    "fluidTag": false,
     "seasons": [
       "all-season"
     ],
@@ -3112,7 +3112,7 @@
     "texture": 2,
     "modestyRating": "high-coverage",
     "genderCoding": "masculine",
-    "garmentCoding": -1,
+    "garmentCoding": -0.5,
     "fluidTag": false,
     "seasons": [
       "all-season"
@@ -3161,7 +3161,7 @@
     "texture": 4,
     "modestyRating": "high-coverage",
     "genderCoding": "masculine",
-    "garmentCoding": -1,
+    "garmentCoding": -0.5,
     "fluidTag": false,
     "seasons": [
       "summer"
@@ -3211,7 +3211,7 @@
     "modestyRating": "high-coverage",
     "genderCoding": "androgynous",
     "garmentCoding": 0,
-    "fluidTag": true,
+    "fluidTag": false,
     "seasons": [
       "spring",
       "summer",
@@ -3262,7 +3262,7 @@
     "modestyRating": "standard",
     "genderCoding": "androgynous",
     "garmentCoding": 0,
-    "fluidTag": true,
+    "fluidTag": false,
     "seasons": [
       "summer"
     ],
@@ -3311,7 +3311,7 @@
     "modestyRating": "standard",
     "genderCoding": "androgynous",
     "garmentCoding": 0,
-    "fluidTag": true,
+    "fluidTag": false,
     "seasons": [
       "spring",
       "fall",
@@ -3363,7 +3363,7 @@
     "modestyRating": "high-coverage",
     "genderCoding": "androgynous",
     "garmentCoding": 0,
-    "fluidTag": true,
+    "fluidTag": false,
     "seasons": [
       "spring",
       "fall",
@@ -3418,7 +3418,7 @@
     "modestyRating": "high-coverage",
     "genderCoding": "androgynous",
     "garmentCoding": 0,
-    "fluidTag": true,
+    "fluidTag": false,
     "seasons": [
       "winter",
       "fall"
@@ -3469,7 +3469,7 @@
     "modestyRating": "high-coverage",
     "genderCoding": "androgynous",
     "garmentCoding": 0,
-    "fluidTag": true,
+    "fluidTag": false,
     "seasons": [
       "spring",
       "fall"
@@ -3520,7 +3520,7 @@
     "modestyRating": "high-coverage",
     "genderCoding": "androgynous",
     "garmentCoding": 0,
-    "fluidTag": true,
+    "fluidTag": false,
     "seasons": [
       "spring",
       "fall"
@@ -3571,7 +3571,7 @@
     "modestyRating": "high-coverage",
     "genderCoding": "androgynous",
     "garmentCoding": 0,
-    "fluidTag": true,
+    "fluidTag": false,
     "seasons": [
       "spring",
       "fall"
@@ -3624,7 +3624,7 @@
     "modestyRating": "high-coverage",
     "genderCoding": "androgynous",
     "garmentCoding": 0,
-    "fluidTag": true,
+    "fluidTag": false,
     "seasons": [
       "all-season"
     ],
@@ -3722,7 +3722,7 @@
     "texture": 2,
     "modestyRating": "high-coverage",
     "genderCoding": "masculine",
-    "garmentCoding": -1,
+    "garmentCoding": -0.5,
     "fluidTag": false,
     "vintageEra": "50s",
     "seasons": [
@@ -3827,7 +3827,7 @@
     "lining": "fully-lined",
     "modestyRating": "high-coverage",
     "genderCoding": "masculine",
-    "garmentCoding": -1,
+    "garmentCoding": -0.5,
     "fluidTag": false,
     "seasons": [
       "fall",
@@ -3878,7 +3878,7 @@
     "modestyRating": "high-coverage",
     "genderCoding": "androgynous",
     "garmentCoding": 0,
-    "fluidTag": true,
+    "fluidTag": false,
     "seasons": [
       "summer",
       "spring"
@@ -3929,7 +3929,7 @@
     "modestyRating": "high-coverage",
     "genderCoding": "androgynous",
     "garmentCoding": 0,
-    "fluidTag": true,
+    "fluidTag": false,
     "seasons": [
       "fall",
       "winter"
@@ -3979,7 +3979,7 @@
     "modestyRating": "high-coverage",
     "genderCoding": "androgynous",
     "garmentCoding": 0,
-    "fluidTag": true,
+    "fluidTag": false,
     "seasons": [
       "spring",
       "fall"
@@ -4029,7 +4029,7 @@
     "texture": 4,
     "modestyRating": "high-coverage",
     "genderCoding": "masculine",
-    "garmentCoding": -1,
+    "garmentCoding": -0.5,
     "fluidTag": false,
     "seasons": [
       "fall",
@@ -4084,7 +4084,7 @@
     "modestyRating": "high-coverage",
     "genderCoding": "androgynous",
     "garmentCoding": 0,
-    "fluidTag": true,
+    "fluidTag": false,
     "seasons": [
       "spring",
       "fall"
@@ -4135,7 +4135,7 @@
     "modestyRating": "high-coverage",
     "genderCoding": "androgynous",
     "garmentCoding": 0,
-    "fluidTag": true,
+    "fluidTag": false,
     "seasons": [
       "spring",
       "fall"
@@ -4236,7 +4236,7 @@
     "modestyRating": "high-coverage",
     "genderCoding": "androgynous",
     "garmentCoding": 0,
-    "fluidTag": true,
+    "fluidTag": false,
     "seasons": [
       "spring",
       "fall"
@@ -4286,7 +4286,7 @@
     "texture": 4,
     "modestyRating": "high-coverage",
     "genderCoding": "masculine",
-    "garmentCoding": -1,
+    "garmentCoding": -0.5,
     "fluidTag": false,
     "seasons": [
       "winter"
@@ -4336,7 +4336,7 @@
     "modestyRating": "high-coverage",
     "genderCoding": "androgynous",
     "garmentCoding": 0,
-    "fluidTag": true,
+    "fluidTag": false,
     "seasons": [
       "fall",
       "spring"
@@ -4387,7 +4387,7 @@
     "modestyRating": "high-coverage",
     "genderCoding": "androgynous",
     "garmentCoding": 0,
-    "fluidTag": true,
+    "fluidTag": false,
     "seasons": [
       "fall",
       "winter"
@@ -4538,7 +4538,7 @@
     "modestyRating": "high-coverage",
     "genderCoding": "androgynous",
     "garmentCoding": 0,
-    "fluidTag": true,
+    "fluidTag": false,
     "seasons": [
       "spring",
       "fall"
@@ -4586,7 +4586,7 @@
     "modestyRating": "standard",
     "genderCoding": "androgynous",
     "garmentCoding": 0,
-    "fluidTag": true,
+    "fluidTag": false,
     "seasons": [
       "all-season"
     ],
@@ -4636,7 +4636,7 @@
     "modestyRating": "standard",
     "genderCoding": "androgynous",
     "garmentCoding": 0,
-    "fluidTag": true,
+    "fluidTag": false,
     "seasons": [
       "all-season"
     ],
@@ -4685,8 +4685,8 @@
     "volume": 2,
     "texture": 2,
     "modestyRating": "standard",
-    "genderCoding": "masculine",
-    "garmentCoding": -1,
+    "genderCoding": "unspecified",
+    "garmentCoding": 0,
     "fluidTag": false,
     "vintageEra": "50s",
     "seasons": [
@@ -4737,9 +4737,9 @@
     "volume": 3,
     "texture": 4,
     "modestyRating": "standard",
-    "genderCoding": "masculine",
-    "garmentCoding": -1,
-    "fluidTag": true,
+    "genderCoding": "unspecified",
+    "garmentCoding": 0,
+    "fluidTag": false,
     "seasons": [
       "fall",
       "winter",
@@ -4790,7 +4790,7 @@
     "modestyRating": "standard",
     "genderCoding": "androgynous",
     "garmentCoding": 0,
-    "fluidTag": true,
+    "fluidTag": false,
     "seasons": [
       "all-season"
     ],
@@ -4839,7 +4839,7 @@
     "texture": 4,
     "modestyRating": "standard",
     "genderCoding": "masculine",
-    "garmentCoding": -1,
+    "garmentCoding": -0.5,
     "fluidTag": false,
     "seasons": [
       "fall",
@@ -4937,8 +4937,8 @@
     "volume": 2,
     "texture": 2,
     "modestyRating": "standard",
-    "genderCoding": "masculine",
-    "garmentCoding": -1,
+    "genderCoding": "unspecified",
+    "garmentCoding": 0,
     "fluidTag": false,
     "seasons": [
       "spring",
@@ -4988,7 +4988,7 @@
     "modestyRating": "standard",
     "genderCoding": "androgynous",
     "garmentCoding": 0,
-    "fluidTag": true,
+    "fluidTag": false,
     "seasons": [
       "all-season"
     ],
@@ -5087,7 +5087,7 @@
     "modestyRating": "standard",
     "genderCoding": "androgynous",
     "garmentCoding": 0,
-    "fluidTag": true,
+    "fluidTag": false,
     "seasons": [
       "fall",
       "winter"
@@ -5138,7 +5138,7 @@
     "modestyRating": "standard",
     "genderCoding": "androgynous",
     "garmentCoding": 0,
-    "fluidTag": true,
+    "fluidTag": false,
     "seasons": [
       "spring",
       "summer",
@@ -5333,8 +5333,8 @@
     "volume": 3,
     "texture": 3,
     "modestyRating": "standard",
-    "genderCoding": "masculine",
-    "garmentCoding": -1,
+    "genderCoding": "unspecified",
+    "garmentCoding": 0,
     "fluidTag": false,
     "vintageEra": "70s",
     "seasons": [
@@ -5479,7 +5479,7 @@
     "modestyRating": "standard",
     "genderCoding": "androgynous",
     "garmentCoding": 0,
-    "fluidTag": true,
+    "fluidTag": false,
     "seasons": [
       "all-season"
     ],
@@ -5532,7 +5532,7 @@
     "modestyRating": "standard",
     "genderCoding": "androgynous",
     "garmentCoding": 0,
-    "fluidTag": true,
+    "fluidTag": false,
     "seasons": [
       "all-season"
     ],
@@ -5586,7 +5586,7 @@
     "modestyRating": "high-coverage",
     "genderCoding": "androgynous",
     "garmentCoding": 0,
-    "fluidTag": true,
+    "fluidTag": false,
     "seasons": [
       "fall",
       "winter"
@@ -5635,9 +5635,9 @@
     "volume": 1,
     "texture": 2,
     "modestyRating": "standard",
-    "genderCoding": "androgynous",
+    "genderCoding": "unspecified",
     "garmentCoding": 0,
-    "fluidTag": true,
+    "fluidTag": false,
     "vintageEra": "50s",
     "seasons": [
       "all-season"
@@ -5690,9 +5690,9 @@
     "volume": 1,
     "texture": 3,
     "modestyRating": "standard",
-    "genderCoding": "androgynous",
+    "genderCoding": "unspecified",
     "garmentCoding": 0,
-    "fluidTag": true,
+    "fluidTag": false,
     "seasons": [
       "all-season"
     ],
@@ -5746,7 +5746,7 @@
     "modestyRating": "standard",
     "genderCoding": "androgynous",
     "garmentCoding": 0,
-    "fluidTag": true,
+    "fluidTag": false,
     "seasons": [
       "all-season"
     ],
@@ -5849,7 +5849,7 @@
     "modestyRating": "standard",
     "genderCoding": "androgynous",
     "garmentCoding": 0,
-    "fluidTag": true,
+    "fluidTag": false,
     "seasons": [
       "all-season"
     ],
@@ -5947,7 +5947,7 @@
     "modestyRating": "standard",
     "genderCoding": "androgynous",
     "garmentCoding": 0,
-    "fluidTag": true,
+    "fluidTag": false,
     "seasons": [
       "all-season"
     ],
@@ -5998,7 +5998,7 @@
     "modestyRating": "standard",
     "genderCoding": "androgynous",
     "garmentCoding": 0,
-    "fluidTag": true,
+    "fluidTag": false,
     "seasons": [
       "all-season"
     ],
@@ -6051,7 +6051,7 @@
     "modestyRating": "standard",
     "genderCoding": "androgynous",
     "garmentCoding": 0,
-    "fluidTag": true,
+    "fluidTag": false,
     "seasons": [
       "all-season"
     ],
@@ -6103,9 +6103,9 @@
     "volume": 3,
     "texture": 3,
     "modestyRating": "standard",
-    "genderCoding": "androgynous",
+    "genderCoding": "unspecified",
     "garmentCoding": 0,
-    "fluidTag": true,
+    "fluidTag": false,
     "seasons": [
       "summer"
     ],
@@ -6151,9 +6151,9 @@
     "volume": 1,
     "texture": 3,
     "modestyRating": "high-coverage",
-    "genderCoding": "androgynous",
+    "genderCoding": "unspecified",
     "garmentCoding": 0,
-    "fluidTag": true,
+    "fluidTag": false,
     "seasons": [
       "winter"
     ],
@@ -7204,7 +7204,7 @@
     "modestyRating": "standard",
     "genderCoding": "androgynous",
     "garmentCoding": 0,
-    "fluidTag": true,
+    "fluidTag": false,
     "seasons": [
       "summer"
     ],
@@ -7254,7 +7254,7 @@
     "modestyRating": "standard",
     "genderCoding": "androgynous",
     "garmentCoding": 0,
-    "fluidTag": true,
+    "fluidTag": false,
     "seasons": [
       "fall",
       "winter",
@@ -7308,7 +7308,7 @@
     "modestyRating": "standard",
     "genderCoding": "androgynous",
     "garmentCoding": 0,
-    "fluidTag": true,
+    "fluidTag": false,
     "seasons": [
       "spring",
       "summer",
@@ -7359,7 +7359,7 @@
     "modestyRating": "standard",
     "genderCoding": "androgynous",
     "garmentCoding": 0,
-    "fluidTag": true,
+    "fluidTag": false,
     "seasons": [
       "all-season",
       "spring",
@@ -7517,7 +7517,7 @@
     "modestyRating": "standard",
     "genderCoding": "androgynous",
     "garmentCoding": 0,
-    "fluidTag": true,
+    "fluidTag": false,
     "seasons": [
       "all-season"
     ],
@@ -7626,7 +7626,7 @@
     "modestyRating": "standard",
     "genderCoding": "androgynous",
     "garmentCoding": 0,
-    "fluidTag": true,
+    "fluidTag": false,
     "seasons": [
       "all-season",
       "spring",
@@ -7679,7 +7679,7 @@
     "modestyRating": "standard",
     "genderCoding": "androgynous",
     "garmentCoding": 0,
-    "fluidTag": true,
+    "fluidTag": false,
     "seasons": [
       "all-season"
     ],
@@ -7786,7 +7786,7 @@
     "modestyRating": "covered-both",
     "genderCoding": "androgynous",
     "garmentCoding": 0,
-    "fluidTag": true,
+    "fluidTag": false,
     "seasons": [
       "fall",
       "winter"
@@ -7839,7 +7839,7 @@
     "modestyRating": "covered-both",
     "genderCoding": "androgynous",
     "garmentCoding": 0,
-    "fluidTag": true,
+    "fluidTag": false,
     "seasons": [
       "summer",
       "all-season"
@@ -8863,7 +8863,7 @@
     "modestyRating": "unrestricted",
     "genderCoding": "androgynous",
     "garmentCoding": 0,
-    "fluidTag": true,
+    "fluidTag": false,
     "seasons": [
       "all-season"
     ],
@@ -9256,6 +9256,1379 @@
       "smart-casual"
     ],
     "layeringRole": "standalone",
+    "timelessOrTrend": "TIMELESS",
+    "reviewDate": "2026-10-13",
+    "reviewed_by": "engineering-draft",
+    "createdAt": "2026-10-13",
+    "updatedAt": "2026-10-13"
+  },
+  {
+    "id": "gar_fluid_satin_evening_shirt_black",
+    "name": "Fluid Silk-Satin Covered-Placket Evening Shirt (Noir)",
+    "slug": "fluid-satin-evening-shirt-noir",
+    "category": "top",
+    "subcategory": "dress-shirt",
+    "fit": "relaxed",
+    "silhouette": "draped-fluid-column",
+    "length": "regular",
+    "color": {
+      "name": "noir-black",
+      "hex": "#0D0D0D",
+      "tone": "neutral",
+      "isBaseColor": true
+    },
+    "material": "220gsm heavy silk-satin with liquid drape",
+    "fabricWeight": "midweight",
+    "breathability": "high",
+    "waterResistance": "none",
+    "minTemperatureC": 12,
+    "maxTemperatureC": 30,
+    "humidityTolerance": "all",
+    "pattern": "solid",
+    "formality": 5,
+    "structure": 2,
+    "volume": 3,
+    "texture": 2,
+    "drape": "fluid",
+    "lining": "unlined",
+    "insulation": "none",
+    "ornamentation": 1,
+    "budgetTier": "investment",
+    "modestyRating": "covered-arms",
+    "genderCoding": "androgynous",
+    "garmentCoding": 0,
+    "fluidTag": true,
+    "seasons": [
+      "all-season",
+      "fall",
+      "spring",
+      "winter"
+    ],
+    "compatibleWeather": [
+      "mild",
+      "cool",
+      "warm"
+    ],
+    "compatibleStyleSlugs": [
+      "minimal",
+      "korean-minimal",
+      "formal",
+      "smart-casual"
+    ],
+    "layeringRole": "base",
+    "timelessOrTrend": "TIMELESS",
+    "reviewDate": "2026-10-13",
+    "reviewed_by": "engineering-draft",
+    "createdAt": "2026-10-13",
+    "updatedAt": "2026-10-13"
+  },
+  {
+    "id": "gar_fluid_tuxedo_jacket_black",
+    "name": "Soft-Tailored Shawl-Collar Crepe Tuxedo Jacket (Black)",
+    "slug": "soft-shawl-tuxedo-jacket-black",
+    "category": "outerwear",
+    "subcategory": "blazer",
+    "fit": "relaxed",
+    "silhouette": "unstructured-draped-evening-blazer",
+    "length": "regular",
+    "color": {
+      "name": "black",
+      "hex": "#0A0A0A",
+      "tone": "neutral",
+      "isBaseColor": true
+    },
+    "material": "310gsm virgin wool fluid crepe with silk grosgrain lapel",
+    "fabricWeight": "midweight",
+    "breathability": "moderate",
+    "waterResistance": "none",
+    "minTemperatureC": 4,
+    "maxTemperatureC": 24,
+    "humidityTolerance": "all",
+    "pattern": "solid",
+    "formality": 5,
+    "structure": 3,
+    "volume": 3,
+    "texture": 2,
+    "drape": "fluid",
+    "lining": "fully-lined",
+    "insulation": "light",
+    "ornamentation": 2,
+    "budgetTier": "investment",
+    "modestyRating": "high-coverage",
+    "genderCoding": "androgynous",
+    "garmentCoding": 0,
+    "fluidTag": true,
+    "seasons": [
+      "fall",
+      "winter",
+      "spring",
+      "all-season"
+    ],
+    "compatibleWeather": [
+      "cool",
+      "cold",
+      "mild"
+    ],
+    "compatibleStyleSlugs": [
+      "formal",
+      "minimal",
+      "smart-casual"
+    ],
+    "layeringRole": "outer",
+    "timelessOrTrend": "TIMELESS",
+    "reviewDate": "2026-10-13",
+    "reviewed_by": "engineering-draft",
+    "createdAt": "2026-10-13",
+    "updatedAt": "2026-10-13"
+  },
+  {
+    "id": "gar_fluid_evening_trousers_black",
+    "name": "High-Waist Fluid Wool Crepe Pleated Evening Trousers (Black)",
+    "slug": "fluid-crepe-evening-trousers-black",
+    "category": "bottom",
+    "subcategory": "trousers",
+    "fit": "relaxed",
+    "silhouette": "high-rise-double-pleat-wide-break",
+    "length": "extended",
+    "color": {
+      "name": "black",
+      "hex": "#0A0A0A",
+      "tone": "neutral",
+      "isBaseColor": true
+    },
+    "material": "290gsm high-twist wool crepe with fluid drape",
+    "fabricWeight": "midweight",
+    "breathability": "high",
+    "waterResistance": "none",
+    "minTemperatureC": 4,
+    "maxTemperatureC": 26,
+    "humidityTolerance": "all",
+    "pattern": "solid",
+    "formality": 5,
+    "structure": 3,
+    "volume": 4,
+    "texture": 2,
+    "drape": "fluid",
+    "lining": "half-lined",
+    "insulation": "none",
+    "ornamentation": 1,
+    "budgetTier": "elevated",
+    "modestyRating": "high-coverage",
+    "genderCoding": "androgynous",
+    "garmentCoding": 0,
+    "fluidTag": true,
+    "seasons": [
+      "all-season",
+      "fall",
+      "winter",
+      "spring"
+    ],
+    "compatibleWeather": [
+      "cold",
+      "cool",
+      "mild"
+    ],
+    "compatibleStyleSlugs": [
+      "formal",
+      "minimal",
+      "korean-minimal",
+      "smart-casual"
+    ],
+    "layeringRole": "standalone",
+    "timelessOrTrend": "TIMELESS",
+    "reviewDate": "2026-10-13",
+    "reviewed_by": "engineering-draft",
+    "createdAt": "2026-10-13",
+    "updatedAt": "2026-10-13"
+  },
+  {
+    "id": "gar_fluid_tunic_overcoat_black",
+    "name": "Longline Architectural Fluid Wool Tunic Coat (Black)",
+    "slug": "fluid-tunic-overcoat-black",
+    "category": "outerwear",
+    "subcategory": "overcoat",
+    "fit": "relaxed",
+    "silhouette": "straight-longline-mandarin-tunic",
+    "length": "extended",
+    "color": {
+      "name": "black",
+      "hex": "#0C0C0C",
+      "tone": "neutral",
+      "isBaseColor": true
+    },
+    "material": "360gsm double-faced soft wool-cashmere",
+    "fabricWeight": "heavyweight",
+    "breathability": "moderate",
+    "waterResistance": "water-resistant",
+    "minTemperatureC": -3,
+    "maxTemperatureC": 16,
+    "humidityTolerance": "all",
+    "pattern": "solid",
+    "formality": 5,
+    "structure": 3,
+    "volume": 3,
+    "texture": 2,
+    "drape": "fluid",
+    "lining": "fully-lined",
+    "insulation": "moderate",
+    "ornamentation": 1,
+    "budgetTier": "investment",
+    "modestyRating": "covered-both",
+    "genderCoding": "androgynous",
+    "garmentCoding": 0,
+    "fluidTag": true,
+    "seasons": [
+      "winter",
+      "fall"
+    ],
+    "compatibleWeather": [
+      "cold",
+      "cool",
+      "rainy"
+    ],
+    "compatibleStyleSlugs": [
+      "formal",
+      "minimal",
+      "korean-minimal"
+    ],
+    "layeringRole": "outer",
+    "timelessOrTrend": "TIMELESS",
+    "reviewDate": "2026-10-13",
+    "reviewed_by": "engineering-draft",
+    "createdAt": "2026-10-13",
+    "updatedAt": "2026-10-13"
+  },
+  {
+    "id": "gar_fluid_linen_wide_trousers_sand",
+    "name": "Fluid Double-Pleat Pure Linen Wide Trousers (Natural Sand)",
+    "slug": "fluid-linen-wide-trousers-sand",
+    "category": "bottom",
+    "subcategory": "trousers",
+    "fit": "relaxed",
+    "silhouette": "high-rise-double-pleat-wide-break",
+    "length": "extended",
+    "color": {
+      "name": "sand",
+      "hex": "#D8CBB5",
+      "tone": "earth",
+      "isBaseColor": true
+    },
+    "material": "210gsm washed Normandy flax linen",
+    "fabricWeight": "lightweight",
+    "breathability": "high",
+    "waterResistance": "none",
+    "minTemperatureC": 18,
+    "maxTemperatureC": 36,
+    "humidityTolerance": "high-humidity-friendly",
+    "pattern": "solid",
+    "formality": 3,
+    "structure": 2,
+    "volume": 4,
+    "texture": 3,
+    "drape": "fluid",
+    "lining": "unlined",
+    "insulation": "none",
+    "ornamentation": 1,
+    "budgetTier": "elevated",
+    "modestyRating": "high-coverage",
+    "genderCoding": "androgynous",
+    "garmentCoding": 0,
+    "fluidTag": true,
+    "seasons": [
+      "summer",
+      "spring"
+    ],
+    "compatibleWeather": [
+      "hot",
+      "warm"
+    ],
+    "compatibleStyleSlugs": [
+      "minimal",
+      "smart-casual",
+      "old-money",
+      "casual"
+    ],
+    "layeringRole": "standalone",
+    "timelessOrTrend": "TIMELESS",
+    "reviewDate": "2026-10-13",
+    "reviewed_by": "engineering-draft",
+    "createdAt": "2026-10-13",
+    "updatedAt": "2026-10-13"
+  },
+  {
+    "id": "gar_fluid_camp_shirt_ecru",
+    "name": "Boxy Draped Silk-Tencel Camp-Collar Shirt (Ecru)",
+    "slug": "fluid-camp-shirt-ecru",
+    "category": "top",
+    "subcategory": "button-down",
+    "fit": "boxy",
+    "silhouette": "straight-dropped-shoulder",
+    "length": "regular",
+    "color": {
+      "name": "ecru",
+      "hex": "#F4EEDB",
+      "tone": "neutral",
+      "isBaseColor": true
+    },
+    "material": "160gsm silk-tencel fluid twill",
+    "fabricWeight": "lightweight",
+    "breathability": "high",
+    "waterResistance": "none",
+    "minTemperatureC": 20,
+    "maxTemperatureC": 36,
+    "humidityTolerance": "high-humidity-friendly",
+    "pattern": "solid",
+    "formality": 3,
+    "structure": 2,
+    "volume": 3,
+    "texture": 2,
+    "drape": "fluid",
+    "lining": "unlined",
+    "insulation": "none",
+    "ornamentation": 1,
+    "budgetTier": "elevated",
+    "modestyRating": "standard",
+    "genderCoding": "androgynous",
+    "garmentCoding": 0,
+    "fluidTag": true,
+    "seasons": [
+      "summer",
+      "spring"
+    ],
+    "compatibleWeather": [
+      "hot",
+      "warm"
+    ],
+    "compatibleStyleSlugs": [
+      "minimal",
+      "smart-casual",
+      "casual"
+    ],
+    "layeringRole": "base",
+    "timelessOrTrend": "TIMELESS",
+    "reviewDate": "2026-10-13",
+    "reviewed_by": "engineering-draft",
+    "createdAt": "2026-10-13",
+    "updatedAt": "2026-10-13"
+  },
+  {
+    "id": "gar_fluid_open_weave_shirt_white",
+    "name": "Open-Weave Cotton-Linen Knit Resort Shirt (Optic White)",
+    "slug": "fluid-open-weave-shirt-white",
+    "category": "top",
+    "subcategory": "polo",
+    "fit": "relaxed",
+    "silhouette": "clean-taper-open-collar",
+    "length": "regular",
+    "color": {
+      "name": "optic-white",
+      "hex": "#FFFFFF",
+      "tone": "neutral",
+      "isBaseColor": true
+    },
+    "material": "180gsm breathable open-knit cotton-linen mesh",
+    "fabricWeight": "lightweight",
+    "breathability": "high",
+    "waterResistance": "none",
+    "minTemperatureC": 20,
+    "maxTemperatureC": 38,
+    "humidityTolerance": "high-humidity-friendly",
+    "pattern": "textured-weave",
+    "formality": 3,
+    "structure": 2,
+    "volume": 3,
+    "texture": 4,
+    "drape": "fluid",
+    "lining": "unlined",
+    "insulation": "none",
+    "ornamentation": 1,
+    "budgetTier": "elevated",
+    "modestyRating": "standard",
+    "genderCoding": "androgynous",
+    "garmentCoding": 0,
+    "fluidTag": true,
+    "seasons": [
+      "summer"
+    ],
+    "compatibleWeather": [
+      "hot",
+      "warm"
+    ],
+    "compatibleStyleSlugs": [
+      "minimal",
+      "smart-casual",
+      "casual"
+    ],
+    "layeringRole": "base",
+    "timelessOrTrend": "TIMELESS",
+    "reviewDate": "2026-10-13",
+    "reviewed_by": "engineering-draft",
+    "createdAt": "2026-10-13",
+    "updatedAt": "2026-10-13"
+  },
+  {
+    "id": "gar_fluid_heavy_flannel_trousers_charcoal",
+    "name": "Heavy Pleated Flannel Wide-Drape Trousers (Charcoal Melange)",
+    "slug": "fluid-heavy-flannel-trousers-charcoal",
+    "category": "bottom",
+    "subcategory": "trousers",
+    "fit": "relaxed",
+    "silhouette": "high-rise-double-pleat-wide-break",
+    "length": "extended",
+    "color": {
+      "name": "charcoal",
+      "hex": "#2B2B2B",
+      "tone": "neutral",
+      "isBaseColor": true
+    },
+    "material": "380gsm woolen flannel with thermal silk lining",
+    "fabricWeight": "heavyweight",
+    "breathability": "moderate",
+    "waterResistance": "water-resistant",
+    "minTemperatureC": -4,
+    "maxTemperatureC": 14,
+    "humidityTolerance": "all",
+    "pattern": "solid",
+    "formality": 4,
+    "structure": 3,
+    "volume": 4,
+    "texture": 3,
+    "drape": "fluid",
+    "lining": "fully-lined",
+    "insulation": "moderate",
+    "ornamentation": 1,
+    "budgetTier": "elevated",
+    "modestyRating": "covered-both",
+    "genderCoding": "androgynous",
+    "garmentCoding": 0,
+    "fluidTag": true,
+    "seasons": [
+      "winter",
+      "fall"
+    ],
+    "compatibleWeather": [
+      "cold",
+      "cool",
+      "rainy"
+    ],
+    "compatibleStyleSlugs": [
+      "minimal",
+      "smart-casual",
+      "old-money"
+    ],
+    "layeringRole": "standalone",
+    "timelessOrTrend": "TIMELESS",
+    "reviewDate": "2026-10-13",
+    "reviewed_by": "engineering-draft",
+    "createdAt": "2026-10-13",
+    "updatedAt": "2026-10-13"
+  },
+  {
+    "id": "gar_fluid_leather_slide_sandals",
+    "name": "Minimalist Asymmetric Padded Leather Slide Mules (Espresso)",
+    "slug": "fluid-leather-slide-mules-espresso",
+    "category": "footwear",
+    "subcategory": "sandals",
+    "fit": "regular",
+    "silhouette": "backless-sculpted-slide",
+    "length": "regular",
+    "color": {
+      "name": "espresso",
+      "hex": "#2A1F18",
+      "tone": "earth",
+      "isBaseColor": true
+    },
+    "material": "Soft vegetable-tanned calfskin with cushioned footbed",
+    "fabricWeight": "midweight",
+    "breathability": "high",
+    "waterResistance": "none",
+    "minTemperatureC": 20,
+    "maxTemperatureC": 38,
+    "humidityTolerance": "high-humidity-friendly",
+    "pattern": "solid",
+    "formality": 3,
+    "structure": 2,
+    "volume": 2,
+    "texture": 2,
+    "walkabilityScore": 4,
+    "ornamentation": 1,
+    "budgetTier": "elevated",
+    "modestyRating": "standard",
+    "genderCoding": "androgynous",
+    "garmentCoding": 0,
+    "fluidTag": true,
+    "seasons": [
+      "summer"
+    ],
+    "compatibleWeather": [
+      "hot",
+      "warm"
+    ],
+    "compatibleStyleSlugs": [
+      "minimal",
+      "smart-casual",
+      "casual"
+    ],
+    "layeringRole": "standalone",
+    "timelessOrTrend": "TIMELESS",
+    "reviewDate": "2026-10-13",
+    "reviewed_by": "engineering-draft",
+    "createdAt": "2026-10-13",
+    "updatedAt": "2026-10-13"
+  },
+  {
+    "id": "gar_fluid_woven_loafers_black",
+    "name": "Breathable Hand-Woven Nappa Leather Loafers (Black)",
+    "slug": "fluid-woven-leather-loafers-black",
+    "category": "footwear",
+    "subcategory": "loafers",
+    "fit": "regular",
+    "silhouette": "soft-structure-woven-loafer",
+    "length": "regular",
+    "color": {
+      "name": "black",
+      "hex": "#111111",
+      "tone": "neutral",
+      "isBaseColor": true
+    },
+    "material": "Interwoven lambskin nappa with flexible leather sole",
+    "fabricWeight": "midweight",
+    "breathability": "high",
+    "waterResistance": "none",
+    "minTemperatureC": 15,
+    "maxTemperatureC": 34,
+    "humidityTolerance": "high-humidity-friendly",
+    "pattern": "textured-weave",
+    "formality": 4,
+    "structure": 3,
+    "volume": 2,
+    "texture": 4,
+    "walkabilityScore": 5,
+    "ornamentation": 1,
+    "budgetTier": "elevated",
+    "modestyRating": "standard",
+    "genderCoding": "androgynous",
+    "garmentCoding": 0,
+    "fluidTag": true,
+    "seasons": [
+      "summer",
+      "spring",
+      "fall"
+    ],
+    "compatibleWeather": [
+      "warm",
+      "hot",
+      "mild"
+    ],
+    "compatibleStyleSlugs": [
+      "minimal",
+      "smart-casual",
+      "old-money"
+    ],
+    "layeringRole": "standalone",
+    "timelessOrTrend": "TIMELESS",
+    "reviewDate": "2026-10-13",
+    "reviewed_by": "engineering-draft",
+    "createdAt": "2026-10-13",
+    "updatedAt": "2026-10-13"
+  },
+  {
+    "id": "gar_fluid_evening_slippers_black",
+    "name": "Soft Calfskin Formal Evening Venetian Loafers (Black)",
+    "slug": "fluid-evening-venetian-slippers-black",
+    "category": "footwear",
+    "subcategory": "loafers",
+    "fit": "tailored",
+    "silhouette": "low-profile-almond-toe-venetian",
+    "length": "regular",
+    "color": {
+      "name": "black",
+      "hex": "#0A0A0A",
+      "tone": "neutral",
+      "isBaseColor": true
+    },
+    "material": "Polished glove calfskin with beveled leather waist",
+    "fabricWeight": "midweight",
+    "breathability": "moderate",
+    "waterResistance": "none",
+    "minTemperatureC": 5,
+    "maxTemperatureC": 28,
+    "humidityTolerance": "all",
+    "pattern": "solid",
+    "formality": 5,
+    "structure": 3,
+    "volume": 2,
+    "texture": 1,
+    "walkabilityScore": 4,
+    "ornamentation": 1,
+    "budgetTier": "investment",
+    "modestyRating": "standard",
+    "genderCoding": "androgynous",
+    "garmentCoding": 0,
+    "fluidTag": true,
+    "seasons": [
+      "all-season",
+      "fall",
+      "winter",
+      "spring"
+    ],
+    "compatibleWeather": [
+      "mild",
+      "cool",
+      "cold",
+      "warm"
+    ],
+    "compatibleStyleSlugs": [
+      "formal",
+      "minimal",
+      "smart-casual"
+    ],
+    "layeringRole": "standalone",
+    "timelessOrTrend": "TIMELESS",
+    "reviewDate": "2026-10-13",
+    "reviewed_by": "engineering-draft",
+    "createdAt": "2026-10-13",
+    "updatedAt": "2026-10-13"
+  },
+  {
+    "id": "gar_fluid_all_weather_chelsea_boots_black",
+    "name": "Weatherproof Sculpted Fluid Chelsea Boots (Pitch Black)",
+    "slug": "fluid-weatherproof-chelsea-boots-black",
+    "category": "footwear",
+    "subcategory": "boots",
+    "fit": "regular",
+    "silhouette": "streamlined-taper-commando-sole",
+    "length": "ankle",
+    "color": {
+      "name": "black",
+      "hex": "#0E0E0E",
+      "tone": "neutral",
+      "isBaseColor": true
+    },
+    "material": "Weatherproof hydrophobized calfskin leather",
+    "fabricWeight": "heavyweight",
+    "breathability": "moderate",
+    "waterResistance": "waterproof",
+    "minTemperatureC": -4,
+    "maxTemperatureC": 18,
+    "humidityTolerance": "high-humidity-friendly",
+    "pattern": "solid",
+    "formality": 4,
+    "structure": 4,
+    "volume": 3,
+    "texture": 2,
+    "walkabilityScore": 5,
+    "ornamentation": 1,
+    "budgetTier": "elevated",
+    "modestyRating": "high-coverage",
+    "genderCoding": "androgynous",
+    "garmentCoding": 0,
+    "fluidTag": true,
+    "seasons": [
+      "fall",
+      "winter",
+      "spring"
+    ],
+    "compatibleWeather": [
+      "cold",
+      "cool",
+      "rainy"
+    ],
+    "compatibleStyleSlugs": [
+      "minimal",
+      "smart-casual",
+      "korean-minimal"
+    ],
+    "layeringRole": "standalone",
+    "timelessOrTrend": "TIMELESS",
+    "reviewDate": "2026-10-13",
+    "reviewed_by": "engineering-draft",
+    "createdAt": "2026-10-13",
+    "updatedAt": "2026-10-13"
+  },
+  {
+    "id": "gar_fluid_mesh_knit_derbies_black",
+    "name": "Technical Knit & Calfskin Hybrid Derbies (Black)",
+    "slug": "fluid-knit-hybrid-derbies-black",
+    "category": "footwear",
+    "subcategory": "oxfords",
+    "fit": "regular",
+    "silhouette": "almond-toe-chunky-wedge",
+    "length": "regular",
+    "color": {
+      "name": "black",
+      "hex": "#141414",
+      "tone": "neutral",
+      "isBaseColor": true
+    },
+    "material": "High-density breathable engineered knit with leather rand",
+    "fabricWeight": "midweight",
+    "breathability": "high",
+    "waterResistance": "none",
+    "minTemperatureC": 14,
+    "maxTemperatureC": 32,
+    "humidityTolerance": "all",
+    "pattern": "solid",
+    "formality": 3,
+    "structure": 3,
+    "volume": 3,
+    "texture": 3,
+    "walkabilityScore": 5,
+    "ornamentation": 1,
+    "budgetTier": "elevated",
+    "modestyRating": "standard",
+    "genderCoding": "androgynous",
+    "garmentCoding": 0,
+    "fluidTag": true,
+    "seasons": [
+      "spring",
+      "summer",
+      "fall"
+    ],
+    "compatibleWeather": [
+      "warm",
+      "mild",
+      "hot"
+    ],
+    "compatibleStyleSlugs": [
+      "minimal",
+      "korean-minimal",
+      "smart-casual"
+    ],
+    "layeringRole": "standalone",
+    "timelessOrTrend": "TIMELESS",
+    "reviewDate": "2026-10-13",
+    "reviewed_by": "engineering-draft",
+    "createdAt": "2026-10-13",
+    "updatedAt": "2026-10-13"
+  },
+  {
+    "id": "gar_fluid_lug_sole_monk_strap_shoes_black",
+    "name": "Single-Strap Minimalist Monk Shoes on Commando Sole (Black)",
+    "slug": "fluid-commando-monk-strap-black",
+    "category": "footwear",
+    "subcategory": "monk-straps",
+    "fit": "regular",
+    "silhouette": "architectural-monk-commando-wedge",
+    "length": "regular",
+    "color": {
+      "name": "black",
+      "hex": "#121212",
+      "tone": "neutral",
+      "isBaseColor": true
+    },
+    "material": "Box-calf leather with tonal matte hardware and Vibram sole",
+    "fabricWeight": "heavyweight",
+    "breathability": "moderate",
+    "waterResistance": "water-resistant",
+    "minTemperatureC": -2,
+    "maxTemperatureC": 22,
+    "humidityTolerance": "all",
+    "pattern": "solid",
+    "formality": 4,
+    "structure": 4,
+    "volume": 3,
+    "texture": 2,
+    "walkabilityScore": 5,
+    "ornamentation": 1,
+    "budgetTier": "elevated",
+    "modestyRating": "standard",
+    "genderCoding": "androgynous",
+    "garmentCoding": 0,
+    "fluidTag": true,
+    "seasons": [
+      "all-season",
+      "fall",
+      "winter",
+      "spring"
+    ],
+    "compatibleWeather": [
+      "cold",
+      "cool",
+      "mild",
+      "rainy"
+    ],
+    "compatibleStyleSlugs": [
+      "minimal",
+      "smart-casual",
+      "korean-minimal"
+    ],
+    "layeringRole": "standalone",
+    "timelessOrTrend": "TIMELESS",
+    "reviewDate": "2026-10-13",
+    "reviewed_by": "engineering-draft",
+    "createdAt": "2026-10-13",
+    "updatedAt": "2026-10-13"
+  },
+  {
+    "id": "gar_silk_tie_neck_blouse_ivory",
+    "name": "Silk Georgette Lavallière Tie-Neck Blouse (Ivory)",
+    "slug": "silk-georgette-tie-neck-blouse-ivory",
+    "category": "top",
+    "subcategory": "blouse",
+    "fit": "relaxed",
+    "silhouette": "fluid-drape-tie-neck-cuff",
+    "length": "regular",
+    "color": {
+      "name": "ivory",
+      "hex": "#FFFFF0",
+      "tone": "neutral",
+      "isBaseColor": true
+    },
+    "material": "100% 16mm Mulberry silk georgette",
+    "fabricWeight": "lightweight",
+    "breathability": "high",
+    "waterResistance": "none",
+    "minTemperatureC": 12,
+    "maxTemperatureC": 28,
+    "humidityTolerance": "all",
+    "pattern": "solid",
+    "formality": 4,
+    "structure": 2,
+    "volume": 3,
+    "texture": 2,
+    "drape": "fluid",
+    "lining": "unlined",
+    "insulation": "none",
+    "ornamentation": 2,
+    "budgetTier": "elevated",
+    "modestyRating": "covered-arms",
+    "genderCoding": "feminine",
+    "garmentCoding": 1,
+    "fluidTag": false,
+    "seasons": [
+      "all-season",
+      "spring",
+      "fall",
+      "summer"
+    ],
+    "compatibleWeather": [
+      "mild",
+      "warm",
+      "cool"
+    ],
+    "compatibleStyleSlugs": [
+      "minimal",
+      "smart-casual",
+      "old-money",
+      "formal"
+    ],
+    "layeringRole": "base",
+    "timelessOrTrend": "TIMELESS",
+    "reviewDate": "2026-10-13",
+    "reviewed_by": "engineering-draft",
+    "createdAt": "2026-10-13",
+    "updatedAt": "2026-10-13"
+  },
+  {
+    "id": "gar_draped_cowl_neck_satin_camisole_champagne",
+    "name": "Bias-Cut Draped Cowl-Neck Satin Camisole (Champagne)",
+    "slug": "draped-cowl-satin-camisole-champagne",
+    "category": "top",
+    "subcategory": "camisole",
+    "fit": "tailored",
+    "silhouette": "bias-cut-cowl-drape",
+    "length": "regular",
+    "color": {
+      "name": "champagne",
+      "hex": "#F7E7CE",
+      "tone": "neutral",
+      "isBaseColor": true
+    },
+    "material": "19mm pure silk charmeuse satin",
+    "fabricWeight": "lightweight",
+    "breathability": "high",
+    "waterResistance": "none",
+    "minTemperatureC": 16,
+    "maxTemperatureC": 32,
+    "humidityTolerance": "all",
+    "pattern": "solid",
+    "formality": 4,
+    "structure": 1,
+    "volume": 2,
+    "texture": 2,
+    "drape": "fluid",
+    "lining": "unlined",
+    "insulation": "none",
+    "ornamentation": 1,
+    "budgetTier": "elevated",
+    "modestyRating": "low-coverage",
+    "genderCoding": "feminine",
+    "garmentCoding": 1,
+    "fluidTag": false,
+    "seasons": [
+      "summer",
+      "spring",
+      "all-season"
+    ],
+    "compatibleWeather": [
+      "warm",
+      "hot",
+      "mild"
+    ],
+    "compatibleStyleSlugs": [
+      "minimal",
+      "smart-casual",
+      "party"
+    ],
+    "layeringRole": "base",
+    "timelessOrTrend": "TIMELESS",
+    "reviewDate": "2026-10-13",
+    "reviewed_by": "engineering-draft",
+    "createdAt": "2026-10-13",
+    "updatedAt": "2026-10-13"
+  },
+  {
+    "id": "gar_sweetheart_ribbed_knit_top_black",
+    "name": "Sculpted Sweetheart-Neckline Fine Ribbed Top (Black)",
+    "slug": "sweetheart-ribbed-knit-top-black",
+    "category": "top",
+    "subcategory": "knitwear",
+    "fit": "slim",
+    "silhouette": "form-fitting-sweetheart-bust",
+    "length": "regular",
+    "color": {
+      "name": "black",
+      "hex": "#111111",
+      "tone": "neutral",
+      "isBaseColor": true
+    },
+    "material": "Viscose-stretch compact architectural knit",
+    "fabricWeight": "midweight",
+    "breathability": "high",
+    "waterResistance": "none",
+    "minTemperatureC": 14,
+    "maxTemperatureC": 28,
+    "humidityTolerance": "all",
+    "pattern": "solid",
+    "formality": 3,
+    "structure": 3,
+    "volume": 1,
+    "texture": 2,
+    "drape": "moderate",
+    "lining": "unlined",
+    "insulation": "none",
+    "ornamentation": 1,
+    "budgetTier": "accessible",
+    "modestyRating": "standard",
+    "genderCoding": "feminine",
+    "garmentCoding": 0.5,
+    "fluidTag": false,
+    "seasons": [
+      "all-season",
+      "spring",
+      "fall"
+    ],
+    "compatibleWeather": [
+      "mild",
+      "warm",
+      "cool"
+    ],
+    "compatibleStyleSlugs": [
+      "minimal",
+      "smart-casual",
+      "night-out"
+    ],
+    "layeringRole": "base",
+    "timelessOrTrend": "TIMELESS",
+    "reviewDate": "2026-10-13",
+    "reviewed_by": "engineering-draft",
+    "createdAt": "2026-10-13",
+    "updatedAt": "2026-10-13"
+  },
+  {
+    "id": "gar_asymmetric_wrap_linen_top_natural",
+    "name": "Asymmetric Crossover Pure Linen Wrap Top (Natural Flax)",
+    "slug": "asymmetric-wrap-linen-top-natural",
+    "category": "top",
+    "subcategory": "blouse",
+    "fit": "tailored",
+    "silhouette": "waist-tie-crossover-wrap",
+    "length": "regular",
+    "color": {
+      "name": "natural-flax",
+      "hex": "#E2D8C3",
+      "tone": "earth",
+      "isBaseColor": true
+    },
+    "material": "200gsm pre-washed French flax linen",
+    "fabricWeight": "lightweight",
+    "breathability": "high",
+    "waterResistance": "none",
+    "minTemperatureC": 18,
+    "maxTemperatureC": 36,
+    "humidityTolerance": "high-humidity-friendly",
+    "pattern": "solid",
+    "formality": 2,
+    "structure": 2,
+    "volume": 2,
+    "texture": 3,
+    "drape": "fluid",
+    "lining": "unlined",
+    "insulation": "none",
+    "ornamentation": 1,
+    "budgetTier": "elevated",
+    "modestyRating": "standard",
+    "genderCoding": "feminine",
+    "garmentCoding": 0.5,
+    "fluidTag": false,
+    "seasons": [
+      "summer",
+      "spring"
+    ],
+    "compatibleWeather": [
+      "hot",
+      "warm"
+    ],
+    "compatibleStyleSlugs": [
+      "minimal",
+      "casual",
+      "smart-casual"
+    ],
+    "layeringRole": "base",
+    "timelessOrTrend": "TIMELESS",
+    "reviewDate": "2026-10-13",
+    "reviewed_by": "engineering-draft",
+    "createdAt": "2026-10-13",
+    "updatedAt": "2026-10-13"
+  },
+  {
+    "id": "gar_cashmere_mockneck_top_camel",
+    "name": "Fine-Gauge Cashmere-Silk Ribbed Mockneck (Warm Camel)",
+    "slug": "cashmere-silk-mockneck-top-camel",
+    "category": "top",
+    "subcategory": "knitwear",
+    "fit": "slim",
+    "silhouette": "streamlined-taper-high-neck",
+    "length": "regular",
+    "color": {
+      "name": "camel",
+      "hex": "#C19A6B",
+      "tone": "earth",
+      "isBaseColor": true
+    },
+    "material": "70% cashmere 30% silk fine gauge 18GG",
+    "fabricWeight": "midweight",
+    "breathability": "high",
+    "waterResistance": "none",
+    "minTemperatureC": -2,
+    "maxTemperatureC": 18,
+    "humidityTolerance": "all",
+    "pattern": "solid",
+    "formality": 3,
+    "structure": 3,
+    "volume": 2,
+    "texture": 2,
+    "drape": "moderate",
+    "lining": "unlined",
+    "insulation": "moderate",
+    "ornamentation": 1,
+    "budgetTier": "investment",
+    "modestyRating": "covered-arms",
+    "genderCoding": "feminine",
+    "garmentCoding": 0.5,
+    "fluidTag": false,
+    "seasons": [
+      "fall",
+      "winter",
+      "spring"
+    ],
+    "compatibleWeather": [
+      "cold",
+      "cool"
+    ],
+    "compatibleStyleSlugs": [
+      "minimal",
+      "smart-casual",
+      "old-money"
+    ],
+    "layeringRole": "base",
+    "timelessOrTrend": "TIMELESS",
+    "reviewDate": "2026-10-13",
+    "reviewed_by": "engineering-draft",
+    "createdAt": "2026-10-13",
+    "updatedAt": "2026-10-13"
+  },
+  {
+    "id": "gar_poplin_peplum_blouse_white",
+    "name": "Architectural Fitted Cotton Poplin Peplum Blouse (Pure White)",
+    "slug": "poplin-peplum-blouse-white",
+    "category": "top",
+    "subcategory": "blouse",
+    "fit": "tailored",
+    "silhouette": "cinched-waist-structured-peplum",
+    "length": "regular",
+    "color": {
+      "name": "white",
+      "hex": "#FFFFFF",
+      "tone": "neutral",
+      "isBaseColor": true
+    },
+    "material": "140gsm crisp Egyptian cotton poplin",
+    "fabricWeight": "lightweight",
+    "breathability": "high",
+    "waterResistance": "none",
+    "minTemperatureC": 16,
+    "maxTemperatureC": 30,
+    "humidityTolerance": "all",
+    "pattern": "solid",
+    "formality": 3,
+    "structure": 4,
+    "volume": 3,
+    "texture": 1,
+    "drape": "stiff",
+    "lining": "unlined",
+    "insulation": "none",
+    "ornamentation": 1,
+    "budgetTier": "accessible",
+    "modestyRating": "standard",
+    "genderCoding": "feminine",
+    "garmentCoding": 1,
+    "fluidTag": false,
+    "seasons": [
+      "spring",
+      "summer",
+      "fall"
+    ],
+    "compatibleWeather": [
+      "warm",
+      "mild",
+      "hot"
+    ],
+    "compatibleStyleSlugs": [
+      "minimal",
+      "smart-casual"
+    ],
+    "layeringRole": "base",
+    "timelessOrTrend": "TIMELESS",
+    "reviewDate": "2026-10-13",
+    "reviewed_by": "engineering-draft",
+    "createdAt": "2026-10-13",
+    "updatedAt": "2026-10-13"
+  },
+  {
+    "id": "gar_organza_overlay_blouse_noir",
+    "name": "Silk Organza Sheer Overlay Formal Blouse (Noir)",
+    "slug": "organza-overlay-formal-blouse-noir",
+    "category": "top",
+    "subcategory": "blouse",
+    "fit": "relaxed",
+    "silhouette": "volumetric-balloon-sleeve-high-neck",
+    "length": "regular",
+    "color": {
+      "name": "noir",
+      "hex": "#0B0B0B",
+      "tone": "neutral",
+      "isBaseColor": true
+    },
+    "material": "100% sheer silk organza with tonal silk camisole base",
+    "fabricWeight": "lightweight",
+    "breathability": "high",
+    "waterResistance": "none",
+    "minTemperatureC": 12,
+    "maxTemperatureC": 28,
+    "humidityTolerance": "all",
+    "pattern": "solid",
+    "formality": 5,
+    "structure": 3,
+    "volume": 4,
+    "texture": 2,
+    "drape": "fluid",
+    "lining": "half-lined",
+    "insulation": "none",
+    "ornamentation": 2,
+    "budgetTier": "investment",
+    "modestyRating": "covered-arms",
+    "genderCoding": "feminine",
+    "garmentCoding": 1,
+    "fluidTag": false,
+    "seasons": [
+      "all-season",
+      "fall",
+      "spring"
+    ],
+    "compatibleWeather": [
+      "mild",
+      "cool",
+      "warm"
+    ],
+    "compatibleStyleSlugs": [
+      "formal",
+      "minimal",
+      "party"
+    ],
+    "layeringRole": "base",
+    "timelessOrTrend": "TIMELESS",
+    "reviewDate": "2026-10-13",
+    "reviewed_by": "engineering-draft",
+    "createdAt": "2026-10-13",
+    "updatedAt": "2026-10-13"
+  },
+  {
+    "id": "gar_merino_wrap_cardigan_top_oatmeal",
+    "name": "Fine Merino Wool Ballet Wrap Top (Oatmeal Melange)",
+    "slug": "merino-ballet-wrap-top-oatmeal",
+    "category": "top",
+    "subcategory": "knitwear",
+    "fit": "tailored",
+    "silhouette": "waist-tie-surplice-ballet-wrap",
+    "length": "regular",
+    "color": {
+      "name": "oatmeal",
+      "hex": "#D7CEC7",
+      "tone": "neutral",
+      "isBaseColor": true
+    },
+    "material": "100% extra-fine Merino wool 16GG",
+    "fabricWeight": "midweight",
+    "breathability": "high",
+    "waterResistance": "none",
+    "minTemperatureC": 4,
+    "maxTemperatureC": 20,
+    "humidityTolerance": "all",
+    "pattern": "solid",
+    "formality": 3,
+    "structure": 2,
+    "volume": 2,
+    "texture": 2,
+    "drape": "fluid",
+    "lining": "unlined",
+    "insulation": "light",
+    "ornamentation": 1,
+    "budgetTier": "elevated",
+    "modestyRating": "covered-arms",
+    "genderCoding": "feminine",
+    "garmentCoding": 0.5,
+    "fluidTag": false,
+    "seasons": [
+      "fall",
+      "winter",
+      "spring"
+    ],
+    "compatibleWeather": [
+      "cool",
+      "cold",
+      "mild"
+    ],
+    "compatibleStyleSlugs": [
+      "minimal",
+      "smart-casual",
+      "casual"
+    ],
+    "layeringRole": "base",
+    "timelessOrTrend": "TIMELESS",
+    "reviewDate": "2026-10-13",
+    "reviewed_by": "engineering-draft",
+    "createdAt": "2026-10-13",
+    "updatedAt": "2026-10-13"
+  },
+  {
+    "id": "gar_fluid_crepe_shell_top_terracotta",
+    "name": "Sleeveless Fluid Matte Crepe Shell Top (Terracotta)",
+    "slug": "fluid-crepe-shell-top-terracotta",
+    "category": "top",
+    "subcategory": "blouse",
+    "fit": "regular",
+    "silhouette": "clean-boatneck-drape",
+    "length": "regular",
+    "color": {
+      "name": "terracotta",
+      "hex": "#B85D38",
+      "tone": "earth",
+      "isBaseColor": true
+    },
+    "material": "210gsm matte triacetate fluid crepe",
+    "fabricWeight": "lightweight",
+    "breathability": "high",
+    "waterResistance": "none",
+    "minTemperatureC": 18,
+    "maxTemperatureC": 36,
+    "humidityTolerance": "high-humidity-friendly",
+    "pattern": "solid",
+    "formality": 3,
+    "structure": 2,
+    "volume": 2,
+    "texture": 2,
+    "drape": "fluid",
+    "lining": "unlined",
+    "insulation": "none",
+    "ornamentation": 1,
+    "budgetTier": "accessible",
+    "modestyRating": "standard",
+    "genderCoding": "feminine",
+    "garmentCoding": 0.5,
+    "fluidTag": false,
+    "seasons": [
+      "summer",
+      "spring"
+    ],
+    "compatibleWeather": [
+      "hot",
+      "warm"
+    ],
+    "compatibleStyleSlugs": [
+      "minimal",
+      "smart-casual"
+    ],
+    "layeringRole": "base",
+    "timelessOrTrend": "TIMELESS",
+    "reviewDate": "2026-10-13",
+    "reviewed_by": "engineering-draft",
+    "createdAt": "2026-10-13",
+    "updatedAt": "2026-10-13"
+  },
+  {
+    "id": "gar_off_shoulder_evening_knit_top_black",
+    "name": "Fold-Over Off-The-Shoulder Evening Knit Top (Black)",
+    "slug": "off-shoulder-evening-knit-top-black",
+    "category": "top",
+    "subcategory": "knitwear",
+    "fit": "slim",
+    "silhouette": "bardot-foldover-sculpted",
+    "length": "regular",
+    "color": {
+      "name": "black",
+      "hex": "#0B0B0B",
+      "tone": "neutral",
+      "isBaseColor": true
+    },
+    "material": "Compact milano-rib viscose blend",
+    "fabricWeight": "midweight",
+    "breathability": "moderate",
+    "waterResistance": "none",
+    "minTemperatureC": 12,
+    "maxTemperatureC": 26,
+    "humidityTolerance": "all",
+    "pattern": "solid",
+    "formality": 4,
+    "structure": 3,
+    "volume": 2,
+    "texture": 2,
+    "drape": "moderate",
+    "lining": "unlined",
+    "insulation": "light",
+    "ornamentation": 1,
+    "budgetTier": "elevated",
+    "modestyRating": "standard",
+    "genderCoding": "feminine",
+    "garmentCoding": 1,
+    "fluidTag": false,
+    "seasons": [
+      "all-season",
+      "fall",
+      "spring"
+    ],
+    "compatibleWeather": [
+      "mild",
+      "cool",
+      "warm"
+    ],
+    "compatibleStyleSlugs": [
+      "minimal",
+      "smart-casual",
+      "party"
+    ],
+    "layeringRole": "base",
     "timelessOrTrend": "TIMELESS",
     "reviewDate": "2026-10-13",
     "reviewed_by": "engineering-draft",

@@ -145,8 +145,8 @@
   "result": {
     "looksCount": 3,
     "contextApplied": "Fine Dining / Dinner Party",
-    "vetoedCandidateCount": 15,
-    "evaluatedCandidateCount": 39,
+    "vetoedCandidateCount": 18,
+    "evaluatedCandidateCount": 51,
     "looks": [
       {
         "tier": "BEST_MATCH",
@@ -261,7 +261,7 @@
           ],
           "traceableReasons": [
             {
-              "reasonId": "rea_outfit_korean_minimal_01_0_1791900814826",
+              "reasonId": "rea_outfit_korean_minimal_01_0_1791915078514",
               "text": "Cropped upper proportion offset by expansive lower volume",
               "signalIds": [
                 "user.styleProfile.preferences.preferredStyleSlugs",
@@ -278,7 +278,7 @@
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_korean_minimal_01_1_1791900814826",
+              "reasonId": "rea_outfit_korean_minimal_01_1_1791915078514",
               "text": "Strong contrast between light and deep neutral values establishes crisp visual separation.",
               "signalIds": [
                 "user.styleProfile.preferences.preferredStyleSlugs",
@@ -295,7 +295,7 @@
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_korean_minimal_01_2_1791900814826",
+              "reasonId": "rea_outfit_korean_minimal_01_2_1791915078514",
               "text": "Aligned to Fine Dining / Dinner Party formality.",
               "signalIds": [
                 "context.occasion",
@@ -348,57 +348,57 @@
         },
         "overallHarmonyScore": 0.88,
         "reasons": [
-          "Cropped upper proportion offset by expansive lower volume",
-          "Strong contrast between light and deep neutral values establishes crisp visual separation.",
+          "Structured upper anchor balanced with fluid wide-leg lower volume",
+          "Tonal neutral palette ensures high versatility and effortless visual cohesion.",
           "Aligned to Fine Dining / Dinner Party formality."
         ],
         "cautions": [],
         "outfit": {
-          "id": "outfit_fluid_db_suit_taupe_01",
-          "title": "Unstructured Double-Breasted Fluid Suit in Taupe",
+          "id": "outfit_fluid_cold_cocoon_coat_01",
+          "title": "Cocoon Wool Overcoat & Double-Pleated Trousers",
           "primaryStyleSlug": "korean-minimal",
           "formality": 3,
           "score": 0.88,
           "items": [
             {
               "category": "top",
-              "subcategory": "t-shirt",
-              "name": "Heavyweight Boxy Tee (Off-White)",
-              "material": "300gsm combed organic cotton",
-              "color": "off-white",
-              "fit": "boxy",
-              "modestyRating": "standard",
+              "subcategory": "knitwear",
+              "name": "Minimal Ribbed Mock Neck",
+              "material": "compact modal-wool jersey",
+              "color": "jet-black",
+              "fit": "slim",
+              "modestyRating": "high-coverage",
               "genderCoding": "androgynous",
               "layerPosition": 0
             },
             {
               "category": "outerwear",
-              "subcategory": "blazer",
-              "name": "Unstructured Double-Breasted Fluid Jacket (Warm Taupe)",
-              "material": "250gsm fluid wool-viscose twill",
-              "color": "warm-taupe",
-              "fit": "relaxed",
-              "modestyRating": "covered-arms",
+              "subcategory": "overcoat",
+              "name": "Oversized Cocoon Silhouette Wool Overcoat (Heather Grey)",
+              "material": "460gsm boiled virgin wool",
+              "color": "heather-grey",
+              "fit": "oversized",
+              "modestyRating": "covered-both",
               "genderCoding": "androgynous",
               "layerPosition": 1
             },
             {
               "category": "bottom",
               "subcategory": "trousers",
-              "name": "Double-Pleat Fluid Drape Trousers (Warm Taupe)",
-              "material": "250gsm fluid wool-viscose twill",
-              "color": "warm-taupe",
+              "name": "Double-Pleated Wide-Leg Trousers",
+              "material": "wool gabardine blend",
+              "color": "pitch-black",
               "fit": "relaxed",
-              "modestyRating": "covered-both",
+              "modestyRating": "high-coverage",
               "genderCoding": "androgynous",
               "layerPosition": 0
             },
             {
               "category": "footwear",
-              "subcategory": "derbies",
-              "name": "Commando-Sole Leather Derbies",
-              "material": "polished binder calf leather, Vibram lug sole",
-              "color": "polished-black",
+              "subcategory": "boot",
+              "name": "Commando Lug-Sole Waterproof Chelsea Boots",
+              "material": "hydrophobic full-grain calf leather, Vibram lug sole",
+              "color": "matte-black",
               "fit": "regular",
               "modestyRating": "standard",
               "genderCoding": "androgynous",
@@ -426,14 +426,14 @@
             {
               "category": "silhouette_balance",
               "weight": 3,
-              "score": 0.96,
-              "reason": "Cropped upper proportion offset by expansive lower volume"
+              "score": 0.95,
+              "reason": "Structured upper anchor balanced with fluid wide-leg lower volume"
             },
             {
               "category": "color_harmony",
               "weight": 3,
-              "score": 0.94,
-              "reason": "Color story: strong-contrast"
+              "score": 0.92,
+              "reason": "Color story: tonal-neutral"
             },
             {
               "category": "occasion_fit",
@@ -462,17 +462,35 @@
           ],
           "traceableReasons": [
             {
-              "reasonId": "rea_outfit_fluid_db_suit_taupe_01_0_1791900814826",
-              "text": "Cropped upper proportion offset by expansive lower volume",
+              "reasonId": "rea_outfit_fluid_cold_cocoon_coat_01_0_1791915078515",
+              "text": "Structured upper anchor balanced with fluid wide-leg lower volume",
+              "signalIds": [
+                "user.styleProfile.preferences.fitProportions",
+                "user.styleProfile.preferences.preferredFits"
+              ],
+              "knowledgeEntryIds": [
+                "gar_mockneck_black",
+                "gar_fluid_cocoon_wool_coat_heather_grey",
+                "gar_wide_trousers_black",
+                "gar_chelsea_boot_lug_sole_black",
+                "gar_leather_structured_tote_black"
+              ],
+              "factor": "silhouette_balance",
+              "authority": "USER_ENTERED",
+              "isAssumed": false
+            },
+            {
+              "reasonId": "rea_outfit_fluid_cold_cocoon_coat_01_1_1791915078515",
+              "text": "Tonal neutral palette ensures high versatility and effortless visual cohesion.",
               "signalIds": [
                 "user.styleProfile.preferences.preferredStyleSlugs",
                 "context.occasion"
               ],
               "knowledgeEntryIds": [
-                "gar_box_tee_white",
-                "gar_fluid_unstructured_double_breasted_suit_jacket_taupe",
-                "gar_fluid_relaxed_drape_trousers_taupe",
-                "gar_chunky_derbies_black",
+                "gar_mockneck_black",
+                "gar_fluid_cocoon_wool_coat_heather_grey",
+                "gar_wide_trousers_black",
+                "gar_chelsea_boot_lug_sole_black",
                 "gar_leather_structured_tote_black"
               ],
               "factor": "general",
@@ -480,35 +498,17 @@
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_fluid_db_suit_taupe_01_1_1791900814827",
-              "text": "Strong contrast between light and deep neutral values establishes crisp visual separation.",
-              "signalIds": [
-                "user.styleProfile.preferences.preferredStyleSlugs",
-                "context.occasion"
-              ],
-              "knowledgeEntryIds": [
-                "gar_box_tee_white",
-                "gar_fluid_unstructured_double_breasted_suit_jacket_taupe",
-                "gar_fluid_relaxed_drape_trousers_taupe",
-                "gar_chunky_derbies_black",
-                "gar_leather_structured_tote_black"
-              ],
-              "factor": "general",
-              "authority": "USER_ENTERED",
-              "isAssumed": false
-            },
-            {
-              "reasonId": "rea_outfit_fluid_db_suit_taupe_01_2_1791900814827",
+              "reasonId": "rea_outfit_fluid_cold_cocoon_coat_01_2_1791915078515",
               "text": "Aligned to Fine Dining / Dinner Party formality.",
               "signalIds": [
                 "context.occasion",
                 "context.targetFormality"
               ],
               "knowledgeEntryIds": [
-                "gar_box_tee_white",
-                "gar_fluid_unstructured_double_breasted_suit_jacket_taupe",
-                "gar_fluid_relaxed_drape_trousers_taupe",
-                "gar_chunky_derbies_black",
+                "gar_mockneck_black",
+                "gar_fluid_cocoon_wool_coat_heather_grey",
+                "gar_wide_trousers_black",
+                "gar_chelsea_boot_lug_sole_black",
                 "gar_leather_structured_tote_black",
                 "occ_dinner"
               ],
@@ -518,7 +518,7 @@
             }
           ],
           "stylingAdvice": [
-            "Accentuates waistline geometry and creates an elongated vertical lower line."
+            "Tucking the top defines the waistline and emphasizes the architectural drape of trousers."
           ]
         },
         "hairStyle": {
@@ -550,36 +550,58 @@
           "explanation": "Supported by verified user formality, confirmed climate, explicit style vector, and grooming inputs.",
           "toIncreaseConfidence": "Add specific footwear preferences to further personalize lower-leg grounding."
         },
-        "overallHarmonyScore": 0.87,
+        "overallHarmonyScore": 0.85,
         "reasons": [
-          "Directly mirrors your personal style axis coordinates.",
           "Balanced regular configuration",
-          "Strong contrast between light and deep neutral values establishes crisp visual separation."
+          "Harmonious balance across complementary tonal depths.",
+          "Neutral tonal temperature balance relative to undertone."
         ],
         "cautions": [],
         "outfit": {
-          "id": "outfit_minimal_01",
-          "title": "All-Black Architectural Column",
-          "primaryStyleSlug": "minimal",
+          "id": "outfit_fluid_hot_workplace_linen_01",
+          "title": "Unstructured DB Jacket & Woven Leather Loafers",
+          "primaryStyleSlug": "smart-casual",
           "formality": 3,
-          "score": 0.87,
+          "score": 0.85,
           "items": [
             {
               "category": "top",
-              "subcategory": "knitwear",
-              "name": "Minimal Ribbed Mock Neck",
-              "material": "compact modal-wool jersey",
-              "color": "jet-black",
-              "fit": "slim",
+              "subcategory": "polo",
+              "name": "Open-Weave Cotton-Linen Knit Resort Shirt (Optic White)",
+              "material": "180gsm breathable open-knit cotton-linen mesh",
+              "color": "optic-white",
+              "fit": "relaxed",
+              "modestyRating": "standard",
+              "genderCoding": "androgynous",
+              "layerPosition": 0
+            },
+            {
+              "category": "outerwear",
+              "subcategory": "blazer",
+              "name": "Unstructured Double-Breasted Fluid Jacket (Warm Taupe)",
+              "material": "250gsm fluid wool-viscose twill",
+              "color": "warm-taupe",
+              "fit": "relaxed",
+              "modestyRating": "covered-arms",
+              "genderCoding": "androgynous",
+              "layerPosition": 1
+            },
+            {
+              "category": "bottom",
+              "subcategory": "trousers",
+              "name": "Fluid Double-Pleat Pure Linen Wide Trousers (Natural Sand)",
+              "material": "210gsm washed Normandy flax linen",
+              "color": "sand",
+              "fit": "relaxed",
               "modestyRating": "high-coverage",
               "genderCoding": "androgynous",
               "layerPosition": 0
             },
             {
-              "category": "bottom",
-              "subcategory": "trousers",
-              "name": "Clean Ankle-Cropped Trousers (Black)",
-              "material": "stretch wool-twill",
+              "category": "footwear",
+              "subcategory": "loafers",
+              "name": "Breathable Hand-Woven Nappa Leather Loafers (Black)",
+              "material": "Interwoven lambskin nappa with flexible leather sole",
               "color": "black",
               "fit": "regular",
               "modestyRating": "standard",
@@ -587,14 +609,14 @@
               "layerPosition": 0
             },
             {
-              "category": "footwear",
-              "subcategory": "sneakers",
-              "name": "Minimal Calfskin Low-Top Sneakers",
-              "material": "Italian Nappa leather, Margom rubber sole",
-              "color": "pure-white",
+              "category": "accessory",
+              "subcategory": "watch",
+              "name": "Vintage Dress Watch with Alligator Strap",
+              "material": "18k gold-plated case, brown leather strap",
+              "color": "yellow-gold-brown",
               "fit": "regular",
               "modestyRating": "standard",
-              "genderCoding": "androgynous",
+              "genderCoding": "unspecified",
               "layerPosition": 0
             }
           ],
@@ -602,20 +624,20 @@
             {
               "category": "style_affinity",
               "weight": 3.5,
-              "score": 0.84,
-              "reason": "Coordinate affinity (84%) with your 10D style vector."
+              "score": 0.76,
+              "reason": "Coordinate affinity (76%) with your 10D style vector."
             },
             {
               "category": "silhouette_balance",
               "weight": 3,
-              "score": 0.85,
+              "score": 0.93,
               "reason": "Balanced regular configuration"
             },
             {
               "category": "color_harmony",
               "weight": 3,
-              "score": 0.94,
-              "reason": "Color story: strong-contrast"
+              "score": 0.82,
+              "reason": "Color story: analogous"
             },
             {
               "category": "occasion_fit",
@@ -644,56 +666,63 @@
           ],
           "traceableReasons": [
             {
-              "reasonId": "rea_outfit_minimal_01_0_1791900814826",
-              "text": "Directly mirrors your personal style axis coordinates.",
-              "signalIds": [
-                "user.styleProfile.styleVector",
-                "user.styleProfile.preferences.preferredStyleSlugs"
-              ],
-              "knowledgeEntryIds": [
-                "gar_mockneck_black",
-                "gar_cropped_trousers_black",
-                "gar_minimal_sneaker_white",
-                "style_minimal"
-              ],
-              "factor": "style_affinity",
-              "authority": "USER_ENTERED",
-              "isAssumed": false
-            },
-            {
-              "reasonId": "rea_outfit_minimal_01_1_1791900814826",
+              "reasonId": "rea_outfit_fluid_hot_workplace_linen_01_0_1791915078515",
               "text": "Balanced regular configuration",
               "signalIds": [
                 "user.styleProfile.preferences.preferredStyleSlugs",
                 "context.occasion"
               ],
               "knowledgeEntryIds": [
-                "gar_mockneck_black",
-                "gar_cropped_trousers_black",
-                "gar_minimal_sneaker_white"
+                "gar_fluid_open_weave_shirt_white",
+                "gar_fluid_unstructured_double_breasted_suit_jacket_taupe",
+                "gar_fluid_linen_wide_trousers_sand",
+                "gar_fluid_woven_loafers_black",
+                "gar_dress_watch_gold_leather"
               ],
               "factor": "general",
               "authority": "USER_ENTERED",
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_minimal_01_2_1791900814826",
-              "text": "Strong contrast between light and deep neutral values establishes crisp visual separation.",
+              "reasonId": "rea_outfit_fluid_hot_workplace_linen_01_1_1791915078515",
+              "text": "Harmonious balance across complementary tonal depths.",
               "signalIds": [
-                "user.styleProfile.preferences.preferredStyleSlugs",
-                "context.occasion"
+                "user.styleProfile.preferences.fitProportions",
+                "user.styleProfile.preferences.preferredFits"
               ],
               "knowledgeEntryIds": [
-                "gar_mockneck_black",
-                "gar_cropped_trousers_black",
-                "gar_minimal_sneaker_white"
+                "gar_fluid_open_weave_shirt_white",
+                "gar_fluid_unstructured_double_breasted_suit_jacket_taupe",
+                "gar_fluid_linen_wide_trousers_sand",
+                "gar_fluid_woven_loafers_black",
+                "gar_dress_watch_gold_leather"
               ],
-              "factor": "general",
+              "factor": "silhouette_balance",
+              "authority": "USER_ENTERED",
+              "isAssumed": false
+            },
+            {
+              "reasonId": "rea_outfit_fluid_hot_workplace_linen_01_2_1791915078515",
+              "text": "Neutral tonal temperature balance relative to undertone.",
+              "signalIds": [
+                "user.styleProfile.preferences.fitProportions",
+                "user.styleProfile.preferences.preferredFits"
+              ],
+              "knowledgeEntryIds": [
+                "gar_fluid_open_weave_shirt_white",
+                "gar_fluid_unstructured_double_breasted_suit_jacket_taupe",
+                "gar_fluid_linen_wide_trousers_sand",
+                "gar_fluid_woven_loafers_black",
+                "gar_dress_watch_gold_leather"
+              ],
+              "factor": "silhouette_balance",
               "authority": "USER_ENTERED",
               "isAssumed": false
             }
           ],
-          "stylingAdvice": []
+          "stylingAdvice": [
+            "Aligns with your preferred fit geometry."
+          ]
         },
         "hairStyle": {
           "name": "Textured French Crop",

@@ -161,21 +161,34 @@ async function generateReviewOutputs() {
   // Export gender-coded slices
   const mascGarments = allGarments.filter((g) => g.genderCoding === 'masculine' || (g.garmentCoding !== undefined && g.garmentCoding < 0));
   const femGarments = allGarments.filter((g) => g.genderCoding === 'feminine' || (g.garmentCoding !== undefined && g.garmentCoding > 0));
-  const fluidGarments = allGarments.filter((g) => g.fluidTag === true || g.genderCoding === 'androgynous');
+  const fluidGarments = allGarments.filter((g) => g.fluidTag === true);
 
   fs.writeFileSync(path.join(REVIEW_DIR, 'garments-masculine.json'), JSON.stringify(mascGarments, null, 2));
   fs.writeFileSync(path.join(REVIEW_DIR, 'garments-feminine.json'), JSON.stringify(femGarments, null, 2));
-  fs.writeFileSync(path.join(REVIEW_DIR, 'garments-fluid.json'), JSON.stringify(fluidGarments, null, 2));
+  
+  const fluidExportData = fluidGarments.map((g) => ({
+    id: g.id,
+    name: g.name,
+    slug: g.slug,
+    category: g.category,
+    subcategory: g.subcategory,
+    genderCoding: g.genderCoding,
+    garmentCoding: g.garmentCoding ?? 0,
+    fluidTag: true,
+    rationale: (g as any).fluidRationale || (g as any).curated_notes || 'Deliberately cross-coded / unisex fluid foundation piece',
+  }));
+  fs.writeFileSync(path.join(REVIEW_DIR, 'garments-fluid.json'), JSON.stringify(fluidExportData, null, 2));
 
   const mascCsvRows = mascGarments.map((g) => [g.id, `"${g.name.replace(/"/g, '""')}"`, g.slug, g.category, g.genderCoding, g.garmentCoding ?? 0, g.fluidTag ?? false]);
   const femCsvRows = femGarments.map((g) => [g.id, `"${g.name.replace(/"/g, '""')}"`, g.slug, g.category, g.genderCoding, g.garmentCoding ?? 0, g.fluidTag ?? false]);
-  const fluidCsvRows = fluidGarments.map((g) => [g.id, `"${g.name.replace(/"/g, '""')}"`, g.slug, g.category, g.genderCoding, g.garmentCoding ?? 0, g.fluidTag ?? false]);
+  const fluidCsvRows = fluidExportData.map((g) => [g.id, `"${g.name.replace(/"/g, '""')}"`, g.slug, g.category, g.genderCoding, g.garmentCoding ?? 0, g.fluidTag ?? false, `"${g.rationale.replace(/"/g, '""')}"`]);
 
   const sliceHeaders = ['id', 'name', 'slug', 'category', 'genderCoding', 'garmentCoding', 'fluidTag'];
+  const fluidSliceHeaders = ['id', 'name', 'slug', 'category', 'genderCoding', 'garmentCoding', 'fluidTag', 'rationale'];
   fs.writeFileSync(path.join(REVIEW_DIR, 'garments-masculine.csv'), [sliceHeaders.join(','), ...mascCsvRows.map((r) => r.join(','))].join('\n'));
   fs.writeFileSync(path.join(REVIEW_DIR, 'garments-feminine.csv'), [sliceHeaders.join(','), ...femCsvRows.map((r) => r.join(','))].join('\n'));
-  fs.writeFileSync(path.join(REVIEW_DIR, 'garments-fluid.csv'), [sliceHeaders.join(','), ...fluidCsvRows.map((r) => r.join(','))].join('\n'));
-  console.log(`✓ Exported slices: ${mascGarments.length} masculine, ${femGarments.length} feminine, ${fluidGarments.length} fluid.`);
+  fs.writeFileSync(path.join(REVIEW_DIR, 'garments-fluid.csv'), [fluidSliceHeaders.join(','), ...fluidCsvRows.map((r) => r.join(','))].join('\n'));
+  console.log(`✓ Exported slices: ${mascGarments.length} masculine, ${femGarments.length} feminine, ${fluidGarments.length} curated fluid.`);
 
   // 2. Export Scoring Weights Specification
   const scoringWeightsMd = `# VAEL R1.2 — Scoring Formula, Factor Weights & Caps
@@ -594,6 +607,49 @@ Every returned look card provides **ONE concrete prompt** in \`toIncreaseConfide
         isFormalityOverridden: false,
         temperatureLevel: 'mild',
         isWeatherConfirmed: true,
+      },
+    },
+
+    // 16. Androgynous + Wedding Guest evening
+    {
+      filename: 'profile-16.json',
+      title: 'Profile 16: Androgynous + Wedding Guest evening',
+      user: (() => {
+        const u = createBaseUserProfile('usr_p16', 'Androgynous Evening Wedding User');
+        u.styleProfile.preferences.styleExpression = 'androgynous';
+        u.styleProfile.preferences.genderCodingDirection = 'androgynous';
+        u.styleProfile.preferences.preferredFormalityRange = [4, 5];
+        return u;
+      })(),
+      context: {
+        occasion: knowledgeBase.getOccasionBySlug('wedding-guest')!,
+        targetFormality: 4,
+        temperatureLevel: 'mild',
+        condition: 'dry',
+        isWeatherConfirmed: true,
+      },
+    },
+
+    // 17. Masculine + hot + Job Interview
+    {
+      filename: 'profile-17.json',
+      title: 'Profile 17: Masculine + hot + Job Interview',
+      user: (() => {
+        const u = createBaseUserProfile('usr_p17', 'Masculine Hot Interview User');
+        u.styleProfile.preferences.styleExpression = 'masculine';
+        u.styleProfile.preferences.genderCodingDirection = 'masculine';
+        u.styleProfile.preferences.preferredFits = ['tailored', 'regular'];
+        u.styleProfile.preferences.preferredFormalityRange = [3, 4];
+        return u;
+      })(),
+      context: {
+        occasion: knowledgeBase.getOccasionBySlug('job-interview')!,
+        targetFormality: 4,
+        temperatureLevel: 'hot',
+        temperatureCelsius: 32,
+        condition: 'dry',
+        isWeatherConfirmed: true,
+        subParameter: 'corporate',
       },
     },
   ];

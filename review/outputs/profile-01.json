@@ -75,7 +75,7 @@
     "looksCount": 3,
     "contextApplied": "General Stylist Curation",
     "vetoedCandidateCount": 0,
-    "evaluatedCandidateCount": 39,
+    "evaluatedCandidateCount": 51,
     "looks": [
       {
         "tier": "BEST_MATCH",
@@ -166,7 +166,7 @@
           ],
           "traceableReasons": [
             {
-              "reasonId": "rea_outfit_feminine_casual_modest_knit_maxi_01_0_1791900814819",
+              "reasonId": "rea_outfit_feminine_casual_modest_knit_maxi_01_0_1791915078503",
               "text": "Directly mirrors your personal style axis coordinates.",
               "signalIds": [
                 "user.styleProfile.styleVector",
@@ -184,7 +184,7 @@
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_feminine_casual_modest_knit_maxi_01_1_1791900814819",
+              "reasonId": "rea_outfit_feminine_casual_modest_knit_maxi_01_1_1791915078503",
               "text": "Monolithic vertical cadence: longline outer architectural frame over full-length dress",
               "signalIds": [
                 "user.styleProfile.preferences.fitProportions",
@@ -201,7 +201,7 @@
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_feminine_casual_modest_knit_maxi_01_2_1791900814819",
+              "reasonId": "rea_outfit_feminine_casual_modest_knit_maxi_01_2_1791915078503",
               "text": "Tonal neutral palette ensures high versatility and effortless visual cohesion.",
               "signalIds": [
                 "user.styleProfile.preferences.preferredStyleSlugs",
@@ -291,7 +291,7 @@
               "color": "british-khaki",
               "fit": "regular",
               "modestyRating": "high-coverage",
-              "genderCoding": "masculine",
+              "genderCoding": "unspecified",
               "layerPosition": 0
             },
             {
@@ -328,7 +328,7 @@
           ],
           "traceableReasons": [
             {
-              "reasonId": "rea_outfit_masculine_cold_casual_storm_01_0_1791900814819",
+              "reasonId": "rea_outfit_masculine_cold_casual_storm_01_0_1791915078503",
               "text": "Directly mirrors your personal style axis coordinates.",
               "signalIds": [
                 "user.styleProfile.styleVector",
@@ -346,7 +346,7 @@
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_masculine_cold_casual_storm_01_1_1791900814819",
+              "reasonId": "rea_outfit_masculine_cold_casual_storm_01_1_1791915078503",
               "text": "Longline architectural outerwear framing a streamlined linear base",
               "signalIds": [
                 "user.styleProfile.preferences.preferredStyleSlugs",
@@ -363,7 +363,7 @@
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_masculine_cold_casual_storm_01_2_1791900814819",
+              "reasonId": "rea_outfit_masculine_cold_casual_storm_01_2_1791915078503",
               "text": "Tonal neutral palette ensures high versatility and effortless visual cohesion.",
               "signalIds": [
                 "user.styleProfile.preferences.preferredStyleSlugs",
@@ -489,7 +489,7 @@
           ],
           "traceableReasons": [
             {
-              "reasonId": "rea_outfit_korean_minimal_01_0_1791900814818",
+              "reasonId": "rea_outfit_korean_minimal_01_0_1791915078503",
               "text": "Cropped upper proportion offset by expansive lower volume",
               "signalIds": [
                 "user.styleProfile.preferences.preferredStyleSlugs",
@@ -506,7 +506,7 @@
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_korean_minimal_01_1_1791900814818",
+              "reasonId": "rea_outfit_korean_minimal_01_1_1791915078503",
               "text": "Strong contrast between light and deep neutral values establishes crisp visual separation.",
               "signalIds": [
                 "user.styleProfile.preferences.preferredStyleSlugs",

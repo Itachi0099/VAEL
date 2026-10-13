@@ -991,4 +991,220 @@ export const HAIRSTYLES: HairStyle[] = [
     createdAt: '2026-10-13',
     updatedAt: '2026-10-13',
   },
+  // 37
+  {
+    "id": "hair_sculpted_fade_coily_taper",
+    "name": "Architectural Sculpted Taper with Crisp Outline",
+    "slug": "sculpted-fade-coily-taper",
+    "description": "Ultra-precise low-to-mid temple taper with sculpted micro-coils and razor-sharp contour line. Clean geometric dignity suitable for gala, black-tie, and executive settings.",
+    "targetLength": "buzz",
+    "compatibleTextures": [
+      "coily",
+      "curly"
+    ],
+    "compatibleDensities": [
+      "high",
+      "medium"
+    ],
+    "compatibleFaceShapes": [
+      "oval",
+      "square",
+      "heart",
+      "diamond",
+      "rectangle"
+    ],
+    "maintenance": "minimal",
+    "stylingDifficulty": "easy",
+    "formalityRange": [
+      2,
+      5
+    ],
+    "compatibleStyleSlugs": [
+      "formal",
+      "minimal",
+      "smart-casual",
+      "old-money"
+    ],
+    "silhouetteCharacter": "tight",
+    "visualTags": [
+      "buzz",
+      "fade",
+      "taper",
+      "coily",
+      "formal",
+      "crisp-outline"
+    ],
+    "stylingTips": [
+      "Hydrate with light botanical oil sheen",
+      "Brush gently with soft boar bristle to preserve outline geometry"
+    ],
+    "protectiveStyle": false,
+    "genderCoding": "androgynous",
+    "timelessOrTrend": "TIMELESS",
+    "reviewDate": "2026-10-13",
+    "reviewed_by": "engineering-draft",
+    "createdAt": "2026-10-13",
+    "updatedAt": "2026-10-13"
+  },
+  // 38
+  {
+    "id": "hair_coily_sculpted_crown_twist",
+    "name": "Sculpted Crown Flat Twists with Clean Taper",
+    "slug": "coily-sculpted-crown-twist",
+    "description": "Symmetrical protective flat twists radiating toward a tailored crown knot with scissor-tapered sides. Architectural silhouette designed for high-formality ceremony and black-tie.",
+    "targetLength": "short",
+    "compatibleTextures": [
+      "coily",
+      "curly"
+    ],
+    "compatibleDensities": [
+      "high",
+      "medium"
+    ],
+    "compatibleFaceShapes": [
+      "oval",
+      "square",
+      "heart",
+      "diamond"
+    ],
+    "maintenance": "minimal",
+    "stylingDifficulty": "easy",
+    "formalityRange": [
+      3,
+      5
+    ],
+    "compatibleStyleSlugs": [
+      "formal",
+      "minimal",
+      "cultural-traditional",
+      "smart-casual"
+    ],
+    "silhouetteCharacter": "tight",
+    "visualTags": [
+      "twists",
+      "protective",
+      "formal",
+      "coily",
+      "taper",
+      "crown"
+    ],
+    "stylingTips": [
+      "Tie down with silk scarf overnight to maintain edge alignment",
+      "Apply satin finish scalp oil weekly"
+    ],
+    "protectiveStyle": true,
+    "genderCoding": "androgynous",
+    "timelessOrTrend": "TIMELESS",
+    "reviewDate": "2026-10-13",
+    "reviewed_by": "engineering-draft",
+    "createdAt": "2026-10-13",
+    "updatedAt": "2026-10-13"
+  },
+  // 39
+  {
+    "id": "hair_curly_sculpted_crop_formal",
+    "name": "Defined Curly Tapered Crop with Gloss Finish",
+    "slug": "curly-sculpted-crop-formal",
+    "description": "Controlled curl clusters clipped close along the sides and styled with high-shine hydration across the crown. Formal-ready composure for wedding and black-tie events.",
+    "targetLength": "short",
+    "compatibleTextures": [
+      "curly"
+    ],
+    "compatibleDensities": [
+      "high",
+      "medium",
+      "low"
+    ],
+    "compatibleFaceShapes": [
+      "oval",
+      "square",
+      "heart",
+      "round",
+      "diamond"
+    ],
+    "maintenance": "moderate",
+    "stylingDifficulty": "easy",
+    "formalityRange": [
+      3,
+      5
+    ],
+    "compatibleStyleSlugs": [
+      "formal",
+      "minimal",
+      "smart-casual",
+      "old-money"
+    ],
+    "silhouetteCharacter": "balanced",
+    "visualTags": [
+      "crop",
+      "curly",
+      "formal",
+      "gloss",
+      "taper"
+    ],
+    "stylingTips": [
+      "Rake lightweight curl defining glaze through damp coils",
+      "Diffuse on low setting for casted definition without frizz"
+    ],
+    "protectiveStyle": false,
+    "genderCoding": "androgynous",
+    "timelessOrTrend": "TIMELESS",
+    "reviewDate": "2026-10-13",
+    "reviewed_by": "engineering-draft",
+    "createdAt": "2026-10-13",
+    "updatedAt": "2026-10-13"
+  },
+  // 40
+  {
+    "id": "hair_locs_crown_updo",
+    "name": "Sculpted High Locs Crown Updo",
+    "slug": "locs-crown-updo",
+    "description": "Uniform mature locs gathered and sculpted into an architectural high crown twist with clean temple contours. Stately, elegant presence for gala, formal, and ceremony occasions.",
+    "targetLength": "medium",
+    "compatibleTextures": [
+      "coily",
+      "curly"
+    ],
+    "compatibleDensities": [
+      "high",
+      "medium"
+    ],
+    "compatibleFaceShapes": [
+      "oval",
+      "square",
+      "diamond",
+      "rectangle"
+    ],
+    "maintenance": "minimal",
+    "stylingDifficulty": "easy",
+    "formalityRange": [
+      3,
+      5
+    ],
+    "compatibleStyleSlugs": [
+      "formal",
+      "minimal",
+      "cultural-traditional",
+      "old-money"
+    ],
+    "silhouetteCharacter": "tight",
+    "visualTags": [
+      "locs",
+      "updo",
+      "formal",
+      "protective",
+      "crown"
+    ],
+    "stylingTips": [
+      "Secure base with soft satin hair wrap",
+      "Mist with rosewater and aloe to preserve loc luster"
+    ],
+    "protectiveStyle": true,
+    "genderCoding": "androgynous",
+    "timelessOrTrend": "TIMELESS",
+    "reviewDate": "2026-10-13",
+    "reviewed_by": "engineering-draft",
+    "createdAt": "2026-10-13",
+    "updatedAt": "2026-10-13"
+  },
 ];
