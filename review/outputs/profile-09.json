@@ -269,11 +269,17 @@
               "weight": 1,
               "score": 0.8,
               "reason": "Soft expression alignment with androgynous presentation preference."
+            },
+            {
+              "category": "preference_reinforcement",
+              "weight": 0.5,
+              "score": 0.9,
+              "reason": "Echoes complexion undertone with balanced face-framing values."
             }
           ],
           "traceableReasons": [
             {
-              "reasonId": "rea_outfit_fluid_cold_cocoon_coat_01_0_1791898366433",
+              "reasonId": "rea_outfit_fluid_cold_cocoon_coat_01_0_1791900814825",
               "text": "Structured upper anchor balanced with fluid wide-leg lower volume",
               "signalIds": [
                 "user.styleProfile.preferences.fitProportions",
@@ -291,7 +297,7 @@
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_fluid_cold_cocoon_coat_01_1_1791898366433",
+              "reasonId": "rea_outfit_fluid_cold_cocoon_coat_01_1_1791900814825",
               "text": "Tonal neutral palette ensures high versatility and effortless visual cohesion.",
               "signalIds": [
                 "user.styleProfile.preferences.preferredStyleSlugs",
@@ -309,7 +315,7 @@
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_fluid_cold_cocoon_coat_01_2_1791898366433",
+              "reasonId": "rea_outfit_fluid_cold_cocoon_coat_01_2_1791900814825",
               "text": "Aligned to Modern Office / Workplace formality.",
               "signalIds": [
                 "context.occasion",
@@ -456,11 +462,17 @@
               "weight": 1,
               "score": 0.8,
               "reason": "Soft expression alignment with androgynous presentation preference."
+            },
+            {
+              "category": "preference_reinforcement",
+              "weight": 0.5,
+              "score": 0.9,
+              "reason": "Echoes complexion undertone with balanced face-framing values."
             }
           ],
           "traceableReasons": [
             {
-              "reasonId": "rea_outfit_korean_minimal_01_0_1791898366433",
+              "reasonId": "rea_outfit_korean_minimal_01_0_1791900814825",
               "text": "Cropped upper proportion offset by expansive lower volume",
               "signalIds": [
                 "user.styleProfile.preferences.preferredStyleSlugs",
@@ -477,7 +489,7 @@
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_korean_minimal_01_1_1791898366433",
+              "reasonId": "rea_outfit_korean_minimal_01_1_1791900814825",
               "text": "Strong contrast between light and deep neutral values establishes crisp visual separation.",
               "signalIds": [
                 "user.styleProfile.preferences.preferredStyleSlugs",
@@ -494,7 +506,7 @@
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_korean_minimal_01_2_1791898366433",
+              "reasonId": "rea_outfit_korean_minimal_01_2_1791900814825",
               "text": "Aligned to Modern Office / Workplace formality.",
               "signalIds": [
                 "context.occasion",
@@ -547,72 +559,48 @@
         },
         "overallHarmonyScore": 0.87,
         "reasons": [
-          "Longline architectural outerwear framing a streamlined linear base",
-          "Harmonious balance across complementary tonal depths.",
-          "Neutral tonal temperature balance relative to undertone."
+          "Directly mirrors your personal style axis coordinates.",
+          "Balanced regular configuration",
+          "Strong contrast between light and deep neutral values establishes crisp visual separation."
         ],
-        "cautions": [
-          "Porous waxed repello suede, crepe sole footwear will absorb rainwater without protective treatment."
-        ],
+        "cautions": [],
         "outfit": {
-          "id": "outfit_masculine_cold_rain_transit_01",
-          "title": "Bonded Wool Storm Coat & Flannel Slacks",
-          "primaryStyleSlug": "smart-casual",
+          "id": "outfit_minimal_01",
+          "title": "All-Black Architectural Column",
+          "primaryStyleSlug": "minimal",
           "formality": 3,
           "score": 0.87,
           "items": [
             {
               "category": "top",
-              "subcategory": "button-down",
-              "name": "Classic Oxford Button-Down (Sky Blue)",
-              "material": "pinpoint oxford cotton",
-              "color": "sky-blue",
-              "fit": "regular",
-              "modestyRating": "standard",
-              "genderCoding": "masculine",
+              "subcategory": "knitwear",
+              "name": "Minimal Ribbed Mock Neck",
+              "material": "compact modal-wool jersey",
+              "color": "jet-black",
+              "fit": "slim",
+              "modestyRating": "high-coverage",
+              "genderCoding": "androgynous",
               "layerPosition": 0
-            },
-            {
-              "category": "outerwear",
-              "subcategory": "overcoat",
-              "name": "Waterproof Bonded Wool Commuter Storm Coat (Navy)",
-              "material": "400gsm membrane-bonded technical wool",
-              "color": "navy",
-              "fit": "regular",
-              "modestyRating": "covered-both",
-              "genderCoding": "masculine",
-              "layerPosition": 1
             },
             {
               "category": "bottom",
               "subcategory": "trousers",
-              "name": "Single-Pleat Wool Flannel Slacks (Light Grey)",
-              "material": "Fox Brothers woolen flannel",
-              "color": "light-grey",
+              "name": "Clean Ankle-Cropped Trousers (Black)",
+              "material": "stretch wool-twill",
+              "color": "black",
               "fit": "regular",
-              "modestyRating": "high-coverage",
-              "genderCoding": "masculine",
+              "modestyRating": "standard",
+              "genderCoding": "androgynous",
               "layerPosition": 0
             },
             {
               "category": "footwear",
-              "subcategory": "boots",
-              "name": "Tobacco Suede Chelsea Boots",
-              "material": "waxed repello suede, crepe sole",
-              "color": "tobacco-brown",
-              "fit": "slim",
-              "modestyRating": "standard",
-              "genderCoding": "masculine",
-              "layerPosition": 0
-            },
-            {
-              "category": "accessory",
-              "subcategory": "gloves",
-              "name": "Cashmere-Lined Deerskin Leather Gloves",
-              "material": "full-grain deerskin, 100% Scottish cashmere lining",
-              "color": "black",
+              "subcategory": "sneakers",
+              "name": "Minimal Calfskin Low-Top Sneakers",
+              "material": "Italian Nappa leather, Margom rubber sole",
+              "color": "pure-white",
               "fit": "regular",
-              "modestyRating": "high-coverage",
+              "modestyRating": "standard",
               "genderCoding": "androgynous",
               "layerPosition": 0
             }
@@ -621,20 +609,20 @@
             {
               "category": "style_affinity",
               "weight": 3.5,
-              "score": 0.76,
-              "reason": "Coordinate affinity (76%) with your 10D style vector."
+              "score": 0.84,
+              "reason": "Coordinate affinity (84%) with your 10D style vector."
             },
             {
               "category": "silhouette_balance",
               "weight": 3,
-              "score": 1,
-              "reason": "Longline architectural outerwear framing a streamlined linear base"
+              "score": 0.85,
+              "reason": "Balanced regular configuration"
             },
             {
               "category": "color_harmony",
               "weight": 3,
-              "score": 0.82,
-              "reason": "Color story: analogous"
+              "score": 0.94,
+              "reason": "Color story: strong-contrast"
             },
             {
               "category": "occasion_fit",
@@ -645,76 +633,74 @@
             {
               "category": "weather_fit",
               "weight": 2,
-              "score": 0.86,
+              "score": 0.68,
               "reason": "Ambient temperature and breathability calibration"
             },
             {
               "category": "expression_affinity",
               "weight": 1,
-              "score": 0.6799999999999999,
+              "score": 0.8,
               "reason": "Soft expression alignment with androgynous presentation preference."
+            },
+            {
+              "category": "preference_reinforcement",
+              "weight": 0.5,
+              "score": 0.9,
+              "reason": "Echoes complexion undertone with balanced face-framing values."
             }
           ],
           "traceableReasons": [
             {
-              "reasonId": "rea_outfit_masculine_cold_rain_transit_01_0_1791898366433",
-              "text": "Longline architectural outerwear framing a streamlined linear base",
+              "reasonId": "rea_outfit_minimal_01_0_1791900814825",
+              "text": "Directly mirrors your personal style axis coordinates.",
+              "signalIds": [
+                "user.styleProfile.styleVector",
+                "user.styleProfile.preferences.preferredStyleSlugs"
+              ],
+              "knowledgeEntryIds": [
+                "gar_mockneck_black",
+                "gar_cropped_trousers_black",
+                "gar_minimal_sneaker_white",
+                "style_minimal"
+              ],
+              "factor": "style_affinity",
+              "authority": "USER_ENTERED",
+              "isAssumed": false
+            },
+            {
+              "reasonId": "rea_outfit_minimal_01_1_1791900814825",
+              "text": "Balanced regular configuration",
               "signalIds": [
                 "user.styleProfile.preferences.preferredStyleSlugs",
                 "context.occasion"
               ],
               "knowledgeEntryIds": [
-                "gar_oxford_shirt_blue",
-                "gar_masculine_storm_coat_navy",
-                "gar_pleated_flannel_slacks_grey",
-                "gar_chelsea_boot_suede_tobacco",
-                "gar_leather_gloves_cashmere_lined"
+                "gar_mockneck_black",
+                "gar_cropped_trousers_black",
+                "gar_minimal_sneaker_white"
               ],
               "factor": "general",
               "authority": "USER_ENTERED",
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_masculine_cold_rain_transit_01_1_1791898366433",
-              "text": "Harmonious balance across complementary tonal depths.",
+              "reasonId": "rea_outfit_minimal_01_2_1791900814825",
+              "text": "Strong contrast between light and deep neutral values establishes crisp visual separation.",
               "signalIds": [
-                "user.styleProfile.preferences.fitProportions",
-                "user.styleProfile.preferences.preferredFits"
+                "user.styleProfile.preferences.preferredStyleSlugs",
+                "context.occasion"
               ],
               "knowledgeEntryIds": [
-                "gar_oxford_shirt_blue",
-                "gar_masculine_storm_coat_navy",
-                "gar_pleated_flannel_slacks_grey",
-                "gar_chelsea_boot_suede_tobacco",
-                "gar_leather_gloves_cashmere_lined"
+                "gar_mockneck_black",
+                "gar_cropped_trousers_black",
+                "gar_minimal_sneaker_white"
               ],
-              "factor": "silhouette_balance",
-              "authority": "USER_ENTERED",
-              "isAssumed": false
-            },
-            {
-              "reasonId": "rea_outfit_masculine_cold_rain_transit_01_2_1791898366433",
-              "text": "Neutral tonal temperature balance relative to undertone.",
-              "signalIds": [
-                "user.styleProfile.preferences.fitProportions",
-                "user.styleProfile.preferences.preferredFits"
-              ],
-              "knowledgeEntryIds": [
-                "gar_oxford_shirt_blue",
-                "gar_masculine_storm_coat_navy",
-                "gar_pleated_flannel_slacks_grey",
-                "gar_chelsea_boot_suede_tobacco",
-                "gar_leather_gloves_cashmere_lined"
-              ],
-              "factor": "silhouette_balance",
+              "factor": "general",
               "authority": "USER_ENTERED",
               "isAssumed": false
             }
           ],
-          "stylingAdvice": [
-            "Creates a continuous vertical frame; leave outer layer unbuttoned during motion.",
-            "Aligns with your preferred fit geometry."
-          ]
+          "stylingAdvice": []
         },
         "hairStyle": {
           "name": "Textured French Crop",

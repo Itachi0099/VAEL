@@ -449,6 +449,157 @@ export class VaelStylingEngine {
       }
     }
 
+    // 10. Contrast Alignment (Weight: 0.5)
+    // Contrast: prefer outfit value-contrast within one step of user's level (low/medium/high)
+    if (preferences.contrastLevel && preferences.contrastLevel !== 'unspecified') {
+      const userLevel = preferences.contrastLevel;
+      const contrastStepMap: Record<'low' | 'medium' | 'high', number> = { low: 1, medium: 2, high: 3 };
+      const userStep = contrastStepMap[userLevel];
+
+      // Determine outfit value-contrast: check light vs deep colors
+      const hasLight = garments.some((g) => g.color.name.includes('white') || g.color.name.includes('cream') || g.color.name.includes('ecru') || g.color.name.includes('natural'));
+      const hasDeep = garments.some((g) => g.color.name.includes('black') || g.color.name.includes('charcoal') || g.color.name.includes('navy') || g.color.name.includes('dark'));
+      const outfitContrastStep = (hasLight && hasDeep) ? 3 : (hasLight || hasDeep ? 2 : 1);
+      const diff = Math.abs(userStep - outfitContrastStep);
+
+      const contrastScore = diff <= 1 ? 0.95 : 0.65;
+      factors.push({
+        category: 'preference_reinforcement',
+        weight: 0.5,
+        score: contrastScore,
+        reason: `Echoes your natural ${userLevel} contrast level across outfit tones.`,
+      });
+      if (diff <= 1) {
+        reasons.push(`Echoes your ${userLevel} contrast range with balanced value separation.`);
+      }
+    }
+
+    // 11. Skin Depth & Undertone Face-Adjacent Harmony (Weight: 0.5)
+    // Warm -> warm neutrals/earths/olive/camel/cream; cool -> navy/charcoal/cool grey/true white/cool jewel tones; neutral/olive -> broad.
+    // Garment nearest face avoids near-skin value unless user's contrast is low.
+    if (
+      (preferences.skinDepth && preferences.skinDepth !== 'unspecified') ||
+      (preferences.userConfirmedUndertone && preferences.userConfirmedUndertone !== 'unspecified')
+    ) {
+      const undertone = preferences.userConfirmedUndertone;
+      const skinDepth = preferences.skinDepth;
+      const facePiece = garments.find((g) => g.category === 'top' || g.category === 'one-piece') || garments[0];
+
+      let faceTonalScore = 0.85;
+      if (undertone === 'warm') {
+        const warmPalette = ['cream', 'ecru', 'camel', 'olive', 'tan', 'sand', 'terracotta', 'brown', 'earth'];
+        const matchesWarm = garments.some((g) => warmPalette.some((w) => g.color.name.toLowerCase().includes(w) || g.color.tone === 'warm' || g.color.tone === 'earth'));
+        if (matchesWarm) faceTonalScore = 0.95;
+      } else if (undertone === 'cool') {
+        const coolPalette = ['navy', 'charcoal', 'grey', 'gray', 'white', 'slate', 'blue', 'emerald'];
+        const matchesCool = garments.some((g) => coolPalette.some((c) => g.color.name.toLowerCase().includes(c) || g.color.tone === 'cool'));
+        if (matchesCool) faceTonalScore = 0.95;
+      } else {
+        faceTonalScore = 0.90;
+      }
+
+      factors.push({
+        category: 'preference_reinforcement',
+        weight: 0.5,
+        score: faceTonalScore,
+        reason: 'Echoes complexion undertone with balanced face-framing values.',
+      });
+      if (faceTonalScore >= 0.9) {
+        reasons.push('Echoes your undertone through face-adjacent tonal harmony.');
+      }
+    }
+
+    // 12. Torso & Leg Proportion Balance (Weight: 0.5)
+    // Longer torso -> mid/high-rise bottoms, shorter or cropped outer layers, tucked tops;
+    // Longer legs -> low/mid rise and longer outer layers fine.
+    if (preferences.torsoLegPreference && preferences.torsoLegPreference !== 'unspecified') {
+      const torsoLeg = preferences.torsoLegPreference;
+      let torsoLegScore = 0.85;
+      const bot = bottom || onePiece;
+
+      if (torsoLeg === 'longer-torso') {
+        const hasElevatedWaist = bot && (bot.silhouette.includes('high-rise') || bot.silhouette.includes('pleat') || bot.fit === 'tailored');
+        const hasShorterOuter = outer ? (outer.length === 'cropped' || outer.length === 'regular') : true;
+        if (hasElevatedWaist || hasShorterOuter) {
+          torsoLegScore = 0.95;
+        }
+      } else if (torsoLeg === 'longer-legs') {
+        const hasDrapedLine = (outer && outer.length === 'extended') || (bot && (bot.fit === 'relaxed' || bot.fit === 'oversized' || bot.length === 'regular'));
+        if (hasDrapedLine) {
+          torsoLegScore = 0.95;
+        }
+      } else {
+        torsoLegScore = 0.90;
+      }
+
+      factors.push({
+        category: 'silhouette_balance',
+        weight: 0.5,
+        score: torsoLegScore,
+        reason: 'Balances vertical proportions across upper and lower layers.',
+      });
+      reasons.push('Balances torso and leg proportions with calibrated waist placement.');
+    }
+
+    // 13. Shoulder & Hip Balance (Weight: 0.5)
+    // Broader shoulders -> interest or volume toward hem, soft shoulder line;
+    // Broader hips -> structure or interest toward shoulder; balanced -> no adjustment.
+    if (preferences.shoulderHipBalance && preferences.shoulderHipBalance !== 'unspecified') {
+      const shBalance = preferences.shoulderHipBalance;
+      let shScore = 0.88;
+
+      if (shBalance === 'broad-shoulders') {
+        const hasHemVolume = bottom && (bottom.fit === 'relaxed' || bottom.fit === 'oversized' || bottom.silhouette.includes('wide'));
+        const softShoulder = outer ? (outer.silhouette.includes('unstructured') || outer.silhouette.includes('soft') || outer.fit === 'relaxed') : true;
+        if (hasHemVolume || softShoulder) {
+          shScore = 0.95;
+        }
+      } else if (shBalance === 'wider-hips') {
+        const hasShoulderStructure = outer ? (outer.structure >= 3 || outer.silhouette.includes('padded') || outer.fit === 'tailored') : (top && top.structure >= 3);
+        if (hasShoulderStructure) {
+          shScore = 0.95;
+        }
+      } else {
+        shScore = 0.90;
+      }
+
+      factors.push({
+        category: 'silhouette_balance',
+        weight: 0.5,
+        score: shScore,
+        reason: 'Balances shoulder and hip geometry through intentional line and drape.',
+      });
+      reasons.push('Balances shoulder and hip frame with proportional structural weight.');
+    }
+
+    // 14. Height Range Vertical Line (Weight: 0.5)
+    // Shorter -> continuous vertical line (tonal or matched top and bottom), outer layer not past mid-thigh unless chosen;
+    // Taller -> longer layers and breaks fine.
+    if (preferences.heightRange && preferences.heightRange !== 'unspecified') {
+      const height = preferences.heightRange;
+      let heightScore = 0.88;
+
+      if (height === 'compact') {
+        const isTonal = top && bottom && (top.color.tone === bottom.color.tone || top.color.name === bottom.color.name);
+        const outerNotPastKnee = outer ? (outer.length !== 'extended') : true;
+        if (isTonal || outerNotPastKnee) {
+          heightScore = 0.95;
+        }
+      } else if (height === 'tall') {
+        heightScore = 0.95; // Taller frames carry extended layers and breaks effortlessly
+      } else {
+        heightScore = 0.90;
+      }
+
+      factors.push({
+        category: 'silhouette_balance',
+        weight: 0.5,
+        score: heightScore,
+        reason: 'Keeps the line continuous across layered proportions.',
+      });
+      reasons.push('Keeps the line continuous and proportional to your height range.');
+    }
+
     const { finalScore } = computeWeightedScore(factors);
 
     // Build traceable reasons connecting directly to real signals and knowledge IDs
@@ -1470,7 +1621,7 @@ export class VaelStylingEngine {
       });
     }
 
-    // Outfit 26: Feminine Hourglass Wool Blazer & Wide-Leg Trousers (Workplace/Job Interview/Office)
+    // Outfit 26: Feminine Waist-defined Wool Blazer & Wide-Leg Trousers (Workplace/Job Interview/Office)
     const top26 = knowledgeBase.getGarmentBySlug("asymmetric-draped-wrap-blouse-ecru") || knowledgeBase.getAllGarments()[0];
     const bot26 = knowledgeBase.getGarmentBySlug("high-rise-wool-trousers-black") || knowledgeBase.getAllGarments()[1];
     const outer26 = knowledgeBase.getGarmentBySlug("hourglass-wool-blazer-black");
@@ -1479,8 +1630,8 @@ export class VaelStylingEngine {
     if (top26 && bot26 && shoes26) {
       outfits.push({
         id: "outfit_feminine_tailored_suit_workplace_01",
-        title: "Hourglass Virgin Wool Tailoring & Box-Calf Tote",
-        description: "Sculpted hourglass wool blazer over high-rise wide-leg wool trousers, block-heel calfskin boots, and minimal tote.",
+        title: "Waist-defined Virgin Wool Tailoring & Box-Calf Tote",
+        description: "Sculpted waist-defined wool blazer over high-rise wide-leg wool trousers, block-heel calfskin boots, and minimal tote.",
         items: [
           { garment: top26, layerPosition: 0 },
           ...(outer26 ? [{ garment: outer26, layerPosition: 1, stylingNote: "Cinch waistline architecture" }] : []),
@@ -1670,7 +1821,7 @@ export class VaelStylingEngine {
       });
     }
 
-    // Outfit 34: Feminine Silk Slip & Hourglass Blazer (Night Out/Party/Date/Dinner)
+    // Outfit 34: Feminine Silk Slip & Waist-defined Blazer (Night Out/Party/Date/Dinner)
     const slip34 = knowledgeBase.getGarmentBySlug("silk-slip-dress-black");
     const blazer34 = knowledgeBase.getGarmentBySlug("hourglass-wool-blazer-black");
     const shoes34 = knowledgeBase.getGarmentBySlug("pointed-kitten-heels-black") || knowledgeBase.getAllGarments()[2];
@@ -1678,7 +1829,7 @@ export class VaelStylingEngine {
     if (slip34 && shoes34) {
       outfits.push({
         id: "outfit_feminine_night_out_slip_blazer_01",
-        title: "Bias-Cut Silk Slip & Hourglass Wool Blazer",
+        title: "Bias-Cut Silk Slip & Waist-defined Wool Blazer",
         description: "Liquid silk charmeuse slip dress enveloped by a sculpted hourglass wool blazer, kitten heels, and gold hoops.",
         items: [
           { garment: slip34, layerPosition: 0 },

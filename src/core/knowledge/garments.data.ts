@@ -4928,7 +4928,7 @@ export const GARMENTS: Garment[] = [
   // 137
   {
     id: 'gar_sculpted_blazer_hourglass_black',
-    name: 'Cinched Hourglass Tailored Wool Blazer',
+    name: 'Waist-defined Tailored Wool Blazer',
     slug: 'hourglass-tailored-blazer-black',
     category: 'outerwear',
     subcategory: 'blazer',
@@ -6060,7 +6060,7 @@ export const GARMENTS: Garment[] = [
   // 163
   {
     "id": "gar_feminine_wool_blazer_black",
-    "name": "Hourglass Single-Breasted Wool Crepe Blazer (Black)",
+    "name": "Waist-defined Single-Breasted Wool Crepe Blazer (Black)",
     "slug": "hourglass-wool-blazer-black",
     "category": "outerwear",
     "subcategory": "blazer",

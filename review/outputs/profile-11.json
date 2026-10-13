@@ -166,7 +166,7 @@
         "cautions": [],
         "outfit": {
           "id": "outfit_feminine_tailored_suit_workplace_01",
-          "title": "Hourglass Virgin Wool Tailoring & Box-Calf Tote",
+          "title": "Waist-defined Virgin Wool Tailoring & Box-Calf Tote",
           "primaryStyleSlug": "minimal",
           "formality": 4,
           "score": 0.86,
@@ -185,7 +185,7 @@
             {
               "category": "outerwear",
               "subcategory": "blazer",
-              "name": "Hourglass Single-Breasted Wool Crepe Blazer (Black)",
+              "name": "Waist-defined Single-Breasted Wool Crepe Blazer (Black)",
               "material": "290gsm Italian virgin wool crepe",
               "color": "black",
               "fit": "tailored",
@@ -263,11 +263,17 @@
               "weight": 1,
               "score": 0.56,
               "reason": "Soft expression alignment with androgynous presentation preference."
+            },
+            {
+              "category": "preference_reinforcement",
+              "weight": 0.5,
+              "score": 0.9,
+              "reason": "Echoes complexion undertone with balanced face-framing values."
             }
           ],
           "traceableReasons": [
             {
-              "reasonId": "rea_outfit_feminine_tailored_suit_workplace_01_0_1791898366434",
+              "reasonId": "rea_outfit_feminine_tailored_suit_workplace_01_0_1791900814826",
               "text": "Directly mirrors your personal style axis coordinates.",
               "signalIds": [
                 "user.styleProfile.styleVector",
@@ -286,7 +292,7 @@
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_feminine_tailored_suit_workplace_01_1_1791898366434",
+              "reasonId": "rea_outfit_feminine_tailored_suit_workplace_01_1_1791900814826",
               "text": "Balanced regular configuration",
               "signalIds": [
                 "user.styleProfile.preferences.preferredStyleSlugs",
@@ -304,7 +310,7 @@
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_feminine_tailored_suit_workplace_01_2_1791898366434",
+              "reasonId": "rea_outfit_feminine_tailored_suit_workplace_01_2_1791900814826",
               "text": "Strong contrast between light and deep neutral values establishes crisp visual separation.",
               "signalIds": [
                 "user.styleProfile.preferences.preferredStyleSlugs",
@@ -454,11 +460,17 @@
               "weight": 0.5,
               "score": 0.95,
               "reason": "Harmonious metal hardware tones across accessories."
+            },
+            {
+              "category": "preference_reinforcement",
+              "weight": 0.5,
+              "score": 0.9,
+              "reason": "Echoes complexion undertone with balanced face-framing values."
             }
           ],
           "traceableReasons": [
             {
-              "reasonId": "rea_outfit_feminine_party_crepe_jumpsuit_01_0_1791898366434",
+              "reasonId": "rea_outfit_feminine_party_crepe_jumpsuit_01_0_1791900814826",
               "text": "Directly mirrors your personal style axis coordinates.",
               "signalIds": [
                 "user.styleProfile.styleVector",
@@ -476,7 +488,7 @@
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_feminine_party_crepe_jumpsuit_01_1_1791898366434",
+              "reasonId": "rea_outfit_feminine_party_crepe_jumpsuit_01_1_1791900814826",
               "text": "Unified cinched waist wide leg column",
               "signalIds": [
                 "user.styleProfile.preferences.preferredStyleSlugs",
@@ -493,7 +505,7 @@
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_feminine_party_crepe_jumpsuit_01_2_1791898366434",
+              "reasonId": "rea_outfit_feminine_party_crepe_jumpsuit_01_2_1791900814826",
               "text": "Harmonious balance across complementary tonal depths.",
               "signalIds": [
                 "user.styleProfile.preferences.fitProportions",
@@ -636,11 +648,17 @@
               "weight": 1,
               "score": 0.8,
               "reason": "Soft expression alignment with androgynous presentation preference."
+            },
+            {
+              "category": "preference_reinforcement",
+              "weight": 0.5,
+              "score": 0.9,
+              "reason": "Echoes complexion undertone with balanced face-framing values."
             }
           ],
           "traceableReasons": [
             {
-              "reasonId": "rea_outfit_korean_minimal_01_0_1791898366434",
+              "reasonId": "rea_outfit_korean_minimal_01_0_1791900814825",
               "text": "Cropped upper proportion offset by expansive lower volume",
               "signalIds": [
                 "user.styleProfile.preferences.preferredStyleSlugs",
@@ -657,7 +675,7 @@
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_korean_minimal_01_1_1791898366434",
+              "reasonId": "rea_outfit_korean_minimal_01_1_1791900814825",
               "text": "Strong contrast between light and deep neutral values establishes crisp visual separation.",
               "signalIds": [
                 "user.styleProfile.preferences.preferredStyleSlugs",
@@ -674,7 +692,7 @@
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_korean_minimal_01_2_1791898366434",
+              "reasonId": "rea_outfit_korean_minimal_01_2_1791900814825",
               "text": "Default climate baseline assumed; weather context was not specified.",
               "signalIds": [
                 "context.temperatureLevel",

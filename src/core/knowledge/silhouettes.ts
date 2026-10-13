@@ -113,7 +113,7 @@ export class SilhouetteProportionRules {
     }
     // Formula 5: Oversized / Boxy top + Slim / Tailored bottom (Inverse silhouette pairing)
     else if ((topFit === 'oversized' || topFit === 'boxy') && isBottomSlim) {
-      harmonyScore = 0.90;
+      harmonyScore = 0.92;
       structureDescription = 'Inverse silhouette pairing: upper volumetric emphasis with streamlined lower anchor';
       advice.push('Inverse volume dynamic: emphasizes upper shoulder line while maintaining a clean, tapered ankle silhouette.');
     }
@@ -132,11 +132,11 @@ export class SilhouetteProportionRules {
 
     // User preference modulation
     if (userFitPrefs) {
-      if (userFitPrefs.dislikedFits.includes(topFit) || userFitPrefs.dislikedFits.includes(bottomFit)) {
+      if (userFitPrefs.dislikedFits?.includes(topFit) || userFitPrefs.dislikedFits?.includes(bottomFit)) {
         harmonyScore = Math.max(0.2, harmonyScore - 0.25);
         advice.push('Deviates from your stated fit preferences.');
       }
-      if (userFitPrefs.preferredFits.includes(topFit) && userFitPrefs.preferredFits.includes(bottomFit)) {
+      if (userFitPrefs.preferredFits?.includes(topFit) && userFitPrefs.preferredFits?.includes(bottomFit)) {
         harmonyScore = Math.min(1.0, harmonyScore + 0.08);
         advice.push('Aligns with your preferred fit geometry.');
       }

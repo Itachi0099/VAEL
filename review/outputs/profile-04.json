@@ -277,11 +277,17 @@
               "weight": 1,
               "score": 0.8,
               "reason": "Soft expression alignment with androgynous presentation preference."
+            },
+            {
+              "category": "preference_reinforcement",
+              "weight": 0.5,
+              "score": 0.9,
+              "reason": "Echoes complexion undertone with balanced face-framing values."
             }
           ],
           "traceableReasons": [
             {
-              "reasonId": "rea_outfit_korean_minimal_01_0_1791898366430",
+              "reasonId": "rea_outfit_korean_minimal_01_0_1791900814822",
               "text": "Cropped upper proportion offset by expansive lower volume",
               "signalIds": [
                 "user.styleProfile.preferences.preferredStyleSlugs",
@@ -298,7 +304,7 @@
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_korean_minimal_01_1_1791898366430",
+              "reasonId": "rea_outfit_korean_minimal_01_1_1791900814822",
               "text": "Strong contrast between light and deep neutral values establishes crisp visual separation.",
               "signalIds": [
                 "user.styleProfile.preferences.preferredStyleSlugs",
@@ -315,7 +321,7 @@
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_korean_minimal_01_2_1791898366430",
+              "reasonId": "rea_outfit_korean_minimal_01_2_1791900814822",
               "text": "Aligned to Modern Office / Workplace formality.",
               "signalIds": [
                 "context.occasion",
@@ -475,11 +481,17 @@
               "weight": 1,
               "score": 0.8,
               "reason": "Soft expression alignment with androgynous presentation preference."
+            },
+            {
+              "category": "preference_reinforcement",
+              "weight": 0.5,
+              "score": 0.9,
+              "reason": "Echoes complexion undertone with balanced face-framing values."
             }
           ],
           "traceableReasons": [
             {
-              "reasonId": "rea_outfit_fluid_db_suit_taupe_01_0_1791898366430",
+              "reasonId": "rea_outfit_fluid_db_suit_taupe_01_0_1791900814822",
               "text": "Cropped upper proportion offset by expansive lower volume",
               "signalIds": [
                 "user.styleProfile.preferences.preferredStyleSlugs",
@@ -497,7 +509,7 @@
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_fluid_db_suit_taupe_01_1_1791898366430",
+              "reasonId": "rea_outfit_fluid_db_suit_taupe_01_1_1791900814822",
               "text": "Strong contrast between light and deep neutral values establishes crisp visual separation.",
               "signalIds": [
                 "user.styleProfile.preferences.preferredStyleSlugs",
@@ -515,7 +527,7 @@
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_fluid_db_suit_taupe_01_2_1791898366430",
+              "reasonId": "rea_outfit_fluid_db_suit_taupe_01_2_1791900814822",
               "text": "Aligned to Modern Office / Workplace formality.",
               "signalIds": [
                 "context.occasion",
@@ -654,11 +666,17 @@
               "weight": 1,
               "score": 0.8,
               "reason": "Soft expression alignment with androgynous presentation preference."
+            },
+            {
+              "category": "preference_reinforcement",
+              "weight": 0.5,
+              "score": 0.9,
+              "reason": "Echoes complexion undertone with balanced face-framing values."
             }
           ],
           "traceableReasons": [
             {
-              "reasonId": "rea_outfit_minimal_01_0_1791898366430",
+              "reasonId": "rea_outfit_minimal_01_0_1791900814822",
               "text": "Directly mirrors your personal style axis coordinates.",
               "signalIds": [
                 "user.styleProfile.styleVector",
@@ -675,7 +693,7 @@
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_minimal_01_1_1791898366430",
+              "reasonId": "rea_outfit_minimal_01_1_1791900814822",
               "text": "Balanced regular configuration",
               "signalIds": [
                 "user.styleProfile.preferences.preferredStyleSlugs",
@@ -691,7 +709,7 @@
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_minimal_01_2_1791898366430",
+              "reasonId": "rea_outfit_minimal_01_2_1791900814822",
               "text": "Strong contrast between light and deep neutral values establishes crisp visual separation.",
               "signalIds": [
                 "user.styleProfile.preferences.preferredStyleSlugs",

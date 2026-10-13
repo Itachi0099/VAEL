@@ -241,11 +241,17 @@
               "weight": 1,
               "score": 0.7,
               "reason": "Soft expression alignment with androgynous presentation preference."
+            },
+            {
+              "category": "preference_reinforcement",
+              "weight": 0.5,
+              "score": 0.9,
+              "reason": "Echoes complexion undertone with balanced face-framing values."
             }
           ],
           "traceableReasons": [
             {
-              "reasonId": "rea_outfit_masculine_hot_casual_linen_01_0_1791898366434",
+              "reasonId": "rea_outfit_masculine_hot_casual_linen_01_0_1791900814825",
               "text": "Directly mirrors your personal style axis coordinates.",
               "signalIds": [
                 "user.styleProfile.styleVector",
@@ -262,7 +268,7 @@
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_masculine_hot_casual_linen_01_1_1791898366434",
+              "reasonId": "rea_outfit_masculine_hot_casual_linen_01_1_1791900814825",
               "text": "Balanced regular configuration",
               "signalIds": [
                 "user.styleProfile.preferences.preferredStyleSlugs",
@@ -278,7 +284,7 @@
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_masculine_hot_casual_linen_01_2_1791898366434",
+              "reasonId": "rea_outfit_masculine_hot_casual_linen_01_2_1791900814825",
               "text": "Tonal neutral palette ensures high versatility and effortless visual cohesion.",
               "signalIds": [
                 "user.styleProfile.preferences.preferredStyleSlugs",
@@ -413,11 +419,17 @@
               "weight": 1,
               "score": 0.8,
               "reason": "Soft expression alignment with androgynous presentation preference."
+            },
+            {
+              "category": "preference_reinforcement",
+              "weight": 0.5,
+              "score": 0.9,
+              "reason": "Echoes complexion undertone with balanced face-framing values."
             }
           ],
           "traceableReasons": [
             {
-              "reasonId": "rea_outfit_summer_linen_01_0_1791898366434",
+              "reasonId": "rea_outfit_summer_linen_01_0_1791900814825",
               "text": "Balanced regular configuration",
               "signalIds": [
                 "user.styleProfile.preferences.preferredStyleSlugs",
@@ -433,7 +445,7 @@
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_summer_linen_01_1_1791898366434",
+              "reasonId": "rea_outfit_summer_linen_01_1_1791900814825",
               "text": "Tonal neutral palette ensures high versatility and effortless visual cohesion.",
               "signalIds": [
                 "user.styleProfile.preferences.preferredStyleSlugs",
@@ -449,7 +461,7 @@
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_summer_linen_01_2_1791898366434",
+              "reasonId": "rea_outfit_summer_linen_01_2_1791900814825",
               "text": "Aligned to Everyday Casual / Weekend formality.",
               "signalIds": [
                 "context.occasion",
@@ -596,11 +608,17 @@
               "weight": 1,
               "score": 0.575,
               "reason": "Soft expression alignment with androgynous presentation preference."
+            },
+            {
+              "category": "preference_reinforcement",
+              "weight": 0.5,
+              "score": 0.9,
+              "reason": "Echoes complexion undertone with balanced face-framing values."
             }
           ],
           "traceableReasons": [
             {
-              "reasonId": "rea_outfit_masculine_summer_seersucker_01_0_1791898366434",
+              "reasonId": "rea_outfit_masculine_summer_seersucker_01_0_1791900814825",
               "text": "Harmonious classic proportion with uniform clean linear cadence",
               "signalIds": [
                 "user.styleProfile.preferences.preferredStyleSlugs",
@@ -617,7 +635,7 @@
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_masculine_summer_seersucker_01_1_1791898366434",
+              "reasonId": "rea_outfit_masculine_summer_seersucker_01_1_1791900814825",
               "text": "Harmonious balance across complementary tonal depths.",
               "signalIds": [
                 "user.styleProfile.preferences.fitProportions",
@@ -634,7 +652,7 @@
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_masculine_summer_seersucker_01_2_1791898366434",
+              "reasonId": "rea_outfit_masculine_summer_seersucker_01_2_1791900814825",
               "text": "Neutral tonal temperature balance relative to undertone.",
               "signalIds": [
                 "user.styleProfile.preferences.fitProportions",

@@ -167,7 +167,7 @@
         "cautions": [],
         "outfit": {
           "id": "outfit_feminine_tailored_suit_workplace_01",
-          "title": "Hourglass Virgin Wool Tailoring & Box-Calf Tote",
+          "title": "Waist-defined Virgin Wool Tailoring & Box-Calf Tote",
           "primaryStyleSlug": "minimal",
           "formality": 4,
           "score": 0.88,
@@ -186,7 +186,7 @@
             {
               "category": "outerwear",
               "subcategory": "blazer",
-              "name": "Hourglass Single-Breasted Wool Crepe Blazer (Black)",
+              "name": "Waist-defined Single-Breasted Wool Crepe Blazer (Black)",
               "material": "290gsm Italian virgin wool crepe",
               "color": "black",
               "fit": "tailored",
@@ -262,7 +262,7 @@
           ],
           "traceableReasons": [
             {
-              "reasonId": "rea_outfit_feminine_tailored_suit_workplace_01_0_1791898366436",
+              "reasonId": "rea_outfit_feminine_tailored_suit_workplace_01_0_1791900814827",
               "text": "Directly mirrors your personal style axis coordinates.",
               "signalIds": [
                 "user.styleProfile.styleVector",
@@ -281,7 +281,7 @@
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_feminine_tailored_suit_workplace_01_1_1791898366436",
+              "reasonId": "rea_outfit_feminine_tailored_suit_workplace_01_1_1791900814827",
               "text": "Balanced regular configuration",
               "signalIds": [
                 "user.styleProfile.preferences.preferredStyleSlugs",
@@ -299,7 +299,7 @@
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_feminine_tailored_suit_workplace_01_2_1791898366436",
+              "reasonId": "rea_outfit_feminine_tailored_suit_workplace_01_2_1791900814827",
               "text": "Strong contrast between light and deep neutral values establishes crisp visual separation.",
               "signalIds": [
                 "user.styleProfile.preferences.preferredStyleSlugs",
@@ -374,7 +374,7 @@
             {
               "category": "outerwear",
               "subcategory": "blazer",
-              "name": "Cinched Hourglass Tailored Wool Blazer",
+              "name": "Waist-defined Tailored Wool Blazer",
               "material": "high-twist tropical wool with structured canvas interlining",
               "color": "black",
               "fit": "tailored",
@@ -450,7 +450,7 @@
           ],
           "traceableReasons": [
             {
-              "reasonId": "rea_outfit_feminine_slip_evening_01_0_1791898366436",
+              "reasonId": "rea_outfit_feminine_slip_evening_01_0_1791900814827",
               "text": "Directly mirrors your personal style axis coordinates.",
               "signalIds": [
                 "user.styleProfile.styleVector",
@@ -469,7 +469,7 @@
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_feminine_slip_evening_01_1_1791898366436",
+              "reasonId": "rea_outfit_feminine_slip_evening_01_1_1791900814827",
               "text": "Cohesive layered silhouette with balanced mid-length outer structure",
               "signalIds": [
                 "user.styleProfile.preferences.fitProportions",
@@ -487,7 +487,7 @@
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_feminine_slip_evening_01_2_1791898366436",
+              "reasonId": "rea_outfit_feminine_slip_evening_01_2_1791900814827",
               "text": "Harmonious balance across complementary tonal depths.",
               "signalIds": [
                 "user.styleProfile.preferences.fitProportions",
@@ -627,7 +627,7 @@
           ],
           "traceableReasons": [
             {
-              "reasonId": "rea_outfit_korean_minimal_01_0_1791898366436",
+              "reasonId": "rea_outfit_korean_minimal_01_0_1791900814827",
               "text": "Cropped upper proportion offset by expansive lower volume",
               "signalIds": [
                 "user.styleProfile.preferences.preferredStyleSlugs",
@@ -644,7 +644,7 @@
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_korean_minimal_01_1_1791898366436",
+              "reasonId": "rea_outfit_korean_minimal_01_1_1791900814827",
               "text": "Strong contrast between light and deep neutral values establishes crisp visual separation.",
               "signalIds": [
                 "user.styleProfile.preferences.preferredStyleSlugs",
@@ -661,7 +661,7 @@
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_korean_minimal_01_2_1791898366436",
+              "reasonId": "rea_outfit_korean_minimal_01_2_1791900814827",
               "text": "Default climate baseline assumed; weather context was not specified.",
               "signalIds": [
                 "context.temperatureLevel",

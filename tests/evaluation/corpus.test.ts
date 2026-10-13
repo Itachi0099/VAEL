@@ -8,7 +8,7 @@ describe('Golden Evaluation Corpus Validation Suite', () => {
     const report = KnowledgeBaseValidator.validateAll();
     expect(report.isValid).toBe(true);
     expect(report.errors).toHaveLength(0);
-    expect(report.totalGarments).toBeGreaterThanOrEqual(152);
+    expect(report.totalGarments).toBeGreaterThanOrEqual(179);
     expect(report.totalHairstyles).toBeGreaterThanOrEqual(30);
     expect(report.totalBeards).toBe(20);
     expect(report.totalStyles).toBe(10);

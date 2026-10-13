@@ -257,11 +257,17 @@
               "weight": 1,
               "score": 0.8,
               "reason": "Soft expression alignment with androgynous presentation preference."
+            },
+            {
+              "category": "preference_reinforcement",
+              "weight": 0.5,
+              "score": 0.9,
+              "reason": "Echoes complexion undertone with balanced face-framing values."
             }
           ],
           "traceableReasons": [
             {
-              "reasonId": "rea_outfit_korean_minimal_01_0_1791898366436",
+              "reasonId": "rea_outfit_korean_minimal_01_0_1791900814828",
               "text": "Cropped upper proportion offset by expansive lower volume",
               "signalIds": [
                 "user.styleProfile.preferences.preferredStyleSlugs",
@@ -278,7 +284,7 @@
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_korean_minimal_01_1_1791898366436",
+              "reasonId": "rea_outfit_korean_minimal_01_1_1791900814828",
               "text": "Strong contrast between light and deep neutral values establishes crisp visual separation.",
               "signalIds": [
                 "user.styleProfile.preferences.preferredStyleSlugs",
@@ -295,7 +301,7 @@
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_korean_minimal_01_2_1791898366436",
+              "reasonId": "rea_outfit_korean_minimal_01_2_1791900814828",
               "text": "Default climate baseline assumed; weather context was not specified.",
               "signalIds": [
                 "context.temperatureLevel",
@@ -452,11 +458,17 @@
               "weight": 1,
               "score": 0.8,
               "reason": "Soft expression alignment with androgynous presentation preference."
+            },
+            {
+              "category": "preference_reinforcement",
+              "weight": 0.5,
+              "score": 0.9,
+              "reason": "Echoes complexion undertone with balanced face-framing values."
             }
           ],
           "traceableReasons": [
             {
-              "reasonId": "rea_outfit_fluid_db_suit_taupe_01_0_1791898366436",
+              "reasonId": "rea_outfit_fluid_db_suit_taupe_01_0_1791900814828",
               "text": "Cropped upper proportion offset by expansive lower volume",
               "signalIds": [
                 "user.styleProfile.preferences.preferredStyleSlugs",
@@ -474,7 +486,7 @@
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_fluid_db_suit_taupe_01_1_1791898366436",
+              "reasonId": "rea_outfit_fluid_db_suit_taupe_01_1_1791900814828",
               "text": "Strong contrast between light and deep neutral values establishes crisp visual separation.",
               "signalIds": [
                 "user.styleProfile.preferences.preferredStyleSlugs",
@@ -492,7 +504,7 @@
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_fluid_db_suit_taupe_01_2_1791898366436",
+              "reasonId": "rea_outfit_fluid_db_suit_taupe_01_2_1791900814828",
               "text": "Default climate baseline assumed; weather context was not specified.",
               "signalIds": [
                 "context.temperatureLevel",
@@ -544,7 +556,7 @@
           "explanation": "All foundational inputs user-sourced with solid aesthetic alignment.",
           "toIncreaseConfidence": "Confirm whether the ceremony is day or evening to balance fabric sheen and color depth."
         },
-        "overallHarmonyScore": 0.77,
+        "overallHarmonyScore": 0.78,
         "reasons": [
           "Harmonious classic proportion with uniform clean linear cadence",
           "Tonal neutral palette ensures high versatility and effortless visual cohesion.",
@@ -556,7 +568,7 @@
           "title": "Textured Knit & Tailored Line",
           "primaryStyleSlug": "smart-casual",
           "formality": 3,
-          "score": 0.77,
+          "score": 0.78,
           "items": [
             {
               "category": "top",
@@ -628,11 +640,17 @@
               "weight": 1,
               "score": 0.7,
               "reason": "Soft expression alignment with androgynous presentation preference."
+            },
+            {
+              "category": "preference_reinforcement",
+              "weight": 0.5,
+              "score": 0.9,
+              "reason": "Echoes complexion undertone with balanced face-framing values."
             }
           ],
           "traceableReasons": [
             {
-              "reasonId": "rea_outfit_smart_casual_01_0_1791898366436",
+              "reasonId": "rea_outfit_smart_casual_01_0_1791900814828",
               "text": "Harmonious classic proportion with uniform clean linear cadence",
               "signalIds": [
                 "user.styleProfile.preferences.preferredStyleSlugs",
@@ -648,7 +666,7 @@
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_smart_casual_01_1_1791898366436",
+              "reasonId": "rea_outfit_smart_casual_01_1_1791900814828",
               "text": "Tonal neutral palette ensures high versatility and effortless visual cohesion.",
               "signalIds": [
                 "user.styleProfile.preferences.preferredStyleSlugs",
@@ -664,7 +682,7 @@
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_smart_casual_01_2_1791898366436",
+              "reasonId": "rea_outfit_smart_casual_01_2_1791900814828",
               "text": "Default climate baseline assumed; weather context was not specified.",
               "signalIds": [
                 "context.temperatureLevel",

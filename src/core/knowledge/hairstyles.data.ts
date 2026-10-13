@@ -684,8 +684,8 @@ export const HAIRSTYLES: HairStyle[] = [
   // 26
   {
     id: 'hair_long_dreadlocks',
-    name: 'Long Mature Dreadlocks',
-    slug: 'long-mature-dreadlocks',
+    name: 'Long Mature Locs',
+    slug: 'long-mature-locs',
     description:
       'Chest-length mature uniform locs with natural cylindrical weight. Rich cultural heritage and statuesque presence.',
     targetLength: 'long',

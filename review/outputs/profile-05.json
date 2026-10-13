@@ -264,11 +264,17 @@
               "weight": 0.5,
               "score": 0.95,
               "reason": "Harmonious metal hardware tones across accessories."
+            },
+            {
+              "category": "preference_reinforcement",
+              "weight": 0.5,
+              "score": 0.9,
+              "reason": "Echoes complexion undertone with balanced face-framing values."
             }
           ],
           "traceableReasons": [
             {
-              "reasonId": "rea_outfit_feminine_party_crepe_jumpsuit_01_0_1791898366431",
+              "reasonId": "rea_outfit_feminine_party_crepe_jumpsuit_01_0_1791900814822",
               "text": "Directly mirrors your personal style axis coordinates.",
               "signalIds": [
                 "user.styleProfile.styleVector",
@@ -286,7 +292,7 @@
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_feminine_party_crepe_jumpsuit_01_1_1791898366431",
+              "reasonId": "rea_outfit_feminine_party_crepe_jumpsuit_01_1_1791900814822",
               "text": "Unified cinched waist wide leg column",
               "signalIds": [
                 "user.styleProfile.preferences.preferredStyleSlugs",
@@ -303,7 +309,7 @@
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_feminine_party_crepe_jumpsuit_01_2_1791898366431",
+              "reasonId": "rea_outfit_feminine_party_crepe_jumpsuit_01_2_1791900814822",
               "text": "Harmonious balance across complementary tonal depths.",
               "signalIds": [
                 "user.styleProfile.preferences.fitProportions",
@@ -446,11 +452,17 @@
               "weight": 1,
               "score": 0.575,
               "reason": "Soft expression alignment with androgynous presentation preference."
+            },
+            {
+              "category": "preference_reinforcement",
+              "weight": 0.5,
+              "score": 0.9,
+              "reason": "Echoes complexion undertone with balanced face-framing values."
             }
           ],
           "traceableReasons": [
             {
-              "reasonId": "rea_outfit_poplin_shirt_dress_01_0_1791898366431",
+              "reasonId": "rea_outfit_poplin_shirt_dress_01_0_1791900814822",
               "text": "Unified crisp a line pleated waist column",
               "signalIds": [
                 "user.styleProfile.preferences.preferredStyleSlugs",
@@ -467,7 +479,7 @@
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_poplin_shirt_dress_01_1_1791898366431",
+              "reasonId": "rea_outfit_poplin_shirt_dress_01_1_1791900814822",
               "text": "Strong contrast between light and deep neutral values establishes crisp visual separation.",
               "signalIds": [
                 "user.styleProfile.preferences.preferredStyleSlugs",
@@ -484,7 +496,7 @@
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_poplin_shirt_dress_01_2_1791898366431",
+              "reasonId": "rea_outfit_poplin_shirt_dress_01_2_1791900814822",
               "text": "High breathability (100% high-density cotton poplin) supports natural airflow in hot conditions.",
               "signalIds": [
                 "context.temperatureLevel",
@@ -533,7 +545,7 @@
           "explanation": "Supported by verified user formality, confirmed climate, explicit style vector, and grooming inputs.",
           "toIncreaseConfidence": "Add specific footwear preferences to further personalize lower-leg grounding."
         },
-        "overallHarmonyScore": 0.83,
+        "overallHarmonyScore": 0.84,
         "reasons": [
           "Balanced regular configuration",
           "Strong contrast between light and deep neutral values establishes crisp visual separation.",
@@ -545,7 +557,7 @@
           "title": "Heritage Raw Silk & Linen Ceremony Look",
           "primaryStyleSlug": "formal",
           "formality": 5,
-          "score": 0.83,
+          "score": 0.84,
           "items": [
             {
               "category": "top",
@@ -628,11 +640,17 @@
               "weight": 1,
               "score": 0.65,
               "reason": "Soft expression alignment with androgynous presentation preference."
+            },
+            {
+              "category": "preference_reinforcement",
+              "weight": 0.5,
+              "score": 0.9,
+              "reason": "Echoes complexion undertone with balanced face-framing values."
             }
           ],
           "traceableReasons": [
             {
-              "reasonId": "rea_outfit_cultural_traditional_01_0_1791898366431",
+              "reasonId": "rea_outfit_cultural_traditional_01_0_1791900814822",
               "text": "Balanced regular configuration",
               "signalIds": [
                 "user.styleProfile.preferences.preferredStyleSlugs",
@@ -649,7 +667,7 @@
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_cultural_traditional_01_1_1791898366431",
+              "reasonId": "rea_outfit_cultural_traditional_01_1_1791900814822",
               "text": "Strong contrast between light and deep neutral values establishes crisp visual separation.",
               "signalIds": [
                 "user.styleProfile.preferences.preferredStyleSlugs",
@@ -666,7 +684,7 @@
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_cultural_traditional_01_2_1791898366431",
+              "reasonId": "rea_outfit_cultural_traditional_01_2_1791900814822",
               "text": "High breathability (washed pure linen) supports natural airflow in hot conditions.",
               "signalIds": [
                 "context.temperatureLevel",
