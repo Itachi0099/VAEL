@@ -158,6 +158,25 @@ async function generateReviewOutputs() {
   fs.writeFileSync(path.join(REVIEW_DIR, 'garments.csv'), csvContent);
   console.log(`✓ Exported ${allGarments.length} garments to review/garments.json and review/garments.csv`);
 
+  // Export gender-coded slices
+  const mascGarments = allGarments.filter((g) => g.genderCoding === 'masculine' || (g.garmentCoding !== undefined && g.garmentCoding < 0));
+  const femGarments = allGarments.filter((g) => g.genderCoding === 'feminine' || (g.garmentCoding !== undefined && g.garmentCoding > 0));
+  const fluidGarments = allGarments.filter((g) => g.fluidTag === true || g.genderCoding === 'androgynous');
+
+  fs.writeFileSync(path.join(REVIEW_DIR, 'garments-masculine.json'), JSON.stringify(mascGarments, null, 2));
+  fs.writeFileSync(path.join(REVIEW_DIR, 'garments-feminine.json'), JSON.stringify(femGarments, null, 2));
+  fs.writeFileSync(path.join(REVIEW_DIR, 'garments-fluid.json'), JSON.stringify(fluidGarments, null, 2));
+
+  const mascCsvRows = mascGarments.map((g) => [g.id, `"${g.name.replace(/"/g, '""')}"`, g.slug, g.category, g.genderCoding, g.garmentCoding ?? 0, g.fluidTag ?? false]);
+  const femCsvRows = femGarments.map((g) => [g.id, `"${g.name.replace(/"/g, '""')}"`, g.slug, g.category, g.genderCoding, g.garmentCoding ?? 0, g.fluidTag ?? false]);
+  const fluidCsvRows = fluidGarments.map((g) => [g.id, `"${g.name.replace(/"/g, '""')}"`, g.slug, g.category, g.genderCoding, g.garmentCoding ?? 0, g.fluidTag ?? false]);
+
+  const sliceHeaders = ['id', 'name', 'slug', 'category', 'genderCoding', 'garmentCoding', 'fluidTag'];
+  fs.writeFileSync(path.join(REVIEW_DIR, 'garments-masculine.csv'), [sliceHeaders.join(','), ...mascCsvRows.map((r) => r.join(','))].join('\n'));
+  fs.writeFileSync(path.join(REVIEW_DIR, 'garments-feminine.csv'), [sliceHeaders.join(','), ...femCsvRows.map((r) => r.join(','))].join('\n'));
+  fs.writeFileSync(path.join(REVIEW_DIR, 'garments-fluid.csv'), [sliceHeaders.join(','), ...fluidCsvRows.map((r) => r.join(','))].join('\n'));
+  console.log(`✓ Exported slices: ${mascGarments.length} masculine, ${femGarments.length} feminine, ${fluidGarments.length} fluid.`);
+
   // 2. Export Scoring Weights Specification
   const scoringWeightsMd = `# VAEL R1.2 — Scoring Formula, Factor Weights & Caps
 

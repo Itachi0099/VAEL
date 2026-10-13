@@ -7,6 +7,7 @@ import {
   WeatherCondition,
   TimelessTrendTag,
   ModestyLevel,
+  VintageEra,
 } from './types';
 import { GenderCodingDirection } from './style-axis';
 
@@ -58,6 +59,7 @@ export interface Garment {
   genderCoding: GenderCodingDirection; // Backwards-compatible enum ('masculine' | 'feminine' | 'androgynous' | 'unspecified')
   garmentCoding?: number; // Numeric scalar -1.0 (masculine-coded) .. 0.0 (neutral/unclassified) .. +1.0 (feminine-coded)
   fluidTag?: boolean; // True if intentionally fluid/androgynous cross-style garment
+  vintageEra?: VintageEra; // Curated vintage era ('50s' | '70s' | '90s' | 'unspecified')
 
   seasons: Season[];
   compatibleWeather: WeatherCondition[];

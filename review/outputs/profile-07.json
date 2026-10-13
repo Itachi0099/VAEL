@@ -166,8 +166,8 @@
   "result": {
     "looksCount": 3,
     "contextApplied": "Evening Date",
-    "vetoedCandidateCount": 4,
-    "evaluatedCandidateCount": 15,
+    "vetoedCandidateCount": 7,
+    "evaluatedCandidateCount": 39,
     "looks": [
       {
         "tier": "BEST_MATCH",
@@ -270,7 +270,7 @@
           ],
           "traceableReasons": [
             {
-              "reasonId": "rea_outfit_korean_minimal_01_0_1791829696884",
+              "reasonId": "rea_outfit_korean_minimal_01_0_1791898366432",
               "text": "Cropped upper proportion offset by expansive lower volume",
               "signalIds": [
                 "user.styleProfile.preferences.preferredStyleSlugs",
@@ -287,7 +287,7 @@
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_korean_minimal_01_1_1791829696884",
+              "reasonId": "rea_outfit_korean_minimal_01_1_1791898366432",
               "text": "Strong contrast between light and deep neutral values establishes crisp visual separation.",
               "signalIds": [
                 "user.styleProfile.preferences.preferredStyleSlugs",
@@ -304,7 +304,7 @@
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_korean_minimal_01_2_1791829696884",
+              "reasonId": "rea_outfit_korean_minimal_01_2_1791898366432",
               "text": "Aligned to Evening Date formality.",
               "signalIds": [
                 "context.occasion",
@@ -329,7 +329,7 @@
         "hairStyle": {
           "name": "Textured French Crop",
           "slug": "textured-crop",
-          "score": 0.91,
+          "score": 0.9,
           "reasons": [
             "Complements your oval face geometry by balancing facial thirds.",
             "Optimized for your entered wavy texture and medium density.",
@@ -353,6 +353,201 @@
       {
         "tier": "SAFE",
         "tierRationale": "High familiarity and effortless ease. Relies on proven proportions and classic foundational tones.",
+        "confidence": {
+          "state": "STRONG",
+          "explanation": "Supported by verified user formality, confirmed climate, explicit style vector, and grooming inputs.",
+          "toIncreaseConfidence": "Add specific footwear preferences to further personalize lower-leg grounding."
+        },
+        "overallHarmonyScore": 0.89,
+        "reasons": [
+          "Cropped upper proportion offset by expansive lower volume",
+          "Strong contrast between light and deep neutral values establishes crisp visual separation.",
+          "Aligned to Evening Date formality."
+        ],
+        "cautions": [],
+        "outfit": {
+          "id": "outfit_fluid_db_suit_taupe_01",
+          "title": "Unstructured Double-Breasted Fluid Suit in Taupe",
+          "primaryStyleSlug": "korean-minimal",
+          "formality": 3,
+          "score": 0.89,
+          "items": [
+            {
+              "category": "top",
+              "subcategory": "t-shirt",
+              "name": "Heavyweight Boxy Tee (Off-White)",
+              "material": "300gsm combed organic cotton",
+              "color": "off-white",
+              "fit": "boxy",
+              "modestyRating": "standard",
+              "genderCoding": "androgynous",
+              "layerPosition": 0
+            },
+            {
+              "category": "outerwear",
+              "subcategory": "blazer",
+              "name": "Unstructured Double-Breasted Fluid Jacket (Warm Taupe)",
+              "material": "250gsm fluid wool-viscose twill",
+              "color": "warm-taupe",
+              "fit": "relaxed",
+              "modestyRating": "covered-arms",
+              "genderCoding": "androgynous",
+              "layerPosition": 1
+            },
+            {
+              "category": "bottom",
+              "subcategory": "trousers",
+              "name": "Double-Pleat Fluid Drape Trousers (Warm Taupe)",
+              "material": "250gsm fluid wool-viscose twill",
+              "color": "warm-taupe",
+              "fit": "relaxed",
+              "modestyRating": "covered-both",
+              "genderCoding": "androgynous",
+              "layerPosition": 0
+            },
+            {
+              "category": "footwear",
+              "subcategory": "derbies",
+              "name": "Commando-Sole Leather Derbies",
+              "material": "polished binder calf leather, Vibram lug sole",
+              "color": "polished-black",
+              "fit": "regular",
+              "modestyRating": "standard",
+              "genderCoding": "androgynous",
+              "layerPosition": 0
+            },
+            {
+              "category": "accessory",
+              "subcategory": "bag",
+              "name": "Architectural Box-Calf Minimal Tote Bag (Black)",
+              "material": "Smooth Italian calfskin with microfiber lining",
+              "color": "black",
+              "fit": "regular",
+              "modestyRating": "unrestricted",
+              "genderCoding": "androgynous",
+              "layerPosition": 0
+            }
+          ],
+          "factors": [
+            {
+              "category": "style_affinity",
+              "weight": 3.5,
+              "score": 0.79,
+              "reason": "Coordinate affinity (79%) with your 10D style vector."
+            },
+            {
+              "category": "silhouette_balance",
+              "weight": 3,
+              "score": 0.96,
+              "reason": "Cropped upper proportion offset by expansive lower volume"
+            },
+            {
+              "category": "color_harmony",
+              "weight": 3,
+              "score": 0.94,
+              "reason": "Color story: strong-contrast"
+            },
+            {
+              "category": "occasion_fit",
+              "weight": 2.5,
+              "score": 1,
+              "reason": "Formality fit for Evening Date (Level 3)"
+            },
+            {
+              "category": "weather_fit",
+              "weight": 2,
+              "score": 0.75,
+              "reason": "Ambient temperature and breathability calibration"
+            }
+          ],
+          "traceableReasons": [
+            {
+              "reasonId": "rea_outfit_fluid_db_suit_taupe_01_0_1791898366432",
+              "text": "Cropped upper proportion offset by expansive lower volume",
+              "signalIds": [
+                "user.styleProfile.preferences.preferredStyleSlugs",
+                "context.occasion"
+              ],
+              "knowledgeEntryIds": [
+                "gar_box_tee_white",
+                "gar_fluid_unstructured_double_breasted_suit_jacket_taupe",
+                "gar_fluid_relaxed_drape_trousers_taupe",
+                "gar_chunky_derbies_black",
+                "gar_leather_structured_tote_black"
+              ],
+              "factor": "general",
+              "authority": "USER_ENTERED",
+              "isAssumed": false
+            },
+            {
+              "reasonId": "rea_outfit_fluid_db_suit_taupe_01_1_1791898366432",
+              "text": "Strong contrast between light and deep neutral values establishes crisp visual separation.",
+              "signalIds": [
+                "user.styleProfile.preferences.preferredStyleSlugs",
+                "context.occasion"
+              ],
+              "knowledgeEntryIds": [
+                "gar_box_tee_white",
+                "gar_fluid_unstructured_double_breasted_suit_jacket_taupe",
+                "gar_fluid_relaxed_drape_trousers_taupe",
+                "gar_chunky_derbies_black",
+                "gar_leather_structured_tote_black"
+              ],
+              "factor": "general",
+              "authority": "USER_ENTERED",
+              "isAssumed": false
+            },
+            {
+              "reasonId": "rea_outfit_fluid_db_suit_taupe_01_2_1791898366432",
+              "text": "Aligned to Evening Date formality.",
+              "signalIds": [
+                "context.occasion",
+                "context.targetFormality"
+              ],
+              "knowledgeEntryIds": [
+                "gar_box_tee_white",
+                "gar_fluid_unstructured_double_breasted_suit_jacket_taupe",
+                "gar_fluid_relaxed_drape_trousers_taupe",
+                "gar_chunky_derbies_black",
+                "gar_leather_structured_tote_black",
+                "occ_date"
+              ],
+              "factor": "occasion_fit",
+              "authority": "USER_ENTERED",
+              "isAssumed": false
+            }
+          ],
+          "stylingAdvice": [
+            "Accentuates waistline geometry and creates an elongated vertical lower line."
+          ]
+        },
+        "hairStyle": {
+          "name": "Textured French Crop",
+          "slug": "textured-crop",
+          "score": 0.9,
+          "reasons": [
+            "Complements your oval face geometry by balancing facial thirds.",
+            "Optimized for your entered wavy texture and medium density.",
+            "Fits within your preferred moderate maintenance threshold.",
+            "Appropriate formality for Evening Date.",
+            "Directly aligns with your preferred minimal aesthetic"
+          ]
+        },
+        "groomingStyle": {
+          "name": "Designer Stubble (3-Day Shadow)",
+          "slug": "designer-stubble",
+          "score": 0.9,
+          "reasons": [
+            "Accentuates and sculpts your oval face shape and angular jawline.",
+            "Conforms with your moderate grooming maintenance routine.",
+            "Appropriate grooming polish for Evening Date.",
+            "Directly aligns with your preferred minimal aesthetic"
+          ]
+        }
+      },
+      {
+        "tier": "STRETCH",
+        "tierRationale": "Curated directional exploration. Pushes volume and textural depth while strictly respecting dress codes.",
         "confidence": {
           "state": "STRONG",
           "explanation": "Supported by verified user formality, confirmed climate, explicit style vector, and grooming inputs.",
@@ -440,7 +635,7 @@
           ],
           "traceableReasons": [
             {
-              "reasonId": "rea_outfit_minimal_01_0_1791829696884",
+              "reasonId": "rea_outfit_minimal_01_0_1791898366432",
               "text": "Directly mirrors your personal style axis coordinates.",
               "signalIds": [
                 "user.styleProfile.styleVector",
@@ -457,7 +652,7 @@
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_minimal_01_1_1791829696884",
+              "reasonId": "rea_outfit_minimal_01_1_1791898366432",
               "text": "Balanced regular configuration",
               "signalIds": [
                 "user.styleProfile.preferences.preferredStyleSlugs",
@@ -473,7 +668,7 @@
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_minimal_01_2_1791829696884",
+              "reasonId": "rea_outfit_minimal_01_2_1791898366432",
               "text": "Strong contrast between light and deep neutral values establishes crisp visual separation.",
               "signalIds": [
                 "user.styleProfile.preferences.preferredStyleSlugs",
@@ -494,174 +689,7 @@
         "hairStyle": {
           "name": "Textured French Crop",
           "slug": "textured-crop",
-          "score": 0.91,
-          "reasons": [
-            "Complements your oval face geometry by balancing facial thirds.",
-            "Optimized for your entered wavy texture and medium density.",
-            "Fits within your preferred moderate maintenance threshold.",
-            "Appropriate formality for Evening Date.",
-            "Directly aligns with your preferred minimal aesthetic"
-          ]
-        },
-        "groomingStyle": {
-          "name": "Designer Stubble (3-Day Shadow)",
-          "slug": "designer-stubble",
           "score": 0.9,
-          "reasons": [
-            "Accentuates and sculpts your oval face shape and angular jawline.",
-            "Conforms with your moderate grooming maintenance routine.",
-            "Appropriate grooming polish for Evening Date.",
-            "Directly aligns with your preferred minimal aesthetic"
-          ]
-        }
-      },
-      {
-        "tier": "STRETCH",
-        "tierRationale": "Curated directional exploration. Pushes volume and textural depth while strictly respecting dress codes.",
-        "confidence": {
-          "state": "STRONG",
-          "explanation": "Supported by verified user formality, confirmed climate, explicit style vector, and grooming inputs.",
-          "toIncreaseConfidence": "Add specific footwear preferences to further personalize lower-leg grounding."
-        },
-        "overallHarmonyScore": 0.87,
-        "reasons": [
-          "Harmonious classic proportion with uniform clean linear cadence",
-          "Tonal neutral palette ensures high versatility and effortless visual cohesion.",
-          "Aligned to Evening Date formality."
-        ],
-        "cautions": [],
-        "outfit": {
-          "id": "outfit_smart_casual_01",
-          "title": "Textured Knit & Tailored Line",
-          "primaryStyleSlug": "smart-casual",
-          "formality": 3,
-          "score": 0.87,
-          "items": [
-            {
-              "category": "top",
-              "subcategory": "polo",
-              "name": "Textured Open-Collar Knit Polo",
-              "material": "silk-cotton blend knit",
-              "color": "olive",
-              "fit": "regular",
-              "modestyRating": "standard",
-              "genderCoding": "androgynous",
-              "layerPosition": 0
-            },
-            {
-              "category": "bottom",
-              "subcategory": "trousers",
-              "name": "Flat-Front Tailored Wool Slacks",
-              "material": "100% Super 120s wool",
-              "color": "charcoal",
-              "fit": "tailored",
-              "modestyRating": "high-coverage",
-              "genderCoding": "unspecified",
-              "layerPosition": 0
-            },
-            {
-              "category": "footwear",
-              "subcategory": "loafers",
-              "name": "Cordovan Penny Loafers",
-              "material": "Horween shell cordovan",
-              "color": "deep-burgundy",
-              "fit": "regular",
-              "modestyRating": "standard",
-              "genderCoding": "unspecified",
-              "layerPosition": 0
-            }
-          ],
-          "factors": [
-            {
-              "category": "style_affinity",
-              "weight": 3.5,
-              "score": 0.76,
-              "reason": "Coordinate affinity (76%) with your 10D style vector."
-            },
-            {
-              "category": "silhouette_balance",
-              "weight": 3,
-              "score": 0.9,
-              "reason": "Harmonious classic proportion with uniform clean linear cadence"
-            },
-            {
-              "category": "color_harmony",
-              "weight": 3,
-              "score": 0.92,
-              "reason": "Color story: tonal-neutral"
-            },
-            {
-              "category": "occasion_fit",
-              "weight": 2.5,
-              "score": 1,
-              "reason": "Formality fit for Evening Date (Level 3)"
-            },
-            {
-              "category": "weather_fit",
-              "weight": 2,
-              "score": 0.75,
-              "reason": "Ambient temperature and breathability calibration"
-            }
-          ],
-          "traceableReasons": [
-            {
-              "reasonId": "rea_outfit_smart_casual_01_0_1791829696884",
-              "text": "Harmonious classic proportion with uniform clean linear cadence",
-              "signalIds": [
-                "user.styleProfile.preferences.preferredStyleSlugs",
-                "context.occasion"
-              ],
-              "knowledgeEntryIds": [
-                "gar_knit_polo_olive",
-                "gar_tailored_slacks_charcoal",
-                "gar_penny_loafer_burgundy"
-              ],
-              "factor": "general",
-              "authority": "USER_ENTERED",
-              "isAssumed": false
-            },
-            {
-              "reasonId": "rea_outfit_smart_casual_01_1_1791829696884",
-              "text": "Tonal neutral palette ensures high versatility and effortless visual cohesion.",
-              "signalIds": [
-                "user.styleProfile.preferences.preferredStyleSlugs",
-                "context.occasion"
-              ],
-              "knowledgeEntryIds": [
-                "gar_knit_polo_olive",
-                "gar_tailored_slacks_charcoal",
-                "gar_penny_loafer_burgundy"
-              ],
-              "factor": "general",
-              "authority": "USER_ENTERED",
-              "isAssumed": false
-            },
-            {
-              "reasonId": "rea_outfit_smart_casual_01_2_1791829696884",
-              "text": "Aligned to Evening Date formality.",
-              "signalIds": [
-                "context.occasion",
-                "context.targetFormality"
-              ],
-              "knowledgeEntryIds": [
-                "gar_knit_polo_olive",
-                "gar_tailored_slacks_charcoal",
-                "gar_penny_loafer_burgundy",
-                "occ_date"
-              ],
-              "factor": "occasion_fit",
-              "authority": "USER_ENTERED",
-              "isAssumed": false
-            }
-          ],
-          "stylingAdvice": [
-            "Elevate with subtle texture contrast between top and lower fabrication."
-          ]
-        },
-        "hairStyle": {
-          "name": "Textured French Crop",
-          "slug": "textured-crop",
-          "score": 0.91,
           "reasons": [
             "Complements your oval face geometry by balancing facial thirds.",
             "Optimized for your entered wavy texture and medium density.",

@@ -174,8 +174,8 @@
   "result": {
     "looksCount": 3,
     "contextApplied": "Job Interview",
-    "vetoedCandidateCount": 6,
-    "evaluatedCandidateCount": 15,
+    "vetoedCandidateCount": 15,
+    "evaluatedCandidateCount": 39,
     "looks": [
       {
         "tier": "BEST_MATCH",
@@ -185,36 +185,36 @@
           "explanation": "Supported by verified user formality, confirmed climate, explicit style vector, and grooming inputs.",
           "toIncreaseConfidence": "Add specific footwear preferences to further personalize lower-leg grounding."
         },
-        "overallHarmonyScore": 0.86,
+        "overallHarmonyScore": 0.87,
         "reasons": [
           "Directly mirrors your personal style axis coordinates.",
-          "Cohesive layered silhouette with balanced mid-length outer structure",
-          "Harmonious balance across complementary tonal depths."
+          "Balanced regular configuration",
+          "Strong contrast between light and deep neutral values establishes crisp visual separation."
         ],
         "cautions": [],
         "outfit": {
-          "id": "outfit_feminine_slip_evening_01",
-          "title": "Sculpted Hourglass & Silk Slip Monolith",
+          "id": "outfit_feminine_tailored_suit_workplace_01",
+          "title": "Hourglass Virgin Wool Tailoring & Box-Calf Tote",
           "primaryStyleSlug": "minimal",
           "formality": 4,
-          "score": 0.86,
+          "score": 0.87,
           "items": [
             {
-              "category": "one-piece",
-              "subcategory": "dress",
-              "name": "Bias-Cut Silk Charmeuse Slip Dress",
-              "material": "100% heavyweight 22mm silk charmeuse",
-              "color": "black",
-              "fit": "slim",
-              "modestyRating": "low-coverage",
+              "category": "top",
+              "subcategory": "blouse",
+              "name": "Asymmetric Draped Georgette Wrap Blouse",
+              "material": "fluid viscose-silk georgette",
+              "color": "ecru",
+              "fit": "relaxed",
+              "modestyRating": "standard",
               "genderCoding": "feminine",
               "layerPosition": 0
             },
             {
               "category": "outerwear",
               "subcategory": "blazer",
-              "name": "Cinched Hourglass Tailored Wool Blazer",
-              "material": "high-twist tropical wool with structured canvas interlining",
+              "name": "Hourglass Single-Breasted Wool Crepe Blazer (Black)",
+              "material": "290gsm Italian virgin wool crepe",
               "color": "black",
               "fit": "tailored",
               "modestyRating": "covered-arms",
@@ -222,36 +222,36 @@
               "layerPosition": 1
             },
             {
-              "category": "footwear",
-              "subcategory": "heel",
-              "name": "Pointed-Toe Leather Slingback Pumps (45mm)",
-              "material": "semi-gloss Italian box calfskin",
+              "category": "bottom",
+              "subcategory": "trousers",
+              "name": "High-Rise Fluid Wide-Leg Wool Trousers (Black)",
+              "material": "270gsm tropical high-twist wool",
               "color": "black",
-              "fit": "slim",
-              "modestyRating": "standard",
+              "fit": "tailored",
+              "modestyRating": "covered-both",
+              "genderCoding": "feminine",
+              "layerPosition": 0
+            },
+            {
+              "category": "footwear",
+              "subcategory": "boots",
+              "name": "50mm Block-Heel Glove Calfskin Ankle Boots (Black)",
+              "material": "Soft Italian glove calfskin with leather sole",
+              "color": "black",
+              "fit": "tailored",
+              "modestyRating": "covered-both",
               "genderCoding": "feminine",
               "layerPosition": 0
             },
             {
               "category": "accessory",
               "subcategory": "bag",
-              "name": "Sculpted Minimalist Leather Shoulder Bag",
-              "material": "smooth semi-patent calfskin, tonal nappa lining",
+              "name": "Architectural Box-Calf Minimal Tote Bag (Black)",
+              "material": "Smooth Italian calfskin with microfiber lining",
               "color": "black",
               "fit": "regular",
-              "modestyRating": "standard",
-              "genderCoding": "feminine",
-              "layerPosition": 0
-            },
-            {
-              "category": "accessory",
-              "subcategory": "jewelry",
-              "name": "18k Vermeil Hollow Bold Hoop Earrings",
-              "material": "18k gold vermeil over 925 recycled sterling silver",
-              "color": "warm-gold",
-              "fit": "regular",
-              "modestyRating": "standard",
-              "genderCoding": "feminine",
+              "modestyRating": "unrestricted",
+              "genderCoding": "androgynous",
               "layerPosition": 0
             }
           ],
@@ -265,14 +265,14 @@
             {
               "category": "silhouette_balance",
               "weight": 3,
-              "score": 0.92,
-              "reason": "Cohesive layered silhouette with balanced mid-length outer structure"
+              "score": 0.85,
+              "reason": "Balanced regular configuration"
             },
             {
               "category": "color_harmony",
               "weight": 3,
-              "score": 0.82,
-              "reason": "Color story: analogous"
+              "score": 0.94,
+              "reason": "Color story: strong-contrast"
             },
             {
               "category": "occasion_fit",
@@ -289,24 +289,24 @@
             {
               "category": "expression_affinity",
               "weight": 1,
-              "score": 0.8,
+              "score": 0.74,
               "reason": "Soft expression alignment with feminine presentation preference."
             }
           ],
           "traceableReasons": [
             {
-              "reasonId": "rea_outfit_feminine_slip_evening_01_0_1791829696883",
+              "reasonId": "rea_outfit_feminine_tailored_suit_workplace_01_0_1791898366431",
               "text": "Directly mirrors your personal style axis coordinates.",
               "signalIds": [
                 "user.styleProfile.styleVector",
                 "user.styleProfile.preferences.preferredStyleSlugs"
               ],
               "knowledgeEntryIds": [
-                "gar_slip_dress_silk_black",
-                "gar_sculpted_blazer_hourglass_black",
-                "gar_slingback_kitten_heel_black",
-                "gar_leather_shoulder_bag_baguette",
-                "gar_gold_hoop_earrings_chunky",
+                "gar_draped_wrap_blouse_ecru",
+                "gar_feminine_wool_blazer_black",
+                "gar_feminine_tailored_wool_trousers_black",
+                "gar_feminine_heeled_ankle_boots_black",
+                "gar_leather_structured_tote_black",
                 "style_minimal"
               ],
               "factor": "style_affinity",
@@ -314,38 +314,38 @@
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_feminine_slip_evening_01_1_1791829696883",
-              "text": "Cohesive layered silhouette with balanced mid-length outer structure",
+              "reasonId": "rea_outfit_feminine_tailored_suit_workplace_01_1_1791898366431",
+              "text": "Balanced regular configuration",
               "signalIds": [
-                "user.styleProfile.preferences.fitProportions",
-                "user.styleProfile.preferences.preferredFits"
+                "user.styleProfile.preferences.preferredStyleSlugs",
+                "context.occasion"
               ],
               "knowledgeEntryIds": [
-                "gar_slip_dress_silk_black",
-                "gar_sculpted_blazer_hourglass_black",
-                "gar_slingback_kitten_heel_black",
-                "gar_leather_shoulder_bag_baguette",
-                "gar_gold_hoop_earrings_chunky"
+                "gar_draped_wrap_blouse_ecru",
+                "gar_feminine_wool_blazer_black",
+                "gar_feminine_tailored_wool_trousers_black",
+                "gar_feminine_heeled_ankle_boots_black",
+                "gar_leather_structured_tote_black"
               ],
-              "factor": "silhouette_balance",
+              "factor": "general",
               "authority": "USER_ENTERED",
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_feminine_slip_evening_01_2_1791829696883",
-              "text": "Harmonious balance across complementary tonal depths.",
+              "reasonId": "rea_outfit_feminine_tailored_suit_workplace_01_2_1791898366431",
+              "text": "Strong contrast between light and deep neutral values establishes crisp visual separation.",
               "signalIds": [
-                "user.styleProfile.preferences.fitProportions",
-                "user.styleProfile.preferences.preferredFits"
+                "user.styleProfile.preferences.preferredStyleSlugs",
+                "context.occasion"
               ],
               "knowledgeEntryIds": [
-                "gar_slip_dress_silk_black",
-                "gar_sculpted_blazer_hourglass_black",
-                "gar_slingback_kitten_heel_black",
-                "gar_leather_shoulder_bag_baguette",
-                "gar_gold_hoop_earrings_chunky"
+                "gar_draped_wrap_blouse_ecru",
+                "gar_feminine_wool_blazer_black",
+                "gar_feminine_tailored_wool_trousers_black",
+                "gar_feminine_heeled_ankle_boots_black",
+                "gar_leather_structured_tote_black"
               ],
-              "factor": "silhouette_balance",
+              "factor": "general",
               "authority": "USER_ENTERED",
               "isAssumed": false
             }
@@ -355,7 +355,7 @@
         "hairStyle": {
           "name": "Textured French Crop",
           "slug": "textured-crop",
-          "score": 0.91,
+          "score": 0.9,
           "reasons": [
             "Complements your oval face geometry by balancing facial thirds.",
             "Optimized for your entered straight texture and medium density.",
@@ -384,62 +384,62 @@
           "explanation": "Supported by verified user formality, confirmed climate, explicit style vector, and grooming inputs.",
           "toIncreaseConfidence": "Add specific footwear preferences to further personalize lower-leg grounding."
         },
-        "overallHarmonyScore": 0.82,
+        "overallHarmonyScore": 0.87,
         "reasons": [
-          "Cropped upper proportion offset by expansive lower volume",
-          "Strong contrast between light and deep neutral values establishes crisp visual separation.",
-          "Default climate baseline assumed; weather context was not specified."
+          "Directly mirrors your personal style axis coordinates.",
+          "Unified cinched waist wide leg column",
+          "Harmonious balance across complementary tonal depths."
         ],
         "cautions": [],
         "outfit": {
-          "id": "outfit_korean_minimal_01",
-          "title": "Monochrome Fluid Tailoring",
-          "primaryStyleSlug": "korean-minimal",
-          "formality": 3,
-          "score": 0.82,
+          "id": "outfit_feminine_party_crepe_jumpsuit_01",
+          "title": "Tailored Wide-Leg Crepe Jumpsuit & Gold Accents",
+          "primaryStyleSlug": "minimal",
+          "formality": 4,
+          "score": 0.87,
           "items": [
             {
-              "category": "top",
-              "subcategory": "t-shirt",
-              "name": "Heavyweight Boxy Tee (Off-White)",
-              "material": "300gsm combed organic cotton",
-              "color": "off-white",
-              "fit": "boxy",
+              "category": "one-piece",
+              "subcategory": "jumpsuit",
+              "name": "Wide-Leg Tailored Crepe Jumpsuit with Belt (Black)",
+              "material": "280gsm matte fluid crepe",
+              "color": "black",
+              "fit": "tailored",
               "modestyRating": "standard",
-              "genderCoding": "androgynous",
-              "layerPosition": 0
-            },
-            {
-              "category": "outerwear",
-              "subcategory": "blazer",
-              "name": "Deconstructed Wool Blazer",
-              "material": "tropical virgin wool",
-              "color": "charcoal",
-              "fit": "relaxed",
-              "modestyRating": "high-coverage",
-              "genderCoding": "androgynous",
-              "layerPosition": 1
-            },
-            {
-              "category": "bottom",
-              "subcategory": "trousers",
-              "name": "Double-Pleated Wide-Leg Trousers",
-              "material": "wool gabardine blend",
-              "color": "pitch-black",
-              "fit": "relaxed",
-              "modestyRating": "high-coverage",
-              "genderCoding": "androgynous",
+              "genderCoding": "feminine",
               "layerPosition": 0
             },
             {
               "category": "footwear",
-              "subcategory": "derbies",
-              "name": "Commando-Sole Leather Derbies",
-              "material": "polished binder calf leather, Vibram lug sole",
-              "color": "polished-black",
-              "fit": "regular",
+              "subcategory": "heels",
+              "name": "40mm Pointed-Toe Leather Kitten Heel Pumps (Black)",
+              "material": "Smooth French calfskin with cushioned insole",
+              "color": "black",
+              "fit": "tailored",
               "modestyRating": "standard",
-              "genderCoding": "androgynous",
+              "genderCoding": "feminine",
+              "layerPosition": 0
+            },
+            {
+              "category": "accessory",
+              "subcategory": "bag",
+              "name": "Structured Silk Satin Box Evening Clutch (Black)",
+              "material": "Heavy silk satin over brass frame",
+              "color": "black",
+              "fit": "regular",
+              "modestyRating": "unrestricted",
+              "genderCoding": "feminine",
+              "layerPosition": 0
+            },
+            {
+              "category": "accessory",
+              "subcategory": "jewelry",
+              "name": "18k Gold Vermeil Architectural Huggie Hoops",
+              "material": "18k gold vermeil over recycled 925 sterling silver",
+              "color": "gold",
+              "fit": "regular",
+              "modestyRating": "unrestricted",
+              "genderCoding": "feminine",
               "layerPosition": 0
             }
           ],
@@ -447,26 +447,26 @@
             {
               "category": "style_affinity",
               "weight": 3.5,
-              "score": 0.79,
-              "reason": "Coordinate affinity (79%) with your 10D style vector."
+              "score": 0.84,
+              "reason": "Coordinate affinity (84%) with your 10D style vector."
             },
             {
               "category": "silhouette_balance",
               "weight": 3,
-              "score": 0.96,
-              "reason": "Cropped upper proportion offset by expansive lower volume"
+              "score": 0.92,
+              "reason": "Unified cinched waist wide leg column"
             },
             {
               "category": "color_harmony",
               "weight": 3,
-              "score": 0.94,
-              "reason": "Color story: strong-contrast"
+              "score": 0.82,
+              "reason": "Color story: analogous"
             },
             {
               "category": "occasion_fit",
               "weight": 2.5,
-              "score": 0.75,
-              "reason": "Formality fit for Job Interview (Level 3)"
+              "score": 1,
+              "reason": "Formality fit for Job Interview (Level 4)"
             },
             {
               "category": "weather_fit",
@@ -477,72 +477,76 @@
             {
               "category": "expression_affinity",
               "weight": 1,
-              "score": 0.5,
+              "score": 0.8,
               "reason": "Soft expression alignment with feminine presentation preference."
+            },
+            {
+              "category": "accessory_coherence",
+              "weight": 0.5,
+              "score": 0.95,
+              "reason": "Harmonious metal hardware tones across accessories."
             }
           ],
           "traceableReasons": [
             {
-              "reasonId": "rea_outfit_korean_minimal_01_0_1791829696883",
-              "text": "Cropped upper proportion offset by expansive lower volume",
+              "reasonId": "rea_outfit_feminine_party_crepe_jumpsuit_01_0_1791898366431",
+              "text": "Directly mirrors your personal style axis coordinates.",
+              "signalIds": [
+                "user.styleProfile.styleVector",
+                "user.styleProfile.preferences.preferredStyleSlugs"
+              ],
+              "knowledgeEntryIds": [
+                "gar_tailored_crepe_jumpsuit_black",
+                "gar_feminine_pointed_kitten_heels_black",
+                "gar_evening_clutch_satin_black",
+                "gar_minimalist_gold_hoops",
+                "style_minimal"
+              ],
+              "factor": "style_affinity",
+              "authority": "USER_ENTERED",
+              "isAssumed": false
+            },
+            {
+              "reasonId": "rea_outfit_feminine_party_crepe_jumpsuit_01_1_1791898366431",
+              "text": "Unified cinched waist wide leg column",
               "signalIds": [
                 "user.styleProfile.preferences.preferredStyleSlugs",
                 "context.occasion"
               ],
               "knowledgeEntryIds": [
-                "gar_box_tee_white",
-                "gar_deconstructed_blazer_charcoal",
-                "gar_wide_trousers_black",
-                "gar_chunky_derbies_black"
+                "gar_tailored_crepe_jumpsuit_black",
+                "gar_feminine_pointed_kitten_heels_black",
+                "gar_evening_clutch_satin_black",
+                "gar_minimalist_gold_hoops"
               ],
               "factor": "general",
               "authority": "USER_ENTERED",
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_korean_minimal_01_1_1791829696883",
-              "text": "Strong contrast between light and deep neutral values establishes crisp visual separation.",
+              "reasonId": "rea_outfit_feminine_party_crepe_jumpsuit_01_2_1791898366431",
+              "text": "Harmonious balance across complementary tonal depths.",
               "signalIds": [
-                "user.styleProfile.preferences.preferredStyleSlugs",
-                "context.occasion"
+                "user.styleProfile.preferences.fitProportions",
+                "user.styleProfile.preferences.preferredFits"
               ],
               "knowledgeEntryIds": [
-                "gar_box_tee_white",
-                "gar_deconstructed_blazer_charcoal",
-                "gar_wide_trousers_black",
-                "gar_chunky_derbies_black"
+                "gar_tailored_crepe_jumpsuit_black",
+                "gar_feminine_pointed_kitten_heels_black",
+                "gar_evening_clutch_satin_black",
+                "gar_minimalist_gold_hoops"
               ],
-              "factor": "general",
-              "authority": "USER_ENTERED",
-              "isAssumed": false
-            },
-            {
-              "reasonId": "rea_outfit_korean_minimal_01_2_1791829696883",
-              "text": "Default climate baseline assumed; weather context was not specified.",
-              "signalIds": [
-                "context.temperatureLevel",
-                "context.condition",
-                "context.weather"
-              ],
-              "knowledgeEntryIds": [
-                "gar_box_tee_white",
-                "gar_deconstructed_blazer_charcoal",
-                "gar_wide_trousers_black",
-                "gar_chunky_derbies_black"
-              ],
-              "factor": "weather_fit",
+              "factor": "silhouette_balance",
               "authority": "USER_ENTERED",
               "isAssumed": false
             }
           ],
-          "stylingAdvice": [
-            "Accentuates waistline geometry and creates an elongated vertical lower line."
-          ]
+          "stylingAdvice": []
         },
         "hairStyle": {
           "name": "Textured French Crop",
           "slug": "textured-crop",
-          "score": 0.91,
+          "score": 0.9,
           "reasons": [
             "Complements your oval face geometry by balancing facial thirds.",
             "Optimized for your entered straight texture and medium density.",
@@ -571,61 +575,72 @@
           "explanation": "Supported by verified user formality, confirmed climate, explicit style vector, and grooming inputs.",
           "toIncreaseConfidence": "Add specific footwear preferences to further personalize lower-leg grounding."
         },
-        "overallHarmonyScore": 0.82,
+        "overallHarmonyScore": 0.83,
         "reasons": [
-          "Unified crisp a line pleated waist column",
-          "Strong contrast between light and deep neutral values establishes crisp visual separation.",
-          "Default climate baseline assumed; weather context was not specified."
+          "Longline architectural outerwear framing a streamlined linear base",
+          "Harmonious balance across complementary tonal depths.",
+          "Neutral tonal temperature balance relative to undertone."
         ],
         "cautions": [],
         "outfit": {
-          "id": "outfit_poplin_shirt_dress_01",
-          "title": "Architectural Poplin & Glove Leather Cadence",
-          "primaryStyleSlug": "smart-casual",
-          "formality": 3,
-          "score": 0.82,
+          "id": "outfit_feminine_cold_wool_crepe_maxi_01",
+          "title": "Wool Crepe Maxi Skirt & Camel Cashmere Wrap",
+          "primaryStyleSlug": "old-money",
+          "formality": 4,
+          "score": 0.83,
           "items": [
             {
-              "category": "one-piece",
-              "subcategory": "dress",
-              "name": "Architectural Poplin Midi Shirt Dress",
-              "material": "100% high-density cotton poplin",
-              "color": "crisp-white",
+              "category": "top",
+              "subcategory": "blouse",
+              "name": "Asymmetric Draped Georgette Wrap Blouse",
+              "material": "fluid viscose-silk georgette",
+              "color": "ecru",
               "fit": "relaxed",
-              "modestyRating": "covered-arms",
+              "modestyRating": "standard",
+              "genderCoding": "feminine",
+              "layerPosition": 0
+            },
+            {
+              "category": "outerwear",
+              "subcategory": "overcoat",
+              "name": "Belted Double-Faced Cashmere-Wool Wrap Coat (Camel)",
+              "material": "520gsm double-faced cashmere and virgin wool",
+              "color": "camel",
+              "fit": "regular",
+              "modestyRating": "covered-both",
+              "genderCoding": "feminine",
+              "layerPosition": 1
+            },
+            {
+              "category": "bottom",
+              "subcategory": "skirt",
+              "name": "Structured Wool Crepe A-Line Maxi Skirt (Black)",
+              "material": "300gsm double wool crepe",
+              "color": "black",
+              "fit": "regular",
+              "modestyRating": "covered-both",
               "genderCoding": "feminine",
               "layerPosition": 0
             },
             {
               "category": "footwear",
-              "subcategory": "ballet-flat",
-              "name": "Unstructured Butter Calfskin Ballet Flats",
-              "material": "glove-tanned calfskin, leather sole",
+              "subcategory": "boots",
+              "name": "50mm Block-Heel Glove Calfskin Ankle Boots (Black)",
+              "material": "Soft Italian glove calfskin with leather sole",
               "color": "black",
-              "fit": "regular",
-              "modestyRating": "standard",
+              "fit": "tailored",
+              "modestyRating": "covered-both",
               "genderCoding": "feminine",
               "layerPosition": 0
             },
             {
               "category": "accessory",
-              "subcategory": "belt",
-              "name": "25mm Fine Calfskin Belt with Chiseled Brass Buckle",
-              "material": "French box calf with solid brushed brass hardware",
-              "color": "black-gold",
-              "fit": "regular",
-              "modestyRating": "standard",
-              "genderCoding": "androgynous",
-              "layerPosition": 0
-            },
-            {
-              "category": "accessory",
-              "subcategory": "sunglasses",
-              "name": "Beveled Cat-Eye Bio-Acetate Sunglasses",
-              "material": "Mazzucchelli 8mm bio-acetate, Carl Zeiss polarized lenses",
+              "subcategory": "hosiery",
+              "name": "80D Matte Opaque Thermal Wool Tights (Black)",
+              "material": "Merino wool and microfiber blend with flat seams",
               "color": "black",
-              "fit": "regular",
-              "modestyRating": "standard",
+              "fit": "skinny",
+              "modestyRating": "covered-both",
               "genderCoding": "feminine",
               "layerPosition": 0
             }
@@ -634,26 +649,26 @@
             {
               "category": "style_affinity",
               "weight": 3.5,
-              "score": 0.76,
-              "reason": "Coordinate affinity (76%) with your 10D style vector."
+              "score": 0.64,
+              "reason": "Coordinate affinity (64%) with your 10D style vector."
             },
             {
               "category": "silhouette_balance",
               "weight": 3,
-              "score": 0.92,
-              "reason": "Unified crisp a line pleated waist column"
+              "score": 1,
+              "reason": "Longline architectural outerwear framing a streamlined linear base"
             },
             {
               "category": "color_harmony",
               "weight": 3,
-              "score": 0.94,
-              "reason": "Color story: strong-contrast"
+              "score": 0.82,
+              "reason": "Color story: analogous"
             },
             {
               "category": "occasion_fit",
               "weight": 2.5,
-              "score": 0.75,
-              "reason": "Formality fit for Job Interview (Level 3)"
+              "score": 1,
+              "reason": "Formality fit for Job Interview (Level 4)"
             },
             {
               "category": "weather_fit",
@@ -664,70 +679,75 @@
             {
               "category": "expression_affinity",
               "weight": 1,
-              "score": 0.725,
+              "score": 0.8,
               "reason": "Soft expression alignment with feminine presentation preference."
             }
           ],
           "traceableReasons": [
             {
-              "reasonId": "rea_outfit_poplin_shirt_dress_01_0_1791829696883",
-              "text": "Unified crisp a line pleated waist column",
+              "reasonId": "rea_outfit_feminine_cold_wool_crepe_maxi_01_0_1791898366431",
+              "text": "Longline architectural outerwear framing a streamlined linear base",
               "signalIds": [
                 "user.styleProfile.preferences.preferredStyleSlugs",
                 "context.occasion"
               ],
               "knowledgeEntryIds": [
-                "gar_shirt_dress_cotton_poplin",
-                "gar_ballet_flat_leather_black",
-                "gar_fine_leather_belt_gold_buckle",
-                "gar_acetate_cat_eye_sunglasses_black"
+                "gar_draped_wrap_blouse_ecru",
+                "gar_feminine_belted_wool_wrap_coat_camel",
+                "gar_wool_crepe_a_line_maxi_skirt_black",
+                "gar_feminine_heeled_ankle_boots_black",
+                "gar_opaque_thermal_tights_black"
               ],
               "factor": "general",
               "authority": "USER_ENTERED",
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_poplin_shirt_dress_01_1_1791829696883",
-              "text": "Strong contrast between light and deep neutral values establishes crisp visual separation.",
+              "reasonId": "rea_outfit_feminine_cold_wool_crepe_maxi_01_1_1791898366431",
+              "text": "Harmonious balance across complementary tonal depths.",
               "signalIds": [
-                "user.styleProfile.preferences.preferredStyleSlugs",
-                "context.occasion"
+                "user.styleProfile.preferences.fitProportions",
+                "user.styleProfile.preferences.preferredFits"
               ],
               "knowledgeEntryIds": [
-                "gar_shirt_dress_cotton_poplin",
-                "gar_ballet_flat_leather_black",
-                "gar_fine_leather_belt_gold_buckle",
-                "gar_acetate_cat_eye_sunglasses_black"
+                "gar_draped_wrap_blouse_ecru",
+                "gar_feminine_belted_wool_wrap_coat_camel",
+                "gar_wool_crepe_a_line_maxi_skirt_black",
+                "gar_feminine_heeled_ankle_boots_black",
+                "gar_opaque_thermal_tights_black"
               ],
-              "factor": "general",
+              "factor": "silhouette_balance",
               "authority": "USER_ENTERED",
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_poplin_shirt_dress_01_2_1791829696883",
-              "text": "Default climate baseline assumed; weather context was not specified.",
+              "reasonId": "rea_outfit_feminine_cold_wool_crepe_maxi_01_2_1791898366431",
+              "text": "Neutral tonal temperature balance relative to undertone.",
               "signalIds": [
-                "context.temperatureLevel",
-                "context.condition",
-                "context.weather"
+                "user.styleProfile.preferences.fitProportions",
+                "user.styleProfile.preferences.preferredFits"
               ],
               "knowledgeEntryIds": [
-                "gar_shirt_dress_cotton_poplin",
-                "gar_ballet_flat_leather_black",
-                "gar_fine_leather_belt_gold_buckle",
-                "gar_acetate_cat_eye_sunglasses_black"
+                "gar_draped_wrap_blouse_ecru",
+                "gar_feminine_belted_wool_wrap_coat_camel",
+                "gar_wool_crepe_a_line_maxi_skirt_black",
+                "gar_feminine_heeled_ankle_boots_black",
+                "gar_opaque_thermal_tights_black"
               ],
-              "factor": "weather_fit",
+              "factor": "silhouette_balance",
               "authority": "USER_ENTERED",
               "isAssumed": false
             }
           ],
-          "stylingAdvice": []
+          "stylingAdvice": [
+            "Creates a continuous vertical frame; leave outer layer unbuttoned during motion.",
+            "Aligns with your preferred fit geometry."
+          ]
         },
         "hairStyle": {
           "name": "Textured French Crop",
           "slug": "textured-crop",
-          "score": 0.91,
+          "score": 0.9,
           "reasons": [
             "Complements your oval face geometry by balancing facial thirds.",
             "Optimized for your entered straight texture and medium density.",

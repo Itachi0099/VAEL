@@ -2,5 +2,205 @@
   "totalCells": 960,
   "viableThreeLookCells": 960,
   "underThreeCellsCount": 0,
-  "underThreeCellsList": []
+  "underThreeCellsList": [],
+  "groupAlignmentResults": {
+    "masculine | professional": {
+      "totalCells": 40,
+      "alignedCells": 40,
+      "share": "100.0%",
+      "status": "PASS (>=90%)",
+      "failingCount": 0
+    },
+    "masculine | casual": {
+      "totalCells": 40,
+      "alignedCells": 40,
+      "share": "100.0%",
+      "status": "PASS (>=90%)",
+      "failingCount": 0
+    },
+    "masculine | evening": {
+      "totalCells": 60,
+      "alignedCells": 60,
+      "share": "100.0%",
+      "status": "PASS (>=90%)",
+      "failingCount": 0
+    },
+    "masculine | social": {
+      "totalCells": 40,
+      "alignedCells": 40,
+      "share": "100.0%",
+      "status": "PASS (>=90%)",
+      "failingCount": 0
+    },
+    "masculine | academic": {
+      "totalCells": 20,
+      "alignedCells": 20,
+      "share": "100.0%",
+      "status": "PASS (>=90%)",
+      "failingCount": 0
+    },
+    "masculine | ceremony": {
+      "totalCells": 20,
+      "alignedCells": 20,
+      "share": "100.0%",
+      "status": "PASS (>=90%)",
+      "failingCount": 0
+    },
+    "masculine | cultural": {
+      "totalCells": 20,
+      "alignedCells": 20,
+      "share": "100.0%",
+      "status": "PASS (>=90%)",
+      "failingCount": 0
+    },
+    "feminine | professional": {
+      "totalCells": 40,
+      "alignedCells": 40,
+      "share": "100.0%",
+      "status": "PASS (>=90%)",
+      "failingCount": 0
+    },
+    "feminine | casual": {
+      "totalCells": 40,
+      "alignedCells": 40,
+      "share": "100.0%",
+      "status": "PASS (>=90%)",
+      "failingCount": 0
+    },
+    "feminine | evening": {
+      "totalCells": 60,
+      "alignedCells": 60,
+      "share": "100.0%",
+      "status": "PASS (>=90%)",
+      "failingCount": 0
+    },
+    "feminine | social": {
+      "totalCells": 40,
+      "alignedCells": 40,
+      "share": "100.0%",
+      "status": "PASS (>=90%)",
+      "failingCount": 0
+    },
+    "feminine | academic": {
+      "totalCells": 20,
+      "alignedCells": 20,
+      "share": "100.0%",
+      "status": "PASS (>=90%)",
+      "failingCount": 0
+    },
+    "feminine | ceremony": {
+      "totalCells": 20,
+      "alignedCells": 20,
+      "share": "100.0%",
+      "status": "PASS (>=90%)",
+      "failingCount": 0
+    },
+    "feminine | cultural": {
+      "totalCells": 20,
+      "alignedCells": 20,
+      "share": "100.0%",
+      "status": "PASS (>=90%)",
+      "failingCount": 0
+    },
+    "androgynous | professional": {
+      "totalCells": 40,
+      "alignedCells": 40,
+      "share": "100.0%",
+      "status": "PASS (>=90%)",
+      "failingCount": 0
+    },
+    "androgynous | casual": {
+      "totalCells": 40,
+      "alignedCells": 40,
+      "share": "100.0%",
+      "status": "PASS (>=90%)",
+      "failingCount": 0
+    },
+    "androgynous | evening": {
+      "totalCells": 60,
+      "alignedCells": 60,
+      "share": "100.0%",
+      "status": "PASS (>=90%)",
+      "failingCount": 0
+    },
+    "androgynous | social": {
+      "totalCells": 40,
+      "alignedCells": 40,
+      "share": "100.0%",
+      "status": "PASS (>=90%)",
+      "failingCount": 0
+    },
+    "androgynous | academic": {
+      "totalCells": 20,
+      "alignedCells": 20,
+      "share": "100.0%",
+      "status": "PASS (>=90%)",
+      "failingCount": 0
+    },
+    "androgynous | ceremony": {
+      "totalCells": 20,
+      "alignedCells": 20,
+      "share": "100.0%",
+      "status": "PASS (>=90%)",
+      "failingCount": 0
+    },
+    "androgynous | cultural": {
+      "totalCells": 20,
+      "alignedCells": 20,
+      "share": "100.0%",
+      "status": "PASS (>=90%)",
+      "failingCount": 0
+    },
+    "no-preference | professional": {
+      "totalCells": 40,
+      "alignedCells": 40,
+      "share": "100.0%",
+      "status": "PASS (>=90%)",
+      "failingCount": 0
+    },
+    "no-preference | casual": {
+      "totalCells": 40,
+      "alignedCells": 40,
+      "share": "100.0%",
+      "status": "PASS (>=90%)",
+      "failingCount": 0
+    },
+    "no-preference | evening": {
+      "totalCells": 60,
+      "alignedCells": 60,
+      "share": "100.0%",
+      "status": "PASS (>=90%)",
+      "failingCount": 0
+    },
+    "no-preference | social": {
+      "totalCells": 40,
+      "alignedCells": 40,
+      "share": "100.0%",
+      "status": "PASS (>=90%)",
+      "failingCount": 0
+    },
+    "no-preference | academic": {
+      "totalCells": 20,
+      "alignedCells": 20,
+      "share": "100.0%",
+      "status": "PASS (>=90%)",
+      "failingCount": 0
+    },
+    "no-preference | ceremony": {
+      "totalCells": 20,
+      "alignedCells": 20,
+      "share": "100.0%",
+      "status": "PASS (>=90%)",
+      "failingCount": 0
+    },
+    "no-preference | cultural": {
+      "totalCells": 20,
+      "alignedCells": 20,
+      "share": "100.0%",
+      "status": "PASS (>=90%)",
+      "failingCount": 0
+    }
+  },
+  "allGroupsPassedTarget": true,
+  "failingCellsByGroup": {}
 }

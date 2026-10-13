@@ -152,8 +152,8 @@
   "result": {
     "looksCount": 3,
     "contextApplied": "Wedding Guest",
-    "vetoedCandidateCount": 12,
-    "evaluatedCandidateCount": 15,
+    "vetoedCandidateCount": 33,
+    "evaluatedCandidateCount": 39,
     "looks": [
       {
         "tier": "BEST_MATCH",
@@ -163,62 +163,62 @@
           "explanation": "Supported by verified user formality, confirmed climate, explicit style vector, and grooming inputs.",
           "toIncreaseConfidence": "Add specific footwear preferences to further personalize lower-leg grounding."
         },
-        "overallHarmonyScore": 0.84,
+        "overallHarmonyScore": 0.87,
         "reasons": [
-          "Balanced regular configuration",
-          "Strong contrast between light and deep neutral values establishes crisp visual separation.",
-          "High breathability (washed pure linen) supports natural airflow in hot conditions."
+          "Directly mirrors your personal style axis coordinates.",
+          "Unified cinched waist wide leg column",
+          "Harmonious balance across complementary tonal depths."
         ],
         "cautions": [],
         "outfit": {
-          "id": "outfit_cultural_traditional_01",
-          "title": "Heritage Raw Silk & Linen Ceremony Look",
-          "primaryStyleSlug": "formal",
-          "formality": 5,
-          "score": 0.84,
+          "id": "outfit_feminine_party_crepe_jumpsuit_01",
+          "title": "Tailored Wide-Leg Crepe Jumpsuit & Gold Accents",
+          "primaryStyleSlug": "minimal",
+          "formality": 4,
+          "score": 0.87,
           "items": [
             {
-              "category": "top",
-              "subcategory": "tunic",
-              "name": "Mandarin Collar Linen Tunic (Kurta)",
-              "material": "washed pure linen",
-              "color": "ecru",
-              "fit": "relaxed",
-              "modestyRating": "high-coverage",
-              "genderCoding": "androgynous",
-              "layerPosition": 0
-            },
-            {
-              "category": "outerwear",
-              "subcategory": "jacket",
-              "name": "Bespoke Raw Silk Bandhgala / Sherwani Jacket",
-              "material": "handwoven Matka raw silk, full silk lining",
-              "color": "matte-black",
+              "category": "one-piece",
+              "subcategory": "jumpsuit",
+              "name": "Wide-Leg Tailored Crepe Jumpsuit with Belt (Black)",
+              "material": "280gsm matte fluid crepe",
+              "color": "black",
               "fit": "tailored",
-              "modestyRating": "high-coverage",
-              "genderCoding": "unspecified",
-              "layerPosition": 1
-            },
-            {
-              "category": "bottom",
-              "subcategory": "trousers",
-              "name": "Handwoven Khadi Cotton Lounge Trousers",
-              "material": "100% handloom khadi cotton",
-              "color": "pure-white",
-              "fit": "relaxed",
-              "modestyRating": "high-coverage",
-              "genderCoding": "androgynous",
+              "modestyRating": "standard",
+              "genderCoding": "feminine",
               "layerPosition": 0
             },
             {
               "category": "footwear",
-              "subcategory": "loafers",
-              "name": "Cordovan Penny Loafers",
-              "material": "Horween shell cordovan",
-              "color": "deep-burgundy",
-              "fit": "regular",
+              "subcategory": "heels",
+              "name": "40mm Pointed-Toe Leather Kitten Heel Pumps (Black)",
+              "material": "Smooth French calfskin with cushioned insole",
+              "color": "black",
+              "fit": "tailored",
               "modestyRating": "standard",
-              "genderCoding": "unspecified",
+              "genderCoding": "feminine",
+              "layerPosition": 0
+            },
+            {
+              "category": "accessory",
+              "subcategory": "bag",
+              "name": "Structured Silk Satin Box Evening Clutch (Black)",
+              "material": "Heavy silk satin over brass frame",
+              "color": "black",
+              "fit": "regular",
+              "modestyRating": "unrestricted",
+              "genderCoding": "feminine",
+              "layerPosition": 0
+            },
+            {
+              "category": "accessory",
+              "subcategory": "jewelry",
+              "name": "18k Gold Vermeil Architectural Huggie Hoops",
+              "material": "18k gold vermeil over recycled 925 sterling silver",
+              "color": "gold",
+              "fit": "regular",
+              "modestyRating": "unrestricted",
+              "genderCoding": "feminine",
               "layerPosition": 0
             }
           ],
@@ -226,102 +226,106 @@
             {
               "category": "style_affinity",
               "weight": 3.5,
-              "score": 0.71,
-              "reason": "Coordinate affinity (71%) with your 10D style vector."
+              "score": 0.84,
+              "reason": "Coordinate affinity (84%) with your 10D style vector."
             },
             {
               "category": "silhouette_balance",
               "weight": 3,
-              "score": 0.93,
-              "reason": "Balanced regular configuration"
+              "score": 0.92,
+              "reason": "Unified cinched waist wide leg column"
             },
             {
               "category": "color_harmony",
               "weight": 3,
-              "score": 0.94,
-              "reason": "Color story: strong-contrast"
+              "score": 0.82,
+              "reason": "Color story: analogous"
             },
             {
               "category": "occasion_fit",
               "weight": 2.5,
-              "score": 0.75,
-              "reason": "Formality fit for Wedding Guest (Level 5)"
+              "score": 1,
+              "reason": "Formality fit for Wedding Guest (Level 4)"
             },
             {
               "category": "weather_fit",
               "weight": 2,
-              "score": 0.94,
+              "score": 0.85,
               "reason": "Ambient temperature and breathability calibration"
             },
             {
               "category": "expression_affinity",
               "weight": 1,
-              "score": 0.8,
+              "score": 0.65,
               "reason": "Soft expression alignment with androgynous presentation preference."
+            },
+            {
+              "category": "accessory_coherence",
+              "weight": 0.5,
+              "score": 0.95,
+              "reason": "Harmonious metal hardware tones across accessories."
             }
           ],
           "traceableReasons": [
             {
-              "reasonId": "rea_outfit_cultural_traditional_01_0_1791829696883",
-              "text": "Balanced regular configuration",
+              "reasonId": "rea_outfit_feminine_party_crepe_jumpsuit_01_0_1791898366431",
+              "text": "Directly mirrors your personal style axis coordinates.",
+              "signalIds": [
+                "user.styleProfile.styleVector",
+                "user.styleProfile.preferences.preferredStyleSlugs"
+              ],
+              "knowledgeEntryIds": [
+                "gar_tailored_crepe_jumpsuit_black",
+                "gar_feminine_pointed_kitten_heels_black",
+                "gar_evening_clutch_satin_black",
+                "gar_minimalist_gold_hoops",
+                "style_minimal"
+              ],
+              "factor": "style_affinity",
+              "authority": "USER_ENTERED",
+              "isAssumed": false
+            },
+            {
+              "reasonId": "rea_outfit_feminine_party_crepe_jumpsuit_01_1_1791898366431",
+              "text": "Unified cinched waist wide leg column",
               "signalIds": [
                 "user.styleProfile.preferences.preferredStyleSlugs",
                 "context.occasion"
               ],
               "knowledgeEntryIds": [
-                "gar_kurta_tunic_ecru",
-                "gar_sherwani_jacket_bespoke",
-                "gar_khadi_cotton_pajama_pants",
-                "gar_penny_loafer_burgundy"
+                "gar_tailored_crepe_jumpsuit_black",
+                "gar_feminine_pointed_kitten_heels_black",
+                "gar_evening_clutch_satin_black",
+                "gar_minimalist_gold_hoops"
               ],
               "factor": "general",
               "authority": "USER_ENTERED",
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_cultural_traditional_01_1_1791829696883",
-              "text": "Strong contrast between light and deep neutral values establishes crisp visual separation.",
+              "reasonId": "rea_outfit_feminine_party_crepe_jumpsuit_01_2_1791898366431",
+              "text": "Harmonious balance across complementary tonal depths.",
               "signalIds": [
-                "user.styleProfile.preferences.preferredStyleSlugs",
-                "context.occasion"
+                "user.styleProfile.preferences.fitProportions",
+                "user.styleProfile.preferences.preferredFits"
               ],
               "knowledgeEntryIds": [
-                "gar_kurta_tunic_ecru",
-                "gar_sherwani_jacket_bespoke",
-                "gar_khadi_cotton_pajama_pants",
-                "gar_penny_loafer_burgundy"
+                "gar_tailored_crepe_jumpsuit_black",
+                "gar_feminine_pointed_kitten_heels_black",
+                "gar_evening_clutch_satin_black",
+                "gar_minimalist_gold_hoops"
               ],
-              "factor": "general",
-              "authority": "USER_ENTERED",
-              "isAssumed": false
-            },
-            {
-              "reasonId": "rea_outfit_cultural_traditional_01_2_1791829696883",
-              "text": "High breathability (washed pure linen) supports natural airflow in hot conditions.",
-              "signalIds": [
-                "context.temperatureLevel",
-                "context.condition",
-                "context.weather"
-              ],
-              "knowledgeEntryIds": [
-                "gar_kurta_tunic_ecru",
-                "gar_sherwani_jacket_bespoke",
-                "gar_khadi_cotton_pajama_pants",
-                "gar_penny_loafer_burgundy"
-              ],
-              "factor": "weather_fit",
+              "factor": "silhouette_balance",
               "authority": "USER_ENTERED",
               "isAssumed": false
             }
           ],
-          "stylingAdvice": [
-            "Aligns with your preferred fit geometry."
-          ]
+          "stylingAdvice": []
         },
         "hairStyle": {
           "name": "Textured French Crop",
           "slug": "textured-crop",
-          "score": 0.84,
+          "score": 0.85,
           "reasons": [
             "Fits within your preferred moderate maintenance threshold.",
             "Appropriate formality for Wedding Guest.",
@@ -446,7 +450,7 @@
           ],
           "traceableReasons": [
             {
-              "reasonId": "rea_outfit_poplin_shirt_dress_01_0_1791829696883",
+              "reasonId": "rea_outfit_poplin_shirt_dress_01_0_1791898366431",
               "text": "Unified crisp a line pleated waist column",
               "signalIds": [
                 "user.styleProfile.preferences.preferredStyleSlugs",
@@ -463,7 +467,7 @@
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_poplin_shirt_dress_01_1_1791829696883",
+              "reasonId": "rea_outfit_poplin_shirt_dress_01_1_1791898366431",
               "text": "Strong contrast between light and deep neutral values establishes crisp visual separation.",
               "signalIds": [
                 "user.styleProfile.preferences.preferredStyleSlugs",
@@ -480,7 +484,7 @@
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_poplin_shirt_dress_01_2_1791829696883",
+              "reasonId": "rea_outfit_poplin_shirt_dress_01_2_1791898366431",
               "text": "High breathability (100% high-density cotton poplin) supports natural airflow in hot conditions.",
               "signalIds": [
                 "context.temperatureLevel",
@@ -503,7 +507,7 @@
         "hairStyle": {
           "name": "Textured French Crop",
           "slug": "textured-crop",
-          "score": 0.84,
+          "score": 0.85,
           "reasons": [
             "Fits within your preferred moderate maintenance threshold.",
             "Appropriate formality for Wedding Guest.",
@@ -531,38 +535,49 @@
         },
         "overallHarmonyScore": 0.83,
         "reasons": [
-          "Harmonious classic proportion with uniform clean linear cadence",
-          "Tonal neutral palette ensures high versatility and effortless visual cohesion.",
-          "High breathability (silk-cotton blend knit) supports natural airflow in hot conditions."
+          "Balanced regular configuration",
+          "Strong contrast between light and deep neutral values establishes crisp visual separation.",
+          "High breathability (washed pure linen) supports natural airflow in hot conditions."
         ],
         "cautions": [],
         "outfit": {
-          "id": "outfit_smart_casual_01",
-          "title": "Textured Knit & Tailored Line",
-          "primaryStyleSlug": "smart-casual",
-          "formality": 3,
+          "id": "outfit_cultural_traditional_01",
+          "title": "Heritage Raw Silk & Linen Ceremony Look",
+          "primaryStyleSlug": "formal",
+          "formality": 5,
           "score": 0.83,
           "items": [
             {
               "category": "top",
-              "subcategory": "polo",
-              "name": "Textured Open-Collar Knit Polo",
-              "material": "silk-cotton blend knit",
-              "color": "olive",
-              "fit": "regular",
-              "modestyRating": "standard",
+              "subcategory": "tunic",
+              "name": "Mandarin Collar Linen Tunic (Kurta)",
+              "material": "washed pure linen",
+              "color": "ecru",
+              "fit": "relaxed",
+              "modestyRating": "high-coverage",
               "genderCoding": "androgynous",
               "layerPosition": 0
             },
             {
-              "category": "bottom",
-              "subcategory": "trousers",
-              "name": "Flat-Front Tailored Wool Slacks",
-              "material": "100% Super 120s wool",
-              "color": "charcoal",
+              "category": "outerwear",
+              "subcategory": "jacket",
+              "name": "Bespoke Raw Silk Bandhgala / Sherwani Jacket",
+              "material": "handwoven Matka raw silk, full silk lining",
+              "color": "matte-black",
               "fit": "tailored",
               "modestyRating": "high-coverage",
-              "genderCoding": "unspecified",
+              "genderCoding": "masculine",
+              "layerPosition": 1
+            },
+            {
+              "category": "bottom",
+              "subcategory": "trousers",
+              "name": "Handwoven Khadi Cotton Lounge Trousers",
+              "material": "100% handloom khadi cotton",
+              "color": "pure-white",
+              "fit": "relaxed",
+              "modestyRating": "high-coverage",
+              "genderCoding": "androgynous",
               "layerPosition": 0
             },
             {
@@ -573,7 +588,7 @@
               "color": "deep-burgundy",
               "fit": "regular",
               "modestyRating": "standard",
-              "genderCoding": "unspecified",
+              "genderCoding": "masculine",
               "layerPosition": 0
             }
           ],
@@ -581,51 +596,52 @@
             {
               "category": "style_affinity",
               "weight": 3.5,
-              "score": 0.76,
-              "reason": "Coordinate affinity (76%) with your 10D style vector."
+              "score": 0.71,
+              "reason": "Coordinate affinity (71%) with your 10D style vector."
             },
             {
               "category": "silhouette_balance",
               "weight": 3,
-              "score": 0.9,
-              "reason": "Harmonious classic proportion with uniform clean linear cadence"
+              "score": 0.93,
+              "reason": "Balanced regular configuration"
             },
             {
               "category": "color_harmony",
               "weight": 3,
-              "score": 0.92,
-              "reason": "Color story: tonal-neutral"
+              "score": 0.94,
+              "reason": "Color story: strong-contrast"
             },
             {
               "category": "occasion_fit",
               "weight": 2.5,
               "score": 0.75,
-              "reason": "Formality fit for Wedding Guest (Level 3)"
+              "reason": "Formality fit for Wedding Guest (Level 5)"
             },
             {
               "category": "weather_fit",
               "weight": 2,
-              "score": 0.81,
+              "score": 0.94,
               "reason": "Ambient temperature and breathability calibration"
             },
             {
               "category": "expression_affinity",
               "weight": 1,
-              "score": 0.8,
+              "score": 0.65,
               "reason": "Soft expression alignment with androgynous presentation preference."
             }
           ],
           "traceableReasons": [
             {
-              "reasonId": "rea_outfit_smart_casual_01_0_1791829696883",
-              "text": "Harmonious classic proportion with uniform clean linear cadence",
+              "reasonId": "rea_outfit_cultural_traditional_01_0_1791898366431",
+              "text": "Balanced regular configuration",
               "signalIds": [
                 "user.styleProfile.preferences.preferredStyleSlugs",
                 "context.occasion"
               ],
               "knowledgeEntryIds": [
-                "gar_knit_polo_olive",
-                "gar_tailored_slacks_charcoal",
+                "gar_kurta_tunic_ecru",
+                "gar_sherwani_jacket_bespoke",
+                "gar_khadi_cotton_pajama_pants",
                 "gar_penny_loafer_burgundy"
               ],
               "factor": "general",
@@ -633,15 +649,16 @@
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_smart_casual_01_1_1791829696883",
-              "text": "Tonal neutral palette ensures high versatility and effortless visual cohesion.",
+              "reasonId": "rea_outfit_cultural_traditional_01_1_1791898366431",
+              "text": "Strong contrast between light and deep neutral values establishes crisp visual separation.",
               "signalIds": [
                 "user.styleProfile.preferences.preferredStyleSlugs",
                 "context.occasion"
               ],
               "knowledgeEntryIds": [
-                "gar_knit_polo_olive",
-                "gar_tailored_slacks_charcoal",
+                "gar_kurta_tunic_ecru",
+                "gar_sherwani_jacket_bespoke",
+                "gar_khadi_cotton_pajama_pants",
                 "gar_penny_loafer_burgundy"
               ],
               "factor": "general",
@@ -649,16 +666,17 @@
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_smart_casual_01_2_1791829696883",
-              "text": "High breathability (silk-cotton blend knit) supports natural airflow in hot conditions.",
+              "reasonId": "rea_outfit_cultural_traditional_01_2_1791898366431",
+              "text": "High breathability (washed pure linen) supports natural airflow in hot conditions.",
               "signalIds": [
                 "context.temperatureLevel",
                 "context.condition",
                 "context.weather"
               ],
               "knowledgeEntryIds": [
-                "gar_knit_polo_olive",
-                "gar_tailored_slacks_charcoal",
+                "gar_kurta_tunic_ecru",
+                "gar_sherwani_jacket_bespoke",
+                "gar_khadi_cotton_pajama_pants",
                 "gar_penny_loafer_burgundy"
               ],
               "factor": "weather_fit",
@@ -667,13 +685,13 @@
             }
           ],
           "stylingAdvice": [
-            "Elevate with subtle texture contrast between top and lower fabrication."
+            "Aligns with your preferred fit geometry."
           ]
         },
         "hairStyle": {
           "name": "Textured French Crop",
           "slug": "textured-crop",
-          "score": 0.84,
+          "score": 0.85,
           "reasons": [
             "Fits within your preferred moderate maintenance threshold.",
             "Appropriate formality for Wedding Guest.",

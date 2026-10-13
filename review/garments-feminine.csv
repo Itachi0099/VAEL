@@ -1,0 +1,41 @@
+id,name,slug,category,genderCoding,garmentCoding,fluidTag
+gar_slip_dress_silk_black,"Bias-Cut Silk Charmeuse Slip Dress",bias-cut-silk-slip-dress-black,one-piece,feminine,1,false
+gar_shirt_dress_cotton_poplin,"Architectural Poplin Midi Shirt Dress",architectural-poplin-shirt-dress-white,one-piece,feminine,1,false
+gar_knit_ribbed_midi_dress_olive,"Fine-Rib Merino Wool Midi Dress",ribbed-merino-midi-dress-olive,one-piece,feminine,1,false
+gar_linen_wrap_dress_terracotta,"Washed French Linen Wrap Dress",french-linen-wrap-dress-terracotta,one-piece,feminine,1,false
+gar_cocktail_slip_dress_burgundy,"Sculpted Column Evening Gown (Burgundy)",sculpted-column-evening-gown-burgundy,one-piece,feminine,1,false
+gar_tiered_boho_midi_dress,"Floral Print Tiered Georgette Midi Dress",tiered-georgette-midi-dress-print,one-piece,feminine,1,false
+gar_knit_sweater_dress_charcoal,"Oversized Cashmere Turtleneck Sweater Dress",cashmere-sweater-dress-charcoal,one-piece,feminine,1,false
+gar_pleated_midi_skirt_wool,"Knife-Pleated Wool Gabardine Midi Skirt",knife-pleated-midi-skirt-navy,bottom,feminine,1,false
+gar_bias_cut_satin_midi_skirt,"Bias-Cut Silk Satin Midi Skirt (Champagne)",bias-cut-satin-skirt-champagne,bottom,feminine,1,false
+gar_denim_maxi_skirt_raw,"Raw Indigo Front-Slit Denim Maxi Skirt",raw-denim-maxi-skirt-indigo,bottom,feminine,1,false
+gar_leather_pencil_skirt_black,"Nappa Leather Tailored Pencil Skirt",leather-pencil-skirt-black,bottom,feminine,1,false
+gar_silk_camisole_ivory,"Bias-Cut Silk Crepe Camisole Top",silk-crepe-camisole-ivory,top,feminine,1,false
+gar_draped_wrap_blouse_ecru,"Asymmetric Draped Georgette Wrap Blouse",asymmetric-draped-wrap-blouse-ecru,top,feminine,1,false
+gar_sculpted_blazer_hourglass_black,"Cinched Hourglass Tailored Wool Blazer",hourglass-tailored-blazer-black,outerwear,feminine,1,false
+gar_high_waist_wide_trousers_camel,"High-Rise Fluid Pleated Trousers (Camel)",high-rise-fluid-trousers-camel,bottom,feminine,1,false
+gar_ballet_flat_leather_black,"Unstructured Butter Calfskin Ballet Flats",unstructured-leather-ballet-flats-black,footwear,feminine,1,false
+gar_block_heel_mule_taupe,"50mm Suede Block-Heel Mules",block-heel-suede-mules-taupe,footwear,feminine,1,false
+gar_slingback_kitten_heel_black,"Pointed-Toe Leather Slingback Pumps (45mm)",pointed-slingback-pumps-black,footwear,feminine,1,false
+gar_knee_high_riding_boot_brown,"Straight-Shaft Pull-On Leather Riding Boots",straight-shaft-riding-boots-brown,footwear,feminine,1,false
+gar_leather_shoulder_bag_baguette,"Sculpted Minimalist Leather Shoulder Bag",sculpted-leather-shoulder-bag-black,accessory,feminine,1,false
+gar_gold_hoop_earrings_chunky,"18k Vermeil Hollow Bold Hoop Earrings",chunky-gold-hoop-earrings-18k,accessory,feminine,1,false
+gar_acetate_cat_eye_sunglasses_black,"Beveled Cat-Eye Bio-Acetate Sunglasses",cat-eye-acetate-sunglasses-black,accessory,feminine,1,false
+gar_velvet_column_gown_emerald,"Heavyweight Silk-Velvet Column Evening Gown (Emerald)",silk-velvet-column-gown-emerald,one-piece,feminine,1,false
+gar_merino_wool_knit_maxi_dress_black,"Fine-Rib Long-Sleeve Merino Wool Maxi Dress (Black)",merino-rib-maxi-dress-black,one-piece,feminine,1,false
+gar_wool_crepe_a_line_maxi_skirt_black,"Structured Wool Crepe A-Line Maxi Skirt (Black)",wool-crepe-maxi-skirt-black,bottom,feminine,1,false
+gar_chiffon_tiered_maxi_dress_floral,"Long-Sleeve Tiered Silk Chiffon Maxi Dress (Muted Floral)",tiered-silk-chiffon-maxi-dress,one-piece,feminine,1,false
+gar_high_neck_poplin_maxi_dress_olive,"High-Neck Long-Sleeve Tiered Poplin Maxi Dress (Olive)",high-neck-poplin-maxi-dress-olive,one-piece,feminine,1,false
+gar_linen_long_sleeve_maxi_shirtdress_navy,"Long-Sleeve French Linen Maxi Shirt Dress (Navy)",linen-maxi-shirtdress-navy,one-piece,feminine,1,false
+gar_tailored_crepe_jumpsuit_black,"Wide-Leg Tailored Crepe Jumpsuit with Belt (Black)",tailored-crepe-jumpsuit-black,one-piece,feminine,1,true
+gar_feminine_wool_blazer_black,"Hourglass Single-Breasted Wool Crepe Blazer (Black)",hourglass-wool-blazer-black,outerwear,feminine,1,false
+gar_feminine_tailored_wool_trousers_black,"High-Rise Fluid Wide-Leg Wool Trousers (Black)",high-rise-wool-trousers-black,bottom,feminine,1,false
+gar_feminine_belted_wool_wrap_coat_camel,"Belted Double-Faced Cashmere-Wool Wrap Coat (Camel)",belted-wool-wrap-coat-camel,outerwear,feminine,1,false
+gar_feminine_waterproof_trench_coat_khaki,"Double-Breasted Waterproof Gabardine Trench Coat (Honey Khaki)",waterproof-gabardine-trench-khaki,outerwear,feminine,1,false
+gar_evening_clutch_satin_black,"Structured Silk Satin Box Evening Clutch (Black)",silk-satin-evening-clutch-black,accessory,feminine,1,false
+gar_minimalist_gold_hoops,"18k Gold Vermeil Architectural Huggie Hoops",gold-vermeil-huggie-hoops,accessory,feminine,1,true
+gar_pearl_drop_earrings,"Baroque Freshwater Pearl Drop Earrings",baroque-pearl-drop-earrings,accessory,feminine,1,false
+gar_opaque_thermal_tights_black,"80D Matte Opaque Thermal Wool Tights (Black)",thermal-wool-tights-black,accessory,feminine,1,false
+gar_feminine_heeled_ankle_boots_black,"50mm Block-Heel Glove Calfskin Ankle Boots (Black)",block-heel-calfskin-boots-black,footwear,feminine,1,false
+gar_feminine_pointed_kitten_heels_black,"40mm Pointed-Toe Leather Kitten Heel Pumps (Black)",pointed-kitten-heels-black,footwear,feminine,1,false
+gar_waterproof_riding_boots_black,"Waterproof Treated Leather Tall Riding Boots (Black)",waterproof-tall-riding-boots-black,footwear,feminine,1,true

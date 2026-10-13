@@ -36,16 +36,30 @@ async function runSweep() {
     reason: string;
   }> = [];
 
+  // Group metrics: (expression, occasionCategory) -> { totalCells, alignedCells, failingCells }
+  // A cell is aligned if >= 2 of 3 returned looks contain a matching coded item:
+  // - masculine expression: masculine-coded item (garmentCoding < 0 or genderCoding === 'masculine')
+  // - feminine expression: feminine-coded item (garmentCoding > 0 or genderCoding === 'feminine')
+  // - androgynous expression: curated fluid/androgynous item (fluidTag === true or genderCoding === 'androgynous')
+  // - no-preference: neutral/balanced
+  const groupStats: Record<string, { totalCells: number; alignedCells: number; failingCells: any[] }> = {};
+
   let processed = 0;
   const startTime = Date.now();
 
   for (const expr of expressions) {
     for (const occSlug of occasions) {
       const occasion = knowledgeBase.getOccasionBySlug(occSlug)!;
+      const groupKey = `${expr} | ${occasion.category}`;
+      if (!groupStats[groupKey]) {
+        groupStats[groupKey] = { totalCells: 0, alignedCells: 0, failingCells: [] };
+      }
+
       for (const temp of temperatures) {
         for (const cond of conditions) {
           for (const modesty of modestyLevels) {
             processed++;
+            groupStats[groupKey].totalCells++;
 
             const testUser: User = {
               id: 'usr_sweep',
@@ -101,7 +115,8 @@ async function runSweep() {
 
             try {
               const res = recommendationService.generateTopThreeLooks({ user: testUser, context });
-              const count = [res.safe, res.bestMatch, res.stretch].filter(Boolean).length;
+              const returnedLooks = res.looks || [res.safe, res.bestMatch, res.stretch].filter(Boolean);
+              const count = returnedLooks.length;
               if (count === 3) {
                 completeLooks++;
               } else {
@@ -115,6 +130,42 @@ async function runSweep() {
                   reason: count < 3 ? 'Catalog hard constraints yielded fewer than 3 valid outfits' : 'Unknown',
                 });
               }
+
+              // Evaluate strict alignment metric for this cell:
+              // Count looks that contain >= 1 matching item
+              let matchingLooksCount = 0;
+              for (const look of returnedLooks) {
+                const garments = look.outfit.item.items.map((i) => i.garment);
+                let hasMatchingItem = false;
+                if (expr === 'masculine') {
+                  hasMatchingItem = garments.some((g) => (g.garmentCoding !== undefined && g.garmentCoding < 0) || g.genderCoding === 'masculine');
+                } else if (expr === 'feminine') {
+                  hasMatchingItem = garments.some((g) => (g.garmentCoding !== undefined && g.garmentCoding > 0) || g.genderCoding === 'feminine');
+                } else if (expr === 'androgynous') {
+                  hasMatchingItem = garments.some((g) => g.fluidTag === true || g.genderCoding === 'androgynous');
+                } else {
+                  // no-preference: any look is valid
+                  hasMatchingItem = true;
+                }
+                if (hasMatchingItem) {
+                  matchingLooksCount++;
+                }
+              }
+
+              // Cell passes alignment if >= 2 of 3 looks contain matching coded item
+              if (matchingLooksCount >= 2) {
+                groupStats[groupKey].alignedCells++;
+              } else {
+                groupStats[groupKey].failingCells.push({
+                  expression: expr,
+                  occasion: occSlug,
+                  temp,
+                  condition: cond,
+                  modesty,
+                  matchingLooksCount,
+                  totalLooks: count,
+                });
+              }
             } catch (err: any) {
               underThreeCells.push({
                 expression: expr,
@@ -124,6 +175,14 @@ async function runSweep() {
                 modesty,
                 lookCount: 0,
                 reason: err.message || 'Engine threw exception',
+              });
+              groupStats[groupKey].failingCells.push({
+                expression: expr,
+                occasion: occSlug,
+                temp,
+                condition: cond,
+                modesty,
+                error: err.message,
               });
             }
           }
@@ -138,11 +197,36 @@ async function runSweep() {
   console.log(`Viable 3-Look Cells: ${completeLooks} (${((completeLooks / totalCells) * 100).toFixed(1)}%)`);
   console.log(`Under-3 Look Cells: ${underThreeCells.length}`);
 
+  console.log('\n--- STRICT ALIGNMENT METRIC PER CELL GROUP ---');
+  const groupResults: Record<string, { totalCells: number; alignedCells: number; share: string; status: string; failingCount: number }> = {};
+  let allGroupsPassed = true;
+
+  for (const [group, stat] of Object.entries(groupStats)) {
+    const share = (stat.alignedCells / stat.totalCells) * 100;
+    const passed = share >= 90;
+    if (!passed) allGroupsPassed = false;
+    groupResults[group] = {
+      totalCells: stat.totalCells,
+      alignedCells: stat.alignedCells,
+      share: `${share.toFixed(1)}%`,
+      status: passed ? 'PASS (>=90%)' : 'FAIL (<90%)',
+      failingCount: stat.failingCells.length,
+    };
+    console.log(`${group.padEnd(30)}: ${share.toFixed(1)}% (${stat.alignedCells}/${stat.totalCells}) [${passed ? 'PASS' : 'FAIL'}] - Failing cells: ${stat.failingCells.length}`);
+  }
+
   const report = {
     totalCells,
     viableThreeLookCells: completeLooks,
     underThreeCellsCount: underThreeCells.length,
     underThreeCellsList: underThreeCells,
+    groupAlignmentResults: groupResults,
+    allGroupsPassedTarget: allGroupsPassed,
+    failingCellsByGroup: Object.fromEntries(
+      Object.entries(groupStats)
+        .filter(([_, s]) => s.failingCells.length > 0)
+        .map(([g, s]) => [g, s.failingCells])
+    ),
   };
 
   const reportsDir = path.resolve(process.cwd(), 'reports');

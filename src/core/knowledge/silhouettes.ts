@@ -69,7 +69,7 @@ export class SilhouetteProportionRules {
     const bottomFit = bottom.fit;
     const topLength = top.length || 'regular';
     const isBottomWide = bottomFit === 'relaxed' || bottomFit === 'oversized' || bottom.silhouette.includes('wide');
-    const isBottomSlim = bottomFit === 'slim' || bottomFit === 'skinny';
+    const isBottomSlim = bottomFit === 'slim' || bottomFit === 'skinny' || bottomFit === 'tailored' || bottom.silhouette.includes('slim') || bottom.silhouette.includes('tapered');
     const isTopCropped = topLength === 'cropped' || top.silhouette.includes('cropped');
     const isOuterLong = outer && (outer.length === 'extended' || outer.silhouette.includes('longline'));
 
@@ -111,11 +111,11 @@ export class SilhouetteProportionRules {
       structureDescription = 'Contemporary dual-volume drape with intentional spatial presence';
       advice.push('Ground with substantial footwear (chunky derbies, solid boots) to anchor the fluid hemline.');
     }
-    // Formula 5: Oversized / Boxy top + Slim / Tailored bottom (Inverted triangle)
+    // Formula 5: Oversized / Boxy top + Slim / Tailored bottom (Inverse silhouette pairing)
     else if ((topFit === 'oversized' || topFit === 'boxy') && isBottomSlim) {
-      harmonyScore = 0.88;
-      structureDescription = 'Upper volumetric emphasis with streamlined lower anchor';
-      advice.push('Emphasizes upper shoulder line while maintaining a clean, tapered ankle silhouette.');
+      harmonyScore = 0.90;
+      structureDescription = 'Inverse silhouette pairing: upper volumetric emphasis with streamlined lower anchor';
+      advice.push('Inverse volume dynamic: emphasizes upper shoulder line while maintaining a clean, tapered ankle silhouette.');
     }
     // Formula 6: Regular + Regular / Tailored + Tailored (Classic cadence)
     else if ((topFit === 'regular' || topFit === 'tailored') && (bottomFit === 'regular' || bottomFit === 'tailored')) {

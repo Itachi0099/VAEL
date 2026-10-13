@@ -147,12 +147,182 @@
   "result": {
     "looksCount": 3,
     "contextApplied": "University / College Campus",
-    "vetoedCandidateCount": 10,
-    "evaluatedCandidateCount": 15,
+    "vetoedCandidateCount": 29,
+    "evaluatedCandidateCount": 39,
     "looks": [
       {
         "tier": "BEST_MATCH",
         "tierRationale": "Optimal convergence of your 10D style vector, event formality, and physical proportions.",
+        "confidence": {
+          "state": "STRONG",
+          "explanation": "Supported by verified user formality, confirmed climate, explicit style vector, and grooming inputs.",
+          "toIncreaseConfidence": "Add specific footwear preferences to further personalize lower-leg grounding."
+        },
+        "overallHarmonyScore": 0.91,
+        "reasons": [
+          "Directly mirrors your personal style axis coordinates.",
+          "Balanced regular configuration",
+          "Tonal neutral palette ensures high versatility and effortless visual cohesion."
+        ],
+        "cautions": [],
+        "outfit": {
+          "id": "outfit_masculine_hot_casual_linen_01",
+          "title": "Fine Irish Linen Guayabera & Trousers",
+          "primaryStyleSlug": "minimal",
+          "formality": 2,
+          "score": 0.91,
+          "items": [
+            {
+              "category": "top",
+              "subcategory": "button-down",
+              "name": "Traditional Pleated Guayabera (White)",
+              "material": "100% fine Irish linen",
+              "color": "white",
+              "fit": "relaxed",
+              "modestyRating": "standard",
+              "genderCoding": "masculine",
+              "layerPosition": 0
+            },
+            {
+              "category": "bottom",
+              "subcategory": "trousers",
+              "name": "Relaxed Linen Drawstring Trousers",
+              "material": "100% Belgian washed linen",
+              "color": "ecru",
+              "fit": "relaxed",
+              "modestyRating": "high-coverage",
+              "genderCoding": "androgynous",
+              "layerPosition": 0
+            },
+            {
+              "category": "footwear",
+              "subcategory": "sneakers",
+              "name": "Minimal Calfskin Low-Top Sneakers",
+              "material": "Italian Nappa leather, Margom rubber sole",
+              "color": "pure-white",
+              "fit": "regular",
+              "modestyRating": "standard",
+              "genderCoding": "androgynous",
+              "layerPosition": 0
+            }
+          ],
+          "factors": [
+            {
+              "category": "style_affinity",
+              "weight": 3.5,
+              "score": 0.84,
+              "reason": "Coordinate affinity (84%) with your 10D style vector."
+            },
+            {
+              "category": "silhouette_balance",
+              "weight": 3,
+              "score": 0.93,
+              "reason": "Balanced regular configuration"
+            },
+            {
+              "category": "color_harmony",
+              "weight": 3,
+              "score": 0.92,
+              "reason": "Color story: tonal-neutral"
+            },
+            {
+              "category": "occasion_fit",
+              "weight": 2.5,
+              "score": 1,
+              "reason": "Formality fit for University / College Campus (Level 2)"
+            },
+            {
+              "category": "weather_fit",
+              "weight": 2,
+              "score": 0.98,
+              "reason": "Ambient temperature and breathability calibration"
+            },
+            {
+              "category": "expression_affinity",
+              "weight": 1,
+              "score": 0.7,
+              "reason": "Soft expression alignment with androgynous presentation preference."
+            }
+          ],
+          "traceableReasons": [
+            {
+              "reasonId": "rea_outfit_masculine_hot_casual_linen_01_0_1791898366432",
+              "text": "Directly mirrors your personal style axis coordinates.",
+              "signalIds": [
+                "user.styleProfile.styleVector",
+                "user.styleProfile.preferences.preferredStyleSlugs"
+              ],
+              "knowledgeEntryIds": [
+                "gar_guayabera_linen_white",
+                "gar_linen_drawstring_ecru",
+                "gar_minimal_sneaker_white",
+                "style_minimal"
+              ],
+              "factor": "style_affinity",
+              "authority": "USER_ENTERED",
+              "isAssumed": false
+            },
+            {
+              "reasonId": "rea_outfit_masculine_hot_casual_linen_01_1_1791898366432",
+              "text": "Balanced regular configuration",
+              "signalIds": [
+                "user.styleProfile.preferences.preferredStyleSlugs",
+                "context.occasion"
+              ],
+              "knowledgeEntryIds": [
+                "gar_guayabera_linen_white",
+                "gar_linen_drawstring_ecru",
+                "gar_minimal_sneaker_white"
+              ],
+              "factor": "general",
+              "authority": "USER_ENTERED",
+              "isAssumed": false
+            },
+            {
+              "reasonId": "rea_outfit_masculine_hot_casual_linen_01_2_1791898366432",
+              "text": "Tonal neutral palette ensures high versatility and effortless visual cohesion.",
+              "signalIds": [
+                "user.styleProfile.preferences.preferredStyleSlugs",
+                "context.occasion"
+              ],
+              "knowledgeEntryIds": [
+                "gar_guayabera_linen_white",
+                "gar_linen_drawstring_ecru",
+                "gar_minimal_sneaker_white"
+              ],
+              "factor": "general",
+              "authority": "USER_ENTERED",
+              "isAssumed": false
+            }
+          ],
+          "stylingAdvice": [
+            "Aligns with your preferred fit geometry."
+          ]
+        },
+        "hairStyle": {
+          "name": "Textured French Crop",
+          "slug": "textured-crop",
+          "score": 0.85,
+          "reasons": [
+            "Fits within your preferred moderate maintenance threshold.",
+            "Appropriate formality for University / College Campus.",
+            "Directly aligns with your preferred minimal aesthetic"
+          ]
+        },
+        "groomingStyle": {
+          "name": "Designer Stubble (3-Day Shadow)",
+          "slug": "designer-stubble",
+          "score": 0.84,
+          "reasons": [
+            "Conforms with your moderate grooming maintenance routine.",
+            "Appropriate grooming polish for University / College Campus.",
+            "Directly aligns with your preferred minimal aesthetic"
+          ]
+        }
+      },
+      {
+        "tier": "SAFE",
+        "tierRationale": "High familiarity and effortless ease. Relies on proven proportions and classic foundational tones.",
         "confidence": {
           "state": "STRONG",
           "explanation": "Supported by verified user formality, confirmed climate, explicit style vector, and grooming inputs.",
@@ -248,7 +418,7 @@
           ],
           "traceableReasons": [
             {
-              "reasonId": "rea_outfit_summer_linen_01_0_1791829696884",
+              "reasonId": "rea_outfit_summer_linen_01_0_1791898366432",
               "text": "Balanced regular configuration",
               "signalIds": [
                 "user.styleProfile.preferences.preferredStyleSlugs",
@@ -264,7 +434,7 @@
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_summer_linen_01_1_1791829696884",
+              "reasonId": "rea_outfit_summer_linen_01_1_1791898366432",
               "text": "Tonal neutral palette ensures high versatility and effortless visual cohesion.",
               "signalIds": [
                 "user.styleProfile.preferences.preferredStyleSlugs",
@@ -280,7 +450,7 @@
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_summer_linen_01_2_1791829696884",
+              "reasonId": "rea_outfit_summer_linen_01_2_1791898366432",
               "text": "Aligned to University / College Campus formality.",
               "signalIds": [
                 "context.occasion",
@@ -304,191 +474,7 @@
         "hairStyle": {
           "name": "Textured French Crop",
           "slug": "textured-crop",
-          "score": 0.84,
-          "reasons": [
-            "Fits within your preferred moderate maintenance threshold.",
-            "Appropriate formality for University / College Campus.",
-            "Directly aligns with your preferred minimal aesthetic"
-          ]
-        },
-        "groomingStyle": {
-          "name": "Designer Stubble (3-Day Shadow)",
-          "slug": "designer-stubble",
-          "score": 0.84,
-          "reasons": [
-            "Conforms with your moderate grooming maintenance routine.",
-            "Appropriate grooming polish for University / College Campus.",
-            "Directly aligns with your preferred minimal aesthetic"
-          ]
-        }
-      },
-      {
-        "tier": "SAFE",
-        "tierRationale": "High familiarity and effortless ease. Relies on proven proportions and classic foundational tones.",
-        "confidence": {
-          "state": "STRONG",
-          "explanation": "Supported by verified user formality, confirmed climate, explicit style vector, and grooming inputs.",
-          "toIncreaseConfidence": "Add specific footwear preferences to further personalize lower-leg grounding."
-        },
-        "overallHarmonyScore": 0.83,
-        "reasons": [
-          "Unified crisp a line pleated waist column",
-          "Strong contrast between light and deep neutral values establishes crisp visual separation.",
-          "High breathability (100% high-density cotton poplin) supports natural airflow in hot conditions."
-        ],
-        "cautions": [
-          "May hold moisture under high humidity."
-        ],
-        "outfit": {
-          "id": "outfit_poplin_shirt_dress_01",
-          "title": "Architectural Poplin & Glove Leather Cadence",
-          "primaryStyleSlug": "smart-casual",
-          "formality": 3,
-          "score": 0.83,
-          "items": [
-            {
-              "category": "one-piece",
-              "subcategory": "dress",
-              "name": "Architectural Poplin Midi Shirt Dress",
-              "material": "100% high-density cotton poplin",
-              "color": "crisp-white",
-              "fit": "relaxed",
-              "modestyRating": "covered-arms",
-              "genderCoding": "feminine",
-              "layerPosition": 0
-            },
-            {
-              "category": "footwear",
-              "subcategory": "ballet-flat",
-              "name": "Unstructured Butter Calfskin Ballet Flats",
-              "material": "glove-tanned calfskin, leather sole",
-              "color": "black",
-              "fit": "regular",
-              "modestyRating": "standard",
-              "genderCoding": "feminine",
-              "layerPosition": 0
-            },
-            {
-              "category": "accessory",
-              "subcategory": "belt",
-              "name": "25mm Fine Calfskin Belt with Chiseled Brass Buckle",
-              "material": "French box calf with solid brushed brass hardware",
-              "color": "black-gold",
-              "fit": "regular",
-              "modestyRating": "standard",
-              "genderCoding": "androgynous",
-              "layerPosition": 0
-            },
-            {
-              "category": "accessory",
-              "subcategory": "sunglasses",
-              "name": "Beveled Cat-Eye Bio-Acetate Sunglasses",
-              "material": "Mazzucchelli 8mm bio-acetate, Carl Zeiss polarized lenses",
-              "color": "black",
-              "fit": "regular",
-              "modestyRating": "standard",
-              "genderCoding": "feminine",
-              "layerPosition": 0
-            }
-          ],
-          "factors": [
-            {
-              "category": "style_affinity",
-              "weight": 3.5,
-              "score": 0.76,
-              "reason": "Coordinate affinity (76%) with your 10D style vector."
-            },
-            {
-              "category": "silhouette_balance",
-              "weight": 3,
-              "score": 0.92,
-              "reason": "Unified crisp a line pleated waist column"
-            },
-            {
-              "category": "color_harmony",
-              "weight": 3,
-              "score": 0.94,
-              "reason": "Color story: strong-contrast"
-            },
-            {
-              "category": "occasion_fit",
-              "weight": 2.5,
-              "score": 0.75,
-              "reason": "Formality fit for University / College Campus (Level 3)"
-            },
-            {
-              "category": "weather_fit",
-              "weight": 2,
-              "score": 0.91,
-              "reason": "Ambient temperature and breathability calibration"
-            },
-            {
-              "category": "expression_affinity",
-              "weight": 1,
-              "score": 0.575,
-              "reason": "Soft expression alignment with androgynous presentation preference."
-            }
-          ],
-          "traceableReasons": [
-            {
-              "reasonId": "rea_outfit_poplin_shirt_dress_01_0_1791829696884",
-              "text": "Unified crisp a line pleated waist column",
-              "signalIds": [
-                "user.styleProfile.preferences.preferredStyleSlugs",
-                "context.occasion"
-              ],
-              "knowledgeEntryIds": [
-                "gar_shirt_dress_cotton_poplin",
-                "gar_ballet_flat_leather_black",
-                "gar_fine_leather_belt_gold_buckle",
-                "gar_acetate_cat_eye_sunglasses_black"
-              ],
-              "factor": "general",
-              "authority": "USER_ENTERED",
-              "isAssumed": false
-            },
-            {
-              "reasonId": "rea_outfit_poplin_shirt_dress_01_1_1791829696884",
-              "text": "Strong contrast between light and deep neutral values establishes crisp visual separation.",
-              "signalIds": [
-                "user.styleProfile.preferences.preferredStyleSlugs",
-                "context.occasion"
-              ],
-              "knowledgeEntryIds": [
-                "gar_shirt_dress_cotton_poplin",
-                "gar_ballet_flat_leather_black",
-                "gar_fine_leather_belt_gold_buckle",
-                "gar_acetate_cat_eye_sunglasses_black"
-              ],
-              "factor": "general",
-              "authority": "USER_ENTERED",
-              "isAssumed": false
-            },
-            {
-              "reasonId": "rea_outfit_poplin_shirt_dress_01_2_1791829696884",
-              "text": "High breathability (100% high-density cotton poplin) supports natural airflow in hot conditions.",
-              "signalIds": [
-                "context.temperatureLevel",
-                "context.condition",
-                "context.weather"
-              ],
-              "knowledgeEntryIds": [
-                "gar_shirt_dress_cotton_poplin",
-                "gar_ballet_flat_leather_black",
-                "gar_fine_leather_belt_gold_buckle",
-                "gar_acetate_cat_eye_sunglasses_black"
-              ],
-              "factor": "weather_fit",
-              "authority": "USER_ENTERED",
-              "isAssumed": false
-            }
-          ],
-          "stylingAdvice": []
-        },
-        "hairStyle": {
-          "name": "Textured French Crop",
-          "slug": "textured-crop",
-          "score": 0.84,
+          "score": 0.85,
           "reasons": [
             "Fits within your preferred moderate maintenance threshold.",
             "Appropriate formality for University / College Campus.",
@@ -514,48 +500,61 @@
           "explanation": "Supported by verified user formality, confirmed climate, explicit style vector, and grooming inputs.",
           "toIncreaseConfidence": "Add specific footwear preferences to further personalize lower-leg grounding."
         },
-        "overallHarmonyScore": 0.85,
+        "overallHarmonyScore": 0.87,
         "reasons": [
-          "Balanced regular configuration",
-          "Strong contrast between light and deep neutral values establishes crisp visual separation.",
-          "High breathability (140gsm ultra-breathable TENCEL modal jersey) supports natural airflow in hot conditions."
+          "Harmonious classic proportion with uniform clean linear cadence",
+          "Harmonious balance across complementary tonal depths.",
+          "Neutral tonal temperature balance relative to undertone."
         ],
-        "cautions": [],
+        "cautions": [
+          "May hold moisture under high humidity."
+        ],
         "outfit": {
-          "id": "outfit_hot_casual_modal_01",
-          "title": "Airy Featherweight Modal & Pure Linen",
-          "primaryStyleSlug": "casual",
-          "formality": 1,
-          "score": 0.85,
+          "id": "outfit_masculine_summer_seersucker_01",
+          "title": "Breathable Seersucker Summer Set",
+          "primaryStyleSlug": "smart-casual",
+          "formality": 2,
+          "score": 0.87,
           "items": [
             {
               "category": "top",
-              "subcategory": "t-shirt",
-              "name": "Airy Featherweight Modal Lounge Tee (Black)",
-              "material": "140gsm ultra-breathable TENCEL modal jersey",
-              "color": "pitch-black",
-              "fit": "relaxed",
-              "modestyRating": "covered-both",
-              "genderCoding": "androgynous",
+              "subcategory": "button-down",
+              "name": "Textured Seersucker Short-Sleeve Shirt",
+              "material": "100% puckered cotton seersucker",
+              "color": "deep-navy",
+              "fit": "regular",
+              "modestyRating": "standard",
+              "genderCoding": "masculine",
               "layerPosition": 0
             },
             {
               "category": "bottom",
               "subcategory": "trousers",
-              "name": "Relaxed Linen Drawstring Trousers",
-              "material": "100% Belgian washed linen",
-              "color": "ecru",
-              "fit": "relaxed",
+              "name": "Pleated Seersucker Summer Trousers",
+              "material": "100% cotton seersucker",
+              "color": "blue-and-white-stripe",
+              "fit": "regular",
               "modestyRating": "high-coverage",
-              "genderCoding": "androgynous",
+              "genderCoding": "masculine",
               "layerPosition": 0
             },
             {
               "category": "footwear",
-              "subcategory": "sneakers",
-              "name": "Minimal Calfskin Low-Top Sneakers",
-              "material": "Italian Nappa leather, Margom rubber sole",
-              "color": "pure-white",
+              "subcategory": "loafers",
+              "name": "Gold-Hardware Horsebit Loafers (Black)",
+              "material": "calfskin leather, stitched leather sole",
+              "color": "polished-black",
+              "fit": "regular",
+              "modestyRating": "standard",
+              "genderCoding": "masculine",
+              "layerPosition": 0
+            },
+            {
+              "category": "accessory",
+              "subcategory": "hat",
+              "name": "Genuine Handwoven Toquilla Straw Panama Hat",
+              "material": "100% Ecuadorian toquilla palm straw",
+              "color": "natural-straw",
               "fit": "regular",
               "modestyRating": "standard",
               "genderCoding": "androgynous",
@@ -566,99 +565,102 @@
             {
               "category": "style_affinity",
               "weight": 3.5,
-              "score": 0.71,
-              "reason": "Coordinate affinity (71%) with your 10D style vector."
+              "score": 0.76,
+              "reason": "Coordinate affinity (76%) with your 10D style vector."
             },
             {
               "category": "silhouette_balance",
               "weight": 3,
-              "score": 0.93,
-              "reason": "Balanced regular configuration"
+              "score": 0.98,
+              "reason": "Harmonious classic proportion with uniform clean linear cadence"
             },
             {
               "category": "color_harmony",
               "weight": 3,
-              "score": 0.94,
-              "reason": "Color story: strong-contrast"
+              "score": 0.82,
+              "reason": "Color story: analogous"
             },
             {
               "category": "occasion_fit",
               "weight": 2.5,
-              "score": 0.75,
-              "reason": "Formality fit for University / College Campus (Level 1)"
+              "score": 1,
+              "reason": "Formality fit for University / College Campus (Level 2)"
             },
             {
               "category": "weather_fit",
               "weight": 2,
-              "score": 0.98,
+              "score": 0.94,
               "reason": "Ambient temperature and breathability calibration"
             },
             {
               "category": "expression_affinity",
               "weight": 1,
-              "score": 0.8,
+              "score": 0.575,
               "reason": "Soft expression alignment with androgynous presentation preference."
             }
           ],
           "traceableReasons": [
             {
-              "reasonId": "rea_outfit_hot_casual_modal_01_0_1791829696884",
-              "text": "Balanced regular configuration",
+              "reasonId": "rea_outfit_masculine_summer_seersucker_01_0_1791898366432",
+              "text": "Harmonious classic proportion with uniform clean linear cadence",
               "signalIds": [
                 "user.styleProfile.preferences.preferredStyleSlugs",
                 "context.occasion"
               ],
               "knowledgeEntryIds": [
-                "gar_breathable_modal_lounge_tee_black",
-                "gar_linen_drawstring_ecru",
-                "gar_minimal_sneaker_white"
+                "gar_seersucker_shirt_navy",
+                "gar_seersucker_trousers_sky_blue",
+                "gar_horsebit_loafer_black",
+                "gar_panama_hat_straw"
               ],
               "factor": "general",
               "authority": "USER_ENTERED",
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_hot_casual_modal_01_1_1791829696884",
-              "text": "Strong contrast between light and deep neutral values establishes crisp visual separation.",
+              "reasonId": "rea_outfit_masculine_summer_seersucker_01_1_1791898366432",
+              "text": "Harmonious balance across complementary tonal depths.",
               "signalIds": [
-                "user.styleProfile.preferences.preferredStyleSlugs",
-                "context.occasion"
+                "user.styleProfile.preferences.fitProportions",
+                "user.styleProfile.preferences.preferredFits"
               ],
               "knowledgeEntryIds": [
-                "gar_breathable_modal_lounge_tee_black",
-                "gar_linen_drawstring_ecru",
-                "gar_minimal_sneaker_white"
+                "gar_seersucker_shirt_navy",
+                "gar_seersucker_trousers_sky_blue",
+                "gar_horsebit_loafer_black",
+                "gar_panama_hat_straw"
               ],
-              "factor": "general",
+              "factor": "silhouette_balance",
               "authority": "USER_ENTERED",
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_hot_casual_modal_01_2_1791829696884",
-              "text": "High breathability (140gsm ultra-breathable TENCEL modal jersey) supports natural airflow in hot conditions.",
+              "reasonId": "rea_outfit_masculine_summer_seersucker_01_2_1791898366432",
+              "text": "Neutral tonal temperature balance relative to undertone.",
               "signalIds": [
-                "context.temperatureLevel",
-                "context.condition",
-                "context.weather"
+                "user.styleProfile.preferences.fitProportions",
+                "user.styleProfile.preferences.preferredFits"
               ],
               "knowledgeEntryIds": [
-                "gar_breathable_modal_lounge_tee_black",
-                "gar_linen_drawstring_ecru",
-                "gar_minimal_sneaker_white"
+                "gar_seersucker_shirt_navy",
+                "gar_seersucker_trousers_sky_blue",
+                "gar_horsebit_loafer_black",
+                "gar_panama_hat_straw"
               ],
-              "factor": "weather_fit",
+              "factor": "silhouette_balance",
               "authority": "USER_ENTERED",
               "isAssumed": false
             }
           ],
           "stylingAdvice": [
+            "Elevate with subtle texture contrast between top and lower fabrication.",
             "Aligns with your preferred fit geometry."
           ]
         },
         "hairStyle": {
           "name": "Textured French Crop",
           "slug": "textured-crop",
-          "score": 0.84,
+          "score": 0.85,
           "reasons": [
             "Fits within your preferred moderate maintenance threshold.",
             "Appropriate formality for University / College Campus.",

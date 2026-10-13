@@ -1,0 +1,36 @@
+id,name,slug,category,genderCoding,garmentCoding,fluidTag
+gar_knit_polo_cream,"Ribbed Johnny Collar Polo (Cream)",ribbed-polo-cream,top,masculine,-1,false
+gar_oxford_shirt_blue,"Classic Oxford Button-Down (Sky Blue)",classic-oxford-blue,top,masculine,-1,true
+gar_poplin_white_dress_shirt,"Crisp Poplin Point Collar Shirt",poplin-point-collar-white,top,masculine,-1,false
+gar_seersucker_shirt_navy,"Textured Seersucker Short-Sleeve Shirt",seersucker-shirt-navy,top,masculine,-1,false
+gar_chamois_shirt_tobacco,"Brushed Chamois Work Shirt (Tobacco)",chamois-work-shirt-tobacco,top,masculine,-1,false
+gar_henley_longsleeve_charcoal,"3-Button Waffle Henley (Charcoal)",waffle-henley-charcoal,top,masculine,-1,false
+gar_guayabera_linen_white,"Traditional Pleated Guayabera (White)",linen-guayabera-white,top,masculine,-1,false
+gar_denim_western_shirt,"Washed 8oz Denim Western Shirt",western-denim-shirt,top,masculine,-1,false
+gar_tuxedo_shirt_bib_front,"Marcella Piqué Bib Evening Tuxedo Shirt",marcella-bib-tuxedo-shirt,top,masculine,-1,false
+gar_tailored_slacks_charcoal,"Flat-Front Tailored Wool Slacks",tailored-slacks-charcoal,bottom,masculine,-1,true
+gar_classic_chinos_khaki,"Mid-Rise Tapered Chinos (British Khaki)",tapered-chinos-khaki,bottom,masculine,-1,false
+gar_tailored_shorts_navy,"Pleated Linen-Cotton Shorts (Navy)",pleated-shorts-navy,bottom,masculine,-1,false
+gar_tuxedo_trousers_satin_stripe,"Barathea Wool Tuxedo Trousers with Satin Stripe",barathea-tuxedo-trousers,bottom,masculine,-1,false
+gar_gurkha_trousers_olive,"Double-Buckle Gurkha Trousers (Olive)",gurkha-trousers-olive,bottom,masculine,-1,false
+gar_pleated_flannel_slacks_grey,"Single-Pleat Wool Flannel Slacks (Light Grey)",flannel-slacks-light-grey,bottom,masculine,-1,false
+gar_herringbone_wool_trousers_brown,"Herringbone Tweed Trousers (Mocha Brown)",herringbone-tweed-trousers-brown,bottom,masculine,-1,false
+gar_pinstripe_slacks_navy,"Fine Chalkstripe Wool Trousers (Navy)",chalkstripe-slacks-navy,bottom,masculine,-1,false
+gar_seersucker_trousers_sky_blue,"Pleated Seersucker Summer Trousers",seersucker-trousers-sky-blue,bottom,masculine,-1,false
+gar_formal_tux_jacket,"Satin Peak-Lapel Dinner Jacket",dinner-jacket-midnight-navy,outerwear,masculine,-1,false
+gar_harrington_jacket_tan,"Classic G9 Harrington Jacket (Tan)",harrington-jacket-tan,outerwear,masculine,-1,false
+gar_tweed_blazer_brown,"Harris Tweed 2-Button Blazer (Heather Brown)",harris-tweed-blazer-brown,outerwear,masculine,-1,false
+gar_waxed_cotton_field_jacket,"Waxed Cotton Country Field Jacket (Olive)",waxed-field-jacket-olive,outerwear,masculine,-1,false
+gar_cashmere_car_coat_navy,"Single-Breasted Cashmere Car Coat (Navy)",cashmere-car-coat-navy,outerwear,masculine,-1,false
+gar_sherwani_jacket_bespoke,"Bespoke Raw Silk Bandhgala / Sherwani Jacket",raw-silk-bandhgala-black,outerwear,masculine,-1,false
+gar_penny_loafer_burgundy,"Cordovan Penny Loafers",penny-loafer-burgundy,footwear,masculine,-1,false
+gar_chelsea_boot_suede_tobacco,"Tobacco Suede Chelsea Boots",chelsea-boots-suede-tobacco,footwear,masculine,-1,true
+gar_service_boots_brown,"Goodyear-Welted Service Boots",service-boots-brown,footwear,masculine,-1,false
+gar_formal_oxford_black,"Cap-Toe Wholecut Oxford Shoes",formal-captoe-oxford-black,footwear,masculine,-1,false
+gar_horsebit_loafer_black,"Gold-Hardware Horsebit Loafers (Black)",horsebit-loafer-black,footwear,masculine,-1,false
+gar_monk_strap_shoes_brown,"Double Monk-Strap Dress Shoes (Burnished Brown)",double-monk-strap-brown,footwear,masculine,-1,false
+gar_desert_boot_beeswax,"Original Crepe-Sole Desert Boots (Beeswax Leather)",desert-boots-beeswax,footwear,masculine,-1,false
+gar_patent_evening_pumps,"Patent Leather Evening Slippers",patent-evening-slippers-black,footwear,masculine,-1,false
+gar_silk_pocket_square_burgundy,"Printed Silk Twill Pocket Square",silk-pocket-square-burgundy,accessory,masculine,-1,false
+gar_masculine_chalkstripe_suit_jacket_charcoal,"Tailored 2-Button Chalkstripe Wool Suit Jacket (Charcoal)",chalkstripe-suit-jacket-charcoal,outerwear,masculine,-1,false
+gar_masculine_storm_coat_navy,"Waterproof Bonded Wool Commuter Storm Coat (Navy)",bonded-wool-storm-coat-navy,outerwear,masculine,-1,false

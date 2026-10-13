@@ -36,6 +36,7 @@ export interface HairStyle {
   // Knowledge versioning
   timelessOrTrend: TimelessTrendTag;
   reviewDate: string;
+  reviewed_by?: string;
   createdAt: string;
   updatedAt: string;
 }

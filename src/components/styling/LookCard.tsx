@@ -4,6 +4,20 @@ import React, { useState } from 'react';
 import { CompleteLook, ConfidenceState, RecommendationTier } from '@/core/domain';
 import { ShieldCheck, Sparkles, Compass, AlertCircle, ChevronDown, ChevronUp, Check, Info } from 'lucide-react';
 
+const FACTOR_LABEL_MAP: Record<string, string> = {
+  style_affinity: 'Style match',
+  color_harmony: 'Color balance',
+  silhouette_balance: 'Proportion',
+  weather_fit: 'Weather fit',
+  occasion_fit: 'Dress code',
+  wardrobe_priority: 'Wardrobe priority',
+  expression_affinity: 'Style expression',
+  accessory_coherence: 'Metal tone coherence',
+  preference_reinforcement: 'Budget tier fit',
+  visual_feature: 'Visual harmony',
+  maintenance_match: 'Maintenance fit',
+};
+
 interface LookCardProps {
   look: CompleteLook;
   isExpanded?: boolean;
@@ -253,7 +267,7 @@ export function LookCard({ look, isExpanded = false }: LookCardProps) {
           <div className="mt-3 pt-3 border-t border-neutral-200 space-y-2 text-[10px]">
             {outfit.factors.map((f, idx) => (
               <div key={idx} className="flex items-center justify-between gap-2 text-neutral-600">
-                <span className="uppercase text-neutral-500">{f.category.replace('_', ' ')}</span>
+                <span className="uppercase text-neutral-500">{FACTOR_LABEL_MAP[f.category] || f.category.replace(/_/g, ' ')}</span>
                 <span className="font-mono text-neutral-900 font-semibold">{Math.round(f.score * 100)}%</span>
               </div>
             ))}

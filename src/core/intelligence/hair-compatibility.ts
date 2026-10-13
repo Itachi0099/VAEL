@@ -20,7 +20,7 @@ export class HairCompatibilityEvaluator {
     const cautions: string[] = [];
     const stylingAdvice = [...style.stylingTips];
 
-    // 1. Face Shape Compatibility (Weight: 3.5)
+    // 1. Face Shape Compatibility (Weight: 1.0, <= 10% of total hair score)
     if (options.visual?.face) {
       const faceShape = options.visual.face.shape;
       const isDirectlyCompatible = style.compatibleFaceShapes.includes(faceShape);
@@ -40,20 +40,20 @@ export class HairCompatibilityEvaluator {
 
       factors.push({
         category: 'visual_feature',
-        weight: 3.5,
+        weight: 1.0,
         score: faceScore,
         reason: `Face geometry (${faceShape}) compatibility`,
       });
     } else {
       factors.push({
         category: 'visual_feature',
-        weight: 1.0,
+        weight: 0.5,
         score: 0.7,
         reason: 'Universal face geometry baseline (no visual scan provided)',
       });
     }
 
-    // 2. Hair Texture & Density Compatibility (Weight: 3.0)
+    // 2. Hair Texture & Density Compatibility (Weight: 4.5)
     if (options.visual?.hair) {
       const texture = options.visual.hair.texture;
       const density = options.visual.hair.density;
@@ -79,7 +79,7 @@ export class HairCompatibilityEvaluator {
 
       factors.push({
         category: 'visual_feature',
-        weight: 3.0,
+        weight: 4.5,
         score: textureScore,
         reason: `Hair texture (${texture}) and density (${density}) match`,
       });
