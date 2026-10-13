@@ -262,7 +262,7 @@
           ],
           "traceableReasons": [
             {
-              "reasonId": "rea_outfit_feminine_slip_evening_01_0_1791829636674",
+              "reasonId": "rea_outfit_feminine_slip_evening_01_0_1791829696886",
               "text": "Directly mirrors your personal style axis coordinates.",
               "signalIds": [
                 "user.styleProfile.styleVector",
@@ -281,7 +281,7 @@
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_feminine_slip_evening_01_1_1791829636674",
+              "reasonId": "rea_outfit_feminine_slip_evening_01_1_1791829696886",
               "text": "Cohesive layered silhouette with balanced mid-length outer structure",
               "signalIds": [
                 "user.styleProfile.preferences.fitProportions",
@@ -299,7 +299,7 @@
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_feminine_slip_evening_01_2_1791829636674",
+              "reasonId": "rea_outfit_feminine_slip_evening_01_2_1791829696886",
               "text": "Harmonious balance across complementary tonal depths.",
               "signalIds": [
                 "user.styleProfile.preferences.fitProportions",
@@ -439,7 +439,7 @@
           ],
           "traceableReasons": [
             {
-              "reasonId": "rea_outfit_korean_minimal_01_0_1791829636673",
+              "reasonId": "rea_outfit_korean_minimal_01_0_1791829696886",
               "text": "Cropped upper proportion offset by expansive lower volume",
               "signalIds": [
                 "user.styleProfile.preferences.preferredStyleSlugs",
@@ -456,7 +456,7 @@
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_korean_minimal_01_1_1791829636673",
+              "reasonId": "rea_outfit_korean_minimal_01_1_1791829696886",
               "text": "Strong contrast between light and deep neutral values establishes crisp visual separation.",
               "signalIds": [
                 "user.styleProfile.preferences.preferredStyleSlugs",
@@ -473,7 +473,7 @@
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_korean_minimal_01_2_1791829636673",
+              "reasonId": "rea_outfit_korean_minimal_01_2_1791829696886",
               "text": "Default climate baseline assumed; weather context was not specified.",
               "signalIds": [
                 "context.temperatureLevel",
@@ -615,7 +615,7 @@
           ],
           "traceableReasons": [
             {
-              "reasonId": "rea_outfit_old_money_01_0_1791829636673",
+              "reasonId": "rea_outfit_old_money_01_0_1791829696886",
               "text": "Harmonious classic proportion with uniform clean linear cadence",
               "signalIds": [
                 "user.styleProfile.preferences.preferredStyleSlugs",
@@ -632,7 +632,7 @@
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_old_money_01_1_1791829636673",
+              "reasonId": "rea_outfit_old_money_01_1_1791829696886",
               "text": "Harmonious balance across complementary tonal depths.",
               "signalIds": [
                 "user.styleProfile.preferences.fitProportions",
@@ -649,7 +649,7 @@
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_old_money_01_2_1791829636673",
+              "reasonId": "rea_outfit_old_money_01_2_1791829696886",
               "text": "Color direction is based on a neutral-safe default because undertone is unknown.",
               "signalIds": [
                 "user.styleProfile.preferences.userConfirmedUndertone",

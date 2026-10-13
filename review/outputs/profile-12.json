@@ -258,7 +258,7 @@
           ],
           "traceableReasons": [
             {
-              "reasonId": "rea_outfit_korean_minimal_01_0_1791829636673",
+              "reasonId": "rea_outfit_korean_minimal_01_0_1791829696885",
               "text": "Cropped upper proportion offset by expansive lower volume",
               "signalIds": [
                 "user.styleProfile.preferences.preferredStyleSlugs",
@@ -275,7 +275,7 @@
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_korean_minimal_01_1_1791829636673",
+              "reasonId": "rea_outfit_korean_minimal_01_1_1791829696885",
               "text": "Strong contrast between light and deep neutral values establishes crisp visual separation.",
               "signalIds": [
                 "user.styleProfile.preferences.preferredStyleSlugs",
@@ -292,7 +292,7 @@
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_korean_minimal_01_2_1791829636673",
+              "reasonId": "rea_outfit_korean_minimal_01_2_1791829696885",
               "text": "Aligned to Fine Dining / Dinner Party formality.",
               "signalIds": [
                 "context.occasion",
@@ -432,7 +432,7 @@
           ],
           "traceableReasons": [
             {
-              "reasonId": "rea_outfit_smart_casual_01_0_1791829636673",
+              "reasonId": "rea_outfit_smart_casual_01_0_1791829696885",
               "text": "Harmonious classic proportion with uniform clean linear cadence",
               "signalIds": [
                 "user.styleProfile.preferences.preferredStyleSlugs",
@@ -448,7 +448,7 @@
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_smart_casual_01_1_1791829636673",
+              "reasonId": "rea_outfit_smart_casual_01_1_1791829696885",
               "text": "Tonal neutral palette ensures high versatility and effortless visual cohesion.",
               "signalIds": [
                 "user.styleProfile.preferences.preferredStyleSlugs",
@@ -464,7 +464,7 @@
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_smart_casual_01_2_1791829636673",
+              "reasonId": "rea_outfit_smart_casual_01_2_1791829696885",
               "text": "Aligned to Fine Dining / Dinner Party formality.",
               "signalIds": [
                 "context.occasion",
@@ -614,7 +614,7 @@
           ],
           "traceableReasons": [
             {
-              "reasonId": "rea_outfit_poplin_shirt_dress_01_0_1791829636673",
+              "reasonId": "rea_outfit_poplin_shirt_dress_01_0_1791829696885",
               "text": "Unified crisp a line pleated waist column",
               "signalIds": [
                 "user.styleProfile.preferences.preferredStyleSlugs",
@@ -631,7 +631,7 @@
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_poplin_shirt_dress_01_1_1791829636673",
+              "reasonId": "rea_outfit_poplin_shirt_dress_01_1_1791829696885",
               "text": "Strong contrast between light and deep neutral values establishes crisp visual separation.",
               "signalIds": [
                 "user.styleProfile.preferences.preferredStyleSlugs",
@@ -648,7 +648,7 @@
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_poplin_shirt_dress_01_2_1791829636673",
+              "reasonId": "rea_outfit_poplin_shirt_dress_01_2_1791829696885",
               "text": "Aligned to Fine Dining / Dinner Party formality.",
               "signalIds": [
                 "context.occasion",

@@ -165,7 +165,7 @@
           ],
           "traceableReasons": [
             {
-              "reasonId": "rea_outfit_korean_minimal_01_0_1791829636667",
+              "reasonId": "rea_outfit_korean_minimal_01_0_1791829696880",
               "text": "Cropped upper proportion offset by expansive lower volume",
               "signalIds": [
                 "user.styleProfile.preferences.preferredStyleSlugs",
@@ -182,7 +182,7 @@
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_korean_minimal_01_1_1791829636667",
+              "reasonId": "rea_outfit_korean_minimal_01_1_1791829696880",
               "text": "Strong contrast between light and deep neutral values establishes crisp visual separation.",
               "signalIds": [
                 "user.styleProfile.preferences.preferredStyleSlugs",
@@ -298,7 +298,7 @@
           ],
           "traceableReasons": [
             {
-              "reasonId": "rea_outfit_minimal_01_0_1791829636667",
+              "reasonId": "rea_outfit_minimal_01_0_1791829696880",
               "text": "Directly mirrors your personal style axis coordinates.",
               "signalIds": [
                 "user.styleProfile.styleVector",
@@ -315,7 +315,7 @@
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_minimal_01_1_1791829636667",
+              "reasonId": "rea_outfit_minimal_01_1_1791829696880",
               "text": "Balanced regular configuration",
               "signalIds": [
                 "user.styleProfile.preferences.preferredStyleSlugs",
@@ -331,7 +331,7 @@
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_minimal_01_2_1791829636667",
+              "reasonId": "rea_outfit_minimal_01_2_1791829696880",
               "text": "Strong contrast between light and deep neutral values establishes crisp visual separation.",
               "signalIds": [
                 "user.styleProfile.preferences.preferredStyleSlugs",
@@ -454,7 +454,7 @@
           ],
           "traceableReasons": [
             {
-              "reasonId": "rea_outfit_poplin_shirt_dress_01_0_1791829636667",
+              "reasonId": "rea_outfit_poplin_shirt_dress_01_0_1791829696880",
               "text": "Unified crisp a line pleated waist column",
               "signalIds": [
                 "user.styleProfile.preferences.preferredStyleSlugs",
@@ -471,7 +471,7 @@
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_poplin_shirt_dress_01_1_1791829636667",
+              "reasonId": "rea_outfit_poplin_shirt_dress_01_1_1791829696880",
               "text": "Strong contrast between light and deep neutral values establishes crisp visual separation.",
               "signalIds": [
                 "user.styleProfile.preferences.preferredStyleSlugs",

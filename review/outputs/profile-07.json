@@ -270,7 +270,7 @@
           ],
           "traceableReasons": [
             {
-              "reasonId": "rea_outfit_korean_minimal_01_0_1791829636671",
+              "reasonId": "rea_outfit_korean_minimal_01_0_1791829696884",
               "text": "Cropped upper proportion offset by expansive lower volume",
               "signalIds": [
                 "user.styleProfile.preferences.preferredStyleSlugs",
@@ -287,7 +287,7 @@
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_korean_minimal_01_1_1791829636671",
+              "reasonId": "rea_outfit_korean_minimal_01_1_1791829696884",
               "text": "Strong contrast between light and deep neutral values establishes crisp visual separation.",
               "signalIds": [
                 "user.styleProfile.preferences.preferredStyleSlugs",
@@ -304,7 +304,7 @@
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_korean_minimal_01_2_1791829636671",
+              "reasonId": "rea_outfit_korean_minimal_01_2_1791829696884",
               "text": "Aligned to Evening Date formality.",
               "signalIds": [
                 "context.occasion",
@@ -440,7 +440,7 @@
           ],
           "traceableReasons": [
             {
-              "reasonId": "rea_outfit_minimal_01_0_1791829636671",
+              "reasonId": "rea_outfit_minimal_01_0_1791829696884",
               "text": "Directly mirrors your personal style axis coordinates.",
               "signalIds": [
                 "user.styleProfile.styleVector",
@@ -457,7 +457,7 @@
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_minimal_01_1_1791829636671",
+              "reasonId": "rea_outfit_minimal_01_1_1791829696884",
               "text": "Balanced regular configuration",
               "signalIds": [
                 "user.styleProfile.preferences.preferredStyleSlugs",
@@ -473,7 +473,7 @@
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_minimal_01_2_1791829636671",
+              "reasonId": "rea_outfit_minimal_01_2_1791829696884",
               "text": "Strong contrast between light and deep neutral values establishes crisp visual separation.",
               "signalIds": [
                 "user.styleProfile.preferences.preferredStyleSlugs",
@@ -605,7 +605,7 @@
           ],
           "traceableReasons": [
             {
-              "reasonId": "rea_outfit_smart_casual_01_0_1791829636671",
+              "reasonId": "rea_outfit_smart_casual_01_0_1791829696884",
               "text": "Harmonious classic proportion with uniform clean linear cadence",
               "signalIds": [
                 "user.styleProfile.preferences.preferredStyleSlugs",
@@ -621,7 +621,7 @@
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_smart_casual_01_1_1791829636671",
+              "reasonId": "rea_outfit_smart_casual_01_1_1791829696884",
               "text": "Tonal neutral palette ensures high versatility and effortless visual cohesion.",
               "signalIds": [
                 "user.styleProfile.preferences.preferredStyleSlugs",
@@ -637,7 +637,7 @@
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_smart_casual_01_2_1791829636671",
+              "reasonId": "rea_outfit_smart_casual_01_2_1791829696884",
               "text": "Aligned to Evening Date formality.",
               "signalIds": [
                 "context.occasion",

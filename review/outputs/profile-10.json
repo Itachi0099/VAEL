@@ -248,7 +248,7 @@
           ],
           "traceableReasons": [
             {
-              "reasonId": "rea_outfit_summer_linen_01_0_1791829636672",
+              "reasonId": "rea_outfit_summer_linen_01_0_1791829696885",
               "text": "Balanced regular configuration",
               "signalIds": [
                 "user.styleProfile.preferences.preferredStyleSlugs",
@@ -264,7 +264,7 @@
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_summer_linen_01_1_1791829636672",
+              "reasonId": "rea_outfit_summer_linen_01_1_1791829696885",
               "text": "Tonal neutral palette ensures high versatility and effortless visual cohesion.",
               "signalIds": [
                 "user.styleProfile.preferences.preferredStyleSlugs",
@@ -280,7 +280,7 @@
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_summer_linen_01_2_1791829636672",
+              "reasonId": "rea_outfit_summer_linen_01_2_1791829696885",
               "text": "Aligned to Everyday Casual / Weekend formality.",
               "signalIds": [
                 "context.occasion",
@@ -420,7 +420,7 @@
           ],
           "traceableReasons": [
             {
-              "reasonId": "rea_outfit_hot_casual_modal_01_0_1791829636672",
+              "reasonId": "rea_outfit_hot_casual_modal_01_0_1791829696885",
               "text": "Balanced regular configuration",
               "signalIds": [
                 "user.styleProfile.preferences.preferredStyleSlugs",
@@ -436,7 +436,7 @@
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_hot_casual_modal_01_1_1791829636672",
+              "reasonId": "rea_outfit_hot_casual_modal_01_1_1791829696885",
               "text": "Strong contrast between light and deep neutral values establishes crisp visual separation.",
               "signalIds": [
                 "user.styleProfile.preferences.preferredStyleSlugs",
@@ -452,7 +452,7 @@
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_hot_casual_modal_01_2_1791829636672",
+              "reasonId": "rea_outfit_hot_casual_modal_01_2_1791829696885",
               "text": "High breathability (140gsm ultra-breathable TENCEL modal jersey) supports natural airflow in hot conditions.",
               "signalIds": [
                 "context.temperatureLevel",
@@ -592,7 +592,7 @@
           ],
           "traceableReasons": [
             {
-              "reasonId": "rea_outfit_hot_casual_terracotta_01_0_1791829636672",
+              "reasonId": "rea_outfit_hot_casual_terracotta_01_0_1791829696885",
               "text": "Contemporary dual-volume drape with intentional spatial presence",
               "signalIds": [
                 "user.styleProfile.preferences.fitProportions",
@@ -608,7 +608,7 @@
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_hot_casual_terracotta_01_1_1791829636672",
+              "reasonId": "rea_outfit_hot_casual_terracotta_01_1_1791829696885",
               "text": "Harmonious balance across complementary tonal depths.",
               "signalIds": [
                 "user.styleProfile.preferences.fitProportions",
@@ -624,7 +624,7 @@
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_hot_casual_terracotta_01_2_1791829636672",
+              "reasonId": "rea_outfit_hot_casual_terracotta_01_2_1791829696885",
               "text": "Neutral tonal temperature balance relative to undertone.",
               "signalIds": [
                 "user.styleProfile.preferences.fitProportions",
