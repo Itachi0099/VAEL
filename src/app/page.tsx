@@ -10,6 +10,9 @@ import {
   TrendingUp,
   X,
   Compass,
+  Box,
+  Moon,
+  Sun,
 } from 'lucide-react';
 
 import { ProfileHeader } from '@/components/styling/ProfileHeader';
@@ -18,10 +21,21 @@ import { ContextControls } from '@/components/styling/ContextControls';
 import { StylePreferences } from '@/components/styling/StylePreferences';
 import { LookCard } from '@/components/styling/LookCard';
 import { EmptyState } from '@/components/styling/EmptyState';
-import { TopThreeLooks, WeatherCondition, FormalityLevel, VisualProfile, User, sanitizeProfileImport } from '@/core/domain';
+import {
+  TopThreeLooks,
+  WeatherCondition,
+  FormalityLevel,
+  VisualProfile,
+  User,
+  sanitizeProfileImport,
+  TemperatureLevel,
+  WeatherConditionType,
+} from '@/core/domain';
 import { BUILD_INFO } from '@/core/version';
+import { DynamicStudioViewer } from '@/components/studio';
+import { SAMPLE_STUDIO_PROFILES } from '@/components/studio/sample-profiles';
 
-type ActiveView = 'LOOKS' | 'HAIR' | 'GROOMING' | 'STYLE LAB';
+type ActiveView = 'LOOKS' | 'STUDIO 3D' | 'HAIR' | 'GROOMING' | 'STYLE LAB';
 
 export default function VaelShell() {
   const [activeView, setActiveView] = useState<ActiveView>('LOOKS');
@@ -35,6 +49,9 @@ export default function VaelShell() {
   // Context & Preference State
   const [selectedOccasion, setSelectedOccasion] = useState<string>('dinner');
   const [selectedWeather, setSelectedWeather] = useState<WeatherCondition>('mild');
+  const [selectedTemperature, setSelectedTemperature] = useState<TemperatureLevel>('mild');
+  const [selectedCondition, setSelectedCondition] = useState<WeatherConditionType>('dry');
+  const [theme, setTheme] = useState<'light' | 'dark'>('light');
   const [formalityOverride, setFormalityOverride] = useState<FormalityLevel | undefined>(undefined);
   const [selectedStyles, setSelectedStyles] = useState<string[]>([]);
   const [dislikedStyles, setDislikedStyles] = useState<string[]>([]);
@@ -51,10 +68,37 @@ export default function VaelShell() {
   const [isGenerating, setIsGenerating] = useState(false);
   const [feedbackNotice, setFeedbackNotice] = useState<string | null>(null);
 
-  // Initialize data on load (with localStorage check)
+  // Initialize data on load (with localStorage check & theme preference)
   useEffect(() => {
+    try {
+      const savedTheme = localStorage.getItem('vael_theme');
+      if (savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        setTheme('dark');
+        document.documentElement.classList.add('dark');
+      } else {
+        setTheme('light');
+        document.documentElement.classList.remove('dark');
+      }
+    } catch (e) {
+      // LocalStorage unavailable
+    }
     initializeVael();
   }, []);
+
+  const toggleTheme = () => {
+    const nextTheme = theme === 'light' ? 'dark' : 'light';
+    setTheme(nextTheme);
+    try {
+      localStorage.setItem('vael_theme', nextTheme);
+      if (nextTheme === 'dark') {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
+    } catch (e) {
+      console.warn('Theme preference storage failed:', e);
+    }
+  };
 
   const initializeVael = async () => {
     try {
@@ -83,7 +127,7 @@ export default function VaelShell() {
         setProfileMode('CONFIGURED');
         const userStyles = savedUser.styleProfile?.dominantAestheticSlugs || [];
         setSelectedStyles(userStyles);
-        generateLooksForContext(savedUser, 'dinner', 'mild', userStyles);
+        generateLooksForContext(savedUser, 'dinner', 'mild', userStyles, undefined, 'mild', 'dry');
       } else {
         // Fresh load: EMPTY profile, 0 / 3 styles selected
         setProfileMode('EMPTY');
@@ -100,7 +144,9 @@ export default function VaelShell() {
     occ = selectedOccasion,
     weather = selectedWeather,
     styles = selectedStyles,
-    formality = formalityOverride
+    formality = formalityOverride,
+    tempLevel = selectedTemperature,
+    cond = selectedCondition
   ) => {
     if (!userToUse && profileMode === 'EMPTY') {
       setTopThreeLooks(null);
@@ -112,6 +158,8 @@ export default function VaelShell() {
       const payload: any = {
         occasionSlug: occ,
         weather: weather,
+        temperatureLevel: tempLevel,
+        condition: cond,
         activeStyles: styles,
         targetFormality: formality,
       };
@@ -365,12 +413,41 @@ export default function VaelShell() {
 
   const handleOccasionChange = (occ: string) => {
     setSelectedOccasion(occ);
-    generateLooksForContext(activeUser, occ, selectedWeather, selectedStyles);
+    generateLooksForContext(activeUser, occ, selectedWeather, selectedStyles, formalityOverride, selectedTemperature, selectedCondition);
   };
 
   const handleWeatherChange = (w: WeatherCondition) => {
     setSelectedWeather(w);
-    generateLooksForContext(activeUser, selectedOccasion, w, selectedStyles);
+    if (w === 'rainy') {
+      setSelectedCondition('rain');
+    } else {
+      setSelectedCondition('dry');
+      if (['cold', 'cool', 'mild', 'warm', 'hot'].includes(w)) {
+        setSelectedTemperature(w as TemperatureLevel);
+      }
+    }
+    generateLooksForContext(activeUser, selectedOccasion, w, selectedStyles, formalityOverride, selectedTemperature, selectedCondition);
+  };
+
+  const handleTemperatureChange = (t: TemperatureLevel) => {
+    setSelectedTemperature(t);
+    const weatherMap: Record<TemperatureLevel, WeatherCondition> = {
+      cold: 'cold',
+      cool: 'cool',
+      mild: 'mild',
+      warm: 'warm',
+      hot: 'hot',
+    };
+    const legacyWeather = selectedCondition === 'rain' ? 'rainy' : weatherMap[t] || 'mild';
+    setSelectedWeather(legacyWeather);
+    generateLooksForContext(activeUser, selectedOccasion, legacyWeather, selectedStyles, formalityOverride, t, selectedCondition);
+  };
+
+  const handleConditionChange = (c: WeatherConditionType) => {
+    setSelectedCondition(c);
+    const legacyWeather: WeatherCondition = c === 'rain' ? 'rainy' : (selectedTemperature as WeatherCondition) || 'mild';
+    setSelectedWeather(legacyWeather);
+    generateLooksForContext(activeUser, selectedOccasion, legacyWeather, selectedStyles, formalityOverride, selectedTemperature, c);
   };
 
   const handleExploreStyle = async (slug: string) => {
@@ -444,19 +521,46 @@ export default function VaelShell() {
       {/* Brand & Editorial Masthead */}
       <header className="border-b border-neutral-200 pb-8 mb-10 flex flex-col md:flex-row md:items-end justify-between gap-6">
         <div>
-          <div className="flex items-center gap-3">
+          <div className="flex flex-wrap items-center gap-3">
             <h1 className="text-4xl md:text-5xl font-editorial-title font-medium tracking-widest uppercase text-neutral-950">
               VAEL
             </h1>
             <span className="font-editorial-mono text-xs px-2.5 py-1 bg-black text-white rounded-full">
               EARLY ACCESS
             </span>
+            <button
+              onClick={() => setActiveView('STUDIO 3D')}
+              className={`font-editorial-mono text-xs px-2.5 py-1 border rounded-full transition flex items-center gap-1.5 ${
+                activeView === 'STUDIO 3D'
+                  ? 'border-neutral-950 bg-neutral-950 text-white font-semibold'
+                  : 'border-neutral-300 hover:border-black text-neutral-800'
+              }`}
+            >
+              <Box className="w-3.5 h-3.5 text-indigo-500" />
+              <span>3D STUDIO</span>
+            </button>
+            <button
+              onClick={toggleTheme}
+              aria-label="Toggle dark mode"
+              className="font-editorial-mono text-xs px-2.5 py-1 border border-neutral-300 hover:border-black text-neutral-800 rounded-full transition flex items-center gap-1.5"
+            >
+              {theme === 'dark' ? (
+                <>
+                  <Sun className="w-3.5 h-3.5 text-amber-500" />
+                  <span>LIGHT</span>
+                </>
+              ) : (
+                <>
+                  <Moon className="w-3.5 h-3.5 text-neutral-600" />
+                  <span>DARK</span>
+                </>
+              )}
+            </button>
             <Link
               href="/studio"
-              className="font-editorial-mono text-xs px-2.5 py-1 border border-neutral-300 hover:border-black text-neutral-800 hover:text-black rounded-full transition flex items-center gap-1"
+              className="font-editorial-mono text-[11px] px-2 py-1 text-neutral-500 hover:text-neutral-900 transition flex items-center gap-1"
             >
-              <span>3D STUDIO</span>
-              <ArrowRight className="w-3 h-3" />
+              <span>FULLSCREEN ↗</span>
             </Link>
           </div>
           <p className="text-xs uppercase tracking-widest text-neutral-500 mt-2 font-editorial-mono">
@@ -493,12 +597,24 @@ export default function VaelShell() {
         <ContextControls
           selectedOccasion={selectedOccasion}
           onSelectOccasion={handleOccasionChange}
+          temperatureLevel={selectedTemperature}
+          onSelectTemperatureLevel={handleTemperatureChange}
+          weatherCondition={selectedCondition}
+          onSelectWeatherCondition={handleConditionChange}
           weather={selectedWeather}
           onSelectWeather={handleWeatherChange}
           formalityOverride={formalityOverride}
           onSelectFormality={(f) => {
             setFormalityOverride(f);
-            generateLooksForContext(activeUser, selectedOccasion, selectedWeather, selectedStyles, f);
+            generateLooksForContext(
+              activeUser,
+              selectedOccasion,
+              selectedWeather,
+              selectedStyles,
+              f,
+              selectedTemperature,
+              selectedCondition
+            );
           }}
         />
 
@@ -525,7 +641,17 @@ export default function VaelShell() {
           </div>
 
           <button
-            onClick={() => generateLooksForContext(activeUser, selectedOccasion, selectedWeather, selectedStyles)}
+            onClick={() =>
+              generateLooksForContext(
+                activeUser,
+                selectedOccasion,
+                selectedWeather,
+                selectedStyles,
+                formalityOverride,
+                selectedTemperature,
+                selectedCondition
+              )
+            }
             disabled={isGenerating}
             className="w-full sm:w-auto px-6 py-2 bg-neutral-950 hover:bg-neutral-800 text-white transition uppercase tracking-wider text-xs font-semibold flex items-center justify-center gap-2"
           >
@@ -536,9 +662,10 @@ export default function VaelShell() {
       </section>
 
       {/* Views Navigation */}
-      <nav className="flex border-b border-neutral-200 mb-8 font-editorial-mono text-xs">
+      <nav className="flex border-b border-neutral-200 mb-8 font-editorial-mono text-xs overflow-x-auto">
         {[
           { id: 'LOOKS', label: 'TOP 3 LOOKS (FLAGSHIP)' },
+          { id: 'STUDIO 3D', label: '3D STYLING AVATAR (SPIKE)' },
           { id: 'HAIR', label: 'HAIR COMPATIBILITY' },
           { id: 'GROOMING', label: 'GROOMING' },
           { id: 'STYLE LAB', label: 'STYLE TAXONOMY' },
@@ -551,13 +678,14 @@ export default function VaelShell() {
                 handleExploreStyle(selectedStyleSlug);
               }
             }}
-            className={`px-4 py-2.5 uppercase tracking-wider transition border-b-2 -mb-px text-[11px] ${
+            className={`px-4 py-2.5 uppercase tracking-wider transition border-b-2 -mb-px text-[11px] whitespace-nowrap flex items-center gap-1.5 ${
               activeView === tab.id
                 ? 'border-neutral-900 text-neutral-900 font-semibold'
                 : 'border-transparent text-neutral-400 hover:text-neutral-800'
             }`}
           >
-            {tab.label}
+            {tab.id === 'STUDIO 3D' && <Box className="w-3 h-3 text-indigo-500" />}
+            <span>{tab.label}</span>
           </button>
         ))}
       </nav>
@@ -572,6 +700,35 @@ export default function VaelShell() {
             />
           ) : topThreeLooks ? (
             <div className="space-y-6">
+              {/* Studio 3D Quick-Launch Banner */}
+              <div className="p-4 bg-neutral-900 text-white flex flex-col md:flex-row md:items-center justify-between gap-4 font-editorial-mono border border-neutral-800">
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-xs bg-neutral-800 border border-neutral-700 flex items-center justify-center shrink-0">
+                    <Box className="w-5 h-5 text-indigo-400" />
+                  </div>
+                  <div>
+                    <div className="flex items-center gap-2">
+                      <span className="text-xs uppercase font-semibold tracking-wider">
+                        PART B — R2.0 STUDIO 3D STYLING AVATAR SPIKE
+                      </span>
+                      <span className="text-[10px] bg-emerald-950 text-emerald-300 border border-emerald-800 px-1.5 py-0.2">
+                        LIVE SPIKE
+                      </span>
+                    </div>
+                    <p className="text-[11px] text-neutral-400 font-sans mt-0.5">
+                      Interact with these looks in real-time 3D: continuous vertical spin, drag-to-rotate, garment slot inspection, and read-only candidate swapping.
+                    </p>
+                  </div>
+                </div>
+                <button
+                  onClick={() => setActiveView('STUDIO 3D')}
+                  className="px-4 py-2 bg-white text-neutral-950 hover:bg-neutral-100 uppercase tracking-wider text-xs font-semibold shrink-0 transition flex items-center justify-center gap-1.5 shadow-sm"
+                >
+                  <span>LAUNCH 3D AVATAR</span>
+                  <ArrowRight className="w-3.5 h-3.5" />
+                </button>
+              </div>
+
               <div className="flex items-center justify-between font-editorial-mono text-xs text-neutral-500 pb-2 border-b border-neutral-100">
                 <span className="uppercase tracking-widest text-[11px]">
                   {topThreeLooks.looks?.length === 3
@@ -610,6 +767,59 @@ export default function VaelShell() {
               Building your looks...
             </div>
           )}
+        </div>
+      )}
+
+      {/* VIEW: 3D STYLING AVATAR STUDIO */}
+      {activeView === 'STUDIO 3D' && (
+        <div className="space-y-6">
+          <div className="flex flex-col md:flex-row md:items-center justify-between pb-3 border-b border-neutral-200 gap-4 font-editorial-mono">
+            <div>
+              <div className="flex items-center gap-2">
+                <h2 className="text-xl font-editorial-title uppercase font-semibold text-neutral-950">
+                  PART B — R2.0 STUDIO 3D STYLING AVATAR
+                </h2>
+                <span className="text-[10px] bg-emerald-100 text-emerald-800 border border-emerald-300 px-2 py-0.5 rounded-xs">
+                  INTERACTIVE 3D
+                </span>
+              </div>
+              <p className="text-xs text-neutral-500 mt-0.5">
+                EDITORIAL CLAY-WHITE MANNEQUIN · SOFT STUDIO LIGHTING · PROCEDURAL GARMENTS · READ-ONLY ADAPTER
+              </p>
+            </div>
+            <div className="flex items-center gap-2">
+              <Link
+                href="/studio"
+                className="font-editorial-mono text-xs px-3 py-1.5 bg-neutral-900 text-white hover:bg-neutral-800 transition uppercase tracking-wider flex items-center gap-1.5"
+              >
+                <span>OPEN FULLSCREEN STUDIO</span>
+                <ArrowRight className="w-3 h-3" />
+              </Link>
+            </div>
+          </div>
+
+          <DynamicStudioViewer
+            user={activeUser || SAMPLE_STUDIO_PROFILES[0].user}
+            context={
+              activeUser
+                ? {
+                    occasion: selectedOccasion as any,
+                    temperatureCelsius:
+                      selectedTemperature === 'cold'
+                        ? 3
+                        : selectedTemperature === 'cool'
+                        ? 10
+                        : selectedTemperature === 'warm'
+                        ? 25
+                        : selectedTemperature === 'hot'
+                        ? 30
+                        : 19,
+                    temperatureLevel: selectedTemperature,
+                    condition: selectedCondition,
+                  }
+                : SAMPLE_STUDIO_PROFILES[0].context
+            }
+          />
         </div>
       )}
 

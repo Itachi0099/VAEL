@@ -14,6 +14,8 @@ export async function POST(request: Request) {
       occasionSlug = 'dinner',
       weather = 'mild',
       temperature,
+      temperatureLevel,
+      condition,
       targetFormality,
       activeStyles,
       fitProportions,
@@ -25,12 +27,29 @@ export async function POST(request: Request) {
       knowledgeBase.getAllOccasions().find((o) => o.slug === 'casual') ||
       knowledgeBase.getAllOccasions()[0];
 
+    const actualTempLevel = (temperatureLevel || (weather !== 'rainy' ? weather : 'mild')) as any;
+    const actualCondition = (condition || (weather === 'rainy' ? 'rain' : 'dry')) as any;
+
     const context: Context = {
       occasion,
-      weather: weather || 'mild',
-      temperatureCelsius: temperature !== undefined ? Number(temperature) : undefined,
+      weather: (actualCondition === 'rain' ? 'rainy' : actualTempLevel) as any,
+      temperatureLevel: actualTempLevel,
+      condition: actualCondition,
+      temperatureCelsius:
+        temperature !== undefined
+          ? Number(temperature)
+          : actualTempLevel === 'cold'
+            ? 2
+            : actualTempLevel === 'cool'
+              ? 12
+              : actualTempLevel === 'warm'
+                ? 24
+                : actualTempLevel === 'hot'
+                  ? 30
+                  : 18,
       targetFormality: targetFormality || occasion.defaultFormality,
       subParameter: subParameter || undefined,
+      isWeatherConfirmed: true,
     };
 
     let userToEvaluate: User | null = null;

@@ -6,6 +6,17 @@
   --editorial-muted: #737373;
   --border-subtle: #e5e5e5;
   --border-strong: #171717;
+  color-scheme: light;
+}
+
+html.dark,
+.dark {
+  --background: #0d0d0f;
+  --foreground: #f4f4f2;
+  --editorial-muted: #9c9c98;
+  --border-subtle: #27272a;
+  --border-strong: #e4e4e7;
+  color-scheme: dark;
 }
 
 body {
@@ -14,6 +25,7 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   letter-spacing: -0.01em;
   -webkit-font-smoothing: antialiased;
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 /* Editorial typography utilities */
@@ -32,4 +44,68 @@ body {
   border-style: solid;
   border-width: 1px;
   border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+}
+
+/* Editorial Dark Theme Inversions */
+html.dark body {
+  background-color: #0d0d0f;
+  color: #f4f4f2;
+}
+
+html.dark .bg-white {
+  background-color: #161619 !important;
+  color: #f4f4f2 !important;
+}
+
+html.dark .bg-\[\#fafaf9\],
+html.dark .bg-\[\#faf9f6\] {
+  background-color: #0d0d0f !important;
+}
+
+html.dark .bg-neutral-50 {
+  background-color: #1d1d21 !important;
+}
+
+html.dark .border-neutral-200,
+html.dark .border-neutral-300 {
+  border-color: #2a2a30 !important;
+}
+
+html.dark .border-neutral-100 {
+  border-color: #212126 !important;
+}
+
+html.dark .text-neutral-900,
+html.dark .text-neutral-950,
+html.dark .text-neutral-800 {
+  color: #f4f4f2 !important;
+}
+
+html.dark .text-neutral-700,
+html.dark .text-neutral-600 {
+  color: #d1d1cc !important;
+}
+
+html.dark .text-neutral-500,
+html.dark .text-neutral-400 {
+  color: #9a9a95 !important;
+}
+
+html.dark .border-neutral-900.bg-neutral-900.text-white {
+  background-color: #f4f4f2 !important;
+  border-color: #f4f4f2 !important;
+  color: #121212 !important;
+}
+
+html.dark .border-neutral-950.bg-neutral-950 {
+  background-color: #f4f4f2 !important;
+  color: #121212 !important;
+}
+
+html.dark input,
+html.dark select,
+html.dark textarea {
+  background-color: #1c1c20 !important;
+  border-color: #33333a !important;
+  color: #f4f4f2 !important;
 }

@@ -152,12 +152,12 @@ export function ContextControls({
         )}
       </div>
 
-      {/* Climate: Split Temperature & Rain Condition (F-05) */}
+      {/* Climate: Distinct Temperature Band & Atmospheric Precipitation */}
       <div className="flex flex-wrap items-center justify-between gap-4 pt-3 border-t border-neutral-100">
         <div className="flex flex-wrap items-center gap-4">
           {/* Temperature Levels (Strict Single-Select Radio Group) */}
           <div className="flex items-center gap-2">
-            <span id="temperature-group-label" className="text-[10px] uppercase tracking-wider text-neutral-400">
+            <span id="temperature-group-label" className="text-[10px] uppercase tracking-wider text-neutral-400 font-semibold">
               TEMPERATURE:
             </span>
             <div
@@ -167,14 +167,14 @@ export function ContextControls({
             >
               {(
                 [
-                  { id: 'cold', label: 'Cold' },
-                  { id: 'cool', label: 'Cool' },
-                  { id: 'mild', label: 'Mild' },
-                  { id: 'warm', label: 'Warm' },
-                  { id: 'hot', label: 'Hot' },
+                  { id: 'cold', label: 'Cold (<6°C)' },
+                  { id: 'cool', label: 'Cool (6–15°C)' },
+                  { id: 'mild', label: 'Mild (16–22°C)' },
+                  { id: 'warm', label: 'Warm (23–27°C)' },
+                  { id: 'hot', label: 'Hot (>27°C)' },
                 ] as const
               ).map((t) => {
-                const isSelected = temperatureLevel === t.id;
+                const isSelected = (temperatureLevel || weather || 'mild') === t.id;
                 return (
                   <button
                     key={t.id}
@@ -187,7 +187,7 @@ export function ContextControls({
                     }}
                     className={`px-2 py-0.5 uppercase text-[10px] border transition flex items-center gap-1 ${
                       isSelected
-                        ? 'border-neutral-900 bg-neutral-900 text-white font-semibold'
+                        ? 'border-neutral-900 bg-neutral-900 text-white font-semibold shadow-xs'
                         : 'border-neutral-200 bg-white text-neutral-600 hover:border-neutral-400'
                     }`}
                   >
@@ -199,10 +199,10 @@ export function ContextControls({
             </div>
           </div>
 
-          {/* Condition: Dry vs Rain (Strict Single-Select Radio Group) */}
+          {/* Condition: Mutually Exclusive Clear / Dry vs Rain / Wet */}
           <div className="flex items-center gap-2">
-            <span id="condition-group-label" className="text-[10px] uppercase tracking-wider text-neutral-400">
-              CONDITION:
+            <span id="condition-group-label" className="text-[10px] uppercase tracking-wider text-neutral-400 font-semibold">
+              PRECIPITATION:
             </span>
             <div
               role="radiogroup"
@@ -211,11 +211,11 @@ export function ContextControls({
             >
               {(
                 [
-                  { id: 'dry', label: 'Dry' },
-                  { id: 'rain', label: 'Rain' },
+                  { id: 'dry', label: 'Clear / Dry' },
+                  { id: 'rain', label: 'Rain / Wet' },
                 ] as const
               ).map((c) => {
-                const isSelected = weatherCondition === c.id;
+                const isSelected = (weatherCondition || (weather === 'rainy' ? 'rain' : 'dry')) === c.id;
                 return (
                   <button
                     key={c.id}
@@ -225,11 +225,11 @@ export function ContextControls({
                     onClick={() => {
                       if (onSelectWeatherCondition) onSelectWeatherCondition(c.id);
                       if (c.id === 'rain' && onSelectWeather) onSelectWeather('rainy');
-                      else if (c.id === 'dry' && onSelectWeather) onSelectWeather(temperatureLevel);
+                      else if (c.id === 'dry' && onSelectWeather) onSelectWeather(temperatureLevel || 'mild');
                     }}
-                    className={`px-2 py-0.5 uppercase text-[10px] border transition flex items-center gap-1 ${
+                    className={`px-2.5 py-0.5 uppercase text-[10px] border transition flex items-center gap-1 ${
                       isSelected
-                        ? 'border-neutral-900 bg-neutral-900 text-white font-semibold'
+                        ? 'border-neutral-900 bg-neutral-900 text-white font-semibold shadow-xs'
                         : 'border-neutral-200 bg-white text-neutral-600 hover:border-neutral-400'
                     }`}
                   >

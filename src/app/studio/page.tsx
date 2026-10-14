@@ -14,17 +14,8 @@ export default function StudioPage() {
 
   useEffect(() => {
     setMounted(true);
-    // Check environment feature flag or URL preview parameter
-    const envFlag = process.env.NEXT_PUBLIC_STUDIO_ENABLED === 'true';
-    const urlParams = typeof window !== 'undefined' ? new URLSearchParams(window.location.search) : null;
-    const previewOverride = urlParams?.get('preview') === '1' || urlParams?.get('studio') === 'true';
-    
-    // In dev mode or when flag/override is present, enable studio
-    if (process.env.NODE_ENV === 'development' || envFlag || previewOverride) {
-      setIsFeatureFlagActive(true);
-    } else {
-      setIsFeatureFlagActive(false);
-    }
+    // Studio is active by default for R2.0 spike demonstration
+    setIsFeatureFlagActive(true);
   }, []);
 
   const activeProfileOption: StudioProfileOption =
