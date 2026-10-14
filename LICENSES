@@ -1,0 +1,47 @@
+# VAEL 3D STUDIO — THIRD-PARTY AND ASSET LICENSES
+
+## 1. Proprietary / Self-Made Procedural 3D Assets
+All 3D mannequin geometries, hair meshes, facial hair components, garment silhouette archetypes, and custom GLSL/Three.js procedural materials in `src/components/studio/` were authored directly for the VAEL project.
+- License: Proprietary / Project-Internal (VAEL)
+- Commercial Use: Fully Permitted
+- Copyright: (c) 2026 VAEL Intelligence. All rights reserved.
+
+## 2. Open-Source Dependencies
+
+### three.js
+- Version: 0.170.0
+- Authors: Ricardo Cabello (mrdoob) and three.js authors
+- Source: https://github.com/mrdoob/three.js
+- License: MIT License
+- License Text:
+  Copyright (c) 2010-2024 three.js authors
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to deal
+  in the Software without restriction, including without limitation the rights
+  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+  The above copyright notice and this permission notice shall be included in all
+  copies or substantial portions of the Software.
+
+### @react-three/fiber
+- Version: 9.8.1
+- Authors: Paul Henschel and Poimandres contributors
+- Source: https://github.com/pmndrs/react-three-fiber
+- License: MIT License
+- License Text:
+  Copyright (c) 2019 Paul Henschel
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to deal
+  in the Software without restriction.
+
+### @react-three/drei
+- Version: 9.122.0
+- Authors: Paul Henschel and Poimandres contributors
+- Source: https://github.com/pmndrs/drei
+- License: MIT License
+- License Text:
+  Copyright (c) 2020 Paul Henschel
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to deal
+  in the Software without restriction.

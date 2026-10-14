@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
+import Link from 'next/link';
 import {
   Sparkles,
   ArrowRight,
@@ -450,6 +451,13 @@ export default function VaelShell() {
             <span className="font-editorial-mono text-xs px-2.5 py-1 bg-black text-white rounded-full">
               EARLY ACCESS
             </span>
+            <Link
+              href="/studio"
+              className="font-editorial-mono text-xs px-2.5 py-1 border border-neutral-300 hover:border-black text-neutral-800 hover:text-black rounded-full transition flex items-center gap-1"
+            >
+              <span>3D STUDIO</span>
+              <ArrowRight className="w-3 h-3" />
+            </Link>
           </div>
           <p className="text-xs uppercase tracking-widest text-neutral-500 mt-2 font-editorial-mono">
             Your style, interpreted.

@@ -1,0 +1,11 @@
+{
+  "timestamp": "2026-10-14T10:35:48.427Z",
+  "desktopFps": 61,
+  "throttledMobileFps": 61,
+  "targetFps": 60,
+  "dprCap": 1.5,
+  "canvasWidth": 1400,
+  "canvasHeight": 950,
+  "mp4Path": "reports/screenshots/studio-10s-capture.mp4",
+  "gifPath": "reports/screenshots/studio-10s-capture.gif"
+}

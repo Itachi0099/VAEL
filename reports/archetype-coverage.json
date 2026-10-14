@@ -1,0 +1,1707 @@
+{
+  "timestamp": "2026-10-14T10:35:32.350Z",
+  "totalGarments": 268,
+  "mappedTotal": 268,
+  "unmappedCount": 0,
+  "coveragePercentage": 100,
+  "archetypeCounts": {
+    "shirt": 32,
+    "polo": 4,
+    "knit": 18,
+    "hoodie": 3,
+    "tee": 3,
+    "trousers-wide": 17,
+    "jeans": 3,
+    "trousers-straight": 12,
+    "cargo": 2,
+    "shorts": 3,
+    "blazer": 11,
+    "coat": 10,
+    "jacket": 15,
+    "sneakers": 5,
+    "oxfords-derbies": 10,
+    "loafers": 9,
+    "boots": 10,
+    "sandals": 4,
+    "bag": 7,
+    "jewelry": 6,
+    "scarf": 2,
+    "belt": 2,
+    "small-accessory": 6,
+    "eyewear": 2,
+    "dress": 28,
+    "jumpsuit": 3,
+    "skirt": 30,
+    "heels": 4,
+    "evening-gown": 7
+  },
+  "unmappedGarments": [],
+  "archetypes": {
+    "shirt": [
+      {
+        "slug": "heavyweight-boxy-tee-offwhite",
+        "name": "Heavyweight Boxy Tee (Off-White)",
+        "subcategory": "t-shirt",
+        "formality": 1
+      },
+      {
+        "slug": "heavyweight-boxy-tee-black",
+        "name": "Heavyweight Boxy Tee (Faded Black)",
+        "subcategory": "t-shirt",
+        "formality": 1
+      },
+      {
+        "slug": "slub-linen-tee-natural",
+        "name": "Relaxed Slub Linen Tee",
+        "subcategory": "t-shirt",
+        "formality": 1
+      },
+      {
+        "slug": "relaxed-oxford-white",
+        "name": "Relaxed Oxford Button-Down Shirt",
+        "subcategory": "button-down",
+        "formality": 3
+      },
+      {
+        "slug": "classic-oxford-blue",
+        "name": "Classic Oxford Button-Down (Sky Blue)",
+        "subcategory": "button-down",
+        "formality": 3
+      },
+      {
+        "slug": "camp-collar-terracotta",
+        "name": "Tencel Camp-Collar Shirt",
+        "subcategory": "button-down",
+        "formality": 2
+      },
+      {
+        "slug": "poplin-point-collar-white",
+        "name": "Crisp Poplin Point Collar Shirt",
+        "subcategory": "dress-shirt",
+        "formality": 5
+      },
+      {
+        "slug": "ombre-flannel-overshirt",
+        "name": "Heavy Ombre Flannel Overshirt",
+        "subcategory": "overshirt",
+        "formality": 2
+      },
+      {
+        "slug": "linen-kurta-tunic-ecru",
+        "name": "Mandarin Collar Linen Tunic (Kurta)",
+        "subcategory": "tunic",
+        "formality": 3
+      },
+      {
+        "slug": "seersucker-shirt-navy",
+        "name": "Textured Seersucker Short-Sleeve Shirt",
+        "subcategory": "button-down",
+        "formality": 2
+      },
+      {
+        "slug": "silk-crepe-shirt-black",
+        "name": "Fluid Silk Crepe Evening Shirt",
+        "subcategory": "button-down",
+        "formality": 4
+      },
+      {
+        "slug": "boiled-wool-overshirt-charcoal",
+        "name": "Boiled Wool Snap Overshirt (Charcoal)",
+        "subcategory": "overshirt",
+        "formality": 3
+      },
+      {
+        "slug": "asymmetric-linen-tunic-black",
+        "name": "Asymmetric Raw-Hem Linen Tunic",
+        "subcategory": "tunic",
+        "formality": 3
+      },
+      {
+        "slug": "chamois-work-shirt-tobacco",
+        "name": "Brushed Chamois Work Shirt (Tobacco)",
+        "subcategory": "button-down",
+        "formality": 2
+      },
+      {
+        "slug": "crochet-shirt-sand",
+        "name": "Open-Weave Crochet Short-Sleeve Shirt",
+        "subcategory": "button-down",
+        "formality": 2
+      },
+      {
+        "slug": "band-collar-shirt-ivory",
+        "name": "Silk-Cotton Band Collar Shirt (Ivory)",
+        "subcategory": "button-down",
+        "formality": 4
+      },
+      {
+        "slug": "vintage-graphic-tee",
+        "name": "Faded Archival Graphic Tee",
+        "subcategory": "t-shirt",
+        "formality": 1
+      },
+      {
+        "slug": "linen-guayabera-white",
+        "name": "Traditional Pleated Guayabera (White)",
+        "subcategory": "button-down",
+        "formality": 2
+      },
+      {
+        "slug": "western-denim-shirt",
+        "name": "Washed 8oz Denim Western Shirt",
+        "subcategory": "button-down",
+        "formality": 2
+      },
+      {
+        "slug": "marcella-bib-tuxedo-shirt",
+        "name": "Marcella Piqué Bib Evening Tuxedo Shirt",
+        "subcategory": "dress-shirt",
+        "formality": 5
+      },
+      {
+        "slug": "asymmetric-draped-wrap-blouse-ecru",
+        "name": "Asymmetric Draped Georgette Wrap Blouse",
+        "subcategory": "blouse",
+        "formality": 3
+      },
+      {
+        "slug": "airy-modal-lounge-tee-black",
+        "name": "Airy Featherweight Modal Lounge Tee (Black)",
+        "subcategory": "t-shirt",
+        "formality": 1
+      },
+      {
+        "slug": "fluid-satin-evening-shirt-noir",
+        "name": "Fluid Silk-Satin Covered-Placket Evening Shirt (Noir)",
+        "subcategory": "dress-shirt",
+        "formality": 5
+      },
+      {
+        "slug": "fluid-camp-shirt-ecru",
+        "name": "Boxy Draped Silk-Tencel Camp-Collar Shirt (Ecru)",
+        "subcategory": "button-down",
+        "formality": 3
+      },
+      {
+        "slug": "silk-georgette-tie-neck-blouse-ivory",
+        "name": "Silk Georgette Lavallière Tie-Neck Blouse (Ivory)",
+        "subcategory": "blouse",
+        "formality": 4
+      },
+      {
+        "slug": "asymmetric-wrap-linen-top-natural",
+        "name": "Asymmetric Crossover Pure Linen Wrap Top (Natural Flax)",
+        "subcategory": "blouse",
+        "formality": 2
+      },
+      {
+        "slug": "poplin-peplum-blouse-white",
+        "name": "Architectural Fitted Cotton Poplin Peplum Blouse (Pure White)",
+        "subcategory": "blouse",
+        "formality": 3
+      },
+      {
+        "slug": "organza-overlay-formal-blouse-noir",
+        "name": "Silk Organza Sheer Overlay Formal Blouse (Noir)",
+        "subcategory": "blouse",
+        "formality": 5
+      },
+      {
+        "slug": "fluid-crepe-shell-top-terracotta",
+        "name": "Sleeveless Fluid Matte Crepe Shell Top (Terracotta)",
+        "subcategory": "blouse",
+        "formality": 3
+      },
+      {
+        "slug": "poplin-point-shirt-sky-blue",
+        "name": "Sky Blue 140s Cotton Poplin Point Collar Shirt",
+        "subcategory": "dress-shirt",
+        "formality": 4
+      },
+      {
+        "slug": "pique-marcella-formal-shirt-white",
+        "name": "Fine Piqué Marcella Formal Shirt (Pure White)",
+        "subcategory": "dress-shirt",
+        "formality": 5
+      },
+      {
+        "slug": "royal-twill-french-cuff-shirt-white",
+        "name": "Double-Cuff Royal Twill Dress Shirt (White)",
+        "subcategory": "dress-shirt",
+        "formality": 5
+      }
+    ],
+    "polo": [
+      {
+        "slug": "knit-polo-olive",
+        "name": "Textured Open-Collar Knit Polo",
+        "subcategory": "polo",
+        "formality": 3
+      },
+      {
+        "slug": "ribbed-polo-cream",
+        "name": "Ribbed Johnny Collar Polo (Cream)",
+        "subcategory": "polo",
+        "formality": 3
+      },
+      {
+        "slug": "waffle-henley-charcoal",
+        "name": "3-Button Waffle Henley (Charcoal)",
+        "subcategory": "henley",
+        "formality": 2
+      },
+      {
+        "slug": "fluid-open-weave-shirt-white",
+        "name": "Open-Weave Cotton-Linen Knit Resort Shirt (Optic White)",
+        "subcategory": "polo",
+        "formality": 3
+      }
+    ],
+    "knit": [
+      {
+        "slug": "merino-cashmere-charcoal",
+        "name": "Fine Merino Cashmere Crewneck",
+        "subcategory": "knitwear",
+        "formality": 3
+      },
+      {
+        "slug": "mockneck-black",
+        "name": "Minimal Ribbed Mock Neck",
+        "subcategory": "knitwear",
+        "formality": 3
+      },
+      {
+        "slug": "rollneck-merino-camel",
+        "name": "Merino Wool Rollneck (Camel)",
+        "subcategory": "knitwear",
+        "formality": 3
+      },
+      {
+        "slug": "cable-knit-cream",
+        "name": "Heavy Fisherman Cable-Knit Sweater",
+        "subcategory": "knitwear",
+        "formality": 2
+      },
+      {
+        "slug": "mohair-cardigan-olive",
+        "name": "Brushed Mohair Cardigan (Olive Melange)",
+        "subcategory": "knitwear",
+        "formality": 2
+      },
+      {
+        "slug": "waffle-thermal-cream",
+        "name": "Heavy Waffle Thermal Longsleeve",
+        "subcategory": "longsleeve",
+        "formality": 1
+      },
+      {
+        "slug": "breton-stripe-longsleeve",
+        "name": "Classic Nautical Breton Longsleeve",
+        "subcategory": "longsleeve",
+        "formality": 2
+      },
+      {
+        "slug": "merino-knit-vest-slate",
+        "name": "Sleeveless Merino Knit Vest (Slate)",
+        "subcategory": "knitwear",
+        "formality": 3
+      },
+      {
+        "slug": "alpaca-crewneck-forest",
+        "name": "Brushed Baby Alpaca Crewneck (Forest Green)",
+        "subcategory": "knitwear",
+        "formality": 3
+      },
+      {
+        "slug": "technical-articulated-baselayer",
+        "name": "Merino-Synthetic Articulated Baselayer",
+        "subcategory": "longsleeve",
+        "formality": 1
+      },
+      {
+        "slug": "boucle-crewneck-taupe",
+        "name": "Textured Bouclé Crewneck Sweater (Taupe)",
+        "subcategory": "knitwear",
+        "formality": 3
+      },
+      {
+        "slug": "sweetheart-ribbed-knit-top-black",
+        "name": "Sculpted Sweetheart-Neckline Fine Ribbed Top (Black)",
+        "subcategory": "knitwear",
+        "formality": 3
+      },
+      {
+        "slug": "cashmere-silk-mockneck-top-camel",
+        "name": "Fine-Gauge Cashmere-Silk Ribbed Mockneck (Warm Camel)",
+        "subcategory": "knitwear",
+        "formality": 3
+      },
+      {
+        "slug": "merino-ballet-wrap-top-oatmeal",
+        "name": "Fine Merino Wool Ballet Wrap Top (Oatmeal Melange)",
+        "subcategory": "knitwear",
+        "formality": 3
+      },
+      {
+        "slug": "off-shoulder-evening-knit-top-black",
+        "name": "Fold-Over Off-The-Shoulder Evening Knit Top (Black)",
+        "subcategory": "knitwear",
+        "formality": 4
+      },
+      {
+        "slug": "fine-silk-cashmere-crew-charcoal",
+        "name": "Fine-Gauge Silk-Cashmere Knit Crew (Charcoal)",
+        "subcategory": "knitwear",
+        "formality": 4
+      },
+      {
+        "slug": "silk-merino-knit-polo-navy",
+        "name": "Long-Sleeve Silk-Merino Knit Polo (Navy)",
+        "subcategory": "knitwear",
+        "formality": 4
+      },
+      {
+        "slug": "superfine-merino-turtleneck-black",
+        "name": "Superfine Merino 24-Gauge Turtleneck (Black)",
+        "subcategory": "knitwear",
+        "formality": 4
+      }
+    ],
+    "hoodie": [
+      {
+        "slug": "heavy-hoodie-grey",
+        "name": "500GSM Loopback Oversized Hoodie",
+        "subcategory": "hoodie",
+        "formality": 1
+      },
+      {
+        "slug": "zip-hoodie-washed-black",
+        "name": "Boxy Cropped Zip Hoodie (Washed Black)",
+        "subcategory": "hoodie",
+        "formality": 1
+      },
+      {
+        "slug": "vintage-crewneck-navy",
+        "name": "Vintage V-Insert Sweatshirt (Faded Navy)",
+        "subcategory": "sweatshirt",
+        "formality": 1
+      }
+    ],
+    "tee": [
+      {
+        "slug": "ribbed-tank-white",
+        "name": "Fine Ribbed Athletic Tank (Chalk White)",
+        "subcategory": "tank",
+        "formality": 1
+      },
+      {
+        "slug": "silk-crepe-camisole-ivory",
+        "name": "Bias-Cut Silk Crepe Camisole Top",
+        "subcategory": "camisole",
+        "formality": 3
+      },
+      {
+        "slug": "draped-cowl-satin-camisole-champagne",
+        "name": "Bias-Cut Draped Cowl-Neck Satin Camisole (Champagne)",
+        "subcategory": "camisole",
+        "formality": 4
+      }
+    ],
+    "trousers-wide": [
+      {
+        "slug": "wide-pleated-trousers-black",
+        "name": "Double-Pleated Wide-Leg Trousers",
+        "subcategory": "trousers",
+        "formality": 3
+      },
+      {
+        "slug": "double-knee-carpenter-tan",
+        "name": "Relaxed Double-Knee Carpenter Pants",
+        "subcategory": "pants",
+        "formality": 1
+      },
+      {
+        "slug": "corduroy-trousers-olive",
+        "name": "Wide-Wale Pleated Corduroy Trousers",
+        "subcategory": "trousers",
+        "formality": 3
+      },
+      {
+        "slug": "linen-trousers-ecru",
+        "name": "Relaxed Linen Drawstring Trousers",
+        "subcategory": "trousers",
+        "formality": 2
+      },
+      {
+        "slug": "gurkha-trousers-olive",
+        "name": "Double-Buckle Gurkha Trousers (Olive)",
+        "subcategory": "trousers",
+        "formality": 3
+      },
+      {
+        "slug": "fluid-crepe-trousers-navy",
+        "name": "Fluid Crepe Drawstring Trousers",
+        "subcategory": "trousers",
+        "formality": 3
+      },
+      {
+        "slug": "pleated-wool-culotte-black",
+        "name": "Architectural Pleated Wool Culotte / Midi",
+        "subcategory": "trousers",
+        "formality": 3
+      },
+      {
+        "slug": "khadi-cotton-trousers-white",
+        "name": "Handwoven Khadi Cotton Lounge Trousers",
+        "subcategory": "trousers",
+        "formality": 3
+      },
+      {
+        "slug": "ecru-painter-pants",
+        "name": "Ecru Bull Denim Painter Trousers",
+        "subcategory": "pants",
+        "formality": 2
+      },
+      {
+        "slug": "ripstop-parachute-pants-olive",
+        "name": "Baggy Ripstop Parachute Pants (Olive)",
+        "subcategory": "pants",
+        "formality": 1
+      },
+      {
+        "slug": "high-rise-fluid-trousers-camel",
+        "name": "High-Rise Fluid Pleated Trousers (Camel)",
+        "subcategory": "trousers",
+        "formality": 3
+      },
+      {
+        "slug": "thermal-waffle-lounge-pants-charcoal",
+        "name": "Heavy Thermal Waffle Lounge Pants (Charcoal)",
+        "subcategory": "trousers",
+        "formality": 1
+      },
+      {
+        "slug": "high-rise-wool-trousers-black",
+        "name": "High-Rise Fluid Wide-Leg Wool Trousers (Black)",
+        "subcategory": "trousers",
+        "formality": 4
+      },
+      {
+        "slug": "fluid-drape-trousers-taupe",
+        "name": "Double-Pleat Fluid Drape Trousers (Warm Taupe)",
+        "subcategory": "trousers",
+        "formality": 3
+      },
+      {
+        "slug": "fluid-crepe-evening-trousers-black",
+        "name": "High-Waist Fluid Wool Crepe Pleated Evening Trousers (Black)",
+        "subcategory": "trousers",
+        "formality": 5
+      },
+      {
+        "slug": "fluid-linen-wide-trousers-sand",
+        "name": "Fluid Double-Pleat Pure Linen Wide Trousers (Natural Sand)",
+        "subcategory": "trousers",
+        "formality": 3
+      },
+      {
+        "slug": "fluid-heavy-flannel-trousers-charcoal",
+        "name": "Heavy Pleated Flannel Wide-Drape Trousers (Charcoal Melange)",
+        "subcategory": "trousers",
+        "formality": 4
+      }
+    ],
+    "jeans": [
+      {
+        "slug": "selvedge-denim-raw-indigo",
+        "name": "Straight-Leg 14oz Selvedge Denim",
+        "subcategory": "jeans",
+        "formality": 2
+      },
+      {
+        "slug": "washed-black-loose-denim",
+        "name": "Washed Black Loose-Fit Denim",
+        "subcategory": "jeans",
+        "formality": 2
+      },
+      {
+        "slug": "vintage-faded-blue-jeans",
+        "name": "90s Relaxed Faded Blue Jeans",
+        "subcategory": "jeans",
+        "formality": 1
+      }
+    ],
+    "trousers-straight": [
+      {
+        "slug": "tailored-slacks-charcoal",
+        "name": "Flat-Front Tailored Wool Slacks",
+        "subcategory": "trousers",
+        "formality": 4
+      },
+      {
+        "slug": "tapered-chinos-khaki",
+        "name": "Mid-Rise Tapered Chinos (British Khaki)",
+        "subcategory": "chinos",
+        "formality": 2
+      },
+      {
+        "slug": "barathea-tuxedo-trousers",
+        "name": "Barathea Wool Tuxedo Trousers with Satin Stripe",
+        "subcategory": "trousers",
+        "formality": 5
+      },
+      {
+        "slug": "lambskin-trousers-black",
+        "name": "Straight-Leg Lambskin Leather Trousers",
+        "subcategory": "pants",
+        "formality": 3
+      },
+      {
+        "slug": "flannel-slacks-light-grey",
+        "name": "Single-Pleat Wool Flannel Slacks (Light Grey)",
+        "subcategory": "trousers",
+        "formality": 4
+      },
+      {
+        "slug": "herringbone-tweed-trousers-brown",
+        "name": "Herringbone Tweed Trousers (Mocha Brown)",
+        "subcategory": "trousers",
+        "formality": 3
+      },
+      {
+        "slug": "tricot-track-pants-black",
+        "name": "Straight-Leg Tricot Track Pants with Tonal Stripe",
+        "subcategory": "pants",
+        "formality": 1
+      },
+      {
+        "slug": "chalkstripe-slacks-navy",
+        "name": "Fine Chalkstripe Wool Trousers (Navy)",
+        "subcategory": "trousers",
+        "formality": 4
+      },
+      {
+        "slug": "seersucker-trousers-sky-blue",
+        "name": "Pleated Seersucker Summer Trousers",
+        "subcategory": "trousers",
+        "formality": 2
+      },
+      {
+        "slug": "cropped-ankle-trousers-black",
+        "name": "Clean Ankle-Cropped Trousers (Black)",
+        "subcategory": "trousers",
+        "formality": 3
+      },
+      {
+        "slug": "tropical-wool-trousers-charcoal",
+        "name": "Tropical-Weight High-Twist Wool Trousers (Charcoal)",
+        "subcategory": "trousers",
+        "formality": 4
+      },
+      {
+        "slug": "tailored-cotton-linen-trousers-sand",
+        "name": "Tailored Cotton-Linen Dress Trousers (Sand)",
+        "subcategory": "trousers",
+        "formality": 4
+      }
+    ],
+    "cargo": [
+      {
+        "slug": "articulated-cargos-black",
+        "name": "Articulated Technical Cargo Pants",
+        "subcategory": "cargo",
+        "formality": 2
+      },
+      {
+        "slug": "loopback-sweatpants-grey",
+        "name": "Heavyweight Loopback Sweatpants",
+        "subcategory": "sweatpants",
+        "formality": 1
+      }
+    ],
+    "shorts": [
+      {
+        "slug": "pleated-shorts-navy",
+        "name": "Pleated Linen-Cotton Shorts (Navy)",
+        "subcategory": "shorts",
+        "formality": 2
+      },
+      {
+        "slug": "sweat-shorts-black",
+        "name": "Heavy Cotton French Terry Sweat Shorts",
+        "subcategory": "shorts",
+        "formality": 1
+      },
+      {
+        "slug": "vintage-cutoff-denim-shorts",
+        "name": "Vintage Cut-Off Denim Shorts",
+        "subcategory": "shorts",
+        "formality": 1
+      }
+    ],
+    "blazer": [
+      {
+        "slug": "deconstructed-blazer-charcoal",
+        "name": "Deconstructed Wool Blazer",
+        "subcategory": "blazer",
+        "formality": 3
+      },
+      {
+        "slug": "dinner-jacket-midnight-navy",
+        "name": "Satin Peak-Lapel Dinner Jacket",
+        "subcategory": "tuxedo-jacket",
+        "formality": 5
+      },
+      {
+        "slug": "harris-tweed-blazer-brown",
+        "name": "Harris Tweed 2-Button Blazer (Heather Brown)",
+        "subcategory": "blazer",
+        "formality": 4
+      },
+      {
+        "slug": "unstructured-linen-blazer-sand",
+        "name": "Unstructured Washed Linen Blazer (Sand)",
+        "subcategory": "blazer",
+        "formality": 3
+      },
+      {
+        "slug": "hourglass-tailored-blazer-black",
+        "name": "Waist-defined Tailored Wool Blazer",
+        "subcategory": "blazer",
+        "formality": 4
+      },
+      {
+        "slug": "hourglass-wool-blazer-black",
+        "name": "Waist-defined Single-Breasted Wool Crepe Blazer (Black)",
+        "subcategory": "blazer",
+        "formality": 4
+      },
+      {
+        "slug": "unstructured-db-jacket-taupe",
+        "name": "Unstructured Double-Breasted Fluid Jacket (Warm Taupe)",
+        "subcategory": "blazer",
+        "formality": 3
+      },
+      {
+        "slug": "chalkstripe-suit-jacket-charcoal",
+        "name": "Tailored 2-Button Chalkstripe Wool Suit Jacket (Charcoal)",
+        "subcategory": "blazer",
+        "formality": 4
+      },
+      {
+        "slug": "soft-shawl-tuxedo-jacket-black",
+        "name": "Soft-Tailored Shawl-Collar Crepe Tuxedo Jacket (Black)",
+        "subcategory": "blazer",
+        "formality": 5
+      },
+      {
+        "slug": "unlined-tropical-hopsack-blazer-navy",
+        "name": "Unlined Tropical Hopsack Wool Blazer (Deep Navy)",
+        "subcategory": "blazer",
+        "formality": 4
+      },
+      {
+        "slug": "unlined-linen-silk-blazer-tobacco",
+        "name": "Unlined Linen-Silk-Wool Summer Blazer (Tobacco)",
+        "subcategory": "blazer",
+        "formality": 4
+      }
+    ],
+    "coat": [
+      {
+        "slug": "double-breasted-overcoat-camel",
+        "name": "Double-Breasted Wool Overcoat",
+        "subcategory": "overcoat",
+        "formality": 4
+      },
+      {
+        "slug": "gabardine-trench-khaki",
+        "name": "Belted Gabardine Trench Coat",
+        "subcategory": "trench",
+        "formality": 3
+      },
+      {
+        "slug": "bonded-mac-coat-black",
+        "name": "Minimalist Bonded Cotton Mac Coat",
+        "subcategory": "overcoat",
+        "formality": 4
+      },
+      {
+        "slug": "cashmere-car-coat-navy",
+        "name": "Single-Breasted Cashmere Car Coat (Navy)",
+        "subcategory": "overcoat",
+        "formality": 4
+      },
+      {
+        "slug": "houndstooth-raglan-coat-grey",
+        "name": "Oversized Houndstooth Raglan Coat",
+        "subcategory": "overcoat",
+        "formality": 4
+      },
+      {
+        "slug": "belted-wool-wrap-coat-camel",
+        "name": "Belted Double-Faced Cashmere-Wool Wrap Coat (Camel)",
+        "subcategory": "overcoat",
+        "formality": 2
+      },
+      {
+        "slug": "waterproof-gabardine-trench-khaki",
+        "name": "Double-Breasted Waterproof Gabardine Trench Coat (Honey Khaki)",
+        "subcategory": "trench",
+        "formality": 2
+      },
+      {
+        "slug": "bonded-wool-storm-coat-navy",
+        "name": "Waterproof Bonded Wool Commuter Storm Coat (Navy)",
+        "subcategory": "overcoat",
+        "formality": 2
+      },
+      {
+        "slug": "cocoon-wool-overcoat-grey",
+        "name": "Oversized Cocoon Silhouette Wool Overcoat (Heather Grey)",
+        "subcategory": "overcoat",
+        "formality": 3
+      },
+      {
+        "slug": "fluid-tunic-overcoat-black",
+        "name": "Longline Architectural Fluid Wool Tunic Coat (Black)",
+        "subcategory": "overcoat",
+        "formality": 5
+      }
+    ],
+    "jacket": [
+      {
+        "slug": "chore-coat-duck-tan",
+        "name": "Duck Canvas Chore Coat",
+        "subcategory": "jacket",
+        "formality": 2
+      },
+      {
+        "slug": "cropped-leather-biker-black",
+        "name": "Cropped Calfskin Leather Jacket",
+        "subcategory": "leather-jacket",
+        "formality": 3
+      },
+      {
+        "slug": "tech-shell-black",
+        "name": "3-Layer Weatherproof Technical Shell",
+        "subcategory": "jacket",
+        "formality": 2
+      },
+      {
+        "slug": "harrington-jacket-tan",
+        "name": "Classic G9 Harrington Jacket (Tan)",
+        "subcategory": "jacket",
+        "formality": 2
+      },
+      {
+        "slug": "matte-down-puffer-black",
+        "name": "Matte Lightweight Down Puffer",
+        "subcategory": "jacket",
+        "formality": 1
+      },
+      {
+        "slug": "retro-sherpa-fleece-jacket",
+        "name": "Deep-Pile Retro Fleece Jacket",
+        "subcategory": "jacket",
+        "formality": 1
+      },
+      {
+        "slug": "type3-denim-trucker-raw",
+        "name": "Type III Selvedge Denim Trucker Jacket",
+        "subcategory": "jacket",
+        "formality": 2
+      },
+      {
+        "slug": "waxed-field-jacket-olive",
+        "name": "Waxed Cotton Country Field Jacket (Olive)",
+        "subcategory": "jacket",
+        "formality": 2
+      },
+      {
+        "slug": "ma1-flight-bomber-sage",
+        "name": "MA-1 Flight Bomber Jacket (Sage Green)",
+        "subcategory": "jacket",
+        "formality": 1
+      },
+      {
+        "slug": "noragi-jacket-charcoal",
+        "name": "Minimalist Noragi Jacket (Charcoal Wool)",
+        "subcategory": "jacket",
+        "formality": 3
+      },
+      {
+        "slug": "nylon-coach-jacket-black",
+        "name": "Snap-Button Nylon Coach Jacket",
+        "subcategory": "jacket",
+        "formality": 1
+      },
+      {
+        "slug": "m65-field-jacket-olive",
+        "name": "Vintage M-65 Military Field Coat",
+        "subcategory": "jacket",
+        "formality": 2
+      },
+      {
+        "slug": "chunky-corduroy-overshirt-tan",
+        "name": "Chunky 6-Wale Corduroy Overshirt Jacket",
+        "subcategory": "overshirt",
+        "formality": 2
+      },
+      {
+        "slug": "raw-silk-bandhgala-black",
+        "name": "Bespoke Raw Silk Bandhgala / Sherwani Jacket",
+        "subcategory": "jacket",
+        "formality": 5
+      },
+      {
+        "slug": "cropped-zip-blouson-black",
+        "name": "Cropped Zip Blouson in Tropical Wool",
+        "subcategory": "jacket",
+        "formality": 3
+      }
+    ],
+    "sneakers": [
+      {
+        "slug": "minimal-leather-sneaker-white",
+        "name": "Minimal Calfskin Low-Top Sneakers",
+        "subcategory": "sneakers",
+        "formality": 2
+      },
+      {
+        "slug": "retro-court-trainers",
+        "name": "Vintage Suede & Mesh Court Trainers",
+        "subcategory": "sneakers",
+        "formality": 1
+      },
+      {
+        "slug": "goretex-trail-runner-black",
+        "name": "All-Terrain Gore-Tex Trail Runner",
+        "subcategory": "sneakers",
+        "formality": 1
+      },
+      {
+        "slug": "canvas-skate-shoes-black",
+        "name": "Low-Profile Canvas Skate Shoes (Black/White)",
+        "subcategory": "sneakers",
+        "formality": 1
+      },
+      {
+        "slug": "retro-suede-nylon-runners-white",
+        "name": "Low-Profile Retro Suede & Nylon Runners",
+        "subcategory": "sneaker",
+        "formality": 2
+      }
+    ],
+    "oxfords-derbies": [
+      {
+        "slug": "chunky-derbies-black",
+        "name": "Commando-Sole Leather Derbies",
+        "subcategory": "derbies",
+        "formality": 3
+      },
+      {
+        "slug": "formal-captoe-oxford-black",
+        "name": "Cap-Toe Wholecut Oxford Shoes",
+        "subcategory": "dress-shoes",
+        "formality": 5
+      },
+      {
+        "slug": "double-monk-strap-brown",
+        "name": "Double Monk-Strap Dress Shoes (Burnished Brown)",
+        "subcategory": "dress-shoes",
+        "formality": 4
+      },
+      {
+        "slug": "patent-evening-slippers-black",
+        "name": "Patent Leather Evening Slippers",
+        "subcategory": "dress-shoes",
+        "formality": 5
+      },
+      {
+        "slug": "fluid-knit-hybrid-derbies-black",
+        "name": "Technical Knit & Calfskin Hybrid Derbies (Black)",
+        "subcategory": "oxfords",
+        "formality": 3
+      },
+      {
+        "slug": "fluid-commando-monk-strap-black",
+        "name": "Single-Strap Minimalist Monk Shoes on Commando Sole (Black)",
+        "subcategory": "monk-straps",
+        "formality": 4
+      },
+      {
+        "slug": "cap-toe-oxfords-black",
+        "name": "Full-Grain Leather Cap-Toe Oxfords (Black)",
+        "subcategory": "oxford",
+        "formality": 5
+      },
+      {
+        "slug": "plain-toe-derbies-espresso",
+        "name": "Burnished Calfskin Plain-Toe Derbies (Espresso)",
+        "subcategory": "derby",
+        "formality": 4
+      },
+      {
+        "slug": "split-toe-derbies-black",
+        "name": "Split-Toe Apron Derbies (Black Boxcalf)",
+        "subcategory": "derby",
+        "formality": 4
+      },
+      {
+        "slug": "single-monkstrap-shoes-tan",
+        "name": "Single Monkstrap Dress Shoes (Warm Tan)",
+        "subcategory": "monkstrap",
+        "formality": 4
+      }
+    ],
+    "loafers": [
+      {
+        "slug": "penny-loafer-burgundy",
+        "name": "Cordovan Penny Loafers",
+        "subcategory": "loafers",
+        "formality": 4
+      },
+      {
+        "slug": "horsebit-loafer-black",
+        "name": "Gold-Hardware Horsebit Loafers (Black)",
+        "subcategory": "loafers",
+        "formality": 4
+      },
+      {
+        "slug": "backless-leather-mules-black",
+        "name": "Square-Toe Backless Leather Mules",
+        "subcategory": "mules",
+        "formality": 3
+      },
+      {
+        "slug": "suede-ergonomic-clogs-taupe",
+        "name": "Suede Ergonomic Closed-Toe Clogs",
+        "subcategory": "clog",
+        "formality": 1
+      },
+      {
+        "slug": "fluid-woven-leather-loafers-black",
+        "name": "Breathable Hand-Woven Nappa Leather Loafers (Black)",
+        "subcategory": "loafers",
+        "formality": 4
+      },
+      {
+        "slug": "fluid-evening-venetian-slippers-black",
+        "name": "Soft Calfskin Formal Evening Venetian Loafers (Black)",
+        "subcategory": "loafers",
+        "formality": 5
+      },
+      {
+        "slug": "penny-loafers-suede-chocolate",
+        "name": "Dark Chocolate Suede Penny Loafers",
+        "subcategory": "loafers",
+        "formality": 4
+      },
+      {
+        "slug": "tassel-loafers-black-calf",
+        "name": "Polished Calfskin Tassel Loafers (Black)",
+        "subcategory": "loafers",
+        "formality": 4
+      },
+      {
+        "slug": "venetian-dress-loafers-tobacco",
+        "name": "Belgian Linen Venetian Dress Loafers (Tobacco)",
+        "subcategory": "loafers",
+        "formality": 4
+      }
+    ],
+    "boots": [
+      {
+        "slug": "chelsea-boots-suede-tobacco",
+        "name": "Tobacco Suede Chelsea Boots",
+        "subcategory": "boots",
+        "formality": 3
+      },
+      {
+        "slug": "service-boots-brown",
+        "name": "Goodyear-Welted Service Boots",
+        "subcategory": "boots",
+        "formality": 2
+      },
+      {
+        "slug": "lug-combat-boots-black",
+        "name": "8-Eyelet Lug-Sole Combat Boots",
+        "subcategory": "boots",
+        "formality": 2
+      },
+      {
+        "slug": "desert-boots-beeswax",
+        "name": "Original Crepe-Sole Desert Boots (Beeswax Leather)",
+        "subcategory": "boots",
+        "formality": 2
+      },
+      {
+        "slug": "split-toe-tabi-boots-black",
+        "name": "Split-Toe Tabi Ankle Boots (Black)",
+        "subcategory": "boots",
+        "formality": 4
+      },
+      {
+        "slug": "waterproof-lug-sole-chelsea-boots-black",
+        "name": "Commando Lug-Sole Waterproof Chelsea Boots",
+        "subcategory": "boot",
+        "formality": 2
+      },
+      {
+        "slug": "straight-shaft-riding-boots-brown",
+        "name": "Straight-Shaft Pull-On Leather Riding Boots",
+        "subcategory": "boot",
+        "formality": 3
+      },
+      {
+        "slug": "block-heel-calfskin-boots-black",
+        "name": "50mm Block-Heel Glove Calfskin Ankle Boots (Black)",
+        "subcategory": "boots",
+        "formality": 3
+      },
+      {
+        "slug": "waterproof-tall-riding-boots-black",
+        "name": "Waterproof Treated Leather Tall Riding Boots (Black)",
+        "subcategory": "boots",
+        "formality": 3
+      },
+      {
+        "slug": "fluid-weatherproof-chelsea-boots-black",
+        "name": "Weatherproof Sculpted Fluid Chelsea Boots (Pitch Black)",
+        "subcategory": "boots",
+        "formality": 4
+      }
+    ],
+    "sandals": [
+      {
+        "slug": "suede-espadrilles-sand",
+        "name": "Jute-Sole Suede Espadrilles (Sand)",
+        "subcategory": "sandals",
+        "formality": 2
+      },
+      {
+        "slug": "fisherman-sandals-espresso",
+        "name": "Woven Leather Fisherman Sandals (Espresso)",
+        "subcategory": "sandals",
+        "formality": 2
+      },
+      {
+        "slug": "minimalist-leather-flat-sandals-tan",
+        "name": "Minimalist Asymmetric Leather Flat Sandals",
+        "subcategory": "sandal",
+        "formality": 2
+      },
+      {
+        "slug": "fluid-leather-slide-mules-espresso",
+        "name": "Minimalist Asymmetric Padded Leather Slide Mules (Espresso)",
+        "subcategory": "sandals",
+        "formality": 3
+      }
+    ],
+    "bag": [
+      {
+        "slug": "architectural-leather-tote",
+        "name": "Structured Architectural Leather Tote",
+        "subcategory": "bag",
+        "formality": 3
+      },
+      {
+        "slug": "technical-crossbody-bag-black",
+        "name": "Technical Ergonomic Crossbody Sling Bag",
+        "subcategory": "bag",
+        "formality": 1
+      },
+      {
+        "slug": "canvas-weekender-duffel-tan",
+        "name": "Heavy 18oz Duck Canvas Weekender Duffel",
+        "subcategory": "bag",
+        "formality": 2
+      },
+      {
+        "slug": "sculpted-leather-shoulder-bag-black",
+        "name": "Sculpted Minimalist Leather Shoulder Bag",
+        "subcategory": "bag",
+        "formality": 3
+      },
+      {
+        "slug": "canvas-saddle-leather-tote-ecru",
+        "name": "Architectural Canvas & Saddle Leather Tote",
+        "subcategory": "bag",
+        "formality": 2
+      },
+      {
+        "slug": "box-calf-structured-tote-black",
+        "name": "Architectural Box-Calf Minimal Tote Bag (Black)",
+        "subcategory": "bag",
+        "formality": 3
+      },
+      {
+        "slug": "silk-satin-evening-clutch-black",
+        "name": "Structured Silk Satin Box Evening Clutch (Black)",
+        "subcategory": "bag",
+        "formality": 5
+      }
+    ],
+    "jewelry": [
+      {
+        "slug": "silver-signet-ring",
+        "name": "Brushed Sterling Silver Signet Ring",
+        "subcategory": "jewelry",
+        "formality": 3
+      },
+      {
+        "slug": "vintage-dress-watch-gold",
+        "name": "Vintage Dress Watch with Alligator Strap",
+        "subcategory": "watch",
+        "formality": 4
+      },
+      {
+        "slug": "silver-curb-chain-4mm",
+        "name": "4mm Solid Sterling Silver Curb Chain",
+        "subcategory": "jewelry",
+        "formality": 2
+      },
+      {
+        "slug": "chunky-gold-hoop-earrings-18k",
+        "name": "18k Vermeil Hollow Bold Hoop Earrings",
+        "subcategory": "jewelry",
+        "formality": 3
+      },
+      {
+        "slug": "gold-vermeil-huggie-hoops",
+        "name": "18k Gold Vermeil Architectural Huggie Hoops",
+        "subcategory": "jewelry",
+        "formality": 3
+      },
+      {
+        "slug": "baroque-pearl-drop-earrings",
+        "name": "Baroque Freshwater Pearl Drop Earrings",
+        "subcategory": "jewelry",
+        "formality": 4
+      }
+    ],
+    "scarf": [
+      {
+        "slug": "lambswool-scarf-charcoal",
+        "name": "Fringed Lambswool Scarf (Charcoal)",
+        "subcategory": "scarf",
+        "formality": 3
+      },
+      {
+        "slug": "printed-silk-twill-scarf-70cm",
+        "name": "Printed Silk Twill Square Scarf (70cm)",
+        "subcategory": "scarf",
+        "formality": 4
+      }
+    ],
+    "belt": [
+      {
+        "slug": "bridle-leather-belt-brass",
+        "name": "1.25\" Vegetable-Tanned Bridle Leather Belt",
+        "subcategory": "belt",
+        "formality": 3
+      },
+      {
+        "slug": "fine-calfskin-belt-gold-buckle-black",
+        "name": "25mm Fine Calfskin Belt with Chiseled Brass Buckle",
+        "subcategory": "belt",
+        "formality": 4
+      }
+    ],
+    "small-accessory": [
+      {
+        "slug": "ribbed-merino-beanie-black",
+        "name": "Ribbed Merino Fisherman Beanie (Black)",
+        "subcategory": "hat",
+        "formality": 1
+      },
+      {
+        "slug": "silk-pocket-square-burgundy",
+        "name": "Printed Silk Twill Pocket Square",
+        "subcategory": "pocket-square",
+        "formality": 4
+      },
+      {
+        "slug": "unstructured-ballcap-olive",
+        "name": "Unstructured 6-Panel Dad Cap (Washed Olive)",
+        "subcategory": "hat",
+        "formality": 1
+      },
+      {
+        "slug": "panama-hat-straw",
+        "name": "Genuine Handwoven Toquilla Straw Panama Hat",
+        "subcategory": "hat",
+        "formality": 3
+      },
+      {
+        "slug": "deerskin-gloves-black",
+        "name": "Cashmere-Lined Deerskin Leather Gloves",
+        "subcategory": "gloves",
+        "formality": 4
+      },
+      {
+        "slug": "thermal-wool-tights-black",
+        "name": "80D Matte Opaque Thermal Wool Tights (Black)",
+        "subcategory": "hosiery",
+        "formality": 3
+      }
+    ],
+    "eyewear": [
+      {
+        "slug": "acetate-sunglasses-tortoise",
+        "name": "Architectural Acetate Sunglasses (Dark Tortoise)",
+        "subcategory": "eyewear",
+        "formality": 3
+      },
+      {
+        "slug": "cat-eye-acetate-sunglasses-black",
+        "name": "Beveled Cat-Eye Bio-Acetate Sunglasses",
+        "subcategory": "sunglasses",
+        "formality": 3
+      }
+    ],
+    "dress": [
+      {
+        "slug": "bias-cut-silk-slip-dress-black",
+        "name": "Bias-Cut Silk Charmeuse Slip Dress",
+        "subcategory": "dress",
+        "formality": 4
+      },
+      {
+        "slug": "architectural-poplin-shirt-dress-white",
+        "name": "Architectural Poplin Midi Shirt Dress",
+        "subcategory": "dress",
+        "formality": 3
+      },
+      {
+        "slug": "ribbed-merino-midi-dress-olive",
+        "name": "Fine-Rib Merino Wool Midi Dress",
+        "subcategory": "dress",
+        "formality": 3
+      },
+      {
+        "slug": "french-linen-wrap-dress-terracotta",
+        "name": "Washed French Linen Wrap Dress",
+        "subcategory": "dress",
+        "formality": 2
+      },
+      {
+        "slug": "sculpted-column-evening-gown-burgundy",
+        "name": "Sculpted Column Evening Gown (Burgundy)",
+        "subcategory": "dress",
+        "formality": 5
+      },
+      {
+        "slug": "tiered-georgette-midi-dress-print",
+        "name": "Floral Print Tiered Georgette Midi Dress",
+        "subcategory": "dress",
+        "formality": 2
+      },
+      {
+        "slug": "cashmere-sweater-dress-charcoal",
+        "name": "Oversized Cashmere Turtleneck Sweater Dress",
+        "subcategory": "dress",
+        "formality": 3
+      },
+      {
+        "slug": "merino-rib-maxi-dress-black",
+        "name": "Fine-Rib Long-Sleeve Merino Wool Maxi Dress (Black)",
+        "subcategory": "maxi-dress",
+        "formality": 4
+      },
+      {
+        "slug": "tiered-silk-chiffon-maxi-dress",
+        "name": "Long-Sleeve Tiered Silk Chiffon Maxi Dress (Muted Floral)",
+        "subcategory": "maxi-dress",
+        "formality": 4
+      },
+      {
+        "slug": "high-neck-poplin-maxi-dress-olive",
+        "name": "High-Neck Long-Sleeve Tiered Poplin Maxi Dress (Olive)",
+        "subcategory": "maxi-dress",
+        "formality": 3
+      },
+      {
+        "slug": "linen-maxi-shirtdress-navy",
+        "name": "Long-Sleeve French Linen Maxi Shirt Dress (Navy)",
+        "subcategory": "maxi-dress",
+        "formality": 2
+      },
+      {
+        "slug": "linen-silk-belted-maxi-dress-navy",
+        "name": "Belted Crisp Linen-Silk Maxi Dress (Navy)",
+        "subcategory": "dress",
+        "formality": 4
+      },
+      {
+        "slug": "hammered-silk-crepe-midi-dress-ivory",
+        "name": "Long-Sleeve Hammered Silk Crepe Midi Dress (Ivory)",
+        "subcategory": "dress",
+        "formality": 4
+      },
+      {
+        "slug": "wool-crepe-sheath-dress-black",
+        "name": "Long-Sleeve Virgin Wool Crepe Sheath Dress (Black)",
+        "subcategory": "dress",
+        "formality": 5
+      },
+      {
+        "slug": "cashmere-turtleneck-column-dress-charcoal",
+        "name": "Ribbed Cashmere Turtleneck Column Dress (Charcoal)",
+        "subcategory": "dress",
+        "formality": 4
+      },
+      {
+        "slug": "silk-taffeta-formal-dress-ruby",
+        "name": "Pleated Silk Taffeta Formal Dress (Deep Ruby)",
+        "subcategory": "dress",
+        "formality": 5
+      },
+      {
+        "slug": "ribbed-merino-sweater-dress-grey",
+        "name": "Fine Ribbed Merino Turtleneck Sweater Dress (Heather Grey)",
+        "subcategory": "dress",
+        "formality": 1
+      },
+      {
+        "slug": "french-terry-hooded-dress-black",
+        "name": "Heavyweight French Terry Hooded Dress (Black)",
+        "subcategory": "dress",
+        "formality": 1
+      },
+      {
+        "slug": "thermal-waffle-maxi-dress-oatmeal",
+        "name": "Organic Waffle Knit Maxi Loungewear Dress (Oatmeal)",
+        "subcategory": "dress",
+        "formality": 1
+      },
+      {
+        "slug": "flannel-oversized-shirt-dress-navy",
+        "name": "Brushed Cotton Flannel Oversized Shirt Dress (Navy)",
+        "subcategory": "dress",
+        "formality": 1
+      },
+      {
+        "slug": "cotton-jersey-tshirt-maxi-dress-ecru",
+        "name": "Organic Cotton Jersey T-Shirt Maxi Dress (Ecru)",
+        "subcategory": "dress",
+        "formality": 1
+      },
+      {
+        "slug": "washed-linen-popover-dress-sage",
+        "name": "Washed Normandy Linen Popover Dress (Sage)",
+        "subcategory": "dress",
+        "formality": 1
+      },
+      {
+        "slug": "slub-cotton-tshirt-dress-olive",
+        "name": "Slub Cotton Pocket T-Shirt Dress (Olive)",
+        "subcategory": "dress",
+        "formality": 1
+      },
+      {
+        "slug": "gauze-cotton-tiered-dress-white",
+        "name": "Double Gauze Cotton Tiered Sundress (White)",
+        "subcategory": "dress",
+        "formality": 1
+      },
+      {
+        "slug": "boiled-wool-pinafore-dress-charcoal",
+        "name": "Boiled Wool Architectural Pinafore Dress (Charcoal)",
+        "subcategory": "dress",
+        "formality": 2
+      },
+      {
+        "slug": "corduroy-utility-midi-dress-espresso",
+        "name": "Cotton Corduroy Utility Belted Dress (Espresso)",
+        "subcategory": "dress",
+        "formality": 2
+      },
+      {
+        "slug": "heavy-denim-western-shirt-dress-indigo",
+        "name": "Heavy Raw Denim Western Shirt Dress (Deep Indigo)",
+        "subcategory": "dress",
+        "formality": 2
+      },
+      {
+        "slug": "ribbed-cashmere-midi-dress-camel",
+        "name": "Ribbed Cashmere-Merino Crewneck Dress (Camel)",
+        "subcategory": "dress",
+        "formality": 2
+      }
+    ],
+    "jumpsuit": [
+      {
+        "slug": "structured-twill-jumpsuit-black",
+        "name": "Minimal Structured Twill Jumpsuit",
+        "subcategory": "jumpsuit",
+        "formality": 3
+      },
+      {
+        "slug": "tailored-crepe-jumpsuit-black",
+        "name": "Wide-Leg Tailored Crepe Jumpsuit with Belt (Black)",
+        "subcategory": "jumpsuit",
+        "formality": 4
+      },
+      {
+        "slug": "utility-linen-jumpsuit-olive",
+        "name": "Long-Sleeve Relaxed Utility Linen Jumpsuit (Washed Olive)",
+        "subcategory": "jumpsuit",
+        "formality": 2
+      }
+    ],
+    "skirt": [
+      {
+        "slug": "knife-pleated-midi-skirt-navy",
+        "name": "Knife-Pleated Wool Gabardine Midi Skirt",
+        "subcategory": "skirt",
+        "formality": 3
+      },
+      {
+        "slug": "bias-cut-satin-skirt-champagne",
+        "name": "Bias-Cut Silk Satin Midi Skirt (Champagne)",
+        "subcategory": "skirt",
+        "formality": 3
+      },
+      {
+        "slug": "raw-denim-maxi-skirt-indigo",
+        "name": "Raw Indigo Front-Slit Denim Maxi Skirt",
+        "subcategory": "skirt",
+        "formality": 2
+      },
+      {
+        "slug": "leather-pencil-skirt-black",
+        "name": "Nappa Leather Tailored Pencil Skirt",
+        "subcategory": "skirt",
+        "formality": 4
+      },
+      {
+        "slug": "wool-crepe-maxi-skirt-black",
+        "name": "Structured Wool Crepe A-Line Maxi Skirt (Black)",
+        "subcategory": "skirt",
+        "formality": 4
+      },
+      {
+        "slug": "linen-twill-maxi-skirt-natural",
+        "name": "Tailored Linen Twill Column Maxi Skirt (Natural Flax)",
+        "subcategory": "skirt",
+        "formality": 4
+      },
+      {
+        "slug": "silk-habotai-maxi-skirt-black",
+        "name": "Tiered Silk Habotai Maxi Skirt (Black)",
+        "subcategory": "skirt",
+        "formality": 4
+      },
+      {
+        "slug": "heavy-silk-crepe-midi-skirt-navy",
+        "name": "Fluted Heavy Silk Crepe Midi Skirt (Navy)",
+        "subcategory": "skirt",
+        "formality": 5
+      },
+      {
+        "slug": "wool-flannel-maxi-skirt-charcoal",
+        "name": "Architectural Wool Flannel Maxi Skirt (Charcoal)",
+        "subcategory": "skirt",
+        "formality": 5
+      },
+      {
+        "slug": "duchesse-silk-satin-column-skirt-black",
+        "name": "Duchesse Silk Satin Column Skirt (Black)",
+        "subcategory": "skirt",
+        "formality": 5
+      },
+      {
+        "slug": "wool-accordion-pleated-skirt-burgundy",
+        "name": "Fine Wool Crepe Accordion Pleated Midi Skirt (Burgundy)",
+        "subcategory": "skirt",
+        "formality": 4
+      },
+      {
+        "slug": "fleece-heavy-jersey-midi-skirt-grey",
+        "name": "Brushed Fleece-Backed Jersey Midi Skirt (Heather Grey)",
+        "subcategory": "skirt",
+        "formality": 1
+      },
+      {
+        "slug": "quilted-insulated-aline-skirt-black",
+        "name": "Quilted Ripstop Insulated A-Line Skirt (Black)",
+        "subcategory": "skirt",
+        "formality": 1
+      },
+      {
+        "slug": "ribbed-drawstring-maxi-skirt-charcoal",
+        "name": "Ribbed Knit Drawstring Maxi Column Skirt (Charcoal)",
+        "subcategory": "skirt",
+        "formality": 1
+      },
+      {
+        "slug": "cotton-corduroy-straight-skirt-tobacco",
+        "name": "Cotton Corduroy Straight Mini Skirt (Tobacco)",
+        "subcategory": "skirt",
+        "formality": 1
+      },
+      {
+        "slug": "washed-poplin-tiered-maxi-skirt-white",
+        "name": "Washed Cotton Poplin Tiered Maxi Skirt (White)",
+        "subcategory": "skirt",
+        "formality": 1
+      },
+      {
+        "slug": "linen-drawstring-midi-skirt-natural",
+        "name": "Flax Linen Drawstring Straight Midi Skirt (Natural)",
+        "subcategory": "skirt",
+        "formality": 1
+      },
+      {
+        "slug": "gauze-cotton-wrap-skirt-terracotta",
+        "name": "Crinkled Gauze Cotton Tie-Wrap Skirt (Terracotta)",
+        "subcategory": "skirt",
+        "formality": 1
+      },
+      {
+        "slug": "lightweight-denim-aline-skirt-indigo",
+        "name": "Lightweight Washed Denim A-Line Midi Skirt (Light Indigo)",
+        "subcategory": "skirt",
+        "formality": 1
+      },
+      {
+        "slug": "chunky-merino-maxi-skirt-oatmeal",
+        "name": "Chunky Ribbed Merino Wool Maxi Skirt (Oatmeal)",
+        "subcategory": "skirt",
+        "formality": 2
+      },
+      {
+        "slug": "selvedge-denim-column-skirt-indigo",
+        "name": "Structured Selvedge Denim Column Skirt (Raw Indigo)",
+        "subcategory": "skirt",
+        "formality": 2
+      },
+      {
+        "slug": "pleated-wool-plaid-skirt-forest",
+        "name": "Heritage Wool-Blend Stitched Box-Pleat Skirt (Forest Plaid)",
+        "subcategory": "skirt",
+        "formality": 2
+      },
+      {
+        "slug": "linen-canvas-cargo-skirt-olive",
+        "name": "Heavy Linen Canvas Utility Midi Skirt (Olive)",
+        "subcategory": "skirt",
+        "formality": 2
+      },
+      {
+        "slug": "cotton-poplin-circle-skirt-navy",
+        "name": "High-Density Cotton Poplin Circle Midi Skirt (Navy)",
+        "subcategory": "skirt",
+        "formality": 2
+      },
+      {
+        "slug": "silk-mikado-ball-maxi-skirt-black",
+        "name": "Sculptural Silk Mikado Bell Maxi Skirt (Black)",
+        "subcategory": "skirt",
+        "formality": 5
+      },
+      {
+        "slug": "pleated-silk-georgette-maxi-skirt-ivory",
+        "name": "Permanent Accordion-Pleated Silk Georgette Maxi Skirt (Ivory)",
+        "subcategory": "skirt",
+        "formality": 5
+      },
+      {
+        "slug": "metallic-silk-jacquard-skirt-bronze",
+        "name": "Architectural Metallic Silk Jacquard Maxi Skirt (Bronze)",
+        "subcategory": "skirt",
+        "formality": 5
+      },
+      {
+        "slug": "duchesse-satin-mermaid-skirt-navy",
+        "name": "Fluted Silk Duchesse Satin Mermaid Maxi Skirt (Navy)",
+        "subcategory": "skirt",
+        "formality": 5
+      },
+      {
+        "slug": "linen-viscose-pleated-midi-skirt-terracotta",
+        "name": "Linen-Viscose Fluid Knife-Pleat Midi Skirt (Terracotta)",
+        "subcategory": "skirt",
+        "formality": 2
+      },
+      {
+        "slug": "crinkled-chambray-aline-skirt-blue",
+        "name": "Washed Cotton Chambray A-Line Midi Skirt (Bleached Blue)",
+        "subcategory": "skirt",
+        "formality": 2
+      }
+    ],
+    "heels": [
+      {
+        "slug": "unstructured-leather-ballet-flats-black",
+        "name": "Unstructured Butter Calfskin Ballet Flats",
+        "subcategory": "ballet-flat",
+        "formality": 3
+      },
+      {
+        "slug": "block-heel-suede-mules-taupe",
+        "name": "50mm Suede Block-Heel Mules",
+        "subcategory": "heel",
+        "formality": 3
+      },
+      {
+        "slug": "pointed-slingback-pumps-black",
+        "name": "Pointed-Toe Leather Slingback Pumps (45mm)",
+        "subcategory": "heel",
+        "formality": 4
+      },
+      {
+        "slug": "pointed-kitten-heels-black",
+        "name": "40mm Pointed-Toe Leather Kitten Heel Pumps (Black)",
+        "subcategory": "heels",
+        "formality": 4
+      }
+    ],
+    "evening-gown": [
+      {
+        "slug": "silk-velvet-column-gown-emerald",
+        "name": "Heavyweight Silk-Velvet Column Evening Gown (Emerald)",
+        "subcategory": "evening-gown",
+        "formality": 5
+      },
+      {
+        "slug": "silk-crepe-column-gown-emerald",
+        "name": "High-Neck Silk Crepe Column Gown (Emerald)",
+        "subcategory": "gown",
+        "formality": 5
+      },
+      {
+        "slug": "silk-velvet-evening-gown-midnight",
+        "name": "Silk-Silk Velvet Long-Sleeve Evening Gown (Midnight Blue)",
+        "subcategory": "gown",
+        "formality": 5
+      },
+      {
+        "slug": "habotai-silk-kaftan-gown-ivory",
+        "name": "Architectural Habotai Silk Kaftan Gown (Ivory)",
+        "subcategory": "gown",
+        "formality": 5
+      },
+      {
+        "slug": "organza-overlay-evening-gown-champagne",
+        "name": "Silk Organza High-Neck Evening Gown (Champagne)",
+        "subcategory": "gown",
+        "formality": 5
+      },
+      {
+        "slug": "silk-chiffon-goddess-gown-sage",
+        "name": "Multi-Layered Silk Chiffon Draped Gown (Sage)",
+        "subcategory": "gown",
+        "formality": 5
+      },
+      {
+        "slug": "crepe-cape-evening-gown-cobalt",
+        "name": "Silk Crepe de Chine Capelet Column Gown (Cobalt)",
+        "subcategory": "gown",
+        "formality": 5
+      }
+    ]
+  }
+}
