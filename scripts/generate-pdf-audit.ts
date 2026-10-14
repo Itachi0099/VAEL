@@ -773,7 +773,7 @@ async function generateAuditPdf() {
 
   try {
     const page = await browser.newPage();
-    await page.setContent(htmlContent, { waitUntil: 'networkidle0' });
+    await page.setContent(htmlContent, { waitUntil: 'domcontentloaded' });
 
     const pdfPath = path.join(REPORTS_DIR, 'VAEL_R1.3_R2.0_AUDIT_REPORT.pdf');
     const publicPdfPath = path.join(PUBLIC_REPORTS_DIR, 'VAEL_R1.3_R2.0_AUDIT_REPORT.pdf');
