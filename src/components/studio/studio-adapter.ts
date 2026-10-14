@@ -130,7 +130,19 @@ export class StudioAdapter {
    * Retrieves the full ranked candidate list (read-only) beyond the top 3
    */
   static getRankedPool(user: User, context?: Context): Outfit[] {
-    const evaluations = VaelStylingEngine.getRankedCandidateLooks({ user, context });
+    let resolvedContext = context;
+    if (context && (typeof (context as any).occasion === 'string' || !context.occasion?.allowableFormalityRange)) {
+      const slug = typeof (context as any).occasion === 'string' ? (context as any).occasion : 'dinner';
+      resolvedContext = {
+        ...context,
+        occasion: knowledgeBase.getOccasionBySlug(slug) || knowledgeBase.getAllOccasions()[0],
+      };
+    } else if (!context) {
+      resolvedContext = {
+        occasion: knowledgeBase.getOccasionBySlug('dinner') || knowledgeBase.getAllOccasions()[0],
+      };
+    }
+    const evaluations = VaelStylingEngine.getRankedCandidateLooks({ user, context: resolvedContext });
     return evaluations.map((e) => e.outfit);
   }
 

@@ -34,6 +34,7 @@ import {
 import { BUILD_INFO } from '@/core/version';
 import { DynamicStudioViewer } from '@/components/studio';
 import { SAMPLE_STUDIO_PROFILES } from '@/components/studio/sample-profiles';
+import { knowledgeBase } from '@/core/knowledge';
 
 type ActiveView = 'LOOKS' | 'STUDIO 3D' | 'HAIR' | 'GROOMING' | 'STYLE LAB';
 
@@ -72,12 +73,14 @@ export default function VaelShell() {
   useEffect(() => {
     try {
       const savedTheme = localStorage.getItem('vael_theme');
-      if (savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      if (savedTheme === 'dark') {
         setTheme('dark');
         document.documentElement.classList.add('dark');
+        document.documentElement.setAttribute('data-theme', 'dark');
       } else {
         setTheme('light');
         document.documentElement.classList.remove('dark');
+        document.documentElement.setAttribute('data-theme', 'light');
       }
     } catch (e) {
       // LocalStorage unavailable
@@ -90,13 +93,15 @@ export default function VaelShell() {
     setTheme(nextTheme);
     try {
       localStorage.setItem('vael_theme', nextTheme);
-      if (nextTheme === 'dark') {
-        document.documentElement.classList.add('dark');
-      } else {
-        document.documentElement.classList.remove('dark');
-      }
     } catch (e) {
       console.warn('Theme preference storage failed:', e);
+    }
+    if (nextTheme === 'dark') {
+      document.documentElement.classList.add('dark');
+      document.documentElement.setAttribute('data-theme', 'dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+      document.documentElement.setAttribute('data-theme', 'light');
     }
   };
 
@@ -803,7 +808,9 @@ export default function VaelShell() {
             context={
               activeUser
                 ? {
-                    occasion: selectedOccasion as any,
+                    occasion:
+                      knowledgeBase.getOccasionBySlug(selectedOccasion) ||
+                      knowledgeBase.getAllOccasions()[0],
                     temperatureCelsius:
                       selectedTemperature === 'cold'
                         ? 3

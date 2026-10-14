@@ -287,7 +287,7 @@ export class CompositionGenerator {
     }
 
     // Occasion dress code restrictions
-    if (context?.occasion?.restrictedGarmentCategories) {
+    if (context?.occasion && Array.isArray(context.occasion.restrictedGarmentCategories)) {
       const restrictions = context.occasion.restrictedGarmentCategories;
       const violates = restrictions.some(
         (r) => garment.subcategory.includes(r) || garment.slug.includes(r) || garment.name.toLowerCase().includes(r)
@@ -296,7 +296,7 @@ export class CompositionGenerator {
     }
 
     // Occasion formality range and target formality discipline
-    if (context?.occasion && !context.isFormalityOverridden) {
+    if (context?.occasion && Array.isArray(context.occasion.allowableFormalityRange) && !context.isFormalityOverridden) {
       const [minF, maxF] = context.occasion.allowableFormalityRange;
       if (garment.formality < minF - 1 || garment.formality > maxF + 1) {
         return false;
