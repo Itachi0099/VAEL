@@ -152,8 +152,8 @@
   "result": {
     "looksCount": 3,
     "contextApplied": "Wedding Guest",
-    "vetoedCandidateCount": 52,
-    "evaluatedCandidateCount": 64,
+    "vetoedCandidateCount": 55,
+    "evaluatedCandidateCount": 1845,
     "looks": [
       {
         "tier": "BEST_MATCH",
@@ -163,48 +163,37 @@
           "explanation": "Supported by verified user formality, confirmed climate, explicit style vector, and grooming inputs.",
           "toIncreaseConfidence": "Add specific footwear preferences to further personalize lower-leg grounding."
         },
-        "overallHarmonyScore": 0.84,
+        "overallHarmonyScore": 0.92,
         "reasons": [
+          "Directly mirrors your personal style axis coordinates.",
           "Balanced regular configuration",
-          "Strong contrast between light and deep neutral values establishes crisp visual separation.",
-          "High breathability (washed pure linen) supports natural airflow in hot conditions."
+          "Tonal neutral palette ensures high versatility and effortless visual cohesion."
         ],
         "cautions": [],
         "outfit": {
-          "id": "outfit_cultural_traditional_01",
-          "title": "Heritage Raw Silk & Linen Ceremony Look",
-          "primaryStyleSlug": "formal",
-          "formality": 5,
-          "score": 0.84,
+          "id": "gen_separates_band-collar-shirt-ivory_fluid-woven-leather-loafers-black",
+          "title": "Silk-Cotton Band Collar Shirt (Ivory) & Breathable Hand-Woven Nappa Leather Loafers (Black)",
+          "primaryStyleSlug": "minimal",
+          "formality": 4,
+          "score": 0.92,
           "items": [
             {
               "category": "top",
-              "subcategory": "tunic",
-              "name": "Mandarin Collar Linen Tunic (Kurta)",
-              "material": "washed pure linen",
-              "color": "ecru",
+              "subcategory": "button-down",
+              "name": "Silk-Cotton Band Collar Shirt (Ivory)",
+              "material": "silk-cotton poplin blend",
+              "color": "ivory",
               "fit": "relaxed",
-              "modestyRating": "high-coverage",
+              "modestyRating": "standard",
               "genderCoding": "androgynous",
               "layerPosition": 0
             },
             {
-              "category": "outerwear",
-              "subcategory": "jacket",
-              "name": "Bespoke Raw Silk Bandhgala / Sherwani Jacket",
-              "material": "handwoven Matka raw silk, full silk lining",
-              "color": "matte-black",
-              "fit": "tailored",
-              "modestyRating": "high-coverage",
-              "genderCoding": "masculine",
-              "layerPosition": 1
-            },
-            {
               "category": "bottom",
               "subcategory": "trousers",
-              "name": "Handwoven Khadi Cotton Lounge Trousers",
-              "material": "100% handloom khadi cotton",
-              "color": "pure-white",
+              "name": "Fluid Crepe Drawstring Trousers",
+              "material": "wool-viscose crepe",
+              "color": "navy",
               "fit": "relaxed",
               "modestyRating": "high-coverage",
               "genderCoding": "androgynous",
@@ -213,12 +202,34 @@
             {
               "category": "footwear",
               "subcategory": "loafers",
-              "name": "Cordovan Penny Loafers",
-              "material": "Horween shell cordovan",
-              "color": "deep-burgundy",
+              "name": "Breathable Hand-Woven Nappa Leather Loafers (Black)",
+              "material": "Interwoven lambskin nappa with flexible leather sole",
+              "color": "black",
               "fit": "regular",
               "modestyRating": "standard",
-              "genderCoding": "unspecified",
+              "genderCoding": "androgynous",
+              "layerPosition": 0
+            },
+            {
+              "category": "accessory",
+              "subcategory": "jewelry",
+              "name": "Baroque Freshwater Pearl Drop Earrings",
+              "material": "Cultured baroque pearls with 14k solid gold posts",
+              "color": "pearl-white",
+              "fit": "regular",
+              "modestyRating": "unrestricted",
+              "genderCoding": "feminine",
+              "layerPosition": 0
+            },
+            {
+              "category": "accessory",
+              "subcategory": "belt",
+              "name": "25mm Fine Calfskin Belt with Chiseled Brass Buckle",
+              "material": "French box calf with solid brushed brass hardware",
+              "color": "black-gold",
+              "fit": "regular",
+              "modestyRating": "standard",
+              "genderCoding": "androgynous",
               "layerPosition": 0
             }
           ],
@@ -226,8 +237,8 @@
             {
               "category": "style_affinity",
               "weight": 3.5,
-              "score": 0.71,
-              "reason": "Coordinate affinity (71%) with your 10D style vector."
+              "score": 0.84,
+              "reason": "Coordinate affinity (84%) with your 10D style vector."
             },
             {
               "category": "silhouette_balance",
@@ -238,25 +249,25 @@
             {
               "category": "color_harmony",
               "weight": 3,
-              "score": 0.94,
-              "reason": "Color story: strong-contrast"
+              "score": 0.92,
+              "reason": "Color story: tonal-neutral"
             },
             {
               "category": "occasion_fit",
               "weight": 2.5,
-              "score": 0.75,
-              "reason": "Formality fit for Wedding Guest (Level 5)"
+              "score": 1,
+              "reason": "Formality fit for Wedding Guest (Level 4)"
             },
             {
               "category": "weather_fit",
               "weight": 2,
-              "score": 0.94,
+              "score": 0.98,
               "reason": "Ambient temperature and breathability calibration"
             },
             {
               "category": "expression_affinity",
               "weight": 1,
-              "score": 0.725,
+              "score": 0.8,
               "reason": "Soft expression alignment with androgynous presentation preference."
             },
             {
@@ -268,54 +279,51 @@
           ],
           "traceableReasons": [
             {
-              "reasonId": "rea_outfit_cultural_traditional_01_0_1791968775720",
+              "reasonId": "rea_gen_separates_band-collar-shirt-ivory_fluid-woven-leather-loafers-black_0_1791972638834",
+              "text": "Directly mirrors your personal style axis coordinates.",
+              "signalIds": [
+                "user.styleProfile.styleVector",
+                "user.styleProfile.preferences.preferredStyleSlugs"
+              ],
+              "knowledgeEntryIds": [
+                "gar_silk_band_collar_ivory",
+                "gar_drawstring_fluid_trousers_navy",
+                "gar_fluid_woven_loafers_black",
+                "style_minimal"
+              ],
+              "factor": "style_affinity",
+              "authority": "USER_ENTERED",
+              "isAssumed": false
+            },
+            {
+              "reasonId": "rea_gen_separates_band-collar-shirt-ivory_fluid-woven-leather-loafers-black_1_1791972638834",
               "text": "Balanced regular configuration",
               "signalIds": [
                 "user.styleProfile.preferences.preferredStyleSlugs",
                 "context.occasion"
               ],
               "knowledgeEntryIds": [
-                "gar_kurta_tunic_ecru",
-                "gar_sherwani_jacket_bespoke",
-                "gar_khadi_cotton_pajama_pants",
-                "gar_penny_loafer_burgundy"
+                "gar_silk_band_collar_ivory",
+                "gar_drawstring_fluid_trousers_navy",
+                "gar_fluid_woven_loafers_black"
               ],
               "factor": "general",
               "authority": "USER_ENTERED",
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_cultural_traditional_01_1_1791968775720",
-              "text": "Strong contrast between light and deep neutral values establishes crisp visual separation.",
+              "reasonId": "rea_gen_separates_band-collar-shirt-ivory_fluid-woven-leather-loafers-black_2_1791972638834",
+              "text": "Tonal neutral palette ensures high versatility and effortless visual cohesion.",
               "signalIds": [
                 "user.styleProfile.preferences.preferredStyleSlugs",
                 "context.occasion"
               ],
               "knowledgeEntryIds": [
-                "gar_kurta_tunic_ecru",
-                "gar_sherwani_jacket_bespoke",
-                "gar_khadi_cotton_pajama_pants",
-                "gar_penny_loafer_burgundy"
+                "gar_silk_band_collar_ivory",
+                "gar_drawstring_fluid_trousers_navy",
+                "gar_fluid_woven_loafers_black"
               ],
               "factor": "general",
-              "authority": "USER_ENTERED",
-              "isAssumed": false
-            },
-            {
-              "reasonId": "rea_outfit_cultural_traditional_01_2_1791968775720",
-              "text": "High breathability (washed pure linen) supports natural airflow in hot conditions.",
-              "signalIds": [
-                "context.temperatureLevel",
-                "context.condition",
-                "context.weather"
-              ],
-              "knowledgeEntryIds": [
-                "gar_kurta_tunic_ecru",
-                "gar_sherwani_jacket_bespoke",
-                "gar_khadi_cotton_pajama_pants",
-                "gar_penny_loafer_burgundy"
-              ],
-              "factor": "weather_fit",
               "authority": "USER_ENTERED",
               "isAssumed": false
             }
@@ -354,52 +362,52 @@
           "explanation": "Supported by verified user formality, confirmed climate, explicit style vector, and grooming inputs.",
           "toIncreaseConfidence": "Add specific footwear preferences to further personalize lower-leg grounding."
         },
-        "overallHarmonyScore": 0.83,
+        "overallHarmonyScore": 0.92,
         "reasons": [
+          "Directly mirrors your personal style axis coordinates.",
           "Balanced regular configuration",
-          "Harmonious balance across complementary tonal depths.",
-          "Neutral tonal temperature balance relative to undertone."
+          "Tonal neutral palette ensures high versatility and effortless visual cohesion."
         ],
         "cautions": [],
         "outfit": {
-          "id": "outfit_fluid_hot_workplace_linen_01",
-          "title": "Unstructured DB Jacket & Woven Leather Loafers",
-          "primaryStyleSlug": "smart-casual",
-          "formality": 3,
-          "score": 0.83,
+          "id": "gen_separates_band-collar-shirt-ivory_fluid-woven-leather-loafers-black_unstructured-linen-blazer-sand",
+          "title": "Silk-Cotton Band Collar Shirt (Ivory) & Breathable Hand-Woven Nappa Leather Loafers (Black)",
+          "primaryStyleSlug": "minimal",
+          "formality": 4,
+          "score": 0.92,
           "items": [
             {
               "category": "top",
-              "subcategory": "polo",
-              "name": "Open-Weave Cotton-Linen Knit Resort Shirt (Optic White)",
-              "material": "180gsm breathable open-knit cotton-linen mesh",
-              "color": "optic-white",
+              "subcategory": "button-down",
+              "name": "Silk-Cotton Band Collar Shirt (Ivory)",
+              "material": "silk-cotton poplin blend",
+              "color": "ivory",
               "fit": "relaxed",
               "modestyRating": "standard",
               "genderCoding": "androgynous",
               "layerPosition": 0
             },
             {
-              "category": "outerwear",
-              "subcategory": "blazer",
-              "name": "Unstructured Double-Breasted Fluid Jacket (Warm Taupe)",
-              "material": "250gsm fluid wool-viscose twill",
-              "color": "warm-taupe",
-              "fit": "relaxed",
-              "modestyRating": "covered-arms",
-              "genderCoding": "androgynous",
-              "layerPosition": 1
-            },
-            {
               "category": "bottom",
               "subcategory": "trousers",
-              "name": "Fluid Double-Pleat Pure Linen Wide Trousers (Natural Sand)",
-              "material": "210gsm washed Normandy flax linen",
-              "color": "sand",
+              "name": "Fluid Crepe Drawstring Trousers",
+              "material": "wool-viscose crepe",
+              "color": "navy",
               "fit": "relaxed",
               "modestyRating": "high-coverage",
               "genderCoding": "androgynous",
               "layerPosition": 0
+            },
+            {
+              "category": "outerwear",
+              "subcategory": "blazer",
+              "name": "Unstructured Washed Linen Blazer (Sand)",
+              "material": "100% washed Irish linen",
+              "color": "sand",
+              "fit": "relaxed",
+              "modestyRating": "high-coverage",
+              "genderCoding": "androgynous",
+              "layerPosition": 1
             },
             {
               "category": "footwear",
@@ -414,13 +422,13 @@
             },
             {
               "category": "accessory",
-              "subcategory": "watch",
-              "name": "Vintage Dress Watch with Alligator Strap",
-              "material": "18k gold-plated case, brown leather strap",
-              "color": "yellow-gold-brown",
+              "subcategory": "jewelry",
+              "name": "Baroque Freshwater Pearl Drop Earrings",
+              "material": "Cultured baroque pearls with 14k solid gold posts",
+              "color": "pearl-white",
               "fit": "regular",
-              "modestyRating": "standard",
-              "genderCoding": "unspecified",
+              "modestyRating": "unrestricted",
+              "genderCoding": "feminine",
               "layerPosition": 0
             }
           ],
@@ -428,8 +436,8 @@
             {
               "category": "style_affinity",
               "weight": 3.5,
-              "score": 0.76,
-              "reason": "Coordinate affinity (76%) with your 10D style vector."
+              "score": 0.84,
+              "reason": "Coordinate affinity (84%) with your 10D style vector."
             },
             {
               "category": "silhouette_balance",
@@ -440,19 +448,19 @@
             {
               "category": "color_harmony",
               "weight": 3,
-              "score": 0.82,
-              "reason": "Color story: analogous"
+              "score": 0.92,
+              "reason": "Color story: tonal-neutral"
             },
             {
               "category": "occasion_fit",
               "weight": 2.5,
-              "score": 0.75,
-              "reason": "Formality fit for Wedding Guest (Level 3)"
+              "score": 1,
+              "reason": "Formality fit for Wedding Guest (Level 4)"
             },
             {
               "category": "weather_fit",
               "weight": 2,
-              "score": 0.92,
+              "score": 0.98,
               "reason": "Ambient temperature and breathability calibration"
             },
             {
@@ -470,56 +478,54 @@
           ],
           "traceableReasons": [
             {
-              "reasonId": "rea_outfit_fluid_hot_workplace_linen_01_0_1791968775720",
+              "reasonId": "rea_gen_separates_band-collar-shirt-ivory_fluid-woven-leather-loafers-black_unstructured-linen-blazer-sand_0_1791972638834",
+              "text": "Directly mirrors your personal style axis coordinates.",
+              "signalIds": [
+                "user.styleProfile.styleVector",
+                "user.styleProfile.preferences.preferredStyleSlugs"
+              ],
+              "knowledgeEntryIds": [
+                "gar_silk_band_collar_ivory",
+                "gar_drawstring_fluid_trousers_navy",
+                "gar_linen_blazer_sand",
+                "gar_fluid_woven_loafers_black",
+                "style_minimal"
+              ],
+              "factor": "style_affinity",
+              "authority": "USER_ENTERED",
+              "isAssumed": false
+            },
+            {
+              "reasonId": "rea_gen_separates_band-collar-shirt-ivory_fluid-woven-leather-loafers-black_unstructured-linen-blazer-sand_1_1791972638834",
               "text": "Balanced regular configuration",
               "signalIds": [
                 "user.styleProfile.preferences.preferredStyleSlugs",
                 "context.occasion"
               ],
               "knowledgeEntryIds": [
-                "gar_fluid_open_weave_shirt_white",
-                "gar_fluid_unstructured_double_breasted_suit_jacket_taupe",
-                "gar_fluid_linen_wide_trousers_sand",
-                "gar_fluid_woven_loafers_black",
-                "gar_dress_watch_gold_leather"
+                "gar_silk_band_collar_ivory",
+                "gar_drawstring_fluid_trousers_navy",
+                "gar_linen_blazer_sand",
+                "gar_fluid_woven_loafers_black"
               ],
               "factor": "general",
               "authority": "USER_ENTERED",
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_fluid_hot_workplace_linen_01_1_1791968775720",
-              "text": "Harmonious balance across complementary tonal depths.",
+              "reasonId": "rea_gen_separates_band-collar-shirt-ivory_fluid-woven-leather-loafers-black_unstructured-linen-blazer-sand_2_1791972638834",
+              "text": "Tonal neutral palette ensures high versatility and effortless visual cohesion.",
               "signalIds": [
-                "user.styleProfile.preferences.fitProportions",
-                "user.styleProfile.preferences.preferredFits"
+                "user.styleProfile.preferences.preferredStyleSlugs",
+                "context.occasion"
               ],
               "knowledgeEntryIds": [
-                "gar_fluid_open_weave_shirt_white",
-                "gar_fluid_unstructured_double_breasted_suit_jacket_taupe",
-                "gar_fluid_linen_wide_trousers_sand",
-                "gar_fluid_woven_loafers_black",
-                "gar_dress_watch_gold_leather"
+                "gar_silk_band_collar_ivory",
+                "gar_drawstring_fluid_trousers_navy",
+                "gar_linen_blazer_sand",
+                "gar_fluid_woven_loafers_black"
               ],
-              "factor": "silhouette_balance",
-              "authority": "USER_ENTERED",
-              "isAssumed": false
-            },
-            {
-              "reasonId": "rea_outfit_fluid_hot_workplace_linen_01_2_1791968775720",
-              "text": "Neutral tonal temperature balance relative to undertone.",
-              "signalIds": [
-                "user.styleProfile.preferences.fitProportions",
-                "user.styleProfile.preferences.preferredFits"
-              ],
-              "knowledgeEntryIds": [
-                "gar_fluid_open_weave_shirt_white",
-                "gar_fluid_unstructured_double_breasted_suit_jacket_taupe",
-                "gar_fluid_linen_wide_trousers_sand",
-                "gar_fluid_woven_loafers_black",
-                "gar_dress_watch_gold_leather"
-              ],
-              "factor": "silhouette_balance",
+              "factor": "general",
               "authority": "USER_ENTERED",
               "isAssumed": false
             }
@@ -560,49 +566,93 @@
         },
         "overallHarmonyScore": 0.88,
         "reasons": [
-          "Harmonious classic proportion with uniform clean linear cadence",
-          "Strong contrast between light and deep neutral values establishes crisp visual separation.",
-          "Aligned to Wedding Guest formality."
+          "Directly mirrors your personal style axis coordinates.",
+          "Balanced regular configuration",
+          "Tonal neutral palette ensures high versatility and effortless visual cohesion."
         ],
         "cautions": [],
         "outfit": {
-          "id": "outfit_feminine_hot_crepe_midi_separates_01",
-          "title": "Poplin Peplum Blouse & Heavy Silk Crepe Fluted Midi Skirt",
-          "primaryStyleSlug": "smart-casual",
-          "formality": 4,
+          "id": "gen_separates_band-collar-shirt-ivory_fluid-leather-slide-mules-espresso_unstructured-linen-blazer-sand",
+          "title": "Silk-Cotton Band Collar Shirt (Ivory) & Minimalist Asymmetric Padded Leather Slide Mules (Espresso)",
+          "primaryStyleSlug": "minimal",
+          "formality": 3,
           "score": 0.88,
           "items": [
             {
               "category": "top",
-              "subcategory": "blouse",
-              "name": "Architectural Fitted Cotton Poplin Peplum Blouse (Pure White)",
-              "material": "140gsm crisp Egyptian cotton poplin",
-              "color": "white",
-              "fit": "tailored",
+              "subcategory": "button-down",
+              "name": "Silk-Cotton Band Collar Shirt (Ivory)",
+              "material": "silk-cotton poplin blend",
+              "color": "ivory",
+              "fit": "relaxed",
               "modestyRating": "standard",
-              "genderCoding": "feminine",
+              "genderCoding": "androgynous",
               "layerPosition": 0
             },
             {
               "category": "bottom",
-              "subcategory": "skirt",
-              "name": "Fluted Heavy Silk Crepe Midi Skirt (Navy)",
-              "material": "40mm heavy silk crepe de chine",
+              "subcategory": "trousers",
+              "name": "Fluid Crepe Drawstring Trousers",
+              "material": "wool-viscose crepe",
               "color": "navy",
-              "fit": "tailored",
+              "fit": "relaxed",
               "modestyRating": "high-coverage",
-              "genderCoding": "feminine",
+              "genderCoding": "androgynous",
               "layerPosition": 0
             },
             {
+              "category": "outerwear",
+              "subcategory": "blazer",
+              "name": "Unstructured Washed Linen Blazer (Sand)",
+              "material": "100% washed Irish linen",
+              "color": "sand",
+              "fit": "relaxed",
+              "modestyRating": "high-coverage",
+              "genderCoding": "androgynous",
+              "layerPosition": 1
+            },
+            {
               "category": "footwear",
-              "subcategory": "heels",
-              "name": "40mm Pointed-Toe Leather Kitten Heel Pumps (Black)",
-              "material": "Smooth French calfskin with cushioned insole",
-              "color": "black",
-              "fit": "tailored",
+              "subcategory": "sandals",
+              "name": "Minimalist Asymmetric Padded Leather Slide Mules (Espresso)",
+              "material": "Soft vegetable-tanned calfskin with cushioned footbed",
+              "color": "espresso",
+              "fit": "regular",
               "modestyRating": "standard",
-              "genderCoding": "feminine",
+              "genderCoding": "androgynous",
+              "layerPosition": 0
+            },
+            {
+              "category": "accessory",
+              "subcategory": "eyewear",
+              "name": "Architectural Acetate Sunglasses (Dark Tortoise)",
+              "material": "Mazzucchelli bio-acetate, Carl Zeiss UV400 lenses",
+              "color": "dark-tortoise",
+              "fit": "regular",
+              "modestyRating": "standard",
+              "genderCoding": "androgynous",
+              "layerPosition": 0
+            },
+            {
+              "category": "accessory",
+              "subcategory": "bag",
+              "name": "Structured Architectural Leather Tote",
+              "material": "vegetable-tanned full-grain leather",
+              "color": "matte-black",
+              "fit": "regular",
+              "modestyRating": "standard",
+              "genderCoding": "androgynous",
+              "layerPosition": 0
+            },
+            {
+              "category": "accessory",
+              "subcategory": "bag",
+              "name": "Architectural Box-Calf Minimal Tote Bag (Black)",
+              "material": "Smooth Italian calfskin with microfiber lining",
+              "color": "black",
+              "fit": "regular",
+              "modestyRating": "unrestricted",
+              "genderCoding": "androgynous",
               "layerPosition": 0
             }
           ],
@@ -610,26 +660,26 @@
             {
               "category": "style_affinity",
               "weight": 3.5,
-              "score": 0.76,
-              "reason": "Coordinate affinity (76%) with your 10D style vector."
+              "score": 0.84,
+              "reason": "Coordinate affinity (84%) with your 10D style vector."
             },
             {
               "category": "silhouette_balance",
               "weight": 3,
-              "score": 0.9,
-              "reason": "Harmonious classic proportion with uniform clean linear cadence"
+              "score": 0.93,
+              "reason": "Balanced regular configuration"
             },
             {
               "category": "color_harmony",
               "weight": 3,
-              "score": 0.94,
-              "reason": "Color story: strong-contrast"
+              "score": 0.92,
+              "reason": "Color story: tonal-neutral"
             },
             {
               "category": "occasion_fit",
               "weight": 2.5,
-              "score": 1,
-              "reason": "Formality fit for Wedding Guest (Level 4)"
+              "score": 0.75,
+              "reason": "Formality fit for Wedding Guest (Level 3)"
             },
             {
               "category": "weather_fit",
@@ -640,7 +690,7 @@
             {
               "category": "expression_affinity",
               "weight": 1,
-              "score": 0.5,
+              "score": 0.8,
               "reason": "Soft expression alignment with androgynous presentation preference."
             },
             {
@@ -652,57 +702,60 @@
           ],
           "traceableReasons": [
             {
-              "reasonId": "rea_outfit_feminine_hot_crepe_midi_separates_01_0_1791968775720",
-              "text": "Harmonious classic proportion with uniform clean linear cadence",
+              "reasonId": "rea_gen_separates_band-collar-shirt-ivory_fluid-leather-slide-mules-espresso_unstructured-linen-blazer-sand_0_1791972638834",
+              "text": "Directly mirrors your personal style axis coordinates.",
+              "signalIds": [
+                "user.styleProfile.styleVector",
+                "user.styleProfile.preferences.preferredStyleSlugs"
+              ],
+              "knowledgeEntryIds": [
+                "gar_silk_band_collar_ivory",
+                "gar_drawstring_fluid_trousers_navy",
+                "gar_linen_blazer_sand",
+                "gar_fluid_leather_slide_sandals",
+                "style_minimal"
+              ],
+              "factor": "style_affinity",
+              "authority": "USER_ENTERED",
+              "isAssumed": false
+            },
+            {
+              "reasonId": "rea_gen_separates_band-collar-shirt-ivory_fluid-leather-slide-mules-espresso_unstructured-linen-blazer-sand_1_1791972638834",
+              "text": "Balanced regular configuration",
               "signalIds": [
                 "user.styleProfile.preferences.preferredStyleSlugs",
                 "context.occasion"
               ],
               "knowledgeEntryIds": [
-                "gar_poplin_peplum_blouse_white",
-                "gar_feminine_heavy_silk_crepe_midi_skirt_navy",
-                "gar_feminine_pointed_kitten_heels_black"
+                "gar_silk_band_collar_ivory",
+                "gar_drawstring_fluid_trousers_navy",
+                "gar_linen_blazer_sand",
+                "gar_fluid_leather_slide_sandals"
               ],
               "factor": "general",
               "authority": "USER_ENTERED",
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_feminine_hot_crepe_midi_separates_01_1_1791968775720",
-              "text": "Strong contrast between light and deep neutral values establishes crisp visual separation.",
+              "reasonId": "rea_gen_separates_band-collar-shirt-ivory_fluid-leather-slide-mules-espresso_unstructured-linen-blazer-sand_2_1791972638834",
+              "text": "Tonal neutral palette ensures high versatility and effortless visual cohesion.",
               "signalIds": [
                 "user.styleProfile.preferences.preferredStyleSlugs",
                 "context.occasion"
               ],
               "knowledgeEntryIds": [
-                "gar_poplin_peplum_blouse_white",
-                "gar_feminine_heavy_silk_crepe_midi_skirt_navy",
-                "gar_feminine_pointed_kitten_heels_black"
+                "gar_silk_band_collar_ivory",
+                "gar_drawstring_fluid_trousers_navy",
+                "gar_linen_blazer_sand",
+                "gar_fluid_leather_slide_sandals"
               ],
               "factor": "general",
-              "authority": "USER_ENTERED",
-              "isAssumed": false
-            },
-            {
-              "reasonId": "rea_outfit_feminine_hot_crepe_midi_separates_01_2_1791968775720",
-              "text": "Aligned to Wedding Guest formality.",
-              "signalIds": [
-                "context.occasion",
-                "context.targetFormality"
-              ],
-              "knowledgeEntryIds": [
-                "gar_poplin_peplum_blouse_white",
-                "gar_feminine_heavy_silk_crepe_midi_skirt_navy",
-                "gar_feminine_pointed_kitten_heels_black",
-                "occ_wedding"
-              ],
-              "factor": "occasion_fit",
               "authority": "USER_ENTERED",
               "isAssumed": false
             }
           ],
           "stylingAdvice": [
-            "Elevate with subtle texture contrast between top and lower fabrication."
+            "Aligns with your preferred fit geometry."
           ]
         },
         "hairStyle": {

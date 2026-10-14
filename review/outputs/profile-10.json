@@ -146,8 +146,8 @@
   "result": {
     "looksCount": 3,
     "contextApplied": "Everyday Casual / Weekend",
-    "vetoedCandidateCount": 54,
-    "evaluatedCandidateCount": 64,
+    "vetoedCandidateCount": 398,
+    "evaluatedCandidateCount": 797,
     "looks": [
       {
         "tier": "BEST_MATCH",
@@ -157,7 +157,7 @@
           "explanation": "Supported by verified user formality, confirmed climate, explicit style vector, and grooming inputs.",
           "toIncreaseConfidence": "Add specific footwear preferences to further personalize lower-leg grounding."
         },
-        "overallHarmonyScore": 0.91,
+        "overallHarmonyScore": 0.93,
         "reasons": [
           "Directly mirrors your personal style axis coordinates.",
           "Contemporary dual-volume drape with intentional spatial presence",
@@ -169,7 +169,7 @@
           "title": "Draped Silk-Tencel Camp Shirt & Wide Linen Trousers",
           "primaryStyleSlug": "minimal",
           "formality": 2,
-          "score": 0.91,
+          "score": 0.93,
           "items": [
             {
               "category": "top",
@@ -199,6 +199,28 @@
               "name": "Minimalist Asymmetric Padded Leather Slide Mules (Espresso)",
               "material": "Soft vegetable-tanned calfskin with cushioned footbed",
               "color": "espresso",
+              "fit": "regular",
+              "modestyRating": "standard",
+              "genderCoding": "androgynous",
+              "layerPosition": 0
+            },
+            {
+              "category": "accessory",
+              "subcategory": "jewelry",
+              "name": "4mm Solid Sterling Silver Curb Chain",
+              "material": "solid 925 sterling silver",
+              "color": "polished-silver",
+              "fit": "regular",
+              "modestyRating": "standard",
+              "genderCoding": "androgynous",
+              "layerPosition": 0
+            },
+            {
+              "category": "accessory",
+              "subcategory": "eyewear",
+              "name": "Architectural Acetate Sunglasses (Dark Tortoise)",
+              "material": "Mazzucchelli bio-acetate, Carl Zeiss UV400 lenses",
+              "color": "dark-tortoise",
               "fit": "regular",
               "modestyRating": "standard",
               "genderCoding": "androgynous",
@@ -247,11 +269,17 @@
               "weight": 0.5,
               "score": 0.9,
               "reason": "Echoes complexion undertone with balanced face-framing values."
+            },
+            {
+              "category": "style_affinity",
+              "weight": 0.25,
+              "score": 0.95,
+              "reason": "Curated editorial anchor template with proven silhouette harmony."
             }
           ],
           "traceableReasons": [
             {
-              "reasonId": "rea_outfit_fluid_hot_resort_linen_01_0_1791968775724",
+              "reasonId": "rea_outfit_fluid_hot_resort_linen_01_0_1791972639028",
               "text": "Directly mirrors your personal style axis coordinates.",
               "signalIds": [
                 "user.styleProfile.styleVector",
@@ -268,7 +296,7 @@
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_fluid_hot_resort_linen_01_1_1791968775724",
+              "reasonId": "rea_outfit_fluid_hot_resort_linen_01_1_1791972639028",
               "text": "Contemporary dual-volume drape with intentional spatial presence",
               "signalIds": [
                 "user.styleProfile.preferences.fitProportions",
@@ -284,7 +312,7 @@
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_fluid_hot_resort_linen_01_2_1791968775724",
+              "reasonId": "rea_outfit_fluid_hot_resort_linen_01_2_1791972639028",
               "text": "Tonal neutral palette ensures high versatility and effortless visual cohesion.",
               "signalIds": [
                 "user.styleProfile.preferences.preferredStyleSlugs",
@@ -336,7 +364,7 @@
           "explanation": "Supported by verified user formality, confirmed climate, explicit style vector, and grooming inputs.",
           "toIncreaseConfidence": "Add specific footwear preferences to further personalize lower-leg grounding."
         },
-        "overallHarmonyScore": 0.9,
+        "overallHarmonyScore": 0.93,
         "reasons": [
           "Balanced regular configuration",
           "Tonal neutral palette ensures high versatility and effortless visual cohesion.",
@@ -348,7 +376,7 @@
           "title": "Breezy Natural Linen Flow",
           "primaryStyleSlug": "korean-minimal",
           "formality": 2,
-          "score": 0.9,
+          "score": 0.93,
           "items": [
             {
               "category": "top",
@@ -378,6 +406,17 @@
               "name": "Jute-Sole Suede Espadrilles (Sand)",
               "material": "unlined Spanish suede, braided jute rope sole",
               "color": "sand",
+              "fit": "regular",
+              "modestyRating": "standard",
+              "genderCoding": "androgynous",
+              "layerPosition": 0
+            },
+            {
+              "category": "accessory",
+              "subcategory": "jewelry",
+              "name": "4mm Solid Sterling Silver Curb Chain",
+              "material": "solid 925 sterling silver",
+              "color": "polished-silver",
               "fit": "regular",
               "modestyRating": "standard",
               "genderCoding": "androgynous",
@@ -426,11 +465,17 @@
               "weight": 0.5,
               "score": 0.9,
               "reason": "Echoes complexion undertone with balanced face-framing values."
+            },
+            {
+              "category": "style_affinity",
+              "weight": 0.25,
+              "score": 0.95,
+              "reason": "Curated editorial anchor template with proven silhouette harmony."
             }
           ],
           "traceableReasons": [
             {
-              "reasonId": "rea_outfit_summer_linen_01_0_1791968775724",
+              "reasonId": "rea_outfit_summer_linen_01_0_1791972639028",
               "text": "Balanced regular configuration",
               "signalIds": [
                 "user.styleProfile.preferences.preferredStyleSlugs",
@@ -446,7 +491,7 @@
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_summer_linen_01_1_1791968775724",
+              "reasonId": "rea_outfit_summer_linen_01_1_1791972639028",
               "text": "Tonal neutral palette ensures high versatility and effortless visual cohesion.",
               "signalIds": [
                 "user.styleProfile.preferences.preferredStyleSlugs",
@@ -462,7 +507,7 @@
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_summer_linen_01_2_1791968775724",
+              "reasonId": "rea_outfit_summer_linen_01_2_1791972639028",
               "text": "Aligned to Everyday Casual / Weekend formality.",
               "signalIds": [
                 "context.occasion",
@@ -515,29 +560,29 @@
           "explanation": "Supported by verified user formality, confirmed climate, explicit style vector, and grooming inputs.",
           "toIncreaseConfidence": "Add specific footwear preferences to further personalize lower-leg grounding."
         },
-        "overallHarmonyScore": 0.85,
+        "overallHarmonyScore": 0.91,
         "reasons": [
-          "Balanced regular configuration",
+          "Structured upper anchor balanced with fluid wide-leg lower volume",
           "Strong contrast between light and deep neutral values establishes crisp visual separation.",
-          "High breathability (140gsm ultra-breathable TENCEL modal jersey) supports natural airflow in hot conditions."
+          "Aligned to Everyday Casual / Weekend formality."
         ],
         "cautions": [],
         "outfit": {
-          "id": "outfit_hot_casual_modal_01",
-          "title": "Airy Featherweight Modal & Pure Linen",
-          "primaryStyleSlug": "casual",
-          "formality": 1,
-          "score": 0.85,
+          "id": "gen_separates_seersucker-shirt-navy_canvas-skate-shoes-black",
+          "title": "Textured Seersucker Short-Sleeve Shirt & Low-Profile Canvas Skate Shoes (Black/White)",
+          "primaryStyleSlug": "smart-casual",
+          "formality": 2,
+          "score": 0.91,
           "items": [
             {
               "category": "top",
-              "subcategory": "t-shirt",
-              "name": "Airy Featherweight Modal Lounge Tee (Black)",
-              "material": "140gsm ultra-breathable TENCEL modal jersey",
-              "color": "pitch-black",
-              "fit": "relaxed",
-              "modestyRating": "covered-both",
-              "genderCoding": "androgynous",
+              "subcategory": "button-down",
+              "name": "Textured Seersucker Short-Sleeve Shirt",
+              "material": "100% puckered cotton seersucker",
+              "color": "deep-navy",
+              "fit": "regular",
+              "modestyRating": "standard",
+              "genderCoding": "masculine",
               "layerPosition": 0
             },
             {
@@ -554,9 +599,42 @@
             {
               "category": "footwear",
               "subcategory": "sneakers",
-              "name": "Minimal Calfskin Low-Top Sneakers",
-              "material": "Italian Nappa leather, Margom rubber sole",
-              "color": "pure-white",
+              "name": "Low-Profile Canvas Skate Shoes (Black/White)",
+              "material": "10oz canvas, vulcanized rubber",
+              "color": "black-and-white",
+              "fit": "regular",
+              "modestyRating": "standard",
+              "genderCoding": "androgynous",
+              "layerPosition": 0
+            },
+            {
+              "category": "accessory",
+              "subcategory": "jewelry",
+              "name": "4mm Solid Sterling Silver Curb Chain",
+              "material": "solid 925 sterling silver",
+              "color": "polished-silver",
+              "fit": "regular",
+              "modestyRating": "standard",
+              "genderCoding": "androgynous",
+              "layerPosition": 0
+            },
+            {
+              "category": "accessory",
+              "subcategory": "eyewear",
+              "name": "Architectural Acetate Sunglasses (Dark Tortoise)",
+              "material": "Mazzucchelli bio-acetate, Carl Zeiss UV400 lenses",
+              "color": "dark-tortoise",
+              "fit": "regular",
+              "modestyRating": "standard",
+              "genderCoding": "androgynous",
+              "layerPosition": 0
+            },
+            {
+              "category": "accessory",
+              "subcategory": "bag",
+              "name": "Structured Architectural Leather Tote",
+              "material": "vegetable-tanned full-grain leather",
+              "color": "matte-black",
               "fit": "regular",
               "modestyRating": "standard",
               "genderCoding": "androgynous",
@@ -567,14 +645,14 @@
             {
               "category": "style_affinity",
               "weight": 3.5,
-              "score": 0.71,
-              "reason": "Coordinate affinity (71%) with your 10D style vector."
+              "score": 0.76,
+              "reason": "Coordinate affinity (76%) with your 10D style vector."
             },
             {
               "category": "silhouette_balance",
               "weight": 3,
-              "score": 0.93,
-              "reason": "Balanced regular configuration"
+              "score": 1,
+              "reason": "Structured upper anchor balanced with fluid wide-leg lower volume"
             },
             {
               "category": "color_harmony",
@@ -585,8 +663,8 @@
             {
               "category": "occasion_fit",
               "weight": 2.5,
-              "score": 0.75,
-              "reason": "Formality fit for Everyday Casual / Weekend (Level 1)"
+              "score": 1,
+              "reason": "Formality fit for Everyday Casual / Weekend (Level 2)"
             },
             {
               "category": "weather_fit",
@@ -597,7 +675,7 @@
             {
               "category": "expression_affinity",
               "weight": 1,
-              "score": 0.8,
+              "score": 0.7,
               "reason": "Soft expression alignment with androgynous presentation preference."
             },
             {
@@ -609,56 +687,57 @@
           ],
           "traceableReasons": [
             {
-              "reasonId": "rea_outfit_hot_casual_modal_01_0_1791968775724",
-              "text": "Balanced regular configuration",
+              "reasonId": "rea_gen_separates_seersucker-shirt-navy_canvas-skate-shoes-black_0_1791972639029",
+              "text": "Structured upper anchor balanced with fluid wide-leg lower volume",
               "signalIds": [
-                "user.styleProfile.preferences.preferredStyleSlugs",
-                "context.occasion"
+                "user.styleProfile.preferences.fitProportions",
+                "user.styleProfile.preferences.preferredFits"
               ],
               "knowledgeEntryIds": [
-                "gar_breathable_modal_lounge_tee_black",
+                "gar_seersucker_shirt_navy",
                 "gar_linen_drawstring_ecru",
-                "gar_minimal_sneaker_white"
+                "gar_canvas_skate_sneakers"
               ],
-              "factor": "general",
+              "factor": "silhouette_balance",
               "authority": "USER_ENTERED",
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_hot_casual_modal_01_1_1791968775724",
+              "reasonId": "rea_gen_separates_seersucker-shirt-navy_canvas-skate-shoes-black_1_1791972639029",
               "text": "Strong contrast between light and deep neutral values establishes crisp visual separation.",
               "signalIds": [
                 "user.styleProfile.preferences.preferredStyleSlugs",
                 "context.occasion"
               ],
               "knowledgeEntryIds": [
-                "gar_breathable_modal_lounge_tee_black",
+                "gar_seersucker_shirt_navy",
                 "gar_linen_drawstring_ecru",
-                "gar_minimal_sneaker_white"
+                "gar_canvas_skate_sneakers"
               ],
               "factor": "general",
               "authority": "USER_ENTERED",
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_hot_casual_modal_01_2_1791968775724",
-              "text": "High breathability (140gsm ultra-breathable TENCEL modal jersey) supports natural airflow in hot conditions.",
+              "reasonId": "rea_gen_separates_seersucker-shirt-navy_canvas-skate-shoes-black_2_1791972639029",
+              "text": "Aligned to Everyday Casual / Weekend formality.",
               "signalIds": [
-                "context.temperatureLevel",
-                "context.condition",
-                "context.weather"
+                "context.occasion",
+                "context.targetFormality"
               ],
               "knowledgeEntryIds": [
-                "gar_breathable_modal_lounge_tee_black",
+                "gar_seersucker_shirt_navy",
                 "gar_linen_drawstring_ecru",
-                "gar_minimal_sneaker_white"
+                "gar_canvas_skate_sneakers",
+                "occ_casual_day"
               ],
-              "factor": "weather_fit",
+              "factor": "occasion_fit",
               "authority": "USER_ENTERED",
               "isAssumed": false
             }
           ],
           "stylingAdvice": [
+            "Tucking the top defines the waistline and emphasizes the architectural drape of trousers.",
             "Aligns with your preferred fit geometry."
           ]
         },

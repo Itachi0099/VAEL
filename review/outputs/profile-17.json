@@ -115,19 +115,24 @@
       "defaultFormality": 4,
       "allowableFormalityRange": [
         3,
-        5
+        4
       ],
       "guidelines": [
         "Prioritize structured tailoring and restrained color discipline",
+        "Target formality 4 for corporate settings; target formality 3 for creative or startup settings",
         "Ensure grooming is pristine, hair disciplined, and collar crisp",
-        "Avoid loud logos, excessive jewelry, and casual sneakers"
+        "Avoid loud logos, excessive jewelry, and casual sneakers",
+        "Evening formal wear, black tie, tuxedos, and gowns are strictly prohibited for interviews"
       ],
       "restrictedGarmentCategories": [
         "graphic-tees",
         "distressed-denim",
         "hoodies",
         "shorts",
-        "sandals"
+        "sandals",
+        "evening-gown",
+        "tuxedo-jacket",
+        "tuxedo-trousers"
       ],
       "keyStyleAffinities": [
         "formal",
@@ -141,9 +146,9 @@
         "startup"
       ],
       "timelessOrTrend": "TIMELESS",
-      "reviewDate": "2026-10-01",
+      "reviewDate": "2026-10-14",
       "createdAt": "2026-10-01",
-      "updatedAt": "2026-10-01"
+      "updatedAt": "2026-10-14"
     },
     "targetFormality": 4,
     "temperatureLevel": "hot",
@@ -155,8 +160,8 @@
   "result": {
     "looksCount": 3,
     "contextApplied": "Job Interview",
-    "vetoedCandidateCount": 51,
-    "evaluatedCandidateCount": 64,
+    "vetoedCandidateCount": 56,
+    "evaluatedCandidateCount": 726,
     "looks": [
       {
         "tier": "BEST_MATCH",
@@ -166,7 +171,422 @@
           "explanation": "Supported by verified user formality, confirmed climate, explicit style vector, and grooming inputs.",
           "toIncreaseConfidence": "Add specific footwear preferences to further personalize lower-leg grounding."
         },
-        "overallHarmonyScore": 0.87,
+        "overallHarmonyScore": 0.91,
+        "reasons": [
+          "Directly mirrors your personal style axis coordinates.",
+          "Inverse silhouette pairing: upper volumetric emphasis with streamlined lower anchor",
+          "Strong contrast between light and deep neutral values establishes crisp visual separation."
+        ],
+        "cautions": [],
+        "outfit": {
+          "id": "gen_separates_fluid-camp-shirt-ecru_backless-leather-mules-black_unlined-linen-silk-blazer-tobacco",
+          "title": "Boxy Draped Silk-Tencel Camp-Collar Shirt (Ecru) & Square-Toe Backless Leather Mules",
+          "primaryStyleSlug": "minimal",
+          "formality": 4,
+          "score": 0.91,
+          "items": [
+            {
+              "category": "top",
+              "subcategory": "button-down",
+              "name": "Boxy Draped Silk-Tencel Camp-Collar Shirt (Ecru)",
+              "material": "160gsm silk-tencel fluid twill",
+              "color": "ecru",
+              "fit": "boxy",
+              "modestyRating": "standard",
+              "genderCoding": "androgynous",
+              "layerPosition": 0
+            },
+            {
+              "category": "bottom",
+              "subcategory": "trousers",
+              "name": "Tropical-Weight High-Twist Wool Trousers (Charcoal)",
+              "material": "230gsm high-twist fresco wool (porous open weave)",
+              "color": "charcoal",
+              "fit": "tailored",
+              "modestyRating": "high-coverage",
+              "genderCoding": "masculine",
+              "layerPosition": 0
+            },
+            {
+              "category": "outerwear",
+              "subcategory": "blazer",
+              "name": "Unlined Linen-Silk-Wool Summer Blazer (Tobacco)",
+              "material": "45% linen, 35% wool, 20% silk",
+              "color": "tobacco",
+              "fit": "tailored",
+              "modestyRating": "covered-arms",
+              "genderCoding": "masculine",
+              "layerPosition": 1
+            },
+            {
+              "category": "footwear",
+              "subcategory": "mules",
+              "name": "Square-Toe Backless Leather Mules",
+              "material": "smooth calf leather, stacked heel",
+              "color": "black",
+              "fit": "regular",
+              "modestyRating": "standard",
+              "genderCoding": "androgynous",
+              "layerPosition": 0
+            },
+            {
+              "category": "accessory",
+              "subcategory": "belt",
+              "name": "25mm Fine Calfskin Belt with Chiseled Brass Buckle",
+              "material": "French box calf with solid brushed brass hardware",
+              "color": "black-gold",
+              "fit": "regular",
+              "modestyRating": "standard",
+              "genderCoding": "androgynous",
+              "layerPosition": 0
+            },
+            {
+              "category": "accessory",
+              "subcategory": "scarf",
+              "name": "Printed Silk Twill Square Scarf (70cm)",
+              "material": "100% 16mm Mulberry silk twill",
+              "color": "navy-ochre",
+              "fit": "regular",
+              "modestyRating": "standard",
+              "genderCoding": "androgynous",
+              "layerPosition": 0
+            }
+          ],
+          "factors": [
+            {
+              "category": "style_affinity",
+              "weight": 3.5,
+              "score": 0.84,
+              "reason": "Coordinate affinity (84%) with your 10D style vector."
+            },
+            {
+              "category": "silhouette_balance",
+              "weight": 3,
+              "score": 0.92,
+              "reason": "Inverse silhouette pairing: upper volumetric emphasis with streamlined lower anchor"
+            },
+            {
+              "category": "color_harmony",
+              "weight": 3,
+              "score": 0.94,
+              "reason": "Color story: strong-contrast"
+            },
+            {
+              "category": "occasion_fit",
+              "weight": 2.5,
+              "score": 1,
+              "reason": "Formality fit for Job Interview (Level 4)"
+            },
+            {
+              "category": "weather_fit",
+              "weight": 2,
+              "score": 0.98,
+              "reason": "Ambient temperature and breathability calibration"
+            },
+            {
+              "category": "expression_affinity",
+              "weight": 1,
+              "score": 0.65,
+              "reason": "Soft expression alignment with masculine presentation preference."
+            },
+            {
+              "category": "preference_reinforcement",
+              "weight": 0.5,
+              "score": 0.9,
+              "reason": "Echoes complexion undertone with balanced face-framing values."
+            }
+          ],
+          "traceableReasons": [
+            {
+              "reasonId": "rea_gen_separates_fluid-camp-shirt-ecru_backless-leather-mules-black_unlined-linen-silk-blazer-tobacco_0_1791972639220",
+              "text": "Directly mirrors your personal style axis coordinates.",
+              "signalIds": [
+                "user.styleProfile.styleVector",
+                "user.styleProfile.preferences.preferredStyleSlugs"
+              ],
+              "knowledgeEntryIds": [
+                "gar_fluid_camp_shirt_ecru",
+                "gar_masculine_tropical_wool_trousers_charcoal",
+                "gar_masculine_unlined_linen_silk_blazer_tobacco",
+                "gar_leather_mules_black",
+                "style_minimal"
+              ],
+              "factor": "style_affinity",
+              "authority": "USER_ENTERED",
+              "isAssumed": false
+            },
+            {
+              "reasonId": "rea_gen_separates_fluid-camp-shirt-ecru_backless-leather-mules-black_unlined-linen-silk-blazer-tobacco_1_1791972639220",
+              "text": "Inverse silhouette pairing: upper volumetric emphasis with streamlined lower anchor",
+              "signalIds": [
+                "user.styleProfile.preferences.fitProportions",
+                "user.styleProfile.preferences.preferredFits"
+              ],
+              "knowledgeEntryIds": [
+                "gar_fluid_camp_shirt_ecru",
+                "gar_masculine_tropical_wool_trousers_charcoal",
+                "gar_masculine_unlined_linen_silk_blazer_tobacco",
+                "gar_leather_mules_black"
+              ],
+              "factor": "silhouette_balance",
+              "authority": "USER_ENTERED",
+              "isAssumed": false
+            },
+            {
+              "reasonId": "rea_gen_separates_fluid-camp-shirt-ecru_backless-leather-mules-black_unlined-linen-silk-blazer-tobacco_2_1791972639220",
+              "text": "Strong contrast between light and deep neutral values establishes crisp visual separation.",
+              "signalIds": [
+                "user.styleProfile.preferences.preferredStyleSlugs",
+                "context.occasion"
+              ],
+              "knowledgeEntryIds": [
+                "gar_fluid_camp_shirt_ecru",
+                "gar_masculine_tropical_wool_trousers_charcoal",
+                "gar_masculine_unlined_linen_silk_blazer_tobacco",
+                "gar_leather_mules_black"
+              ],
+              "factor": "general",
+              "authority": "USER_ENTERED",
+              "isAssumed": false
+            }
+          ],
+          "stylingAdvice": [
+            "Inverse volume dynamic: emphasizes upper shoulder line while maintaining a clean, tapered ankle silhouette."
+          ]
+        },
+        "hairStyle": {
+          "name": "Textured French Crop",
+          "slug": "textured-crop",
+          "score": 0.87,
+          "reasons": [
+            "Fits within your preferred moderate maintenance threshold.",
+            "Appropriate formality for Job Interview.",
+            "Directly aligns with your preferred minimal aesthetic",
+            "Off-neck heat-aware style promotes cooling comfort in hot, humid weather."
+          ]
+        },
+        "groomingStyle": {
+          "name": "Designer Stubble (3-Day Shadow)",
+          "slug": "designer-stubble",
+          "score": 0.84,
+          "reasons": [
+            "Conforms with your moderate grooming maintenance routine.",
+            "Appropriate grooming polish for Job Interview.",
+            "Directly aligns with your preferred minimal aesthetic"
+          ]
+        }
+      },
+      {
+        "tier": "SAFE",
+        "tierRationale": "High familiarity and effortless ease. Relies on proven proportions and classic foundational tones.",
+        "confidence": {
+          "state": "STRONG",
+          "explanation": "Supported by verified user formality, confirmed climate, explicit style vector, and grooming inputs.",
+          "toIncreaseConfidence": "Add specific footwear preferences to further personalize lower-leg grounding."
+        },
+        "overallHarmonyScore": 0.91,
+        "reasons": [
+          "Directly mirrors your personal style axis coordinates.",
+          "Inverse silhouette pairing: upper volumetric emphasis with streamlined lower anchor",
+          "Strong contrast between light and deep neutral values establishes crisp visual separation."
+        ],
+        "cautions": [],
+        "outfit": {
+          "id": "gen_separates_fluid-camp-shirt-ecru_backless-leather-mules-black_unlined-tropical-hopsack-blazer-navy",
+          "title": "Boxy Draped Silk-Tencel Camp-Collar Shirt (Ecru) & Square-Toe Backless Leather Mules",
+          "primaryStyleSlug": "minimal",
+          "formality": 4,
+          "score": 0.91,
+          "items": [
+            {
+              "category": "top",
+              "subcategory": "button-down",
+              "name": "Boxy Draped Silk-Tencel Camp-Collar Shirt (Ecru)",
+              "material": "160gsm silk-tencel fluid twill",
+              "color": "ecru",
+              "fit": "boxy",
+              "modestyRating": "standard",
+              "genderCoding": "androgynous",
+              "layerPosition": 0
+            },
+            {
+              "category": "bottom",
+              "subcategory": "trousers",
+              "name": "Tropical-Weight High-Twist Wool Trousers (Charcoal)",
+              "material": "230gsm high-twist fresco wool (porous open weave)",
+              "color": "charcoal",
+              "fit": "tailored",
+              "modestyRating": "high-coverage",
+              "genderCoding": "masculine",
+              "layerPosition": 0
+            },
+            {
+              "category": "outerwear",
+              "subcategory": "blazer",
+              "name": "Unlined Tropical Hopsack Wool Blazer (Deep Navy)",
+              "material": "240gsm open-weave tropical hopsack wool",
+              "color": "deep-navy",
+              "fit": "tailored",
+              "modestyRating": "covered-arms",
+              "genderCoding": "masculine",
+              "layerPosition": 1
+            },
+            {
+              "category": "footwear",
+              "subcategory": "mules",
+              "name": "Square-Toe Backless Leather Mules",
+              "material": "smooth calf leather, stacked heel",
+              "color": "black",
+              "fit": "regular",
+              "modestyRating": "standard",
+              "genderCoding": "androgynous",
+              "layerPosition": 0
+            },
+            {
+              "category": "accessory",
+              "subcategory": "belt",
+              "name": "25mm Fine Calfskin Belt with Chiseled Brass Buckle",
+              "material": "French box calf with solid brushed brass hardware",
+              "color": "black-gold",
+              "fit": "regular",
+              "modestyRating": "standard",
+              "genderCoding": "androgynous",
+              "layerPosition": 0
+            }
+          ],
+          "factors": [
+            {
+              "category": "style_affinity",
+              "weight": 3.5,
+              "score": 0.84,
+              "reason": "Coordinate affinity (84%) with your 10D style vector."
+            },
+            {
+              "category": "silhouette_balance",
+              "weight": 3,
+              "score": 0.92,
+              "reason": "Inverse silhouette pairing: upper volumetric emphasis with streamlined lower anchor"
+            },
+            {
+              "category": "color_harmony",
+              "weight": 3,
+              "score": 0.94,
+              "reason": "Color story: strong-contrast"
+            },
+            {
+              "category": "occasion_fit",
+              "weight": 2.5,
+              "score": 1,
+              "reason": "Formality fit for Job Interview (Level 4)"
+            },
+            {
+              "category": "weather_fit",
+              "weight": 2,
+              "score": 0.98,
+              "reason": "Ambient temperature and breathability calibration"
+            },
+            {
+              "category": "expression_affinity",
+              "weight": 1,
+              "score": 0.65,
+              "reason": "Soft expression alignment with masculine presentation preference."
+            },
+            {
+              "category": "preference_reinforcement",
+              "weight": 0.5,
+              "score": 0.9,
+              "reason": "Echoes complexion undertone with balanced face-framing values."
+            }
+          ],
+          "traceableReasons": [
+            {
+              "reasonId": "rea_gen_separates_fluid-camp-shirt-ecru_backless-leather-mules-black_unlined-tropical-hopsack-blazer-navy_0_1791972639220",
+              "text": "Directly mirrors your personal style axis coordinates.",
+              "signalIds": [
+                "user.styleProfile.styleVector",
+                "user.styleProfile.preferences.preferredStyleSlugs"
+              ],
+              "knowledgeEntryIds": [
+                "gar_fluid_camp_shirt_ecru",
+                "gar_masculine_tropical_wool_trousers_charcoal",
+                "gar_masculine_unlined_hopsack_blazer_navy",
+                "gar_leather_mules_black",
+                "style_minimal"
+              ],
+              "factor": "style_affinity",
+              "authority": "USER_ENTERED",
+              "isAssumed": false
+            },
+            {
+              "reasonId": "rea_gen_separates_fluid-camp-shirt-ecru_backless-leather-mules-black_unlined-tropical-hopsack-blazer-navy_1_1791972639220",
+              "text": "Inverse silhouette pairing: upper volumetric emphasis with streamlined lower anchor",
+              "signalIds": [
+                "user.styleProfile.preferences.fitProportions",
+                "user.styleProfile.preferences.preferredFits"
+              ],
+              "knowledgeEntryIds": [
+                "gar_fluid_camp_shirt_ecru",
+                "gar_masculine_tropical_wool_trousers_charcoal",
+                "gar_masculine_unlined_hopsack_blazer_navy",
+                "gar_leather_mules_black"
+              ],
+              "factor": "silhouette_balance",
+              "authority": "USER_ENTERED",
+              "isAssumed": false
+            },
+            {
+              "reasonId": "rea_gen_separates_fluid-camp-shirt-ecru_backless-leather-mules-black_unlined-tropical-hopsack-blazer-navy_2_1791972639220",
+              "text": "Strong contrast between light and deep neutral values establishes crisp visual separation.",
+              "signalIds": [
+                "user.styleProfile.preferences.preferredStyleSlugs",
+                "context.occasion"
+              ],
+              "knowledgeEntryIds": [
+                "gar_fluid_camp_shirt_ecru",
+                "gar_masculine_tropical_wool_trousers_charcoal",
+                "gar_masculine_unlined_hopsack_blazer_navy",
+                "gar_leather_mules_black"
+              ],
+              "factor": "general",
+              "authority": "USER_ENTERED",
+              "isAssumed": false
+            }
+          ],
+          "stylingAdvice": [
+            "Inverse volume dynamic: emphasizes upper shoulder line while maintaining a clean, tapered ankle silhouette."
+          ]
+        },
+        "hairStyle": {
+          "name": "Textured French Crop",
+          "slug": "textured-crop",
+          "score": 0.87,
+          "reasons": [
+            "Fits within your preferred moderate maintenance threshold.",
+            "Appropriate formality for Job Interview.",
+            "Directly aligns with your preferred minimal aesthetic",
+            "Off-neck heat-aware style promotes cooling comfort in hot, humid weather."
+          ]
+        },
+        "groomingStyle": {
+          "name": "Designer Stubble (3-Day Shadow)",
+          "slug": "designer-stubble",
+          "score": 0.84,
+          "reasons": [
+            "Conforms with your moderate grooming maintenance routine.",
+            "Appropriate grooming polish for Job Interview.",
+            "Directly aligns with your preferred minimal aesthetic"
+          ]
+        }
+      },
+      {
+        "tier": "STRETCH",
+        "tierRationale": "Curated directional exploration. Pushes volume and textural depth while strictly respecting dress codes.",
+        "confidence": {
+          "state": "STRONG",
+          "explanation": "Supported by verified user formality, confirmed climate, explicit style vector, and grooming inputs.",
+          "toIncreaseConfidence": "Add specific footwear preferences to further personalize lower-leg grounding."
+        },
+        "overallHarmonyScore": 0.89,
         "reasons": [
           "Harmonious classic proportion with uniform clean linear cadence",
           "Harmonious balance across complementary tonal depths.",
@@ -178,7 +598,7 @@
           "title": "Tropical Hopsack Blazer & Fresco Wool Trousers",
           "primaryStyleSlug": "smart-casual",
           "formality": 4,
-          "score": 0.87,
+          "score": 0.89,
           "items": [
             {
               "category": "top",
@@ -219,6 +639,39 @@
               "name": "Full-Grain Leather Cap-Toe Oxfords (Black)",
               "material": "full-grain French calfskin, oak bark leather sole",
               "color": "black",
+              "fit": "regular",
+              "modestyRating": "standard",
+              "genderCoding": "masculine",
+              "layerPosition": 0
+            },
+            {
+              "category": "accessory",
+              "subcategory": "belt",
+              "name": "25mm Fine Calfskin Belt with Chiseled Brass Buckle",
+              "material": "French box calf with solid brushed brass hardware",
+              "color": "black-gold",
+              "fit": "regular",
+              "modestyRating": "standard",
+              "genderCoding": "androgynous",
+              "layerPosition": 0
+            },
+            {
+              "category": "accessory",
+              "subcategory": "scarf",
+              "name": "Printed Silk Twill Square Scarf (70cm)",
+              "material": "100% 16mm Mulberry silk twill",
+              "color": "navy-ochre",
+              "fit": "regular",
+              "modestyRating": "standard",
+              "genderCoding": "androgynous",
+              "layerPosition": 0
+            },
+            {
+              "category": "accessory",
+              "subcategory": "pocket-square",
+              "name": "Printed Silk Twill Pocket Square",
+              "material": "100% Italian silk twill",
+              "color": "deep-burgundy-gold",
               "fit": "regular",
               "modestyRating": "standard",
               "genderCoding": "masculine",
@@ -267,11 +720,17 @@
               "weight": 0.5,
               "score": 0.9,
               "reason": "Echoes complexion undertone with balanced face-framing values."
+            },
+            {
+              "category": "style_affinity",
+              "weight": 0.25,
+              "score": 0.95,
+              "reason": "Curated editorial anchor template with proven silhouette harmony."
             }
           ],
           "traceableReasons": [
             {
-              "reasonId": "rea_outfit_masculine_tropical_wool_hopsack_interview_01_0_1791968775729",
+              "reasonId": "rea_outfit_masculine_tropical_wool_hopsack_interview_01_0_1791972639218",
               "text": "Harmonious classic proportion with uniform clean linear cadence",
               "signalIds": [
                 "user.styleProfile.preferences.preferredStyleSlugs",
@@ -288,7 +747,7 @@
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_masculine_tropical_wool_hopsack_interview_01_1_1791968775729",
+              "reasonId": "rea_outfit_masculine_tropical_wool_hopsack_interview_01_1_1791972639218",
               "text": "Harmonious balance across complementary tonal depths.",
               "signalIds": [
                 "user.styleProfile.preferences.fitProportions",
@@ -305,7 +764,7 @@
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_masculine_tropical_wool_hopsack_interview_01_2_1791968775729",
+              "reasonId": "rea_outfit_masculine_tropical_wool_hopsack_interview_01_2_1791972639218",
               "text": "Neutral tonal temperature balance relative to undertone.",
               "signalIds": [
                 "user.styleProfile.preferences.fitProportions",
@@ -318,373 +777,6 @@
                 "gar_masculine_cap_toe_oxford_black"
               ],
               "factor": "silhouette_balance",
-              "authority": "USER_ENTERED",
-              "isAssumed": false
-            }
-          ],
-          "stylingAdvice": [
-            "Elevate with subtle texture contrast between top and lower fabrication."
-          ]
-        },
-        "hairStyle": {
-          "name": "Textured French Crop",
-          "slug": "textured-crop",
-          "score": 0.87,
-          "reasons": [
-            "Fits within your preferred moderate maintenance threshold.",
-            "Appropriate formality for Job Interview.",
-            "Directly aligns with your preferred minimal aesthetic",
-            "Off-neck heat-aware style promotes cooling comfort in hot, humid weather."
-          ]
-        },
-        "groomingStyle": {
-          "name": "Designer Stubble (3-Day Shadow)",
-          "slug": "designer-stubble",
-          "score": 0.84,
-          "reasons": [
-            "Conforms with your moderate grooming maintenance routine.",
-            "Appropriate grooming polish for Job Interview.",
-            "Directly aligns with your preferred minimal aesthetic"
-          ]
-        }
-      },
-      {
-        "tier": "SAFE",
-        "tierRationale": "High familiarity and effortless ease. Relies on proven proportions and classic foundational tones.",
-        "confidence": {
-          "state": "STRONG",
-          "explanation": "Supported by verified user formality, confirmed climate, explicit style vector, and grooming inputs.",
-          "toIncreaseConfidence": "Add specific footwear preferences to further personalize lower-leg grounding."
-        },
-        "overallHarmonyScore": 0.85,
-        "reasons": [
-          "Harmonious classic proportion with uniform clean linear cadence",
-          "Harmonious balance across complementary tonal depths.",
-          "Neutral tonal temperature balance relative to undertone."
-        ],
-        "cautions": [],
-        "outfit": {
-          "id": "outfit_masculine_summer_linen_silk_interview_01",
-          "title": "Deconstructed Linen-Silk Blazer & Cotton-Linen Trousers",
-          "primaryStyleSlug": "old-money",
-          "formality": 4,
-          "score": 0.85,
-          "items": [
-            {
-              "category": "top",
-              "subcategory": "dress-shirt",
-              "name": "Sky Blue 140s Cotton Poplin Point Collar Shirt",
-              "material": "140s two-ply Giza cotton poplin",
-              "color": "sky-blue",
-              "fit": "tailored",
-              "modestyRating": "high-coverage",
-              "genderCoding": "masculine",
-              "layerPosition": 0
-            },
-            {
-              "category": "outerwear",
-              "subcategory": "blazer",
-              "name": "Unlined Linen-Silk-Wool Summer Blazer (Tobacco)",
-              "material": "45% linen, 35% wool, 20% silk",
-              "color": "tobacco",
-              "fit": "tailored",
-              "modestyRating": "covered-arms",
-              "genderCoding": "masculine",
-              "layerPosition": 1
-            },
-            {
-              "category": "bottom",
-              "subcategory": "trousers",
-              "name": "Tailored Cotton-Linen Dress Trousers (Sand)",
-              "material": "55% Irish linen, 45% combed cotton (240gsm)",
-              "color": "sand",
-              "fit": "tailored",
-              "modestyRating": "high-coverage",
-              "genderCoding": "masculine",
-              "layerPosition": 0
-            },
-            {
-              "category": "footwear",
-              "subcategory": "derby",
-              "name": "Burnished Calfskin Plain-Toe Derbies (Espresso)",
-              "material": "museum calfskin leather, double leather sole",
-              "color": "espresso",
-              "fit": "regular",
-              "modestyRating": "standard",
-              "genderCoding": "masculine",
-              "layerPosition": 0
-            }
-          ],
-          "factors": [
-            {
-              "category": "style_affinity",
-              "weight": 3.5,
-              "score": 0.64,
-              "reason": "Coordinate affinity (64%) with your 10D style vector."
-            },
-            {
-              "category": "silhouette_balance",
-              "weight": 3,
-              "score": 0.9,
-              "reason": "Harmonious classic proportion with uniform clean linear cadence"
-            },
-            {
-              "category": "color_harmony",
-              "weight": 3,
-              "score": 0.82,
-              "reason": "Color story: analogous"
-            },
-            {
-              "category": "occasion_fit",
-              "weight": 2.5,
-              "score": 1,
-              "reason": "Formality fit for Job Interview (Level 4)"
-            },
-            {
-              "category": "weather_fit",
-              "weight": 2,
-              "score": 0.98,
-              "reason": "Ambient temperature and breathability calibration"
-            },
-            {
-              "category": "expression_affinity",
-              "weight": 1,
-              "score": 0.8,
-              "reason": "Soft expression alignment with masculine presentation preference."
-            },
-            {
-              "category": "preference_reinforcement",
-              "weight": 0.5,
-              "score": 0.9,
-              "reason": "Echoes complexion undertone with balanced face-framing values."
-            }
-          ],
-          "traceableReasons": [
-            {
-              "reasonId": "rea_outfit_masculine_summer_linen_silk_interview_01_0_1791968775729",
-              "text": "Harmonious classic proportion with uniform clean linear cadence",
-              "signalIds": [
-                "user.styleProfile.preferences.preferredStyleSlugs",
-                "context.occasion"
-              ],
-              "knowledgeEntryIds": [
-                "gar_masculine_poplin_point_shirt_sky_blue",
-                "gar_masculine_unlined_linen_silk_blazer_tobacco",
-                "gar_masculine_cotton_linen_trousers_sand",
-                "gar_masculine_plain_derby_espresso"
-              ],
-              "factor": "general",
-              "authority": "USER_ENTERED",
-              "isAssumed": false
-            },
-            {
-              "reasonId": "rea_outfit_masculine_summer_linen_silk_interview_01_1_1791968775729",
-              "text": "Harmonious balance across complementary tonal depths.",
-              "signalIds": [
-                "user.styleProfile.preferences.fitProportions",
-                "user.styleProfile.preferences.preferredFits"
-              ],
-              "knowledgeEntryIds": [
-                "gar_masculine_poplin_point_shirt_sky_blue",
-                "gar_masculine_unlined_linen_silk_blazer_tobacco",
-                "gar_masculine_cotton_linen_trousers_sand",
-                "gar_masculine_plain_derby_espresso"
-              ],
-              "factor": "silhouette_balance",
-              "authority": "USER_ENTERED",
-              "isAssumed": false
-            },
-            {
-              "reasonId": "rea_outfit_masculine_summer_linen_silk_interview_01_2_1791968775729",
-              "text": "Neutral tonal temperature balance relative to undertone.",
-              "signalIds": [
-                "user.styleProfile.preferences.fitProportions",
-                "user.styleProfile.preferences.preferredFits"
-              ],
-              "knowledgeEntryIds": [
-                "gar_masculine_poplin_point_shirt_sky_blue",
-                "gar_masculine_unlined_linen_silk_blazer_tobacco",
-                "gar_masculine_cotton_linen_trousers_sand",
-                "gar_masculine_plain_derby_espresso"
-              ],
-              "factor": "silhouette_balance",
-              "authority": "USER_ENTERED",
-              "isAssumed": false
-            }
-          ],
-          "stylingAdvice": [
-            "Elevate with subtle texture contrast between top and lower fabrication."
-          ]
-        },
-        "hairStyle": {
-          "name": "Textured French Crop",
-          "slug": "textured-crop",
-          "score": 0.87,
-          "reasons": [
-            "Fits within your preferred moderate maintenance threshold.",
-            "Appropriate formality for Job Interview.",
-            "Directly aligns with your preferred minimal aesthetic",
-            "Off-neck heat-aware style promotes cooling comfort in hot, humid weather."
-          ]
-        },
-        "groomingStyle": {
-          "name": "Designer Stubble (3-Day Shadow)",
-          "slug": "designer-stubble",
-          "score": 0.84,
-          "reasons": [
-            "Conforms with your moderate grooming maintenance routine.",
-            "Appropriate grooming polish for Job Interview.",
-            "Directly aligns with your preferred minimal aesthetic"
-          ]
-        }
-      },
-      {
-        "tier": "STRETCH",
-        "tierRationale": "Curated directional exploration. Pushes volume and textural depth while strictly respecting dress codes.",
-        "confidence": {
-          "state": "STRONG",
-          "explanation": "Supported by verified user formality, confirmed climate, explicit style vector, and grooming inputs.",
-          "toIncreaseConfidence": "Add specific footwear preferences to further personalize lower-leg grounding."
-        },
-        "overallHarmonyScore": 0.84,
-        "reasons": [
-          "Harmonious classic proportion with uniform clean linear cadence",
-          "Strong contrast between light and deep neutral values establishes crisp visual separation.",
-          "High breathability (100% Sea Island cotton with woven marcella bib) supports natural airflow in hot conditions."
-        ],
-        "cautions": [],
-        "outfit": {
-          "id": "outfit_masculine_formal_white_tie_gala_01",
-          "title": "Fine Marcella Formal Shirt & Bespoke Tailored Slacks",
-          "primaryStyleSlug": "formal",
-          "formality": 5,
-          "score": 0.84,
-          "items": [
-            {
-              "category": "top",
-              "subcategory": "dress-shirt",
-              "name": "Fine Piqué Marcella Formal Shirt (Pure White)",
-              "material": "100% Sea Island cotton with woven marcella bib",
-              "color": "pure-white",
-              "fit": "tailored",
-              "modestyRating": "high-coverage",
-              "genderCoding": "masculine",
-              "layerPosition": 0
-            },
-            {
-              "category": "bottom",
-              "subcategory": "trousers",
-              "name": "Tropical-Weight High-Twist Wool Trousers (Charcoal)",
-              "material": "230gsm high-twist fresco wool (porous open weave)",
-              "color": "charcoal",
-              "fit": "tailored",
-              "modestyRating": "high-coverage",
-              "genderCoding": "masculine",
-              "layerPosition": 0
-            },
-            {
-              "category": "footwear",
-              "subcategory": "oxford",
-              "name": "Full-Grain Leather Cap-Toe Oxfords (Black)",
-              "material": "full-grain French calfskin, oak bark leather sole",
-              "color": "black",
-              "fit": "regular",
-              "modestyRating": "standard",
-              "genderCoding": "masculine",
-              "layerPosition": 0
-            }
-          ],
-          "factors": [
-            {
-              "category": "style_affinity",
-              "weight": 3.5,
-              "score": 0.71,
-              "reason": "Coordinate affinity (71%) with your 10D style vector."
-            },
-            {
-              "category": "silhouette_balance",
-              "weight": 3,
-              "score": 0.9,
-              "reason": "Harmonious classic proportion with uniform clean linear cadence"
-            },
-            {
-              "category": "color_harmony",
-              "weight": 3,
-              "score": 0.94,
-              "reason": "Color story: strong-contrast"
-            },
-            {
-              "category": "occasion_fit",
-              "weight": 2.5,
-              "score": 0.75,
-              "reason": "Formality fit for Job Interview (Level 5)"
-            },
-            {
-              "category": "weather_fit",
-              "weight": 2,
-              "score": 0.98,
-              "reason": "Ambient temperature and breathability calibration"
-            },
-            {
-              "category": "expression_affinity",
-              "weight": 1,
-              "score": 0.8,
-              "reason": "Soft expression alignment with masculine presentation preference."
-            },
-            {
-              "category": "preference_reinforcement",
-              "weight": 0.5,
-              "score": 0.9,
-              "reason": "Echoes complexion undertone with balanced face-framing values."
-            }
-          ],
-          "traceableReasons": [
-            {
-              "reasonId": "rea_outfit_masculine_formal_white_tie_gala_01_0_1791968775729",
-              "text": "Harmonious classic proportion with uniform clean linear cadence",
-              "signalIds": [
-                "user.styleProfile.preferences.preferredStyleSlugs",
-                "context.occasion"
-              ],
-              "knowledgeEntryIds": [
-                "gar_masculine_spread_collar_tuxedo_shirt_white",
-                "gar_masculine_tropical_wool_trousers_charcoal",
-                "gar_masculine_cap_toe_oxford_black"
-              ],
-              "factor": "general",
-              "authority": "USER_ENTERED",
-              "isAssumed": false
-            },
-            {
-              "reasonId": "rea_outfit_masculine_formal_white_tie_gala_01_1_1791968775729",
-              "text": "Strong contrast between light and deep neutral values establishes crisp visual separation.",
-              "signalIds": [
-                "user.styleProfile.preferences.preferredStyleSlugs",
-                "context.occasion"
-              ],
-              "knowledgeEntryIds": [
-                "gar_masculine_spread_collar_tuxedo_shirt_white",
-                "gar_masculine_tropical_wool_trousers_charcoal",
-                "gar_masculine_cap_toe_oxford_black"
-              ],
-              "factor": "general",
-              "authority": "USER_ENTERED",
-              "isAssumed": false
-            },
-            {
-              "reasonId": "rea_outfit_masculine_formal_white_tie_gala_01_2_1791968775729",
-              "text": "High breathability (100% Sea Island cotton with woven marcella bib) supports natural airflow in hot conditions.",
-              "signalIds": [
-                "context.temperatureLevel",
-                "context.condition",
-                "context.weather"
-              ],
-              "knowledgeEntryIds": [
-                "gar_masculine_spread_collar_tuxedo_shirt_white",
-                "gar_masculine_tropical_wool_trousers_charcoal",
-                "gar_masculine_cap_toe_oxford_black"
-              ],
-              "factor": "weather_fit",
               "authority": "USER_ENTERED",
               "isAssumed": false
             }

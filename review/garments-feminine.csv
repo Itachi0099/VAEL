@@ -62,3 +62,38 @@ gar_feminine_heavy_silk_crepe_midi_skirt_navy,"Fluted Heavy Silk Crepe Midi Skir
 gar_feminine_wool_flannel_maxi_skirt_charcoal,"Architectural Wool Flannel Maxi Skirt (Charcoal)",wool-flannel-maxi-skirt-charcoal,bottom,feminine,1,false
 gar_feminine_duchesse_satin_column_skirt_black,"Duchesse Silk Satin Column Skirt (Black)",duchesse-silk-satin-column-skirt-black,bottom,feminine,1,false
 gar_feminine_wool_accordion_pleat_skirt_burgundy,"Fine Wool Crepe Accordion Pleated Midi Skirt (Burgundy)",wool-accordion-pleated-skirt-burgundy,bottom,feminine,1,false
+gar_ribbed_merino_sweater_dress_grey,"Fine Ribbed Merino Turtleneck Sweater Dress (Heather Grey)",ribbed-merino-sweater-dress-grey,one-piece,feminine,1,false
+gar_french_terry_hooded_dress_black,"Heavyweight French Terry Hooded Dress (Black)",french-terry-hooded-dress-black,one-piece,feminine,0.5,true
+gar_thermal_waffle_maxi_dress_oatmeal,"Organic Waffle Knit Maxi Loungewear Dress (Oatmeal)",thermal-waffle-maxi-dress-oatmeal,one-piece,feminine,0.5,false
+gar_flannel_oversized_shirt_dress_navy,"Brushed Cotton Flannel Oversized Shirt Dress (Navy)",flannel-oversized-shirt-dress-navy,one-piece,feminine,0.5,true
+gar_cotton_jersey_tshirt_maxi_dress_ecru,"Organic Cotton Jersey T-Shirt Maxi Dress (Ecru)",cotton-jersey-tshirt-maxi-dress-ecru,one-piece,feminine,0.5,false
+gar_washed_linen_popover_dress_sage,"Washed Normandy Linen Popover Dress (Sage)",washed-linen-popover-dress-sage,one-piece,feminine,1,false
+gar_slub_cotton_tshirt_dress_olive,"Slub Cotton Pocket T-Shirt Dress (Olive)",slub-cotton-tshirt-dress-olive,one-piece,feminine,0.5,false
+gar_gauze_cotton_tiered_dress_white,"Double Gauze Cotton Tiered Sundress (White)",gauze-cotton-tiered-dress-white,one-piece,feminine,1,false
+gar_boiled_wool_pinafore_dress_charcoal,"Boiled Wool Architectural Pinafore Dress (Charcoal)",boiled-wool-pinafore-dress-charcoal,one-piece,feminine,1,false
+gar_corduroy_utility_midi_dress_espresso,"Cotton Corduroy Utility Belted Dress (Espresso)",corduroy-utility-midi-dress-espresso,one-piece,feminine,1,false
+gar_heavy_denim_western_shirt_dress_indigo,"Heavy Raw Denim Western Shirt Dress (Deep Indigo)",heavy-denim-western-shirt-dress-indigo,one-piece,feminine,0.5,false
+gar_ribbed_cashmere_midi_dress_camel,"Ribbed Cashmere-Merino Crewneck Dress (Camel)",ribbed-cashmere-midi-dress-camel,one-piece,feminine,1,false
+gar_fleece_heavy_jersey_midi_skirt_grey,"Brushed Fleece-Backed Jersey Midi Skirt (Heather Grey)",fleece-heavy-jersey-midi-skirt-grey,bottom,feminine,0.5,false
+gar_quilted_insulated_aline_skirt_black,"Quilted Ripstop Insulated A-Line Skirt (Black)",quilted-insulated-aline-skirt-black,bottom,feminine,0.5,false
+gar_ribbed_drawstring_maxi_skirt_charcoal,"Ribbed Knit Drawstring Maxi Column Skirt (Charcoal)",ribbed-drawstring-maxi-skirt-charcoal,bottom,feminine,1,false
+gar_cotton_corduroy_straight_skirt_tobacco,"Cotton Corduroy Straight Mini Skirt (Tobacco)",cotton-corduroy-straight-skirt-tobacco,bottom,feminine,0.5,false
+gar_washed_poplin_tiered_maxi_skirt_white,"Washed Cotton Poplin Tiered Maxi Skirt (White)",washed-poplin-tiered-maxi-skirt-white,bottom,feminine,1,false
+gar_linen_drawstring_midi_skirt_natural,"Flax Linen Drawstring Straight Midi Skirt (Natural)",linen-drawstring-midi-skirt-natural,bottom,feminine,0.5,true
+gar_gauze_cotton_wrap_skirt_terracotta,"Crinkled Gauze Cotton Tie-Wrap Skirt (Terracotta)",gauze-cotton-wrap-skirt-terracotta,bottom,feminine,1,false
+gar_lightweight_denim_aline_skirt_indigo,"Lightweight Washed Denim A-Line Midi Skirt (Light Indigo)",lightweight-denim-aline-skirt-indigo,bottom,feminine,0.5,false
+gar_chunky_merino_maxi_skirt_oatmeal,"Chunky Ribbed Merino Wool Maxi Skirt (Oatmeal)",chunky-merino-maxi-skirt-oatmeal,bottom,feminine,1,false
+gar_selvedge_denim_column_skirt_indigo,"Structured Selvedge Denim Column Skirt (Raw Indigo)",selvedge-denim-column-skirt-indigo,bottom,feminine,0.5,false
+gar_pleated_wool_plaid_skirt_forest,"Heritage Wool-Blend Stitched Box-Pleat Skirt (Forest Plaid)",pleated-wool-plaid-skirt-forest,bottom,feminine,1,false
+gar_linen_canvas_cargo_skirt_olive,"Heavy Linen Canvas Utility Midi Skirt (Olive)",linen-canvas-cargo-skirt-olive,bottom,feminine,0.5,false
+gar_cotton_poplin_circle_skirt_navy,"High-Density Cotton Poplin Circle Midi Skirt (Navy)",cotton-poplin-circle-skirt-navy,bottom,feminine,1,false
+gar_habotai_silk_kaftan_gown_ivory,"Architectural Habotai Silk Kaftan Gown (Ivory)",habotai-silk-kaftan-gown-ivory,one-piece,feminine,1,true
+gar_organza_overlay_evening_gown_champagne,"Silk Organza High-Neck Evening Gown (Champagne)",organza-overlay-evening-gown-champagne,one-piece,feminine,1,false
+gar_silk_chiffon_goddess_gown_sage,"Multi-Layered Silk Chiffon Draped Gown (Sage)",silk-chiffon-goddess-gown-sage,one-piece,feminine,1,false
+gar_crepe_cape_evening_gown_cobalt,"Silk Crepe de Chine Capelet Column Gown (Cobalt)",crepe-cape-evening-gown-cobalt,one-piece,feminine,1,false
+gar_silk_mikado_ball_maxi_skirt_black,"Sculptural Silk Mikado Bell Maxi Skirt (Black)",silk-mikado-ball-maxi-skirt-black,bottom,feminine,1,false
+gar_pleated_silk_georgette_maxi_skirt_ivory,"Permanent Accordion-Pleated Silk Georgette Maxi Skirt (Ivory)",pleated-silk-georgette-maxi-skirt-ivory,bottom,feminine,1,false
+gar_metallic_silk_jacquard_skirt_bronze,"Architectural Metallic Silk Jacquard Maxi Skirt (Bronze)",metallic-silk-jacquard-skirt-bronze,bottom,feminine,1,false
+gar_duchesse_satin_mermaid_skirt_navy,"Fluted Silk Duchesse Satin Mermaid Maxi Skirt (Navy)",duchesse-satin-mermaid-skirt-navy,bottom,feminine,1,false
+gar_linen_viscose_pleated_midi_skirt_terracotta,"Linen-Viscose Fluid Knife-Pleat Midi Skirt (Terracotta)",linen-viscose-pleated-midi-skirt-terracotta,bottom,feminine,1,false
+gar_crinkled_chambray_aline_skirt_blue,"Washed Cotton Chambray A-Line Midi Skirt (Bleached Blue)",crinkled-chambray-aline-skirt-blue,bottom,feminine,0.5,false

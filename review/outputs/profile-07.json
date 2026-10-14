@@ -167,7 +167,7 @@
     "looksCount": 3,
     "contextApplied": "Evening Date",
     "vetoedCandidateCount": 15,
-    "evaluatedCandidateCount": 64,
+    "evaluatedCandidateCount": 9931,
     "looks": [
       {
         "tier": "BEST_MATCH",
@@ -177,7 +177,7 @@
           "explanation": "Supported by verified user formality, confirmed climate, explicit style vector, and grooming inputs.",
           "toIncreaseConfidence": "Add specific footwear preferences to further personalize lower-leg grounding."
         },
-        "overallHarmonyScore": 0.91,
+        "overallHarmonyScore": 0.93,
         "reasons": [
           "Directly mirrors your personal style axis coordinates.",
           "Structured upper anchor balanced with fluid wide-leg lower volume",
@@ -189,7 +189,7 @@
           "title": "Bias-Cut Cowl Satin Camisole & High-Rise Wide Trousers",
           "primaryStyleSlug": "minimal",
           "formality": 3,
-          "score": 0.91,
+          "score": 0.93,
           "items": [
             {
               "category": "top",
@@ -222,6 +222,28 @@
               "fit": "tailored",
               "modestyRating": "standard",
               "genderCoding": "feminine",
+              "layerPosition": 0
+            },
+            {
+              "category": "accessory",
+              "subcategory": "eyewear",
+              "name": "Architectural Acetate Sunglasses (Dark Tortoise)",
+              "material": "Mazzucchelli bio-acetate, Carl Zeiss UV400 lenses",
+              "color": "dark-tortoise",
+              "fit": "regular",
+              "modestyRating": "standard",
+              "genderCoding": "androgynous",
+              "layerPosition": 0
+            },
+            {
+              "category": "accessory",
+              "subcategory": "bag",
+              "name": "Structured Architectural Leather Tote",
+              "material": "vegetable-tanned full-grain leather",
+              "color": "matte-black",
+              "fit": "regular",
+              "modestyRating": "standard",
+              "genderCoding": "androgynous",
               "layerPosition": 0
             }
           ],
@@ -261,11 +283,17 @@
               "weight": 0.5,
               "score": 0.9,
               "reason": "Echoes complexion undertone with balanced face-framing values."
+            },
+            {
+              "category": "style_affinity",
+              "weight": 0.25,
+              "score": 0.95,
+              "reason": "Curated editorial anchor template with proven silhouette harmony."
             }
           ],
           "traceableReasons": [
             {
-              "reasonId": "rea_outfit_feminine_cowl_trousers_separates_01_0_1791968775722",
+              "reasonId": "rea_outfit_feminine_cowl_trousers_separates_01_0_1791972638932",
               "text": "Directly mirrors your personal style axis coordinates.",
               "signalIds": [
                 "user.styleProfile.styleVector",
@@ -282,7 +310,7 @@
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_feminine_cowl_trousers_separates_01_1_1791968775722",
+              "reasonId": "rea_outfit_feminine_cowl_trousers_separates_01_1_1791972638932",
               "text": "Structured upper anchor balanced with fluid wide-leg lower volume",
               "signalIds": [
                 "user.styleProfile.preferences.fitProportions",
@@ -298,7 +326,7 @@
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_feminine_cowl_trousers_separates_01_2_1791968775722",
+              "reasonId": "rea_outfit_feminine_cowl_trousers_separates_01_2_1791972638932",
               "text": "Tonal neutral palette ensures high versatility and effortless visual cohesion.",
               "signalIds": [
                 "user.styleProfile.preferences.preferredStyleSlugs",
@@ -350,7 +378,7 @@
           "explanation": "Supported by verified user formality, confirmed climate, explicit style vector, and grooming inputs.",
           "toIncreaseConfidence": "Add specific footwear preferences to further personalize lower-leg grounding."
         },
-        "overallHarmonyScore": 0.9,
+        "overallHarmonyScore": 0.93,
         "reasons": [
           "Cropped upper proportion offset by expansive lower volume",
           "Strong contrast between light and deep neutral values establishes crisp visual separation.",
@@ -362,7 +390,7 @@
           "title": "Monochrome Fluid Tailoring",
           "primaryStyleSlug": "korean-minimal",
           "formality": 3,
-          "score": 0.9,
+          "score": 0.93,
           "items": [
             {
               "category": "top",
@@ -407,6 +435,17 @@
               "modestyRating": "standard",
               "genderCoding": "androgynous",
               "layerPosition": 0
+            },
+            {
+              "category": "accessory",
+              "subcategory": "eyewear",
+              "name": "Architectural Acetate Sunglasses (Dark Tortoise)",
+              "material": "Mazzucchelli bio-acetate, Carl Zeiss UV400 lenses",
+              "color": "dark-tortoise",
+              "fit": "regular",
+              "modestyRating": "standard",
+              "genderCoding": "androgynous",
+              "layerPosition": 0
             }
           ],
           "factors": [
@@ -445,11 +484,17 @@
               "weight": 0.5,
               "score": 0.9,
               "reason": "Echoes complexion undertone with balanced face-framing values."
+            },
+            {
+              "category": "style_affinity",
+              "weight": 0.25,
+              "score": 0.95,
+              "reason": "Curated editorial anchor template with proven silhouette harmony."
             }
           ],
           "traceableReasons": [
             {
-              "reasonId": "rea_outfit_korean_minimal_01_0_1791968775722",
+              "reasonId": "rea_outfit_korean_minimal_01_0_1791972638932",
               "text": "Cropped upper proportion offset by expansive lower volume",
               "signalIds": [
                 "user.styleProfile.preferences.preferredStyleSlugs",
@@ -466,7 +511,7 @@
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_korean_minimal_01_1_1791968775722",
+              "reasonId": "rea_outfit_korean_minimal_01_1_1791972638932",
               "text": "Strong contrast between light and deep neutral values establishes crisp visual separation.",
               "signalIds": [
                 "user.styleProfile.preferences.preferredStyleSlugs",
@@ -483,7 +528,7 @@
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_korean_minimal_01_2_1791968775722",
+              "reasonId": "rea_outfit_korean_minimal_01_2_1791972638932",
               "text": "Aligned to Evening Date formality.",
               "signalIds": [
                 "context.occasion",
@@ -537,58 +582,69 @@
           "explanation": "Supported by verified user formality, confirmed climate, explicit style vector, and grooming inputs.",
           "toIncreaseConfidence": "Add specific footwear preferences to further personalize lower-leg grounding."
         },
-        "overallHarmonyScore": 0.9,
+        "overallHarmonyScore": 0.92,
         "reasons": [
           "Structured upper anchor balanced with fluid wide-leg lower volume",
-          "Tonal neutral palette ensures high versatility and effortless visual cohesion.",
+          "Strong contrast between light and deep neutral values establishes crisp visual separation.",
           "Aligned to Evening Date formality."
         ],
         "cautions": [],
         "outfit": {
-          "id": "outfit_fluid_cold_cocoon_coat_01",
-          "title": "Cocoon Wool Overcoat & Double-Pleated Trousers",
-          "primaryStyleSlug": "korean-minimal",
+          "id": "outfit_feminine_workplace_peplum_separates_01",
+          "title": "Fitted Poplin Peplum Blouse & Wide Wool Trousers",
+          "primaryStyleSlug": "smart-casual",
           "formality": 3,
-          "score": 0.9,
+          "score": 0.92,
           "items": [
             {
               "category": "top",
-              "subcategory": "knitwear",
-              "name": "Minimal Ribbed Mock Neck",
-              "material": "compact modal-wool jersey",
-              "color": "jet-black",
-              "fit": "slim",
-              "modestyRating": "high-coverage",
-              "genderCoding": "androgynous",
+              "subcategory": "blouse",
+              "name": "Architectural Fitted Cotton Poplin Peplum Blouse (Pure White)",
+              "material": "140gsm crisp Egyptian cotton poplin",
+              "color": "white",
+              "fit": "tailored",
+              "modestyRating": "standard",
+              "genderCoding": "feminine",
               "layerPosition": 0
-            },
-            {
-              "category": "outerwear",
-              "subcategory": "overcoat",
-              "name": "Oversized Cocoon Silhouette Wool Overcoat (Heather Grey)",
-              "material": "460gsm boiled virgin wool",
-              "color": "heather-grey",
-              "fit": "oversized",
-              "modestyRating": "covered-both",
-              "genderCoding": "androgynous",
-              "layerPosition": 1
             },
             {
               "category": "bottom",
               "subcategory": "trousers",
-              "name": "Double-Pleated Wide-Leg Trousers",
-              "material": "wool gabardine blend",
-              "color": "pitch-black",
-              "fit": "relaxed",
-              "modestyRating": "high-coverage",
-              "genderCoding": "androgynous",
+              "name": "High-Rise Fluid Wide-Leg Wool Trousers (Black)",
+              "material": "270gsm tropical high-twist wool",
+              "color": "black",
+              "fit": "tailored",
+              "modestyRating": "covered-both",
+              "genderCoding": "feminine",
               "layerPosition": 0
             },
             {
               "category": "footwear",
-              "subcategory": "boot",
-              "name": "Commando Lug-Sole Waterproof Chelsea Boots",
-              "material": "hydrophobic full-grain calf leather, Vibram lug sole",
+              "subcategory": "heels",
+              "name": "40mm Pointed-Toe Leather Kitten Heel Pumps (Black)",
+              "material": "Smooth French calfskin with cushioned insole",
+              "color": "black",
+              "fit": "tailored",
+              "modestyRating": "standard",
+              "genderCoding": "feminine",
+              "layerPosition": 0
+            },
+            {
+              "category": "accessory",
+              "subcategory": "eyewear",
+              "name": "Architectural Acetate Sunglasses (Dark Tortoise)",
+              "material": "Mazzucchelli bio-acetate, Carl Zeiss UV400 lenses",
+              "color": "dark-tortoise",
+              "fit": "regular",
+              "modestyRating": "standard",
+              "genderCoding": "androgynous",
+              "layerPosition": 0
+            },
+            {
+              "category": "accessory",
+              "subcategory": "bag",
+              "name": "Structured Architectural Leather Tote",
+              "material": "vegetable-tanned full-grain leather",
               "color": "matte-black",
               "fit": "regular",
               "modestyRating": "standard",
@@ -611,8 +667,8 @@
             {
               "category": "style_affinity",
               "weight": 3.5,
-              "score": 0.79,
-              "reason": "Coordinate affinity (79%) with your 10D style vector."
+              "score": 0.76,
+              "reason": "Coordinate affinity (76%) with your 10D style vector."
             },
             {
               "category": "silhouette_balance",
@@ -623,8 +679,8 @@
             {
               "category": "color_harmony",
               "weight": 3,
-              "score": 0.92,
-              "reason": "Color story: tonal-neutral"
+              "score": 0.94,
+              "reason": "Color story: strong-contrast"
             },
             {
               "category": "occasion_fit",
@@ -643,58 +699,58 @@
               "weight": 0.5,
               "score": 0.9,
               "reason": "Echoes complexion undertone with balanced face-framing values."
+            },
+            {
+              "category": "style_affinity",
+              "weight": 0.25,
+              "score": 0.95,
+              "reason": "Curated editorial anchor template with proven silhouette harmony."
             }
           ],
           "traceableReasons": [
             {
-              "reasonId": "rea_outfit_fluid_cold_cocoon_coat_01_0_1791968775722",
+              "reasonId": "rea_outfit_feminine_workplace_peplum_separates_01_0_1791972638932",
               "text": "Structured upper anchor balanced with fluid wide-leg lower volume",
               "signalIds": [
                 "user.styleProfile.preferences.fitProportions",
                 "user.styleProfile.preferences.preferredFits"
               ],
               "knowledgeEntryIds": [
-                "gar_mockneck_black",
-                "gar_fluid_cocoon_wool_coat_heather_grey",
-                "gar_wide_trousers_black",
-                "gar_chelsea_boot_lug_sole_black",
-                "gar_leather_structured_tote_black"
+                "gar_poplin_peplum_blouse_white",
+                "gar_feminine_tailored_wool_trousers_black",
+                "gar_feminine_pointed_kitten_heels_black"
               ],
               "factor": "silhouette_balance",
               "authority": "USER_ENTERED",
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_fluid_cold_cocoon_coat_01_1_1791968775722",
-              "text": "Tonal neutral palette ensures high versatility and effortless visual cohesion.",
+              "reasonId": "rea_outfit_feminine_workplace_peplum_separates_01_1_1791972638932",
+              "text": "Strong contrast between light and deep neutral values establishes crisp visual separation.",
               "signalIds": [
                 "user.styleProfile.preferences.preferredStyleSlugs",
                 "context.occasion"
               ],
               "knowledgeEntryIds": [
-                "gar_mockneck_black",
-                "gar_fluid_cocoon_wool_coat_heather_grey",
-                "gar_wide_trousers_black",
-                "gar_chelsea_boot_lug_sole_black",
-                "gar_leather_structured_tote_black"
+                "gar_poplin_peplum_blouse_white",
+                "gar_feminine_tailored_wool_trousers_black",
+                "gar_feminine_pointed_kitten_heels_black"
               ],
               "factor": "general",
               "authority": "USER_ENTERED",
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_fluid_cold_cocoon_coat_01_2_1791968775722",
+              "reasonId": "rea_outfit_feminine_workplace_peplum_separates_01_2_1791972638932",
               "text": "Aligned to Evening Date formality.",
               "signalIds": [
                 "context.occasion",
                 "context.targetFormality"
               ],
               "knowledgeEntryIds": [
-                "gar_mockneck_black",
-                "gar_fluid_cocoon_wool_coat_heather_grey",
-                "gar_wide_trousers_black",
-                "gar_chelsea_boot_lug_sole_black",
-                "gar_leather_structured_tote_black",
+                "gar_poplin_peplum_blouse_white",
+                "gar_feminine_tailored_wool_trousers_black",
+                "gar_feminine_pointed_kitten_heels_black",
                 "occ_date"
               ],
               "factor": "occasion_fit",

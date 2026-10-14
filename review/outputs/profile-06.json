@@ -136,19 +136,24 @@
       "defaultFormality": 4,
       "allowableFormalityRange": [
         3,
-        5
+        4
       ],
       "guidelines": [
         "Prioritize structured tailoring and restrained color discipline",
+        "Target formality 4 for corporate settings; target formality 3 for creative or startup settings",
         "Ensure grooming is pristine, hair disciplined, and collar crisp",
-        "Avoid loud logos, excessive jewelry, and casual sneakers"
+        "Avoid loud logos, excessive jewelry, and casual sneakers",
+        "Evening formal wear, black tie, tuxedos, and gowns are strictly prohibited for interviews"
       ],
       "restrictedGarmentCategories": [
         "graphic-tees",
         "distressed-denim",
         "hoodies",
         "shorts",
-        "sandals"
+        "sandals",
+        "evening-gown",
+        "tuxedo-jacket",
+        "tuxedo-trousers"
       ],
       "keyStyleAffinities": [
         "formal",
@@ -162,9 +167,9 @@
         "startup"
       ],
       "timelessOrTrend": "TIMELESS",
-      "reviewDate": "2026-10-01",
+      "reviewDate": "2026-10-14",
       "createdAt": "2026-10-01",
-      "updatedAt": "2026-10-01"
+      "updatedAt": "2026-10-14"
     },
     "targetFormality": 4,
     "subParameter": "corporate",
@@ -174,8 +179,8 @@
   "result": {
     "looksCount": 3,
     "contextApplied": "Job Interview",
-    "vetoedCandidateCount": 19,
-    "evaluatedCandidateCount": 64,
+    "vetoedCandidateCount": 33,
+    "evaluatedCandidateCount": 4942,
     "looks": [
       {
         "tier": "BEST_MATCH",
@@ -185,73 +190,84 @@
           "explanation": "Supported by verified user formality, confirmed climate, explicit style vector, and grooming inputs.",
           "toIncreaseConfidence": "Add specific footwear preferences to further personalize lower-leg grounding."
         },
-        "overallHarmonyScore": 0.88,
+        "overallHarmonyScore": 0.91,
         "reasons": [
           "Directly mirrors your personal style axis coordinates.",
-          "Cohesive layered silhouette with balanced mid-length outer structure",
-          "Harmonious balance across complementary tonal depths."
+          "Longline architectural outerwear framing a streamlined linear base",
+          "Strong contrast between light and deep neutral values establishes crisp visual separation."
         ],
         "cautions": [],
         "outfit": {
-          "id": "outfit_feminine_slip_evening_01",
-          "title": "Sculpted Hourglass & Silk Slip Monolith",
+          "id": "gen_separates_band-collar-shirt-ivory_block-heel-calfskin-boots-black_houndstooth-raglan-coat-grey",
+          "title": "Silk-Cotton Band Collar Shirt (Ivory) & 50mm Block-Heel Glove Calfskin Ankle Boots (Black)",
           "primaryStyleSlug": "minimal",
           "formality": 4,
-          "score": 0.88,
+          "score": 0.91,
           "items": [
             {
-              "category": "one-piece",
-              "subcategory": "dress",
-              "name": "Bias-Cut Silk Charmeuse Slip Dress",
-              "material": "100% heavyweight 22mm silk charmeuse",
+              "category": "top",
+              "subcategory": "button-down",
+              "name": "Silk-Cotton Band Collar Shirt (Ivory)",
+              "material": "silk-cotton poplin blend",
+              "color": "ivory",
+              "fit": "relaxed",
+              "modestyRating": "standard",
+              "genderCoding": "androgynous",
+              "layerPosition": 0
+            },
+            {
+              "category": "bottom",
+              "subcategory": "skirt",
+              "name": "Tiered Silk Habotai Maxi Skirt (Black)",
+              "material": "100% washed silk habotai, cotton voile lining",
               "color": "black",
-              "fit": "slim",
-              "modestyRating": "low-coverage",
+              "fit": "regular",
+              "modestyRating": "high-coverage",
               "genderCoding": "feminine",
               "layerPosition": 0
             },
             {
               "category": "outerwear",
-              "subcategory": "blazer",
-              "name": "Waist-defined Tailored Wool Blazer",
-              "material": "high-twist tropical wool with structured canvas interlining",
-              "color": "black",
-              "fit": "tailored",
-              "modestyRating": "covered-arms",
-              "genderCoding": "feminine",
+              "subcategory": "overcoat",
+              "name": "Oversized Houndstooth Raglan Coat",
+              "material": "heavy British wool tweed",
+              "color": "black-and-white-houndstooth",
+              "fit": "oversized",
+              "modestyRating": "high-coverage",
+              "genderCoding": "androgynous",
               "layerPosition": 1
             },
             {
               "category": "footwear",
-              "subcategory": "heel",
-              "name": "Pointed-Toe Leather Slingback Pumps (45mm)",
-              "material": "semi-gloss Italian box calfskin",
+              "subcategory": "boots",
+              "name": "50mm Block-Heel Glove Calfskin Ankle Boots (Black)",
+              "material": "Soft Italian glove calfskin with leather sole",
               "color": "black",
-              "fit": "slim",
-              "modestyRating": "standard",
-              "genderCoding": "feminine",
-              "layerPosition": 0
-            },
-            {
-              "category": "accessory",
-              "subcategory": "bag",
-              "name": "Sculpted Minimalist Leather Shoulder Bag",
-              "material": "smooth semi-patent calfskin, tonal nappa lining",
-              "color": "black",
-              "fit": "regular",
-              "modestyRating": "standard",
+              "fit": "tailored",
+              "modestyRating": "covered-both",
               "genderCoding": "feminine",
               "layerPosition": 0
             },
             {
               "category": "accessory",
               "subcategory": "jewelry",
-              "name": "18k Vermeil Hollow Bold Hoop Earrings",
-              "material": "18k gold vermeil over 925 recycled sterling silver",
-              "color": "warm-gold",
+              "name": "Baroque Freshwater Pearl Drop Earrings",
+              "material": "Cultured baroque pearls with 14k solid gold posts",
+              "color": "pearl-white",
               "fit": "regular",
-              "modestyRating": "standard",
+              "modestyRating": "unrestricted",
               "genderCoding": "feminine",
+              "layerPosition": 0
+            },
+            {
+              "category": "accessory",
+              "subcategory": "gloves",
+              "name": "Cashmere-Lined Deerskin Leather Gloves",
+              "material": "full-grain deerskin, 100% Scottish cashmere lining",
+              "color": "black",
+              "fit": "regular",
+              "modestyRating": "high-coverage",
+              "genderCoding": "unspecified",
               "layerPosition": 0
             }
           ],
@@ -265,14 +281,14 @@
             {
               "category": "silhouette_balance",
               "weight": 3,
-              "score": 0.92,
-              "reason": "Cohesive layered silhouette with balanced mid-length outer structure"
+              "score": 1,
+              "reason": "Longline architectural outerwear framing a streamlined linear base"
             },
             {
               "category": "color_harmony",
               "weight": 3,
-              "score": 0.82,
-              "reason": "Color story: analogous"
+              "score": 0.94,
+              "reason": "Color story: strong-contrast"
             },
             {
               "category": "occasion_fit",
@@ -289,7 +305,7 @@
             {
               "category": "expression_affinity",
               "weight": 1,
-              "score": 0.8,
+              "score": 0.65,
               "reason": "Soft expression alignment with feminine presentation preference."
             },
             {
@@ -301,18 +317,17 @@
           ],
           "traceableReasons": [
             {
-              "reasonId": "rea_outfit_feminine_slip_evening_01_0_1791968775721",
+              "reasonId": "rea_gen_separates_band-collar-shirt-ivory_block-heel-calfskin-boots-black_houndstooth-raglan-coat-grey_0_1791972638874",
               "text": "Directly mirrors your personal style axis coordinates.",
               "signalIds": [
                 "user.styleProfile.styleVector",
                 "user.styleProfile.preferences.preferredStyleSlugs"
               ],
               "knowledgeEntryIds": [
-                "gar_slip_dress_silk_black",
-                "gar_sculpted_blazer_hourglass_black",
-                "gar_slingback_kitten_heel_black",
-                "gar_leather_shoulder_bag_baguette",
-                "gar_gold_hoop_earrings_chunky",
+                "gar_silk_band_collar_ivory",
+                "gar_feminine_silk_habotai_tiered_skirt_black",
+                "gar_houndstooth_raglan_coat",
+                "gar_feminine_heeled_ankle_boots_black",
                 "style_minimal"
               ],
               "factor": "style_affinity",
@@ -320,43 +335,44 @@
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_feminine_slip_evening_01_1_1791968775721",
-              "text": "Cohesive layered silhouette with balanced mid-length outer structure",
+              "reasonId": "rea_gen_separates_band-collar-shirt-ivory_block-heel-calfskin-boots-black_houndstooth-raglan-coat-grey_1_1791972638874",
+              "text": "Longline architectural outerwear framing a streamlined linear base",
               "signalIds": [
-                "user.styleProfile.preferences.fitProportions",
-                "user.styleProfile.preferences.preferredFits"
+                "user.styleProfile.preferences.preferredStyleSlugs",
+                "context.occasion"
               ],
               "knowledgeEntryIds": [
-                "gar_slip_dress_silk_black",
-                "gar_sculpted_blazer_hourglass_black",
-                "gar_slingback_kitten_heel_black",
-                "gar_leather_shoulder_bag_baguette",
-                "gar_gold_hoop_earrings_chunky"
+                "gar_silk_band_collar_ivory",
+                "gar_feminine_silk_habotai_tiered_skirt_black",
+                "gar_houndstooth_raglan_coat",
+                "gar_feminine_heeled_ankle_boots_black"
               ],
-              "factor": "silhouette_balance",
+              "factor": "general",
               "authority": "USER_ENTERED",
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_feminine_slip_evening_01_2_1791968775721",
-              "text": "Harmonious balance across complementary tonal depths.",
+              "reasonId": "rea_gen_separates_band-collar-shirt-ivory_block-heel-calfskin-boots-black_houndstooth-raglan-coat-grey_2_1791972638874",
+              "text": "Strong contrast between light and deep neutral values establishes crisp visual separation.",
               "signalIds": [
-                "user.styleProfile.preferences.fitProportions",
-                "user.styleProfile.preferences.preferredFits"
+                "user.styleProfile.preferences.preferredStyleSlugs",
+                "context.occasion"
               ],
               "knowledgeEntryIds": [
-                "gar_slip_dress_silk_black",
-                "gar_sculpted_blazer_hourglass_black",
-                "gar_slingback_kitten_heel_black",
-                "gar_leather_shoulder_bag_baguette",
-                "gar_gold_hoop_earrings_chunky"
+                "gar_silk_band_collar_ivory",
+                "gar_feminine_silk_habotai_tiered_skirt_black",
+                "gar_houndstooth_raglan_coat",
+                "gar_feminine_heeled_ankle_boots_black"
               ],
-              "factor": "silhouette_balance",
+              "factor": "general",
               "authority": "USER_ENTERED",
               "isAssumed": false
             }
           ],
-          "stylingAdvice": []
+          "stylingAdvice": [
+            "Creates a continuous vertical frame; leave outer layer unbuttoned during motion.",
+            "Aligns with your preferred fit geometry."
+          ]
         },
         "hairStyle": {
           "name": "Textured French Crop",
@@ -390,73 +406,73 @@
           "explanation": "Supported by verified user formality, confirmed climate, explicit style vector, and grooming inputs.",
           "toIncreaseConfidence": "Add specific footwear preferences to further personalize lower-leg grounding."
         },
-        "overallHarmonyScore": 0.88,
+        "overallHarmonyScore": 0.91,
         "reasons": [
           "Directly mirrors your personal style axis coordinates.",
-          "Balanced regular configuration",
+          "Longline architectural outerwear framing a streamlined linear base",
           "Strong contrast between light and deep neutral values establishes crisp visual separation."
         ],
         "cautions": [],
         "outfit": {
-          "id": "outfit_feminine_tailored_suit_workplace_01",
-          "title": "Waist-defined Virgin Wool Tailoring & Box-Calf Tote",
+          "id": "gen_separates_band-collar-shirt-ivory_block-heel-suede-mules-taupe_houndstooth-raglan-coat-grey",
+          "title": "Silk-Cotton Band Collar Shirt (Ivory) & 50mm Suede Block-Heel Mules",
           "primaryStyleSlug": "minimal",
           "formality": 4,
-          "score": 0.88,
+          "score": 0.91,
           "items": [
             {
               "category": "top",
-              "subcategory": "blouse",
-              "name": "Asymmetric Draped Georgette Wrap Blouse",
-              "material": "fluid viscose-silk georgette",
-              "color": "ecru",
+              "subcategory": "button-down",
+              "name": "Silk-Cotton Band Collar Shirt (Ivory)",
+              "material": "silk-cotton poplin blend",
+              "color": "ivory",
               "fit": "relaxed",
               "modestyRating": "standard",
+              "genderCoding": "androgynous",
+              "layerPosition": 0
+            },
+            {
+              "category": "bottom",
+              "subcategory": "skirt",
+              "name": "Tiered Silk Habotai Maxi Skirt (Black)",
+              "material": "100% washed silk habotai, cotton voile lining",
+              "color": "black",
+              "fit": "regular",
+              "modestyRating": "high-coverage",
               "genderCoding": "feminine",
               "layerPosition": 0
             },
             {
               "category": "outerwear",
-              "subcategory": "blazer",
-              "name": "Waist-defined Single-Breasted Wool Crepe Blazer (Black)",
-              "material": "290gsm Italian virgin wool crepe",
-              "color": "black",
-              "fit": "tailored",
-              "modestyRating": "covered-arms",
-              "genderCoding": "feminine",
+              "subcategory": "overcoat",
+              "name": "Oversized Houndstooth Raglan Coat",
+              "material": "heavy British wool tweed",
+              "color": "black-and-white-houndstooth",
+              "fit": "oversized",
+              "modestyRating": "high-coverage",
+              "genderCoding": "androgynous",
               "layerPosition": 1
             },
             {
-              "category": "bottom",
-              "subcategory": "trousers",
-              "name": "High-Rise Fluid Wide-Leg Wool Trousers (Black)",
-              "material": "270gsm tropical high-twist wool",
-              "color": "black",
-              "fit": "tailored",
-              "modestyRating": "covered-both",
-              "genderCoding": "feminine",
-              "layerPosition": 0
-            },
-            {
               "category": "footwear",
-              "subcategory": "boots",
-              "name": "50mm Block-Heel Glove Calfskin Ankle Boots (Black)",
-              "material": "Soft Italian glove calfskin with leather sole",
-              "color": "black",
-              "fit": "tailored",
-              "modestyRating": "covered-both",
+              "subcategory": "heel",
+              "name": "50mm Suede Block-Heel Mules",
+              "material": "brushed calf suede, stacked leather heel",
+              "color": "taupe",
+              "fit": "regular",
+              "modestyRating": "standard",
               "genderCoding": "feminine",
               "layerPosition": 0
             },
             {
               "category": "accessory",
-              "subcategory": "bag",
-              "name": "Architectural Box-Calf Minimal Tote Bag (Black)",
-              "material": "Smooth Italian calfskin with microfiber lining",
-              "color": "black",
+              "subcategory": "jewelry",
+              "name": "Baroque Freshwater Pearl Drop Earrings",
+              "material": "Cultured baroque pearls with 14k solid gold posts",
+              "color": "pearl-white",
               "fit": "regular",
               "modestyRating": "unrestricted",
-              "genderCoding": "androgynous",
+              "genderCoding": "feminine",
               "layerPosition": 0
             }
           ],
@@ -470,8 +486,8 @@
             {
               "category": "silhouette_balance",
               "weight": 3,
-              "score": 0.85,
-              "reason": "Balanced regular configuration"
+              "score": 1,
+              "reason": "Longline architectural outerwear framing a streamlined linear base"
             },
             {
               "category": "color_harmony",
@@ -494,7 +510,7 @@
             {
               "category": "expression_affinity",
               "weight": 1,
-              "score": 0.74,
+              "score": 0.65,
               "reason": "Soft expression alignment with feminine presentation preference."
             },
             {
@@ -506,18 +522,17 @@
           ],
           "traceableReasons": [
             {
-              "reasonId": "rea_outfit_feminine_tailored_suit_workplace_01_0_1791968775721",
+              "reasonId": "rea_gen_separates_band-collar-shirt-ivory_block-heel-suede-mules-taupe_houndstooth-raglan-coat-grey_0_1791972638874",
               "text": "Directly mirrors your personal style axis coordinates.",
               "signalIds": [
                 "user.styleProfile.styleVector",
                 "user.styleProfile.preferences.preferredStyleSlugs"
               ],
               "knowledgeEntryIds": [
-                "gar_draped_wrap_blouse_ecru",
-                "gar_feminine_wool_blazer_black",
-                "gar_feminine_tailored_wool_trousers_black",
-                "gar_feminine_heeled_ankle_boots_black",
-                "gar_leather_structured_tote_black",
+                "gar_silk_band_collar_ivory",
+                "gar_feminine_silk_habotai_tiered_skirt_black",
+                "gar_houndstooth_raglan_coat",
+                "gar_block_heel_mule_taupe",
                 "style_minimal"
               ],
               "factor": "style_affinity",
@@ -525,43 +540,44 @@
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_feminine_tailored_suit_workplace_01_1_1791968775721",
-              "text": "Balanced regular configuration",
+              "reasonId": "rea_gen_separates_band-collar-shirt-ivory_block-heel-suede-mules-taupe_houndstooth-raglan-coat-grey_1_1791972638874",
+              "text": "Longline architectural outerwear framing a streamlined linear base",
               "signalIds": [
                 "user.styleProfile.preferences.preferredStyleSlugs",
                 "context.occasion"
               ],
               "knowledgeEntryIds": [
-                "gar_draped_wrap_blouse_ecru",
-                "gar_feminine_wool_blazer_black",
-                "gar_feminine_tailored_wool_trousers_black",
-                "gar_feminine_heeled_ankle_boots_black",
-                "gar_leather_structured_tote_black"
+                "gar_silk_band_collar_ivory",
+                "gar_feminine_silk_habotai_tiered_skirt_black",
+                "gar_houndstooth_raglan_coat",
+                "gar_block_heel_mule_taupe"
               ],
               "factor": "general",
               "authority": "USER_ENTERED",
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_feminine_tailored_suit_workplace_01_2_1791968775721",
+              "reasonId": "rea_gen_separates_band-collar-shirt-ivory_block-heel-suede-mules-taupe_houndstooth-raglan-coat-grey_2_1791972638874",
               "text": "Strong contrast between light and deep neutral values establishes crisp visual separation.",
               "signalIds": [
                 "user.styleProfile.preferences.preferredStyleSlugs",
                 "context.occasion"
               ],
               "knowledgeEntryIds": [
-                "gar_draped_wrap_blouse_ecru",
-                "gar_feminine_wool_blazer_black",
-                "gar_feminine_tailored_wool_trousers_black",
-                "gar_feminine_heeled_ankle_boots_black",
-                "gar_leather_structured_tote_black"
+                "gar_silk_band_collar_ivory",
+                "gar_feminine_silk_habotai_tiered_skirt_black",
+                "gar_houndstooth_raglan_coat",
+                "gar_block_heel_mule_taupe"
               ],
               "factor": "general",
               "authority": "USER_ENTERED",
               "isAssumed": false
             }
           ],
-          "stylingAdvice": []
+          "stylingAdvice": [
+            "Creates a continuous vertical frame; leave outer layer unbuttoned during motion.",
+            "Aligns with your preferred fit geometry."
+          ]
         },
         "hairStyle": {
           "name": "Textured French Crop",
@@ -595,27 +611,27 @@
           "explanation": "Supported by verified user formality, confirmed climate, explicit style vector, and grooming inputs.",
           "toIncreaseConfidence": "Add specific footwear preferences to further personalize lower-leg grounding."
         },
-        "overallHarmonyScore": 0.88,
+        "overallHarmonyScore": 0.9,
         "reasons": [
-          "Harmonious classic proportion with uniform clean linear cadence",
+          "Longline architectural outerwear framing a streamlined linear base",
           "Strong contrast between light and deep neutral values establishes crisp visual separation.",
           "Aligned to Job Interview formality."
         ],
         "cautions": [],
         "outfit": {
-          "id": "outfit_feminine_hot_crepe_midi_separates_01",
-          "title": "Poplin Peplum Blouse & Heavy Silk Crepe Fluted Midi Skirt",
-          "primaryStyleSlug": "smart-casual",
+          "id": "gen_separates_asymmetric-draped-wrap-blouse-ecru_backless-leather-mules-black_houndstooth-raglan-coat-grey",
+          "title": "Asymmetric Draped Georgette Wrap Blouse & Square-Toe Backless Leather Mules",
+          "primaryStyleSlug": "korean-minimal",
           "formality": 4,
-          "score": 0.88,
+          "score": 0.9,
           "items": [
             {
               "category": "top",
               "subcategory": "blouse",
-              "name": "Architectural Fitted Cotton Poplin Peplum Blouse (Pure White)",
-              "material": "140gsm crisp Egyptian cotton poplin",
-              "color": "white",
-              "fit": "tailored",
+              "name": "Asymmetric Draped Georgette Wrap Blouse",
+              "material": "fluid viscose-silk georgette",
+              "color": "ecru",
+              "fit": "relaxed",
               "modestyRating": "standard",
               "genderCoding": "feminine",
               "layerPosition": 0
@@ -623,23 +639,67 @@
             {
               "category": "bottom",
               "subcategory": "skirt",
-              "name": "Fluted Heavy Silk Crepe Midi Skirt (Navy)",
-              "material": "40mm heavy silk crepe de chine",
-              "color": "navy",
-              "fit": "tailored",
+              "name": "Tiered Silk Habotai Maxi Skirt (Black)",
+              "material": "100% washed silk habotai, cotton voile lining",
+              "color": "black",
+              "fit": "regular",
               "modestyRating": "high-coverage",
               "genderCoding": "feminine",
               "layerPosition": 0
             },
             {
+              "category": "outerwear",
+              "subcategory": "overcoat",
+              "name": "Oversized Houndstooth Raglan Coat",
+              "material": "heavy British wool tweed",
+              "color": "black-and-white-houndstooth",
+              "fit": "oversized",
+              "modestyRating": "high-coverage",
+              "genderCoding": "androgynous",
+              "layerPosition": 1
+            },
+            {
               "category": "footwear",
-              "subcategory": "heels",
-              "name": "40mm Pointed-Toe Leather Kitten Heel Pumps (Black)",
-              "material": "Smooth French calfskin with cushioned insole",
+              "subcategory": "mules",
+              "name": "Square-Toe Backless Leather Mules",
+              "material": "smooth calf leather, stacked heel",
               "color": "black",
-              "fit": "tailored",
+              "fit": "regular",
               "modestyRating": "standard",
+              "genderCoding": "androgynous",
+              "layerPosition": 0
+            },
+            {
+              "category": "accessory",
+              "subcategory": "jewelry",
+              "name": "Baroque Freshwater Pearl Drop Earrings",
+              "material": "Cultured baroque pearls with 14k solid gold posts",
+              "color": "pearl-white",
+              "fit": "regular",
+              "modestyRating": "unrestricted",
               "genderCoding": "feminine",
+              "layerPosition": 0
+            },
+            {
+              "category": "accessory",
+              "subcategory": "gloves",
+              "name": "Cashmere-Lined Deerskin Leather Gloves",
+              "material": "full-grain deerskin, 100% Scottish cashmere lining",
+              "color": "black",
+              "fit": "regular",
+              "modestyRating": "high-coverage",
+              "genderCoding": "unspecified",
+              "layerPosition": 0
+            },
+            {
+              "category": "accessory",
+              "subcategory": "belt",
+              "name": "25mm Fine Calfskin Belt with Chiseled Brass Buckle",
+              "material": "French box calf with solid brushed brass hardware",
+              "color": "black-gold",
+              "fit": "regular",
+              "modestyRating": "standard",
+              "genderCoding": "androgynous",
               "layerPosition": 0
             }
           ],
@@ -647,14 +707,14 @@
             {
               "category": "style_affinity",
               "weight": 3.5,
-              "score": 0.76,
-              "reason": "Coordinate affinity (76%) with your 10D style vector."
+              "score": 0.79,
+              "reason": "Coordinate affinity (79%) with your 10D style vector."
             },
             {
               "category": "silhouette_balance",
               "weight": 3,
-              "score": 0.9,
-              "reason": "Harmonious classic proportion with uniform clean linear cadence"
+              "score": 1,
+              "reason": "Longline architectural outerwear framing a streamlined linear base"
             },
             {
               "category": "color_harmony",
@@ -677,7 +737,7 @@
             {
               "category": "expression_affinity",
               "weight": 1,
-              "score": 0.8,
+              "score": 0.65,
               "reason": "Soft expression alignment with feminine presentation preference."
             },
             {
@@ -689,48 +749,51 @@
           ],
           "traceableReasons": [
             {
-              "reasonId": "rea_outfit_feminine_hot_crepe_midi_separates_01_0_1791968775721",
-              "text": "Harmonious classic proportion with uniform clean linear cadence",
+              "reasonId": "rea_gen_separates_asymmetric-draped-wrap-blouse-ecru_backless-leather-mules-black_houndstooth-raglan-coat-grey_0_1791972638884",
+              "text": "Longline architectural outerwear framing a streamlined linear base",
               "signalIds": [
                 "user.styleProfile.preferences.preferredStyleSlugs",
                 "context.occasion"
               ],
               "knowledgeEntryIds": [
-                "gar_poplin_peplum_blouse_white",
-                "gar_feminine_heavy_silk_crepe_midi_skirt_navy",
-                "gar_feminine_pointed_kitten_heels_black"
+                "gar_draped_wrap_blouse_ecru",
+                "gar_feminine_silk_habotai_tiered_skirt_black",
+                "gar_houndstooth_raglan_coat",
+                "gar_leather_mules_black"
               ],
               "factor": "general",
               "authority": "USER_ENTERED",
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_feminine_hot_crepe_midi_separates_01_1_1791968775721",
+              "reasonId": "rea_gen_separates_asymmetric-draped-wrap-blouse-ecru_backless-leather-mules-black_houndstooth-raglan-coat-grey_1_1791972638884",
               "text": "Strong contrast between light and deep neutral values establishes crisp visual separation.",
               "signalIds": [
                 "user.styleProfile.preferences.preferredStyleSlugs",
                 "context.occasion"
               ],
               "knowledgeEntryIds": [
-                "gar_poplin_peplum_blouse_white",
-                "gar_feminine_heavy_silk_crepe_midi_skirt_navy",
-                "gar_feminine_pointed_kitten_heels_black"
+                "gar_draped_wrap_blouse_ecru",
+                "gar_feminine_silk_habotai_tiered_skirt_black",
+                "gar_houndstooth_raglan_coat",
+                "gar_leather_mules_black"
               ],
               "factor": "general",
               "authority": "USER_ENTERED",
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_feminine_hot_crepe_midi_separates_01_2_1791968775721",
+              "reasonId": "rea_gen_separates_asymmetric-draped-wrap-blouse-ecru_backless-leather-mules-black_houndstooth-raglan-coat-grey_2_1791972638884",
               "text": "Aligned to Job Interview formality.",
               "signalIds": [
                 "context.occasion",
                 "context.targetFormality"
               ],
               "knowledgeEntryIds": [
-                "gar_poplin_peplum_blouse_white",
-                "gar_feminine_heavy_silk_crepe_midi_skirt_navy",
-                "gar_feminine_pointed_kitten_heels_black",
+                "gar_draped_wrap_blouse_ecru",
+                "gar_feminine_silk_habotai_tiered_skirt_black",
+                "gar_houndstooth_raglan_coat",
+                "gar_leather_mules_black",
                 "occ_interview"
               ],
               "factor": "occasion_fit",
@@ -739,7 +802,8 @@
             }
           ],
           "stylingAdvice": [
-            "Elevate with subtle texture contrast between top and lower fabrication."
+            "Creates a continuous vertical frame; leave outer layer unbuttoned during motion.",
+            "Aligns with your preferred fit geometry."
           ]
         },
         "hairStyle": {

@@ -153,7 +153,7 @@
     "looksCount": 3,
     "contextApplied": "Modern Office / Workplace",
     "vetoedCandidateCount": 42,
-    "evaluatedCandidateCount": 64,
+    "evaluatedCandidateCount": 2244,
     "looks": [
       {
         "tier": "BEST_MATCH",
@@ -163,27 +163,38 @@
           "explanation": "Supported by verified user formality, confirmed climate, explicit style vector, and grooming inputs.",
           "toIncreaseConfidence": "Add specific footwear preferences to further personalize lower-leg grounding."
         },
-        "overallHarmonyScore": 0.9,
+        "overallHarmonyScore": 0.93,
         "reasons": [
-          "Structured upper anchor balanced with fluid wide-leg lower volume",
-          "Tonal neutral palette ensures high versatility and effortless visual cohesion.",
-          "Aligned to Modern Office / Workplace formality."
+          "Directly mirrors your personal style axis coordinates.",
+          "Longline architectural outerwear framing a streamlined linear base",
+          "Tonal neutral palette ensures high versatility and effortless visual cohesion."
         ],
         "cautions": [],
         "outfit": {
-          "id": "outfit_fluid_cold_flannel_drape_01",
-          "title": "Cocoon Wool Coat & Heavy Pleated Flannel Trousers",
-          "primaryStyleSlug": "korean-minimal",
+          "id": "gen_separates_boiled-wool-overshirt-charcoal_chunky-derbies-black_cocoon-wool-overcoat-grey",
+          "title": "Boiled Wool Snap Overshirt (Charcoal) & Commando-Sole Leather Derbies",
+          "primaryStyleSlug": "minimal",
           "formality": 3,
-          "score": 0.9,
+          "score": 0.93,
           "items": [
             {
               "category": "top",
-              "subcategory": "knitwear",
-              "name": "Minimal Ribbed Mock Neck",
-              "material": "compact modal-wool jersey",
-              "color": "jet-black",
-              "fit": "slim",
+              "subcategory": "overshirt",
+              "name": "Boiled Wool Snap Overshirt (Charcoal)",
+              "material": "dense Austrian boiled wool",
+              "color": "charcoal",
+              "fit": "relaxed",
+              "modestyRating": "high-coverage",
+              "genderCoding": "androgynous",
+              "layerPosition": 0
+            },
+            {
+              "category": "bottom",
+              "subcategory": "pants",
+              "name": "Straight-Leg Lambskin Leather Trousers",
+              "material": "soft Italian lambskin leather, cupro lining",
+              "color": "black",
+              "fit": "regular",
               "modestyRating": "high-coverage",
               "genderCoding": "androgynous",
               "layerPosition": 0
@@ -200,24 +211,35 @@
               "layerPosition": 1
             },
             {
-              "category": "bottom",
-              "subcategory": "trousers",
-              "name": "Heavy Pleated Flannel Wide-Drape Trousers (Charcoal Melange)",
-              "material": "380gsm woolen flannel with thermal silk lining",
-              "color": "charcoal",
-              "fit": "relaxed",
-              "modestyRating": "covered-both",
+              "category": "footwear",
+              "subcategory": "derbies",
+              "name": "Commando-Sole Leather Derbies",
+              "material": "polished binder calf leather, Vibram lug sole",
+              "color": "polished-black",
+              "fit": "regular",
+              "modestyRating": "standard",
               "genderCoding": "androgynous",
               "layerPosition": 0
             },
             {
-              "category": "footwear",
-              "subcategory": "boots",
-              "name": "Weatherproof Sculpted Fluid Chelsea Boots (Pitch Black)",
-              "material": "Weatherproof hydrophobized calfskin leather",
+              "category": "accessory",
+              "subcategory": "bag",
+              "name": "Structured Architectural Leather Tote",
+              "material": "vegetable-tanned full-grain leather",
+              "color": "matte-black",
+              "fit": "regular",
+              "modestyRating": "standard",
+              "genderCoding": "androgynous",
+              "layerPosition": 0
+            },
+            {
+              "category": "accessory",
+              "subcategory": "bag",
+              "name": "Architectural Box-Calf Minimal Tote Bag (Black)",
+              "material": "Smooth Italian calfskin with microfiber lining",
               "color": "black",
               "fit": "regular",
-              "modestyRating": "high-coverage",
+              "modestyRating": "unrestricted",
               "genderCoding": "androgynous",
               "layerPosition": 0
             }
@@ -226,14 +248,14 @@
             {
               "category": "style_affinity",
               "weight": 3.5,
-              "score": 0.79,
-              "reason": "Coordinate affinity (79%) with your 10D style vector."
+              "score": 0.84,
+              "reason": "Coordinate affinity (84%) with your 10D style vector."
             },
             {
               "category": "silhouette_balance",
               "weight": 3,
-              "score": 0.95,
-              "reason": "Structured upper anchor balanced with fluid wide-leg lower volume"
+              "score": 1,
+              "reason": "Longline architectural outerwear framing a streamlined linear base"
             },
             {
               "category": "color_harmony",
@@ -250,7 +272,7 @@
             {
               "category": "weather_fit",
               "weight": 2,
-              "score": 0.91,
+              "score": 0.95,
               "reason": "Ambient temperature and breathability calibration"
             },
             {
@@ -268,60 +290,61 @@
           ],
           "traceableReasons": [
             {
-              "reasonId": "rea_outfit_fluid_cold_flannel_drape_01_0_1791968775723",
-              "text": "Structured upper anchor balanced with fluid wide-leg lower volume",
+              "reasonId": "rea_gen_separates_boiled-wool-overshirt-charcoal_chunky-derbies-black_cocoon-wool-overcoat-grey_0_1791972639010",
+              "text": "Directly mirrors your personal style axis coordinates.",
               "signalIds": [
-                "user.styleProfile.preferences.fitProportions",
-                "user.styleProfile.preferences.preferredFits"
+                "user.styleProfile.styleVector",
+                "user.styleProfile.preferences.preferredStyleSlugs"
               ],
               "knowledgeEntryIds": [
-                "gar_mockneck_black",
+                "gar_heavy_overshirt_boiled_wool",
+                "gar_leather_trousers_black",
                 "gar_fluid_cocoon_wool_coat_heather_grey",
-                "gar_fluid_heavy_flannel_trousers_charcoal",
-                "gar_fluid_all_weather_chelsea_boots_black"
+                "gar_chunky_derbies_black",
+                "style_minimal"
               ],
-              "factor": "silhouette_balance",
+              "factor": "style_affinity",
               "authority": "USER_ENTERED",
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_fluid_cold_flannel_drape_01_1_1791968775723",
-              "text": "Tonal neutral palette ensures high versatility and effortless visual cohesion.",
+              "reasonId": "rea_gen_separates_boiled-wool-overshirt-charcoal_chunky-derbies-black_cocoon-wool-overcoat-grey_1_1791972639010",
+              "text": "Longline architectural outerwear framing a streamlined linear base",
               "signalIds": [
                 "user.styleProfile.preferences.preferredStyleSlugs",
                 "context.occasion"
               ],
               "knowledgeEntryIds": [
-                "gar_mockneck_black",
+                "gar_heavy_overshirt_boiled_wool",
+                "gar_leather_trousers_black",
                 "gar_fluid_cocoon_wool_coat_heather_grey",
-                "gar_fluid_heavy_flannel_trousers_charcoal",
-                "gar_fluid_all_weather_chelsea_boots_black"
+                "gar_chunky_derbies_black"
               ],
               "factor": "general",
               "authority": "USER_ENTERED",
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_fluid_cold_flannel_drape_01_2_1791968775723",
-              "text": "Aligned to Modern Office / Workplace formality.",
+              "reasonId": "rea_gen_separates_boiled-wool-overshirt-charcoal_chunky-derbies-black_cocoon-wool-overcoat-grey_2_1791972639010",
+              "text": "Tonal neutral palette ensures high versatility and effortless visual cohesion.",
               "signalIds": [
-                "context.occasion",
-                "context.targetFormality"
+                "user.styleProfile.preferences.preferredStyleSlugs",
+                "context.occasion"
               ],
               "knowledgeEntryIds": [
-                "gar_mockneck_black",
+                "gar_heavy_overshirt_boiled_wool",
+                "gar_leather_trousers_black",
                 "gar_fluid_cocoon_wool_coat_heather_grey",
-                "gar_fluid_heavy_flannel_trousers_charcoal",
-                "gar_fluid_all_weather_chelsea_boots_black",
-                "occ_office"
+                "gar_chunky_derbies_black"
               ],
-              "factor": "occasion_fit",
+              "factor": "general",
               "authority": "USER_ENTERED",
               "isAssumed": false
             }
           ],
           "stylingAdvice": [
-            "Tucking the top defines the waistline and emphasizes the architectural drape of trousers."
+            "Creates a continuous vertical frame; leave outer layer unbuttoned during motion.",
+            "Aligns with your preferred fit geometry."
           ]
         },
         "hairStyle": {
@@ -353,27 +376,38 @@
           "explanation": "Supported by verified user formality, confirmed climate, explicit style vector, and grooming inputs.",
           "toIncreaseConfidence": "Add specific footwear preferences to further personalize lower-leg grounding."
         },
-        "overallHarmonyScore": 0.89,
+        "overallHarmonyScore": 0.93,
         "reasons": [
-          "Structured upper anchor balanced with fluid wide-leg lower volume",
-          "Tonal neutral palette ensures high versatility and effortless visual cohesion.",
-          "Aligned to Modern Office / Workplace formality."
+          "Directly mirrors your personal style axis coordinates.",
+          "Longline architectural outerwear framing a streamlined linear base",
+          "Strong contrast between light and deep neutral values establishes crisp visual separation."
         ],
         "cautions": [],
         "outfit": {
-          "id": "outfit_fluid_cold_cocoon_coat_01",
-          "title": "Cocoon Wool Overcoat & Double-Pleated Trousers",
-          "primaryStyleSlug": "korean-minimal",
+          "id": "gen_separates_boiled-wool-overshirt-charcoal_chunky-derbies-black_houndstooth-raglan-coat-grey",
+          "title": "Boiled Wool Snap Overshirt (Charcoal) & Commando-Sole Leather Derbies",
+          "primaryStyleSlug": "minimal",
           "formality": 3,
-          "score": 0.89,
+          "score": 0.93,
           "items": [
             {
               "category": "top",
-              "subcategory": "knitwear",
-              "name": "Minimal Ribbed Mock Neck",
-              "material": "compact modal-wool jersey",
-              "color": "jet-black",
-              "fit": "slim",
+              "subcategory": "overshirt",
+              "name": "Boiled Wool Snap Overshirt (Charcoal)",
+              "material": "dense Austrian boiled wool",
+              "color": "charcoal",
+              "fit": "relaxed",
+              "modestyRating": "high-coverage",
+              "genderCoding": "androgynous",
+              "layerPosition": 0
+            },
+            {
+              "category": "bottom",
+              "subcategory": "pants",
+              "name": "Straight-Leg Lambskin Leather Trousers",
+              "material": "soft Italian lambskin leather, cupro lining",
+              "color": "black",
+              "fit": "regular",
               "modestyRating": "high-coverage",
               "genderCoding": "androgynous",
               "layerPosition": 0
@@ -381,31 +415,20 @@
             {
               "category": "outerwear",
               "subcategory": "overcoat",
-              "name": "Oversized Cocoon Silhouette Wool Overcoat (Heather Grey)",
-              "material": "460gsm boiled virgin wool",
-              "color": "heather-grey",
+              "name": "Oversized Houndstooth Raglan Coat",
+              "material": "heavy British wool tweed",
+              "color": "black-and-white-houndstooth",
               "fit": "oversized",
-              "modestyRating": "covered-both",
+              "modestyRating": "high-coverage",
               "genderCoding": "androgynous",
               "layerPosition": 1
             },
             {
-              "category": "bottom",
-              "subcategory": "trousers",
-              "name": "Double-Pleated Wide-Leg Trousers",
-              "material": "wool gabardine blend",
-              "color": "pitch-black",
-              "fit": "relaxed",
-              "modestyRating": "high-coverage",
-              "genderCoding": "androgynous",
-              "layerPosition": 0
-            },
-            {
               "category": "footwear",
-              "subcategory": "boot",
-              "name": "Commando Lug-Sole Waterproof Chelsea Boots",
-              "material": "hydrophobic full-grain calf leather, Vibram lug sole",
-              "color": "matte-black",
+              "subcategory": "derbies",
+              "name": "Commando-Sole Leather Derbies",
+              "material": "polished binder calf leather, Vibram lug sole",
+              "color": "polished-black",
               "fit": "regular",
               "modestyRating": "standard",
               "genderCoding": "androgynous",
@@ -414,11 +437,11 @@
             {
               "category": "accessory",
               "subcategory": "bag",
-              "name": "Architectural Box-Calf Minimal Tote Bag (Black)",
-              "material": "Smooth Italian calfskin with microfiber lining",
-              "color": "black",
+              "name": "Structured Architectural Leather Tote",
+              "material": "vegetable-tanned full-grain leather",
+              "color": "matte-black",
               "fit": "regular",
-              "modestyRating": "unrestricted",
+              "modestyRating": "standard",
               "genderCoding": "androgynous",
               "layerPosition": 0
             }
@@ -427,20 +450,20 @@
             {
               "category": "style_affinity",
               "weight": 3.5,
-              "score": 0.79,
-              "reason": "Coordinate affinity (79%) with your 10D style vector."
+              "score": 0.84,
+              "reason": "Coordinate affinity (84%) with your 10D style vector."
             },
             {
               "category": "silhouette_balance",
               "weight": 3,
-              "score": 0.95,
-              "reason": "Structured upper anchor balanced with fluid wide-leg lower volume"
+              "score": 1,
+              "reason": "Longline architectural outerwear framing a streamlined linear base"
             },
             {
               "category": "color_harmony",
               "weight": 3,
-              "score": 0.92,
-              "reason": "Color story: tonal-neutral"
+              "score": 0.94,
+              "reason": "Color story: strong-contrast"
             },
             {
               "category": "occasion_fit",
@@ -451,7 +474,7 @@
             {
               "category": "weather_fit",
               "weight": 2,
-              "score": 0.84,
+              "score": 0.95,
               "reason": "Ambient temperature and breathability calibration"
             },
             {
@@ -469,63 +492,61 @@
           ],
           "traceableReasons": [
             {
-              "reasonId": "rea_outfit_fluid_cold_cocoon_coat_01_0_1791968775723",
-              "text": "Structured upper anchor balanced with fluid wide-leg lower volume",
+              "reasonId": "rea_gen_separates_boiled-wool-overshirt-charcoal_chunky-derbies-black_houndstooth-raglan-coat-grey_0_1791972639010",
+              "text": "Directly mirrors your personal style axis coordinates.",
               "signalIds": [
-                "user.styleProfile.preferences.fitProportions",
-                "user.styleProfile.preferences.preferredFits"
+                "user.styleProfile.styleVector",
+                "user.styleProfile.preferences.preferredStyleSlugs"
               ],
               "knowledgeEntryIds": [
-                "gar_mockneck_black",
-                "gar_fluid_cocoon_wool_coat_heather_grey",
-                "gar_wide_trousers_black",
-                "gar_chelsea_boot_lug_sole_black",
-                "gar_leather_structured_tote_black"
+                "gar_heavy_overshirt_boiled_wool",
+                "gar_leather_trousers_black",
+                "gar_houndstooth_raglan_coat",
+                "gar_chunky_derbies_black",
+                "style_minimal"
               ],
-              "factor": "silhouette_balance",
+              "factor": "style_affinity",
               "authority": "USER_ENTERED",
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_fluid_cold_cocoon_coat_01_1_1791968775723",
-              "text": "Tonal neutral palette ensures high versatility and effortless visual cohesion.",
+              "reasonId": "rea_gen_separates_boiled-wool-overshirt-charcoal_chunky-derbies-black_houndstooth-raglan-coat-grey_1_1791972639010",
+              "text": "Longline architectural outerwear framing a streamlined linear base",
               "signalIds": [
                 "user.styleProfile.preferences.preferredStyleSlugs",
                 "context.occasion"
               ],
               "knowledgeEntryIds": [
-                "gar_mockneck_black",
-                "gar_fluid_cocoon_wool_coat_heather_grey",
-                "gar_wide_trousers_black",
-                "gar_chelsea_boot_lug_sole_black",
-                "gar_leather_structured_tote_black"
+                "gar_heavy_overshirt_boiled_wool",
+                "gar_leather_trousers_black",
+                "gar_houndstooth_raglan_coat",
+                "gar_chunky_derbies_black"
               ],
               "factor": "general",
               "authority": "USER_ENTERED",
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_fluid_cold_cocoon_coat_01_2_1791968775723",
-              "text": "Aligned to Modern Office / Workplace formality.",
+              "reasonId": "rea_gen_separates_boiled-wool-overshirt-charcoal_chunky-derbies-black_houndstooth-raglan-coat-grey_2_1791972639010",
+              "text": "Strong contrast between light and deep neutral values establishes crisp visual separation.",
               "signalIds": [
-                "context.occasion",
-                "context.targetFormality"
+                "user.styleProfile.preferences.preferredStyleSlugs",
+                "context.occasion"
               ],
               "knowledgeEntryIds": [
-                "gar_mockneck_black",
-                "gar_fluid_cocoon_wool_coat_heather_grey",
-                "gar_wide_trousers_black",
-                "gar_chelsea_boot_lug_sole_black",
-                "gar_leather_structured_tote_black",
-                "occ_office"
+                "gar_heavy_overshirt_boiled_wool",
+                "gar_leather_trousers_black",
+                "gar_houndstooth_raglan_coat",
+                "gar_chunky_derbies_black"
               ],
-              "factor": "occasion_fit",
+              "factor": "general",
               "authority": "USER_ENTERED",
               "isAssumed": false
             }
           ],
           "stylingAdvice": [
-            "Tucking the top defines the waistline and emphasizes the architectural drape of trousers."
+            "Creates a continuous vertical frame; leave outer layer unbuttoned during motion.",
+            "Aligns with your preferred fit geometry."
           ]
         },
         "hairStyle": {
@@ -557,62 +578,95 @@
           "explanation": "Supported by verified user formality, confirmed climate, explicit style vector, and grooming inputs.",
           "toIncreaseConfidence": "Add specific footwear preferences to further personalize lower-leg grounding."
         },
-        "overallHarmonyScore": 0.84,
+        "overallHarmonyScore": 0.89,
         "reasons": [
           "Directly mirrors your personal style axis coordinates.",
           "Structured upper anchor balanced with fluid wide-leg lower volume",
-          "Harmonious balance across complementary tonal depths."
+          "Strong contrast between light and deep neutral values establishes crisp visual separation."
         ],
         "cautions": [],
         "outfit": {
-          "id": "outfit_feminine_cold_casual_wrap_01",
-          "title": "Wool Wrap Coat & Wide Trousers",
+          "id": "gen_separates_boucle-crewneck-taupe_chunky-derbies-black_houndstooth-raglan-coat-grey",
+          "title": "Textured Bouclé Crewneck Sweater (Taupe) & Commando-Sole Leather Derbies",
           "primaryStyleSlug": "minimal",
-          "formality": 2,
-          "score": 0.84,
+          "formality": 4,
+          "score": 0.89,
           "items": [
             {
               "category": "top",
               "subcategory": "knitwear",
-              "name": "Minimal Ribbed Mock Neck",
-              "material": "compact modal-wool jersey",
-              "color": "jet-black",
-              "fit": "slim",
-              "modestyRating": "high-coverage",
+              "name": "Textured Bouclé Crewneck Sweater (Taupe)",
+              "material": "curled wool-alpaca bouclé blend",
+              "color": "taupe",
+              "fit": "regular",
+              "modestyRating": "standard",
+              "genderCoding": "androgynous",
+              "layerPosition": 0
+            },
+            {
+              "category": "bottom",
+              "subcategory": "trousers",
+              "name": "Heavy Pleated Flannel Wide-Drape Trousers (Charcoal Melange)",
+              "material": "380gsm woolen flannel with thermal silk lining",
+              "color": "charcoal",
+              "fit": "relaxed",
+              "modestyRating": "covered-both",
               "genderCoding": "androgynous",
               "layerPosition": 0
             },
             {
               "category": "outerwear",
               "subcategory": "overcoat",
-              "name": "Belted Double-Faced Cashmere-Wool Wrap Coat (Camel)",
-              "material": "520gsm double-faced cashmere and virgin wool",
-              "color": "camel",
-              "fit": "regular",
-              "modestyRating": "covered-both",
-              "genderCoding": "feminine",
+              "name": "Oversized Houndstooth Raglan Coat",
+              "material": "heavy British wool tweed",
+              "color": "black-and-white-houndstooth",
+              "fit": "oversized",
+              "modestyRating": "high-coverage",
+              "genderCoding": "androgynous",
               "layerPosition": 1
             },
             {
-              "category": "bottom",
-              "subcategory": "trousers",
-              "name": "Double-Pleated Wide-Leg Trousers",
-              "material": "wool gabardine blend",
-              "color": "pitch-black",
-              "fit": "relaxed",
-              "modestyRating": "high-coverage",
+              "category": "footwear",
+              "subcategory": "derbies",
+              "name": "Commando-Sole Leather Derbies",
+              "material": "polished binder calf leather, Vibram lug sole",
+              "color": "polished-black",
+              "fit": "regular",
+              "modestyRating": "standard",
               "genderCoding": "androgynous",
               "layerPosition": 0
             },
             {
-              "category": "footwear",
-              "subcategory": "boot",
-              "name": "Commando Lug-Sole Waterproof Chelsea Boots",
-              "material": "hydrophobic full-grain calf leather, Vibram lug sole",
-              "color": "matte-black",
+              "category": "accessory",
+              "subcategory": "jewelry",
+              "name": "Baroque Freshwater Pearl Drop Earrings",
+              "material": "Cultured baroque pearls with 14k solid gold posts",
+              "color": "pearl-white",
+              "fit": "regular",
+              "modestyRating": "unrestricted",
+              "genderCoding": "feminine",
+              "layerPosition": 0
+            },
+            {
+              "category": "accessory",
+              "subcategory": "gloves",
+              "name": "Cashmere-Lined Deerskin Leather Gloves",
+              "material": "full-grain deerskin, 100% Scottish cashmere lining",
+              "color": "black",
+              "fit": "regular",
+              "modestyRating": "high-coverage",
+              "genderCoding": "unspecified",
+              "layerPosition": 0
+            },
+            {
+              "category": "accessory",
+              "subcategory": "pocket-square",
+              "name": "Printed Silk Twill Pocket Square",
+              "material": "100% Italian silk twill",
+              "color": "deep-burgundy-gold",
               "fit": "regular",
               "modestyRating": "standard",
-              "genderCoding": "androgynous",
+              "genderCoding": "masculine",
               "layerPosition": 0
             }
           ],
@@ -626,31 +680,31 @@
             {
               "category": "silhouette_balance",
               "weight": 3,
-              "score": 0.95,
+              "score": 1,
               "reason": "Structured upper anchor balanced with fluid wide-leg lower volume"
             },
             {
               "category": "color_harmony",
               "weight": 3,
-              "score": 0.82,
-              "reason": "Color story: analogous"
+              "score": 0.94,
+              "reason": "Color story: strong-contrast"
             },
             {
               "category": "occasion_fit",
               "weight": 2.5,
               "score": 0.75,
-              "reason": "Formality fit for Modern Office / Workplace (Level 2)"
+              "reason": "Formality fit for Modern Office / Workplace (Level 4)"
             },
             {
               "category": "weather_fit",
               "weight": 2,
-              "score": 0.84,
+              "score": 0.94,
               "reason": "Ambient temperature and breathability calibration"
             },
             {
               "category": "expression_affinity",
               "weight": 1,
-              "score": 0.725,
+              "score": 0.8,
               "reason": "Soft expression alignment with androgynous presentation preference."
             },
             {
@@ -662,17 +716,17 @@
           ],
           "traceableReasons": [
             {
-              "reasonId": "rea_outfit_feminine_cold_casual_wrap_01_0_1791968775723",
+              "reasonId": "rea_gen_separates_boucle-crewneck-taupe_chunky-derbies-black_houndstooth-raglan-coat-grey_0_1791972639014",
               "text": "Directly mirrors your personal style axis coordinates.",
               "signalIds": [
                 "user.styleProfile.styleVector",
                 "user.styleProfile.preferences.preferredStyleSlugs"
               ],
               "knowledgeEntryIds": [
-                "gar_mockneck_black",
-                "gar_feminine_belted_wool_wrap_coat_camel",
-                "gar_wide_trousers_black",
-                "gar_chelsea_boot_lug_sole_black",
+                "gar_boucle_crewneck_taupe",
+                "gar_fluid_heavy_flannel_trousers_charcoal",
+                "gar_houndstooth_raglan_coat",
+                "gar_chunky_derbies_black",
                 "style_minimal"
               ],
               "factor": "style_affinity",
@@ -680,42 +734,43 @@
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_feminine_cold_casual_wrap_01_1_1791968775723",
+              "reasonId": "rea_gen_separates_boucle-crewneck-taupe_chunky-derbies-black_houndstooth-raglan-coat-grey_1_1791972639014",
               "text": "Structured upper anchor balanced with fluid wide-leg lower volume",
               "signalIds": [
                 "user.styleProfile.preferences.fitProportions",
                 "user.styleProfile.preferences.preferredFits"
               ],
               "knowledgeEntryIds": [
-                "gar_mockneck_black",
-                "gar_feminine_belted_wool_wrap_coat_camel",
-                "gar_wide_trousers_black",
-                "gar_chelsea_boot_lug_sole_black"
+                "gar_boucle_crewneck_taupe",
+                "gar_fluid_heavy_flannel_trousers_charcoal",
+                "gar_houndstooth_raglan_coat",
+                "gar_chunky_derbies_black"
               ],
               "factor": "silhouette_balance",
               "authority": "USER_ENTERED",
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_feminine_cold_casual_wrap_01_2_1791968775723",
-              "text": "Harmonious balance across complementary tonal depths.",
+              "reasonId": "rea_gen_separates_boucle-crewneck-taupe_chunky-derbies-black_houndstooth-raglan-coat-grey_2_1791972639014",
+              "text": "Strong contrast between light and deep neutral values establishes crisp visual separation.",
               "signalIds": [
-                "user.styleProfile.preferences.fitProportions",
-                "user.styleProfile.preferences.preferredFits"
+                "user.styleProfile.preferences.preferredStyleSlugs",
+                "context.occasion"
               ],
               "knowledgeEntryIds": [
-                "gar_mockneck_black",
-                "gar_feminine_belted_wool_wrap_coat_camel",
-                "gar_wide_trousers_black",
-                "gar_chelsea_boot_lug_sole_black"
+                "gar_boucle_crewneck_taupe",
+                "gar_fluid_heavy_flannel_trousers_charcoal",
+                "gar_houndstooth_raglan_coat",
+                "gar_chunky_derbies_black"
               ],
-              "factor": "silhouette_balance",
+              "factor": "general",
               "authority": "USER_ENTERED",
               "isAssumed": false
             }
           ],
           "stylingAdvice": [
-            "Tucking the top defines the waistline and emphasizes the architectural drape of trousers."
+            "Tucking the top defines the waistline and emphasizes the architectural drape of trousers.",
+            "Aligns with your preferred fit geometry."
           ]
         },
         "hairStyle": {

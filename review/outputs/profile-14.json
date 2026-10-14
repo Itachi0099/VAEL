@@ -147,8 +147,8 @@
   "result": {
     "looksCount": 3,
     "contextApplied": "Fine Dining / Dinner Party",
-    "vetoedCandidateCount": 19,
-    "evaluatedCandidateCount": 64,
+    "vetoedCandidateCount": 149,
+    "evaluatedCandidateCount": 9500,
     "looks": [
       {
         "tier": "BEST_MATCH",
@@ -158,62 +158,84 @@
           "explanation": "Limited input signals available for context and personal taste.",
           "toIncreaseConfidence": "Specify your event formality and style preferences to build your looks."
         },
-        "overallHarmonyScore": 0.89,
+        "overallHarmonyScore": 0.91,
         "reasons": [
           "Directly mirrors your personal style axis coordinates.",
-          "Harmonious classic proportion with uniform clean linear cadence",
+          "Longline architectural outerwear framing a streamlined linear base",
           "Tonal neutral palette ensures high versatility and effortless visual cohesion."
         ],
         "cautions": [],
         "outfit": {
-          "id": "outfit_masculine_fine_knit_hopsack_separates_01",
-          "title": "Fine Silk-Merino Knit Polo & Fresco Wool Trousers",
+          "id": "gen_separates_band-collar-shirt-ivory_double-monk-strap-brown_bonded-mac-coat-black",
+          "title": "Silk-Cotton Band Collar Shirt (Ivory) & Double Monk-Strap Dress Shoes (Burnished Brown)",
           "primaryStyleSlug": "minimal",
           "formality": 4,
-          "score": 0.89,
+          "score": 0.91,
           "items": [
             {
               "category": "top",
-              "subcategory": "knitwear",
-              "name": "Long-Sleeve Silk-Merino Knit Polo (Navy)",
-              "material": "60% extrafine merino wool, 40% silk (20-gauge)",
-              "color": "navy",
-              "fit": "tailored",
+              "subcategory": "button-down",
+              "name": "Silk-Cotton Band Collar Shirt (Ivory)",
+              "material": "silk-cotton poplin blend",
+              "color": "ivory",
+              "fit": "relaxed",
+              "modestyRating": "standard",
+              "genderCoding": "androgynous",
+              "layerPosition": 0
+            },
+            {
+              "category": "bottom",
+              "subcategory": "trousers",
+              "name": "Single-Pleat Wool Flannel Slacks (Light Grey)",
+              "material": "Fox Brothers woolen flannel",
+              "color": "light-grey",
+              "fit": "regular",
               "modestyRating": "high-coverage",
               "genderCoding": "masculine",
               "layerPosition": 0
             },
             {
               "category": "outerwear",
-              "subcategory": "blazer",
-              "name": "Unlined Tropical Hopsack Wool Blazer (Deep Navy)",
-              "material": "240gsm open-weave tropical hopsack wool",
-              "color": "deep-navy",
-              "fit": "tailored",
-              "modestyRating": "covered-arms",
-              "genderCoding": "masculine",
+              "subcategory": "overcoat",
+              "name": "Minimalist Bonded Cotton Mac Coat",
+              "material": "rubberized bonded cotton twill",
+              "color": "jet-black",
+              "fit": "regular",
+              "modestyRating": "high-coverage",
+              "genderCoding": "androgynous",
               "layerPosition": 1
             },
             {
-              "category": "bottom",
-              "subcategory": "trousers",
-              "name": "Tropical-Weight High-Twist Wool Trousers (Charcoal)",
-              "material": "230gsm high-twist fresco wool (porous open weave)",
-              "color": "charcoal",
+              "category": "footwear",
+              "subcategory": "dress-shoes",
+              "name": "Double Monk-Strap Dress Shoes (Burnished Brown)",
+              "material": "full-grain calfskin, channeled leather sole",
+              "color": "burnished-brown",
               "fit": "tailored",
-              "modestyRating": "high-coverage",
+              "modestyRating": "standard",
               "genderCoding": "masculine",
               "layerPosition": 0
             },
             {
-              "category": "footwear",
-              "subcategory": "derby",
-              "name": "Split-Toe Apron Derbies (Black Boxcalf)",
-              "material": "boxcalf leather, dainite studded rubber sole",
+              "category": "accessory",
+              "subcategory": "jewelry",
+              "name": "Baroque Freshwater Pearl Drop Earrings",
+              "material": "Cultured baroque pearls with 14k solid gold posts",
+              "color": "pearl-white",
+              "fit": "regular",
+              "modestyRating": "unrestricted",
+              "genderCoding": "feminine",
+              "layerPosition": 0
+            },
+            {
+              "category": "accessory",
+              "subcategory": "gloves",
+              "name": "Cashmere-Lined Deerskin Leather Gloves",
+              "material": "full-grain deerskin, 100% Scottish cashmere lining",
               "color": "black",
               "fit": "regular",
-              "modestyRating": "standard",
-              "genderCoding": "masculine",
+              "modestyRating": "high-coverage",
+              "genderCoding": "unspecified",
               "layerPosition": 0
             }
           ],
@@ -227,8 +249,8 @@
             {
               "category": "silhouette_balance",
               "weight": 3,
-              "score": 0.9,
-              "reason": "Harmonious classic proportion with uniform clean linear cadence"
+              "score": 1,
+              "reason": "Longline architectural outerwear framing a streamlined linear base"
             },
             {
               "category": "color_harmony",
@@ -251,17 +273,17 @@
           ],
           "traceableReasons": [
             {
-              "reasonId": "rea_outfit_masculine_fine_knit_hopsack_separates_01_0_1791968775726",
+              "reasonId": "rea_gen_separates_band-collar-shirt-ivory_double-monk-strap-brown_bonded-mac-coat-black_0_1791972639142",
               "text": "Directly mirrors your personal style axis coordinates.",
               "signalIds": [
                 "user.styleProfile.styleVector",
                 "user.styleProfile.preferences.preferredStyleSlugs"
               ],
               "knowledgeEntryIds": [
-                "gar_masculine_fine_silk_merino_polo_navy",
-                "gar_masculine_unlined_hopsack_blazer_navy",
-                "gar_masculine_tropical_wool_trousers_charcoal",
-                "gar_masculine_dark_split_toe_derby_black",
+                "gar_silk_band_collar_ivory",
+                "gar_pleated_flannel_slacks_grey",
+                "gar_mac_coat_waterproof_black",
+                "gar_monk_strap_shoes_brown",
                 "style_minimal"
               ],
               "factor": "style_affinity",
@@ -269,34 +291,34 @@
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_masculine_fine_knit_hopsack_separates_01_1_1791968775726",
-              "text": "Harmonious classic proportion with uniform clean linear cadence",
+              "reasonId": "rea_gen_separates_band-collar-shirt-ivory_double-monk-strap-brown_bonded-mac-coat-black_1_1791972639142",
+              "text": "Longline architectural outerwear framing a streamlined linear base",
               "signalIds": [
                 "user.styleProfile.preferences.preferredStyleSlugs",
                 "context.occasion"
               ],
               "knowledgeEntryIds": [
-                "gar_masculine_fine_silk_merino_polo_navy",
-                "gar_masculine_unlined_hopsack_blazer_navy",
-                "gar_masculine_tropical_wool_trousers_charcoal",
-                "gar_masculine_dark_split_toe_derby_black"
+                "gar_silk_band_collar_ivory",
+                "gar_pleated_flannel_slacks_grey",
+                "gar_mac_coat_waterproof_black",
+                "gar_monk_strap_shoes_brown"
               ],
               "factor": "general",
               "authority": "USER_ENTERED",
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_masculine_fine_knit_hopsack_separates_01_2_1791968775726",
+              "reasonId": "rea_gen_separates_band-collar-shirt-ivory_double-monk-strap-brown_bonded-mac-coat-black_2_1791972639142",
               "text": "Tonal neutral palette ensures high versatility and effortless visual cohesion.",
               "signalIds": [
                 "user.styleProfile.preferences.preferredStyleSlugs",
                 "context.occasion"
               ],
               "knowledgeEntryIds": [
-                "gar_masculine_fine_silk_merino_polo_navy",
-                "gar_masculine_unlined_hopsack_blazer_navy",
-                "gar_masculine_tropical_wool_trousers_charcoal",
-                "gar_masculine_dark_split_toe_derby_black"
+                "gar_silk_band_collar_ivory",
+                "gar_pleated_flannel_slacks_grey",
+                "gar_mac_coat_waterproof_black",
+                "gar_monk_strap_shoes_brown"
               ],
               "factor": "general",
               "authority": "USER_ENTERED",
@@ -304,7 +326,8 @@
             }
           ],
           "stylingAdvice": [
-            "Elevate with subtle texture contrast between top and lower fabrication."
+            "Creates a continuous vertical frame; leave outer layer unbuttoned during motion.",
+            "Aligns with your preferred fit geometry."
           ]
         },
         "hairStyle": {
@@ -334,73 +357,73 @@
           "explanation": "Limited input signals available for context and personal taste.",
           "toIncreaseConfidence": "Specify your event formality and style preferences to build your looks."
         },
-        "overallHarmonyScore": 0.88,
+        "overallHarmonyScore": 0.91,
         "reasons": [
           "Directly mirrors your personal style axis coordinates.",
-          "Balanced regular configuration",
-          "Strong contrast between light and deep neutral values establishes crisp visual separation."
+          "Longline architectural outerwear framing a streamlined linear base",
+          "Tonal neutral palette ensures high versatility and effortless visual cohesion."
         ],
         "cautions": [],
         "outfit": {
-          "id": "outfit_feminine_tailored_suit_workplace_01",
-          "title": "Waist-defined Virgin Wool Tailoring & Box-Calf Tote",
+          "id": "gen_separates_band-collar-shirt-ivory_double-monk-strap-brown_cashmere-car-coat-navy",
+          "title": "Silk-Cotton Band Collar Shirt (Ivory) & Double Monk-Strap Dress Shoes (Burnished Brown)",
           "primaryStyleSlug": "minimal",
           "formality": 4,
-          "score": 0.88,
+          "score": 0.91,
           "items": [
             {
               "category": "top",
-              "subcategory": "blouse",
-              "name": "Asymmetric Draped Georgette Wrap Blouse",
-              "material": "fluid viscose-silk georgette",
-              "color": "ecru",
+              "subcategory": "button-down",
+              "name": "Silk-Cotton Band Collar Shirt (Ivory)",
+              "material": "silk-cotton poplin blend",
+              "color": "ivory",
               "fit": "relaxed",
               "modestyRating": "standard",
-              "genderCoding": "feminine",
+              "genderCoding": "androgynous",
               "layerPosition": 0
-            },
-            {
-              "category": "outerwear",
-              "subcategory": "blazer",
-              "name": "Waist-defined Single-Breasted Wool Crepe Blazer (Black)",
-              "material": "290gsm Italian virgin wool crepe",
-              "color": "black",
-              "fit": "tailored",
-              "modestyRating": "covered-arms",
-              "genderCoding": "feminine",
-              "layerPosition": 1
             },
             {
               "category": "bottom",
               "subcategory": "trousers",
-              "name": "High-Rise Fluid Wide-Leg Wool Trousers (Black)",
-              "material": "270gsm tropical high-twist wool",
-              "color": "black",
-              "fit": "tailored",
-              "modestyRating": "covered-both",
-              "genderCoding": "feminine",
+              "name": "Single-Pleat Wool Flannel Slacks (Light Grey)",
+              "material": "Fox Brothers woolen flannel",
+              "color": "light-grey",
+              "fit": "regular",
+              "modestyRating": "high-coverage",
+              "genderCoding": "masculine",
               "layerPosition": 0
             },
             {
+              "category": "outerwear",
+              "subcategory": "overcoat",
+              "name": "Single-Breasted Cashmere Car Coat (Navy)",
+              "material": "100% double-faced Italian cashmere",
+              "color": "navy",
+              "fit": "regular",
+              "modestyRating": "high-coverage",
+              "genderCoding": "masculine",
+              "layerPosition": 1
+            },
+            {
               "category": "footwear",
-              "subcategory": "boots",
-              "name": "50mm Block-Heel Glove Calfskin Ankle Boots (Black)",
-              "material": "Soft Italian glove calfskin with leather sole",
-              "color": "black",
+              "subcategory": "dress-shoes",
+              "name": "Double Monk-Strap Dress Shoes (Burnished Brown)",
+              "material": "full-grain calfskin, channeled leather sole",
+              "color": "burnished-brown",
               "fit": "tailored",
-              "modestyRating": "covered-both",
-              "genderCoding": "feminine",
+              "modestyRating": "standard",
+              "genderCoding": "masculine",
               "layerPosition": 0
             },
             {
               "category": "accessory",
-              "subcategory": "bag",
-              "name": "Architectural Box-Calf Minimal Tote Bag (Black)",
-              "material": "Smooth Italian calfskin with microfiber lining",
-              "color": "black",
+              "subcategory": "jewelry",
+              "name": "Baroque Freshwater Pearl Drop Earrings",
+              "material": "Cultured baroque pearls with 14k solid gold posts",
+              "color": "pearl-white",
               "fit": "regular",
               "modestyRating": "unrestricted",
-              "genderCoding": "androgynous",
+              "genderCoding": "feminine",
               "layerPosition": 0
             }
           ],
@@ -414,14 +437,14 @@
             {
               "category": "silhouette_balance",
               "weight": 3,
-              "score": 0.85,
-              "reason": "Balanced regular configuration"
+              "score": 1,
+              "reason": "Longline architectural outerwear framing a streamlined linear base"
             },
             {
               "category": "color_harmony",
               "weight": 3,
-              "score": 0.94,
-              "reason": "Color story: strong-contrast"
+              "score": 0.92,
+              "reason": "Color story: tonal-neutral"
             },
             {
               "category": "occasion_fit",
@@ -438,18 +461,17 @@
           ],
           "traceableReasons": [
             {
-              "reasonId": "rea_outfit_feminine_tailored_suit_workplace_01_0_1791968775726",
+              "reasonId": "rea_gen_separates_band-collar-shirt-ivory_double-monk-strap-brown_cashmere-car-coat-navy_0_1791972639142",
               "text": "Directly mirrors your personal style axis coordinates.",
               "signalIds": [
                 "user.styleProfile.styleVector",
                 "user.styleProfile.preferences.preferredStyleSlugs"
               ],
               "knowledgeEntryIds": [
-                "gar_draped_wrap_blouse_ecru",
-                "gar_feminine_wool_blazer_black",
-                "gar_feminine_tailored_wool_trousers_black",
-                "gar_feminine_heeled_ankle_boots_black",
-                "gar_leather_structured_tote_black",
+                "gar_silk_band_collar_ivory",
+                "gar_pleated_flannel_slacks_grey",
+                "gar_cashmere_car_coat_navy",
+                "gar_monk_strap_shoes_brown",
                 "style_minimal"
               ],
               "factor": "style_affinity",
@@ -457,43 +479,44 @@
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_feminine_tailored_suit_workplace_01_1_1791968775726",
-              "text": "Balanced regular configuration",
+              "reasonId": "rea_gen_separates_band-collar-shirt-ivory_double-monk-strap-brown_cashmere-car-coat-navy_1_1791972639142",
+              "text": "Longline architectural outerwear framing a streamlined linear base",
               "signalIds": [
                 "user.styleProfile.preferences.preferredStyleSlugs",
                 "context.occasion"
               ],
               "knowledgeEntryIds": [
-                "gar_draped_wrap_blouse_ecru",
-                "gar_feminine_wool_blazer_black",
-                "gar_feminine_tailored_wool_trousers_black",
-                "gar_feminine_heeled_ankle_boots_black",
-                "gar_leather_structured_tote_black"
+                "gar_silk_band_collar_ivory",
+                "gar_pleated_flannel_slacks_grey",
+                "gar_cashmere_car_coat_navy",
+                "gar_monk_strap_shoes_brown"
               ],
               "factor": "general",
               "authority": "USER_ENTERED",
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_feminine_tailored_suit_workplace_01_2_1791968775726",
-              "text": "Strong contrast between light and deep neutral values establishes crisp visual separation.",
+              "reasonId": "rea_gen_separates_band-collar-shirt-ivory_double-monk-strap-brown_cashmere-car-coat-navy_2_1791972639142",
+              "text": "Tonal neutral palette ensures high versatility and effortless visual cohesion.",
               "signalIds": [
                 "user.styleProfile.preferences.preferredStyleSlugs",
                 "context.occasion"
               ],
               "knowledgeEntryIds": [
-                "gar_draped_wrap_blouse_ecru",
-                "gar_feminine_wool_blazer_black",
-                "gar_feminine_tailored_wool_trousers_black",
-                "gar_feminine_heeled_ankle_boots_black",
-                "gar_leather_structured_tote_black"
+                "gar_silk_band_collar_ivory",
+                "gar_pleated_flannel_slacks_grey",
+                "gar_cashmere_car_coat_navy",
+                "gar_monk_strap_shoes_brown"
               ],
               "factor": "general",
               "authority": "USER_ENTERED",
               "isAssumed": false
             }
           ],
-          "stylingAdvice": []
+          "stylingAdvice": [
+            "Creates a continuous vertical frame; leave outer layer unbuttoned during motion.",
+            "Aligns with your preferred fit geometry."
+          ]
         },
         "hairStyle": {
           "name": "Textured French Crop",
@@ -522,27 +545,27 @@
           "explanation": "Limited input signals available for context and personal taste.",
           "toIncreaseConfidence": "Specify your event formality and style preferences to build your looks."
         },
-        "overallHarmonyScore": 0.87,
+        "overallHarmonyScore": 0.9,
         "reasons": [
-          "Harmonious classic proportion with uniform clean linear cadence",
+          "Longline architectural outerwear framing a streamlined linear base",
           "Strong contrast between light and deep neutral values establishes crisp visual separation.",
           "Aligned to Fine Dining / Dinner Party formality."
         ],
         "cautions": [],
         "outfit": {
-          "id": "outfit_feminine_hot_crepe_midi_separates_01",
-          "title": "Poplin Peplum Blouse & Heavy Silk Crepe Fluted Midi Skirt",
-          "primaryStyleSlug": "smart-casual",
+          "id": "gen_separates_asymmetric-draped-wrap-blouse-ecru_double-monk-strap-brown_bonded-mac-coat-black",
+          "title": "Asymmetric Draped Georgette Wrap Blouse & Double Monk-Strap Dress Shoes (Burnished Brown)",
+          "primaryStyleSlug": "korean-minimal",
           "formality": 4,
-          "score": 0.87,
+          "score": 0.9,
           "items": [
             {
               "category": "top",
               "subcategory": "blouse",
-              "name": "Architectural Fitted Cotton Poplin Peplum Blouse (Pure White)",
-              "material": "140gsm crisp Egyptian cotton poplin",
-              "color": "white",
-              "fit": "tailored",
+              "name": "Asymmetric Draped Georgette Wrap Blouse",
+              "material": "fluid viscose-silk georgette",
+              "color": "ecru",
+              "fit": "relaxed",
               "modestyRating": "standard",
               "genderCoding": "feminine",
               "layerPosition": 0
@@ -550,23 +573,67 @@
             {
               "category": "bottom",
               "subcategory": "skirt",
-              "name": "Fluted Heavy Silk Crepe Midi Skirt (Navy)",
-              "material": "40mm heavy silk crepe de chine",
-              "color": "navy",
-              "fit": "tailored",
+              "name": "Tiered Silk Habotai Maxi Skirt (Black)",
+              "material": "100% washed silk habotai, cotton voile lining",
+              "color": "black",
+              "fit": "regular",
               "modestyRating": "high-coverage",
               "genderCoding": "feminine",
               "layerPosition": 0
             },
             {
+              "category": "outerwear",
+              "subcategory": "overcoat",
+              "name": "Minimalist Bonded Cotton Mac Coat",
+              "material": "rubberized bonded cotton twill",
+              "color": "jet-black",
+              "fit": "regular",
+              "modestyRating": "high-coverage",
+              "genderCoding": "androgynous",
+              "layerPosition": 1
+            },
+            {
               "category": "footwear",
-              "subcategory": "heels",
-              "name": "40mm Pointed-Toe Leather Kitten Heel Pumps (Black)",
-              "material": "Smooth French calfskin with cushioned insole",
-              "color": "black",
+              "subcategory": "dress-shoes",
+              "name": "Double Monk-Strap Dress Shoes (Burnished Brown)",
+              "material": "full-grain calfskin, channeled leather sole",
+              "color": "burnished-brown",
               "fit": "tailored",
               "modestyRating": "standard",
+              "genderCoding": "masculine",
+              "layerPosition": 0
+            },
+            {
+              "category": "accessory",
+              "subcategory": "jewelry",
+              "name": "Baroque Freshwater Pearl Drop Earrings",
+              "material": "Cultured baroque pearls with 14k solid gold posts",
+              "color": "pearl-white",
+              "fit": "regular",
+              "modestyRating": "unrestricted",
               "genderCoding": "feminine",
+              "layerPosition": 0
+            },
+            {
+              "category": "accessory",
+              "subcategory": "gloves",
+              "name": "Cashmere-Lined Deerskin Leather Gloves",
+              "material": "full-grain deerskin, 100% Scottish cashmere lining",
+              "color": "black",
+              "fit": "regular",
+              "modestyRating": "high-coverage",
+              "genderCoding": "unspecified",
+              "layerPosition": 0
+            },
+            {
+              "category": "accessory",
+              "subcategory": "belt",
+              "name": "25mm Fine Calfskin Belt with Chiseled Brass Buckle",
+              "material": "French box calf with solid brushed brass hardware",
+              "color": "black-gold",
+              "fit": "regular",
+              "modestyRating": "standard",
+              "genderCoding": "androgynous",
               "layerPosition": 0
             }
           ],
@@ -574,14 +641,14 @@
             {
               "category": "style_affinity",
               "weight": 3.5,
-              "score": 0.76,
-              "reason": "Coordinate affinity (76%) with your 10D style vector."
+              "score": 0.79,
+              "reason": "Coordinate affinity (79%) with your 10D style vector."
             },
             {
               "category": "silhouette_balance",
               "weight": 3,
-              "score": 0.9,
-              "reason": "Harmonious classic proportion with uniform clean linear cadence"
+              "score": 1,
+              "reason": "Longline architectural outerwear framing a streamlined linear base"
             },
             {
               "category": "color_harmony",
@@ -604,48 +671,51 @@
           ],
           "traceableReasons": [
             {
-              "reasonId": "rea_outfit_feminine_hot_crepe_midi_separates_01_0_1791968775726",
-              "text": "Harmonious classic proportion with uniform clean linear cadence",
+              "reasonId": "rea_gen_separates_asymmetric-draped-wrap-blouse-ecru_double-monk-strap-brown_bonded-mac-coat-black_0_1791972639164",
+              "text": "Longline architectural outerwear framing a streamlined linear base",
               "signalIds": [
                 "user.styleProfile.preferences.preferredStyleSlugs",
                 "context.occasion"
               ],
               "knowledgeEntryIds": [
-                "gar_poplin_peplum_blouse_white",
-                "gar_feminine_heavy_silk_crepe_midi_skirt_navy",
-                "gar_feminine_pointed_kitten_heels_black"
+                "gar_draped_wrap_blouse_ecru",
+                "gar_feminine_silk_habotai_tiered_skirt_black",
+                "gar_mac_coat_waterproof_black",
+                "gar_monk_strap_shoes_brown"
               ],
               "factor": "general",
               "authority": "USER_ENTERED",
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_feminine_hot_crepe_midi_separates_01_1_1791968775726",
+              "reasonId": "rea_gen_separates_asymmetric-draped-wrap-blouse-ecru_double-monk-strap-brown_bonded-mac-coat-black_1_1791972639164",
               "text": "Strong contrast between light and deep neutral values establishes crisp visual separation.",
               "signalIds": [
                 "user.styleProfile.preferences.preferredStyleSlugs",
                 "context.occasion"
               ],
               "knowledgeEntryIds": [
-                "gar_poplin_peplum_blouse_white",
-                "gar_feminine_heavy_silk_crepe_midi_skirt_navy",
-                "gar_feminine_pointed_kitten_heels_black"
+                "gar_draped_wrap_blouse_ecru",
+                "gar_feminine_silk_habotai_tiered_skirt_black",
+                "gar_mac_coat_waterproof_black",
+                "gar_monk_strap_shoes_brown"
               ],
               "factor": "general",
               "authority": "USER_ENTERED",
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_feminine_hot_crepe_midi_separates_01_2_1791968775726",
+              "reasonId": "rea_gen_separates_asymmetric-draped-wrap-blouse-ecru_double-monk-strap-brown_bonded-mac-coat-black_2_1791972639164",
               "text": "Aligned to Fine Dining / Dinner Party formality.",
               "signalIds": [
                 "context.occasion",
                 "context.targetFormality"
               ],
               "knowledgeEntryIds": [
-                "gar_poplin_peplum_blouse_white",
-                "gar_feminine_heavy_silk_crepe_midi_skirt_navy",
-                "gar_feminine_pointed_kitten_heels_black",
+                "gar_draped_wrap_blouse_ecru",
+                "gar_feminine_silk_habotai_tiered_skirt_black",
+                "gar_mac_coat_waterproof_black",
+                "gar_monk_strap_shoes_brown",
                 "occ_dinner"
               ],
               "factor": "occasion_fit",
@@ -654,7 +724,8 @@
             }
           ],
           "stylingAdvice": [
-            "Elevate with subtle texture contrast between top and lower fabrication."
+            "Creates a continuous vertical frame; leave outer layer unbuttoned during motion.",
+            "Aligns with your preferred fit geometry."
           ]
         },
         "hairStyle": {

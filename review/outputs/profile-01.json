@@ -75,7 +75,7 @@
     "looksCount": 3,
     "contextApplied": "General Stylist Curation",
     "vetoedCandidateCount": 1,
-    "evaluatedCandidateCount": 64,
+    "evaluatedCandidateCount": 8342,
     "looks": [
       {
         "tier": "BEST_MATCH",
@@ -85,7 +85,7 @@
           "explanation": "Limited input signals available for context and personal taste.",
           "toIncreaseConfidence": "Specify your event formality and style preferences to build your looks."
         },
-        "overallHarmonyScore": 0.9,
+        "overallHarmonyScore": 0.92,
         "reasons": [
           "Directly mirrors your personal style axis coordinates.",
           "Monolithic vertical cadence: longline outer architectural frame over full-length dress",
@@ -97,7 +97,7 @@
           "title": "Ribbed Merino Wool Maxi & Weatherproof Trench",
           "primaryStyleSlug": "minimal",
           "formality": 2,
-          "score": 0.9,
+          "score": 0.92,
           "items": [
             {
               "category": "one-piece",
@@ -142,6 +142,17 @@
               "modestyRating": "unrestricted",
               "genderCoding": "androgynous",
               "layerPosition": 0
+            },
+            {
+              "category": "accessory",
+              "subcategory": "bag",
+              "name": "Architectural Canvas & Saddle Leather Tote",
+              "material": "24oz heavyweight cotton canvas with bridle leather trim",
+              "color": "ecru-black",
+              "fit": "regular",
+              "modestyRating": "standard",
+              "genderCoding": "androgynous",
+              "layerPosition": 0
             }
           ],
           "factors": [
@@ -162,11 +173,17 @@
               "weight": 3,
               "score": 0.92,
               "reason": "Color story: tonal-neutral"
+            },
+            {
+              "category": "style_affinity",
+              "weight": 0.25,
+              "score": 0.95,
+              "reason": "Curated editorial anchor template with proven silhouette harmony."
             }
           ],
           "traceableReasons": [
             {
-              "reasonId": "rea_outfit_feminine_casual_modest_knit_maxi_01_0_1791968775715",
+              "reasonId": "rea_outfit_feminine_casual_modest_knit_maxi_01_0_1791972638677",
               "text": "Directly mirrors your personal style axis coordinates.",
               "signalIds": [
                 "user.styleProfile.styleVector",
@@ -184,7 +201,7 @@
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_feminine_casual_modest_knit_maxi_01_1_1791968775715",
+              "reasonId": "rea_outfit_feminine_casual_modest_knit_maxi_01_1_1791972638677",
               "text": "Monolithic vertical cadence: longline outer architectural frame over full-length dress",
               "signalIds": [
                 "user.styleProfile.preferences.fitProportions",
@@ -201,7 +218,7 @@
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_feminine_casual_modest_knit_maxi_01_2_1791968775715",
+              "reasonId": "rea_outfit_feminine_casual_modest_knit_maxi_01_2_1791972638677",
               "text": "Tonal neutral palette ensures high versatility and effortless visual cohesion.",
               "signalIds": [
                 "user.styleProfile.preferences.preferredStyleSlugs",
@@ -247,62 +264,62 @@
           "explanation": "Limited input signals available for context and personal taste.",
           "toIncreaseConfidence": "Specify your event formality and style preferences to build your looks."
         },
-        "overallHarmonyScore": 0.9,
+        "overallHarmonyScore": 0.92,
         "reasons": [
           "Directly mirrors your personal style axis coordinates.",
-          "Longline architectural outerwear framing a streamlined linear base",
+          "Structured upper anchor balanced with fluid wide-leg lower volume",
           "Tonal neutral palette ensures high versatility and effortless visual cohesion."
         ],
         "cautions": [],
         "outfit": {
-          "id": "outfit_masculine_cold_casual_storm_01",
-          "title": "Bonded Wool Storm Coat & Heavyweight Chinos",
+          "id": "outfit_feminine_cowl_trousers_separates_01",
+          "title": "Bias-Cut Cowl Satin Camisole & High-Rise Wide Trousers",
           "primaryStyleSlug": "minimal",
-          "formality": 2,
-          "score": 0.9,
+          "formality": 3,
+          "score": 0.92,
           "items": [
             {
               "category": "top",
-              "subcategory": "t-shirt",
-              "name": "Heavyweight Boxy Tee (Faded Black)",
-              "material": "320gsm vintage washed cotton",
-              "color": "faded-black",
-              "fit": "boxy",
-              "modestyRating": "standard",
-              "genderCoding": "androgynous",
+              "subcategory": "camisole",
+              "name": "Bias-Cut Draped Cowl-Neck Satin Camisole (Champagne)",
+              "material": "19mm pure silk charmeuse satin",
+              "color": "champagne",
+              "fit": "tailored",
+              "modestyRating": "low-coverage",
+              "genderCoding": "feminine",
               "layerPosition": 0
             },
             {
-              "category": "outerwear",
-              "subcategory": "overcoat",
-              "name": "Waterproof Bonded Wool Commuter Storm Coat (Navy)",
-              "material": "400gsm membrane-bonded technical wool",
-              "color": "navy",
-              "fit": "regular",
-              "modestyRating": "covered-both",
-              "genderCoding": "masculine",
-              "layerPosition": 1
-            },
-            {
               "category": "bottom",
-              "subcategory": "chinos",
-              "name": "Mid-Rise Tapered Chinos (British Khaki)",
-              "material": "combed cotton twill with light peach finish",
-              "color": "british-khaki",
-              "fit": "regular",
-              "modestyRating": "high-coverage",
-              "genderCoding": "unspecified",
+              "subcategory": "trousers",
+              "name": "High-Rise Fluid Wide-Leg Wool Trousers (Black)",
+              "material": "270gsm tropical high-twist wool",
+              "color": "black",
+              "fit": "tailored",
+              "modestyRating": "covered-both",
+              "genderCoding": "feminine",
               "layerPosition": 0
             },
             {
               "category": "footwear",
-              "subcategory": "boots",
-              "name": "Goodyear-Welted Service Boots",
-              "material": "chromexcel leather, Dainite studded sole",
-              "color": "walnut-brown",
+              "subcategory": "heels",
+              "name": "40mm Pointed-Toe Leather Kitten Heel Pumps (Black)",
+              "material": "Smooth French calfskin with cushioned insole",
+              "color": "black",
+              "fit": "tailored",
+              "modestyRating": "standard",
+              "genderCoding": "feminine",
+              "layerPosition": 0
+            },
+            {
+              "category": "accessory",
+              "subcategory": "eyewear",
+              "name": "Architectural Acetate Sunglasses (Dark Tortoise)",
+              "material": "Mazzucchelli bio-acetate, Carl Zeiss UV400 lenses",
+              "color": "dark-tortoise",
               "fit": "regular",
               "modestyRating": "standard",
-              "genderCoding": "masculine",
+              "genderCoding": "androgynous",
               "layerPosition": 0
             }
           ],
@@ -316,29 +333,34 @@
             {
               "category": "silhouette_balance",
               "weight": 3,
-              "score": 0.94,
-              "reason": "Longline architectural outerwear framing a streamlined linear base"
+              "score": 0.95,
+              "reason": "Structured upper anchor balanced with fluid wide-leg lower volume"
             },
             {
               "category": "color_harmony",
               "weight": 3,
               "score": 0.92,
               "reason": "Color story: tonal-neutral"
+            },
+            {
+              "category": "style_affinity",
+              "weight": 0.25,
+              "score": 0.95,
+              "reason": "Curated editorial anchor template with proven silhouette harmony."
             }
           ],
           "traceableReasons": [
             {
-              "reasonId": "rea_outfit_masculine_cold_casual_storm_01_0_1791968775715",
+              "reasonId": "rea_outfit_feminine_cowl_trousers_separates_01_0_1791972638677",
               "text": "Directly mirrors your personal style axis coordinates.",
               "signalIds": [
                 "user.styleProfile.styleVector",
                 "user.styleProfile.preferences.preferredStyleSlugs"
               ],
               "knowledgeEntryIds": [
-                "gar_box_tee_black",
-                "gar_masculine_storm_coat_navy",
-                "gar_classic_chinos_khaki",
-                "gar_service_boots_brown",
+                "gar_draped_cowl_neck_satin_camisole_champagne",
+                "gar_feminine_tailored_wool_trousers_black",
+                "gar_feminine_pointed_kitten_heels_black",
                 "style_minimal"
               ],
               "factor": "style_affinity",
@@ -346,34 +368,32 @@
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_masculine_cold_casual_storm_01_1_1791968775715",
-              "text": "Longline architectural outerwear framing a streamlined linear base",
+              "reasonId": "rea_outfit_feminine_cowl_trousers_separates_01_1_1791972638677",
+              "text": "Structured upper anchor balanced with fluid wide-leg lower volume",
               "signalIds": [
-                "user.styleProfile.preferences.preferredStyleSlugs",
-                "context.occasion"
+                "user.styleProfile.preferences.fitProportions",
+                "user.styleProfile.preferences.preferredFits"
               ],
               "knowledgeEntryIds": [
-                "gar_box_tee_black",
-                "gar_masculine_storm_coat_navy",
-                "gar_classic_chinos_khaki",
-                "gar_service_boots_brown"
+                "gar_draped_cowl_neck_satin_camisole_champagne",
+                "gar_feminine_tailored_wool_trousers_black",
+                "gar_feminine_pointed_kitten_heels_black"
               ],
-              "factor": "general",
+              "factor": "silhouette_balance",
               "authority": "USER_ENTERED",
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_masculine_cold_casual_storm_01_2_1791968775715",
+              "reasonId": "rea_outfit_feminine_cowl_trousers_separates_01_2_1791972638677",
               "text": "Tonal neutral palette ensures high versatility and effortless visual cohesion.",
               "signalIds": [
                 "user.styleProfile.preferences.preferredStyleSlugs",
                 "context.occasion"
               ],
               "knowledgeEntryIds": [
-                "gar_box_tee_black",
-                "gar_masculine_storm_coat_navy",
-                "gar_classic_chinos_khaki",
-                "gar_service_boots_brown"
+                "gar_draped_cowl_neck_satin_camisole_champagne",
+                "gar_feminine_tailored_wool_trousers_black",
+                "gar_feminine_pointed_kitten_heels_black"
               ],
               "factor": "general",
               "authority": "USER_ENTERED",
@@ -381,7 +401,7 @@
             }
           ],
           "stylingAdvice": [
-            "Creates a continuous vertical frame; leave outer layer unbuttoned during motion."
+            "Tucking the top defines the waistline and emphasizes the architectural drape of trousers."
           ]
         },
         "hairStyle": {
@@ -409,60 +429,83 @@
           "explanation": "Limited input signals available for context and personal taste.",
           "toIncreaseConfidence": "Specify your event formality and style preferences to build your looks."
         },
-        "overallHarmonyScore": 0.89,
+        "overallHarmonyScore": 0.91,
         "reasons": [
-          "Cropped upper proportion offset by expansive lower volume",
+          "Directly mirrors your personal style axis coordinates.",
+          "Monolithic vertical cadence: longline outer architectural frame over full-length dress",
           "Strong contrast between light and deep neutral values establishes crisp visual separation."
         ],
         "cautions": [],
         "outfit": {
-          "id": "outfit_korean_minimal_01",
-          "title": "Monochrome Fluid Tailoring",
-          "primaryStyleSlug": "korean-minimal",
+          "id": "gen_onepiece_architectural-poplin-shirt-dress-white_backless-leather-mules-black_cocoon-wool-overcoat-grey",
+          "title": "Architectural Poplin Midi Shirt Dress & Square-Toe Backless Leather Mules",
+          "primaryStyleSlug": "minimal",
           "formality": 3,
-          "score": 0.89,
+          "score": 0.91,
           "items": [
             {
-              "category": "top",
-              "subcategory": "t-shirt",
-              "name": "Heavyweight Boxy Tee (Off-White)",
-              "material": "300gsm combed organic cotton",
-              "color": "off-white",
-              "fit": "boxy",
-              "modestyRating": "standard",
-              "genderCoding": "androgynous",
+              "category": "one-piece",
+              "subcategory": "dress",
+              "name": "Architectural Poplin Midi Shirt Dress",
+              "material": "100% high-density cotton poplin",
+              "color": "crisp-white",
+              "fit": "relaxed",
+              "modestyRating": "covered-arms",
+              "genderCoding": "feminine",
               "layerPosition": 0
             },
             {
               "category": "outerwear",
-              "subcategory": "blazer",
-              "name": "Deconstructed Wool Blazer",
-              "material": "tropical virgin wool",
-              "color": "charcoal",
-              "fit": "relaxed",
-              "modestyRating": "high-coverage",
+              "subcategory": "overcoat",
+              "name": "Oversized Cocoon Silhouette Wool Overcoat (Heather Grey)",
+              "material": "460gsm boiled virgin wool",
+              "color": "heather-grey",
+              "fit": "oversized",
+              "modestyRating": "covered-both",
               "genderCoding": "androgynous",
               "layerPosition": 1
             },
             {
-              "category": "bottom",
-              "subcategory": "trousers",
-              "name": "Double-Pleated Wide-Leg Trousers",
-              "material": "wool gabardine blend",
-              "color": "pitch-black",
-              "fit": "relaxed",
-              "modestyRating": "high-coverage",
+              "category": "footwear",
+              "subcategory": "mules",
+              "name": "Square-Toe Backless Leather Mules",
+              "material": "smooth calf leather, stacked heel",
+              "color": "black",
+              "fit": "regular",
+              "modestyRating": "standard",
               "genderCoding": "androgynous",
               "layerPosition": 0
             },
             {
-              "category": "footwear",
-              "subcategory": "derbies",
-              "name": "Commando-Sole Leather Derbies",
-              "material": "polished binder calf leather, Vibram lug sole",
-              "color": "polished-black",
+              "category": "accessory",
+              "subcategory": "eyewear",
+              "name": "Architectural Acetate Sunglasses (Dark Tortoise)",
+              "material": "Mazzucchelli bio-acetate, Carl Zeiss UV400 lenses",
+              "color": "dark-tortoise",
               "fit": "regular",
               "modestyRating": "standard",
+              "genderCoding": "androgynous",
+              "layerPosition": 0
+            },
+            {
+              "category": "accessory",
+              "subcategory": "bag",
+              "name": "Structured Architectural Leather Tote",
+              "material": "vegetable-tanned full-grain leather",
+              "color": "matte-black",
+              "fit": "regular",
+              "modestyRating": "standard",
+              "genderCoding": "androgynous",
+              "layerPosition": 0
+            },
+            {
+              "category": "accessory",
+              "subcategory": "bag",
+              "name": "Architectural Box-Calf Minimal Tote Bag (Black)",
+              "material": "Smooth Italian calfskin with microfiber lining",
+              "color": "black",
+              "fit": "regular",
+              "modestyRating": "unrestricted",
               "genderCoding": "androgynous",
               "layerPosition": 0
             }
@@ -471,14 +514,14 @@
             {
               "category": "style_affinity",
               "weight": 3.5,
-              "score": 0.79,
-              "reason": "Coordinate affinity (79%) with your 10D style vector."
+              "score": 0.84,
+              "reason": "Coordinate affinity (84%) with your 10D style vector."
             },
             {
               "category": "silhouette_balance",
               "weight": 3,
-              "score": 0.96,
-              "reason": "Cropped upper proportion offset by expansive lower volume"
+              "score": 0.95,
+              "reason": "Monolithic vertical cadence: longline outer architectural frame over full-length dress"
             },
             {
               "category": "color_harmony",
@@ -489,34 +532,49 @@
           ],
           "traceableReasons": [
             {
-              "reasonId": "rea_outfit_korean_minimal_01_0_1791968775714",
-              "text": "Cropped upper proportion offset by expansive lower volume",
+              "reasonId": "rea_gen_onepiece_architectural-poplin-shirt-dress-white_backless-leather-mules-black_cocoon-wool-overcoat-grey_0_1791972638698",
+              "text": "Directly mirrors your personal style axis coordinates.",
               "signalIds": [
-                "user.styleProfile.preferences.preferredStyleSlugs",
-                "context.occasion"
+                "user.styleProfile.styleVector",
+                "user.styleProfile.preferences.preferredStyleSlugs"
               ],
               "knowledgeEntryIds": [
-                "gar_box_tee_white",
-                "gar_deconstructed_blazer_charcoal",
-                "gar_wide_trousers_black",
-                "gar_chunky_derbies_black"
+                "gar_shirt_dress_cotton_poplin",
+                "gar_fluid_cocoon_wool_coat_heather_grey",
+                "gar_leather_mules_black",
+                "style_minimal"
               ],
-              "factor": "general",
+              "factor": "style_affinity",
               "authority": "USER_ENTERED",
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_korean_minimal_01_1_1791968775714",
+              "reasonId": "rea_gen_onepiece_architectural-poplin-shirt-dress-white_backless-leather-mules-black_cocoon-wool-overcoat-grey_1_1791972638698",
+              "text": "Monolithic vertical cadence: longline outer architectural frame over full-length dress",
+              "signalIds": [
+                "user.styleProfile.preferences.fitProportions",
+                "user.styleProfile.preferences.preferredFits"
+              ],
+              "knowledgeEntryIds": [
+                "gar_shirt_dress_cotton_poplin",
+                "gar_fluid_cocoon_wool_coat_heather_grey",
+                "gar_leather_mules_black"
+              ],
+              "factor": "silhouette_balance",
+              "authority": "USER_ENTERED",
+              "isAssumed": false
+            },
+            {
+              "reasonId": "rea_gen_onepiece_architectural-poplin-shirt-dress-white_backless-leather-mules-black_cocoon-wool-overcoat-grey_2_1791972638698",
               "text": "Strong contrast between light and deep neutral values establishes crisp visual separation.",
               "signalIds": [
                 "user.styleProfile.preferences.preferredStyleSlugs",
                 "context.occasion"
               ],
               "knowledgeEntryIds": [
-                "gar_box_tee_white",
-                "gar_deconstructed_blazer_charcoal",
-                "gar_wide_trousers_black",
-                "gar_chunky_derbies_black"
+                "gar_shirt_dress_cotton_poplin",
+                "gar_fluid_cocoon_wool_coat_heather_grey",
+                "gar_leather_mules_black"
               ],
               "factor": "general",
               "authority": "USER_ENTERED",
@@ -524,7 +582,7 @@
             }
           ],
           "stylingAdvice": [
-            "Accentuates waistline geometry and creates an elongated vertical lower line."
+            "Leaves outer front unfastened to maintain visual vertical movement."
           ]
         },
         "hairStyle": {

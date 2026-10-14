@@ -438,5 +438,49 @@
     "garmentCoding": 0,
     "fluidTag": true,
     "rationale": "Deliberately cross-coded / unisex fluid foundation piece"
+  },
+  {
+    "id": "gar_french_terry_hooded_dress_black",
+    "name": "Heavyweight French Terry Hooded Dress (Black)",
+    "slug": "french-terry-hooded-dress-black",
+    "category": "one-piece",
+    "subcategory": "dress",
+    "genderCoding": "feminine",
+    "garmentCoding": 0.5,
+    "fluidTag": true,
+    "rationale": "Deliberately cross-coded / unisex fluid foundation piece"
+  },
+  {
+    "id": "gar_flannel_oversized_shirt_dress_navy",
+    "name": "Brushed Cotton Flannel Oversized Shirt Dress (Navy)",
+    "slug": "flannel-oversized-shirt-dress-navy",
+    "category": "one-piece",
+    "subcategory": "dress",
+    "genderCoding": "feminine",
+    "garmentCoding": 0.5,
+    "fluidTag": true,
+    "rationale": "Deliberately cross-coded / unisex fluid foundation piece"
+  },
+  {
+    "id": "gar_linen_drawstring_midi_skirt_natural",
+    "name": "Flax Linen Drawstring Straight Midi Skirt (Natural)",
+    "slug": "linen-drawstring-midi-skirt-natural",
+    "category": "bottom",
+    "subcategory": "skirt",
+    "genderCoding": "feminine",
+    "garmentCoding": 0.5,
+    "fluidTag": true,
+    "rationale": "Deliberately cross-coded / unisex fluid foundation piece"
+  },
+  {
+    "id": "gar_habotai_silk_kaftan_gown_ivory",
+    "name": "Architectural Habotai Silk Kaftan Gown (Ivory)",
+    "slug": "habotai-silk-kaftan-gown-ivory",
+    "category": "one-piece",
+    "subcategory": "gown",
+    "genderCoding": "feminine",
+    "garmentCoding": 1,
+    "fluidTag": true,
+    "rationale": "Deliberately cross-coded / unisex fluid foundation piece"
   }
 ]

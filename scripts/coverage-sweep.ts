@@ -72,6 +72,9 @@ async function runSweep() {
   let feminineOnePieceCount = 0;
   let feminineOtherCount = 0;
 
+  // Garment catalog utilization tracking:
+  const usedGarmentIds = new Set<string>();
+
   let processed = 0;
   const startTime = Date.now();
 
@@ -174,6 +177,9 @@ async function runSweep() {
                 // Metric v4 alignment evaluation
                 let matchingLooksCount = 0;
                 for (const look of returnedLooks) {
+                  for (const it of look.outfit.item.items) {
+                    usedGarmentIds.add(it.garment.id);
+                  }
                   const foundationPieces = look.outfit.item.items
                     .map((i) => i.garment)
                     .filter((g) => g.category !== 'accessory');
@@ -362,6 +368,11 @@ async function runSweep() {
       otherShare: `${((feminineOtherCount / feminineTotalLooks) * 100).toFixed(1)}%`,
     },
     varietyReport,
+    catalogUtilization: {
+      totalCatalogGarments: allGarments.length,
+      usedGarments: usedGarmentIds.size,
+      utilizationPercentage: `${((usedGarmentIds.size / allGarments.length) * 100).toFixed(1)}%`,
+    },
     garmentMatrix: matrix,
     failingCellsByGroup: Object.fromEntries(
       Object.entries(groupStats)
@@ -369,6 +380,9 @@ async function runSweep() {
         .map(([g, s]) => [g, s.failingCells])
     ),
   };
+
+  console.log(`\n--- CATALOG GARMENT UTILIZATION ---`);
+  console.log(`Used Garments: ${usedGarmentIds.size} / ${allGarments.length} (${((usedGarmentIds.size / allGarments.length) * 100).toFixed(1)}%)`);
 
   fs.writeFileSync(path.join(reportsDir, 'coverage-sweep-results.json'), JSON.stringify(report, null, 2));
   fs.writeFileSync(path.join(reportsDir, 'coverage-sweep-v4.csv'), csvRows.join('\n'));

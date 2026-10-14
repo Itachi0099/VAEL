@@ -10,7 +10,7 @@ import { HairCompatibilityEvaluator } from '../intelligence/hair-compatibility';
 import { GroomingCompatibilityEvaluator } from '../intelligence/grooming-compatibility';
 import { OutfitCompatibilityEvaluator } from '../intelligence/outfit-compatibility';
 import { StyleCompatibilityEngine, StyleMatchResult } from '../intelligence/style-compatibility';
-import { VaelStylingEngine, LookEngineQuery } from '../intelligence/engine';
+import { VaelStylingEngine, LookEngineQuery, CandidateEvaluation } from '../intelligence/engine';
 
 export interface RecommendationQueryOptions {
   visual?: VisualProfile;
@@ -314,6 +314,14 @@ export class RecommendationService {
    */
   generateTopThreeLooks(query: LookEngineQuery): TopThreeLooks {
     return VaelStylingEngine.generateTopThreeLooks(query);
+  }
+
+  /**
+   * 8. getRankedCandidateLooks
+   * Returns the full ranked list of candidates passing hard filters (read-only for Studio shuffle and swap).
+   */
+  getRankedCandidateLooks(query: LookEngineQuery): CandidateEvaluation[] {
+    return VaelStylingEngine.getRankedCandidateLooks(query);
   }
 }
 

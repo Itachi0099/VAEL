@@ -1221,9 +1221,21 @@ describe('VAEL R1.2 Golden Test Suite (G-01 to G-35)', () => {
       const deltaLow = Math.abs(resLow.bestMatch.outfit.score - resBase.bestMatch.outfit.score);
       expect(deltaLow).toBeLessThanOrEqual(0.05);
 
-      // Low vs high moves ranking/factor scores
-      const lowFactor = resLow.looks[0].outfit.factors.find((f) => f.reason.includes('contrast level'));
-      expect(lowFactor).toBeDefined();
+      // Directional ranking move: high-contrast look ranks higher and scores higher under userHigh than userLow
+      const candsLow = VaelStylingEngine.getRankedCandidateLooks({ user: userLow, context: testContext });
+      const candsHigh = VaelStylingEngine.getRankedCandidateLooks({ user: userHigh, context: testContext });
+      const highContrastLook = candsHigh.find((c) => {
+        const g = c.outfit.items.map((i) => i.garment);
+        const hasLight = g.some((x) => x.color.name.includes('white') || x.color.name.includes('cream') || x.color.name.includes('ecru'));
+        const hasDeep = g.some((x) => x.color.name.includes('black') || x.color.name.includes('charcoal') || x.color.name.includes('navy'));
+        return hasLight && hasDeep;
+      })!;
+      expect(highContrastLook).toBeDefined();
+
+      const rankInHigh = candsHigh.findIndex((c) => c.outfit.id === highContrastLook.outfit.id);
+      const rankInLow = candsLow.findIndex((c) => c.outfit.id === highContrastLook.outfit.id);
+      expect(rankInHigh).toBeLessThan(rankInLow);
+      expect(candsHigh[rankInHigh].totalScore).toBeGreaterThan(candsLow[rankInLow].totalScore);
 
       // STRETCH exempt from strict 1-step restriction (permits up to 2 steps)
       if (resLow.stretch) {

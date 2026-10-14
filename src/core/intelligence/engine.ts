@@ -21,6 +21,7 @@ import { StyleVectorMath } from './style-vector';
 import { HairCompatibilityEvaluator } from './hair-compatibility';
 import { GroomingCompatibilityEvaluator } from './grooming-compatibility';
 import { computeWeightedScore } from './scoring';
+import { CompositionGenerator } from './composition-generator';
 
 export interface LookEngineQuery {
   user: User;
@@ -54,8 +55,9 @@ export class VaelStylingEngine {
     const context = query.context;
     const userVector = user.styleProfile.styleVector || StyleVectorMath.createBalancedVector();
 
-    // 1. Gather Candidate Outfits
-    const candidates = query.candidateOutfits || this.buildCandidateOutfits(user);
+    // 1. Gather Candidate Outfits (Authored templates + Constrained combinatorial generation)
+    const authored = this.buildCandidateOutfits(user);
+    const candidates = query.candidateOutfits || CompositionGenerator.generateCandidates(user, context, authored);
     const totalCandidates = candidates.length;
 
     // STEP 1: HARD FILTERS / VETO (PHYSICS, DRESS CODES, HARD VETOES ARE NEVER RELAXED)
@@ -81,8 +83,8 @@ export class VaelStylingEngine {
       this.evaluateCandidateOutfit(outfit, user, context)
     );
 
-    // Sort by total score descending
-    evaluatedList.sort((a, b) => b.totalScore - a.totalScore);
+    // Sort by total score descending with deterministic stable tie-breaking
+    evaluatedList.sort((a, b) => (b.totalScore !== a.totalScore ? b.totalScore - a.totalScore : a.outfit.id.localeCompare(b.outfit.id)));
 
     // STEP 3: DIVERSITY SELECTION & RELAXATION ORDER (F-08)
     // Relaxation order if fewer than 3 looks can be diversified:
@@ -281,6 +283,59 @@ export class VaelStylingEngine {
       }
     }
 
+    // 9. Ceremonial & Formal Evening Pieces Strict Occasion Integrity
+    // White-tie, tuxedo and gown pieces only for Wedding Guest (evening), Cultural Ceremony and formality-5 Fine Dining.
+    const isCeremonialPiece = (g: Garment) =>
+      g.subcategory.includes('gown') ||
+      g.subcategory.includes('tuxedo') ||
+      g.slug.includes('tuxedo') ||
+      g.slug.includes('marcella') ||
+      g.slug.includes('white-tie') ||
+      g.slug.includes('patent-evening');
+
+    const hasCeremonialGarment = garments.some(isCeremonialPiece) ||
+      outfit.id.includes('white_tie') ||
+      outfit.id.includes('tuxedo') ||
+      outfit.id.includes('gown');
+
+    if (hasCeremonialGarment && context?.occasion) {
+      const occSlug = context.occasion.slug;
+      const isEveningWedding = occSlug === 'wedding-guest' && (
+        context.subParameter === 'evening' ||
+        context.timeOfDay === 'evening' ||
+        context.timeOfDay === 'night' ||
+        outfit.formality === 5 ||
+        context.targetFormality === 5
+      );
+      const isCulturalCeremony = occSlug === 'cultural-traditional';
+      const isFormality5Dining = occSlug === 'dinner' && (outfit.formality === 5 || context.targetFormality === 5);
+      const isCustomCeremonial = occSlug === 'custom' && (outfit.formality === 5 || context.targetFormality === 5);
+
+      if (!isEveningWedding && !isCulturalCeremony && !isFormality5Dining && !isCustomCeremonial) {
+        return {
+          vetoed: true,
+          reason: `White-tie, tuxedo, and evening gown pieces are restricted to evening wedding guest, cultural ceremony, and formality-5 fine dining.`,
+        };
+      }
+    }
+
+    // 10. Job Interview Integrity: Wedding-specific templates and formality-5 evening wear are strictly prohibited
+    if (context?.occasion?.slug === 'job-interview') {
+      const isWeddingLook = outfit.id.includes('wedding') || outfit.primaryStyleSlug === 'wedding';
+      if (isWeddingLook) {
+        return {
+          vetoed: true,
+          reason: 'Wedding templates and ceremonial attire are prohibited for job interviews.',
+        };
+      }
+      if (outfit.formality > 4) {
+        return {
+          vetoed: true,
+          reason: 'Formality 5 gala/evening attire is prohibited for job interviews (band is 3-4).',
+        };
+      }
+    }
+
     return { vetoed: false };
   }
 
@@ -440,7 +495,7 @@ export class VaelStylingEngine {
       }
     }
 
-    // 8b. Vintage Era Match Boost (Weight: 0.5)
+    // 8b. Vintage Era Match Boost (Weight: 1.5)
     if (preferences.vintageEra && preferences.vintageEra !== 'unspecified') {
       const era = preferences.vintageEra;
       const hasMatchingVintage = garments.some(
@@ -449,8 +504,8 @@ export class VaelStylingEngine {
       if (hasMatchingVintage) {
         factors.push({
           category: 'preference_reinforcement',
-          weight: 0.5,
-          score: 0.95,
+          weight: 1.5,
+          score: 1.0,
           reason: `Features curated ${era} vintage pieces matching your era preference.`,
         });
         reasons.push(`Features authentic ${era} vintage era silhouettes.`);
@@ -486,10 +541,10 @@ export class VaelStylingEngine {
       const outfitContrastStep = (hasLight && hasDeep) ? 3 : (hasLight || hasDeep ? 2 : 1);
       const diff = Math.abs(userStep - outfitContrastStep);
 
-      const contrastScore = diff <= 1 ? 0.95 : 0.65;
+      const contrastScore = diff === 0 ? 0.95 : diff === 1 ? 0.85 : 0.50;
       factors.push({
         category: 'preference_reinforcement',
-        weight: 0.5,
+        weight: 0.8,
         score: contrastScore,
         reason: `Echoes your natural ${userLevel} contrast level across outfit tones.`,
       });
@@ -624,7 +679,33 @@ export class VaelStylingEngine {
       reasons.push('Keeps the line continuous and proportional to your height range.');
     }
 
+    // 15. Authored Template Curated Anchor Affinity (R1.3 A2)
+    // Authored templates serve as curated anchors with a small bonus (+0.035), never required.
+    if (outfit.id.startsWith('outfit_')) {
+      factors.push({
+        category: 'style_affinity',
+        weight: 0.25,
+        score: 0.95,
+        reason: 'Curated editorial anchor template with proven silhouette harmony.',
+      });
+    }
+
     const { finalScore } = computeWeightedScore(factors);
+
+    // Curated editorial anchor bonus (+0.02) for authored templates (A2)
+    let totalScore = finalScore;
+    if (outfit.id.startsWith('outfit_')) {
+      totalScore = Math.min(1.0, Math.round((finalScore + 0.02) * 1000) / 1000);
+    }
+    if (preferences.vintageEra && preferences.vintageEra !== 'unspecified') {
+      const era = preferences.vintageEra;
+      const hasMatchingVintage = garments.some(
+        (g) => g.vintageEra === era || (g.name && g.name.includes(era)) || (g.slug && g.slug.includes(era))
+      );
+      if (hasMatchingVintage) {
+        totalScore = Math.min(1.0, Math.round((totalScore + 0.06) * 1000) / 1000);
+      }
+    }
 
     // Build traceable reasons connecting directly to real signals and knowledge IDs
     const traceableReasons: TraceableReason[] = [];
@@ -677,7 +758,7 @@ export class VaelStylingEngine {
 
     return {
       outfit,
-      totalScore: finalScore,
+      totalScore,
       factors,
       reasons: uniqueReasons,
       traceableReasons,
@@ -764,8 +845,7 @@ export class VaelStylingEngine {
     if (isExprSpecified) {
       safeCandidate =
         safeCandidates.find((c) => hasMatchingItem(c)) ||
-        ranked.filter((c) => c.outfit.id !== bestMatchCandidate.outfit.id).find((c) => hasMatchingItem(c)) ||
-        safeCandidates[0];
+        ranked.filter((c) => c.outfit.id !== bestMatchCandidate.outfit.id).find((c) => hasMatchingItem(c));
     } else {
       safeCandidate = safeCandidates[0];
     }
@@ -781,6 +861,21 @@ export class VaelStylingEngine {
       }
     }
 
+    // Feminine silhouette diversity: if best match has no skirt/dress, prioritize a skirt/dress in safe look
+    if (expr === 'feminine' && bestMatchCandidate) {
+      const bestHasSkirtOrDress = bestMatchCandidate.outfit.items.some(
+        (i) => i.garment.subcategory === 'skirt' || i.garment.category === 'one-piece'
+      );
+      if (!bestHasSkirtOrDress) {
+        const skirtCandidate = ranked
+          .filter((c) => c.outfit.id !== bestMatchCandidate.outfit.id)
+          .find((c) => c.outfit.items.some((i) => i.garment.subcategory === 'skirt' || i.garment.category === 'one-piece'));
+        if (skirtCandidate) {
+          safeCandidate = skirtCandidate;
+        }
+      }
+    }
+
     // If only 2 candidates exist total, return them honestly
     if (ranked.length === 2) {
       return {
@@ -790,34 +885,80 @@ export class VaelStylingEngine {
       };
     }
 
-    // 3. STRETCH: Meaningfully distinct! Shifts on volume/structure or adjacent aesthetic
+    // Helper to calculate axis difference between candidates (G-09: formality, primaryStyle, structure)
+    const getAxisDiffs = (c: CandidateEvaluation, base: CandidateEvaluation) => {
+      let diffs = 0;
+      if (c.outfit.formality !== base.outfit.formality) diffs++;
+      if (c.outfit.primaryStyleSlug !== base.outfit.primaryStyleSlug) diffs++;
+      const avgStructC = c.outfit.items.reduce((s, i) => s + i.garment.structure, 0) / c.outfit.items.length;
+      const avgStructBase = base.outfit.items.reduce((s, i) => s + i.garment.structure, 0) / base.outfit.items.length;
+      if (Math.abs(avgStructC - avgStructBase) >= 0.5) diffs++;
+      return diffs;
+    };
+
+    // 3. STRETCH: Meaningfully distinct! Shifts on volume/structure or adjacent aesthetic (tiers differ on >= 2 axes)
     let stretchCandidates = ranked.filter(
       (c) =>
         c.outfit.id !== bestMatchCandidate.outfit.id &&
         (!safeCandidate || c.outfit.id !== safeCandidate.outfit.id) &&
-        c.outfit.primaryStyleSlug !== bestMatchCandidate.outfit.primaryStyleSlug
+        getAxisDiffs(c, bestMatchCandidate) >= 2
     );
 
     let stretchCandidate: CandidateEvaluation | undefined;
     if (isExprSpecified) {
       stretchCandidate =
         stretchCandidates.find((c) => hasMatchingItem(c)) ||
-        ranked.filter((c) => c.outfit.id !== bestMatchCandidate.outfit.id && (!safeCandidate || c.outfit.id !== safeCandidate.outfit.id)).find((c) => hasMatchingItem(c)) ||
-        stretchCandidates[0];
+        ranked
+          .filter(
+            (c) =>
+              c.outfit.id !== bestMatchCandidate.outfit.id &&
+              (!safeCandidate || c.outfit.id !== safeCandidate.outfit.id) &&
+              getAxisDiffs(c, bestMatchCandidate) >= 2
+          )
+          .find((c) => hasMatchingItem(c));
     } else {
       stretchCandidate = stretchCandidates[0];
     }
 
     if (!stretchCandidate) {
-      // Step 1 Relaxation: Relax stretch distance / distinct aesthetic requirement
+      // Step 1 Relaxation: Relax stretch distance to 1 axis difference if necessary
       relaxedSteps.push('Relaxed stretch distance requirement: selected distinct volume/cut within available aesthetic pool.');
       const pool = ranked.filter(
-        (c) => c.outfit.id !== bestMatchCandidate.outfit.id && (!safeCandidate || c.outfit.id !== safeCandidate.outfit.id)
+        (c) =>
+          c.outfit.id !== bestMatchCandidate.outfit.id &&
+          (!safeCandidate || c.outfit.id !== safeCandidate.outfit.id) &&
+          (c.outfit.primaryStyleSlug !== bestMatchCandidate.outfit.primaryStyleSlug ||
+            c.outfit.formality !== bestMatchCandidate.outfit.formality ||
+            getAxisDiffs(c, bestMatchCandidate) >= 1)
       );
       if (isExprSpecified) {
         stretchCandidate = pool.find((c) => hasMatchingItem(c)) || pool[0];
       } else {
         stretchCandidate = pool[0];
+      }
+    }
+
+    if (!stretchCandidate) {
+      stretchCandidate = ranked.find(
+        (c) => c.outfit.id !== bestMatchCandidate.outfit.id && (!safeCandidate || c.outfit.id !== safeCandidate.outfit.id)
+      );
+    }
+
+    // Vintage preference diversity: if vintageEra requested, ensure at least one look carries vintage pieces
+    if (userPreferences?.vintageEra && userPreferences.vintageEra !== 'unspecified') {
+      const era = userPreferences.vintageEra;
+      const hasVintageInSelected = (c?: CandidateEvaluation) =>
+        c && c.outfit.items.some((i) => i.garment.vintageEra === era || (i.garment.name && i.garment.name.includes(era)));
+      if (!hasVintageInSelected(bestMatchCandidate) && !hasVintageInSelected(safeCandidate)) {
+        const vintageCandidate = ranked.find(
+          (c) =>
+            c.outfit.id !== bestMatchCandidate.outfit.id &&
+            (!safeCandidate || c.outfit.id !== safeCandidate.outfit.id) &&
+            hasVintageInSelected(c)
+        );
+        if (vintageCandidate) {
+          stretchCandidate = vintageCandidate;
+        }
       }
     }
 
@@ -989,9 +1130,60 @@ export class VaelStylingEngine {
       tierRationale = 'Curated directional exploration. Pushes volume and textural depth while strictly respecting dress codes.';
     }
 
+    // A2 Accessory slots: SAFE 1, BEST MATCH 2, STRETCH up to 3
+    const targetAccessoryCount = tier === 'SAFE' ? 1 : tier === 'BEST_MATCH' ? 2 : 3;
+    const items = [...evaluation.outfit.items];
+    const currentAccessories = items.filter((i) => i.garment.category === 'accessory');
+    const existingGarmentIds = new Set(items.map((i) => i.garment.id));
+
+    if (currentAccessories.length < targetAccessoryCount) {
+      const needed = targetAccessoryCount - currentAccessories.length;
+      const allAccessories = knowledgeBase.getAllGarments().filter(
+        (g) => g.category === 'accessory' && !existingGarmentIds.has(g.id)
+      );
+      const prefMetal = (user.styleProfile.preferences as any).metalTonePreference;
+      const expr = user.styleProfile.preferences.styleExpression || user.styleProfile.preferences.genderCodingDirection;
+
+      const eligibleAccs = allAccessories.filter((acc) => {
+        if (Math.abs(acc.formality - evaluation.outfit.formality) > 1) return false;
+        if (context) {
+          const cFit = ClimateFabricRules.evaluateGarmentClimateFit(acc, context);
+          if (!cFit.isPermissible) return false;
+        }
+        if (prefMetal && prefMetal !== 'mixed' && acc.metalTone && acc.metalTone !== prefMetal && acc.metalTone !== 'mixed') return false;
+        if (expr === 'masculine' && acc.genderCoding === 'feminine') return false;
+        if (expr === 'feminine' && acc.genderCoding === 'masculine') return false;
+        if (context?.occasion?.restrictedGarmentCategories) {
+          const violates = context.occasion.restrictedGarmentCategories.some(
+            (r) => acc.subcategory.includes(r) || acc.slug.includes(r) || acc.name.toLowerCase().includes(r)
+          );
+          if (violates) return false;
+        }
+        return true;
+      });
+      eligibleAccs.sort((a, b) =>
+        Math.abs(a.formality - evaluation.outfit.formality) !== Math.abs(b.formality - evaluation.outfit.formality)
+          ? Math.abs(a.formality - evaluation.outfit.formality) - Math.abs(b.formality - evaluation.outfit.formality)
+          : a.slug.localeCompare(b.slug)
+      );
+      for (let i = 0; i < Math.min(needed, eligibleAccs.length); i++) {
+        items.push({
+          garment: eligibleAccs[i],
+          layerPosition: 0,
+          stylingNote: 'Curated editorial accessory accent',
+        });
+        existingGarmentIds.add(eligibleAccs[i].id);
+      }
+    }
+
+    const outfitWithAccs: Outfit = {
+      ...evaluation.outfit,
+      items,
+    };
+
     const outfitRec: Recommendation<Outfit> = {
       id: `rec_outfit_${evaluation.outfit.id}_${Date.now()}`,
-      item: evaluation.outfit,
+      item: outfitWithAccs,
       score: evaluation.totalScore,
       factors: evaluation.factors,
       reasons: evaluation.reasons,
@@ -1016,6 +1208,34 @@ export class VaelStylingEngine {
       traceableReasons: evaluation.traceableReasons,
       cautions: evaluation.cautions,
     };
+  }
+
+  /**
+   * Read-only candidate pool API for studio shuffle / slot swap / external exploration.
+   * Exposes the full ranked candidate list beyond the top 3 without modifying engine state.
+   */
+  static getRankedCandidateLooks(query: LookEngineQuery): CandidateEvaluation[] {
+    const user = query.user;
+    const context = query.context;
+    const authored = this.buildCandidateOutfits(user);
+    const candidates = query.candidateOutfits || CompositionGenerator.generateCandidates(user, context, authored);
+
+    const survivingCandidates: Outfit[] = [];
+    for (const outfit of candidates) {
+      const vetoResult = this.applyHardFilters(outfit, user, context);
+      if (!vetoResult.vetoed) {
+        survivingCandidates.push(outfit);
+      }
+    }
+
+    const evaluatedList: CandidateEvaluation[] = survivingCandidates.map((outfit) =>
+      this.evaluateCandidateOutfit(outfit, user, context)
+    );
+
+    evaluatedList.sort((a, b) =>
+      b.totalScore !== a.totalScore ? b.totalScore - a.totalScore : a.outfit.id.localeCompare(b.outfit.id)
+    );
+    return evaluatedList;
   }
 
   /**

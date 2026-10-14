@@ -55,7 +55,12 @@ export class ClimateFabricRules {
       const hasSevereHeatRestriction = garment.maxTemperatureC !== undefined && garment.maxTemperatureC < 25;
       const isImpermeableOuter = garment.category === 'outerwear' && garment.breathability === 'low' && garment.fabricWeight === 'heavyweight';
 
-      if (isExcessivelyHeavy || hasSevereHeatRestriction || isImpermeableOuter) {
+      // Formal wool check at extreme heat (>= 30°C / 32°C): Must be lightweight / tropical-weight
+      const isWool = garment.material.toLowerCase().includes('wool');
+      const isTropicalOrLightweight = garment.fabricWeight === 'lightweight' || garment.material.toLowerCase().includes('tropical') || garment.material.toLowerCase().includes('fresco');
+      const isHeavyOrMidweightWoolInExtremeHeat = isWool && !isTropicalOrLightweight && (temp !== undefined ? temp >= 30 : tempLevel === 'hot');
+
+      if (isExcessivelyHeavy || hasSevereHeatRestriction || isImpermeableOuter || isHeavyOrMidweightWoolInExtremeHeat) {
         return {
           score: 0.1,
           isPermissible: false,
