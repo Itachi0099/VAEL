@@ -1,5 +1,6 @@
 import { recommendationService } from '../src/core/services';
 import { knowledgeBase } from '../src/core/knowledge';
+import { VaelStylingEngine } from '../src/core/intelligence/engine';
 import { User, VisualProfile, Context, TemperatureLevel, WeatherConditionType, ModestyLevel, StyleExpression } from '../src/core/domain';
 import * as fs from 'fs';
 import * as path from 'path';
@@ -30,9 +31,9 @@ async function runSweep() {
   }
 
   const totalCells = expressions.length * totalPairs * temperatures.length * conditions.length * modestyLevels.length;
-  console.log(`Starting Metric v3 sweep across ${totalCells} cells (${expressions.length} expressions × ${totalPairs} occasion-formality pairs × ${temperatures.length} temps × ${conditions.length} conditions × ${modestyLevels.length} modesty levels)...`);
+  console.log(`Starting Metric v4 sweep across ${totalCells} cells (${expressions.length} expressions × ${totalPairs} occasion-formality pairs × ${temperatures.length} temps × ${conditions.length} conditions × ${modestyLevels.length} modesty levels)...`);
 
-  let completeLooks = 0; // Exactly 3 distinct looks
+  let completeLooks = 0;
   const underThreeCells: Array<{
     expression: string;
     occasion: string;
@@ -47,14 +48,29 @@ async function runSweep() {
   const csvRows: string[] = ['expression,occasion,formality,temperature,condition,modesty,looks_count,matching_looks_count,status,look_ids'];
 
   // Group metrics: (expression, occasionCategory) -> { totalCells, alignedCells, failingCells }
-  // Metric v3 definition:
+  // Metric v4 definition:
   // - Foundation pieces only: top, bottom, one-piece, outerwear, footwear (NOT accessories)
   // - Feminine: look mean coding >= +0.25
   // - Masculine: look mean coding <= -0.25
-  // - Androgynous: |mean coding| <= 0.25 AND >= 1 curated-fluid foundation piece (fluidTag === true)
+  // - Androgynous: |mean coding| <= 0.25 AND (>= 1 curated-fluid NON-footwear piece OR >= 2 curated-fluid foundation pieces)
   // - No-preference: any look matches
   // - Cell passes if >= 2 of 3 looks match the expression criteria
   const groupStats: Record<string, { totalCells: number; alignedCells: number; failingCells: any[] }> = {};
+
+  // Variety tracking per expression:
+  const bestMatchCounts: Record<StyleExpression, Record<string, { title: string; count: number }>> = {
+    masculine: {},
+    feminine: {},
+    androgynous: {},
+    'no-preference': {},
+    unspecified: {},
+  };
+
+  // Feminine separates reconciliation tracking:
+  let feminineTotalLooks = 0;
+  let feminineSeparatesCount = 0;
+  let feminineOnePieceCount = 0;
+  let feminineOtherCount = 0;
 
   let processed = 0;
   const startTime = Date.now();
@@ -145,7 +161,17 @@ async function runSweep() {
                   });
                 }
 
-                // Metric v3 alignment evaluation
+                // Track Best Match Variety
+                if (res.bestMatch) {
+                  const bId = res.bestMatch.outfit.item.id;
+                  const bTitle = res.bestMatch.outfit.item.title;
+                  if (!bestMatchCounts[expr][bId]) {
+                    bestMatchCounts[expr][bId] = { title: bTitle, count: 0 };
+                  }
+                  bestMatchCounts[expr][bId].count++;
+                }
+
+                // Metric v4 alignment evaluation
                 let matchingLooksCount = 0;
                 for (const look of returnedLooks) {
                   const foundationPieces = look.outfit.item.items
@@ -155,7 +181,11 @@ async function runSweep() {
                   if (foundationPieces.length === 0) continue;
                   const sumCoding = foundationPieces.reduce((acc, g) => acc + (g.garmentCoding !== undefined ? g.garmentCoding : (g.genderCoding === 'masculine' ? -1 : g.genderCoding === 'feminine' ? 1 : 0)), 0);
                   const meanCoding = sumCoding / foundationPieces.length;
-                  const hasCuratedFluid = foundationPieces.some((g) => g.fluidTag === true);
+
+                  // Metric v4 Curated Fluid counts:
+                  const nonFootwearCuratedFluid = foundationPieces.filter((g) => g.category !== 'footwear' && g.fluidTag === true).length;
+                  const totalCuratedFluid = foundationPieces.filter((g) => g.fluidTag === true).length;
+                  const fluidPass = nonFootwearCuratedFluid >= 1 || totalCuratedFluid >= 2;
 
                   let lookMatches = false;
                   if (expr === 'feminine') {
@@ -163,12 +193,28 @@ async function runSweep() {
                   } else if (expr === 'masculine') {
                     lookMatches = meanCoding <= -0.25;
                   } else if (expr === 'androgynous') {
-                    lookMatches = Math.abs(meanCoding) <= 0.25 && hasCuratedFluid;
+                    lookMatches = Math.abs(meanCoding) <= 0.25 && fluidPass;
                   } else {
                     lookMatches = true;
                   }
 
                   if (lookMatches) matchingLooksCount++;
+
+                  // Feminine look type accounting across all 740 feminine cells
+                  if (expr === 'feminine') {
+                    feminineTotalLooks++;
+                    const hasTop = foundationPieces.some((g) => g.category === 'top');
+                    const hasBottom = foundationPieces.some((g) => g.category === 'bottom');
+                    const hasOnePiece = foundationPieces.some((g) => g.category === 'one-piece');
+
+                    if (hasTop && hasBottom && !hasOnePiece) {
+                      feminineSeparatesCount++;
+                    } else if (hasOnePiece) {
+                      feminineOnePieceCount++;
+                    } else {
+                      feminineOtherCount++;
+                    }
+                  }
                 }
 
                 const status = matchingLooksCount >= 2 ? 'PASS' : 'FAIL';
@@ -220,12 +266,12 @@ async function runSweep() {
   }
 
   const durationSec = ((Date.now() - startTime) / 1000).toFixed(2);
-  console.log(`Sweep complete in ${durationSec}s.`);
+  console.log(`\nSweep complete in ${durationSec}s.`);
   console.log(`Total Cells: ${totalCells}`);
   console.log(`Viable 3-Look Cells: ${completeLooks} (${((completeLooks / totalCells) * 100).toFixed(1)}%)`);
   console.log(`Under-3 Look Cells: ${underThreeCells.length}`);
 
-  console.log('\n--- STRICT ALIGNMENT METRIC V3 PER CELL GROUP ---');
+  console.log('\n--- STRICT ALIGNMENT METRIC V4 PER CELL GROUP ---');
   const groupResults: Record<string, { totalCells: number; alignedCells: number; share: string; status: string; failingCount: number }> = {};
   let allGroupsPassed = true;
 
@@ -243,6 +289,62 @@ async function runSweep() {
     console.log(`${group.padEnd(30)}: ${share.toFixed(1)}% (${stat.alignedCells}/${stat.totalCells}) [${passed ? 'PASS' : 'FAIL'}] - Failing cells: ${stat.failingCells.length}`);
   }
 
+  console.log('\n--- FEMININE LOOK RECONCILIATION ---');
+  console.log(`True Denominator (740 cells × 3 looks): ${feminineTotalLooks}`);
+  console.log(`Separates Looks: ${feminineSeparatesCount} (${((feminineSeparatesCount / feminineTotalLooks) * 100).toFixed(1)}%)`);
+  console.log(`One-Piece Looks: ${feminineOnePieceCount} (${((feminineOnePieceCount / feminineTotalLooks) * 100).toFixed(1)}%)`);
+  console.log(`Other/Fallback Looks: ${feminineOtherCount} (${((feminineOtherCount / feminineTotalLooks) * 100).toFixed(1)}%)`);
+  console.log(`Sum: ${feminineSeparatesCount + feminineOnePieceCount + feminineOtherCount} / ${feminineTotalLooks}`);
+
+  console.log('\n--- VARIETY ANALYSIS PER EXPRESSION ---');
+  const varietyReport: Record<string, any> = {};
+  for (const expr of expressions) {
+    const counts = bestMatchCounts[expr];
+    const distinctCount = Object.keys(counts).length;
+    const sorted = Object.entries(counts).sort((a, b) => b[1].count - a[1].count);
+    const top5 = sorted.slice(0, 5).map(([id, data]) => ({
+      id,
+      title: data.title,
+      cellCount: data.count,
+      cellShare: `${((data.count / 740) * 100).toFixed(1)}%`,
+    }));
+    varietyReport[expr] = {
+      distinctBestMatchLooks: distinctCount,
+      top5Repeated: top5,
+    };
+    console.log(`\n[${expr.toUpperCase()}] Distinct Best-Match Looks: ${distinctCount} / 740 cells`);
+    top5.forEach((t, i) => {
+      console.log(`  ${i + 1}. ${t.title} (${t.id}): ${t.cellCount} cells (${t.cellShare})`);
+    });
+  }
+
+  // Dress and skirt counts by formality x temperature
+  console.log('\n--- DRESS AND SKIRT MATRIX (FORMALITY × TEMPERATURE) ---');
+  const allGarments = knowledgeBase.getAllGarments();
+  const dresses = allGarments.filter((g) => g.subcategory === 'dress' || g.subcategory === 'gown');
+  const skirts = allGarments.filter((g) => g.subcategory === 'skirt');
+
+  console.log(`Total Dresses: ${dresses.length}`);
+  console.log(`Total Skirts: ${skirts.length}`);
+
+  const formalityLevels = [1, 2, 3, 4, 5];
+  const matrix: Record<string, any> = { dresses: {}, skirts: {} };
+  for (const f of formalityLevels) {
+    matrix.dresses[`F${f}`] = {};
+    matrix.skirts[`F${f}`] = {};
+    for (const t of temperatures) {
+      const dCount = dresses.filter((d) => d.formality === f && (d.compatibleWeather as string[]).includes(t)).length;
+      const sCount = skirts.filter((s) => s.formality === f && (s.compatibleWeather as string[]).includes(t)).length;
+      matrix.dresses[`F${f}`][t] = dCount;
+      matrix.skirts[`F${f}`][t] = sCount;
+    }
+  }
+
+  const reportsDir = path.resolve(process.cwd(), 'reports');
+  if (!fs.existsSync(reportsDir)) {
+    fs.mkdirSync(reportsDir, { recursive: true });
+  }
+
   const report = {
     totalCells,
     viableThreeLookCells: completeLooks,
@@ -250,6 +352,17 @@ async function runSweep() {
     underThreeCellsList: underThreeCells,
     groupAlignmentResults: groupResults,
     allGroupsPassedTarget: allGroupsPassed,
+    feminineReconciliation: {
+      totalLooks: feminineTotalLooks,
+      separatesCount: feminineSeparatesCount,
+      separatesShare: `${((feminineSeparatesCount / feminineTotalLooks) * 100).toFixed(1)}%`,
+      onePieceCount: feminineOnePieceCount,
+      onePieceShare: `${((feminineOnePieceCount / feminineTotalLooks) * 100).toFixed(1)}%`,
+      otherCount: feminineOtherCount,
+      otherShare: `${((feminineOtherCount / feminineTotalLooks) * 100).toFixed(1)}%`,
+    },
+    varietyReport,
+    garmentMatrix: matrix,
     failingCellsByGroup: Object.fromEntries(
       Object.entries(groupStats)
         .filter(([_, s]) => s.failingCells.length > 0)
@@ -257,15 +370,10 @@ async function runSweep() {
     ),
   };
 
-  const reportsDir = path.resolve(process.cwd(), 'reports');
-  if (!fs.existsSync(reportsDir)) {
-    fs.mkdirSync(reportsDir, { recursive: true });
-  }
-
   fs.writeFileSync(path.join(reportsDir, 'coverage-sweep-results.json'), JSON.stringify(report, null, 2));
-  fs.writeFileSync(path.join(reportsDir, 'coverage-sweep-v3.csv'), csvRows.join('\n'));
-  console.log(`Report written to reports/coverage-sweep-results.json`);
-  console.log(`Per-cell CSV written to reports/coverage-sweep-v3.csv`);
+  fs.writeFileSync(path.join(reportsDir, 'coverage-sweep-v4.csv'), csvRows.join('\n'));
+  console.log(`\nReport written to reports/coverage-sweep-results.json`);
+  console.log(`Per-cell CSV written to reports/coverage-sweep-v4.csv`);
 }
 
 runSweep().catch(console.error);

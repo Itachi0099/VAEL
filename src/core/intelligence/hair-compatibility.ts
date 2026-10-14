@@ -150,6 +150,25 @@ export class HairCompatibilityEvaluator {
       reason: 'Aesthetic affinity with your personal style direction',
     });
 
+    // 6. Climate / Thermal Awareness (Heat & Humidity: Off-neck and breathable styles)
+    const isHotClimate = options.context?.weather === 'hot' || options.context?.temperatureLevel === 'hot';
+    if (isHotClimate) {
+      const isOffNeck =
+        style.visualTags.some((t) => ['knot', 'top-knot', 'updo', 'chignon', 'low-bun', 'buzz', 'pixie', 'taper', 'fade', 'crop', 'cornrows', 'braids'].includes(t)) ||
+        style.targetLength === 'buzz' ||
+        style.targetLength === 'short';
+
+      if (isOffNeck) {
+        reasons.push('Off-neck heat-aware style promotes cooling comfort in hot, humid weather.');
+        factors.push({
+          category: 'weather_fit',
+          weight: 1.5,
+          score: 0.95,
+          reason: 'Off-neck heat-aware geometry dissipates neck and shoulder heat.',
+        });
+      }
+    }
+
     const { finalScore } = computeWeightedScore(factors);
 
     const hasVisual = !!options.visual?.hair;

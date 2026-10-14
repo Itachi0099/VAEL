@@ -147,12 +147,188 @@
   "result": {
     "looksCount": 3,
     "contextApplied": "Fine Dining / Dinner Party",
-    "vetoedCandidateCount": 18,
-    "evaluatedCandidateCount": 51,
+    "vetoedCandidateCount": 19,
+    "evaluatedCandidateCount": 64,
     "looks": [
       {
         "tier": "BEST_MATCH",
         "tierRationale": "Optimal convergence of your 10D style vector, event formality, and physical proportions.",
+        "confidence": {
+          "state": "NEED_MORE_INFO",
+          "explanation": "Limited input signals available for context and personal taste.",
+          "toIncreaseConfidence": "Specify your event formality and style preferences to build your looks."
+        },
+        "overallHarmonyScore": 0.89,
+        "reasons": [
+          "Directly mirrors your personal style axis coordinates.",
+          "Harmonious classic proportion with uniform clean linear cadence",
+          "Tonal neutral palette ensures high versatility and effortless visual cohesion."
+        ],
+        "cautions": [],
+        "outfit": {
+          "id": "outfit_masculine_fine_knit_hopsack_separates_01",
+          "title": "Fine Silk-Merino Knit Polo & Fresco Wool Trousers",
+          "primaryStyleSlug": "minimal",
+          "formality": 4,
+          "score": 0.89,
+          "items": [
+            {
+              "category": "top",
+              "subcategory": "knitwear",
+              "name": "Long-Sleeve Silk-Merino Knit Polo (Navy)",
+              "material": "60% extrafine merino wool, 40% silk (20-gauge)",
+              "color": "navy",
+              "fit": "tailored",
+              "modestyRating": "high-coverage",
+              "genderCoding": "masculine",
+              "layerPosition": 0
+            },
+            {
+              "category": "outerwear",
+              "subcategory": "blazer",
+              "name": "Unlined Tropical Hopsack Wool Blazer (Deep Navy)",
+              "material": "240gsm open-weave tropical hopsack wool",
+              "color": "deep-navy",
+              "fit": "tailored",
+              "modestyRating": "covered-arms",
+              "genderCoding": "masculine",
+              "layerPosition": 1
+            },
+            {
+              "category": "bottom",
+              "subcategory": "trousers",
+              "name": "Tropical-Weight High-Twist Wool Trousers (Charcoal)",
+              "material": "230gsm high-twist fresco wool (porous open weave)",
+              "color": "charcoal",
+              "fit": "tailored",
+              "modestyRating": "high-coverage",
+              "genderCoding": "masculine",
+              "layerPosition": 0
+            },
+            {
+              "category": "footwear",
+              "subcategory": "derby",
+              "name": "Split-Toe Apron Derbies (Black Boxcalf)",
+              "material": "boxcalf leather, dainite studded rubber sole",
+              "color": "black",
+              "fit": "regular",
+              "modestyRating": "standard",
+              "genderCoding": "masculine",
+              "layerPosition": 0
+            }
+          ],
+          "factors": [
+            {
+              "category": "style_affinity",
+              "weight": 3.5,
+              "score": 0.84,
+              "reason": "Coordinate affinity (84%) with your 10D style vector."
+            },
+            {
+              "category": "silhouette_balance",
+              "weight": 3,
+              "score": 0.9,
+              "reason": "Harmonious classic proportion with uniform clean linear cadence"
+            },
+            {
+              "category": "color_harmony",
+              "weight": 3,
+              "score": 0.92,
+              "reason": "Color story: tonal-neutral"
+            },
+            {
+              "category": "occasion_fit",
+              "weight": 2.5,
+              "score": 1,
+              "reason": "Formality fit for Fine Dining / Dinner Party (Level 4)"
+            },
+            {
+              "category": "weather_fit",
+              "weight": 2,
+              "score": 0.75,
+              "reason": "Ambient temperature and breathability calibration"
+            }
+          ],
+          "traceableReasons": [
+            {
+              "reasonId": "rea_outfit_masculine_fine_knit_hopsack_separates_01_0_1791968775726",
+              "text": "Directly mirrors your personal style axis coordinates.",
+              "signalIds": [
+                "user.styleProfile.styleVector",
+                "user.styleProfile.preferences.preferredStyleSlugs"
+              ],
+              "knowledgeEntryIds": [
+                "gar_masculine_fine_silk_merino_polo_navy",
+                "gar_masculine_unlined_hopsack_blazer_navy",
+                "gar_masculine_tropical_wool_trousers_charcoal",
+                "gar_masculine_dark_split_toe_derby_black",
+                "style_minimal"
+              ],
+              "factor": "style_affinity",
+              "authority": "USER_ENTERED",
+              "isAssumed": false
+            },
+            {
+              "reasonId": "rea_outfit_masculine_fine_knit_hopsack_separates_01_1_1791968775726",
+              "text": "Harmonious classic proportion with uniform clean linear cadence",
+              "signalIds": [
+                "user.styleProfile.preferences.preferredStyleSlugs",
+                "context.occasion"
+              ],
+              "knowledgeEntryIds": [
+                "gar_masculine_fine_silk_merino_polo_navy",
+                "gar_masculine_unlined_hopsack_blazer_navy",
+                "gar_masculine_tropical_wool_trousers_charcoal",
+                "gar_masculine_dark_split_toe_derby_black"
+              ],
+              "factor": "general",
+              "authority": "USER_ENTERED",
+              "isAssumed": false
+            },
+            {
+              "reasonId": "rea_outfit_masculine_fine_knit_hopsack_separates_01_2_1791968775726",
+              "text": "Tonal neutral palette ensures high versatility and effortless visual cohesion.",
+              "signalIds": [
+                "user.styleProfile.preferences.preferredStyleSlugs",
+                "context.occasion"
+              ],
+              "knowledgeEntryIds": [
+                "gar_masculine_fine_silk_merino_polo_navy",
+                "gar_masculine_unlined_hopsack_blazer_navy",
+                "gar_masculine_tropical_wool_trousers_charcoal",
+                "gar_masculine_dark_split_toe_derby_black"
+              ],
+              "factor": "general",
+              "authority": "USER_ENTERED",
+              "isAssumed": false
+            }
+          ],
+          "stylingAdvice": [
+            "Elevate with subtle texture contrast between top and lower fabrication."
+          ]
+        },
+        "hairStyle": {
+          "name": "Textured French Crop",
+          "slug": "textured-crop",
+          "score": 0.8,
+          "reasons": [
+            "Fits within your preferred moderate maintenance threshold.",
+            "Appropriate formality for Fine Dining / Dinner Party."
+          ]
+        },
+        "groomingStyle": {
+          "name": "Designer Stubble (3-Day Shadow)",
+          "slug": "designer-stubble",
+          "score": 0.8,
+          "reasons": [
+            "Conforms with your moderate grooming maintenance routine.",
+            "Appropriate grooming polish for Fine Dining / Dinner Party."
+          ]
+        }
+      },
+      {
+        "tier": "SAFE",
+        "tierRationale": "High familiarity and effortless ease. Relies on proven proportions and classic foundational tones.",
         "confidence": {
           "state": "NEED_MORE_INFO",
           "explanation": "Limited input signals available for context and personal taste.",
@@ -262,7 +438,7 @@
           ],
           "traceableReasons": [
             {
-              "reasonId": "rea_outfit_feminine_tailored_suit_workplace_01_0_1791915078515",
+              "reasonId": "rea_outfit_feminine_tailored_suit_workplace_01_0_1791968775726",
               "text": "Directly mirrors your personal style axis coordinates.",
               "signalIds": [
                 "user.styleProfile.styleVector",
@@ -281,7 +457,7 @@
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_feminine_tailored_suit_workplace_01_1_1791915078515",
+              "reasonId": "rea_outfit_feminine_tailored_suit_workplace_01_1_1791968775726",
               "text": "Balanced regular configuration",
               "signalIds": [
                 "user.styleProfile.preferences.preferredStyleSlugs",
@@ -299,7 +475,7 @@
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_feminine_tailored_suit_workplace_01_2_1791915078515",
+              "reasonId": "rea_outfit_feminine_tailored_suit_workplace_01_2_1791968775726",
               "text": "Strong contrast between light and deep neutral values establishes crisp visual separation.",
               "signalIds": [
                 "user.styleProfile.preferences.preferredStyleSlugs",
@@ -339,194 +515,6 @@
         }
       },
       {
-        "tier": "SAFE",
-        "tierRationale": "High familiarity and effortless ease. Relies on proven proportions and classic foundational tones.",
-        "confidence": {
-          "state": "NEED_MORE_INFO",
-          "explanation": "Limited input signals available for context and personal taste.",
-          "toIncreaseConfidence": "Specify your event formality and style preferences to build your looks."
-        },
-        "overallHarmonyScore": 0.87,
-        "reasons": [
-          "Directly mirrors your personal style axis coordinates.",
-          "Cohesive layered silhouette with balanced mid-length outer structure",
-          "Harmonious balance across complementary tonal depths."
-        ],
-        "cautions": [],
-        "outfit": {
-          "id": "outfit_feminine_slip_evening_01",
-          "title": "Sculpted Hourglass & Silk Slip Monolith",
-          "primaryStyleSlug": "minimal",
-          "formality": 4,
-          "score": 0.87,
-          "items": [
-            {
-              "category": "one-piece",
-              "subcategory": "dress",
-              "name": "Bias-Cut Silk Charmeuse Slip Dress",
-              "material": "100% heavyweight 22mm silk charmeuse",
-              "color": "black",
-              "fit": "slim",
-              "modestyRating": "low-coverage",
-              "genderCoding": "feminine",
-              "layerPosition": 0
-            },
-            {
-              "category": "outerwear",
-              "subcategory": "blazer",
-              "name": "Waist-defined Tailored Wool Blazer",
-              "material": "high-twist tropical wool with structured canvas interlining",
-              "color": "black",
-              "fit": "tailored",
-              "modestyRating": "covered-arms",
-              "genderCoding": "feminine",
-              "layerPosition": 1
-            },
-            {
-              "category": "footwear",
-              "subcategory": "heel",
-              "name": "Pointed-Toe Leather Slingback Pumps (45mm)",
-              "material": "semi-gloss Italian box calfskin",
-              "color": "black",
-              "fit": "slim",
-              "modestyRating": "standard",
-              "genderCoding": "feminine",
-              "layerPosition": 0
-            },
-            {
-              "category": "accessory",
-              "subcategory": "bag",
-              "name": "Sculpted Minimalist Leather Shoulder Bag",
-              "material": "smooth semi-patent calfskin, tonal nappa lining",
-              "color": "black",
-              "fit": "regular",
-              "modestyRating": "standard",
-              "genderCoding": "feminine",
-              "layerPosition": 0
-            },
-            {
-              "category": "accessory",
-              "subcategory": "jewelry",
-              "name": "18k Vermeil Hollow Bold Hoop Earrings",
-              "material": "18k gold vermeil over 925 recycled sterling silver",
-              "color": "warm-gold",
-              "fit": "regular",
-              "modestyRating": "standard",
-              "genderCoding": "feminine",
-              "layerPosition": 0
-            }
-          ],
-          "factors": [
-            {
-              "category": "style_affinity",
-              "weight": 3.5,
-              "score": 0.84,
-              "reason": "Coordinate affinity (84%) with your 10D style vector."
-            },
-            {
-              "category": "silhouette_balance",
-              "weight": 3,
-              "score": 0.92,
-              "reason": "Cohesive layered silhouette with balanced mid-length outer structure"
-            },
-            {
-              "category": "color_harmony",
-              "weight": 3,
-              "score": 0.82,
-              "reason": "Color story: analogous"
-            },
-            {
-              "category": "occasion_fit",
-              "weight": 2.5,
-              "score": 1,
-              "reason": "Formality fit for Fine Dining / Dinner Party (Level 4)"
-            },
-            {
-              "category": "weather_fit",
-              "weight": 2,
-              "score": 0.75,
-              "reason": "Ambient temperature and breathability calibration"
-            }
-          ],
-          "traceableReasons": [
-            {
-              "reasonId": "rea_outfit_feminine_slip_evening_01_0_1791915078515",
-              "text": "Directly mirrors your personal style axis coordinates.",
-              "signalIds": [
-                "user.styleProfile.styleVector",
-                "user.styleProfile.preferences.preferredStyleSlugs"
-              ],
-              "knowledgeEntryIds": [
-                "gar_slip_dress_silk_black",
-                "gar_sculpted_blazer_hourglass_black",
-                "gar_slingback_kitten_heel_black",
-                "gar_leather_shoulder_bag_baguette",
-                "gar_gold_hoop_earrings_chunky",
-                "style_minimal"
-              ],
-              "factor": "style_affinity",
-              "authority": "USER_ENTERED",
-              "isAssumed": false
-            },
-            {
-              "reasonId": "rea_outfit_feminine_slip_evening_01_1_1791915078515",
-              "text": "Cohesive layered silhouette with balanced mid-length outer structure",
-              "signalIds": [
-                "user.styleProfile.preferences.fitProportions",
-                "user.styleProfile.preferences.preferredFits"
-              ],
-              "knowledgeEntryIds": [
-                "gar_slip_dress_silk_black",
-                "gar_sculpted_blazer_hourglass_black",
-                "gar_slingback_kitten_heel_black",
-                "gar_leather_shoulder_bag_baguette",
-                "gar_gold_hoop_earrings_chunky"
-              ],
-              "factor": "silhouette_balance",
-              "authority": "USER_ENTERED",
-              "isAssumed": false
-            },
-            {
-              "reasonId": "rea_outfit_feminine_slip_evening_01_2_1791915078515",
-              "text": "Harmonious balance across complementary tonal depths.",
-              "signalIds": [
-                "user.styleProfile.preferences.fitProportions",
-                "user.styleProfile.preferences.preferredFits"
-              ],
-              "knowledgeEntryIds": [
-                "gar_slip_dress_silk_black",
-                "gar_sculpted_blazer_hourglass_black",
-                "gar_slingback_kitten_heel_black",
-                "gar_leather_shoulder_bag_baguette",
-                "gar_gold_hoop_earrings_chunky"
-              ],
-              "factor": "silhouette_balance",
-              "authority": "USER_ENTERED",
-              "isAssumed": false
-            }
-          ],
-          "stylingAdvice": []
-        },
-        "hairStyle": {
-          "name": "Textured French Crop",
-          "slug": "textured-crop",
-          "score": 0.8,
-          "reasons": [
-            "Fits within your preferred moderate maintenance threshold.",
-            "Appropriate formality for Fine Dining / Dinner Party."
-          ]
-        },
-        "groomingStyle": {
-          "name": "Designer Stubble (3-Day Shadow)",
-          "slug": "designer-stubble",
-          "score": 0.8,
-          "reasons": [
-            "Conforms with your moderate grooming maintenance routine.",
-            "Appropriate grooming polish for Fine Dining / Dinner Party."
-          ]
-        }
-      },
-      {
         "tier": "STRETCH",
         "tierRationale": "Curated directional exploration. Pushes volume and textural depth while strictly respecting dress codes.",
         "confidence": {
@@ -534,50 +522,39 @@
           "explanation": "Limited input signals available for context and personal taste.",
           "toIncreaseConfidence": "Specify your event formality and style preferences to build your looks."
         },
-        "overallHarmonyScore": 0.86,
+        "overallHarmonyScore": 0.87,
         "reasons": [
-          "Balanced regular configuration",
-          "Tonal neutral palette ensures high versatility and effortless visual cohesion.",
+          "Harmonious classic proportion with uniform clean linear cadence",
+          "Strong contrast between light and deep neutral values establishes crisp visual separation.",
           "Aligned to Fine Dining / Dinner Party formality."
         ],
         "cautions": [],
         "outfit": {
-          "id": "outfit_feminine_tie_neck_maxi_separates_01",
-          "title": "Silk Lavallière Blouse & Structured Wool Crepe Maxi Skirt",
-          "primaryStyleSlug": "formal",
+          "id": "outfit_feminine_hot_crepe_midi_separates_01",
+          "title": "Poplin Peplum Blouse & Heavy Silk Crepe Fluted Midi Skirt",
+          "primaryStyleSlug": "smart-casual",
           "formality": 4,
-          "score": 0.86,
+          "score": 0.87,
           "items": [
             {
               "category": "top",
               "subcategory": "blouse",
-              "name": "Silk Georgette Lavallière Tie-Neck Blouse (Ivory)",
-              "material": "100% 16mm Mulberry silk georgette",
-              "color": "ivory",
-              "fit": "relaxed",
-              "modestyRating": "covered-arms",
+              "name": "Architectural Fitted Cotton Poplin Peplum Blouse (Pure White)",
+              "material": "140gsm crisp Egyptian cotton poplin",
+              "color": "white",
+              "fit": "tailored",
+              "modestyRating": "standard",
               "genderCoding": "feminine",
               "layerPosition": 0
             },
             {
-              "category": "outerwear",
-              "subcategory": "blazer",
-              "name": "Waist-defined Single-Breasted Wool Crepe Blazer (Black)",
-              "material": "290gsm Italian virgin wool crepe",
-              "color": "black",
-              "fit": "tailored",
-              "modestyRating": "covered-arms",
-              "genderCoding": "feminine",
-              "layerPosition": 1
-            },
-            {
               "category": "bottom",
               "subcategory": "skirt",
-              "name": "Structured Wool Crepe A-Line Maxi Skirt (Black)",
-              "material": "300gsm double wool crepe",
-              "color": "black",
-              "fit": "regular",
-              "modestyRating": "covered-both",
+              "name": "Fluted Heavy Silk Crepe Midi Skirt (Navy)",
+              "material": "40mm heavy silk crepe de chine",
+              "color": "navy",
+              "fit": "tailored",
+              "modestyRating": "high-coverage",
               "genderCoding": "feminine",
               "layerPosition": 0
             },
@@ -597,20 +574,20 @@
             {
               "category": "style_affinity",
               "weight": 3.5,
-              "score": 0.71,
-              "reason": "Coordinate affinity (71%) with your 10D style vector."
+              "score": 0.76,
+              "reason": "Coordinate affinity (76%) with your 10D style vector."
             },
             {
               "category": "silhouette_balance",
               "weight": 3,
-              "score": 0.93,
-              "reason": "Balanced regular configuration"
+              "score": 0.9,
+              "reason": "Harmonious classic proportion with uniform clean linear cadence"
             },
             {
               "category": "color_harmony",
               "weight": 3,
-              "score": 0.92,
-              "reason": "Color story: tonal-neutral"
+              "score": 0.94,
+              "reason": "Color story: strong-contrast"
             },
             {
               "category": "occasion_fit",
@@ -627,16 +604,15 @@
           ],
           "traceableReasons": [
             {
-              "reasonId": "rea_outfit_feminine_tie_neck_maxi_separates_01_0_1791915078515",
-              "text": "Balanced regular configuration",
+              "reasonId": "rea_outfit_feminine_hot_crepe_midi_separates_01_0_1791968775726",
+              "text": "Harmonious classic proportion with uniform clean linear cadence",
               "signalIds": [
                 "user.styleProfile.preferences.preferredStyleSlugs",
                 "context.occasion"
               ],
               "knowledgeEntryIds": [
-                "gar_silk_tie_neck_blouse_ivory",
-                "gar_feminine_wool_blazer_black",
-                "gar_wool_crepe_a_line_maxi_skirt_black",
+                "gar_poplin_peplum_blouse_white",
+                "gar_feminine_heavy_silk_crepe_midi_skirt_navy",
                 "gar_feminine_pointed_kitten_heels_black"
               ],
               "factor": "general",
@@ -644,16 +620,15 @@
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_feminine_tie_neck_maxi_separates_01_1_1791915078515",
-              "text": "Tonal neutral palette ensures high versatility and effortless visual cohesion.",
+              "reasonId": "rea_outfit_feminine_hot_crepe_midi_separates_01_1_1791968775726",
+              "text": "Strong contrast between light and deep neutral values establishes crisp visual separation.",
               "signalIds": [
                 "user.styleProfile.preferences.preferredStyleSlugs",
                 "context.occasion"
               ],
               "knowledgeEntryIds": [
-                "gar_silk_tie_neck_blouse_ivory",
-                "gar_feminine_wool_blazer_black",
-                "gar_wool_crepe_a_line_maxi_skirt_black",
+                "gar_poplin_peplum_blouse_white",
+                "gar_feminine_heavy_silk_crepe_midi_skirt_navy",
                 "gar_feminine_pointed_kitten_heels_black"
               ],
               "factor": "general",
@@ -661,16 +636,15 @@
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_feminine_tie_neck_maxi_separates_01_2_1791915078515",
+              "reasonId": "rea_outfit_feminine_hot_crepe_midi_separates_01_2_1791968775726",
               "text": "Aligned to Fine Dining / Dinner Party formality.",
               "signalIds": [
                 "context.occasion",
                 "context.targetFormality"
               ],
               "knowledgeEntryIds": [
-                "gar_silk_tie_neck_blouse_ivory",
-                "gar_feminine_wool_blazer_black",
-                "gar_wool_crepe_a_line_maxi_skirt_black",
+                "gar_poplin_peplum_blouse_white",
+                "gar_feminine_heavy_silk_crepe_midi_skirt_navy",
                 "gar_feminine_pointed_kitten_heels_black",
                 "occ_dinner"
               ],
@@ -680,7 +654,7 @@
             }
           ],
           "stylingAdvice": [
-            "Aligns with your preferred fit geometry."
+            "Elevate with subtle texture contrast between top and lower fabrication."
           ]
         },
         "hairStyle": {

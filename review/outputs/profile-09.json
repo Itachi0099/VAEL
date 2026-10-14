@@ -152,8 +152,8 @@
   "result": {
     "looksCount": 3,
     "contextApplied": "Modern Office / Workplace",
-    "vetoedCandidateCount": 32,
-    "evaluatedCandidateCount": 51,
+    "vetoedCandidateCount": 42,
+    "evaluatedCandidateCount": 64,
     "looks": [
       {
         "tier": "BEST_MATCH",
@@ -268,7 +268,7 @@
           ],
           "traceableReasons": [
             {
-              "reasonId": "rea_outfit_fluid_cold_flannel_drape_01_0_1791915078513",
+              "reasonId": "rea_outfit_fluid_cold_flannel_drape_01_0_1791968775723",
               "text": "Structured upper anchor balanced with fluid wide-leg lower volume",
               "signalIds": [
                 "user.styleProfile.preferences.fitProportions",
@@ -285,7 +285,7 @@
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_fluid_cold_flannel_drape_01_1_1791915078513",
+              "reasonId": "rea_outfit_fluid_cold_flannel_drape_01_1_1791968775723",
               "text": "Tonal neutral palette ensures high versatility and effortless visual cohesion.",
               "signalIds": [
                 "user.styleProfile.preferences.preferredStyleSlugs",
@@ -302,7 +302,7 @@
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_fluid_cold_flannel_drape_01_2_1791915078513",
+              "reasonId": "rea_outfit_fluid_cold_flannel_drape_01_2_1791968775723",
               "text": "Aligned to Modern Office / Workplace formality.",
               "signalIds": [
                 "context.occasion",
@@ -469,7 +469,7 @@
           ],
           "traceableReasons": [
             {
-              "reasonId": "rea_outfit_fluid_cold_cocoon_coat_01_0_1791915078513",
+              "reasonId": "rea_outfit_fluid_cold_cocoon_coat_01_0_1791968775723",
               "text": "Structured upper anchor balanced with fluid wide-leg lower volume",
               "signalIds": [
                 "user.styleProfile.preferences.fitProportions",
@@ -487,7 +487,7 @@
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_fluid_cold_cocoon_coat_01_1_1791915078513",
+              "reasonId": "rea_outfit_fluid_cold_cocoon_coat_01_1_1791968775723",
               "text": "Tonal neutral palette ensures high versatility and effortless visual cohesion.",
               "signalIds": [
                 "user.styleProfile.preferences.preferredStyleSlugs",
@@ -505,7 +505,7 @@
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_fluid_cold_cocoon_coat_01_2_1791915078513",
+              "reasonId": "rea_outfit_fluid_cold_cocoon_coat_01_2_1791968775723",
               "text": "Aligned to Modern Office / Workplace formality.",
               "signalIds": [
                 "context.occasion",
@@ -662,7 +662,7 @@
           ],
           "traceableReasons": [
             {
-              "reasonId": "rea_outfit_feminine_cold_casual_wrap_01_0_1791915078513",
+              "reasonId": "rea_outfit_feminine_cold_casual_wrap_01_0_1791968775723",
               "text": "Directly mirrors your personal style axis coordinates.",
               "signalIds": [
                 "user.styleProfile.styleVector",
@@ -680,7 +680,7 @@
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_feminine_cold_casual_wrap_01_1_1791915078513",
+              "reasonId": "rea_outfit_feminine_cold_casual_wrap_01_1_1791968775723",
               "text": "Structured upper anchor balanced with fluid wide-leg lower volume",
               "signalIds": [
                 "user.styleProfile.preferences.fitProportions",
@@ -697,7 +697,7 @@
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_feminine_cold_casual_wrap_01_2_1791915078513",
+              "reasonId": "rea_outfit_feminine_cold_casual_wrap_01_2_1791968775723",
               "text": "Harmonious balance across complementary tonal depths.",
               "signalIds": [
                 "user.styleProfile.preferences.fitProportions",

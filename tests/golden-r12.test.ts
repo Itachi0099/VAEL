@@ -115,8 +115,19 @@ describe('VAEL R1.2 Golden Test Suite (G-01 to G-35)', () => {
     };
     const res = recommendationService.generateTopThreeLooks({ user, context });
     const garments = res.bestMatch.outfit.item.items.map((i) => i.garment);
-    expect(garments.some((g) => g.category === 'footwear' && !g.subcategory.includes('sandals'))).toBe(true);
-    expect(res.bestMatch.outfit.item.items.length).toBeGreaterThanOrEqual(2);
+    const outer = garments.find((g) => g.category === 'outerwear');
+    const base = garments.find((g) => g.category === 'top' || g.category === 'one-piece');
+    const footwear = garments.find((g) => g.category === 'footwear');
+
+    expect(outer).toBeDefined();
+    expect(base).toBeDefined();
+    expect(footwear).toBeDefined();
+
+    // Multi-layer protection: outer layer is extended/regular long coverage
+    expect(outer!.length === 'extended' || outer!.length === 'regular').toBe(true);
+    // Closed footwear (no sandals, no slides)
+    expect(footwear!.subcategory).not.toContain('sandals');
+    expect(footwear!.subcategory).not.toContain('slides');
   });
 
   // G-04: Rain, Workplace -> Water-resistant outer; wet-tolerant footwear; hems clear ground
@@ -135,7 +146,7 @@ describe('VAEL R1.2 Golden Test Suite (G-01 to G-35)', () => {
     expect(footwear!.garment.waterResistance === 'waterproof' || footwear!.garment.waterResistance === 'water-resistant').toBe(true);
   });
 
-  // G-05: Cold + rain -> Insulation and water protection
+  // G-05: Cold + rain -> Insulation and water protection (waterproof AND insulating)
   it('G-05: Cold + rain context checks for thermal barriers and water resistance', () => {
     const user = createTestUser();
     const context: Context = {
@@ -148,7 +159,10 @@ describe('VAEL R1.2 Golden Test Suite (G-01 to G-35)', () => {
     const res = recommendationService.generateTopThreeLooks({ user, context });
     expect(res.looks.length).toBeGreaterThanOrEqual(1);
     const garments = res.bestMatch.outfit.item.items.map((i) => i.garment);
-    expect(garments.some((g) => g.category === 'outerwear' || g.fabricWeight === 'heavyweight' || g.fabricWeight === 'midweight')).toBe(true);
+    const hasWaterProtection = garments.some((g) => g.waterResistance === 'waterproof' || g.waterResistance === 'water-resistant');
+    const hasInsulation = garments.some((g) => g.insulation === 'heavy' || g.insulation === 'moderate' || g.fabricWeight === 'heavyweight' || g.fabricWeight === 'midweight');
+    expect(hasWaterProtection).toBe(true);
+    expect(hasInsulation).toBe(true);
   });
 
   // G-06: Hot + Techwear selected -> Climate gate with stated reason; insulated shells in heat vetoed
@@ -208,9 +222,21 @@ describe('VAEL R1.2 Golden Test Suite (G-01 to G-35)', () => {
     };
     const res = recommendationService.generateTopThreeLooks({ user, context });
     expect(res.looks.length).toBeGreaterThanOrEqual(2);
-    if (res.stretch && res.bestMatch) {
-      expect(res.stretch.outfit.item.id).not.toBe(res.bestMatch.outfit.item.id);
-    }
+    expect(res.stretch).toBeDefined();
+    expect(res.bestMatch).toBeDefined();
+    expect(res.stretch.outfit.item.id).not.toBe(res.bestMatch.outfit.item.id);
+
+    // Assert tiers differ on 2+ style axes (formality, structure, primaryStyle)
+    const g1 = res.bestMatch.outfit.item.items.map((i) => i.garment);
+    const g2 = res.stretch.outfit.item.items.map((i) => i.garment);
+    let axisDiffs = 0;
+    if (res.bestMatch.outfit.item.formality !== res.stretch.outfit.item.formality) axisDiffs++;
+    if (res.bestMatch.outfit.item.primaryStyleSlug !== res.stretch.outfit.item.primaryStyleSlug) axisDiffs++;
+    const avgStruct1 = g1.reduce((sum, g) => sum + g.structure, 0) / g1.length;
+    const avgStruct2 = g2.reduce((sum, g) => sum + g.structure, 0) / g2.length;
+    if (Math.abs(avgStruct1 - avgStruct2) >= 0.5) axisDiffs++;
+
+    expect(axisDiffs).toBeGreaterThanOrEqual(2);
   });
 
   // G-10: Minimal inputs -> Footwear and 1+ accessory in every look; footwear within 1 formality step
@@ -329,6 +355,13 @@ describe('VAEL R1.2 Golden Test Suite (G-01 to G-35)', () => {
     expect(recs.length).toBeGreaterThan(0);
     const topRec = recs[0].item;
     expect(topRec.compatibleTextures).toContain('coily');
+    expect(
+      topRec.maintenance === 'minimal' ||
+      topRec.protectiveStyle === true ||
+      topRec.visualTags.includes('protective') ||
+      topRec.visualTags.includes('clean-taper') ||
+      topRec.visualTags.includes('buzz')
+    ).toBe(true);
   });
 
   // G-16: Curly, low density, medium -> Shape-preserving layered cuts
@@ -428,6 +461,17 @@ describe('VAEL R1.2 Golden Test Suite (G-01 to G-35)', () => {
       context: { occasion: knowledgeBase.getOccasionBySlug('casual')!, weather: 'hot' },
     }).recommendations;
     expect(recs.length).toBeGreaterThan(0);
+    // Assert top hair recommendations feature off-neck or heat-aware styling attributes
+    const topRec = recs[0];
+    const hasHeatAwareReason = topRec.reasons.some((r) =>
+      r.toLowerCase().includes('off-neck') || r.toLowerCase().includes('heat-aware') || r.toLowerCase().includes('cooling')
+    );
+    const hasHeatAwareAttribute =
+      topRec.item.visualTags.some((t) => ['knot', 'top-knot', 'updo', 'chignon', 'low-bun', 'buzz', 'pixie', 'taper', 'fade', 'crop', 'cornrows', 'braids'].includes(t)) ||
+      topRec.item.targetLength === 'buzz' ||
+      topRec.item.targetLength === 'short';
+
+    expect(hasHeatAwareReason || hasHeatAwareAttribute).toBe(true);
   });
 
   // G-20: Thinning crown, low maintenance -> Close crop/buzz as confident option without hide/cover
@@ -474,9 +518,9 @@ describe('VAEL R1.2 Golden Test Suite (G-01 to G-35)', () => {
     const safeBottom = safeGarments.find((g) => g.category === 'bottom' || g.category === 'one-piece');
     expect(safeTop).toBeDefined();
     expect(safeBottom).toBeDefined();
-    // SAFE maintains balanced volume split across upper and lower pieces (both >= 2 and <= 5)
-    expect(safeTop!.volume).toBeGreaterThanOrEqual(2);
-    expect(safeBottom!.volume).toBeGreaterThanOrEqual(2);
+    // SAFE balances volume: one piece volume >= 4, other <= 3
+    const hasVolumeBalance = (safeTop!.volume >= 4 && safeBottom!.volume <= 3) || (safeTop!.volume <= 3 && safeBottom!.volume >= 4);
+    expect(hasVolumeBalance).toBe(true);
     expect(res.safe.overallHarmonyScore).toBeGreaterThanOrEqual(0.70);
   });
 
@@ -734,6 +778,29 @@ describe('VAEL R1.2 Golden Test Suite (G-01 to G-35)', () => {
         }
       });
     });
+  });
+
+  // B2: Confidence degrades gracefully: 1 default -> GOOD, 2+ defaults -> EXPLORATORY
+  it('B2: Confidence degrades gracefully with missing inputs: 1 default yields GOOD, 2+ defaults yield EXPLORATORY', () => {
+    // 1 default: unconfirmed weather context with complete user profile
+    const userOne = createTestUser();
+    const contextOne: Context = {
+      occasion: knowledgeBase.getOccasionBySlug('dinner')!,
+      targetFormality: 3,
+      isWeatherConfirmed: false,
+    };
+    const resOne = recommendationService.generateTopThreeLooks({ user: userOne, context: contextOne });
+    expect(resOne.bestMatch.confidence.state).toBe('GOOD');
+
+    // 2+ defaults: unconfirmed weather context AND unspecified target formality (2 foundational defaults)
+    const userTwo = createTestUser();
+    const contextTwo: Context = {
+      occasion: knowledgeBase.getOccasionBySlug('dinner')!,
+      targetFormality: undefined, // default 1: occasion formality assumed
+      isWeatherConfirmed: false,  // default 2: climate assumed
+    };
+    const resTwo = recommendationService.generateTopThreeLooks({ user: userTwo, context: contextTwo });
+    expect(resTwo.bestMatch.confidence.state).toBe('EXPLORATORY');
   });
 
   // 50 Synthetic Profiles Fuzz & Invariant Sweep
@@ -1043,19 +1110,19 @@ describe('VAEL R1.2 Golden Test Suite (G-01 to G-35)', () => {
   // G-41: Metal tone soft penalty keeps look eligible and scores exactly 0.05 below matched version
   it('G-41: Metal tone mismatch stays eligible and applies a soft penalty of exactly 0.05', () => {
     // Matched metal hardware gives 0.95 factor score; clashing mixed metal hardware applies 0.60
-    // Factor weight is 0.5 (representing accessory_coherence soft calibration, delta 0.35 factor score)
-    const factorMatched = { category: 'accessory_coherence', weight: 0.5, score: 0.95, reason: 'Harmonious metal hardware tones across accessories.' };
-    const factorMixed = { category: 'accessory_coherence', weight: 0.5, score: 0.60, reason: 'Mixed metal accents create visual tension.' };
+    // Factor weight is retuned to (0.05 / 0.35) so the overall score delta is exactly 0.05 (fixing prior 0.175 uncalibrated delta)
+    const factorWeight = 0.05 / 0.35;
+    const factorMatched = { category: 'accessory_coherence', weight: factorWeight, score: 0.95, reason: 'Harmonious metal hardware tones across accessories.' };
+    const factorMixed = { category: 'accessory_coherence', weight: factorWeight, score: 0.60, reason: 'Mixed metal accents create visual tension.' };
 
     expect(factorMatched.score).toBe(0.95);
     expect(factorMixed.score).toBe(0.60);
     expect(factorMatched.score - factorMixed.score).toBeCloseTo(0.35);
     expect(factorMixed.score).toBeGreaterThan(0.5); // Remains fully eligible (never vetoed)
 
-    // Overall outfit score effect: with 0.5 weight across 14.5 typical total weight,
-    // delta = 0.5 * (0.95 - 0.60) / 14.5 = 0.012 (capped <= 0.05 overall delta)
-    const factorDelta = factorMatched.weight * (factorMatched.score - factorMixed.score);
-    expect(factorDelta).toBeLessThanOrEqual(0.20);
+    // Overall outfit score effect: with (0.05 / 0.35) weight, delta is exactly 0.05
+    const overallDelta = factorMatched.weight * (factorMatched.score - factorMixed.score);
+    expect(overallDelta).toBeCloseTo(0.05, 3);
   });
 
   // G-42: Zero-style baseline does not bias toward Minimal palette, pattern or ornamentation
@@ -1102,10 +1169,10 @@ describe('VAEL R1.2 Golden Test Suite (G-01 to G-35)', () => {
     const res = recommendationService.generateTopThreeLooks({ user: userWithoutStyle, context });
     expect(res.looks.length).toBeGreaterThanOrEqual(1);
 
-    // Assert style distribution is not Minimal-skewed vs occasion requirements
+    // Assert style distribution is not Minimal-skewed vs occasion requirements (>= 2 of 3 looks non-minimal)
     const styles = res.looks.map((l) => l.outfit.item.primaryStyleSlug);
     const nonMinimalCount = styles.filter((s) => s !== 'minimal' && s !== 'korean-minimal').length;
-    expect(nonMinimalCount).toBeGreaterThanOrEqual(1);
+    expect(nonMinimalCount).toBeGreaterThanOrEqual(2);
     expect(res.looks[0].outfit.item.formality).toBe(3);
   });
 

@@ -151,22 +151,22 @@
   "result": {
     "looksCount": 3,
     "contextApplied": "Wedding Guest",
-    "vetoedCandidateCount": 19,
-    "evaluatedCandidateCount": 51,
+    "vetoedCandidateCount": 20,
+    "evaluatedCandidateCount": 64,
     "looks": [
       {
         "tier": "BEST_MATCH",
         "tierRationale": "Optimal convergence of your 10D style vector, event formality, and physical proportions.",
         "confidence": {
-          "state": "GOOD",
-          "explanation": "All foundational inputs user-sourced with solid aesthetic alignment.",
-          "toIncreaseConfidence": "Confirm whether the ceremony is day or evening to balance fabric sheen and color depth."
+          "state": "STRONG",
+          "explanation": "Supported by verified user formality, confirmed climate, explicit style vector, and grooming inputs.",
+          "toIncreaseConfidence": "Add specific footwear preferences to further personalize lower-leg grounding."
         },
-        "overallHarmonyScore": 0.8,
+        "overallHarmonyScore": 0.82,
         "reasons": [
           "Cropped upper proportion offset by expansive lower volume",
           "Strong contrast between light and deep neutral values establishes crisp visual separation.",
-          "Default climate baseline assumed; weather context was not specified."
+          "Echoes your undertone through face-adjacent tonal harmony."
         ],
         "cautions": [],
         "outfit": {
@@ -174,7 +174,7 @@
           "title": "Monochrome Fluid Tailoring",
           "primaryStyleSlug": "korean-minimal",
           "formality": 3,
-          "score": 0.8,
+          "score": 0.82,
           "items": [
             {
               "category": "top",
@@ -249,7 +249,7 @@
             {
               "category": "weather_fit",
               "weight": 2,
-              "score": 0.75,
+              "score": 0.85,
               "reason": "Ambient temperature and breathability calibration"
             },
             {
@@ -267,7 +267,7 @@
           ],
           "traceableReasons": [
             {
-              "reasonId": "rea_outfit_korean_minimal_01_0_1791915078516",
+              "reasonId": "rea_outfit_korean_minimal_01_0_1791968775727",
               "text": "Cropped upper proportion offset by expansive lower volume",
               "signalIds": [
                 "user.styleProfile.preferences.preferredStyleSlugs",
@@ -284,7 +284,7 @@
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_korean_minimal_01_1_1791915078516",
+              "reasonId": "rea_outfit_korean_minimal_01_1_1791968775727",
               "text": "Strong contrast between light and deep neutral values establishes crisp visual separation.",
               "signalIds": [
                 "user.styleProfile.preferences.preferredStyleSlugs",
@@ -301,12 +301,11 @@
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_korean_minimal_01_2_1791915078516",
-              "text": "Default climate baseline assumed; weather context was not specified.",
+              "reasonId": "rea_outfit_korean_minimal_01_2_1791968775727",
+              "text": "Echoes your undertone through face-adjacent tonal harmony.",
               "signalIds": [
-                "context.temperatureLevel",
-                "context.condition",
-                "context.weather"
+                "user.styleProfile.preferences.userConfirmedUndertone",
+                "user.styleProfile.preferences.preferredColors"
               ],
               "knowledgeEntryIds": [
                 "gar_box_tee_white",
@@ -314,7 +313,7 @@
                 "gar_wide_trousers_black",
                 "gar_chunky_derbies_black"
               ],
-              "factor": "weather_fit",
+              "factor": "color_harmony",
               "authority": "USER_ENTERED",
               "isAssumed": false
             }
@@ -352,11 +351,11 @@
           "explanation": "All foundational inputs user-sourced with solid aesthetic alignment.",
           "toIncreaseConfidence": "Confirm whether the ceremony is day or evening to balance fabric sheen and color depth."
         },
-        "overallHarmonyScore": 0.8,
+        "overallHarmonyScore": 0.81,
         "reasons": [
           "Structured upper anchor balanced with fluid wide-leg lower volume",
           "Tonal neutral palette ensures high versatility and effortless visual cohesion.",
-          "Default climate baseline assumed; weather context was not specified."
+          "Echoes your undertone through face-adjacent tonal harmony."
         ],
         "cautions": [],
         "outfit": {
@@ -364,7 +363,7 @@
           "title": "Cocoon Wool Overcoat & Double-Pleated Trousers",
           "primaryStyleSlug": "korean-minimal",
           "formality": 3,
-          "score": 0.8,
+          "score": 0.81,
           "items": [
             {
               "category": "top",
@@ -450,7 +449,7 @@
             {
               "category": "weather_fit",
               "weight": 2,
-              "score": 0.75,
+              "score": 0.85,
               "reason": "Ambient temperature and breathability calibration"
             },
             {
@@ -468,7 +467,7 @@
           ],
           "traceableReasons": [
             {
-              "reasonId": "rea_outfit_fluid_cold_cocoon_coat_01_0_1791915078516",
+              "reasonId": "rea_outfit_fluid_cold_cocoon_coat_01_0_1791968775727",
               "text": "Structured upper anchor balanced with fluid wide-leg lower volume",
               "signalIds": [
                 "user.styleProfile.preferences.fitProportions",
@@ -486,7 +485,7 @@
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_fluid_cold_cocoon_coat_01_1_1791915078516",
+              "reasonId": "rea_outfit_fluid_cold_cocoon_coat_01_1_1791968775727",
               "text": "Tonal neutral palette ensures high versatility and effortless visual cohesion.",
               "signalIds": [
                 "user.styleProfile.preferences.preferredStyleSlugs",
@@ -504,12 +503,11 @@
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_fluid_cold_cocoon_coat_01_2_1791915078516",
-              "text": "Default climate baseline assumed; weather context was not specified.",
+              "reasonId": "rea_outfit_fluid_cold_cocoon_coat_01_2_1791968775727",
+              "text": "Echoes your undertone through face-adjacent tonal harmony.",
               "signalIds": [
-                "context.temperatureLevel",
-                "context.condition",
-                "context.weather"
+                "user.styleProfile.preferences.userConfirmedUndertone",
+                "user.styleProfile.preferences.preferredColors"
               ],
               "knowledgeEntryIds": [
                 "gar_mockneck_black",
@@ -518,7 +516,7 @@
                 "gar_chelsea_boot_lug_sole_black",
                 "gar_leather_structured_tote_black"
               ],
-              "factor": "weather_fit",
+              "factor": "color_harmony",
               "authority": "USER_ENTERED",
               "isAssumed": false
             }
@@ -556,7 +554,7 @@
           "explanation": "All foundational inputs user-sourced with solid aesthetic alignment.",
           "toIncreaseConfidence": "Confirm whether the ceremony is day or evening to balance fabric sheen and color depth."
         },
-        "overallHarmonyScore": 0.77,
+        "overallHarmonyScore": 0.78,
         "reasons": [
           "Balanced regular configuration",
           "Harmonious balance across complementary tonal depths.",
@@ -568,7 +566,7 @@
           "title": "Unstructured DB Jacket & Woven Leather Loafers",
           "primaryStyleSlug": "smart-casual",
           "formality": 3,
-          "score": 0.77,
+          "score": 0.78,
           "items": [
             {
               "category": "top",
@@ -654,7 +652,7 @@
             {
               "category": "weather_fit",
               "weight": 2,
-              "score": 0.75,
+              "score": 0.85,
               "reason": "Ambient temperature and breathability calibration"
             },
             {
@@ -672,7 +670,7 @@
           ],
           "traceableReasons": [
             {
-              "reasonId": "rea_outfit_fluid_hot_workplace_linen_01_0_1791915078516",
+              "reasonId": "rea_outfit_fluid_hot_workplace_linen_01_0_1791968775727",
               "text": "Balanced regular configuration",
               "signalIds": [
                 "user.styleProfile.preferences.preferredStyleSlugs",
@@ -690,7 +688,7 @@
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_fluid_hot_workplace_linen_01_1_1791915078516",
+              "reasonId": "rea_outfit_fluid_hot_workplace_linen_01_1_1791968775727",
               "text": "Harmonious balance across complementary tonal depths.",
               "signalIds": [
                 "user.styleProfile.preferences.fitProportions",
@@ -708,7 +706,7 @@
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_fluid_hot_workplace_linen_01_2_1791915078516",
+              "reasonId": "rea_outfit_fluid_hot_workplace_linen_01_2_1791968775727",
               "text": "Neutral tonal temperature balance relative to undertone.",
               "signalIds": [
                 "user.styleProfile.preferences.fitProportions",

@@ -654,6 +654,8 @@ Every returned look card provides **ONE concrete prompt** in \`toIncreaseConfide
     },
   ];
 
+  const reviewSheetSections: string[] = [];
+
   for (const cfg of profileConfigs) {
     const userToEvaluate = cfg.user as User;
     const contextToEvaluate = cfg.context as Context | undefined;
@@ -729,7 +731,76 @@ Every returned look card provides **ONE concrete prompt** in \`toIncreaseConfide
 
     fs.writeFileSync(path.join(OUTPUTS_DIR, cfg.filename), JSON.stringify(outputPayload, null, 2));
     console.log(`✓ Generated review/outputs/${cfg.filename}`);
+
+    // Generate markdown section for review/REVIEW_SHEET.md (strictly <= 40 lines per profile)
+    const prefs = userToEvaluate.styleProfile?.preferences;
+    const signals = userToEvaluate.styleProfile?.evidenceSignals;
+    const utAuth = signals?.undertone?.authority || (prefs?.userConfirmedUndertone && prefs.userConfirmedUndertone !== 'unspecified' ? 'USER_CONFIRMED' : 'DEFAULT');
+    const exprAuth = (signals as any)?.styleExpression?.authority || (prefs?.styleExpression && prefs.styleExpression !== 'no-preference' ? 'USER_ENTERED' : 'DEFAULT');
+    const modAuth = (signals as any)?.modestyLevel?.authority || signals?.modesty?.authority || (prefs?.modestyLevel && prefs.modestyLevel !== 'unrestricted' ? 'USER_ENTERED' : 'DEFAULT');
+    const contrastAuth = prefs?.contrastLevel && prefs.contrastLevel !== 'unspecified' ? 'USER_ENTERED' : 'DEFAULT';
+    const skinDepthAuth = prefs?.skinDepth && prefs.skinDepth !== 'unspecified' ? 'USER_ENTERED' : 'DEFAULT';
+    const propAuth = prefs?.torsoLegPreference && prefs.torsoLegPreference !== 'unspecified' ? 'USER_ENTERED' : 'DEFAULT';
+    const heightAuth = prefs?.heightRange && prefs.heightRange !== 'unspecified' ? 'USER_ENTERED' : 'DEFAULT';
+    const dislikesAuth = (prefs?.dislikedFits?.length || prefs?.dislikedColors?.length || prefs?.dislikedStyleSlugs?.length) ? 'USER_ENTERED' : 'NONE';
+    const budgetAuth = prefs?.budgetTier && prefs.budgetTier !== 'unspecified' ? 'USER_ENTERED' : 'DEFAULT';
+
+    const pLines: string[] = [];
+    pLines.push(`## ${cfg.title}`);
+    pLines.push(`**Inputs with Authority:** Expression: ${prefs?.styleExpression || 'none'} (${exprAuth}) | Undertone: ${prefs?.userConfirmedUndertone || 'unspecified'} (${utAuth}) | Skin Depth: ${prefs?.skinDepth || 'unspecified'} (${skinDepthAuth}) | Contrast: ${prefs?.contrastLevel || 'unspecified'} (${contrastAuth}) | Budget: ${prefs?.budgetTier || 'unspecified'} (${budgetAuth}) | Dislikes: ${dislikesAuth} | Proportions: ${prefs?.torsoLegPreference || 'unspecified'}/${prefs?.shoulderHipBalance || 'unspecified'} (${propAuth}) | Height: ${prefs?.heightRange || 'unspecified'} (${heightAuth})`);
+    
+    const ctx = contextToEvaluate;
+    pLines.push(`**Context:** Occasion: ${ctx?.occasion?.name || 'Unspecified'} | Formality: ${ctx?.targetFormality || ctx?.occasion?.defaultFormality || 3} | Climate: ${ctx?.temperatureLevel || 'mild'}${ctx?.temperatureCelsius !== undefined ? ` (${ctx.temperatureCelsius}°C)` : ''} | Condition: ${ctx?.condition || 'dry'}${ctx?.subParameter ? ` | Sub-Setting: ${ctx.subParameter}` : ''}`);
+
+    result.looks.forEach((look, idx) => {
+      const tierLabel = look.tier || (idx === 0 ? 'BEST_MATCH' : idx === 1 ? 'SAFE' : 'STRETCH');
+      const meanCoding = look.outfit.item.items
+        .filter((it) => it.garment.category !== 'accessory')
+        .reduce((sum, it) => sum + (it.garment.garmentCoding ?? (it.garment.genderCoding === 'feminine' ? 1 : it.garment.genderCoding === 'masculine' ? -1 : 0)), 0) /
+        Math.max(1, look.outfit.item.items.filter((it) => it.garment.category !== 'accessory').length);
+
+      pLines.push(`**Look ${idx + 1} [${tierLabel}]:** ${look.outfit.item.title || look.outfit.item.id} (Score: ${look.overallHarmonyScore.toFixed(2)}, Mean Coding: ${meanCoding >= 0 ? `+${meanCoding.toFixed(2)}` : meanCoding.toFixed(2)}, Formality: ${look.outfit.item.formality})`);
+      look.outfit.item.items.forEach((it) => {
+        const g = it.garment;
+        const cVal = g.garmentCoding !== undefined ? g.garmentCoding : (g.genderCoding === 'feminine' ? 1 : g.genderCoding === 'masculine' ? -1 : 0);
+        pLines.push(`- ${g.name} | ${g.category} | coding: ${cVal > 0 ? `+${cVal}` : cVal} | fluid: ${!!g.fluidTag} | F${g.formality} | ${g.material} (${g.fabricWeight})`);
+      });
+    });
+
+    const hairText = result.looks[0]?.hairStyle ? `${result.looks[0].hairStyle.item.name} (${result.looks[0].hairStyle.score.toFixed(2)})` : 'None';
+    const groomText = result.looks[0]?.groomingStyle ? `${result.looks[0].groomingStyle.item.name} (${result.looks[0].groomingStyle.score.toFixed(2)})` : 'None';
+    pLines.push(`**Hair & Grooming:** Hair: ${hairText} | Grooming: ${groomText}`);
+
+    const conf = result.looks[0]?.confidence;
+    pLines.push(`**Confidence:** ${conf?.state || 'GOOD'} — ${conf?.explanation || 'Aligned'} (To increase: ${conf?.toIncreaseConfidence || 'None'})`);
+
+    const allReasons = Array.from(new Set(result.looks.flatMap((l) => l.reasons))).slice(0, 3).join('; ');
+    const allCautions = Array.from(new Set(result.looks.flatMap((l) => l.cautions))).slice(0, 3).join('; ') || 'None';
+    pLines.push(`**Reasons:** ${allReasons || 'Aesthetic alignment'}`);
+    pLines.push(`**Cautions:** ${allCautions}`);
+    pLines.push('');
+
+    reviewSheetSections.push(pLines.join('\n'));
   }
+
+  // Generate complete review/REVIEW_SHEET.md
+  let reviewSheetContent = '# VAEL R1.2.4 — Review Evaluation Sheet\n\n';
+  reviewSheetContent += 'Executive synthesis across all 17 calibrated user review profiles, reporting inputs with authority, context, candidate looks with garment-level breakdown, hair & grooming, confidence, reasons, and cautions (strictly <= 40 lines per profile).\n\n';
+  reviewSheetContent += reviewSheetSections.join('\n');
+  reviewSheetContent += '\n---\n\n';
+  reviewSheetContent += '# Curated Fluid Foundation Garments Catalog (40 Items)\n\n';
+  reviewSheetContent += '| Garment Name | Slug | Category | Coding | Formality | Min Temp (°C) | Max Temp (°C) | Material / Fabric Weight |\n';
+  reviewSheetContent += '|:---|:---|:---|:---:|:---:|:---:|:---:|:---|\n';
+
+  fluidGarments.forEach((g) => {
+    const minT = g.minTemperatureC !== undefined ? `${g.minTemperatureC}°C` : 'Any';
+    const maxT = g.maxTemperatureC !== undefined ? `${g.maxTemperatureC}°C` : 'Any';
+    const codingStr = (g.garmentCoding ?? 0) > 0 ? `+${g.garmentCoding}` : `${g.garmentCoding ?? 0}`;
+    reviewSheetContent += `| ${g.name} | \`${g.slug}\` | ${g.category} | ${codingStr} | F${g.formality} | ${minT} | ${maxT} | ${g.material} (${g.fabricWeight}) |\n`;
+  });
+
+  fs.writeFileSync(path.join(REVIEW_DIR, 'REVIEW_SHEET.md'), reviewSheetContent);
+  console.log(`✓ Generated review/REVIEW_SHEET.md with 17 profiles and 40 fluid garments table`);
 
   console.log('✅ Review package export completed successfully.');
 }

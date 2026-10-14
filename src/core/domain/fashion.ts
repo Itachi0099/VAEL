@@ -60,6 +60,8 @@ export interface Garment {
   garmentCoding?: number; // Numeric scalar -1.0 (masculine-coded) .. 0.0 (neutral/unclassified) .. +1.0 (feminine-coded)
   fluidTag?: boolean; // True if intentionally fluid/androgynous cross-style garment
   vintageEra?: VintageEra; // Curated vintage era ('50s' | '70s' | '90s' | 'unspecified')
+  suitTag?: boolean; // True if designated tailored suit piece
+  coOrdTag?: boolean; // True if designated coordinated matching set piece
 
   seasons: Season[];
   compatibleWeather: WeatherCondition[];
@@ -108,4 +110,6 @@ export interface Outfit {
   modestyRating?: ModestyLevel;
   minTemperatureC?: number;
   maxTemperatureC?: number;
+  suitTag?: boolean; // Designated tailored suit
+  coOrdTag?: boolean; // Designated matching co-ord set
 }

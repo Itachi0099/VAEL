@@ -257,6 +257,30 @@ export class VaelStylingEngine {
       }
     }
 
+    // 8. Coordinated Top & Bottom Matching Rule (No accidental same-fabric/same-pattern without suit or co-ord tag)
+    const isDesignatedCoordOrSuit = outfit.suitTag || outfit.coOrdTag || garments.some((g) => g.suitTag || g.coOrdTag);
+    if (!isDesignatedCoordOrSuit) {
+      const topGarment = garments.find((g) => g.category === 'top');
+      const bottomGarment = garments.find((g) => g.category === 'bottom');
+      if (topGarment && bottomGarment) {
+        const topMat = topGarment.material.toLowerCase();
+        const botMat = bottomGarment.material.toLowerCase();
+        const topPat = topGarment.pattern;
+        const botPat = bottomGarment.pattern;
+
+        const distinctiveFabrics = ['seersucker', 'corduroy', 'velvet', 'tweed', 'flannel', 'terry', 'organza', 'tulle'];
+        const matchesDistinctiveFabric = distinctiveFabrics.some((f) => topMat.includes(f) && botMat.includes(f));
+        const matchesPattern = topPat !== 'solid' && topPat === botPat;
+
+        if (matchesDistinctiveFabric || matchesPattern) {
+          return {
+            vetoed: true,
+            reason: `Matching same-fabric (${topGarment.material}) or same-pattern (${topPat}) separates require designated suit or co-ord status.`,
+          };
+        }
+      }
+    }
+
     return { vetoed: false };
   }
 
@@ -398,7 +422,7 @@ export class VaelStylingEngine {
       });
     }
 
-    // 8. Metal Tone Accessory Coherence (Weight: 0.5)
+    // 8. Metal Tone Accessory Coherence (Weight: tuned to 0.05 / 0.35 for exact 0.05 overall score delta)
     const metalTones = garments
       .map((g) => g.metalTone)
       .filter((m): m is 'silver' | 'gold' | 'brass' | 'blackened' | 'mixed' => !!m);
@@ -407,7 +431,7 @@ export class VaelStylingEngine {
       const hasClash = uniqueMetals.includes('silver') && (uniqueMetals.includes('gold') || uniqueMetals.includes('brass'));
       factors.push({
         category: 'accessory_coherence',
-        weight: 0.5,
+        weight: 0.05 / 0.35,
         score: hasClash ? 0.6 : 0.95,
         reason: hasClash ? 'Mixed metal accents create visual tension.' : 'Harmonious metal hardware tones across accessories.',
       });
@@ -738,7 +762,10 @@ export class VaelStylingEngine {
 
     let safeCandidate: CandidateEvaluation | undefined;
     if (isExprSpecified) {
-      safeCandidate = safeCandidates.find((c) => hasMatchingItem(c)) || safeCandidates[0];
+      safeCandidate =
+        safeCandidates.find((c) => hasMatchingItem(c)) ||
+        ranked.filter((c) => c.outfit.id !== bestMatchCandidate.outfit.id).find((c) => hasMatchingItem(c)) ||
+        safeCandidates[0];
     } else {
       safeCandidate = safeCandidates[0];
     }
@@ -773,7 +800,10 @@ export class VaelStylingEngine {
 
     let stretchCandidate: CandidateEvaluation | undefined;
     if (isExprSpecified) {
-      stretchCandidate = stretchCandidates.find((c) => hasMatchingItem(c)) || stretchCandidates[0];
+      stretchCandidate =
+        stretchCandidates.find((c) => hasMatchingItem(c)) ||
+        ranked.filter((c) => c.outfit.id !== bestMatchCandidate.outfit.id && (!safeCandidate || c.outfit.id !== safeCandidate.outfit.id)).find((c) => hasMatchingItem(c)) ||
+        stretchCandidates[0];
     } else {
       stretchCandidate = stretchCandidates[0];
     }
@@ -1496,10 +1526,11 @@ export class VaelStylingEngine {
         ],
         primaryStyleSlug: "smart-casual",
         formality: 2,
-        compatibleOccasions: ["casual", "party", "dinner", "social", "travel", "wedding-guest", "custom"],
+        compatibleOccasions: ["casual", "party", "dinner", "social", "travel", "university-college", "wedding-guest", "custom"],
         seasonality: ["summer", "spring"],
         silhouetteBalance: "Airy fluid summer texture with high natural heat dissipation",
         colorStory: "Navy and sky blue seersucker with neutral toquilla straw accent",
+        coOrdTag: true,
       });
     }
 
@@ -1929,7 +1960,7 @@ export class VaelStylingEngine {
         ],
         primaryStyleSlug: "minimal",
         formality: 2,
-        compatibleOccasions: ["casual", "travel", "party", "social", "custom"],
+        compatibleOccasions: ["casual", "travel", "party", "social", "university-college", "custom"],
         seasonality: ["summer", "spring"],
         silhouetteBalance: "Airy relaxed drape with authentic artisanal pleating cadence",
         colorStory: "Pure crisp white linen and soft natural ecru",
@@ -2162,7 +2193,7 @@ export class VaelStylingEngine {
 
     // Outfit 47: Feminine Cowl Camisole & Fluid Wide Trousers (Dinner/Party/Date/Night Out Formality 3-4)
     const top47 = knowledgeBase.getGarmentBySlug("draped-cowl-satin-camisole-champagne") || knowledgeBase.getAllGarments()[0];
-    const bot47 = knowledgeBase.getGarmentBySlug("feminine-tailored-wool-trousers-black") || knowledgeBase.getAllGarments()[1];
+    const bot47 = knowledgeBase.getGarmentBySlug("high-rise-wool-trousers-black") || knowledgeBase.getAllGarments()[1];
     const shoes47 = knowledgeBase.getGarmentBySlug("pointed-kitten-heels-black") || knowledgeBase.getAllGarments()[2];
     if (top47 && bot47 && shoes47) {
       outfits.push({
@@ -2185,7 +2216,7 @@ export class VaelStylingEngine {
 
     // Outfit 48: Feminine Organza Overlay Blouse & High-Rise Trousers (Ceremony/Wedding/Gala Formality 5)
     const top48 = knowledgeBase.getGarmentBySlug("organza-overlay-formal-blouse-noir") || knowledgeBase.getAllGarments()[0];
-    const bot48 = knowledgeBase.getGarmentBySlug("feminine-tailored-wool-trousers-black") || knowledgeBase.getAllGarments()[1];
+    const bot48 = knowledgeBase.getGarmentBySlug("high-rise-wool-trousers-black") || knowledgeBase.getAllGarments()[1];
     const shoes48 = knowledgeBase.getGarmentBySlug("pointed-kitten-heels-black") || knowledgeBase.getAllGarments()[2];
     if (top48 && bot48 && shoes48) {
       outfits.push({
@@ -2231,9 +2262,9 @@ export class VaelStylingEngine {
 
     // Outfit 50: Feminine Cashmere Mockneck & Knife-Pleated Wool Skirt (Cold Weather Formality 3-4)
     const top50 = knowledgeBase.getGarmentBySlug("cashmere-silk-mockneck-top-camel") || knowledgeBase.getAllGarments()[0];
-    const bot50 = knowledgeBase.getGarmentBySlug("pleated-midi-skirt-wool") || knowledgeBase.getAllGarments()[1];
+    const bot50 = knowledgeBase.getGarmentBySlug("knife-pleated-midi-skirt-navy") || knowledgeBase.getAllGarments()[1];
     const outer50 = knowledgeBase.getGarmentBySlug("belted-wool-wrap-coat-camel");
-    const shoes50 = knowledgeBase.getGarmentBySlug("block-heel-ankle-boots-black") || knowledgeBase.getAllGarments()[2];
+    const shoes50 = knowledgeBase.getGarmentBySlug("block-heel-calfskin-boots-black") || knowledgeBase.getAllGarments()[2];
     if (top50 && bot50 && shoes50) {
       outfits.push({
         id: "outfit_feminine_cold_cashmere_pleats_separates_01",
@@ -2256,7 +2287,7 @@ export class VaelStylingEngine {
 
     // Outfit 51: Feminine Peplum Blouse & Tailored Wool Trousers (Workplace/Interview Formality 3-4)
     const top51 = knowledgeBase.getGarmentBySlug("poplin-peplum-blouse-white") || knowledgeBase.getAllGarments()[0];
-    const bot51 = knowledgeBase.getGarmentBySlug("feminine-tailored-wool-trousers-black") || knowledgeBase.getAllGarments()[1];
+    const bot51 = knowledgeBase.getGarmentBySlug("high-rise-wool-trousers-black") || knowledgeBase.getAllGarments()[1];
     const shoes51 = knowledgeBase.getGarmentBySlug("pointed-kitten-heels-black") || knowledgeBase.getAllGarments()[2];
     if (top51 && bot51 && shoes51) {
       outfits.push({
@@ -2279,7 +2310,7 @@ export class VaelStylingEngine {
 
     // Outfit 52: Feminine Ballet Wrap Cardigan & Fluid Wide-Leg Trousers (Mild/Cool Casual & Workplace Formality 2-3)
     const top52 = knowledgeBase.getGarmentBySlug("merino-ballet-wrap-top-oatmeal") || knowledgeBase.getAllGarments()[0];
-    const bot52 = knowledgeBase.getGarmentBySlug("high-rise-pleated-trousers-camel") || knowledgeBase.getAllGarments()[1];
+    const bot52 = knowledgeBase.getGarmentBySlug("high-rise-fluid-trousers-camel") || knowledgeBase.getAllGarments()[1];
     const shoes52 = knowledgeBase.getGarmentBySlug("unstructured-leather-ballet-flats-black") || knowledgeBase.getAllGarments()[2];
     if (top52 && bot52 && shoes52) {
       outfits.push({
@@ -2297,6 +2328,309 @@ export class VaelStylingEngine {
         seasonality: ["fall", "spring", "winter"],
         silhouetteBalance: "Fitted wrap bodice defining upper torso over expansive fluid trouser leg",
         colorStory: "Soft oatmeal melange merino knit and rich camel pleated wool",
+      });
+    }
+
+    // Outfit 53: Masculine Tropical Hopsack Blazer & Fresco Trousers (Hot Weather Interview/Workplace Formality 4)
+    const top53 = knowledgeBase.getGarmentBySlug("poplin-point-shirt-sky-blue") || knowledgeBase.getAllGarments()[0];
+    const outer53 = knowledgeBase.getGarmentBySlug("unlined-tropical-hopsack-blazer-navy");
+    const bot53 = knowledgeBase.getGarmentBySlug("tropical-wool-trousers-charcoal") || knowledgeBase.getAllGarments()[1];
+    const shoes53 = knowledgeBase.getGarmentBySlug("cap-toe-oxfords-black") || knowledgeBase.getAllGarments()[2];
+    if (top53 && bot53 && shoes53) {
+      outfits.push({
+        id: "outfit_masculine_tropical_wool_hopsack_interview_01",
+        title: "Tropical Hopsack Blazer & Fresco Wool Trousers",
+        description: "Unlined open-weave tropical hopsack blazer over sky blue 140s cotton poplin shirt, high-twist fresco wool trousers, and full-grain cap-toe oxfords.",
+        items: [
+          { garment: top53, layerPosition: 0 },
+          ...(outer53 ? [{ garment: outer53, layerPosition: 1 }] : []),
+          { garment: bot53, layerPosition: 0 },
+          { garment: shoes53, layerPosition: 0 },
+        ],
+        primaryStyleSlug: "smart-casual",
+        formality: 4,
+        compatibleOccasions: ["job-interview", "office", "wedding-guest", "dinner", "social", "custom"],
+        seasonality: ["summer", "spring", "all-season"],
+        silhouetteBalance: "Clean linear tailored shoulder descending into crisp mid-rise crease drape",
+        colorStory: "Sky blue poplin, deep navy hopsack, and charcoal fresco wool",
+      });
+    }
+
+    // Outfit 54: Masculine Linen-Silk Blazer & Cotton-Linen Trousers (Hot Weather Workplace/Interview Formality 4)
+    const top54 = knowledgeBase.getGarmentBySlug("poplin-point-shirt-sky-blue") || knowledgeBase.getAllGarments()[0];
+    const outer54 = knowledgeBase.getGarmentBySlug("unlined-linen-silk-blazer-tobacco");
+    const bot54 = knowledgeBase.getGarmentBySlug("tailored-cotton-linen-trousers-sand") || knowledgeBase.getAllGarments()[1];
+    const shoes54 = knowledgeBase.getGarmentBySlug("plain-toe-derbies-espresso") || knowledgeBase.getAllGarments()[2];
+    if (top54 && bot54 && shoes54) {
+      outfits.push({
+        id: "outfit_masculine_summer_linen_silk_interview_01",
+        title: "Deconstructed Linen-Silk Blazer & Cotton-Linen Trousers",
+        description: "Unlined tobacco linen-silk blazer paired with 140s poplin shirt, tailored sand cotton-linen trousers, and plain-toe burnished calf derbies.",
+        items: [
+          { garment: top54, layerPosition: 0 },
+          ...(outer54 ? [{ garment: outer54, layerPosition: 1 }] : []),
+          { garment: bot54, layerPosition: 0 },
+          { garment: shoes54, layerPosition: 0 },
+        ],
+        primaryStyleSlug: "old-money",
+        formality: 4,
+        compatibleOccasions: ["job-interview", "office", "dinner", "social", "custom"],
+        seasonality: ["summer", "spring"],
+        silhouetteBalance: "Soft natural shoulder ease balanced by side-adjusted tailored leg line",
+        colorStory: "Tobacco linen-silk, sand flax weave, and burnished espresso calfskin",
+      });
+    }
+
+    // Outfit 55: Masculine Silk-Merino Knit Polo & Fresco Trousers (Workplace/Interview Formality 4)
+    const top55 = knowledgeBase.getGarmentBySlug("silk-merino-knit-polo-navy") || knowledgeBase.getAllGarments()[0];
+    const outer55 = knowledgeBase.getGarmentBySlug("unlined-tropical-hopsack-blazer-navy");
+    const bot55 = knowledgeBase.getGarmentBySlug("tropical-wool-trousers-charcoal") || knowledgeBase.getAllGarments()[1];
+    const shoes55 = knowledgeBase.getGarmentBySlug("split-toe-derbies-black") || knowledgeBase.getAllGarments()[2];
+    if (top55 && bot55 && shoes55) {
+      outfits.push({
+        id: "outfit_masculine_fine_knit_hopsack_separates_01",
+        title: "Fine Silk-Merino Knit Polo & Fresco Wool Trousers",
+        description: "Fine 20-gauge navy silk-merino knit polo paired under unlined hopsack blazer with high-twist fresco trousers and split-toe derbies.",
+        items: [
+          { garment: top55, layerPosition: 0 },
+          ...(outer55 ? [{ garment: outer55, layerPosition: 1 }] : []),
+          { garment: bot55, layerPosition: 0 },
+          { garment: shoes55, layerPosition: 0 },
+        ],
+        primaryStyleSlug: "minimal",
+        formality: 4,
+        compatibleOccasions: ["job-interview", "office", "dinner", "social", "custom"],
+        seasonality: ["summer", "spring", "fall"],
+        silhouetteBalance: "Streamlined fine gauge knit collar grounding unlined architectural jacket",
+        colorStory: "Deep navy and charcoal monochrome with black leather anchor",
+      });
+    }
+
+    // Outfit 56: Masculine Fine Marcella Bib Formal Look (Formality 5 Ceremony/Gala/Wedding)
+    const top56 = knowledgeBase.getGarmentBySlug("pique-marcella-formal-shirt-white") || knowledgeBase.getAllGarments()[0];
+    const bot56 = knowledgeBase.getGarmentBySlug("tropical-wool-trousers-charcoal") || knowledgeBase.getAllGarments()[1];
+    const shoes56 = knowledgeBase.getGarmentBySlug("cap-toe-oxfords-black") || knowledgeBase.getAllGarments()[2];
+    if (top56 && bot56 && shoes56) {
+      outfits.push({
+        id: "outfit_masculine_formal_white_tie_gala_01",
+        title: "Fine Marcella Formal Shirt & Bespoke Tailored Slacks",
+        description: "Structured marcella bib Sea Island cotton dress shirt paired with bespoke virgin wool trousers, French calf cap-toe oxfords, and silk bow tie.",
+        items: [
+          { garment: top56, layerPosition: 0 },
+          { garment: bot56, layerPosition: 0 },
+          { garment: shoes56, layerPosition: 0 },
+        ],
+        primaryStyleSlug: "formal",
+        formality: 5,
+        compatibleOccasions: ["wedding-guest", "dinner", "party", "cultural-traditional", "social", "custom"],
+        seasonality: ["summer", "spring", "fall", "all-season"],
+        silhouetteBalance: "Crisp marcella chest geometry framing sharp vertical trouser press line",
+        colorStory: "Optic pure white marcella and deep charcoal worsted wool",
+      });
+    }
+
+    // Outfit 57: Feminine Hot Lavallière Blouse & Linen Twill Column Maxi Skirt (Hot/Formal/Modest Formality 4)
+    const top57 = knowledgeBase.getGarmentBySlug("silk-georgette-tie-neck-blouse-ivory") || knowledgeBase.getAllGarments()[0];
+    const bot57 = knowledgeBase.getGarmentBySlug("linen-twill-maxi-skirt-natural") || knowledgeBase.getAllGarments()[1];
+    const shoes57 = knowledgeBase.getGarmentBySlug("unstructured-leather-ballet-flats-black") || knowledgeBase.getAllGarments()[2];
+    if (top57 && bot57 && shoes57) {
+      outfits.push({
+        id: "outfit_feminine_hot_linen_twill_separates_01",
+        title: "Silk Lavallière Blouse & Linen Twill Column Maxi Skirt",
+        description: "Silk georgette tie-neck blouse paired with tailored Normandy linen twill column maxi skirt and unstructured leather flats.",
+        items: [
+          { garment: top57, layerPosition: 0 },
+          { garment: bot57, layerPosition: 0 },
+          { garment: shoes57, layerPosition: 0 },
+        ],
+        primaryStyleSlug: "minimal",
+        formality: 4,
+        compatibleOccasions: ["wedding-guest", "dinner", "office", "job-interview", "social", "custom"],
+        seasonality: ["summer", "spring"],
+        silhouetteBalance: "Fluid tie collar framing streamlined high-rise column maxi skirt",
+        colorStory: "Ivory silk georgette paired with natural flax linen twill",
+      });
+    }
+
+    // Outfit 58: Feminine Hot Peplum Blouse & Heavy Silk Crepe Midi Skirt (Hot/Formal/Modest Formality 4)
+    const top58 = knowledgeBase.getGarmentBySlug("poplin-peplum-blouse-white") || knowledgeBase.getAllGarments()[0];
+    const bot58 = knowledgeBase.getGarmentBySlug("heavy-silk-crepe-midi-skirt-navy") || knowledgeBase.getAllGarments()[1];
+    const shoes58 = knowledgeBase.getGarmentBySlug("pointed-kitten-heels-black") || knowledgeBase.getAllGarments()[2];
+    if (top58 && bot58 && shoes58) {
+      outfits.push({
+        id: "outfit_feminine_hot_crepe_midi_separates_01",
+        title: "Poplin Peplum Blouse & Heavy Silk Crepe Fluted Midi Skirt",
+        description: "Sculpted white cotton poplin peplum blouse paired with high-rise navy heavy silk crepe fluted midi skirt and pointed kitten heels.",
+        items: [
+          { garment: top58, layerPosition: 0 },
+          { garment: bot58, layerPosition: 0 },
+          { garment: shoes58, layerPosition: 0 },
+        ],
+        primaryStyleSlug: "smart-casual",
+        formality: 4,
+        compatibleOccasions: ["job-interview", "office", "dinner", "wedding-guest", "social", "custom"],
+        seasonality: ["summer", "spring", "all-season"],
+        silhouetteBalance: "Architectural cinched waist contour over fluid fluted midi hemline",
+        colorStory: "Pure white cotton poplin and deep navy silk crepe de chine",
+      });
+    }
+
+    // Outfit 59: Feminine High-Neck Silk Crepe Column Gown (Hot/Formal/Modest Formality 5)
+    const dress59 = knowledgeBase.getGarmentBySlug("silk-crepe-column-gown-emerald") || knowledgeBase.getAllGarments()[0];
+    const shoes59 = knowledgeBase.getGarmentBySlug("pointed-kitten-heels-black") || knowledgeBase.getAllGarments()[2];
+    if (dress59 && shoes59) {
+      outfits.push({
+        id: "outfit_feminine_hot_formal_column_gown_01",
+        title: "High-Neck Silk Crepe Column Gown",
+        description: "Architectural floor-length emerald silk georgette column gown with high-neckline and pointed kitten heels.",
+        items: [
+          { garment: dress59, layerPosition: 0 },
+          { garment: shoes59, layerPosition: 0 },
+        ],
+        primaryStyleSlug: "formal",
+        formality: 5,
+        compatibleOccasions: ["wedding-guest", "dinner", "party", "cultural-traditional", "social", "custom"],
+        seasonality: ["summer", "spring"],
+        silhouetteBalance: "Monolithic high-neck column drape sweeping to floor length",
+        colorStory: "Deep jewel emerald silk georgette grounded with noir calfskin",
+      });
+    }
+
+    // Outfit 60: Feminine Cold Wool Flannel Maxi Skirt Separates (Cold/Formal/Modest Formality 5)
+    const top60 = knowledgeBase.getGarmentBySlug("cashmere-silk-mockneck-top-camel") || knowledgeBase.getAllGarments()[0];
+    const outer60 = knowledgeBase.getGarmentBySlug("belted-wool-wrap-coat-camel");
+    const bot60 = knowledgeBase.getGarmentBySlug("wool-flannel-maxi-skirt-charcoal") || knowledgeBase.getAllGarments()[1];
+    const shoes60 = knowledgeBase.getGarmentBySlug("block-heel-calfskin-boots-black") || knowledgeBase.getAllGarments()[2];
+    if (top60 && bot60 && shoes60) {
+      outfits.push({
+        id: "outfit_feminine_cold_wool_flannel_separates_01",
+        title: "Cashmere Mockneck & Architectural Wool Flannel Maxi Skirt",
+        description: "Camel cashmere-silk mockneck knit tucked into structured charcoal virgin wool flannel maxi skirt, belted wrap coat, and calfskin boots.",
+        items: [
+          { garment: top60, layerPosition: 0 },
+          ...(outer60 ? [{ garment: outer60, layerPosition: 1 }] : []),
+          { garment: bot60, layerPosition: 0 },
+          { garment: shoes60, layerPosition: 0 },
+        ],
+        primaryStyleSlug: "formal",
+        formality: 5,
+        compatibleOccasions: ["wedding-guest", "dinner", "office", "job-interview", "social", "custom"],
+        seasonality: ["winter", "fall"],
+        silhouetteBalance: "Streamlined fine knit bodice grounded by heavy architectural inverted-pleat maxi flare",
+        colorStory: "Warm camel cashmere and charcoal worsted wool flannel",
+      });
+    }
+
+    // Outfit 61: Feminine Cold Virgin Wool Sheath Dress (Cold/Formal Formality 5)
+    const dress61 = knowledgeBase.getGarmentBySlug("wool-crepe-sheath-dress-black") || knowledgeBase.getAllGarments()[0];
+    const outer61 = knowledgeBase.getGarmentBySlug("double-breasted-wool-overcoat-black");
+    const shoes61 = knowledgeBase.getGarmentBySlug("block-heel-calfskin-boots-black") || knowledgeBase.getAllGarments()[2];
+    if (dress61 && shoes61) {
+      outfits.push({
+        id: "outfit_feminine_cold_sheath_dress_01",
+        title: "Virgin Wool Crepe Sheath Dress & Tailored Wool Coat",
+        description: "Boat-neck long-sleeve virgin wool crepe sheath dress paired with double-breasted wool overcoat and block-heel calfskin boots.",
+        items: [
+          { garment: dress61, layerPosition: 0 },
+          ...(outer61 ? [{ garment: outer61, layerPosition: 1 }] : []),
+          { garment: shoes61, layerPosition: 0 },
+        ],
+        primaryStyleSlug: "formal",
+        formality: 5,
+        compatibleOccasions: ["job-interview", "office", "dinner", "wedding-guest", "cultural-traditional", "social", "custom"],
+        seasonality: ["winter", "fall"],
+        silhouetteBalance: "Sculpted boat-neck sheath silhouette protected by tailored structured overcoat",
+        colorStory: "Monochrome pitch black virgin wool crepe and calfskin",
+      });
+    }
+
+    // Outfit 62: Feminine Cold Silk Velvet Evening Gown (Cold/Formal Formality 5)
+    const dress62 = knowledgeBase.getGarmentBySlug("silk-velvet-evening-gown-midnight") || knowledgeBase.getAllGarments()[0];
+    const shoes62 = knowledgeBase.getGarmentBySlug("block-heel-calfskin-boots-black") || knowledgeBase.getAllGarments()[2];
+    if (dress62 && shoes62) {
+      outfits.push({
+        id: "outfit_feminine_cold_velvet_evening_gown_01",
+        title: "Silk Velvet Evening Gown & Calfskin Boots",
+        description: "Midnight blue draped long-sleeve silk velvet evening gown with structured shoulders and sleek block-heel calfskin boots.",
+        items: [
+          { garment: dress62, layerPosition: 0 },
+          { garment: shoes62, layerPosition: 0 },
+        ],
+        primaryStyleSlug: "formal",
+        formality: 5,
+        compatibleOccasions: ["wedding-guest", "dinner", "party", "cultural-traditional", "custom"],
+        seasonality: ["winter", "fall"],
+        silhouetteBalance: "Structured shoulder pads giving way to liquid cascading velvet drape",
+        colorStory: "Luminous midnight blue velvet with high light absorption and depth",
+      });
+    }
+
+    // Outfit 63: Feminine Cold Accordion Pleated Skirt Separates (Cold/Workplace Formality 4)
+    const top63 = knowledgeBase.getGarmentBySlug("cashmere-silk-mockneck-top-camel") || knowledgeBase.getAllGarments()[0];
+    const bot63 = knowledgeBase.getGarmentBySlug("wool-accordion-pleated-skirt-burgundy") || knowledgeBase.getAllGarments()[1];
+    const shoes63 = knowledgeBase.getGarmentBySlug("block-heel-calfskin-boots-black") || knowledgeBase.getAllGarments()[2];
+    if (top63 && bot63 && shoes63) {
+      outfits.push({
+        id: "outfit_feminine_cold_accordion_pleat_separates_01",
+        title: "Cashmere Mockneck & Accordion Pleated Wool Skirt",
+        description: "Fine camel cashmere mockneck paired with deep burgundy accordion pleated fine wool crepe skirt and calfskin boots.",
+        items: [
+          { garment: top63, layerPosition: 0 },
+          { garment: bot63, layerPosition: 0 },
+          { garment: shoes63, layerPosition: 0 },
+        ],
+        primaryStyleSlug: "old-money",
+        formality: 4,
+        compatibleOccasions: ["dinner", "office", "job-interview", "wedding-guest", "social", "custom"],
+        seasonality: ["winter", "fall"],
+        silhouetteBalance: "Streamlined close-fitting mockneck above rhythmic kinetic accordion pleats",
+        colorStory: "Warm camel cashmere contrasted against rich deep burgundy wool",
+      });
+    }
+
+    // Outfit 64: Masculine Hot Casual Poplin & Tailored Cotton-Linen Trousers (Casual, College, Travel Formality 2)
+    const top64 = knowledgeBase.getGarmentBySlug("poplin-point-shirt-sky-blue") || knowledgeBase.getAllGarments()[0];
+    const bot64 = knowledgeBase.getGarmentBySlug("tailored-cotton-linen-trousers-sand") || knowledgeBase.getAllGarments()[1];
+    const shoes64 = knowledgeBase.getGarmentBySlug("minimal-leather-sneaker-white") || knowledgeBase.getAllGarments()[2];
+    if (top64 && bot64 && shoes64) {
+      outfits.push({
+        id: "outfit_masculine_summer_linen_chinos_casual_01",
+        title: "Sky Blue Poplin Shirt & Tailored Cotton-Linen Trousers",
+        description: "Breathable 140s sky blue cotton poplin shirt with sleeves rolled up, sand tailored cotton-linen trousers, and minimal white leather sneakers.",
+        items: [
+          { garment: top64, layerPosition: 0 },
+          { garment: bot64, layerPosition: 0 },
+          { garment: shoes64, layerPosition: 0 },
+        ],
+        primaryStyleSlug: "smart-casual",
+        formality: 2,
+        compatibleOccasions: ["casual", "university-college", "travel", "social", "party", "custom"],
+        seasonality: ["summer", "spring"],
+        silhouetteBalance: "Relaxed unbuttoned collar ease descending into crisp tailored sand trouser line",
+        colorStory: "Sky blue poplin, sand cotton-linen weave, and clean white leather",
+      });
+    }
+
+    // Outfit 65: Volumetric Boiled Wool Overshirt & Tailored Slacks (Dinner, Social Formality 3)
+    const top65 = knowledgeBase.getGarmentBySlug("boiled-wool-overshirt-charcoal") || knowledgeBase.getAllGarments()[0];
+    const bot65 = knowledgeBase.getGarmentBySlug("high-rise-wool-trousers-black") || knowledgeBase.getAllGarments()[1];
+    const shoes65 = knowledgeBase.getGarmentBySlug("horsebit-loafer-black") || knowledgeBase.getAllGarments()[2];
+    if (top65 && bot65 && shoes65) {
+      outfits.push({
+        id: "outfit_volumetric_overshirt_tailored_slacks_01",
+        title: "Volumetric Boiled Wool Overshirt & Slim Wool Slacks",
+        description: "Volumetric 420gsm boiled wool overshirt balanced over streamlined high-rise tailored wool trousers and horsebit loafers.",
+        items: [
+          { garment: top65, layerPosition: 0 },
+          { garment: bot65, layerPosition: 0 },
+          { garment: shoes65, layerPosition: 0 },
+        ],
+        primaryStyleSlug: "minimal",
+        formality: 3,
+        compatibleOccasions: ["dinner", "social", "party", "date", "casual", "custom"],
+        seasonality: ["fall", "winter", "spring"],
+        silhouetteBalance: "Volumetric upper architecture anchored by slim streamlined leg line",
+        colorStory: "Charcoal boiled wool and pitch black tailoring",
       });
     }
 

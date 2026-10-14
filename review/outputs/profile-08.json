@@ -147,8 +147,8 @@
   "result": {
     "looksCount": 3,
     "contextApplied": "University / College Campus",
-    "vetoedCandidateCount": 36,
-    "evaluatedCandidateCount": 51,
+    "vetoedCandidateCount": 50,
+    "evaluatedCandidateCount": 64,
     "looks": [
       {
         "tier": "BEST_MATCH",
@@ -252,7 +252,7 @@
           ],
           "traceableReasons": [
             {
-              "reasonId": "rea_outfit_fluid_hot_resort_linen_01_0_1791915078512",
+              "reasonId": "rea_outfit_fluid_hot_resort_linen_01_0_1791968775723",
               "text": "Directly mirrors your personal style axis coordinates.",
               "signalIds": [
                 "user.styleProfile.styleVector",
@@ -269,7 +269,7 @@
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_fluid_hot_resort_linen_01_1_1791915078512",
+              "reasonId": "rea_outfit_fluid_hot_resort_linen_01_1_1791968775723",
               "text": "Contemporary dual-volume drape with intentional spatial presence",
               "signalIds": [
                 "user.styleProfile.preferences.fitProportions",
@@ -285,7 +285,7 @@
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_fluid_hot_resort_linen_01_2_1791915078512",
+              "reasonId": "rea_outfit_fluid_hot_resort_linen_01_2_1791968775723",
               "text": "Tonal neutral palette ensures high versatility and effortless visual cohesion.",
               "signalIds": [
                 "user.styleProfile.preferences.preferredStyleSlugs",
@@ -308,11 +308,12 @@
         "hairStyle": {
           "name": "Textured French Crop",
           "slug": "textured-crop",
-          "score": 0.85,
+          "score": 0.87,
           "reasons": [
             "Fits within your preferred moderate maintenance threshold.",
             "Appropriate formality for University / College Campus.",
-            "Directly aligns with your preferred minimal aesthetic"
+            "Directly aligns with your preferred minimal aesthetic",
+            "Off-neck heat-aware style promotes cooling comfort in hot, humid weather."
           ]
         },
         "groomingStyle": {
@@ -430,7 +431,7 @@
           ],
           "traceableReasons": [
             {
-              "reasonId": "rea_outfit_summer_linen_01_0_1791915078512",
+              "reasonId": "rea_outfit_summer_linen_01_0_1791968775723",
               "text": "Balanced regular configuration",
               "signalIds": [
                 "user.styleProfile.preferences.preferredStyleSlugs",
@@ -446,7 +447,7 @@
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_summer_linen_01_1_1791915078512",
+              "reasonId": "rea_outfit_summer_linen_01_1_1791968775723",
               "text": "Tonal neutral palette ensures high versatility and effortless visual cohesion.",
               "signalIds": [
                 "user.styleProfile.preferences.preferredStyleSlugs",
@@ -462,7 +463,7 @@
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_summer_linen_01_2_1791915078512",
+              "reasonId": "rea_outfit_summer_linen_01_2_1791968775723",
               "text": "Aligned to University / College Campus formality.",
               "signalIds": [
                 "context.occasion",
@@ -486,11 +487,12 @@
         "hairStyle": {
           "name": "Textured French Crop",
           "slug": "textured-crop",
-          "score": 0.85,
+          "score": 0.87,
           "reasons": [
             "Fits within your preferred moderate maintenance threshold.",
             "Appropriate formality for University / College Campus.",
-            "Directly aligns with your preferred minimal aesthetic"
+            "Directly aligns with your preferred minimal aesthetic",
+            "Off-neck heat-aware style promotes cooling comfort in hot, humid weather."
           ]
         },
         "groomingStyle": {
@@ -606,7 +608,7 @@
           ],
           "traceableReasons": [
             {
-              "reasonId": "rea_outfit_hot_casual_modal_01_0_1791915078512",
+              "reasonId": "rea_outfit_hot_casual_modal_01_0_1791968775723",
               "text": "Balanced regular configuration",
               "signalIds": [
                 "user.styleProfile.preferences.preferredStyleSlugs",
@@ -622,7 +624,7 @@
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_hot_casual_modal_01_1_1791915078512",
+              "reasonId": "rea_outfit_hot_casual_modal_01_1_1791968775723",
               "text": "Strong contrast between light and deep neutral values establishes crisp visual separation.",
               "signalIds": [
                 "user.styleProfile.preferences.preferredStyleSlugs",
@@ -638,7 +640,7 @@
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_hot_casual_modal_01_2_1791915078512",
+              "reasonId": "rea_outfit_hot_casual_modal_01_2_1791968775723",
               "text": "High breathability (140gsm ultra-breathable TENCEL modal jersey) supports natural airflow in hot conditions.",
               "signalIds": [
                 "context.temperatureLevel",
@@ -662,11 +664,12 @@
         "hairStyle": {
           "name": "Textured French Crop",
           "slug": "textured-crop",
-          "score": 0.85,
+          "score": 0.87,
           "reasons": [
             "Fits within your preferred moderate maintenance threshold.",
             "Appropriate formality for University / College Campus.",
-            "Directly aligns with your preferred minimal aesthetic"
+            "Directly aligns with your preferred minimal aesthetic",
+            "Off-neck heat-aware style promotes cooling comfort in hot, humid weather."
           ]
         },
         "groomingStyle": {

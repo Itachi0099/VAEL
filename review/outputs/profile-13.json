@@ -145,8 +145,8 @@
   "result": {
     "looksCount": 3,
     "contextApplied": "Fine Dining / Dinner Party",
-    "vetoedCandidateCount": 18,
-    "evaluatedCandidateCount": 51,
+    "vetoedCandidateCount": 19,
+    "evaluatedCandidateCount": 64,
     "looks": [
       {
         "tier": "BEST_MATCH",
@@ -156,7 +156,7 @@
           "explanation": "Supported by verified user formality, confirmed climate, explicit style vector, and grooming inputs.",
           "toIncreaseConfidence": "Add specific footwear preferences to further personalize lower-leg grounding."
         },
-        "overallHarmonyScore": 0.88,
+        "overallHarmonyScore": 0.9,
         "reasons": [
           "Cropped upper proportion offset by expansive lower volume",
           "Strong contrast between light and deep neutral values establishes crisp visual separation.",
@@ -168,7 +168,7 @@
           "title": "Monochrome Fluid Tailoring",
           "primaryStyleSlug": "korean-minimal",
           "formality": 3,
-          "score": 0.88,
+          "score": 0.9,
           "items": [
             {
               "category": "top",
@@ -243,7 +243,7 @@
             {
               "category": "weather_fit",
               "weight": 2,
-              "score": 0.75,
+              "score": 0.85,
               "reason": "Ambient temperature and breathability calibration"
             },
             {
@@ -261,7 +261,7 @@
           ],
           "traceableReasons": [
             {
-              "reasonId": "rea_outfit_korean_minimal_01_0_1791915078514",
+              "reasonId": "rea_outfit_korean_minimal_01_0_1791968775726",
               "text": "Cropped upper proportion offset by expansive lower volume",
               "signalIds": [
                 "user.styleProfile.preferences.preferredStyleSlugs",
@@ -278,7 +278,7 @@
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_korean_minimal_01_1_1791915078514",
+              "reasonId": "rea_outfit_korean_minimal_01_1_1791968775726",
               "text": "Strong contrast between light and deep neutral values establishes crisp visual separation.",
               "signalIds": [
                 "user.styleProfile.preferences.preferredStyleSlugs",
@@ -295,7 +295,7 @@
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_korean_minimal_01_2_1791915078514",
+              "reasonId": "rea_outfit_korean_minimal_01_2_1791968775726",
               "text": "Aligned to Fine Dining / Dinner Party formality.",
               "signalIds": [
                 "context.occasion",
@@ -346,7 +346,7 @@
           "explanation": "Supported by verified user formality, confirmed climate, explicit style vector, and grooming inputs.",
           "toIncreaseConfidence": "Add specific footwear preferences to further personalize lower-leg grounding."
         },
-        "overallHarmonyScore": 0.88,
+        "overallHarmonyScore": 0.89,
         "reasons": [
           "Structured upper anchor balanced with fluid wide-leg lower volume",
           "Tonal neutral palette ensures high versatility and effortless visual cohesion.",
@@ -358,7 +358,7 @@
           "title": "Cocoon Wool Overcoat & Double-Pleated Trousers",
           "primaryStyleSlug": "korean-minimal",
           "formality": 3,
-          "score": 0.88,
+          "score": 0.89,
           "items": [
             {
               "category": "top",
@@ -444,7 +444,7 @@
             {
               "category": "weather_fit",
               "weight": 2,
-              "score": 0.75,
+              "score": 0.85,
               "reason": "Ambient temperature and breathability calibration"
             },
             {
@@ -462,7 +462,7 @@
           ],
           "traceableReasons": [
             {
-              "reasonId": "rea_outfit_fluid_cold_cocoon_coat_01_0_1791915078515",
+              "reasonId": "rea_outfit_fluid_cold_cocoon_coat_01_0_1791968775726",
               "text": "Structured upper anchor balanced with fluid wide-leg lower volume",
               "signalIds": [
                 "user.styleProfile.preferences.fitProportions",
@@ -480,7 +480,7 @@
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_fluid_cold_cocoon_coat_01_1_1791915078515",
+              "reasonId": "rea_outfit_fluid_cold_cocoon_coat_01_1_1791968775726",
               "text": "Tonal neutral palette ensures high versatility and effortless visual cohesion.",
               "signalIds": [
                 "user.styleProfile.preferences.preferredStyleSlugs",
@@ -498,7 +498,7 @@
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_fluid_cold_cocoon_coat_01_2_1791915078515",
+              "reasonId": "rea_outfit_fluid_cold_cocoon_coat_01_2_1791968775726",
               "text": "Aligned to Fine Dining / Dinner Party formality.",
               "signalIds": [
                 "context.occasion",
@@ -550,7 +550,7 @@
           "explanation": "Supported by verified user formality, confirmed climate, explicit style vector, and grooming inputs.",
           "toIncreaseConfidence": "Add specific footwear preferences to further personalize lower-leg grounding."
         },
-        "overallHarmonyScore": 0.85,
+        "overallHarmonyScore": 0.86,
         "reasons": [
           "Balanced regular configuration",
           "Harmonious balance across complementary tonal depths.",
@@ -562,7 +562,7 @@
           "title": "Unstructured DB Jacket & Woven Leather Loafers",
           "primaryStyleSlug": "smart-casual",
           "formality": 3,
-          "score": 0.85,
+          "score": 0.86,
           "items": [
             {
               "category": "top",
@@ -648,7 +648,7 @@
             {
               "category": "weather_fit",
               "weight": 2,
-              "score": 0.75,
+              "score": 0.85,
               "reason": "Ambient temperature and breathability calibration"
             },
             {
@@ -666,7 +666,7 @@
           ],
           "traceableReasons": [
             {
-              "reasonId": "rea_outfit_fluid_hot_workplace_linen_01_0_1791915078515",
+              "reasonId": "rea_outfit_fluid_hot_workplace_linen_01_0_1791968775726",
               "text": "Balanced regular configuration",
               "signalIds": [
                 "user.styleProfile.preferences.preferredStyleSlugs",
@@ -684,7 +684,7 @@
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_fluid_hot_workplace_linen_01_1_1791915078515",
+              "reasonId": "rea_outfit_fluid_hot_workplace_linen_01_1_1791968775726",
               "text": "Harmonious balance across complementary tonal depths.",
               "signalIds": [
                 "user.styleProfile.preferences.fitProportions",
@@ -702,7 +702,7 @@
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_fluid_hot_workplace_linen_01_2_1791915078515",
+              "reasonId": "rea_outfit_fluid_hot_workplace_linen_01_2_1791968775726",
               "text": "Neutral tonal temperature balance relative to undertone.",
               "signalIds": [
                 "user.styleProfile.preferences.fitProportions",

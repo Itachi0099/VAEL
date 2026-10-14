@@ -6,7 +6,7 @@
       "id": "usr_vael_curator",
       "name": "Julian Vance",
       "handle": "julian",
-      "createdAt": "2026-10-13T18:11:18.498Z",
+      "createdAt": "2026-10-14T09:06:15.710Z",
       "visualProfile": {
         "id": "vis_profile_01",
         "userId": "usr_vael_curator",
@@ -40,7 +40,7 @@
         },
         "source": "visual_analysis",
         "confidenceScore": 0.95,
-        "lastObservedAt": "2026-10-13T18:11:18.498Z"
+        "lastObservedAt": "2026-10-14T09:06:15.709Z"
       },
       "styleProfile": {
         "id": "sty_profile_01",
@@ -141,7 +141,7 @@
           "learnedFitAffinities": {},
           "repeatPassCount": {}
         },
-        "updatedAt": "2026-10-13T18:11:18.498Z"
+        "updatedAt": "2026-10-14T09:06:15.710Z"
       }
     },
     "evidenceHierarchy": {
@@ -189,8 +189,8 @@
   "result": {
     "looksCount": 3,
     "contextApplied": "Fine Dining / Dinner Party",
-    "vetoedCandidateCount": 24,
-    "evaluatedCandidateCount": 51,
+    "vetoedCandidateCount": 30,
+    "evaluatedCandidateCount": 64,
     "looks": [
       {
         "tier": "BEST_MATCH",
@@ -305,7 +305,7 @@
           ],
           "traceableReasons": [
             {
-              "reasonId": "rea_outfit_korean_minimal_01_0_1791915078505",
+              "reasonId": "rea_outfit_korean_minimal_01_0_1791968775717",
               "text": "Cropped upper proportion offset by expansive lower volume",
               "signalIds": [
                 "user.styleProfile.preferences.preferredStyleSlugs",
@@ -322,7 +322,7 @@
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_korean_minimal_01_1_1791915078505",
+              "reasonId": "rea_outfit_korean_minimal_01_1_1791968775717",
               "text": "Strong contrast between light and deep neutral values establishes crisp visual separation.",
               "signalIds": [
                 "user.styleProfile.preferences.preferredStyleSlugs",
@@ -339,7 +339,7 @@
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_korean_minimal_01_2_1791915078505",
+              "reasonId": "rea_outfit_korean_minimal_01_2_1791968775717",
               "text": "Echoes your undertone through face-adjacent tonal harmony.",
               "signalIds": [
                 "user.styleProfile.preferences.userConfirmedUndertone",
@@ -514,7 +514,7 @@
           ],
           "traceableReasons": [
             {
-              "reasonId": "rea_outfit_fluid_cold_cocoon_coat_01_0_1791915078506",
+              "reasonId": "rea_outfit_fluid_cold_cocoon_coat_01_0_1791968775717",
               "text": "Structured upper anchor balanced with fluid wide-leg lower volume",
               "signalIds": [
                 "user.styleProfile.preferences.fitProportions",
@@ -532,7 +532,7 @@
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_fluid_cold_cocoon_coat_01_1_1791915078506",
+              "reasonId": "rea_outfit_fluid_cold_cocoon_coat_01_1_1791968775717",
               "text": "Tonal neutral palette ensures high versatility and effortless visual cohesion.",
               "signalIds": [
                 "user.styleProfile.preferences.preferredStyleSlugs",
@@ -550,7 +550,7 @@
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_fluid_cold_cocoon_coat_01_2_1791915078506",
+              "reasonId": "rea_outfit_fluid_cold_cocoon_coat_01_2_1791968775717",
               "text": "Echoes your undertone through face-adjacent tonal harmony.",
               "signalIds": [
                 "user.styleProfile.preferences.userConfirmedUndertone",
@@ -714,7 +714,7 @@
           ],
           "traceableReasons": [
             {
-              "reasonId": "rea_outfit_fluid_cold_formal_tunic_01_0_1791915078506",
+              "reasonId": "rea_outfit_fluid_cold_formal_tunic_01_0_1791968775717",
               "text": "Balanced regular configuration",
               "signalIds": [
                 "user.styleProfile.preferences.preferredStyleSlugs",
@@ -731,7 +731,7 @@
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_fluid_cold_formal_tunic_01_1_1791915078506",
+              "reasonId": "rea_outfit_fluid_cold_formal_tunic_01_1_1791968775717",
               "text": "Tonal neutral palette ensures high versatility and effortless visual cohesion.",
               "signalIds": [
                 "user.styleProfile.preferences.preferredStyleSlugs",
@@ -748,7 +748,7 @@
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_fluid_cold_formal_tunic_01_2_1791915078506",
+              "reasonId": "rea_outfit_fluid_cold_formal_tunic_01_2_1791968775717",
               "text": "Echoes your undertone through face-adjacent tonal harmony.",
               "signalIds": [
                 "user.styleProfile.preferences.userConfirmedUndertone",

@@ -152,8 +152,8 @@
   "result": {
     "looksCount": 3,
     "contextApplied": "Wedding Guest",
-    "vetoedCandidateCount": 42,
-    "evaluatedCandidateCount": 51,
+    "vetoedCandidateCount": 52,
+    "evaluatedCandidateCount": 64,
     "looks": [
       {
         "tier": "BEST_MATCH",
@@ -268,7 +268,7 @@
           ],
           "traceableReasons": [
             {
-              "reasonId": "rea_outfit_cultural_traditional_01_0_1791915078510",
+              "reasonId": "rea_outfit_cultural_traditional_01_0_1791968775720",
               "text": "Balanced regular configuration",
               "signalIds": [
                 "user.styleProfile.preferences.preferredStyleSlugs",
@@ -285,7 +285,7 @@
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_cultural_traditional_01_1_1791915078510",
+              "reasonId": "rea_outfit_cultural_traditional_01_1_1791968775720",
               "text": "Strong contrast between light and deep neutral values establishes crisp visual separation.",
               "signalIds": [
                 "user.styleProfile.preferences.preferredStyleSlugs",
@@ -302,7 +302,7 @@
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_cultural_traditional_01_2_1791915078510",
+              "reasonId": "rea_outfit_cultural_traditional_01_2_1791968775720",
               "text": "High breathability (washed pure linen) supports natural airflow in hot conditions.",
               "signalIds": [
                 "context.temperatureLevel",
@@ -327,11 +327,12 @@
         "hairStyle": {
           "name": "Textured French Crop",
           "slug": "textured-crop",
-          "score": 0.85,
+          "score": 0.87,
           "reasons": [
             "Fits within your preferred moderate maintenance threshold.",
             "Appropriate formality for Wedding Guest.",
-            "Directly aligns with your preferred minimal aesthetic"
+            "Directly aligns with your preferred minimal aesthetic",
+            "Off-neck heat-aware style promotes cooling comfort in hot, humid weather."
           ]
         },
         "groomingStyle": {
@@ -469,7 +470,7 @@
           ],
           "traceableReasons": [
             {
-              "reasonId": "rea_outfit_fluid_hot_workplace_linen_01_0_1791915078510",
+              "reasonId": "rea_outfit_fluid_hot_workplace_linen_01_0_1791968775720",
               "text": "Balanced regular configuration",
               "signalIds": [
                 "user.styleProfile.preferences.preferredStyleSlugs",
@@ -487,7 +488,7 @@
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_fluid_hot_workplace_linen_01_1_1791915078510",
+              "reasonId": "rea_outfit_fluid_hot_workplace_linen_01_1_1791968775720",
               "text": "Harmonious balance across complementary tonal depths.",
               "signalIds": [
                 "user.styleProfile.preferences.fitProportions",
@@ -505,7 +506,7 @@
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_fluid_hot_workplace_linen_01_2_1791915078510",
+              "reasonId": "rea_outfit_fluid_hot_workplace_linen_01_2_1791968775720",
               "text": "Neutral tonal temperature balance relative to undertone.",
               "signalIds": [
                 "user.styleProfile.preferences.fitProportions",
@@ -530,11 +531,12 @@
         "hairStyle": {
           "name": "Textured French Crop",
           "slug": "textured-crop",
-          "score": 0.85,
+          "score": 0.87,
           "reasons": [
             "Fits within your preferred moderate maintenance threshold.",
             "Appropriate formality for Wedding Guest.",
-            "Directly aligns with your preferred minimal aesthetic"
+            "Directly aligns with your preferred minimal aesthetic",
+            "Off-neck heat-aware style promotes cooling comfort in hot, humid weather."
           ]
         },
         "groomingStyle": {
@@ -556,28 +558,39 @@
           "explanation": "Supported by verified user formality, confirmed climate, explicit style vector, and grooming inputs.",
           "toIncreaseConfidence": "Add specific footwear preferences to further personalize lower-leg grounding."
         },
-        "overallHarmonyScore": 0.87,
+        "overallHarmonyScore": 0.88,
         "reasons": [
-          "Directly mirrors your personal style axis coordinates.",
-          "Unified cinched waist wide leg column",
-          "Harmonious balance across complementary tonal depths."
+          "Harmonious classic proportion with uniform clean linear cadence",
+          "Strong contrast between light and deep neutral values establishes crisp visual separation.",
+          "Aligned to Wedding Guest formality."
         ],
         "cautions": [],
         "outfit": {
-          "id": "outfit_feminine_party_crepe_jumpsuit_01",
-          "title": "Tailored Wide-Leg Crepe Jumpsuit & Gold Accents",
-          "primaryStyleSlug": "minimal",
+          "id": "outfit_feminine_hot_crepe_midi_separates_01",
+          "title": "Poplin Peplum Blouse & Heavy Silk Crepe Fluted Midi Skirt",
+          "primaryStyleSlug": "smart-casual",
           "formality": 4,
-          "score": 0.87,
+          "score": 0.88,
           "items": [
             {
-              "category": "one-piece",
-              "subcategory": "jumpsuit",
-              "name": "Wide-Leg Tailored Crepe Jumpsuit with Belt (Black)",
-              "material": "280gsm matte fluid crepe",
-              "color": "black",
+              "category": "top",
+              "subcategory": "blouse",
+              "name": "Architectural Fitted Cotton Poplin Peplum Blouse (Pure White)",
+              "material": "140gsm crisp Egyptian cotton poplin",
+              "color": "white",
               "fit": "tailored",
               "modestyRating": "standard",
+              "genderCoding": "feminine",
+              "layerPosition": 0
+            },
+            {
+              "category": "bottom",
+              "subcategory": "skirt",
+              "name": "Fluted Heavy Silk Crepe Midi Skirt (Navy)",
+              "material": "40mm heavy silk crepe de chine",
+              "color": "navy",
+              "fit": "tailored",
+              "modestyRating": "high-coverage",
               "genderCoding": "feminine",
               "layerPosition": 0
             },
@@ -591,48 +604,26 @@
               "modestyRating": "standard",
               "genderCoding": "feminine",
               "layerPosition": 0
-            },
-            {
-              "category": "accessory",
-              "subcategory": "bag",
-              "name": "Structured Silk Satin Box Evening Clutch (Black)",
-              "material": "Heavy silk satin over brass frame",
-              "color": "black",
-              "fit": "regular",
-              "modestyRating": "unrestricted",
-              "genderCoding": "feminine",
-              "layerPosition": 0
-            },
-            {
-              "category": "accessory",
-              "subcategory": "jewelry",
-              "name": "18k Gold Vermeil Architectural Huggie Hoops",
-              "material": "18k gold vermeil over recycled 925 sterling silver",
-              "color": "gold",
-              "fit": "regular",
-              "modestyRating": "unrestricted",
-              "genderCoding": "feminine",
-              "layerPosition": 0
             }
           ],
           "factors": [
             {
               "category": "style_affinity",
               "weight": 3.5,
-              "score": 0.84,
-              "reason": "Coordinate affinity (84%) with your 10D style vector."
+              "score": 0.76,
+              "reason": "Coordinate affinity (76%) with your 10D style vector."
             },
             {
               "category": "silhouette_balance",
               "weight": 3,
-              "score": 0.92,
-              "reason": "Unified cinched waist wide leg column"
+              "score": 0.9,
+              "reason": "Harmonious classic proportion with uniform clean linear cadence"
             },
             {
               "category": "color_harmony",
               "weight": 3,
-              "score": 0.82,
-              "reason": "Color story: analogous"
+              "score": 0.94,
+              "reason": "Color story: strong-contrast"
             },
             {
               "category": "occasion_fit",
@@ -643,20 +634,14 @@
             {
               "category": "weather_fit",
               "weight": 2,
-              "score": 0.85,
+              "score": 0.98,
               "reason": "Ambient temperature and breathability calibration"
             },
             {
               "category": "expression_affinity",
               "weight": 1,
-              "score": 0.65,
+              "score": 0.5,
               "reason": "Soft expression alignment with androgynous presentation preference."
-            },
-            {
-              "category": "accessory_coherence",
-              "weight": 0.5,
-              "score": 0.95,
-              "reason": "Harmonious metal hardware tones across accessories."
             },
             {
               "category": "preference_reinforcement",
@@ -667,68 +652,68 @@
           ],
           "traceableReasons": [
             {
-              "reasonId": "rea_outfit_feminine_party_crepe_jumpsuit_01_0_1791915078510",
-              "text": "Directly mirrors your personal style axis coordinates.",
-              "signalIds": [
-                "user.styleProfile.styleVector",
-                "user.styleProfile.preferences.preferredStyleSlugs"
-              ],
-              "knowledgeEntryIds": [
-                "gar_tailored_crepe_jumpsuit_black",
-                "gar_feminine_pointed_kitten_heels_black",
-                "gar_evening_clutch_satin_black",
-                "gar_minimalist_gold_hoops",
-                "style_minimal"
-              ],
-              "factor": "style_affinity",
-              "authority": "USER_ENTERED",
-              "isAssumed": false
-            },
-            {
-              "reasonId": "rea_outfit_feminine_party_crepe_jumpsuit_01_1_1791915078510",
-              "text": "Unified cinched waist wide leg column",
+              "reasonId": "rea_outfit_feminine_hot_crepe_midi_separates_01_0_1791968775720",
+              "text": "Harmonious classic proportion with uniform clean linear cadence",
               "signalIds": [
                 "user.styleProfile.preferences.preferredStyleSlugs",
                 "context.occasion"
               ],
               "knowledgeEntryIds": [
-                "gar_tailored_crepe_jumpsuit_black",
-                "gar_feminine_pointed_kitten_heels_black",
-                "gar_evening_clutch_satin_black",
-                "gar_minimalist_gold_hoops"
+                "gar_poplin_peplum_blouse_white",
+                "gar_feminine_heavy_silk_crepe_midi_skirt_navy",
+                "gar_feminine_pointed_kitten_heels_black"
               ],
               "factor": "general",
               "authority": "USER_ENTERED",
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_feminine_party_crepe_jumpsuit_01_2_1791915078510",
-              "text": "Harmonious balance across complementary tonal depths.",
+              "reasonId": "rea_outfit_feminine_hot_crepe_midi_separates_01_1_1791968775720",
+              "text": "Strong contrast between light and deep neutral values establishes crisp visual separation.",
               "signalIds": [
-                "user.styleProfile.preferences.fitProportions",
-                "user.styleProfile.preferences.preferredFits"
+                "user.styleProfile.preferences.preferredStyleSlugs",
+                "context.occasion"
               ],
               "knowledgeEntryIds": [
-                "gar_tailored_crepe_jumpsuit_black",
-                "gar_feminine_pointed_kitten_heels_black",
-                "gar_evening_clutch_satin_black",
-                "gar_minimalist_gold_hoops"
+                "gar_poplin_peplum_blouse_white",
+                "gar_feminine_heavy_silk_crepe_midi_skirt_navy",
+                "gar_feminine_pointed_kitten_heels_black"
               ],
-              "factor": "silhouette_balance",
+              "factor": "general",
+              "authority": "USER_ENTERED",
+              "isAssumed": false
+            },
+            {
+              "reasonId": "rea_outfit_feminine_hot_crepe_midi_separates_01_2_1791968775720",
+              "text": "Aligned to Wedding Guest formality.",
+              "signalIds": [
+                "context.occasion",
+                "context.targetFormality"
+              ],
+              "knowledgeEntryIds": [
+                "gar_poplin_peplum_blouse_white",
+                "gar_feminine_heavy_silk_crepe_midi_skirt_navy",
+                "gar_feminine_pointed_kitten_heels_black",
+                "occ_wedding"
+              ],
+              "factor": "occasion_fit",
               "authority": "USER_ENTERED",
               "isAssumed": false
             }
           ],
-          "stylingAdvice": []
+          "stylingAdvice": [
+            "Elevate with subtle texture contrast between top and lower fabrication."
+          ]
         },
         "hairStyle": {
           "name": "Textured French Crop",
           "slug": "textured-crop",
-          "score": 0.85,
+          "score": 0.87,
           "reasons": [
             "Fits within your preferred moderate maintenance threshold.",
             "Appropriate formality for Wedding Guest.",
-            "Directly aligns with your preferred minimal aesthetic"
+            "Directly aligns with your preferred minimal aesthetic",
+            "Off-neck heat-aware style promotes cooling comfort in hot, humid weather."
           ]
         },
         "groomingStyle": {

@@ -27,3 +27,20 @@ gar_patent_evening_pumps,"Patent Leather Evening Slippers",patent-evening-slippe
 gar_silk_pocket_square_burgundy,"Printed Silk Twill Pocket Square",silk-pocket-square-burgundy,accessory,masculine,-1,false
 gar_masculine_chalkstripe_suit_jacket_charcoal,"Tailored 2-Button Chalkstripe Wool Suit Jacket (Charcoal)",chalkstripe-suit-jacket-charcoal,outerwear,masculine,-1,false
 gar_masculine_storm_coat_navy,"Waterproof Bonded Wool Commuter Storm Coat (Navy)",bonded-wool-storm-coat-navy,outerwear,masculine,-1,false
+gar_masculine_cap_toe_oxford_black,"Full-Grain Leather Cap-Toe Oxfords (Black)",cap-toe-oxfords-black,footwear,masculine,-1,false
+gar_masculine_plain_derby_espresso,"Burnished Calfskin Plain-Toe Derbies (Espresso)",plain-toe-derbies-espresso,footwear,masculine,-0.5,false
+gar_masculine_dark_split_toe_derby_black,"Split-Toe Apron Derbies (Black Boxcalf)",split-toe-derbies-black,footwear,masculine,-0.5,false
+gar_masculine_penny_loafer_dark_chocolate,"Dark Chocolate Suede Penny Loafers",penny-loafers-suede-chocolate,footwear,masculine,-0.5,false
+gar_masculine_tassel_loafer_black_calf,"Polished Calfskin Tassel Loafers (Black)",tassel-loafers-black-calf,footwear,masculine,-0.5,false
+gar_masculine_single_monk_tan,"Single Monkstrap Dress Shoes (Warm Tan)",single-monkstrap-shoes-tan,footwear,masculine,-0.5,false
+gar_masculine_linen_slip_on_tobacco,"Belgian Linen Venetian Dress Loafers (Tobacco)",venetian-dress-loafers-tobacco,footwear,masculine,-0.5,false
+gar_masculine_poplin_point_shirt_sky_blue,"Sky Blue 140s Cotton Poplin Point Collar Shirt",poplin-point-shirt-sky-blue,top,masculine,-0.5,false
+gar_masculine_spread_collar_tuxedo_shirt_white,"Fine Piqué Marcella Formal Shirt (Pure White)",pique-marcella-formal-shirt-white,top,masculine,-1,false
+gar_masculine_fine_silk_cashmere_crew_charcoal,"Fine-Gauge Silk-Cashmere Knit Crew (Charcoal)",fine-silk-cashmere-crew-charcoal,top,masculine,-0.5,false
+gar_masculine_fine_silk_merino_polo_navy,"Long-Sleeve Silk-Merino Knit Polo (Navy)",silk-merino-knit-polo-navy,top,masculine,-0.5,false
+gar_masculine_french_cuff_twill_shirt_white,"Double-Cuff Royal Twill Dress Shirt (White)",royal-twill-french-cuff-shirt-white,top,masculine,-1,false
+gar_masculine_fine_gauge_turtleneck_black,"Superfine Merino 24-Gauge Turtleneck (Black)",superfine-merino-turtleneck-black,top,masculine,-0.5,false
+gar_masculine_tropical_wool_trousers_charcoal,"Tropical-Weight High-Twist Wool Trousers (Charcoal)",tropical-wool-trousers-charcoal,bottom,masculine,-0.5,false
+gar_masculine_cotton_linen_trousers_sand,"Tailored Cotton-Linen Dress Trousers (Sand)",tailored-cotton-linen-trousers-sand,bottom,masculine,-0.5,false
+gar_masculine_unlined_hopsack_blazer_navy,"Unlined Tropical Hopsack Wool Blazer (Deep Navy)",unlined-tropical-hopsack-blazer-navy,outerwear,masculine,-0.5,false
+gar_masculine_unlined_linen_silk_blazer_tobacco,"Unlined Linen-Silk-Wool Summer Blazer (Tobacco)",unlined-linen-silk-blazer-tobacco,outerwear,masculine,-0.5,false

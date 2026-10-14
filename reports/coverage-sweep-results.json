@@ -202,5 +202,232 @@
     }
   },
   "allGroupsPassedTarget": true,
+  "feminineReconciliation": {
+    "totalLooks": 2220,
+    "separatesCount": 1426,
+    "separatesShare": "64.2%",
+    "onePieceCount": 794,
+    "onePieceShare": "35.8%",
+    "otherCount": 0,
+    "otherShare": "0.0%"
+  },
+  "varietyReport": {
+    "masculine": {
+      "distinctBestMatchLooks": 7,
+      "top5Repeated": [
+        {
+          "id": "outfit_masculine_cold_casual_storm_01",
+          "title": "Bonded Wool Storm Coat & Heavyweight Chinos",
+          "cellCount": 320,
+          "cellShare": "43.2%"
+        },
+        {
+          "id": "outfit_masculine_fine_knit_hopsack_separates_01",
+          "title": "Fine Silk-Merino Knit Polo & Fresco Wool Trousers",
+          "cellCount": 204,
+          "cellShare": "27.6%"
+        },
+        {
+          "id": "outfit_masculine_hot_casual_linen_01",
+          "title": "Fine Irish Linen Guayabera & Trousers",
+          "cellCount": 80,
+          "cellShare": "10.8%"
+        },
+        {
+          "id": "outfit_masculine_tropical_wool_hopsack_interview_01",
+          "title": "Tropical Hopsack Blazer & Fresco Wool Trousers",
+          "cellCount": 48,
+          "cellShare": "6.5%"
+        },
+        {
+          "id": "outfit_masculine_ceremonial_bandhgala_01",
+          "title": "Bespoke Raw Silk Bandhgala & Tailored Slacks",
+          "cellCount": 40,
+          "cellShare": "5.4%"
+        }
+      ]
+    },
+    "feminine": {
+      "distinctBestMatchLooks": 7,
+      "top5Repeated": [
+        {
+          "id": "outfit_feminine_tailored_suit_workplace_01",
+          "title": "Waist-defined Virgin Wool Tailoring & Box-Calf Tote",
+          "cellCount": 208,
+          "cellShare": "28.1%"
+        },
+        {
+          "id": "outfit_feminine_casual_modest_knit_maxi_01",
+          "title": "Ribbed Merino Wool Maxi & Weatherproof Trench",
+          "cellCount": 208,
+          "cellShare": "28.1%"
+        },
+        {
+          "id": "outfit_volumetric_overshirt_tailored_slacks_01",
+          "title": "Volumetric Boiled Wool Overshirt & Slim Wool Slacks",
+          "cellCount": 110,
+          "cellShare": "14.9%"
+        },
+        {
+          "id": "outfit_feminine_cowl_trousers_separates_01",
+          "title": "Bias-Cut Cowl Satin Camisole & High-Rise Wide Trousers",
+          "cellCount": 66,
+          "cellShare": "8.9%"
+        },
+        {
+          "id": "outfit_feminine_hot_linen_twill_separates_01",
+          "title": "Silk Lavallière Blouse & Linen Twill Column Maxi Skirt",
+          "cellCount": 52,
+          "cellShare": "7.0%"
+        }
+      ]
+    },
+    "androgynous": {
+      "distinctBestMatchLooks": 6,
+      "top5Repeated": [
+        {
+          "id": "outfit_fluid_hot_resort_linen_01",
+          "title": "Draped Silk-Tencel Camp Shirt & Wide Linen Trousers",
+          "cellCount": 372,
+          "cellShare": "50.3%"
+        },
+        {
+          "id": "outfit_fluid_cold_formal_tunic_01",
+          "title": "Longline Architectural Fluid Tunic Coat & Evening Slacks",
+          "cellCount": 160,
+          "cellShare": "21.6%"
+        },
+        {
+          "id": "outfit_korean_minimal_01",
+          "title": "Monochrome Fluid Tailoring",
+          "cellCount": 104,
+          "cellShare": "14.1%"
+        },
+        {
+          "id": "outfit_feminine_cold_casual_wrap_01",
+          "title": "Wool Wrap Coat & Wide Trousers",
+          "cellCount": 52,
+          "cellShare": "7.0%"
+        },
+        {
+          "id": "outfit_cultural_traditional_01",
+          "title": "Heritage Raw Silk & Linen Ceremony Look",
+          "cellCount": 36,
+          "cellShare": "4.9%"
+        }
+      ]
+    },
+    "no-preference": {
+      "distinctBestMatchLooks": 10,
+      "top5Repeated": [
+        {
+          "id": "outfit_feminine_casual_modest_knit_maxi_01",
+          "title": "Ribbed Merino Wool Maxi & Weatherproof Trench",
+          "cellCount": 208,
+          "cellShare": "28.1%"
+        },
+        {
+          "id": "outfit_minimal_01",
+          "title": "All-Black Architectural Column",
+          "cellCount": 100,
+          "cellShare": "13.5%"
+        },
+        {
+          "id": "outfit_masculine_fine_knit_hopsack_separates_01",
+          "title": "Fine Silk-Merino Knit Polo & Fresco Wool Trousers",
+          "cellCount": 96,
+          "cellShare": "13.0%"
+        },
+        {
+          "id": "outfit_fluid_cold_formal_tunic_01",
+          "title": "Longline Architectural Fluid Tunic Coat & Evening Slacks",
+          "cellCount": 80,
+          "cellShare": "10.8%"
+        },
+        {
+          "id": "outfit_masculine_hot_casual_linen_01",
+          "title": "Fine Irish Linen Guayabera & Trousers",
+          "cellCount": 80,
+          "cellShare": "10.8%"
+        }
+      ]
+    }
+  },
+  "garmentMatrix": {
+    "dresses": {
+      "F1": {
+        "cold": 0,
+        "cool": 0,
+        "mild": 0,
+        "warm": 0,
+        "hot": 0
+      },
+      "F2": {
+        "cold": 0,
+        "cool": 0,
+        "mild": 1,
+        "warm": 2,
+        "hot": 1
+      },
+      "F3": {
+        "cold": 2,
+        "cool": 2,
+        "mild": 2,
+        "warm": 1,
+        "hot": 0
+      },
+      "F4": {
+        "cold": 1,
+        "cool": 1,
+        "mild": 2,
+        "warm": 3,
+        "hot": 3
+      },
+      "F5": {
+        "cold": 3,
+        "cool": 4,
+        "mild": 4,
+        "warm": 1,
+        "hot": 1
+      }
+    },
+    "skirts": {
+      "F1": {
+        "cold": 0,
+        "cool": 0,
+        "mild": 0,
+        "warm": 0,
+        "hot": 0
+      },
+      "F2": {
+        "cold": 0,
+        "cool": 1,
+        "mild": 1,
+        "warm": 0,
+        "hot": 0
+      },
+      "F3": {
+        "cold": 0,
+        "cool": 1,
+        "mild": 2,
+        "warm": 1,
+        "hot": 0
+      },
+      "F4": {
+        "cold": 2,
+        "cool": 3,
+        "mild": 2,
+        "warm": 2,
+        "hot": 2
+      },
+      "F5": {
+        "cold": 2,
+        "cool": 2,
+        "mild": 2,
+        "warm": 1,
+        "hot": 1
+      }
+    }
+  },
   "failingCellsByGroup": {}
 }

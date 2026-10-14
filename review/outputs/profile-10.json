@@ -146,8 +146,8 @@
   "result": {
     "looksCount": 3,
     "contextApplied": "Everyday Casual / Weekend",
-    "vetoedCandidateCount": 42,
-    "evaluatedCandidateCount": 51,
+    "vetoedCandidateCount": 54,
+    "evaluatedCandidateCount": 64,
     "looks": [
       {
         "tier": "BEST_MATCH",
@@ -251,7 +251,7 @@
           ],
           "traceableReasons": [
             {
-              "reasonId": "rea_outfit_fluid_hot_resort_linen_01_0_1791915078513",
+              "reasonId": "rea_outfit_fluid_hot_resort_linen_01_0_1791968775724",
               "text": "Directly mirrors your personal style axis coordinates.",
               "signalIds": [
                 "user.styleProfile.styleVector",
@@ -268,7 +268,7 @@
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_fluid_hot_resort_linen_01_1_1791915078513",
+              "reasonId": "rea_outfit_fluid_hot_resort_linen_01_1_1791968775724",
               "text": "Contemporary dual-volume drape with intentional spatial presence",
               "signalIds": [
                 "user.styleProfile.preferences.fitProportions",
@@ -284,7 +284,7 @@
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_fluid_hot_resort_linen_01_2_1791915078513",
+              "reasonId": "rea_outfit_fluid_hot_resort_linen_01_2_1791968775724",
               "text": "Tonal neutral palette ensures high versatility and effortless visual cohesion.",
               "signalIds": [
                 "user.styleProfile.preferences.preferredStyleSlugs",
@@ -307,12 +307,13 @@
         "hairStyle": {
           "name": "Architectural Buzz Cut",
           "slug": "tapered-buzz",
-          "score": 0.9,
+          "score": 0.91,
           "reasons": [
             "Fits within your preferred moderate maintenance threshold.",
             "Appropriate formality for Everyday Casual / Weekend.",
             "Directly aligns with your preferred techwear aesthetic",
-            "Directly aligns with your preferred streetwear aesthetic"
+            "Directly aligns with your preferred streetwear aesthetic",
+            "Off-neck heat-aware style promotes cooling comfort in hot, humid weather."
           ]
         },
         "groomingStyle": {
@@ -429,7 +430,7 @@
           ],
           "traceableReasons": [
             {
-              "reasonId": "rea_outfit_summer_linen_01_0_1791915078513",
+              "reasonId": "rea_outfit_summer_linen_01_0_1791968775724",
               "text": "Balanced regular configuration",
               "signalIds": [
                 "user.styleProfile.preferences.preferredStyleSlugs",
@@ -445,7 +446,7 @@
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_summer_linen_01_1_1791915078513",
+              "reasonId": "rea_outfit_summer_linen_01_1_1791968775724",
               "text": "Tonal neutral palette ensures high versatility and effortless visual cohesion.",
               "signalIds": [
                 "user.styleProfile.preferences.preferredStyleSlugs",
@@ -461,7 +462,7 @@
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_summer_linen_01_2_1791915078513",
+              "reasonId": "rea_outfit_summer_linen_01_2_1791968775724",
               "text": "Aligned to Everyday Casual / Weekend formality.",
               "signalIds": [
                 "context.occasion",
@@ -485,12 +486,13 @@
         "hairStyle": {
           "name": "Architectural Buzz Cut",
           "slug": "tapered-buzz",
-          "score": 0.9,
+          "score": 0.91,
           "reasons": [
             "Fits within your preferred moderate maintenance threshold.",
             "Appropriate formality for Everyday Casual / Weekend.",
             "Directly aligns with your preferred techwear aesthetic",
-            "Directly aligns with your preferred streetwear aesthetic"
+            "Directly aligns with your preferred streetwear aesthetic",
+            "Off-neck heat-aware style promotes cooling comfort in hot, humid weather."
           ]
         },
         "groomingStyle": {
@@ -607,7 +609,7 @@
           ],
           "traceableReasons": [
             {
-              "reasonId": "rea_outfit_hot_casual_modal_01_0_1791915078513",
+              "reasonId": "rea_outfit_hot_casual_modal_01_0_1791968775724",
               "text": "Balanced regular configuration",
               "signalIds": [
                 "user.styleProfile.preferences.preferredStyleSlugs",
@@ -623,7 +625,7 @@
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_hot_casual_modal_01_1_1791915078513",
+              "reasonId": "rea_outfit_hot_casual_modal_01_1_1791968775724",
               "text": "Strong contrast between light and deep neutral values establishes crisp visual separation.",
               "signalIds": [
                 "user.styleProfile.preferences.preferredStyleSlugs",
@@ -639,7 +641,7 @@
               "isAssumed": false
             },
             {
-              "reasonId": "rea_outfit_hot_casual_modal_01_2_1791915078513",
+              "reasonId": "rea_outfit_hot_casual_modal_01_2_1791968775724",
               "text": "High breathability (140gsm ultra-breathable TENCEL modal jersey) supports natural airflow in hot conditions.",
               "signalIds": [
                 "context.temperatureLevel",
@@ -663,12 +665,13 @@
         "hairStyle": {
           "name": "Architectural Buzz Cut",
           "slug": "tapered-buzz",
-          "score": 0.9,
+          "score": 0.91,
           "reasons": [
             "Fits within your preferred moderate maintenance threshold.",
             "Appropriate formality for Everyday Casual / Weekend.",
             "Directly aligns with your preferred techwear aesthetic",
-            "Directly aligns with your preferred streetwear aesthetic"
+            "Directly aligns with your preferred streetwear aesthetic",
+            "Off-neck heat-aware style promotes cooling comfort in hot, humid weather."
           ]
         },
         "groomingStyle": {

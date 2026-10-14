@@ -22,7 +22,7 @@ export class ClimateFabricRules {
     const comfortNotes: string[] = [];
     const cautions: string[] = [];
 
-    if (!context || (!context.temperatureCelsius && !context.weather && !context.season)) {
+    if (!context || (context.temperatureCelsius === undefined && !context.weather && !context.season && !context.temperatureLevel && !context.condition)) {
       return {
         score: 0.75,
         isPermissible: true,
