@@ -4,3 +4,5 @@ node_modules
 *.log
 *.tsbuildinfo
 .vercel
+playwright-report/
+test-results/
