@@ -699,8 +699,8 @@ export default function VaelShell() {
             }}
             className={`px-4 py-2.5 uppercase tracking-wider transition border-b-2 -mb-px text-[11px] whitespace-nowrap flex items-center gap-1.5 ${
               activeView === tab.id
-                ? 'border-neutral-900 text-neutral-900 font-semibold'
-                : 'border-transparent text-neutral-400 hover:text-neutral-800'
+                ? 'border-neutral-900 text-neutral-900 dark:border-white dark:text-white font-semibold'
+                : 'border-transparent text-neutral-600 hover:text-neutral-900 dark:text-neutral-400 dark:hover:text-white'
             }`}
           >
             {tab.id === 'STUDIO 3D' && <Box className="w-3 h-3 text-indigo-500" />}
@@ -1086,14 +1086,14 @@ export default function VaelShell() {
       />
 
       {/* Minimal Editorial Footer */}
-      <footer className="mt-20 pt-8 border-t border-neutral-200 text-center text-xs font-editorial-mono text-neutral-400 flex flex-col md:flex-row justify-between items-center gap-4">
+      <footer className="mt-20 pt-8 border-t border-neutral-200 dark:border-neutral-800 text-center text-xs font-editorial-mono text-neutral-600 dark:text-neutral-400 flex flex-col md:flex-row justify-between items-center gap-4">
         <div className="flex flex-col sm:flex-row items-center gap-2">
           <span>VAEL © 2026. Your style, interpreted.</span>
-          <span className="text-[10px] text-neutral-400 border border-neutral-200 px-1.5 py-0.5 rounded-xs">
+          <span className="text-[10px] text-neutral-600 dark:text-neutral-300 border border-neutral-300 dark:border-neutral-700 px-1.5 py-0.5 rounded-xs">
             BUILD {BUILD_INFO.commitHash} · {BUILD_INFO.buildDate}
           </span>
         </div>
-        <div className="flex items-center gap-4 text-neutral-500">
+        <div className="flex items-center gap-4 text-neutral-600 dark:text-neutral-400">
           <span>SAFE · BEST MATCH · STRETCH</span>
           <span>•</span>
           <span>EVIDENCE-BASED ATTRIBUTES</span>

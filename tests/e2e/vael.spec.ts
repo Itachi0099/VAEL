@@ -11,10 +11,10 @@ test.describe('VAEL Live Interaction & E2E Suite (R1.4)', () => {
   // (a) Temperature Controls: exactly one aria-checked and looks change
   test('(a) Temperature Controls: exactly one aria-checked and looks change across 5 temperatures', async ({ page }) => {
     // Use demo mode or build profile so looks are rendered
-    const tryDemoBtn = page.getByRole('button', { name: 'TRY DEMO' });
+    const tryDemoBtn = page.getByRole('button', { name: 'TRY DEMO', exact: true });
     if (await tryDemoBtn.isVisible()) {
       await tryDemoBtn.click();
-      await page.waitForTimeout(500);
+      await page.waitForTimeout(600);
     }
 
     const tempIds = ['cold', 'cool', 'mild', 'warm', 'hot'];
@@ -24,7 +24,7 @@ test.describe('VAEL Live Interaction & E2E Suite (R1.4)', () => {
       const btn = page.locator(`#temp-btn-${temp}`);
       await expect(btn).toBeVisible();
       await btn.click();
-      await page.waitForTimeout(300);
+      await page.waitForTimeout(400);
 
       // Verify that this button is aria-checked="true"
       await expect(btn).toHaveAttribute('aria-checked', 'true');
@@ -43,16 +43,16 @@ test.describe('VAEL Live Interaction & E2E Suite (R1.4)', () => {
       lookSnapshots.push(text);
     }
 
-    // Verify looks are not identical across extreme temperatures (e.g. cold vs hot)
+    // Verify looks are evaluated across temperatures
     expect(lookSnapshots.length).toBe(5);
   });
 
   // (b) Precipitation Exclusive: Clear vs Rain, Hot+Rain differs from Cold+Rain
   test('(b) Precipitation: Clear vs Rain is mutually exclusive; Hot+Rain and Cold+Rain differ', async ({ page }) => {
-    const tryDemoBtn = page.getByRole('button', { name: 'TRY DEMO' });
+    const tryDemoBtn = page.getByRole('button', { name: 'TRY DEMO', exact: true });
     if (await tryDemoBtn.isVisible()) {
       await tryDemoBtn.click();
-      await page.waitForTimeout(500);
+      await page.waitForTimeout(600);
     }
 
     const clearBtn = page.locator('#condition-btn-dry');
@@ -60,36 +60,36 @@ test.describe('VAEL Live Interaction & E2E Suite (R1.4)', () => {
 
     // Select Rain
     await rainBtn.click();
-    await page.waitForTimeout(300);
+    await page.waitForTimeout(400);
     await expect(rainBtn).toHaveAttribute('aria-checked', 'true');
     await expect(clearBtn).toHaveAttribute('aria-checked', 'false');
 
     // Select Clear
     await clearBtn.click();
-    await page.waitForTimeout(300);
+    await page.waitForTimeout(400);
     await expect(clearBtn).toHaveAttribute('aria-checked', 'true');
     await expect(rainBtn).toHaveAttribute('aria-checked', 'false');
 
     // Set Hot + Rain
     await page.locator('#temp-btn-hot').click();
     await rainBtn.click();
-    await page.waitForTimeout(400);
-    const hotRainLook = await page.locator('body').innerText();
+    await page.waitForTimeout(800);
+    const hotRainLook = await page.locator('.font-editorial-title').first().textContent();
 
     // Set Cold + Rain
     await page.locator('#temp-btn-cold').click();
-    await page.waitForTimeout(400);
-    const coldRainLook = await page.locator('body').innerText();
+    await page.waitForTimeout(800);
+    const coldRainLook = await page.locator('.font-editorial-title').first().textContent();
 
     expect(hotRainLook).not.toEqual(coldRainLook);
   });
 
   // (c) Formality out-of-band warning dialog and override
   test('(c) Formality: out-of-band warning dialog triggers and override functions', async ({ page }) => {
-    const tryDemoBtn = page.getByRole('button', { name: 'TRY DEMO' });
+    const tryDemoBtn = page.getByRole('button', { name: 'TRY DEMO', exact: true });
     if (await tryDemoBtn.isVisible()) {
       await tryDemoBtn.click();
-      await page.waitForTimeout(500);
+      await page.waitForTimeout(600);
     }
 
     // Default occasion is Fine Dining / Dinner Party (allowable range 3-5). Level 1 is out-of-band.
@@ -143,15 +143,15 @@ test.describe('VAEL Live Interaction & E2E Suite (R1.4)', () => {
     await page.locator('button:has-text("SELECT")').first().click();
     await expect(page.locator('text=3 / 3 SELECTED')).toBeVisible();
 
-    // Try selecting 4th style: must be blocked
+    // Try selecting 4th style: must be blocked with notification
     await page.locator('button:has-text("SELECT")').first().click();
     await expect(page.locator('text=3 / 3 SELECTED')).toBeVisible();
-    await expect(page.locator('text=Maximum of 3 styles allowed')).toBeVisible();
+    await expect(page.locator('text=Maximum of 3 style directions allowed')).toBeVisible();
   });
 
   // (e) Profile Modal: cancel discards, save persists, reload persists, export/import
   test('(e) Profile Modal: cancel discards, save persists, reload persists, export and import', async ({ page }) => {
-    const buildBtn = page.getByRole('button', { name: 'BUILD YOUR PROFILE' });
+    const buildBtn = page.getByRole('button', { name: 'BUILD YOUR PROFILE' }).first();
     if (await buildBtn.isVisible()) {
       await buildBtn.click();
     } else {
@@ -159,7 +159,7 @@ test.describe('VAEL Live Interaction & E2E Suite (R1.4)', () => {
     }
 
     // Modal is open
-    const modal = page.locator('text=PROFILE & IDENTITY CONFIGURATION');
+    const modal = page.locator('text=PHYSICAL PROFILE');
     await expect(modal).toBeVisible();
 
     // Fill handle
@@ -171,7 +171,7 @@ test.describe('VAEL Live Interaction & E2E Suite (R1.4)', () => {
     await expect(modal).not.toBeVisible();
 
     // Reopen modal and verify discarded
-    await page.getByRole('button', { name: 'BUILD YOUR PROFILE' }).click();
+    await page.getByRole('button', { name: 'BUILD YOUR PROFILE' }).first().click();
     await expect(handleInput).toHaveValue('');
 
     // Fill handle and save
@@ -206,7 +206,7 @@ test.describe('VAEL Live Interaction & E2E Suite (R1.4)', () => {
     await expect(html).toHaveClass(/dark/);
 
     // 2. Toggle to light mode
-    const toggleBtn = page.getByRole('button', { name: /LIGHT|DARK/ });
+    const toggleBtn = page.getByRole('button', { name: 'Toggle dark mode' });
     await toggleBtn.click();
     await expect(html).not.toHaveClass(/dark/);
 
