@@ -1,27 +1,29 @@
 {
-  "timestamp": "2026-10-14T10:35:32.350Z",
+  "timestamp": "2026-10-15T11:17:32.835Z",
   "totalGarments": 268,
   "mappedTotal": 268,
   "unmappedCount": 0,
   "coveragePercentage": 100,
   "archetypeCounts": {
-    "shirt": 32,
+    "shirt": 26,
     "polo": 4,
     "knit": 18,
     "hoodie": 3,
-    "tee": 3,
+    "tank-camisole": 3,
     "trousers-wide": 17,
     "jeans": 3,
     "trousers-straight": 12,
-    "cargo": 2,
+    "cargo": 1,
     "shorts": 3,
+    "sweatpants": 1,
     "blazer": 11,
     "coat": 10,
     "jacket": 15,
     "sneakers": 5,
     "oxfords-derbies": 10,
-    "loafers": 9,
+    "loafers": 8,
     "boots": 10,
+    "flat-shoe": 2,
     "sandals": 4,
     "bag": 7,
     "jewelry": 6,
@@ -32,7 +34,8 @@
     "dress": 28,
     "jumpsuit": 3,
     "skirt": 30,
-    "heels": 4,
+    "blouse": 6,
+    "heels": 3,
     "evening-gown": 7
   },
   "unmappedGarments": [],
@@ -159,12 +162,6 @@
         "formality": 5
       },
       {
-        "slug": "asymmetric-draped-wrap-blouse-ecru",
-        "name": "Asymmetric Draped Georgette Wrap Blouse",
-        "subcategory": "blouse",
-        "formality": 3
-      },
-      {
         "slug": "airy-modal-lounge-tee-black",
         "name": "Airy Featherweight Modal Lounge Tee (Black)",
         "subcategory": "t-shirt",
@@ -180,36 +177,6 @@
         "slug": "fluid-camp-shirt-ecru",
         "name": "Boxy Draped Silk-Tencel Camp-Collar Shirt (Ecru)",
         "subcategory": "button-down",
-        "formality": 3
-      },
-      {
-        "slug": "silk-georgette-tie-neck-blouse-ivory",
-        "name": "Silk Georgette Lavallière Tie-Neck Blouse (Ivory)",
-        "subcategory": "blouse",
-        "formality": 4
-      },
-      {
-        "slug": "asymmetric-wrap-linen-top-natural",
-        "name": "Asymmetric Crossover Pure Linen Wrap Top (Natural Flax)",
-        "subcategory": "blouse",
-        "formality": 2
-      },
-      {
-        "slug": "poplin-peplum-blouse-white",
-        "name": "Architectural Fitted Cotton Poplin Peplum Blouse (Pure White)",
-        "subcategory": "blouse",
-        "formality": 3
-      },
-      {
-        "slug": "organza-overlay-formal-blouse-noir",
-        "name": "Silk Organza Sheer Overlay Formal Blouse (Noir)",
-        "subcategory": "blouse",
-        "formality": 5
-      },
-      {
-        "slug": "fluid-crepe-shell-top-terracotta",
-        "name": "Sleeveless Fluid Matte Crepe Shell Top (Terracotta)",
-        "subcategory": "blouse",
         "formality": 3
       },
       {
@@ -387,7 +354,7 @@
         "formality": 1
       }
     ],
-    "tee": [
+    "tank-camisole": [
       {
         "slug": "ribbed-tank-white",
         "name": "Fine Ribbed Athletic Tank (Chalk White)",
@@ -611,12 +578,6 @@
         "name": "Articulated Technical Cargo Pants",
         "subcategory": "cargo",
         "formality": 2
-      },
-      {
-        "slug": "loopback-sweatpants-grey",
-        "name": "Heavyweight Loopback Sweatpants",
-        "subcategory": "sweatpants",
-        "formality": 1
       }
     ],
     "shorts": [
@@ -636,6 +597,14 @@
         "slug": "vintage-cutoff-denim-shorts",
         "name": "Vintage Cut-Off Denim Shorts",
         "subcategory": "shorts",
+        "formality": 1
+      }
+    ],
+    "sweatpants": [
+      {
+        "slug": "loopback-sweatpants-grey",
+        "name": "Heavyweight Loopback Sweatpants",
+        "subcategory": "sweatpants",
         "formality": 1
       }
     ],
@@ -969,12 +938,6 @@
         "formality": 4
       },
       {
-        "slug": "backless-leather-mules-black",
-        "name": "Square-Toe Backless Leather Mules",
-        "subcategory": "mules",
-        "formality": 3
-      },
-      {
         "slug": "suede-ergonomic-clogs-taupe",
         "name": "Suede Ergonomic Closed-Toe Clogs",
         "subcategory": "clog",
@@ -1071,6 +1034,20 @@
         "name": "Weatherproof Sculpted Fluid Chelsea Boots (Pitch Black)",
         "subcategory": "boots",
         "formality": 4
+      }
+    ],
+    "flat-shoe": [
+      {
+        "slug": "backless-leather-mules-black",
+        "name": "Square-Toe Backless Leather Mules",
+        "subcategory": "mules",
+        "formality": 3
+      },
+      {
+        "slug": "unstructured-leather-ballet-flats-black",
+        "name": "Unstructured Butter Calfskin Ballet Flats",
+        "subcategory": "ballet-flat",
+        "formality": 3
       }
     ],
     "sandals": [
@@ -1633,13 +1610,45 @@
         "formality": 2
       }
     ],
-    "heels": [
+    "blouse": [
       {
-        "slug": "unstructured-leather-ballet-flats-black",
-        "name": "Unstructured Butter Calfskin Ballet Flats",
-        "subcategory": "ballet-flat",
+        "slug": "asymmetric-draped-wrap-blouse-ecru",
+        "name": "Asymmetric Draped Georgette Wrap Blouse",
+        "subcategory": "blouse",
         "formality": 3
       },
+      {
+        "slug": "silk-georgette-tie-neck-blouse-ivory",
+        "name": "Silk Georgette Lavallière Tie-Neck Blouse (Ivory)",
+        "subcategory": "blouse",
+        "formality": 4
+      },
+      {
+        "slug": "asymmetric-wrap-linen-top-natural",
+        "name": "Asymmetric Crossover Pure Linen Wrap Top (Natural Flax)",
+        "subcategory": "blouse",
+        "formality": 2
+      },
+      {
+        "slug": "poplin-peplum-blouse-white",
+        "name": "Architectural Fitted Cotton Poplin Peplum Blouse (Pure White)",
+        "subcategory": "blouse",
+        "formality": 3
+      },
+      {
+        "slug": "organza-overlay-formal-blouse-noir",
+        "name": "Silk Organza Sheer Overlay Formal Blouse (Noir)",
+        "subcategory": "blouse",
+        "formality": 5
+      },
+      {
+        "slug": "fluid-crepe-shell-top-terracotta",
+        "name": "Sleeveless Fluid Matte Crepe Shell Top (Terracotta)",
+        "subcategory": "blouse",
+        "formality": 3
+      }
+    ],
+    "heels": [
       {
         "slug": "block-heel-suede-mules-taupe",
         "name": "50mm Suede Block-Heel Mules",

@@ -177,6 +177,225 @@ describe('CompositionGenerator Constrained Combinatorial Suite (A2 & A7)', () =>
     }
   });
 
+  it('Hard Filters - Modesty: covered-both strictly excludes shorts, tank tops, and low-coverage items across all candidates', () => {
+    const user = createBaseTestUser();
+    user.styleProfile.preferences.modestyLevel = 'covered-both';
+    const context: Context = {
+      occasion: knowledgeBase.getOccasionBySlug('weekend')!,
+      targetFormality: 1,
+      temperatureLevel: 'hot',
+      condition: 'dry',
+    };
+
+    const candidates = CompositionGenerator.generateCandidates(user, context);
+    expect(candidates.length).toBeGreaterThan(0);
+    for (const c of candidates) {
+      for (const item of c.items) {
+        expect(item.garment.modestyRating).not.toBe('low-coverage');
+        expect(item.garment.subcategory).not.toContain('shorts');
+        expect(item.garment.subcategory).not.toContain('tank');
+        if (item.garment.category === 'bottom') {
+          expect(item.garment.length).not.toBe('cropped');
+        }
+      }
+    }
+  });
+
+  it('Hard Filters - Climate Rain: strictly requires water-resistant footwear and outerwear during precipitation', () => {
+    const user = createBaseTestUser();
+    const context: Context = {
+      occasion: knowledgeBase.getOccasionBySlug('office')!,
+      targetFormality: 3,
+      temperatureLevel: 'mild',
+      condition: 'rain',
+    };
+
+    const candidates = CompositionGenerator.generateCandidates(user, context);
+    expect(candidates.length).toBeGreaterThan(0);
+    for (const c of candidates) {
+      const footwear = c.items.find((i) => i.garment.category === 'footwear');
+      expect(footwear).toBeDefined();
+      expect(footwear?.garment.waterResistance).not.toBe('none');
+
+      const outerwear = c.items.find((i) => i.garment.category === 'outerwear');
+      if (outerwear) {
+        expect(outerwear.garment.waterResistance).not.toBe('none');
+      }
+    }
+  });
+
+  it('Hard Filters - Preferred Formality Range: generated candidate outfits fall strictly within bounds', () => {
+    const user = createBaseTestUser();
+    user.styleProfile.preferences.preferredFormalityRange = [2, 3];
+    const context: Context = {
+      occasion: knowledgeBase.getOccasionBySlug('dinner')!,
+      targetFormality: 3,
+      temperatureLevel: 'mild',
+      condition: 'dry',
+    };
+
+    const candidates = CompositionGenerator.generateCandidates(user, context);
+    expect(candidates.length).toBeGreaterThan(0);
+    for (const c of candidates) {
+      expect(c.formality).toBeGreaterThanOrEqual(2);
+      expect(c.formality).toBeLessThanOrEqual(3);
+    }
+  });
+
+  it('Occasion Vetoes - Restricted Garment Categories: restricted pieces are never generated for formal occasions', () => {
+    const user = createBaseTestUser();
+    const jobInterviewOccasion = knowledgeBase.getOccasionBySlug('job-interview')!;
+    const context: Context = {
+      occasion: jobInterviewOccasion,
+      targetFormality: 4,
+      temperatureLevel: 'mild',
+      condition: 'dry',
+    };
+
+    const candidates = CompositionGenerator.generateCandidates(user, context);
+    expect(candidates.length).toBeGreaterThan(0);
+    const restrictions = jobInterviewOccasion.restrictedGarmentCategories || [];
+
+    for (const c of candidates) {
+      for (const item of c.items) {
+        for (const r of restrictions) {
+          expect(item.garment.subcategory.toLowerCase()).not.toContain(r.toLowerCase());
+          expect(item.garment.slug.toLowerCase()).not.toContain(r.toLowerCase());
+        }
+      }
+    }
+  });
+
+  it('Occasion Vetoes - Ceremonial Evening Isolation: gowns, tuxedos, and marcella shirts are vetoed outside ceremonial contexts', () => {
+    const user = createBaseTestUser();
+    const context: Context = {
+      occasion: knowledgeBase.getOccasionBySlug('office')!,
+      targetFormality: 3,
+      temperatureLevel: 'mild',
+      condition: 'dry',
+    };
+
+    const candidates = CompositionGenerator.generateCandidates(user, context);
+    expect(candidates.length).toBeGreaterThan(0);
+    for (const c of candidates) {
+      for (const item of c.items) {
+        expect(item.garment.subcategory).not.toContain('gown');
+        expect(item.garment.slug).not.toContain('tuxedo');
+        expect(item.garment.slug).not.toContain('marcella');
+        expect(item.garment.slug).not.toContain('patent-evening');
+      }
+    }
+  });
+
+  it('Occasion Formality Range Discipline: candidate garments respect occasion allowable formality range', () => {
+    const user = createBaseTestUser();
+    const casualOccasion = knowledgeBase.getOccasionBySlug('casual')!;
+    const [minF, maxF] = casualOccasion.allowableFormalityRange;
+    const context: Context = {
+      occasion: casualOccasion,
+      targetFormality: 1,
+      temperatureLevel: 'warm',
+      condition: 'dry',
+    };
+
+    const candidates = CompositionGenerator.generateCandidates(user, context);
+    expect(candidates.length).toBeGreaterThan(0);
+    for (const c of candidates) {
+      for (const item of c.items) {
+        expect(item.garment.formality).toBeGreaterThanOrEqual(minF - 1);
+        expect(item.garment.formality).toBeLessThanOrEqual(maxF + 1);
+      }
+    }
+  });
+
+  it('Coherence Rules - Color Palette Limit: outfits have <= 3 non-neutral colors', () => {
+    const user = createBaseTestUser();
+    const context: Context = {
+      occasion: knowledgeBase.getOccasionBySlug('casual')!,
+      targetFormality: 2,
+      temperatureLevel: 'mild',
+      condition: 'dry',
+    };
+
+    const candidates = CompositionGenerator.generateCandidates(user, context);
+    expect(candidates.length).toBeGreaterThan(0);
+    for (const c of candidates) {
+      const nonNeutralColors = new Set(
+        c.items
+          .map((i) => i.garment)
+          .filter((g) => g.color.tone !== 'neutral')
+          .map((g) => g.color.name.toLowerCase())
+      );
+      expect(nonNeutralColors.size).toBeLessThanOrEqual(3);
+    }
+  });
+
+  it('Expression Invariance: Feminine expression candidates have mean garment coding >= 0.25', () => {
+    const user = createBaseTestUser();
+    user.styleProfile.preferences.styleExpression = 'feminine';
+    user.styleProfile.preferences.genderCodingDirection = 'feminine';
+    const context: Context = {
+      occasion: knowledgeBase.getOccasionBySlug('dinner')!,
+      targetFormality: 3,
+      temperatureLevel: 'mild',
+      condition: 'dry',
+    };
+
+    const candidates = CompositionGenerator.generateCandidates(user, context);
+    expect(candidates.length).toBeGreaterThan(0);
+    for (const c of candidates) {
+      const foundation = c.items
+        .map((i) => i.garment)
+        .filter((g) => g.category !== 'accessory' && g.category !== 'footwear');
+      const meanCoding =
+        foundation.reduce((acc, g) => {
+          const coding =
+            g.garmentCoding !== undefined
+              ? g.garmentCoding
+              : g.genderCoding === 'feminine'
+                ? 1.0
+                : g.genderCoding === 'masculine'
+                  ? -1.0
+                  : 0;
+          return acc + coding;
+        }, 0) / foundation.length;
+      expect(meanCoding).toBeGreaterThanOrEqual(0.25);
+    }
+  });
+
+  it('Expression Invariance: Masculine expression candidates have mean garment coding <= -0.25', () => {
+    const user = createBaseTestUser();
+    user.styleProfile.preferences.styleExpression = 'masculine';
+    user.styleProfile.preferences.genderCodingDirection = 'masculine';
+    const context: Context = {
+      occasion: knowledgeBase.getOccasionBySlug('dinner')!,
+      targetFormality: 3,
+      temperatureLevel: 'mild',
+      condition: 'dry',
+    };
+
+    const candidates = CompositionGenerator.generateCandidates(user, context);
+    expect(candidates.length).toBeGreaterThan(0);
+    for (const c of candidates) {
+      const foundation = c.items
+        .map((i) => i.garment)
+        .filter((g) => g.category !== 'accessory' && g.category !== 'footwear');
+      const meanCoding =
+        foundation.reduce((acc, g) => {
+          const coding =
+            g.garmentCoding !== undefined
+              ? g.garmentCoding
+              : g.genderCoding === 'feminine'
+                ? 1.0
+                : g.genderCoding === 'masculine'
+                  ? -1.0
+                  : 0;
+          return acc + coding;
+        }, 0) / foundation.length;
+      expect(meanCoding).toBeLessThanOrEqual(-0.25);
+    }
+  });
+
   it('Ranked list API: getRankedCandidateLooks exposes full ranked candidates with stable ordering and non-empty scores', () => {
     const user = createBaseTestUser();
     const context: Context = {

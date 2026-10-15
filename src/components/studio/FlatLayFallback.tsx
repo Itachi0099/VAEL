@@ -27,16 +27,16 @@ export const FlatLayFallback: React.FC<FlatLayFallbackProps> = ({
   ];
 
   return (
-    <div className="w-full h-full bg-[#f8f7f4] p-6 md:p-10 overflow-y-auto flex flex-col justify-center items-center font-editorial-mono">
+    <div className="w-full h-full bg-[#f8f7f4] dark:bg-[#121212] p-6 md:p-10 overflow-y-auto flex flex-col justify-center items-center font-editorial-mono">
       <div className="max-w-2xl w-full space-y-6">
         <div className="text-center space-y-1">
-          <span className="text-[10px] uppercase tracking-widest text-neutral-400">
+          <span className="text-[10px] uppercase tracking-widest text-neutral-400 dark:text-neutral-500">
             EDITORIAL FLAT-LAY PRESENTATION
           </span>
-          <h2 className="text-lg font-editorial-title uppercase tracking-wide text-neutral-900">
+          <h2 className="text-lg font-editorial-title uppercase tracking-wide text-neutral-900 dark:text-neutral-100">
             {look.title}
           </h2>
-          <p className="text-xs text-neutral-500 font-sans">
+          <p className="text-xs text-neutral-500 dark:text-neutral-400 font-sans">
             Score: {Math.round(look.totalScore * 100)}% · Formality Level {look.outfit.formality}
           </p>
         </div>
@@ -54,12 +54,13 @@ export const FlatLayFallback: React.FC<FlatLayFallbackProps> = ({
               <div
                 key={type}
                 onClick={() => onSelectSlot(type)}
-                className={`p-4 border transition cursor-pointer relative bg-white flex flex-col justify-between min-h-[120px] ${
+                className={`p-4 border transition cursor-pointer relative bg-white dark:bg-[#18181b] flex flex-col justify-between min-h-[120px] ${
                   isSelected
-                    ? 'border-neutral-950 ring-1 ring-neutral-950 shadow-md'
-                    : 'border-neutral-200 hover:border-neutral-400'
+                    ? 'border-neutral-950 dark:border-white ring-1 ring-neutral-950 dark:ring-white shadow-md'
+                    : 'border-neutral-200 dark:border-neutral-800 hover:border-neutral-400 dark:hover:border-neutral-600'
                 }`}
               >
+
                 <div>
                   <div className="flex items-center justify-between text-[9px] uppercase tracking-wider text-neutral-400 mb-1">
                     <span>{title}</span>

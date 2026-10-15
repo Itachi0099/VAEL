@@ -6,11 +6,14 @@ export type ArchetypeId =
   | 'polo'
   | 'knit'
   | 'hoodie'
+  | 'tank-camisole'
+  | 'blouse'
   | 'trousers-wide'
   | 'trousers-straight'
   | 'trousers-slim'
   | 'jeans'
   | 'cargo'
+  | 'sweatpants'
   | 'shorts'
   | 'skirt'
   | 'dress'
@@ -25,6 +28,7 @@ export type ArchetypeId =
   | 'sneakers'
   | 'sandals'
   | 'heels'
+  | 'flat-shoe'
   | 'bag'
   | 'eyewear'
   | 'belt'
@@ -61,19 +65,22 @@ export function mapGarmentToArchetype(garment: GarmentWithVisual): ArchetypeId {
   const sil = (garment.silhouette || '').toLowerCase();
 
   if (cat === 'top') {
-    if (sub.includes('tee') || sub.includes('tank') || sub.includes('camisole')) return 'tee';
+    if (sub.includes('tank') || sub.includes('camisole')) return 'tank-camisole';
+    if (sub.includes('blouse')) return 'blouse';
+    if (sub.includes('tee')) return 'tee';
     if (sub.includes('polo') || sub.includes('henley')) return 'polo';
     if (sub.includes('hoodie') || sub.includes('sweatshirt')) return 'hoodie';
     if (sub.includes('knit') || sub.includes('longsleeve')) return 'knit';
-    if (sub.includes('shirt') || sub.includes('blouse') || sub.includes('tunic')) return 'shirt';
+    if (sub.includes('shirt') || sub.includes('tunic')) return 'shirt';
     return 'shirt';
   }
 
   if (cat === 'bottom') {
+    if (sub.includes('sweatpants') || sub.includes('jogger')) return 'sweatpants';
     if (sub.includes('skirt')) return 'skirt';
     if (sub.includes('shorts')) return 'shorts';
     if (sub.includes('jeans')) return 'jeans';
-    if (sub.includes('cargo') || sub.includes('sweatpants')) return 'cargo';
+    if (sub.includes('cargo')) return 'cargo';
     if (sub.includes('trousers') || sub.includes('pants') || sub.includes('chinos')) {
       if (sil.includes('wide') || fit === 'relaxed' || fit === 'oversized') return 'trousers-wide';
       if (fit === 'slim') return 'trousers-slim';
@@ -98,15 +105,17 @@ export function mapGarmentToArchetype(garment: GarmentWithVisual): ArchetypeId {
 
   if (cat === 'footwear') {
     if (sub.includes('boot')) return 'boots';
-    if (sub.includes('loafer') || sub.includes('mule') || sub.includes('clog')) return 'loafers';
+    if (sub.includes('ballet') || sub.includes('flat') || sub.includes('mule')) return 'flat-shoe';
+    if (sub.includes('loafer') || sub.includes('clog')) return 'loafers';
     if (sub.includes('oxford') || sub.includes('derb') || sub.includes('monk') || sub.includes('dress-shoe')) {
       return 'oxfords-derbies';
     }
     if (sub.includes('sneaker')) return 'sneakers';
     if (sub.includes('sandal')) return 'sandals';
-    if (sub.includes('heel') || sub.includes('ballet-flat')) return 'heels';
-    return 'loafers';
+    if (sub.includes('heel')) return 'heels';
+    return 'flat-shoe';
   }
+
 
   if (cat === 'accessory') {
     if (sub.includes('bag')) return 'bag';

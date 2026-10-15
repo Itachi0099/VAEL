@@ -77,8 +77,9 @@ function runArchetypeAudit() {
 
   md += `\n## Unmapped Items\n\n`;
   if (unmappedGarments.length === 0) {
-    md += `**None.** All 268 catalog garments map cleanly into one of the 30 parametric 3D archetypes.\n`;
+    md += `**None.** All 268 catalog garments map cleanly into one of the 34 parametric 3D archetypes.\n`;
   } else {
+
     for (const g of unmappedGarments) {
       md += `- \`${g.slug}\` (${g.name}) — Category: ${g.category}, Subcategory: ${g.subcategory}\n`;
     }

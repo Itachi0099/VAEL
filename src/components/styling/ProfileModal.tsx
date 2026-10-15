@@ -113,6 +113,14 @@ export function ProfileModal({
 
   if (!isOpen) return null;
 
+  const handleCancel = () => {
+    setFormData({
+      ...DEFAULT_PROFILE_FORM,
+      ...initialData,
+    });
+    onClose();
+  };
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     onSave(formData);
@@ -122,6 +130,7 @@ export function ProfileModal({
   const update = <K extends keyof ProfileFormData>(key: K, val: ProfileFormData[K]) => {
     setFormData((prev) => ({ ...prev, [key]: val }));
   };
+
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-xs font-editorial-mono">
@@ -136,11 +145,13 @@ export function ProfileModal({
             </p>
           </div>
           <button
-            onClick={onClose}
-            className="p-1 text-neutral-400 hover:text-black transition"
+            onClick={handleCancel}
+            aria-label="Close profile editor"
+            className="p-1 text-neutral-400 hover:text-black dark:hover:text-white transition"
           >
             <X className="w-5 h-5" />
           </button>
+
         </div>
 
         <form onSubmit={handleSubmit} className="space-y-6 text-xs">
@@ -938,11 +949,12 @@ export function ProfileModal({
           <div className="flex items-center justify-end gap-3 pt-3 border-t border-neutral-200">
             <button
               type="button"
-              onClick={onClose}
-              className="px-4 py-2 border border-neutral-300 text-neutral-700 hover:border-black transition uppercase tracking-wider text-[11px]"
+              onClick={handleCancel}
+              className="px-4 py-2 border border-neutral-300 dark:border-neutral-700 text-neutral-700 dark:text-neutral-300 hover:border-black dark:hover:border-white transition uppercase tracking-wider text-[11px]"
             >
               CANCEL
             </button>
+
             <button
               type="submit"
               className="px-6 py-2 bg-neutral-900 hover:bg-black text-white transition uppercase tracking-wider text-[11px] font-semibold flex items-center gap-1.5"

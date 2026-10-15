@@ -26,29 +26,29 @@ export function ProfileHeader({
   const fileInputRef = useRef<HTMLInputElement>(null);
   if (mode === 'EMPTY' || !visual) {
     return (
-      <div className="border border-neutral-300 bg-neutral-50/60 p-5 font-editorial-mono text-xs">
+      <div className="border border-neutral-300 dark:border-neutral-700 bg-neutral-50/60 dark:bg-neutral-900/60 p-5 font-editorial-mono text-xs">
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
           <div>
             <div className="flex items-center gap-2">
-              <span className="w-2 h-2 rounded-full bg-neutral-400"></span>
-              <span className="uppercase tracking-widest font-semibold text-neutral-700">
+              <span className="w-2 h-2 rounded-full bg-neutral-400 dark:bg-neutral-500"></span>
+              <span className="uppercase tracking-widest font-semibold text-neutral-700 dark:text-neutral-300">
                 PROFILE REQUIRED
               </span>
             </div>
-            <p className="text-[11px] text-neutral-500 mt-1 max-w-md normal-case font-sans">
+            <p className="text-[11px] text-neutral-500 dark:text-neutral-400 mt-1 max-w-md normal-case font-sans">
               Tell us a little about you to get looks that fit. Anything we don't know, we'll say so.
             </p>
           </div>
           <div className="flex items-center gap-2.5">
             <button
               onClick={onUseDemo}
-              className="px-3.5 py-1.5 border border-neutral-300 bg-white hover:border-black text-neutral-800 transition tracking-wider uppercase text-[11px]"
+              className="px-3.5 py-1.5 border border-neutral-300 dark:border-neutral-700 bg-white dark:bg-neutral-800 hover:border-black dark:hover:border-white text-neutral-800 dark:text-neutral-200 transition tracking-wider uppercase text-[11px]"
             >
               TRY DEMO
             </button>
             <button
               onClick={onOpenEditor}
-              className="px-3.5 py-1.5 bg-neutral-900 hover:bg-black text-white transition tracking-wider uppercase text-[11px] font-semibold"
+              className="px-3.5 py-1.5 bg-neutral-900 hover:bg-black dark:bg-white dark:hover:bg-neutral-200 text-white dark:text-black transition tracking-wider uppercase text-[11px] font-semibold"
             >
               BUILD YOUR PROFILE
             </button>
@@ -69,19 +69,20 @@ export function ProfileHeader({
   return (
     <div className={`p-4 border font-editorial-mono text-xs ${
       isDemo
-        ? 'border-dashed border-neutral-300 bg-neutral-50/80'
-        : 'border-neutral-900 bg-white shadow-xs'
+        ? 'border-dashed border-neutral-300 dark:border-neutral-700 bg-neutral-50/80 dark:bg-neutral-900/60'
+        : 'border-neutral-900 dark:border-neutral-700 bg-white dark:bg-[#161619] shadow-xs'
     }`}>
-      <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 pb-3 border-b border-neutral-200 mb-3">
+      <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 pb-3 border-b border-neutral-200 dark:border-neutral-800 mb-3">
         <div className="flex items-center gap-2.5">
-          <span className={`w-2 h-2 rounded-full ${isDemo ? 'bg-amber-600' : 'bg-neutral-950'}`}></span>
-          <span className="uppercase tracking-widest font-semibold text-neutral-900">
+          <span className={`w-2 h-2 rounded-full ${isDemo ? 'bg-amber-600' : 'bg-neutral-950 dark:bg-white'}`}></span>
+          <span className="uppercase tracking-widest font-semibold text-neutral-900 dark:text-neutral-100">
             {isDemo ? 'DEMO MODE — SAMPLE PROFILE' : 'YOUR PROFILE'}
           </span>
-          <span className="text-[10px] text-neutral-500 uppercase tracking-widest px-1.5 py-0.5 bg-neutral-200">
+          <span className="text-[10px] text-neutral-500 dark:text-neutral-400 uppercase tracking-widest px-1.5 py-0.5 bg-neutral-200 dark:bg-neutral-800">
             {isDemo ? 'READ-ONLY SAMPLE' : 'USER ENTERED'}
           </span>
         </div>
+
 
         <div className="flex items-center gap-2">
           {isDemo ? (

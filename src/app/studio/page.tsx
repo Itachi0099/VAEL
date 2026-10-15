@@ -6,20 +6,50 @@ import { ArrowLeft, Box, CheckCircle2, ShieldCheck, Cpu, Info } from 'lucide-rea
 import { DynamicStudioViewer } from '@/components/studio';
 import { SAMPLE_STUDIO_PROFILES, StudioProfileOption } from '@/components/studio/sample-profiles';
 import { BUILD_INFO } from '@/core/version';
+import { knowledgeBase } from '@/core/knowledge';
 
 export default function StudioPage() {
   const [selectedProfileId, setSelectedProfileId] = useState<string>('profile_01');
+  const [currentUserProfile, setCurrentUserProfile] = useState<StudioProfileOption | null>(null);
   const [isFeatureFlagActive, setIsFeatureFlagActive] = useState<boolean>(true);
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
     setMounted(true);
-    // Studio is active by default for R2.0 spike demonstration
     setIsFeatureFlagActive(true);
+    try {
+      const stored = localStorage.getItem('vael_user_profile');
+      if (stored) {
+        const u = JSON.parse(stored);
+        if (u && (u.id || u.handle)) {
+          setCurrentUserProfile({
+            id: 'current_user',
+            name: `My Profile (${u.name || u.handle || 'Configured'})`,
+            badge: `${(u.styleProfile?.preferences?.styleExpression || 'CURRENT').toUpperCase()}`,
+            description: `Active configured profile: ${u.styleProfile?.dominantAestheticSlugs?.join(', ') || 'Custom aesthetics'} evaluated under live engine.`,
+            user: u,
+            context: {
+              occasion: knowledgeBase.getOccasionBySlug('dinner') || knowledgeBase.getAllOccasions()[0],
+              targetFormality: 3,
+              temperatureLevel: 'mild',
+              temperatureCelsius: 19,
+              condition: 'dry',
+              isWeatherConfirmed: true,
+            },
+          });
+        }
+      }
+    } catch (e) {
+      console.warn('Could not read user profile from storage', e);
+    }
   }, []);
 
+  const allProfileOptions: StudioProfileOption[] = currentUserProfile
+    ? [currentUserProfile, ...SAMPLE_STUDIO_PROFILES]
+    : SAMPLE_STUDIO_PROFILES;
+
   const activeProfileOption: StudioProfileOption =
-    SAMPLE_STUDIO_PROFILES.find((p) => p.id === selectedProfileId) || SAMPLE_STUDIO_PROFILES[0];
+    allProfileOptions.find((p) => p.id === selectedProfileId) || SAMPLE_STUDIO_PROFILES[0];
 
   return (
     <div className="min-h-screen bg-[#faf9f6] text-neutral-900 font-editorial-mono">
@@ -100,15 +130,15 @@ export default function StudioPage() {
             <div className="bg-white border border-neutral-300 p-4 space-y-3 shadow-2xs">
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-neutral-200 pb-2">
                 <span className="text-xs uppercase tracking-wider font-semibold text-neutral-900">
-                  SELECT REAL ENGINE PROFILE (3 SAMPLE CONTEXTS):
+                  SELECT REAL ENGINE PROFILE {currentUserProfile ? '(CURRENT + 3 SAMPLES)' : '(3 SAMPLE CONTEXTS)'}:
                 </span>
                 <span className="text-[11px] text-neutral-500">
                   Evaluated via read-only combinatorial generator
                 </span>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
-                {SAMPLE_STUDIO_PROFILES.map((p) => {
+              <div className={`grid grid-cols-1 ${currentUserProfile ? 'md:grid-cols-4' : 'md:grid-cols-3'} gap-3`}>
+                {allProfileOptions.map((p) => {
                   const isSelected = p.id === selectedProfileId;
                   return (
                     <button
@@ -191,8 +221,9 @@ export default function StudioPage() {
                   <span className="text-neutral-400 text-[9px] uppercase block">ARCHETYPE COVERAGE</span>
                   <span className="font-semibold text-neutral-900 text-base">268 / 268 (100%)</span>
                   <p className="text-[10px] text-neutral-600 font-sans">
-                    Every garment in catalog maps cleanly to one of 30 parametric 3D archetypes.
+                    Every garment in catalog maps cleanly to one of 34 parametric 3D archetypes.
                   </p>
+
                 </div>
 
                 <div className="p-3 bg-[#faf9f6] border border-neutral-200 space-y-1">

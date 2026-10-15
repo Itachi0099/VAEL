@@ -22,8 +22,9 @@ export function runEvaluationSuite(): {
   results: ScenarioResult[];
 } {
   console.log('======================================================================');
-  console.log('           VAEL FASHION INTELLIGENCE — EVALUATION HARNESS             ');
+  console.log('           VAEL STYLING ENGINE — EVALUATION HARNESS             ');
   console.log('======================================================================\n');
+
 
   // Step 0: Validate Knowledge Base First
   console.log('>>> [PRE-FLIGHT] Validating Fashion Knowledge Base Integrity...');

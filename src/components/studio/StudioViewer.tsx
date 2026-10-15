@@ -118,20 +118,21 @@ export const StudioViewer: React.FC<StudioViewerProps> = ({
   );
 
   return (
-    <div className="w-full h-[680px] md:h-[760px] bg-[#faf9f6] border border-neutral-300 relative flex flex-col font-editorial-mono select-none overflow-hidden">
+    <div className="w-full h-[680px] md:h-[760px] bg-[#faf9f6] dark:bg-[#121212] border border-neutral-300 dark:border-neutral-800 relative flex flex-col font-editorial-mono select-none overflow-hidden">
       {/* 1. Technical Top Bar */}
-      <div className="px-4 py-3 border-b border-neutral-200 bg-white/90 backdrop-blur-xs flex flex-wrap items-center justify-between gap-3 z-20">
+      <div className="px-4 py-3 border-b border-neutral-200 dark:border-neutral-800 bg-white/90 dark:bg-neutral-900/90 backdrop-blur-xs flex flex-wrap items-center justify-between gap-3 z-20">
         <div className="flex items-center gap-3">
           <div className="flex items-center gap-1.5">
             <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-            <span className="text-[11px] font-semibold uppercase tracking-wider text-neutral-900">
+            <span className="text-[11px] font-semibold uppercase tracking-wider text-neutral-900 dark:text-neutral-100">
               VAEL 3D STUDIO v0
             </span>
           </div>
-          <span className="text-[10px] text-neutral-400 border-l border-neutral-200 pl-3 hidden sm:inline">
+          <span className="text-[10px] text-neutral-400 dark:text-neutral-500 border-l border-neutral-200 dark:border-neutral-700 pl-3 hidden sm:inline">
             Illustration, not a fit simulation.
           </span>
         </div>
+
 
         {/* Look Meta & Mode Controls */}
         <div className="flex items-center gap-2">
@@ -355,10 +356,10 @@ export const StudioViewer: React.FC<StudioViewerProps> = ({
       </div>
 
       {/* 3. Bottom Slot Inspector & Shuffle Bar */}
-      <div className="p-3 border-t border-neutral-200 bg-white flex flex-wrap items-center justify-between gap-3 z-20">
+      <div className="p-3 border-t border-neutral-200 dark:border-neutral-800 bg-white dark:bg-neutral-900 flex flex-wrap items-center justify-between gap-3 z-20">
         {/* Interactive Slots Row */}
         <div className="flex items-center gap-1.5 overflow-x-auto py-1">
-          <span className="text-[10px] uppercase tracking-wider text-neutral-400 mr-1 hidden sm:inline">
+          <span className="text-[10px] uppercase tracking-wider text-neutral-400 dark:text-neutral-500 mr-1 hidden sm:inline">
             SLOTS:
           </span>
           {(['one-piece', 'top', 'bottom', 'outerwear', 'footwear', 'accessory'] as const).map(
@@ -374,10 +375,11 @@ export const StudioViewer: React.FC<StudioViewerProps> = ({
                   onClick={() => setSelectedSlot(isSelected ? null : slotType)}
                   className={`px-2.5 py-1.5 border text-[10px] uppercase tracking-wider transition flex items-center gap-1.5 rounded-xs ${
                     isSelected
-                      ? 'border-neutral-900 bg-neutral-900 text-white font-semibold'
-                      : 'border-neutral-200 hover:border-neutral-400 bg-neutral-50 text-neutral-800'
+                      ? 'border-neutral-900 bg-neutral-900 text-white dark:border-white dark:bg-white dark:text-black font-semibold'
+                      : 'border-neutral-200 dark:border-neutral-700 hover:border-neutral-400 dark:hover:border-neutral-500 bg-neutral-50 dark:bg-neutral-800 text-neutral-800 dark:text-neutral-200'
                   }`}
                 >
+
                   <div
                     className="w-2.5 h-2.5 rounded-full border border-neutral-300"
                     style={{ backgroundColor: slot.garment.color.hex }}

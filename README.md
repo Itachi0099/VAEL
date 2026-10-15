@@ -1,9 +1,10 @@
 # VAEL
 
-> **Personal Styling Intelligence & Curated Visual Architecture**  
+> **Personal Styling System & Curated Visual Architecture**  
 > *"Personal styling, explained. Your style, interpreted."*
 
-VAEL is an editorial personal styling system and deterministic fashion intelligence engine. Rather than generating synthetic imagery or offering generic chatbot prose, VAEL analyzes how an individual presents themselves—synthesizing facial geometry, hair texture, body line, textile physics, climate constraints, and personal aesthetics into coherent, elevated complete looks.
+VAEL is an editorial personal styling system and deterministic recommendation engine. Rather than generating synthetic imagery or offering generic chatbot prose, VAEL analyzes how an individual presents themselves—synthesizing facial geometry, hair texture, body line, textile physics, climate constraints, and personal aesthetics into coherent, elevated complete looks.
+
 
 Live Deployment: [https://vael-eight.vercel.app](https://vael-eight.vercel.app)
 

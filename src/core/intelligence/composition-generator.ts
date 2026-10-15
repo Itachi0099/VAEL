@@ -373,6 +373,18 @@ export class CompositionGenerator {
         score += cFit.score * 0.4;
       }
 
+      // Expression affinity bonus to ensure candidates align with user expression
+      const expr = user.styleProfile.preferences.styleExpression || user.styleProfile.preferences.genderCodingDirection;
+      if (expr === 'masculine') {
+        const isMasc = g.garmentCoding !== undefined ? g.garmentCoding < 0 : g.genderCoding === 'masculine';
+        if (isMasc) score += 0.5;
+      } else if (expr === 'feminine') {
+        const isFem = g.garmentCoding !== undefined ? g.garmentCoding > 0 : g.genderCoding === 'feminine';
+        if (isFem) score += 0.5;
+      } else if (expr === 'androgynous' && g.fluidTag) {
+        score += 0.5;
+      }
+
       return { garment: g, score };
     });
 

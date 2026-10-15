@@ -67,11 +67,11 @@ const SceneController: React.FC<{
         onEnd={handleEndInteraction}
       />
 
-      {/* Editorial Soft Studio Lighting */}
-      <ambientLight intensity={0.85} color="#ffffff" />
+      {/* Editorial Soft Studio Lighting (Adaptive to Dark Mode Tokens) */}
+      <ambientLight intensity={typeof document !== 'undefined' && document.documentElement.classList.contains('dark') ? 0.95 : 0.85} color={typeof document !== 'undefined' && document.documentElement.classList.contains('dark') ? "#f0f0ff" : "#ffffff"} />
       <directionalLight
         position={[3, 4, 3]}
-        intensity={1.2}
+        intensity={typeof document !== 'undefined' && document.documentElement.classList.contains('dark') ? 1.4 : 1.2}
         castShadow
         shadow-mapSize={[1024, 1024]}
         shadow-camera-near={0.5}
@@ -79,9 +79,18 @@ const SceneController: React.FC<{
         shadow-bias={-0.0001}
       />
       {/* Soft Fill Light */}
-      <directionalLight position={[-3, 2, -2]} intensity={0.5} color="#f4ede6" />
-      {/* Subtle Rim / Contour Light */}
-      <directionalLight position={[0, 3, -4]} intensity={0.4} color="#e6f0fa" />
+      <directionalLight
+        position={[-3, 2, -2]}
+        intensity={typeof document !== 'undefined' && document.documentElement.classList.contains('dark') ? 0.65 : 0.5}
+        color={typeof document !== 'undefined' && document.documentElement.classList.contains('dark') ? "#d0d8ef" : "#f4ede6"}
+      />
+      {/* Subtle Rim / Contour Light for clear silhouette against dark canvas */}
+      <directionalLight
+        position={[0, 3, -4]}
+        intensity={typeof document !== 'undefined' && document.documentElement.classList.contains('dark') ? 0.8 : 0.4}
+        color={typeof document !== 'undefined' && document.documentElement.classList.contains('dark') ? "#b0c8ff" : "#e6f0fa"}
+      />
+
 
       {/* Interactive Mannequin and Garment Slots */}
       <group
@@ -173,8 +182,9 @@ export const StudioScene: React.FC<StudioSceneProps> = ({
   }, []);
 
   return (
-    <div className="w-full h-full relative select-none bg-[#faf9f6]">
+    <div className="w-full h-full relative select-none bg-[#faf9f6] dark:bg-[#121212]">
       <Canvas
+
         shadows
         camera={{ position: [0, 0.4, 3.8], fov: 38 }}
         gl={{ antialias: true, alpha: true, powerPreference: 'high-performance' }}

@@ -77,14 +77,26 @@ export default function VaelShell() {
         setTheme('dark');
         document.documentElement.classList.add('dark');
         document.documentElement.setAttribute('data-theme', 'dark');
-      } else {
+      } else if (savedTheme === 'light') {
         setTheme('light');
         document.documentElement.classList.remove('dark');
         document.documentElement.setAttribute('data-theme', 'light');
+      } else {
+        const prefersDark = typeof window !== 'undefined' && window.matchMedia('(prefers-color-scheme: dark)').matches;
+        if (prefersDark) {
+          setTheme('dark');
+          document.documentElement.classList.add('dark');
+          document.documentElement.setAttribute('data-theme', 'dark');
+        } else {
+          setTheme('light');
+          document.documentElement.classList.remove('dark');
+          document.documentElement.setAttribute('data-theme', 'light');
+        }
       }
     } catch (e) {
       // LocalStorage unavailable
     }
+
     initializeVael();
   }, []);
 
@@ -393,14 +405,16 @@ export default function VaelShell() {
       next = selectedStyles.filter((s) => s !== slug);
     } else {
       if (selectedStyles.length >= 3) {
-        next = [...selectedStyles.slice(1), slug];
-      } else {
-        next = [...selectedStyles, slug];
+        setFeedbackNotice('Maximum of 3 style directions allowed. Deselect one first.');
+        setTimeout(() => setFeedbackNotice(null), 3000);
+        return;
       }
+      next = [...selectedStyles, slug];
     }
     setSelectedStyles(next);
     generateLooksForContext(activeUser, selectedOccasion, selectedWeather, next);
   };
+
 
   const handleToggleDislike = (slug: string) => {
     let next: string[];
@@ -537,12 +551,12 @@ export default function VaelShell() {
               onClick={() => setActiveView('STUDIO 3D')}
               className={`font-editorial-mono text-xs px-2.5 py-1 border rounded-full transition flex items-center gap-1.5 ${
                 activeView === 'STUDIO 3D'
-                  ? 'border-neutral-950 bg-neutral-950 text-white font-semibold'
-                  : 'border-neutral-300 hover:border-black text-neutral-800'
+                  ? 'border-neutral-950 bg-neutral-950 text-white dark:bg-white dark:text-neutral-950 font-semibold'
+                  : 'border-neutral-300 dark:border-neutral-700 hover:border-black dark:hover:border-white text-neutral-800 dark:text-neutral-200'
               }`}
             >
               <Box className="w-3.5 h-3.5 text-indigo-500" />
-              <span>3D STUDIO</span>
+              <span>Studio (beta)</span>
             </button>
             <button
               onClick={toggleTheme}
@@ -667,10 +681,10 @@ export default function VaelShell() {
       </section>
 
       {/* Views Navigation */}
-      <nav className="flex border-b border-neutral-200 mb-8 font-editorial-mono text-xs overflow-x-auto">
+      <nav className="flex border-b border-neutral-200 dark:border-neutral-800 mb-8 font-editorial-mono text-xs overflow-x-auto">
         {[
           { id: 'LOOKS', label: 'TOP 3 LOOKS (FLAGSHIP)' },
-          { id: 'STUDIO 3D', label: '3D STYLING AVATAR (SPIKE)' },
+          { id: 'STUDIO 3D', label: 'Studio (beta)' },
           { id: 'HAIR', label: 'HAIR COMPATIBILITY' },
           { id: 'GROOMING', label: 'GROOMING' },
           { id: 'STYLE LAB', label: 'STYLE TAXONOMY' },
@@ -780,15 +794,18 @@ export default function VaelShell() {
         <div className="space-y-6">
           <div className="flex flex-col md:flex-row md:items-center justify-between pb-3 border-b border-neutral-200 gap-4 font-editorial-mono">
             <div>
-              <div className="flex items-center gap-2">
-                <h2 className="text-xl font-editorial-title uppercase font-semibold text-neutral-950">
-                  PART B — R2.0 STUDIO 3D STYLING AVATAR
+              <div className="flex flex-wrap items-center gap-2">
+                <h2 className="text-xl font-editorial-title uppercase font-semibold text-neutral-950 dark:text-neutral-100">
+                  Studio (beta)
                 </h2>
-                <span className="text-[10px] bg-emerald-100 text-emerald-800 border border-emerald-300 px-2 py-0.5 rounded-xs">
+                <span className="text-[10px] bg-neutral-900 text-white dark:bg-neutral-100 dark:text-neutral-900 px-2 py-0.5 rounded-xs uppercase tracking-wider font-semibold">
+                  Illustration, not a fit simulation
+                </span>
+                <span className="text-[10px] bg-emerald-100 dark:bg-emerald-950 text-emerald-800 dark:text-emerald-300 border border-emerald-300 dark:border-emerald-800 px-2 py-0.5 rounded-xs">
                   INTERACTIVE 3D
                 </span>
               </div>
-              <p className="text-xs text-neutral-500 mt-0.5">
+              <p className="text-xs text-neutral-500 dark:text-neutral-400 mt-0.5">
                 EDITORIAL CLAY-WHITE MANNEQUIN · SOFT STUDIO LIGHTING · PROCEDURAL GARMENTS · READ-ONLY ADAPTER
               </p>
             </div>

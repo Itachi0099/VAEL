@@ -78,20 +78,20 @@ export function LookCard({ look, isExpanded = false }: LookCardProps) {
   const accessories = garments.filter((g) => g.garment.category === 'accessory');
 
   return (
-    <div className="border border-neutral-900 bg-white flex flex-col justify-between font-editorial-mono text-xs">
+    <div className="border border-neutral-900 dark:border-neutral-700 bg-white dark:bg-[#161619] text-neutral-900 dark:text-neutral-100 flex flex-col justify-between font-editorial-mono text-xs shadow-xs">
       {/* Look Header */}
-      <div className="p-5 border-b border-neutral-200">
+      <div className="p-5 border-b border-neutral-200 dark:border-neutral-800">
         <div className="flex items-start justify-between gap-3 mb-2">
           <div>
             <div className="flex items-center gap-2">
               <span className={`px-2 py-0.5 text-[10px] uppercase font-semibold border ${tierMeta.badgeClass}`}>
                 {tier}
               </span>
-              <span className="text-[10px] text-neutral-500 uppercase tracking-widest">
+              <span className="text-[10px] text-neutral-500 dark:text-neutral-400 uppercase tracking-widest">
                 {tierMeta.subtitle}
               </span>
             </div>
-            <h3 className="text-base md:text-lg font-editorial-title uppercase tracking-wide text-neutral-900 mt-1">
+            <h3 className="text-base md:text-lg font-editorial-title uppercase tracking-wide text-neutral-900 dark:text-neutral-50 mt-1">
               {outfit.item.title}
             </h3>
           </div>
@@ -100,7 +100,7 @@ export function LookCard({ look, isExpanded = false }: LookCardProps) {
           </span>
         </div>
 
-        <p className="text-[11px] font-sans text-neutral-600 leading-relaxed italic">
+        <p className="text-[11px] font-sans text-neutral-600 dark:text-neutral-300 leading-relaxed italic">
           "{tierRationale}"
         </p>
       </div>
@@ -108,60 +108,61 @@ export function LookCard({ look, isExpanded = false }: LookCardProps) {
       {/* Outfit Breakdown */}
       <div className="p-5 space-y-4 grow">
         <div>
-          <span className="text-[10px] uppercase tracking-widest text-neutral-400 font-semibold block mb-2.5">
+          <span className="text-[10px] uppercase tracking-widest text-neutral-400 dark:text-neutral-500 font-semibold block mb-2.5">
             OUTFIT COMPOSITION
           </span>
           <div className="space-y-2 text-[11px]">
             {topGarment && (
-              <div className="flex items-start justify-between gap-2 pb-1.5 border-b border-neutral-100">
-                <span className="text-neutral-500 uppercase text-[10px] shrink-0">TOP</span>
+              <div className="flex items-start justify-between gap-2 pb-1.5 border-b border-neutral-100 dark:border-neutral-800">
+                <span className="text-neutral-500 dark:text-neutral-400 uppercase text-[10px] shrink-0">TOP</span>
                 <div className="text-right">
-                  <span className="font-semibold text-neutral-900 block">{topGarment.garment.name}</span>
+                  <span className="font-semibold text-neutral-900 dark:text-neutral-100 block">{topGarment.garment.name}</span>
                   {topGarment.stylingNote && (
-                    <span className="text-[10px] text-neutral-500 italic block">{topGarment.stylingNote}</span>
+                    <span className="text-[10px] text-neutral-500 dark:text-neutral-400 italic block">{topGarment.stylingNote}</span>
                   )}
                 </div>
               </div>
             )}
 
             {bottomGarment && (
-              <div className="flex items-start justify-between gap-2 pb-1.5 border-b border-neutral-100">
-                <span className="text-neutral-500 uppercase text-[10px] shrink-0">BOTTOM</span>
+              <div className="flex items-start justify-between gap-2 pb-1.5 border-b border-neutral-100 dark:border-neutral-800">
+                <span className="text-neutral-500 dark:text-neutral-400 uppercase text-[10px] shrink-0">BOTTOM</span>
                 <div className="text-right">
-                  <span className="font-semibold text-neutral-900 block">{bottomGarment.garment.name}</span>
+                  <span className="font-semibold text-neutral-900 dark:text-neutral-100 block">{bottomGarment.garment.name}</span>
                   {bottomGarment.stylingNote && (
-                    <span className="text-[10px] text-neutral-500 italic block">{bottomGarment.stylingNote}</span>
+                    <span className="text-[10px] text-neutral-500 dark:text-neutral-400 italic block">{bottomGarment.stylingNote}</span>
                   )}
                 </div>
               </div>
             )}
 
             {outerwearGarment && (
-              <div className="flex items-start justify-between gap-2 pb-1.5 border-b border-neutral-100">
-                <span className="text-neutral-500 uppercase text-[10px] shrink-0">OUTERWEAR</span>
+              <div className="flex items-start justify-between gap-2 pb-1.5 border-b border-neutral-100 dark:border-neutral-800">
+                <span className="text-neutral-500 dark:text-neutral-400 uppercase text-[10px] shrink-0">OUTERWEAR</span>
                 <div className="text-right">
-                  <span className="font-semibold text-neutral-900 block">{outerwearGarment.garment.name}</span>
+                  <span className="font-semibold text-neutral-900 dark:text-neutral-100 block">{outerwearGarment.garment.name}</span>
                   {outerwearGarment.stylingNote && (
-                    <span className="text-[10px] text-neutral-500 italic block">{outerwearGarment.stylingNote}</span>
+                    <span className="text-[10px] text-neutral-500 dark:text-neutral-400 italic block">{outerwearGarment.stylingNote}</span>
                   )}
                 </div>
               </div>
             )}
 
+
             {footwearGarment && (
-              <div className="flex items-start justify-between gap-2 pb-1.5 border-b border-neutral-100">
-                <span className="text-neutral-500 uppercase text-[10px] shrink-0">FOOTWEAR</span>
+              <div className="flex items-start justify-between gap-2 pb-1.5 border-b border-neutral-100 dark:border-neutral-800">
+                <span className="text-neutral-500 dark:text-neutral-400 uppercase text-[10px] shrink-0">FOOTWEAR</span>
                 <div className="text-right">
-                  <span className="font-semibold text-neutral-900 block">{footwearGarment.garment.name}</span>
+                  <span className="font-semibold text-neutral-900 dark:text-neutral-100 block">{footwearGarment.garment.name}</span>
                 </div>
               </div>
             )}
 
             {accessories.length > 0 && (
-              <div className="flex items-start justify-between gap-2 pb-1.5 border-b border-neutral-100">
-                <span className="text-neutral-500 uppercase text-[10px] shrink-0">ACCENTS</span>
+              <div className="flex items-start justify-between gap-2 pb-1.5 border-b border-neutral-100 dark:border-neutral-800">
+                <span className="text-neutral-500 dark:text-neutral-400 uppercase text-[10px] shrink-0">ACCENTS</span>
                 <div className="text-right">
-                  <span className="font-semibold text-neutral-900 block">
+                  <span className="font-semibold text-neutral-900 dark:text-neutral-100 block">
                     {accessories.map((a) => a.garment.name).join(', ')}
                   </span>
                 </div>
@@ -171,29 +172,29 @@ export function LookCard({ look, isExpanded = false }: LookCardProps) {
         </div>
 
         {/* Coordinated Hair & Grooming */}
-        <div className="pt-2 border-t border-neutral-200">
-          <span className="text-[10px] uppercase tracking-widest text-neutral-400 font-semibold block mb-2">
+        <div className="pt-2 border-t border-neutral-200 dark:border-neutral-800">
+          <span className="text-[10px] uppercase tracking-widest text-neutral-400 dark:text-neutral-500 font-semibold block mb-2">
             COORDINATED HAIR & GROOMING
           </span>
-          <div className="grid grid-cols-2 gap-2 text-[11px] bg-neutral-50 p-2.5 border border-neutral-200">
+          <div className="grid grid-cols-2 gap-2 text-[11px] bg-neutral-50 dark:bg-neutral-800/60 p-2.5 border border-neutral-200 dark:border-neutral-700">
             <div>
-              <span className="text-neutral-400 block text-[9px] uppercase">HAIRSTYLE</span>
-              <span className="font-semibold text-neutral-900 block">
+              <span className="text-neutral-400 dark:text-neutral-500 block text-[9px] uppercase">HAIRSTYLE</span>
+              <span className="font-semibold text-neutral-900 dark:text-neutral-100 block">
                 {hairStyle ? hairStyle.item.name : 'Natural texture preserved'}
               </span>
               {hairStyle?.reasons?.[0] && (
-                <span className="text-[9px] text-neutral-500 line-clamp-1 mt-0.5 block">
+                <span className="text-[9px] text-neutral-500 dark:text-neutral-400 line-clamp-1 mt-0.5 block">
                   {hairStyle.reasons[0]}
                 </span>
               )}
             </div>
             <div>
-              <span className="text-neutral-400 block text-[9px] uppercase">GROOMING</span>
-              <span className="font-semibold text-neutral-900 block">
+              <span className="text-neutral-400 dark:text-neutral-500 block text-[9px] uppercase">GROOMING</span>
+              <span className="font-semibold text-neutral-900 dark:text-neutral-100 block">
                 {groomingStyle ? groomingStyle.item.name : 'Disciplined perimeter'}
               </span>
               {groomingStyle?.reasons?.[0] && (
-                <span className="text-[9px] text-neutral-500 line-clamp-1 mt-0.5 block">
+                <span className="text-[9px] text-neutral-500 dark:text-neutral-400 line-clamp-1 mt-0.5 block">
                   {groomingStyle.reasons[0]}
                 </span>
               )}
@@ -203,10 +204,10 @@ export function LookCard({ look, isExpanded = false }: LookCardProps) {
 
         {/* Honest Reasons */}
         <div className="pt-2">
-          <span className="text-[10px] uppercase tracking-widest text-neutral-400 font-semibold block mb-1.5">
+          <span className="text-[10px] uppercase tracking-widest text-neutral-400 dark:text-neutral-500 font-semibold block mb-1.5">
             WHY THIS WORKS (HONEST REASONS)
           </span>
-          <ul className="space-y-1.5 text-[11px] text-neutral-700">
+          <ul className="space-y-1.5 text-[11px] text-neutral-700 dark:text-neutral-300">
             {look.traceableReasons && look.traceableReasons.length > 0 ? (
               look.traceableReasons.slice(0, 3).map((tr) => (
                 <li key={tr.reasonId} className="flex items-start gap-1.5">
@@ -214,7 +215,7 @@ export function LookCard({ look, isExpanded = false }: LookCardProps) {
                   <div className="grow">
                     <span>{tr.text}</span>
                     {tr.isAssumed && (
-                      <span className="ml-1.5 px-1 py-0.2 bg-neutral-100 text-neutral-500 text-[9px] uppercase tracking-wider border border-neutral-200">
+                      <span className="ml-1.5 px-1 py-0.2 bg-neutral-100 dark:bg-neutral-800 text-neutral-500 dark:text-neutral-400 text-[9px] uppercase tracking-wider border border-neutral-200 dark:border-neutral-700">
                         ASSUMED DEFAULT
                       </span>
                     )}
@@ -234,7 +235,7 @@ export function LookCard({ look, isExpanded = false }: LookCardProps) {
 
         {/* Cautions (if any) */}
         {cautions && cautions.length > 0 && (
-          <div className="bg-amber-50/60 border border-amber-200 p-2.5 text-[10px] text-amber-900 space-y-1">
+          <div className="bg-amber-50/60 dark:bg-amber-950/40 border border-amber-200 dark:border-amber-800 p-2.5 text-[10px] text-amber-900 dark:text-amber-200 space-y-1">
             <span className="font-semibold uppercase tracking-wider block">CONSIDERATION:</span>
             {cautions.map((c, idx) => (
               <p key={idx} className="font-sans leading-relaxed">{c}</p>
@@ -244,8 +245,8 @@ export function LookCard({ look, isExpanded = false }: LookCardProps) {
 
         {/* Honest Confidence Calibration */}
         {confidence.toIncreaseConfidence && (
-          <div className="bg-neutral-50 border border-neutral-200 p-2.5 text-[10px] text-neutral-600">
-            <span className="text-neutral-400 uppercase tracking-wider font-semibold block mb-0.5">
+          <div className="bg-neutral-50 dark:bg-neutral-800/50 border border-neutral-200 dark:border-neutral-700 p-2.5 text-[10px] text-neutral-600 dark:text-neutral-400">
+            <span className="text-neutral-400 dark:text-neutral-500 uppercase tracking-wider font-semibold block mb-0.5">
               TO INCREASE CONFIDENCE:
             </span>
             <p className="font-sans italic">{confidence.toIncreaseConfidence}</p>
@@ -254,24 +255,24 @@ export function LookCard({ look, isExpanded = false }: LookCardProps) {
       </div>
 
       {/* Accordion Toggle for Technical Factors */}
-      <div className="border-t border-neutral-200 bg-neutral-50/50 p-3">
+      <div className="border-t border-neutral-200 dark:border-neutral-800 bg-neutral-50/50 dark:bg-neutral-800/40 p-3">
         <button
           onClick={() => setDetailsOpen(!detailsOpen)}
-          className="w-full flex items-center justify-between text-[10px] uppercase tracking-wider text-neutral-600 hover:text-black transition"
+          className="w-full flex items-center justify-between text-[10px] uppercase tracking-wider text-neutral-600 dark:text-neutral-400 hover:text-black dark:hover:text-white transition"
         >
           <span>VIEW TECHNICAL COMPATIBILITY FACTORS</span>
           {detailsOpen ? <ChevronUp className="w-3.5 h-3.5" /> : <ChevronDown className="w-3.5 h-3.5" />}
         </button>
 
         {detailsOpen && (
-          <div className="mt-3 pt-3 border-t border-neutral-200 space-y-2 text-[10px]">
+          <div className="mt-3 pt-3 border-t border-neutral-200 dark:border-neutral-800 space-y-2 text-[10px]">
             {outfit.factors.map((f, idx) => (
-              <div key={idx} className="flex items-center justify-between gap-2 text-neutral-600">
-                <span className="uppercase text-neutral-500">{FACTOR_LABEL_MAP[f.category] || f.category.replace(/_/g, ' ')}</span>
-                <span className="font-mono text-neutral-900 font-semibold">{Math.round(f.score * 100)}%</span>
+              <div key={idx} className="flex items-center justify-between gap-2 text-neutral-600 dark:text-neutral-400">
+                <span className="uppercase text-neutral-500 dark:text-neutral-400">{FACTOR_LABEL_MAP[f.category] || f.category.replace(/_/g, ' ')}</span>
+                <span className="font-mono text-neutral-900 dark:text-neutral-100 font-semibold">{Math.round(f.score * 100)}%</span>
               </div>
             ))}
-            <div className="pt-2 border-t border-neutral-200 flex justify-between font-semibold text-neutral-900">
+            <div className="pt-2 border-t border-neutral-200 dark:border-neutral-800 flex justify-between font-semibold text-neutral-900 dark:text-neutral-100">
               <span>OVERALL HARMONY SCORE</span>
               <span className="font-mono">{Math.round(look.overallHarmonyScore * 100)}%</span>
             </div>
@@ -281,3 +282,5 @@ export function LookCard({ look, isExpanded = false }: LookCardProps) {
     </div>
   );
 }
+
+

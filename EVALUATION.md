@@ -1,6 +1,6 @@
 # VAEL Golden Evaluation System
 
-The VAEL evaluation system provides an automated, regression-proof verification harness to validate fashion intelligence recommendations against stylist-grade scenarios.
+The VAEL evaluation system provides an automated, regression-proof verification harness to validate styling engine recommendations against structured scenarios.
 
 ---
 

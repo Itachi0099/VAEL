@@ -372,6 +372,36 @@ async function runSweep() {
       totalCatalogGarments: allGarments.length,
       usedGarments: usedGarmentIds.size,
       utilizationPercentage: `${((usedGarmentIds.size / allGarments.length) * 100).toFixed(1)}%`,
+      unusedCount: allGarments.length - usedGarmentIds.size,
+      unusedGarments: allGarments
+        .filter((g) => !usedGarmentIds.has(g.id))
+        .map((g) => {
+          let reason = '';
+          if (g.category === 'accessory') {
+            reason = 'ACCESSORY_SLOT_EXCLUDED: Foundation combinatorial generator strictly outputs top, bottom, one-piece, outerwear, footwear.';
+          } else if (g.fit === 'skinny') {
+            reason = 'DISLIKED_FIT_EXCLUDED: Sweep user profile explicitly has dislikedFits: ["skinny"].';
+          } else if (
+            g.subcategory.includes('gown') ||
+            g.subcategory.includes('tuxedo') ||
+            g.slug.includes('tuxedo') ||
+            g.slug.includes('marcella') ||
+            g.slug.includes('patent-evening')
+          ) {
+            reason = 'CEREMONIAL_EVENING_VETO: Restricted to formal black-tie/cultural/evening-wedding occasions and outranked by core eveningwear.';
+          } else {
+            reason = 'PRUNING_OR_STYLE_DISPLACEMENT: Subordinate aesthetic affinity under minimal-dominant profile (e.g. streetwear, avant-garde) or pruned during top-12 slot truncation.';
+          }
+          return {
+            id: g.id,
+            name: g.name,
+            category: g.category,
+            subcategory: g.subcategory,
+            formality: g.formality,
+            genderCoding: g.genderCoding,
+            reason,
+          };
+        }),
     },
     garmentMatrix: matrix,
     failingCellsByGroup: Object.fromEntries(

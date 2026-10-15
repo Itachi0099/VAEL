@@ -204,10 +204,10 @@
   "allGroupsPassedTarget": true,
   "feminineReconciliation": {
     "totalLooks": 2160,
-    "separatesCount": 1358,
-    "separatesShare": "62.9%",
-    "onePieceCount": 802,
-    "onePieceShare": "37.1%",
+    "separatesCount": 1068,
+    "separatesShare": "49.4%",
+    "onePieceCount": 1092,
+    "onePieceShare": "50.6%",
     "otherCount": 0,
     "otherShare": "0.0%"
   },
@@ -248,25 +248,13 @@
       ]
     },
     "feminine": {
-      "distinctBestMatchLooks": 15,
+      "distinctBestMatchLooks": 20,
       "top5Repeated": [
-        {
-          "id": "outfit_feminine_hot_linen_twill_separates_01",
-          "title": "Silk Lavallière Blouse & Linen Twill Column Maxi Skirt",
-          "cellCount": 152,
-          "cellShare": "20.5%"
-        },
         {
           "id": "outfit_feminine_casual_modest_knit_maxi_01",
           "title": "Ribbed Merino Wool Maxi & Weatherproof Trench",
           "cellCount": 128,
           "cellShare": "17.3%"
-        },
-        {
-          "id": "outfit_volumetric_overshirt_tailored_slacks_01",
-          "title": "Volumetric Boiled Wool Overshirt & Slim Wool Slacks",
-          "cellCount": 88,
-          "cellShare": "11.9%"
         },
         {
           "id": "outfit_feminine_cowl_trousers_separates_01",
@@ -275,10 +263,22 @@
           "cellShare": "8.9%"
         },
         {
+          "id": "gen_separates_off-shoulder-evening-knit-top-black_block-heel-calfskin-boots-black_hourglass-wool-blazer-black",
+          "title": "Fold-Over Off-The-Shoulder Evening Knit Top (Black) & 50mm Block-Heel Glove Calfskin Ankle Boots (Black)",
+          "cellCount": 64,
+          "cellShare": "8.6%"
+        },
+        {
           "id": "gen_separates_heavyweight-boxy-tee-offwhite_goretex-trail-runner-black_waterproof-gabardine-trench-khaki",
           "title": "Heavyweight Boxy Tee (Off-White) & All-Terrain Gore-Tex Trail Runner",
           "cellCount": 60,
           "cellShare": "8.1%"
+        },
+        {
+          "id": "gen_onepiece_architectural-poplin-shirt-dress-white_block-heel-calfskin-boots-black_bonded-mac-coat-black",
+          "title": "Architectural Poplin Midi Shirt Dress & 50mm Block-Heel Glove Calfskin Ankle Boots (Black)",
+          "cellCount": 55,
+          "cellShare": "7.4%"
         }
       ]
     },
@@ -318,7 +318,7 @@
       ]
     },
     "no-preference": {
-      "distinctBestMatchLooks": 15,
+      "distinctBestMatchLooks": 21,
       "top5Repeated": [
         {
           "id": "outfit_feminine_casual_modest_knit_maxi_01",
@@ -327,16 +327,10 @@
           "cellShare": "17.3%"
         },
         {
-          "id": "outfit_minimal_01",
-          "title": "All-Black Architectural Column",
-          "cellCount": 100,
-          "cellShare": "13.5%"
-        },
-        {
-          "id": "outfit_masculine_fine_knit_hopsack_separates_01",
-          "title": "Fine Silk-Merino Knit Polo & Fresco Wool Trousers",
-          "cellCount": 96,
-          "cellShare": "13.0%"
+          "id": "gen_separates_boiled-wool-overshirt-charcoal_block-heel-calfskin-boots-black_bonded-mac-coat-black",
+          "title": "Boiled Wool Snap Overshirt (Charcoal) & 50mm Block-Heel Glove Calfskin Ankle Boots (Black)",
+          "cellCount": 71,
+          "cellShare": "9.6%"
         },
         {
           "id": "outfit_feminine_cowl_trousers_separates_01",
@@ -345,18 +339,999 @@
           "cellShare": "8.9%"
         },
         {
-          "id": "outfit_fluid_cold_formal_tunic_01",
-          "title": "Longline Architectural Fluid Tunic Coat & Evening Slacks",
+          "id": "gen_onepiece_merino-rib-maxi-dress-black_fluid-commando-monk-strap-black_fluid-tunic-overcoat-black",
+          "title": "Fine-Rib Long-Sleeve Merino Wool Maxi Dress (Black) & Single-Strap Minimalist Monk Shoes on Commando Sole (Black)",
           "cellCount": 64,
           "cellShare": "8.6%"
+        },
+        {
+          "id": "gen_separates_heavyweight-boxy-tee-offwhite_desert-boots-beeswax_ma1-flight-bomber-sage",
+          "title": "Heavyweight Boxy Tee (Off-White) & Original Crepe-Sole Desert Boots (Beeswax Leather)",
+          "cellCount": 50,
+          "cellShare": "6.8%"
         }
       ]
     }
   },
   "catalogUtilization": {
     "totalCatalogGarments": 268,
-    "usedGarments": 156,
-    "utilizationPercentage": "58.2%"
+    "usedGarments": 160,
+    "utilizationPercentage": "59.7%",
+    "unusedCount": 108,
+    "unusedGarments": [
+      {
+        "id": "gar_knit_polo_olive",
+        "name": "Textured Open-Collar Knit Polo",
+        "category": "top",
+        "subcategory": "polo",
+        "formality": 3,
+        "genderCoding": "androgynous",
+        "reason": "PRUNING_OR_STYLE_DISPLACEMENT: Subordinate aesthetic affinity under minimal-dominant profile (e.g. streetwear, avant-garde) or pruned during top-12 slot truncation."
+      },
+      {
+        "id": "gar_cashmere_crew_charcoal",
+        "name": "Fine Merino Cashmere Crewneck",
+        "category": "top",
+        "subcategory": "knitwear",
+        "formality": 3,
+        "genderCoding": "androgynous",
+        "reason": "PRUNING_OR_STYLE_DISPLACEMENT: Subordinate aesthetic affinity under minimal-dominant profile (e.g. streetwear, avant-garde) or pruned during top-12 slot truncation."
+      },
+      {
+        "id": "gar_cable_knit_cream",
+        "name": "Heavy Fisherman Cable-Knit Sweater",
+        "category": "top",
+        "subcategory": "knitwear",
+        "formality": 2,
+        "genderCoding": "androgynous",
+        "reason": "PRUNING_OR_STYLE_DISPLACEMENT: Subordinate aesthetic affinity under minimal-dominant profile (e.g. streetwear, avant-garde) or pruned during top-12 slot truncation."
+      },
+      {
+        "id": "gar_hoodie_heather_grey",
+        "name": "500GSM Loopback Oversized Hoodie",
+        "category": "top",
+        "subcategory": "hoodie",
+        "formality": 1,
+        "genderCoding": "androgynous",
+        "reason": "PRUNING_OR_STYLE_DISPLACEMENT: Subordinate aesthetic affinity under minimal-dominant profile (e.g. streetwear, avant-garde) or pruned during top-12 slot truncation."
+      },
+      {
+        "id": "gar_hoodie_washed_black",
+        "name": "Boxy Cropped Zip Hoodie (Washed Black)",
+        "category": "top",
+        "subcategory": "hoodie",
+        "formality": 1,
+        "genderCoding": "androgynous",
+        "reason": "PRUNING_OR_STYLE_DISPLACEMENT: Subordinate aesthetic affinity under minimal-dominant profile (e.g. streetwear, avant-garde) or pruned during top-12 slot truncation."
+      },
+      {
+        "id": "gar_cardigan_mohair_olive",
+        "name": "Brushed Mohair Cardigan (Olive Melange)",
+        "category": "top",
+        "subcategory": "knitwear",
+        "formality": 2,
+        "genderCoding": "androgynous",
+        "reason": "PRUNING_OR_STYLE_DISPLACEMENT: Subordinate aesthetic affinity under minimal-dominant profile (e.g. streetwear, avant-garde) or pruned during top-12 slot truncation."
+      },
+      {
+        "id": "gar_flannel_shirt_plaid",
+        "name": "Heavy Ombre Flannel Overshirt",
+        "category": "top",
+        "subcategory": "overshirt",
+        "formality": 2,
+        "genderCoding": "androgynous",
+        "reason": "PRUNING_OR_STYLE_DISPLACEMENT: Subordinate aesthetic affinity under minimal-dominant profile (e.g. streetwear, avant-garde) or pruned during top-12 slot truncation."
+      },
+      {
+        "id": "gar_ribbed_tank_white",
+        "name": "Fine Ribbed Athletic Tank (Chalk White)",
+        "category": "top",
+        "subcategory": "tank",
+        "formality": 1,
+        "genderCoding": "androgynous",
+        "reason": "PRUNING_OR_STYLE_DISPLACEMENT: Subordinate aesthetic affinity under minimal-dominant profile (e.g. streetwear, avant-garde) or pruned during top-12 slot truncation."
+      },
+      {
+        "id": "gar_silk_crepe_shirt_black",
+        "name": "Fluid Silk Crepe Evening Shirt",
+        "category": "top",
+        "subcategory": "button-down",
+        "formality": 4,
+        "genderCoding": "androgynous",
+        "reason": "PRUNING_OR_STYLE_DISPLACEMENT: Subordinate aesthetic affinity under minimal-dominant profile (e.g. streetwear, avant-garde) or pruned during top-12 slot truncation."
+      },
+      {
+        "id": "gar_waffle_longsleeve_cream",
+        "name": "Heavy Waffle Thermal Longsleeve",
+        "category": "top",
+        "subcategory": "longsleeve",
+        "formality": 1,
+        "genderCoding": "androgynous",
+        "reason": "PRUNING_OR_STYLE_DISPLACEMENT: Subordinate aesthetic affinity under minimal-dominant profile (e.g. streetwear, avant-garde) or pruned during top-12 slot truncation."
+      },
+      {
+        "id": "gar_breton_stripe_longsleeve",
+        "name": "Classic Nautical Breton Longsleeve",
+        "category": "top",
+        "subcategory": "longsleeve",
+        "formality": 2,
+        "genderCoding": "androgynous",
+        "reason": "PRUNING_OR_STYLE_DISPLACEMENT: Subordinate aesthetic affinity under minimal-dominant profile (e.g. streetwear, avant-garde) or pruned during top-12 slot truncation."
+      },
+      {
+        "id": "gar_raw_edge_tunic_experimental",
+        "name": "Asymmetric Raw-Hem Linen Tunic",
+        "category": "top",
+        "subcategory": "tunic",
+        "formality": 3,
+        "genderCoding": "androgynous",
+        "reason": "PRUNING_OR_STYLE_DISPLACEMENT: Subordinate aesthetic affinity under minimal-dominant profile (e.g. streetwear, avant-garde) or pruned during top-12 slot truncation."
+      },
+      {
+        "id": "gar_chamois_shirt_tobacco",
+        "name": "Brushed Chamois Work Shirt (Tobacco)",
+        "category": "top",
+        "subcategory": "button-down",
+        "formality": 2,
+        "genderCoding": "masculine",
+        "reason": "PRUNING_OR_STYLE_DISPLACEMENT: Subordinate aesthetic affinity under minimal-dominant profile (e.g. streetwear, avant-garde) or pruned during top-12 slot truncation."
+      },
+      {
+        "id": "gar_crochet_shirt_sand",
+        "name": "Open-Weave Crochet Short-Sleeve Shirt",
+        "category": "top",
+        "subcategory": "button-down",
+        "formality": 2,
+        "genderCoding": "androgynous",
+        "reason": "PRUNING_OR_STYLE_DISPLACEMENT: Subordinate aesthetic affinity under minimal-dominant profile (e.g. streetwear, avant-garde) or pruned during top-12 slot truncation."
+      },
+      {
+        "id": "gar_merino_vest_slate",
+        "name": "Sleeveless Merino Knit Vest (Slate)",
+        "category": "top",
+        "subcategory": "knitwear",
+        "formality": 3,
+        "genderCoding": "androgynous",
+        "reason": "PRUNING_OR_STYLE_DISPLACEMENT: Subordinate aesthetic affinity under minimal-dominant profile (e.g. streetwear, avant-garde) or pruned during top-12 slot truncation."
+      },
+      {
+        "id": "gar_henley_longsleeve_charcoal",
+        "name": "3-Button Waffle Henley (Charcoal)",
+        "category": "top",
+        "subcategory": "henley",
+        "formality": 2,
+        "genderCoding": "masculine",
+        "reason": "PRUNING_OR_STYLE_DISPLACEMENT: Subordinate aesthetic affinity under minimal-dominant profile (e.g. streetwear, avant-garde) or pruned during top-12 slot truncation."
+      },
+      {
+        "id": "gar_graphic_vintage_tee",
+        "name": "Faded Archival Graphic Tee",
+        "category": "top",
+        "subcategory": "t-shirt",
+        "formality": 1,
+        "genderCoding": "androgynous",
+        "reason": "PRUNING_OR_STYLE_DISPLACEMENT: Subordinate aesthetic affinity under minimal-dominant profile (e.g. streetwear, avant-garde) or pruned during top-12 slot truncation."
+      },
+      {
+        "id": "gar_alpaca_crew_forest",
+        "name": "Brushed Baby Alpaca Crewneck (Forest Green)",
+        "category": "top",
+        "subcategory": "knitwear",
+        "formality": 3,
+        "genderCoding": "androgynous",
+        "reason": "PRUNING_OR_STYLE_DISPLACEMENT: Subordinate aesthetic affinity under minimal-dominant profile (e.g. streetwear, avant-garde) or pruned during top-12 slot truncation."
+      },
+      {
+        "id": "gar_technical_base_longsleeve",
+        "name": "Merino-Synthetic Articulated Baselayer",
+        "category": "top",
+        "subcategory": "longsleeve",
+        "formality": 1,
+        "genderCoding": "androgynous",
+        "reason": "PRUNING_OR_STYLE_DISPLACEMENT: Subordinate aesthetic affinity under minimal-dominant profile (e.g. streetwear, avant-garde) or pruned during top-12 slot truncation."
+      },
+      {
+        "id": "gar_denim_western_shirt",
+        "name": "Washed 8oz Denim Western Shirt",
+        "category": "top",
+        "subcategory": "button-down",
+        "formality": 2,
+        "genderCoding": "masculine",
+        "reason": "PRUNING_OR_STYLE_DISPLACEMENT: Subordinate aesthetic affinity under minimal-dominant profile (e.g. streetwear, avant-garde) or pruned during top-12 slot truncation."
+      },
+      {
+        "id": "gar_tuxedo_shirt_bib_front",
+        "name": "Marcella Piqué Bib Evening Tuxedo Shirt",
+        "category": "top",
+        "subcategory": "dress-shirt",
+        "formality": 5,
+        "genderCoding": "masculine",
+        "reason": "CEREMONIAL_EVENING_VETO: Restricted to formal black-tie/cultural/evening-wedding occasions and outranked by core eveningwear."
+      },
+      {
+        "id": "gar_raw_denim_indigo",
+        "name": "Straight-Leg 14oz Selvedge Denim",
+        "category": "bottom",
+        "subcategory": "jeans",
+        "formality": 2,
+        "genderCoding": "androgynous",
+        "reason": "PRUNING_OR_STYLE_DISPLACEMENT: Subordinate aesthetic affinity under minimal-dominant profile (e.g. streetwear, avant-garde) or pruned during top-12 slot truncation."
+      },
+      {
+        "id": "gar_corduroy_trousers_olive",
+        "name": "Wide-Wale Pleated Corduroy Trousers",
+        "category": "bottom",
+        "subcategory": "trousers",
+        "formality": 3,
+        "genderCoding": "androgynous",
+        "reason": "PRUNING_OR_STYLE_DISPLACEMENT: Subordinate aesthetic affinity under minimal-dominant profile (e.g. streetwear, avant-garde) or pruned during top-12 slot truncation."
+      },
+      {
+        "id": "gar_tailored_shorts_navy",
+        "name": "Pleated Linen-Cotton Shorts (Navy)",
+        "category": "bottom",
+        "subcategory": "shorts",
+        "formality": 2,
+        "genderCoding": "masculine",
+        "reason": "PRUNING_OR_STYLE_DISPLACEMENT: Subordinate aesthetic affinity under minimal-dominant profile (e.g. streetwear, avant-garde) or pruned during top-12 slot truncation."
+      },
+      {
+        "id": "gar_sweatpants_grey_terry",
+        "name": "Heavyweight Loopback Sweatpants",
+        "category": "bottom",
+        "subcategory": "sweatpants",
+        "formality": 1,
+        "genderCoding": "androgynous",
+        "reason": "PRUNING_OR_STYLE_DISPLACEMENT: Subordinate aesthetic affinity under minimal-dominant profile (e.g. streetwear, avant-garde) or pruned during top-12 slot truncation."
+      },
+      {
+        "id": "gar_black_washed_denim",
+        "name": "Washed Black Loose-Fit Denim",
+        "category": "bottom",
+        "subcategory": "jeans",
+        "formality": 2,
+        "genderCoding": "androgynous",
+        "reason": "PRUNING_OR_STYLE_DISPLACEMENT: Subordinate aesthetic affinity under minimal-dominant profile (e.g. streetwear, avant-garde) or pruned during top-12 slot truncation."
+      },
+      {
+        "id": "gar_leather_trousers_black",
+        "name": "Straight-Leg Lambskin Leather Trousers",
+        "category": "bottom",
+        "subcategory": "pants",
+        "formality": 3,
+        "genderCoding": "androgynous",
+        "reason": "PRUNING_OR_STYLE_DISPLACEMENT: Subordinate aesthetic affinity under minimal-dominant profile (e.g. streetwear, avant-garde) or pruned during top-12 slot truncation."
+      },
+      {
+        "id": "gar_distressed_vintage_jeans",
+        "name": "90s Relaxed Faded Blue Jeans",
+        "category": "bottom",
+        "subcategory": "jeans",
+        "formality": 1,
+        "genderCoding": "androgynous",
+        "reason": "PRUNING_OR_STYLE_DISPLACEMENT: Subordinate aesthetic affinity under minimal-dominant profile (e.g. streetwear, avant-garde) or pruned during top-12 slot truncation."
+      },
+      {
+        "id": "gar_parachute_pants_olive",
+        "name": "Baggy Ripstop Parachute Pants (Olive)",
+        "category": "bottom",
+        "subcategory": "pants",
+        "formality": 1,
+        "genderCoding": "androgynous",
+        "reason": "PRUNING_OR_STYLE_DISPLACEMENT: Subordinate aesthetic affinity under minimal-dominant profile (e.g. streetwear, avant-garde) or pruned during top-12 slot truncation."
+      },
+      {
+        "id": "gar_raw_hem_shorts_denim",
+        "name": "Vintage Cut-Off Denim Shorts",
+        "category": "bottom",
+        "subcategory": "shorts",
+        "formality": 1,
+        "genderCoding": "androgynous",
+        "reason": "PRUNING_OR_STYLE_DISPLACEMENT: Subordinate aesthetic affinity under minimal-dominant profile (e.g. streetwear, avant-garde) or pruned during top-12 slot truncation."
+      },
+      {
+        "id": "gar_chore_coat_tan",
+        "name": "Duck Canvas Chore Coat",
+        "category": "outerwear",
+        "subcategory": "jacket",
+        "formality": 2,
+        "genderCoding": "androgynous",
+        "reason": "PRUNING_OR_STYLE_DISPLACEMENT: Subordinate aesthetic affinity under minimal-dominant profile (e.g. streetwear, avant-garde) or pruned during top-12 slot truncation."
+      },
+      {
+        "id": "gar_formal_tux_jacket",
+        "name": "Satin Peak-Lapel Dinner Jacket",
+        "category": "outerwear",
+        "subcategory": "tuxedo-jacket",
+        "formality": 5,
+        "genderCoding": "masculine",
+        "reason": "CEREMONIAL_EVENING_VETO: Restricted to formal black-tie/cultural/evening-wedding occasions and outranked by core eveningwear."
+      },
+      {
+        "id": "gar_harrington_jacket_tan",
+        "name": "Classic G9 Harrington Jacket (Tan)",
+        "category": "outerwear",
+        "subcategory": "jacket",
+        "formality": 2,
+        "genderCoding": "masculine",
+        "reason": "PRUNING_OR_STYLE_DISPLACEMENT: Subordinate aesthetic affinity under minimal-dominant profile (e.g. streetwear, avant-garde) or pruned during top-12 slot truncation."
+      },
+      {
+        "id": "gar_linen_blazer_sand",
+        "name": "Unstructured Washed Linen Blazer (Sand)",
+        "category": "outerwear",
+        "subcategory": "blazer",
+        "formality": 3,
+        "genderCoding": "androgynous",
+        "reason": "PRUNING_OR_STYLE_DISPLACEMENT: Subordinate aesthetic affinity under minimal-dominant profile (e.g. streetwear, avant-garde) or pruned during top-12 slot truncation."
+      },
+      {
+        "id": "gar_sherpa_fleece_jacket",
+        "name": "Deep-Pile Retro Fleece Jacket",
+        "category": "outerwear",
+        "subcategory": "jacket",
+        "formality": 1,
+        "genderCoding": "androgynous",
+        "reason": "PRUNING_OR_STYLE_DISPLACEMENT: Subordinate aesthetic affinity under minimal-dominant profile (e.g. streetwear, avant-garde) or pruned during top-12 slot truncation."
+      },
+      {
+        "id": "gar_type3_denim_jacket",
+        "name": "Type III Selvedge Denim Trucker Jacket",
+        "category": "outerwear",
+        "subcategory": "jacket",
+        "formality": 2,
+        "genderCoding": "androgynous",
+        "reason": "PRUNING_OR_STYLE_DISPLACEMENT: Subordinate aesthetic affinity under minimal-dominant profile (e.g. streetwear, avant-garde) or pruned during top-12 slot truncation."
+      },
+      {
+        "id": "gar_waxed_cotton_field_jacket",
+        "name": "Waxed Cotton Country Field Jacket (Olive)",
+        "category": "outerwear",
+        "subcategory": "jacket",
+        "formality": 2,
+        "genderCoding": "masculine",
+        "reason": "PRUNING_OR_STYLE_DISPLACEMENT: Subordinate aesthetic affinity under minimal-dominant profile (e.g. streetwear, avant-garde) or pruned during top-12 slot truncation."
+      },
+      {
+        "id": "gar_kimono_noragi_charcoal",
+        "name": "Minimalist Noragi Jacket (Charcoal Wool)",
+        "category": "outerwear",
+        "subcategory": "jacket",
+        "formality": 3,
+        "genderCoding": "androgynous",
+        "reason": "PRUNING_OR_STYLE_DISPLACEMENT: Subordinate aesthetic affinity under minimal-dominant profile (e.g. streetwear, avant-garde) or pruned during top-12 slot truncation."
+      },
+      {
+        "id": "gar_m65_field_jacket_olive",
+        "name": "Vintage M-65 Military Field Coat",
+        "category": "outerwear",
+        "subcategory": "jacket",
+        "formality": 2,
+        "genderCoding": "androgynous",
+        "reason": "PRUNING_OR_STYLE_DISPLACEMENT: Subordinate aesthetic affinity under minimal-dominant profile (e.g. streetwear, avant-garde) or pruned during top-12 slot truncation."
+      },
+      {
+        "id": "gar_corduroy_overshirt_jacket",
+        "name": "Chunky 6-Wale Corduroy Overshirt Jacket",
+        "category": "outerwear",
+        "subcategory": "overshirt",
+        "formality": 2,
+        "genderCoding": "androgynous",
+        "reason": "PRUNING_OR_STYLE_DISPLACEMENT: Subordinate aesthetic affinity under minimal-dominant profile (e.g. streetwear, avant-garde) or pruned during top-12 slot truncation."
+      },
+      {
+        "id": "gar_formal_oxford_black",
+        "name": "Cap-Toe Wholecut Oxford Shoes",
+        "category": "footwear",
+        "subcategory": "dress-shoes",
+        "formality": 5,
+        "genderCoding": "masculine",
+        "reason": "PRUNING_OR_STYLE_DISPLACEMENT: Subordinate aesthetic affinity under minimal-dominant profile (e.g. streetwear, avant-garde) or pruned during top-12 slot truncation."
+      },
+      {
+        "id": "gar_patent_evening_pumps",
+        "name": "Patent Leather Evening Slippers",
+        "category": "footwear",
+        "subcategory": "dress-shoes",
+        "formality": 5,
+        "genderCoding": "masculine",
+        "reason": "CEREMONIAL_EVENING_VETO: Restricted to formal black-tie/cultural/evening-wedding occasions and outranked by core eveningwear."
+      },
+      {
+        "id": "gar_silver_signet_ring",
+        "name": "Brushed Sterling Silver Signet Ring",
+        "category": "accessory",
+        "subcategory": "jewelry",
+        "formality": 3,
+        "genderCoding": "androgynous",
+        "reason": "ACCESSORY_SLOT_EXCLUDED: Foundation combinatorial generator strictly outputs top, bottom, one-piece, outerwear, footwear."
+      },
+      {
+        "id": "gar_wool_scarf_charcoal",
+        "name": "Fringed Lambswool Scarf (Charcoal)",
+        "category": "accessory",
+        "subcategory": "scarf",
+        "formality": 3,
+        "genderCoding": "androgynous",
+        "reason": "ACCESSORY_SLOT_EXCLUDED: Foundation combinatorial generator strictly outputs top, bottom, one-piece, outerwear, footwear."
+      },
+      {
+        "id": "gar_dress_watch_gold_leather",
+        "name": "Vintage Dress Watch with Alligator Strap",
+        "category": "accessory",
+        "subcategory": "watch",
+        "formality": 4,
+        "genderCoding": "unspecified",
+        "reason": "ACCESSORY_SLOT_EXCLUDED: Foundation combinatorial generator strictly outputs top, bottom, one-piece, outerwear, footwear."
+      },
+      {
+        "id": "gar_knit_ribbed_midi_dress_olive",
+        "name": "Fine-Rib Merino Wool Midi Dress",
+        "category": "one-piece",
+        "subcategory": "dress",
+        "formality": 3,
+        "genderCoding": "feminine",
+        "reason": "PRUNING_OR_STYLE_DISPLACEMENT: Subordinate aesthetic affinity under minimal-dominant profile (e.g. streetwear, avant-garde) or pruned during top-12 slot truncation."
+      },
+      {
+        "id": "gar_cocktail_slip_dress_burgundy",
+        "name": "Sculpted Column Evening Gown (Burgundy)",
+        "category": "one-piece",
+        "subcategory": "dress",
+        "formality": 5,
+        "genderCoding": "feminine",
+        "reason": "PRUNING_OR_STYLE_DISPLACEMENT: Subordinate aesthetic affinity under minimal-dominant profile (e.g. streetwear, avant-garde) or pruned during top-12 slot truncation."
+      },
+      {
+        "id": "gar_tiered_boho_midi_dress",
+        "name": "Floral Print Tiered Georgette Midi Dress",
+        "category": "one-piece",
+        "subcategory": "dress",
+        "formality": 2,
+        "genderCoding": "feminine",
+        "reason": "PRUNING_OR_STYLE_DISPLACEMENT: Subordinate aesthetic affinity under minimal-dominant profile (e.g. streetwear, avant-garde) or pruned during top-12 slot truncation."
+      },
+      {
+        "id": "gar_pleated_midi_skirt_wool",
+        "name": "Knife-Pleated Wool Gabardine Midi Skirt",
+        "category": "bottom",
+        "subcategory": "skirt",
+        "formality": 3,
+        "genderCoding": "feminine",
+        "reason": "PRUNING_OR_STYLE_DISPLACEMENT: Subordinate aesthetic affinity under minimal-dominant profile (e.g. streetwear, avant-garde) or pruned during top-12 slot truncation."
+      },
+      {
+        "id": "gar_denim_maxi_skirt_raw",
+        "name": "Raw Indigo Front-Slit Denim Maxi Skirt",
+        "category": "bottom",
+        "subcategory": "skirt",
+        "formality": 2,
+        "genderCoding": "feminine",
+        "reason": "PRUNING_OR_STYLE_DISPLACEMENT: Subordinate aesthetic affinity under minimal-dominant profile (e.g. streetwear, avant-garde) or pruned during top-12 slot truncation."
+      },
+      {
+        "id": "gar_leather_pencil_skirt_black",
+        "name": "Nappa Leather Tailored Pencil Skirt",
+        "category": "bottom",
+        "subcategory": "skirt",
+        "formality": 4,
+        "genderCoding": "feminine",
+        "reason": "PRUNING_OR_STYLE_DISPLACEMENT: Subordinate aesthetic affinity under minimal-dominant profile (e.g. streetwear, avant-garde) or pruned during top-12 slot truncation."
+      },
+      {
+        "id": "gar_silk_camisole_ivory",
+        "name": "Bias-Cut Silk Crepe Camisole Top",
+        "category": "top",
+        "subcategory": "camisole",
+        "formality": 3,
+        "genderCoding": "feminine",
+        "reason": "PRUNING_OR_STYLE_DISPLACEMENT: Subordinate aesthetic affinity under minimal-dominant profile (e.g. streetwear, avant-garde) or pruned during top-12 slot truncation."
+      },
+      {
+        "id": "gar_draped_wrap_blouse_ecru",
+        "name": "Asymmetric Draped Georgette Wrap Blouse",
+        "category": "top",
+        "subcategory": "blouse",
+        "formality": 3,
+        "genderCoding": "feminine",
+        "reason": "PRUNING_OR_STYLE_DISPLACEMENT: Subordinate aesthetic affinity under minimal-dominant profile (e.g. streetwear, avant-garde) or pruned during top-12 slot truncation."
+      },
+      {
+        "id": "gar_slingback_kitten_heel_black",
+        "name": "Pointed-Toe Leather Slingback Pumps (45mm)",
+        "category": "footwear",
+        "subcategory": "heel",
+        "formality": 4,
+        "genderCoding": "feminine",
+        "reason": "PRUNING_OR_STYLE_DISPLACEMENT: Subordinate aesthetic affinity under minimal-dominant profile (e.g. streetwear, avant-garde) or pruned during top-12 slot truncation."
+      },
+      {
+        "id": "gar_strappy_leather_sandal_tan",
+        "name": "Minimalist Asymmetric Leather Flat Sandals",
+        "category": "footwear",
+        "subcategory": "sandal",
+        "formality": 2,
+        "genderCoding": "androgynous",
+        "reason": "PRUNING_OR_STYLE_DISPLACEMENT: Subordinate aesthetic affinity under minimal-dominant profile (e.g. streetwear, avant-garde) or pruned during top-12 slot truncation."
+      },
+      {
+        "id": "gar_minimal_runner_retro_white",
+        "name": "Low-Profile Retro Suede & Nylon Runners",
+        "category": "footwear",
+        "subcategory": "sneaker",
+        "formality": 2,
+        "genderCoding": "androgynous",
+        "reason": "PRUNING_OR_STYLE_DISPLACEMENT: Subordinate aesthetic affinity under minimal-dominant profile (e.g. streetwear, avant-garde) or pruned during top-12 slot truncation."
+      },
+      {
+        "id": "gar_knee_high_riding_boot_brown",
+        "name": "Straight-Shaft Pull-On Leather Riding Boots",
+        "category": "footwear",
+        "subcategory": "boot",
+        "formality": 3,
+        "genderCoding": "feminine",
+        "reason": "PRUNING_OR_STYLE_DISPLACEMENT: Subordinate aesthetic affinity under minimal-dominant profile (e.g. streetwear, avant-garde) or pruned during top-12 slot truncation."
+      },
+      {
+        "id": "gar_leather_shoulder_bag_baguette",
+        "name": "Sculpted Minimalist Leather Shoulder Bag",
+        "category": "accessory",
+        "subcategory": "bag",
+        "formality": 3,
+        "genderCoding": "feminine",
+        "reason": "ACCESSORY_SLOT_EXCLUDED: Foundation combinatorial generator strictly outputs top, bottom, one-piece, outerwear, footwear."
+      },
+      {
+        "id": "gar_gold_hoop_earrings_chunky",
+        "name": "18k Vermeil Hollow Bold Hoop Earrings",
+        "category": "accessory",
+        "subcategory": "jewelry",
+        "formality": 3,
+        "genderCoding": "feminine",
+        "reason": "ACCESSORY_SLOT_EXCLUDED: Foundation combinatorial generator strictly outputs top, bottom, one-piece, outerwear, footwear."
+      },
+      {
+        "id": "gar_velvet_column_gown_emerald",
+        "name": "Heavyweight Silk-Velvet Column Evening Gown (Emerald)",
+        "category": "one-piece",
+        "subcategory": "evening-gown",
+        "formality": 5,
+        "genderCoding": "feminine",
+        "reason": "CEREMONIAL_EVENING_VETO: Restricted to formal black-tie/cultural/evening-wedding occasions and outranked by core eveningwear."
+      },
+      {
+        "id": "gar_chiffon_tiered_maxi_dress_floral",
+        "name": "Long-Sleeve Tiered Silk Chiffon Maxi Dress (Muted Floral)",
+        "category": "one-piece",
+        "subcategory": "maxi-dress",
+        "formality": 4,
+        "genderCoding": "feminine",
+        "reason": "PRUNING_OR_STYLE_DISPLACEMENT: Subordinate aesthetic affinity under minimal-dominant profile (e.g. streetwear, avant-garde) or pruned during top-12 slot truncation."
+      },
+      {
+        "id": "gar_opaque_thermal_tights_black",
+        "name": "80D Matte Opaque Thermal Wool Tights (Black)",
+        "category": "accessory",
+        "subcategory": "hosiery",
+        "formality": 3,
+        "genderCoding": "feminine",
+        "reason": "ACCESSORY_SLOT_EXCLUDED: Foundation combinatorial generator strictly outputs top, bottom, one-piece, outerwear, footwear."
+      },
+      {
+        "id": "gar_fluid_tuxedo_jacket_black",
+        "name": "Soft-Tailored Shawl-Collar Crepe Tuxedo Jacket (Black)",
+        "category": "outerwear",
+        "subcategory": "blazer",
+        "formality": 5,
+        "genderCoding": "androgynous",
+        "reason": "CEREMONIAL_EVENING_VETO: Restricted to formal black-tie/cultural/evening-wedding occasions and outranked by core eveningwear."
+      },
+      {
+        "id": "gar_fluid_mesh_knit_derbies_black",
+        "name": "Technical Knit & Calfskin Hybrid Derbies (Black)",
+        "category": "footwear",
+        "subcategory": "oxfords",
+        "formality": 3,
+        "genderCoding": "androgynous",
+        "reason": "PRUNING_OR_STYLE_DISPLACEMENT: Subordinate aesthetic affinity under minimal-dominant profile (e.g. streetwear, avant-garde) or pruned during top-12 slot truncation."
+      },
+      {
+        "id": "gar_sweetheart_ribbed_knit_top_black",
+        "name": "Sculpted Sweetheart-Neckline Fine Ribbed Top (Black)",
+        "category": "top",
+        "subcategory": "knitwear",
+        "formality": 3,
+        "genderCoding": "feminine",
+        "reason": "PRUNING_OR_STYLE_DISPLACEMENT: Subordinate aesthetic affinity under minimal-dominant profile (e.g. streetwear, avant-garde) or pruned during top-12 slot truncation."
+      },
+      {
+        "id": "gar_cashmere_mockneck_top_camel",
+        "name": "Fine-Gauge Cashmere-Silk Ribbed Mockneck (Warm Camel)",
+        "category": "top",
+        "subcategory": "knitwear",
+        "formality": 3,
+        "genderCoding": "feminine",
+        "reason": "PRUNING_OR_STYLE_DISPLACEMENT: Subordinate aesthetic affinity under minimal-dominant profile (e.g. streetwear, avant-garde) or pruned during top-12 slot truncation."
+      },
+      {
+        "id": "gar_organza_overlay_blouse_noir",
+        "name": "Silk Organza Sheer Overlay Formal Blouse (Noir)",
+        "category": "top",
+        "subcategory": "blouse",
+        "formality": 5,
+        "genderCoding": "feminine",
+        "reason": "PRUNING_OR_STYLE_DISPLACEMENT: Subordinate aesthetic affinity under minimal-dominant profile (e.g. streetwear, avant-garde) or pruned during top-12 slot truncation."
+      },
+      {
+        "id": "gar_masculine_tassel_loafer_black_calf",
+        "name": "Polished Calfskin Tassel Loafers (Black)",
+        "category": "footwear",
+        "subcategory": "loafers",
+        "formality": 4,
+        "genderCoding": "masculine",
+        "reason": "PRUNING_OR_STYLE_DISPLACEMENT: Subordinate aesthetic affinity under minimal-dominant profile (e.g. streetwear, avant-garde) or pruned during top-12 slot truncation."
+      },
+      {
+        "id": "gar_masculine_single_monk_tan",
+        "name": "Single Monkstrap Dress Shoes (Warm Tan)",
+        "category": "footwear",
+        "subcategory": "monkstrap",
+        "formality": 4,
+        "genderCoding": "masculine",
+        "reason": "PRUNING_OR_STYLE_DISPLACEMENT: Subordinate aesthetic affinity under minimal-dominant profile (e.g. streetwear, avant-garde) or pruned during top-12 slot truncation."
+      },
+      {
+        "id": "gar_masculine_linen_slip_on_tobacco",
+        "name": "Belgian Linen Venetian Dress Loafers (Tobacco)",
+        "category": "footwear",
+        "subcategory": "loafers",
+        "formality": 4,
+        "genderCoding": "masculine",
+        "reason": "PRUNING_OR_STYLE_DISPLACEMENT: Subordinate aesthetic affinity under minimal-dominant profile (e.g. streetwear, avant-garde) or pruned during top-12 slot truncation."
+      },
+      {
+        "id": "gar_masculine_french_cuff_twill_shirt_white",
+        "name": "Double-Cuff Royal Twill Dress Shirt (White)",
+        "category": "top",
+        "subcategory": "dress-shirt",
+        "formality": 5,
+        "genderCoding": "masculine",
+        "reason": "PRUNING_OR_STYLE_DISPLACEMENT: Subordinate aesthetic affinity under minimal-dominant profile (e.g. streetwear, avant-garde) or pruned during top-12 slot truncation."
+      },
+      {
+        "id": "gar_feminine_silk_crepe_column_gown_emerald",
+        "name": "High-Neck Silk Crepe Column Gown (Emerald)",
+        "category": "one-piece",
+        "subcategory": "gown",
+        "formality": 5,
+        "genderCoding": "feminine",
+        "reason": "CEREMONIAL_EVENING_VETO: Restricted to formal black-tie/cultural/evening-wedding occasions and outranked by core eveningwear."
+      },
+      {
+        "id": "gar_feminine_linen_silk_maxi_dress_navy",
+        "name": "Belted Crisp Linen-Silk Maxi Dress (Navy)",
+        "category": "one-piece",
+        "subcategory": "dress",
+        "formality": 4,
+        "genderCoding": "feminine",
+        "reason": "PRUNING_OR_STYLE_DISPLACEMENT: Subordinate aesthetic affinity under minimal-dominant profile (e.g. streetwear, avant-garde) or pruned during top-12 slot truncation."
+      },
+      {
+        "id": "gar_feminine_wool_crepe_sheath_dress_black",
+        "name": "Long-Sleeve Virgin Wool Crepe Sheath Dress (Black)",
+        "category": "one-piece",
+        "subcategory": "dress",
+        "formality": 5,
+        "genderCoding": "feminine",
+        "reason": "PRUNING_OR_STYLE_DISPLACEMENT: Subordinate aesthetic affinity under minimal-dominant profile (e.g. streetwear, avant-garde) or pruned during top-12 slot truncation."
+      },
+      {
+        "id": "gar_feminine_silk_velvet_evening_gown_midnight",
+        "name": "Silk-Silk Velvet Long-Sleeve Evening Gown (Midnight Blue)",
+        "category": "one-piece",
+        "subcategory": "gown",
+        "formality": 5,
+        "genderCoding": "feminine",
+        "reason": "CEREMONIAL_EVENING_VETO: Restricted to formal black-tie/cultural/evening-wedding occasions and outranked by core eveningwear."
+      },
+      {
+        "id": "gar_feminine_silk_taffeta_dress_ruby",
+        "name": "Pleated Silk Taffeta Formal Dress (Deep Ruby)",
+        "category": "one-piece",
+        "subcategory": "dress",
+        "formality": 5,
+        "genderCoding": "feminine",
+        "reason": "PRUNING_OR_STYLE_DISPLACEMENT: Subordinate aesthetic affinity under minimal-dominant profile (e.g. streetwear, avant-garde) or pruned during top-12 slot truncation."
+      },
+      {
+        "id": "gar_feminine_wool_flannel_maxi_skirt_charcoal",
+        "name": "Architectural Wool Flannel Maxi Skirt (Charcoal)",
+        "category": "bottom",
+        "subcategory": "skirt",
+        "formality": 5,
+        "genderCoding": "feminine",
+        "reason": "PRUNING_OR_STYLE_DISPLACEMENT: Subordinate aesthetic affinity under minimal-dominant profile (e.g. streetwear, avant-garde) or pruned during top-12 slot truncation."
+      },
+      {
+        "id": "gar_feminine_wool_accordion_pleat_skirt_burgundy",
+        "name": "Fine Wool Crepe Accordion Pleated Midi Skirt (Burgundy)",
+        "category": "bottom",
+        "subcategory": "skirt",
+        "formality": 4,
+        "genderCoding": "feminine",
+        "reason": "PRUNING_OR_STYLE_DISPLACEMENT: Subordinate aesthetic affinity under minimal-dominant profile (e.g. streetwear, avant-garde) or pruned during top-12 slot truncation."
+      },
+      {
+        "id": "gar_ribbed_merino_sweater_dress_grey",
+        "name": "Fine Ribbed Merino Turtleneck Sweater Dress (Heather Grey)",
+        "category": "one-piece",
+        "subcategory": "dress",
+        "formality": 1,
+        "genderCoding": "feminine",
+        "reason": "PRUNING_OR_STYLE_DISPLACEMENT: Subordinate aesthetic affinity under minimal-dominant profile (e.g. streetwear, avant-garde) or pruned during top-12 slot truncation."
+      },
+      {
+        "id": "gar_french_terry_hooded_dress_black",
+        "name": "Heavyweight French Terry Hooded Dress (Black)",
+        "category": "one-piece",
+        "subcategory": "dress",
+        "formality": 1,
+        "genderCoding": "feminine",
+        "reason": "PRUNING_OR_STYLE_DISPLACEMENT: Subordinate aesthetic affinity under minimal-dominant profile (e.g. streetwear, avant-garde) or pruned during top-12 slot truncation."
+      },
+      {
+        "id": "gar_thermal_waffle_maxi_dress_oatmeal",
+        "name": "Organic Waffle Knit Maxi Loungewear Dress (Oatmeal)",
+        "category": "one-piece",
+        "subcategory": "dress",
+        "formality": 1,
+        "genderCoding": "feminine",
+        "reason": "PRUNING_OR_STYLE_DISPLACEMENT: Subordinate aesthetic affinity under minimal-dominant profile (e.g. streetwear, avant-garde) or pruned during top-12 slot truncation."
+      },
+      {
+        "id": "gar_flannel_oversized_shirt_dress_navy",
+        "name": "Brushed Cotton Flannel Oversized Shirt Dress (Navy)",
+        "category": "one-piece",
+        "subcategory": "dress",
+        "formality": 1,
+        "genderCoding": "feminine",
+        "reason": "PRUNING_OR_STYLE_DISPLACEMENT: Subordinate aesthetic affinity under minimal-dominant profile (e.g. streetwear, avant-garde) or pruned during top-12 slot truncation."
+      },
+      {
+        "id": "gar_cotton_jersey_tshirt_maxi_dress_ecru",
+        "name": "Organic Cotton Jersey T-Shirt Maxi Dress (Ecru)",
+        "category": "one-piece",
+        "subcategory": "dress",
+        "formality": 1,
+        "genderCoding": "feminine",
+        "reason": "PRUNING_OR_STYLE_DISPLACEMENT: Subordinate aesthetic affinity under minimal-dominant profile (e.g. streetwear, avant-garde) or pruned during top-12 slot truncation."
+      },
+      {
+        "id": "gar_washed_linen_popover_dress_sage",
+        "name": "Washed Normandy Linen Popover Dress (Sage)",
+        "category": "one-piece",
+        "subcategory": "dress",
+        "formality": 1,
+        "genderCoding": "feminine",
+        "reason": "PRUNING_OR_STYLE_DISPLACEMENT: Subordinate aesthetic affinity under minimal-dominant profile (e.g. streetwear, avant-garde) or pruned during top-12 slot truncation."
+      },
+      {
+        "id": "gar_slub_cotton_tshirt_dress_olive",
+        "name": "Slub Cotton Pocket T-Shirt Dress (Olive)",
+        "category": "one-piece",
+        "subcategory": "dress",
+        "formality": 1,
+        "genderCoding": "feminine",
+        "reason": "PRUNING_OR_STYLE_DISPLACEMENT: Subordinate aesthetic affinity under minimal-dominant profile (e.g. streetwear, avant-garde) or pruned during top-12 slot truncation."
+      },
+      {
+        "id": "gar_gauze_cotton_tiered_dress_white",
+        "name": "Double Gauze Cotton Tiered Sundress (White)",
+        "category": "one-piece",
+        "subcategory": "dress",
+        "formality": 1,
+        "genderCoding": "feminine",
+        "reason": "PRUNING_OR_STYLE_DISPLACEMENT: Subordinate aesthetic affinity under minimal-dominant profile (e.g. streetwear, avant-garde) or pruned during top-12 slot truncation."
+      },
+      {
+        "id": "gar_corduroy_utility_midi_dress_espresso",
+        "name": "Cotton Corduroy Utility Belted Dress (Espresso)",
+        "category": "one-piece",
+        "subcategory": "dress",
+        "formality": 2,
+        "genderCoding": "feminine",
+        "reason": "PRUNING_OR_STYLE_DISPLACEMENT: Subordinate aesthetic affinity under minimal-dominant profile (e.g. streetwear, avant-garde) or pruned during top-12 slot truncation."
+      },
+      {
+        "id": "gar_heavy_denim_western_shirt_dress_indigo",
+        "name": "Heavy Raw Denim Western Shirt Dress (Deep Indigo)",
+        "category": "one-piece",
+        "subcategory": "dress",
+        "formality": 2,
+        "genderCoding": "feminine",
+        "reason": "PRUNING_OR_STYLE_DISPLACEMENT: Subordinate aesthetic affinity under minimal-dominant profile (e.g. streetwear, avant-garde) or pruned during top-12 slot truncation."
+      },
+      {
+        "id": "gar_ribbed_cashmere_midi_dress_camel",
+        "name": "Ribbed Cashmere-Merino Crewneck Dress (Camel)",
+        "category": "one-piece",
+        "subcategory": "dress",
+        "formality": 2,
+        "genderCoding": "feminine",
+        "reason": "PRUNING_OR_STYLE_DISPLACEMENT: Subordinate aesthetic affinity under minimal-dominant profile (e.g. streetwear, avant-garde) or pruned during top-12 slot truncation."
+      },
+      {
+        "id": "gar_fleece_heavy_jersey_midi_skirt_grey",
+        "name": "Brushed Fleece-Backed Jersey Midi Skirt (Heather Grey)",
+        "category": "bottom",
+        "subcategory": "skirt",
+        "formality": 1,
+        "genderCoding": "feminine",
+        "reason": "PRUNING_OR_STYLE_DISPLACEMENT: Subordinate aesthetic affinity under minimal-dominant profile (e.g. streetwear, avant-garde) or pruned during top-12 slot truncation."
+      },
+      {
+        "id": "gar_quilted_insulated_aline_skirt_black",
+        "name": "Quilted Ripstop Insulated A-Line Skirt (Black)",
+        "category": "bottom",
+        "subcategory": "skirt",
+        "formality": 1,
+        "genderCoding": "feminine",
+        "reason": "PRUNING_OR_STYLE_DISPLACEMENT: Subordinate aesthetic affinity under minimal-dominant profile (e.g. streetwear, avant-garde) or pruned during top-12 slot truncation."
+      },
+      {
+        "id": "gar_cotton_corduroy_straight_skirt_tobacco",
+        "name": "Cotton Corduroy Straight Mini Skirt (Tobacco)",
+        "category": "bottom",
+        "subcategory": "skirt",
+        "formality": 1,
+        "genderCoding": "feminine",
+        "reason": "PRUNING_OR_STYLE_DISPLACEMENT: Subordinate aesthetic affinity under minimal-dominant profile (e.g. streetwear, avant-garde) or pruned during top-12 slot truncation."
+      },
+      {
+        "id": "gar_gauze_cotton_wrap_skirt_terracotta",
+        "name": "Crinkled Gauze Cotton Tie-Wrap Skirt (Terracotta)",
+        "category": "bottom",
+        "subcategory": "skirt",
+        "formality": 1,
+        "genderCoding": "feminine",
+        "reason": "PRUNING_OR_STYLE_DISPLACEMENT: Subordinate aesthetic affinity under minimal-dominant profile (e.g. streetwear, avant-garde) or pruned during top-12 slot truncation."
+      },
+      {
+        "id": "gar_lightweight_denim_aline_skirt_indigo",
+        "name": "Lightweight Washed Denim A-Line Midi Skirt (Light Indigo)",
+        "category": "bottom",
+        "subcategory": "skirt",
+        "formality": 1,
+        "genderCoding": "feminine",
+        "reason": "PRUNING_OR_STYLE_DISPLACEMENT: Subordinate aesthetic affinity under minimal-dominant profile (e.g. streetwear, avant-garde) or pruned during top-12 slot truncation."
+      },
+      {
+        "id": "gar_chunky_merino_maxi_skirt_oatmeal",
+        "name": "Chunky Ribbed Merino Wool Maxi Skirt (Oatmeal)",
+        "category": "bottom",
+        "subcategory": "skirt",
+        "formality": 2,
+        "genderCoding": "feminine",
+        "reason": "PRUNING_OR_STYLE_DISPLACEMENT: Subordinate aesthetic affinity under minimal-dominant profile (e.g. streetwear, avant-garde) or pruned during top-12 slot truncation."
+      },
+      {
+        "id": "gar_selvedge_denim_column_skirt_indigo",
+        "name": "Structured Selvedge Denim Column Skirt (Raw Indigo)",
+        "category": "bottom",
+        "subcategory": "skirt",
+        "formality": 2,
+        "genderCoding": "feminine",
+        "reason": "PRUNING_OR_STYLE_DISPLACEMENT: Subordinate aesthetic affinity under minimal-dominant profile (e.g. streetwear, avant-garde) or pruned during top-12 slot truncation."
+      },
+      {
+        "id": "gar_pleated_wool_plaid_skirt_forest",
+        "name": "Heritage Wool-Blend Stitched Box-Pleat Skirt (Forest Plaid)",
+        "category": "bottom",
+        "subcategory": "skirt",
+        "formality": 2,
+        "genderCoding": "feminine",
+        "reason": "PRUNING_OR_STYLE_DISPLACEMENT: Subordinate aesthetic affinity under minimal-dominant profile (e.g. streetwear, avant-garde) or pruned during top-12 slot truncation."
+      },
+      {
+        "id": "gar_cotton_poplin_circle_skirt_navy",
+        "name": "High-Density Cotton Poplin Circle Midi Skirt (Navy)",
+        "category": "bottom",
+        "subcategory": "skirt",
+        "formality": 2,
+        "genderCoding": "feminine",
+        "reason": "PRUNING_OR_STYLE_DISPLACEMENT: Subordinate aesthetic affinity under minimal-dominant profile (e.g. streetwear, avant-garde) or pruned during top-12 slot truncation."
+      },
+      {
+        "id": "gar_habotai_silk_kaftan_gown_ivory",
+        "name": "Architectural Habotai Silk Kaftan Gown (Ivory)",
+        "category": "one-piece",
+        "subcategory": "gown",
+        "formality": 5,
+        "genderCoding": "feminine",
+        "reason": "CEREMONIAL_EVENING_VETO: Restricted to formal black-tie/cultural/evening-wedding occasions and outranked by core eveningwear."
+      },
+      {
+        "id": "gar_organza_overlay_evening_gown_champagne",
+        "name": "Silk Organza High-Neck Evening Gown (Champagne)",
+        "category": "one-piece",
+        "subcategory": "gown",
+        "formality": 5,
+        "genderCoding": "feminine",
+        "reason": "CEREMONIAL_EVENING_VETO: Restricted to formal black-tie/cultural/evening-wedding occasions and outranked by core eveningwear."
+      },
+      {
+        "id": "gar_silk_chiffon_goddess_gown_sage",
+        "name": "Multi-Layered Silk Chiffon Draped Gown (Sage)",
+        "category": "one-piece",
+        "subcategory": "gown",
+        "formality": 5,
+        "genderCoding": "feminine",
+        "reason": "CEREMONIAL_EVENING_VETO: Restricted to formal black-tie/cultural/evening-wedding occasions and outranked by core eveningwear."
+      },
+      {
+        "id": "gar_crepe_cape_evening_gown_cobalt",
+        "name": "Silk Crepe de Chine Capelet Column Gown (Cobalt)",
+        "category": "one-piece",
+        "subcategory": "gown",
+        "formality": 5,
+        "genderCoding": "feminine",
+        "reason": "CEREMONIAL_EVENING_VETO: Restricted to formal black-tie/cultural/evening-wedding occasions and outranked by core eveningwear."
+      },
+      {
+        "id": "gar_silk_mikado_ball_maxi_skirt_black",
+        "name": "Sculptural Silk Mikado Bell Maxi Skirt (Black)",
+        "category": "bottom",
+        "subcategory": "skirt",
+        "formality": 5,
+        "genderCoding": "feminine",
+        "reason": "PRUNING_OR_STYLE_DISPLACEMENT: Subordinate aesthetic affinity under minimal-dominant profile (e.g. streetwear, avant-garde) or pruned during top-12 slot truncation."
+      },
+      {
+        "id": "gar_pleated_silk_georgette_maxi_skirt_ivory",
+        "name": "Permanent Accordion-Pleated Silk Georgette Maxi Skirt (Ivory)",
+        "category": "bottom",
+        "subcategory": "skirt",
+        "formality": 5,
+        "genderCoding": "feminine",
+        "reason": "PRUNING_OR_STYLE_DISPLACEMENT: Subordinate aesthetic affinity under minimal-dominant profile (e.g. streetwear, avant-garde) or pruned during top-12 slot truncation."
+      },
+      {
+        "id": "gar_metallic_silk_jacquard_skirt_bronze",
+        "name": "Architectural Metallic Silk Jacquard Maxi Skirt (Bronze)",
+        "category": "bottom",
+        "subcategory": "skirt",
+        "formality": 5,
+        "genderCoding": "feminine",
+        "reason": "PRUNING_OR_STYLE_DISPLACEMENT: Subordinate aesthetic affinity under minimal-dominant profile (e.g. streetwear, avant-garde) or pruned during top-12 slot truncation."
+      },
+      {
+        "id": "gar_duchesse_satin_mermaid_skirt_navy",
+        "name": "Fluted Silk Duchesse Satin Mermaid Maxi Skirt (Navy)",
+        "category": "bottom",
+        "subcategory": "skirt",
+        "formality": 5,
+        "genderCoding": "feminine",
+        "reason": "PRUNING_OR_STYLE_DISPLACEMENT: Subordinate aesthetic affinity under minimal-dominant profile (e.g. streetwear, avant-garde) or pruned during top-12 slot truncation."
+      },
+      {
+        "id": "gar_linen_viscose_pleated_midi_skirt_terracotta",
+        "name": "Linen-Viscose Fluid Knife-Pleat Midi Skirt (Terracotta)",
+        "category": "bottom",
+        "subcategory": "skirt",
+        "formality": 2,
+        "genderCoding": "feminine",
+        "reason": "PRUNING_OR_STYLE_DISPLACEMENT: Subordinate aesthetic affinity under minimal-dominant profile (e.g. streetwear, avant-garde) or pruned during top-12 slot truncation."
+      },
+      {
+        "id": "gar_crinkled_chambray_aline_skirt_blue",
+        "name": "Washed Cotton Chambray A-Line Midi Skirt (Bleached Blue)",
+        "category": "bottom",
+        "subcategory": "skirt",
+        "formality": 2,
+        "genderCoding": "feminine",
+        "reason": "PRUNING_OR_STYLE_DISPLACEMENT: Subordinate aesthetic affinity under minimal-dominant profile (e.g. streetwear, avant-garde) or pruned during top-12 slot truncation."
+      }
+    ]
   },
   "garmentMatrix": {
     "dresses": {

@@ -100,8 +100,39 @@ export const GarmentMesh: React.FC<GarmentMeshProps> = ({
                 <torusGeometry args={[0.065, 0.014, 16, 28]} />
               </mesh>
             </group>
+          ) : archetype === 'tank-camisole' ? (
+            /* Tank Top / Silk Camisole */
+            <group position={[0, 1.25, 0]}>
+              <mesh material={garmentMat} castShadow>
+                <cylinderGeometry args={[0.18, 0.15, 0.34, 28]} />
+              </mesh>
+              {/* Delicate Shoulder Straps */}
+              <mesh position={[-0.11, 0.18, 0]} material={garmentMat}>
+                <boxGeometry args={[0.018, 0.07, 0.05]} />
+              </mesh>
+              <mesh position={[0.11, 0.18, 0]} material={garmentMat}>
+                <boxGeometry args={[0.018, 0.07, 0.05]} />
+              </mesh>
+            </group>
+          ) : archetype === 'blouse' ? (
+            /* Fluid Draped / Silk Tie-Neck / Wrap Blouse */
+            <group position={[0, 1.24, 0]}>
+              <mesh material={garmentMat} castShadow>
+                <cylinderGeometry args={[0.19, 0.17, 0.38, 28]} />
+              </mesh>
+              <mesh position={[-0.24, 0.01, 0]} rotation={[0, 0, 0.08]} material={garmentMat}>
+                <cylinderGeometry args={[0.056, 0.038, 0.36, 20]} />
+              </mesh>
+              <mesh position={[0.24, 0.01, 0]} rotation={[0, 0, -0.08]} material={garmentMat}>
+                <cylinderGeometry args={[0.056, 0.038, 0.36, 20]} />
+              </mesh>
+              {/* Soft Draped Front Collar Accent */}
+              <mesh position={[0, 0.18, 0.02]} rotation={[0.1, 0, 0]} material={garmentMat}>
+                <boxGeometry args={[0.13, 0.03, 0.04]} />
+              </mesh>
+            </group>
           ) : (
-            /* Poplin Shirt / Camp Collar / Silk Blouse */
+            /* Poplin Shirt / Camp Collar */
             <group position={[0, 1.24, 0]}>
               <mesh material={garmentMat} castShadow>
                 <cylinderGeometry args={[0.2, 0.165, 0.38, 28]} />
@@ -157,6 +188,26 @@ export const GarmentMesh: React.FC<GarmentMeshProps> = ({
               </mesh>
               <mesh position={[0.11, 0.05, 0]} material={garmentMat} castShadow>
                 <cylinderGeometry args={[0.085, 0.09, 0.68, 24]} />
+              </mesh>
+            </group>
+          ) : archetype === 'sweatpants' ? (
+            /* Loopback Fleece Sweatpants / Tapered Joggers */
+            <group position={[0, 0.52, 0]}>
+              <mesh position={[0, 0.44, 0]} material={garmentMat} castShadow>
+                <cylinderGeometry args={[0.174, 0.165, 0.16, 28]} />
+              </mesh>
+              <mesh position={[-0.11, 0.05, 0]} material={garmentMat} castShadow>
+                <cylinderGeometry args={[0.082, 0.052, 0.68, 24]} />
+              </mesh>
+              <mesh position={[0.11, 0.05, 0]} material={garmentMat} castShadow>
+                <cylinderGeometry args={[0.082, 0.052, 0.68, 24]} />
+              </mesh>
+              {/* Elasticated Cuffs */}
+              <mesh position={[-0.11, -0.27, 0]} material={garmentMat}>
+                <torusGeometry args={[0.046, 0.012, 12, 20]} />
+              </mesh>
+              <mesh position={[0.11, -0.27, 0]} material={garmentMat}>
+                <torusGeometry args={[0.046, 0.012, 12, 20]} />
               </mesh>
             </group>
           ) : (
@@ -304,6 +355,26 @@ export const GarmentMesh: React.FC<GarmentMeshProps> = ({
               <mesh position={[0.11, 0.025, -0.03]} material={garmentMat}>
                 <cylinderGeometry args={[0.01, 0.01, 0.05, 12]} />
               </mesh>
+            </>
+          ) : archetype === 'flat-shoe' ? (
+            /* Ballet Flats / Mules / Minimalist Flat Shoes */
+            <>
+              <group position={[-0.11, 0.032, 0.04]}>
+                <mesh material={garmentMat} castShadow>
+                  <boxGeometry args={[0.072, 0.032, 0.185]} />
+                </mesh>
+                <mesh position={[0, 0.018, 0.025]} material={garmentMat}>
+                  <boxGeometry args={[0.068, 0.018, 0.08]} />
+                </mesh>
+              </group>
+              <group position={[0.11, 0.032, 0.04]}>
+                <mesh material={garmentMat} castShadow>
+                  <boxGeometry args={[0.072, 0.032, 0.185]} />
+                </mesh>
+                <mesh position={[0, 0.018, 0.025]} material={garmentMat}>
+                  <boxGeometry args={[0.068, 0.018, 0.08]} />
+                </mesh>
+              </group>
             </>
           ) : (
             /* Loafers / Derbies / Oxfords / Minimal Sneakers */

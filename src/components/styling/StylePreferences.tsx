@@ -61,10 +61,10 @@ export function StylePreferences({
               key={arch.slug}
               className={`p-2.5 border transition flex flex-col justify-between text-left ${
                 isSelected
-                  ? 'border-neutral-900 bg-neutral-900 text-white'
+                  ? 'border-neutral-900 bg-neutral-900 text-white dark:border-white dark:bg-white dark:text-black'
                   : isDisliked
-                  ? 'border-red-200 bg-red-50/40 text-neutral-400 opacity-60'
-                  : 'border-neutral-200 bg-white hover:border-neutral-400 text-neutral-800'
+                  ? 'border-red-200 dark:border-red-900/60 bg-red-50/40 dark:bg-red-950/30 text-neutral-400 opacity-60'
+                  : 'border-neutral-200 dark:border-neutral-800 bg-white dark:bg-[#18181b] hover:border-neutral-400 dark:hover:border-neutral-600 text-neutral-800 dark:text-neutral-200'
               }`}
             >
               <div>
@@ -72,25 +72,25 @@ export function StylePreferences({
                   <span className="font-semibold uppercase text-[11px] leading-tight block">
                     {arch.name}
                   </span>
-                  {isSelected && <Check className="w-3 h-3 text-white shrink-0 mt-0.5" />}
+                  {isSelected && <Check className="w-3 h-3 text-white dark:text-black shrink-0 mt-0.5" />}
                 </div>
                 <p
                   className={`text-[9px] mt-1 line-clamp-2 leading-relaxed ${
-                    isSelected ? 'text-neutral-300' : 'text-neutral-500'
+                    isSelected ? 'text-neutral-300 dark:text-neutral-600' : 'text-neutral-500 dark:text-neutral-400'
                   }`}
                 >
                   {arch.subtitle}
                 </p>
               </div>
 
-              <div className="flex items-center gap-1.5 mt-2.5 pt-2 border-t border-neutral-100/30 text-[9px]">
+              <div className="flex items-center gap-1.5 mt-2.5 pt-2 border-t border-neutral-100/30 dark:border-neutral-700/30 text-[9px]">
                 <button
                   type="button"
                   onClick={() => onToggleStyle(arch.slug)}
                   className={`px-1.5 py-0.5 uppercase tracking-wider rounded-xs transition ${
                     isSelected
-                      ? 'bg-white/20 text-white hover:bg-white/30'
-                      : 'bg-neutral-100 hover:bg-neutral-200 text-neutral-700'
+                      ? 'bg-white/20 dark:bg-black/20 text-white dark:text-black hover:bg-white/30'
+                      : 'bg-neutral-100 dark:bg-neutral-800 hover:bg-neutral-200 dark:hover:bg-neutral-700 text-neutral-700 dark:text-neutral-200'
                   }`}
                 >
                   {isSelected ? 'REMOVE' : 'SELECT'}
@@ -101,8 +101,8 @@ export function StylePreferences({
                   title={isDisliked ? 'Unmark dislike' : 'Mark as dislike'}
                   className={`px-1.5 py-0.5 uppercase tracking-wider rounded-xs transition ${
                     isDisliked
-                      ? 'bg-red-200 text-red-900 font-semibold'
-                      : 'text-neutral-400 hover:text-red-700'
+                      ? 'bg-red-200 dark:bg-red-900 text-red-900 dark:text-red-100 font-semibold'
+                      : 'text-neutral-400 dark:text-neutral-500 hover:text-red-700'
                   }`}
                 >
                   {isDisliked ? 'AVOIDED' : 'AVOID'}
@@ -113,5 +113,6 @@ export function StylePreferences({
         })}
       </div>
     </div>
+
   );
 }
