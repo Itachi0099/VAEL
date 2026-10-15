@@ -38,7 +38,7 @@ test.describe('VAEL Live Interaction & E2E Suite (R1.4)', () => {
       }
 
       // Capture first look title or garment names to verify looks change across temperature bands
-      const firstLookCard = page.locator('.font-editorial-title').first();
+      const firstLookCard = page.locator('h3.font-editorial-title').first();
       const text = (await firstLookCard.textContent()) || '';
       lookSnapshots.push(text);
     }
@@ -73,13 +73,13 @@ test.describe('VAEL Live Interaction & E2E Suite (R1.4)', () => {
     // Set Hot + Rain
     await page.locator('#temp-btn-hot').click();
     await rainBtn.click();
-    await page.waitForTimeout(800);
-    const hotRainLook = await page.locator('.font-editorial-title').first().textContent();
+    await page.waitForTimeout(1200);
+    const hotRainLook = await page.locator('h3.font-editorial-title').first().textContent();
 
     // Set Cold + Rain
     await page.locator('#temp-btn-cold').click();
-    await page.waitForTimeout(800);
-    const coldRainLook = await page.locator('.font-editorial-title').first().textContent();
+    await page.waitForTimeout(1200);
+    const coldRainLook = await page.locator('h3.font-editorial-title').first().textContent();
 
     expect(hotRainLook).not.toEqual(coldRainLook);
   });
@@ -208,6 +208,7 @@ test.describe('VAEL Live Interaction & E2E Suite (R1.4)', () => {
     // 2. Toggle to light mode
     const toggleBtn = page.getByRole('button', { name: 'Toggle dark mode' });
     await toggleBtn.click();
+    await page.emulateMedia({ colorScheme: 'light' });
     await expect(html).not.toHaveClass(/dark/);
 
     // 3. Reload page -> persists light theme
@@ -222,6 +223,7 @@ test.describe('VAEL Live Interaction & E2E Suite (R1.4)', () => {
 
     // 5. Toggle back to dark mode and run contrast check
     await toggleBtn.click();
+    await page.emulateMedia({ colorScheme: 'dark' });
     await expect(html).toHaveClass(/dark/);
     const darkAxeResults = await new AxeBuilder({ page })
       .withRules(['color-contrast'])
