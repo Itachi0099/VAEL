@@ -39,14 +39,14 @@ export function StylePreferences({
     <div className="font-editorial-mono text-xs space-y-4">
       <div className="flex items-center justify-between">
         <div>
-          <span className="text-[11px] uppercase tracking-widest text-neutral-500 font-semibold block">
+          <span className="text-[11px] uppercase tracking-widest text-neutral-600 dark:text-neutral-400 font-semibold block">
             STYLE DIRECTION
           </span>
-          <span className="text-[10px] text-neutral-400 font-sans">
+          <span className="text-[10px] text-neutral-600 dark:text-neutral-400 font-sans">
             Select up to 3 style directions that align with how you wish to present yourself.
           </span>
         </div>
-        <span className="text-[10px] text-neutral-400">
+        <span className="text-[10px] text-neutral-600 dark:text-neutral-400 font-medium">
           {selectedStyles.length} / 3 SELECTED
         </span>
       </div>
