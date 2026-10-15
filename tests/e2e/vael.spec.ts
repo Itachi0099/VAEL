@@ -235,6 +235,8 @@ test.describe('VAEL Live Interaction & E2E Suite (R1.4)', () => {
     await toggleBtn.click();
     await page.emulateMedia({ colorScheme: 'dark' });
     await expect(html).toHaveClass(/dark/);
+    await expect(html).toHaveAttribute('data-theme', 'dark');
+    await page.waitForTimeout(300);
     const darkAxeResults = await new AxeBuilder({ page })
       .withRules(['color-contrast'])
       .analyze();
