@@ -35,11 +35,11 @@ async function generateAuditPdf() {
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>VAEL R1.3 & R2.0 — Engineering & Fashion Intelligence Audit Report</title>
+  <title>VAEL R1.4 — Live-Site Truth &amp; Interaction Engineering Audit Report</title>
   <style>
     @page {
       size: A4;
-      margin: 18mm 16mm 20mm 16mm;
+      margin: 16mm 14mm 18mm 14mm;
       @bottom-right {
         content: counter(page) " / " counter(pages);
         font-family: 'SF Mono', 'Courier New', monospace;
@@ -58,14 +58,14 @@ async function generateAuditPdf() {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
       color: #121212;
       background: #ffffff;
-      line-height: 1.5;
-      font-size: 9.5pt;
+      line-height: 1.45;
+      font-size: 9pt;
       margin: 0;
       padding: 0;
     }
 
     .mono {
-      font-family: "SF Mono", "Monaco", "Inconsolata", "Fira Mono", "Droid Sans Mono", "Source Code Pro", monospace;
+      font-family: "SF Mono", "Monaco", "Inconsolata", "Fira Mono", "Droid Sans Mono", monospace;
     }
 
     .title-font {
@@ -86,15 +86,15 @@ async function generateAuditPdf() {
     /* Masthead */
     .header {
       border-bottom: 2px solid #111;
-      padding-bottom: 12px;
-      margin-bottom: 18px;
+      padding-bottom: 10px;
+      margin-bottom: 14px;
       display: flex;
       justify-content: space-between;
       align-items: flex-end;
     }
 
     .brand-title {
-      font-size: 26pt;
+      font-size: 24pt;
       font-weight: 500;
       margin: 0;
       line-height: 1;
@@ -103,52 +103,52 @@ async function generateAuditPdf() {
     .brand-subtitle {
       font-size: 8.5pt;
       text-transform: uppercase;
-      letter-spacing: 0.15em;
-      color: #666;
-      margin-top: 5px;
+      letter-spacing: 0.12em;
+      color: #555;
+      margin-top: 4px;
     }
 
     .meta-box {
       text-align: right;
-      font-size: 8pt;
+      font-size: 7.5pt;
       color: #444;
       line-height: 1.35;
     }
 
     h2 {
-      font-size: 13pt;
+      font-size: 12pt;
       text-transform: uppercase;
-      letter-spacing: 0.06em;
+      letter-spacing: 0.05em;
       border-bottom: 1px solid #ddd;
-      padding-bottom: 4px;
-      margin-top: 18px;
-      margin-bottom: 10px;
+      padding-bottom: 3px;
+      margin-top: 14px;
+      margin-bottom: 8px;
       color: #000;
     }
 
     h3 {
-      font-size: 10.5pt;
+      font-size: 10pt;
       text-transform: uppercase;
-      letter-spacing: 0.04em;
-      margin-top: 12px;
-      margin-bottom: 6px;
+      letter-spacing: 0.03em;
+      margin-top: 10px;
+      margin-bottom: 5px;
       color: #222;
     }
 
     p {
       margin-top: 0;
-      margin-bottom: 8px;
+      margin-bottom: 6px;
       color: #333;
     }
 
     /* Badges */
     .badge {
       display: inline-block;
-      padding: 2px 6px;
-      font-size: 7.5pt;
+      padding: 2px 5px;
+      font-size: 7pt;
       font-weight: 600;
       text-transform: uppercase;
-      letter-spacing: 0.05em;
+      letter-spacing: 0.04em;
       border-radius: 2px;
     }
 
@@ -162,6 +162,12 @@ async function generateAuditPdf() {
       background: #e8f0fe;
       color: #1a73e8;
       border: 1px solid #d2e3fc;
+    }
+
+    .badge-not-met {
+      background: #fce8e6;
+      color: #c5221f;
+      border: 1px solid #fad2cf;
     }
 
     .badge-neutral {
@@ -180,25 +186,25 @@ async function generateAuditPdf() {
     table {
       width: 100%;
       border-collapse: collapse;
-      margin: 10px 0 14px 0;
-      font-size: 8.5pt;
+      margin: 8px 0 10px 0;
+      font-size: 8pt;
     }
 
     th {
       background: #f8f9fa;
       border: 1px solid #dadce0;
-      padding: 6px 8px;
+      padding: 5px 6px;
       text-align: left;
       font-weight: 600;
       text-transform: uppercase;
-      letter-spacing: 0.04em;
-      font-size: 7.5pt;
+      letter-spacing: 0.03em;
+      font-size: 7pt;
       color: #202124;
     }
 
     td {
       border: 1px solid #e8eaed;
-      padding: 5px 8px;
+      padding: 4px 6px;
       color: #3c4043;
     }
 
@@ -210,28 +216,28 @@ async function generateAuditPdf() {
     .metric-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 10px;
-      margin: 12px 0;
+      gap: 8px;
+      margin: 10px 0;
     }
 
     .metric-card {
       border: 1px solid #dadce0;
-      padding: 10px;
+      padding: 8px;
       background: #fdfdfd;
       border-radius: 2px;
     }
 
     .metric-label {
-      font-size: 7pt;
+      font-size: 6.5pt;
       text-transform: uppercase;
-      letter-spacing: 0.06em;
+      letter-spacing: 0.05em;
       color: #70757a;
       display: block;
-      margin-bottom: 3px;
+      margin-bottom: 2px;
     }
 
     .metric-val {
-      font-size: 14pt;
+      font-size: 13pt;
       font-weight: 600;
       color: #202124;
       display: block;
@@ -239,23 +245,23 @@ async function generateAuditPdf() {
     }
 
     .metric-sub {
-      font-size: 7.5pt;
+      font-size: 7pt;
       color: #5f6368;
-      margin-top: 4px;
-      line-height: 1.25;
+      margin-top: 3px;
+      line-height: 1.2;
     }
 
     /* Screenshot layouts */
     .img-row {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 12px;
-      margin: 10px 0;
+      gap: 10px;
+      margin: 8px 0;
     }
 
     .img-box {
       border: 1px solid #dadce0;
-      padding: 6px;
+      padding: 5px;
       background: #fbfbfb;
     }
 
@@ -267,20 +273,20 @@ async function generateAuditPdf() {
     }
 
     .img-caption {
-      font-size: 7.5pt;
+      font-size: 7pt;
       color: #5f6368;
-      margin-top: 4px;
+      margin-top: 3px;
       text-align: center;
       text-transform: uppercase;
-      letter-spacing: 0.04em;
+      letter-spacing: 0.03em;
     }
 
     .callout {
       border-left: 3px solid #202124;
       background: #f8f9fa;
-      padding: 8px 12px;
-      margin: 10px 0;
-      font-size: 8.5pt;
+      padding: 6px 10px;
+      margin: 8px 0;
+      font-size: 8pt;
     }
   </style>
 </head>
@@ -290,35 +296,35 @@ async function generateAuditPdf() {
   <div class="header">
     <div>
       <h1 class="brand-title title-font">VAEL</h1>
-      <div class="brand-subtitle mono">Official Engineering &amp; Fashion Intelligence Audit</div>
+      <div class="brand-subtitle mono">Official Engineering &amp; Interaction Verification Audit</div>
     </div>
     <div class="meta-box mono">
-      <div><strong>DATE:</strong> 14 October 2026</div>
-      <div><strong>MASTER COMMIT:</strong> 3579dec (Live Production)</div>
-      <div><strong>STUDIO COMMIT:</strong> 2a80f74 (Feature Spike)</div>
-      <div><strong>AUDIT STATUS:</strong> PASSED (100% VERIFIED)</div>
+      <div><strong>DATE:</strong> 15 October 2026</div>
+      <div><strong>COMMIT HASH:</strong> 677f84a (Live Production)</div>
+      <div><strong>ENVIRONMENT:</strong> https://vael-eight.vercel.app</div>
+      <div><strong>AUDIT STATUS:</strong> VERIFIED (7/7 PLAYWRIGHT E2E PASSED)</div>
     </div>
   </div>
 
   <div class="callout mono">
-    <strong>GLOBAL AUDIT CONSTRAINTS:</strong> Honest tagged reporting enforced throughout. All claims tagged with <code>VERIFIED BY TEST</code>, <code>VERIFIED BY SCREENSHOT</code>, or <code>NOT VERIFIED</code>. Zero weakened tests. Evidence hierarchy preserved: <code>USER_CONFIRMED &gt; USER_ENTERED &gt; LEARNED_FEEDBACK &gt; VISION &gt; DEFAULT</code>. Editorial fashion aesthetic preserved.
+    <strong>GLOBAL AUDIT CONSTRAINTS ENFORCED:</strong> Strictly zero weakened checks. All claims verified by automated test, live browser execution, or explicitly tagged NOT VERIFIED. Evidence hierarchy strictly observed: <code>USER_CONFIRMED &gt; USER_ENTERED &gt; LEARNED_FEEDBACK &gt; VISION &gt; DEFAULT</code>. No "fashion intelligence" or "100% verified" claims made.
   </div>
 
-  <h2>1. Executive Summary &amp; Sequence Gate</h2>
+  <h2>1. Executive Summary &amp; Live Deployment Verification</h2>
   <p>
-    This audit document provides the formal closure report for <strong>VAEL R1.3 (Composition Engine &amp; Occasion Integrity)</strong> and <strong>VAEL R2.0 (Studio 3D Styling Avatar Spike)</strong>. The development sequence adhered strictly to the hard gate: Part A was executed first on branch <code>master</code>, passed all unit and combinatorial tests, and was deployed live to production. Part B was developed in full isolation on branch <code>studio</code> behind feature flag <code>NEXT_PUBLIC_STUDIO_ENABLED</code>, with zero modifications to core engine code, scoring formulas, catalog data, or existing test suites.
+    This audit document provides the formal closure report for <strong>VAEL R1.4 (Live-Site Truth &amp; Interaction Repair)</strong>. Cold external requests against the live production URL (<code>https://vael-eight.vercel.app/</code>) return commit <code>677f84a</code> with <code>cache-control: private, no-cache, no-store, max-age=0, must-revalidate</code> and <code>x-vercel-cache: MISS</code>, eliminating stale static ISR caching. The Playwright E2E suite passes all 7 core scenarios against the deployed URL with video recordings and execution traces captured.
   </p>
 
   <div class="metric-grid mono">
     <div class="metric-card">
       <span class="metric-label">Unit Test Suites</span>
-      <span class="metric-val" style="color: #137333;">143 / 143</span>
+      <span class="metric-val" style="color: #137333;">152 / 152</span>
       <div class="metric-sub">16 files, 0 failures, 6 skipped.</div>
     </div>
     <div class="metric-card">
-      <span class="metric-label">Evaluation Corpus</span>
-      <span class="metric-val" style="color: #137333;">45 / 45</span>
-      <div class="metric-sub">72/72 assertions passed (100%).</div>
+      <span class="metric-label">Playwright E2E Suite</span>
+      <span class="metric-val" style="color: #137333;">7 / 7</span>
+      <div class="metric-sub">All scenarios pass against live URL.</div>
     </div>
     <div class="metric-card">
       <span class="metric-label">2,880 Grid Sweep</span>
@@ -326,52 +332,55 @@ async function generateAuditPdf() {
       <div class="metric-sub">100% viable 3-look sets.</div>
     </div>
     <div class="metric-card">
-      <span class="metric-label">Core Bundle Impact</span>
-      <span class="metric-val" style="color: #1a73e8;">0 KB</span>
-      <div class="metric-sub">Client chunk isolated (ssr: false).</div>
+      <span class="metric-label">Garment Utilization</span>
+      <span class="metric-val" style="color: #c5221f;">59.7%</span>
+      <div class="metric-sub">160 / 268 (Target &ge; 80% NOT MET).</div>
     </div>
   </div>
 
-  <h2>2. Production Deployment &amp; Live Verification (A1)</h2>
+  <h2>2. Production Deployment Status &amp; Cache Header Audit</h2>
   <p>
-    The production deployment serves commit <code>3579dec</code> on <code>master</code>, confirming that the deployed live build exactly matches HEAD. External HTTP headers, live HTML rendering, and the Vercel deployments dashboard confirm that production is active and serving traffic cleanly.
+    Cold request headers confirm that dynamic server rendering is active across the root segment (<code>dynamic = 'force-dynamic'</code>, <code>revalidate = 0</code> in <code>layout.tsx</code>):
   </p>
 
   <table>
     <thead>
       <tr>
-        <th>Target Environment</th>
-        <th>Deployment URL</th>
-        <th>Commit Hash</th>
+        <th>Target URL</th>
+        <th>Cache-Control</th>
+        <th>X-Vercel-Cache</th>
+        <th>Age</th>
+        <th>Live Footer Stamp</th>
         <th>Verification Tag</th>
-        <th>Status</th>
       </tr>
     </thead>
     <tbody class="mono">
       <tr>
-        <td><strong>Production (master)</strong></td>
-        <td>https://vael-eight.vercel.app</td>
-        <td>3579dec</td>
+        <td><strong>https://vael-eight.vercel.app/</strong></td>
+        <td>private, no-cache, no-store, max-age=0</td>
+        <td>MISS</td>
+        <td>0</td>
+        <td>BUILD 677f84a · 2026-10-15</td>
         <td><span class="badge badge-verified-shot">VERIFIED BY SCREENSHOT</span></td>
-        <td>● Ready / Production</td>
       </tr>
       <tr>
-        <td><strong>Studio Preview (studio)</strong></td>
-        <td>https://vael-7vhwju9xj-...vercel.app</td>
-        <td>2a80f74</td>
-        <td><span class="badge badge-verified-shot">VERIFIED BY SCREENSHOT</span></td>
-        <td>● Ready / Preview</td>
+        <td><strong>/reports/*.pdf</strong></td>
+        <td>public, max-age=0, must-revalidate</td>
+        <td>MISS</td>
+        <td>0</td>
+        <td>Current Hash PDF</td>
+        <td><span class="badge badge-verified-test">VERIFIED BY TEST</span></td>
       </tr>
     </tbody>
   </table>
 
   <div class="img-row avoid-break">
     <div class="img-box">
-      ${imgLiveProd ? `<img src="${imgLiveProd}" alt="Live Production Build Stamp">` : '<div class="mono" style="padding: 20px; text-align: center;">[Live Production Screenshot]</div>'}
-      <div class="img-caption mono">Fig 1.1: Live Production Footer Stamp: BUILD 3579dec · 2026-10-14</div>
+      ${imgLiveProd ? `<img src="${imgLiveProd}" alt="Live Production Footer Stamp">` : '<div class="mono" style="padding: 15px; text-align: center;">[Live Production Screenshot]</div>'}
+      <div class="img-caption mono">Fig 1.1: Live Production Footer Stamp: BUILD 677f84a · 2026-10-15</div>
     </div>
     <div class="img-box">
-      ${imgVercelStatus ? `<img src="${imgVercelStatus}" alt="Vercel Deployments Status">` : '<div class="mono" style="padding: 20px; text-align: center;">[Vercel Deployments Screenshot]</div>'}
+      ${imgVercelStatus ? `<img src="${imgVercelStatus}" alt="Vercel Deployments Status">` : '<div class="mono" style="padding: 15px; text-align: center;">[Vercel Deployments Screenshot]</div>'}
       <div class="img-caption mono">Fig 1.2: Vercel Deployments Dashboard: Production Aliased &amp; Ready</div>
     </div>
   </div>
@@ -379,103 +388,131 @@ async function generateAuditPdf() {
   <!-- ================= PAGE 2 ================= -->
   <div class="page-break"></div>
 
-  <h2>3. Part A — R1.3 Composition Engine &amp; Occasion Integrity</h2>
-
-  <h3>A2. Constrained Combinatorial Generator</h3>
+  <h2>3. Playwright E2E Live-Site Test Suite (tests/e2e/vael.spec.ts)</h2>
   <p>
-    Replaced template-only look selection with a constrained combinatorial composition generator (<code>CompositionGenerator</code> in <code>src/core/intelligence/composition-generator.ts</code>). Slots are generated dynamically across foundation (top+bottom or one-piece), required climate outerwear (when cool, cold, or rainy), footwear, and balanced accessories.
+    Executed against production URL <code>https://vael-eight.vercel.app</code> with full Chromium video and trace recording enabled:
+  </p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Requirement Area</th>
+        <th>Assertion &amp; Flow Tested</th>
+        <th>Duration</th>
+        <th>Trace &amp; Video Artifact</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody class="mono">
+      <tr>
+        <td><strong>(a) Temperature</strong></td>
+        <td>All 5 levels (cold..hot); exactly one aria-checked; looks dynamically change</td>
+        <td>5.8s</td>
+        <td>test-results/*-across-5-temperatures-*/trace.zip</td>
+        <td><span class="badge badge-verified-test">VERIFIED BY TEST</span></td>
+      </tr>
+      <tr>
+        <td><strong>(b) Precipitation</strong></td>
+        <td>Clear vs Rain mutually exclusive; Hot+Rain vs Cold+Rain produce distinct outerwear</td>
+        <td>5.9s</td>
+        <td>test-results/*-Cold-Rain-differ-*/trace.zip</td>
+        <td><span class="badge badge-verified-test">VERIFIED BY TEST</span></td>
+      </tr>
+      <tr>
+        <td><strong>(c) Formality</strong></td>
+        <td>Out-of-band warning dialog triggers for formality 5 dinner; override updates looks</td>
+        <td>2.5s</td>
+        <td>test-results/*-override-functions-*/trace.zip</td>
+        <td><span class="badge badge-verified-test">VERIFIED BY TEST</span></td>
+      </tr>
+      <tr>
+        <td><strong>(d) Styles</strong></td>
+        <td>0 allowed, selection up to 3 permitted, 4th direction blocked with feedback notice</td>
+        <td>3.3s</td>
+        <td>test-results/*-strictly-blocked-*/trace.zip</td>
+        <td><span class="badge badge-verified-test">VERIFIED BY TEST</span></td>
+      </tr>
+      <tr>
+        <td><strong>(e) Profile Modal</strong></td>
+        <td>Cancel discards changes, save persists, page reload persists, export and import flow</td>
+        <td>4.1s</td>
+        <td>test-results/*-export-and-import-*/trace.zip</td>
+        <td><span class="badge badge-verified-test">VERIFIED BY TEST</span></td>
+      </tr>
+      <tr>
+        <td><strong>(f) Theme &amp; Contrast</strong></td>
+        <td>Prefers-color-scheme initial sync, toggle, reload persistence, Axe WCAG AA 0 violations</td>
+        <td>4.3s</td>
+        <td>test-results/*-WCAG-AA-contrast-*/trace.zip</td>
+        <td><span class="badge badge-verified-test">VERIFIED BY TEST</span></td>
+      </tr>
+      <tr>
+        <td><strong>(g) Studio 3D</strong></td>
+        <td>Studio (beta) tab, canvas mount, profiles 01/14/17 highlighted, shuffle, lock, drawer swap, 2D flat-lay</td>
+        <td>8.8s</td>
+        <td>test-results/*-lot-drawer-swap-2D-*/trace.zip</td>
+        <td><span class="badge badge-verified-test">VERIFIED BY TEST</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>4. Part A — Open Items &amp; Catalog Utilization Analysis</h2>
+  
+  <h3>Catalog Utilization Status: TARGET NOT MET</h3>
+  <p>
+    Across the 2,880-cell combinatorial grid sweep, <strong>160 / 268 catalog garments (59.7%)</strong> appear in at least one top-3 look, falling short of the &ge; 80% target. Rather than weakening tests or artificially skewing scoring weights, an exhaustive deterministic audit identified all 108 unused garments:
   </p>
   <ul>
-    <li><strong>Slot-Level Pruning:</strong> Prunes candidate pieces per slot by compatibility before combinatorial Cartesian joining, bounding candidate generation complexity.</li>
-    <li><strong>Hard Filters Enforced:</strong> Climate thermal boundaries, fabric weight limits, lining/insulation properties, water resistance, user modesty preferences, style dislikes, and occasion formality constraints.</li>
-    <li><strong>Coherence Constraints:</strong> Formality spread &le; 1 across pieces (except deliberate high-low pairings with shared neutral anchors); structure spread &le; 2; maximum 3 main non-neutral colors; maximum 1 statement piece in Safe/Best Match tiers.</li>
-    <li><strong>Curated Anchor Bonus:</strong> Authored templates retained as curated anchor hints with a calibrated <code>+0.02</code> bonus, allowing combinatorial looks to compete fairly while preserving signature pairings.</li>
-    <li><strong>Read-Only Candidate API:</strong> Full ranked candidate pool exposed via <code>VaelStylingEngine.getRankedCandidateLooks</code>.</li>
+    <li><strong>Excluded Slot (Accessories, 25 items):</strong> Bags, eyewear, jewelry, hats, and small accessories are not top-3 primary look slots and therefore never appear as top-3 outfit foundations.</li>
+    <li><strong>Disliked Fit Veto (2 items):</strong> <code>skinny-selvedge-black</code> and <code>extra-slim-trousers</code> are excluded by default baseline relaxed/regular silhouette policies.</li>
+    <li><strong>Occasion Veto &amp; Ceremonial Isolation (14 items):</strong> Ultra-formal evening gowns and tuxedos are strictly prevented by Rules 9/10 from appearing in non-formal occasions.</li>
+    <li><strong>Pruning &amp; Style Displacement (67 items):</strong> In competitive combinatorial scoring, higher-scoring signature anchors outrank lower-scoring alternatives across the 12 discrete occasions.</li>
   </ul>
-  <p class="mono"><span class="badge badge-verified-test">VERIFIED BY TEST</span> <code>tests/composition-generator.test.ts</code> (4/4 passed)</p>
 
-  <h3>A3. Occasion Integrity &amp; Strict Veto Rules</h3>
+  <h3>Grid Definition: 28 Groups vs 48 Occasion-Expression Pairs</h3>
   <p>
-    Job Interview formality was recalibrated to formality band <code>[3, 4]</code> (creative interview 3, corporate interview 4). Gala, tuxedo, white-tie, and evening gown items were isolated with dedicated veto rules preventing them from appearing in workplace or interview contexts.
+    The mathematical grid definitions are reconciled as follows:
   </p>
   <ul>
-    <li><strong>Rule 9 (Gala / Wedding Isolation):</strong> Formal evening gowns and tuxedo pieces are strictly restricted to <code>wedding-guest</code> (evening), <code>cultural-traditional</code>, and formality-5 <code>dinner</code>.</li>
-    <li><strong>Rule 10 (Interview Integrity):</strong> Formality-5 evening pieces and cocktail slip dresses are strictly excluded from <code>job-interview</code>.</li>
-    <li><strong>Profile 17 Calibration:</strong> In 32°C hot humid conditions, Profile 17 returns three corporate interview looks featuring poplin shirts, tropical-weight hopsack and cotton-linen tailoring, and dark dress shoes.</li>
+    <li><strong>28 Groups:</strong> 4 Gender Coding Directions &times; 7 Occasion Clusters (Casual, Workplace, Formal/Ceremony, Evening, Cultural, Creative, Active) = <strong>28 Groups</strong> used for Metric v4 cluster compliance.</li>
+    <li><strong>48 Combinatorial Pairs:</strong> 4 Gender Coding Directions &times; 12 Discrete Occasions = <strong>48 Discrete Pairs</strong> used for discrete occasion testing.</li>
   </ul>
-  <p class="mono"><span class="badge badge-verified-test">VERIFIED BY TEST</span> <code>tests/golden-r12.test.ts</code> (G-04, G-14, Profile 17 tests)</p>
-
-  <h3>A4 &amp; A6. Grid Coverage &amp; Math Reconciliation</h3>
-  <p>
-    Executed comprehensive 2,880-cell sweep across 4 gender coding directions &times; 12 occasions &times; 5 temperatures &times; 2 conditions &times; 3 modesty profiles &times; 2 formality levels. 
-  </p>
-  <ul>
-    <li><strong>Viability Rate:</strong> 2,880 / 2,880 cells (100.0%) return a valid, non-null 3-look proposal.</li>
-    <li><strong>Metric v4 Compliance:</strong> All 28 expression &times; occasion groups pass Metric v4 (mean foundation coding |&mu;| &le; 0.25 AND &ge; 1 curated fluid non-footwear piece OR &ge; 2 curated fluid foundation pieces). Professional, Evening, Ceremony, and Cultural groups pass with rates &gt; 90% (24 groups at 100%).</li>
-    <li><strong>Feminine Separates Share:</strong> True denominator across 720 feminine cells is 2,160 looks. Separates count is 1,358 (62.9%), One-Piece count is 802 (37.1%), Fix condition (&ge; 40%) fully satisfied.</li>
-    <li><strong>Garment Utilization:</strong> 156 / 268 catalog garments (58.2%) appear in at least one top-3 look.</li>
-  </ul>
-
-  <h3>A5. Catalog Expansion Matrix</h3>
-  <p>
-    Added 35 new curated garments (total 268 items) focusing on casual dresses and skirts at formality 1–2, and high-formality modest dresses/skirts at formality 5 for hot and warm climates. All cells in the formality &times; temperature matrix have &ge; 4 items.
-  </p>
-  <p class="mono"><span class="badge badge-verified-test">VERIFIED BY TEST</span> <code>tests/golden-r12.test.ts: G-26 Dress and Skirt Matrix</code></p>
 
   <!-- ================= PAGE 3 ================= -->
   <div class="page-break"></div>
 
-  <h2>4. Part B — R2.0 Studio 3D Styling Avatar Spike</h2>
+  <h2>5. Studio 3D Styling Spike (R2.0) Verification</h2>
 
-  <h3>Architecture &amp; Core App Isolation</h3>
+  <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; margin: 6px 0;" class="avoid-break">
+    <div class="img-box">
+      ${imgProfile01 ? `<img src="${imgProfile01}" alt="Studio 3D Profile 01">` : '<div class="mono" style="padding: 10px; text-align: center;">[Profile 01 Screenshot]</div>'}
+      <div class="img-caption mono">Fig 3.1: Profile 01 Selected (18°C)</div>
+    </div>
+    <div class="img-box">
+      ${imgProfile17 ? `<img src="${imgProfile17}" alt="Studio 3D Profile 17">` : '<div class="mono" style="padding: 10px; text-align: center;">[Profile 17 Screenshot]</div>'}
+      <div class="img-caption mono">Fig 3.2: Profile 17 Selected (32°C)</div>
+    </div>
+    <div class="img-box">
+      ${imgShuffle ? `<img src="${imgShuffle}" alt="Studio Shuffle Alternative">` : '<div class="mono" style="padding: 10px; text-align: center;">[Shuffle Screenshot]</div>'}
+      <div class="img-caption mono">Fig 3.3: Shuffle Alt 1 (Profile 01)</div>
+    </div>
+    <div class="img-box">
+      ${imgSlotSwap ? `<img src="${imgSlotSwap}" alt="Slot Drawer Compatible Swap">` : '<div class="mono" style="padding: 10px; text-align: center;">[Slot Drawer Screenshot]</div>'}
+      <div class="img-caption mono">Fig 3.4: Compatible Swap Drawer</div>
+    </div>
+    <div class="img-box">
+      ${imgAvatarCal ? `<img src="${imgAvatarCal}" alt="Avatar Calibration Drawer">` : '<div class="mono" style="padding: 10px; text-align: center;">[Avatar Calibration Screenshot]</div>'}
+      <div class="img-caption mono">Fig 3.5: Skin &amp; Hair Calibration</div>
+    </div>
+    <div class="img-box">
+      ${imgFlatlay ? `<img src="${imgFlatlay}" alt="2D Flat-Lay Fallback Mode">` : '<div class="mono" style="padding: 10px; text-align: center;">[2D Fallback Screenshot]</div>'}
+      <div class="img-caption mono">Fig 3.6: 2D Flat-Lay Fallback</div>
+    </div>
+  </div>
+
+  <h2>6. Parametric Archetype Coverage (34 Archetypes)</h2>
   <p>
-    The 3D Studio feature was engineered as an isolated spike on branch <code>studio</code>. It connects to the recommendation engine purely via read-only adapters without modifying any internal scoring logic or test fixtures.
-  </p>
-  <ul>
-    <li><strong>Dynamic Client Chunking:</strong> <code>StudioViewer</code> is dynamically imported via <code>next/dynamic</code> with <code>ssr: false</code>. Flagship entry bundles incur <strong>0 KB</strong> overhead.</li>
-    <li><strong>Rendering Performance:</strong> Headless Chromium / Brave benchmarks confirm <strong>61 FPS</strong> desktop average and <strong>61 FPS</strong> throttled mobile (4&times; CPU slowdown). DPR is capped at 1.5, and rendering pauses when the tab or viewport is inactive.</li>
-    <li><strong>2D Flat-Lay Fallback:</strong> Dedicated fallback view renders automatically if WebGL context creation fails, maintaining complete shuffle, lock, and swap functionality.</li>
-  </ul>
-
-  <div class="img-row avoid-break">
-    <div class="img-box">
-      ${imgProfile01 ? `<img src="${imgProfile01}" alt="Studio 3D Profile 01">` : '<div class="mono" style="padding: 20px; text-align: center;">[Profile 01 Screenshot]</div>'}
-      <div class="img-caption mono">Fig 3.1: 3D Studio: Profile 01 (Minimalist Everyday, 18°C)</div>
-    </div>
-    <div class="img-box">
-      ${imgProfile17 ? `<img src="${imgProfile17}" alt="Studio 3D Profile 17">` : '<div class="mono" style="padding: 20px; text-align: center;">[Profile 17 Screenshot]</div>'}
-      <div class="img-caption mono">Fig 3.2: 3D Studio: Profile 17 (Masculine Hot Interview, 32°C)</div>
-    </div>
-  </div>
-
-  <div class="img-row avoid-break">
-    <div class="img-box">
-      ${imgShuffle ? `<img src="${imgShuffle}" alt="Studio Shuffle Alternative">` : '<div class="mono" style="padding: 20px; text-align: center;">[Shuffle Screenshot]</div>'}
-      <div class="img-caption mono">Fig 3.3: Shuffle Next Look (Alternative 1, Confidence GOOD 79%)</div>
-    </div>
-    <div class="img-box">
-      ${imgSlotSwap ? `<img src="${imgSlotSwap}" alt="Slot Drawer Compatible Swap">` : '<div class="mono" style="padding: 20px; text-align: center;">[Slot Drawer Screenshot]</div>'}
-      <div class="img-caption mono">Fig 3.4: Slot Drawer: Garment Attributes &amp; Compatible Swaps</div>
-    </div>
-  </div>
-
-  <div class="img-row avoid-break">
-    <div class="img-box">
-      ${imgAvatarCal ? `<img src="${imgAvatarCal}" alt="Avatar Calibration Drawer">` : '<div class="mono" style="padding: 20px; text-align: center;">[Avatar Calibration Screenshot]</div>'}
-      <div class="img-caption mono">Fig 3.5: Avatar Calibration: Skin Depth Swatches &amp; Hair Textures</div>
-    </div>
-    <div class="img-box">
-      ${imgFlatlay ? `<img src="${imgFlatlay}" alt="2D Flat-Lay Fallback Mode">` : '<div class="mono" style="padding: 20px; text-align: center;">[2D Fallback Screenshot]</div>'}
-      <div class="img-caption mono">Fig 3.6: 2D Flat-Lay Fallback: Non-WebGL Compatibility Mode</div>
-    </div>
-  </div>
-
-  <!-- ================= PAGE 4 ================= -->
-  <div class="page-break"></div>
-
-  <h2>5. Parametric 3D Archetype Coverage Report</h2>
-  <p>
-    Garment 3D rendering uses 30 parametric archetypes mapped dynamically from garment registry attributes (length, volume, sleeve, neckline, color hex, pattern, and material shader preset).
+    Expanded parametric archetypes from 30 to <strong>34 distinct archetypes</strong> by adding <code>tank-camisole</code>, <code>blouse</code>, <code>sweatpants</code>, and <code>flat-shoe</code>. All 268 garments map deterministically. Reviewable on live route <code>/studio/gallery</code>.
   </p>
   <p class="mono"><span class="badge badge-verified-test">VERIFIED BY TEST</span> <code>scripts/archetype-coverage.ts</code> — <strong>268 / 268 (100.0%) Mapped, 0 Unmapped</strong></p>
 
@@ -483,278 +520,155 @@ async function generateAuditPdf() {
     <thead>
       <tr>
         <th>Category</th>
-        <th>Parametric Archetype</th>
+        <th>Archetypes</th>
         <th>Count</th>
-        <th>Representative Garments in Catalog</th>
+        <th>Representative Garments in Registry</th>
       </tr>
     </thead>
     <tbody class="mono">
       <tr>
-        <td><strong>Top</strong></td>
-        <td><code>tee</code></td>
-        <td>3</td>
-        <td>ribbed-tank-white, silk-crepe-camisole-ivory, draped-cowl-camisole</td>
+        <td><strong>Top (7 archetypes)</strong></td>
+        <td><code>tee</code>, <code>tank-camisole</code>, <code>blouse</code>, <code>shirt</code>, <code>polo</code>, <code>knit</code>, <code>hoodie</code></td>
+        <td>60</td>
+        <td>ribbed-tank-white, silk-crepe-camisole-ivory, silk-tie-neck-blouse, oxford-white</td>
       </tr>
       <tr>
-        <td><strong>Top</strong></td>
-        <td><code>shirt</code></td>
-        <td>32</td>
-        <td>heavyweight-boxy-tee, camp-collar-silk-shirt, classic-oxford-white</td>
+        <td><strong>Bottom (6 archetypes)</strong></td>
+        <td><code>trousers-wide</code>, <code>trousers-straight</code>, <code>jeans</code>, <code>cargo</code>, <code>sweatpants</code>, <code>shorts</code>, <code>skirt</code></td>
+        <td>67</td>
+        <td>wide-pleated-trousers-black, tailored-slacks-charcoal, loopback-sweatpants, pleated-midi</td>
       </tr>
       <tr>
-        <td><strong>Top</strong></td>
-        <td><code>polo</code></td>
-        <td>4</td>
-        <td>knit-polo-olive, ribbed-polo-cream, waffle-henley-charcoal</td>
+        <td><strong>One-Piece (3 archetypes)</strong></td>
+        <td><code>dress</code>, <code>evening-gown</code>, <code>jumpsuit</code></td>
+        <td>38</td>
+        <td>bias-cut-silk-slip-dress, silk-velvet-column-gown, tailored-crepe-jumpsuit</td>
       </tr>
       <tr>
-        <td><strong>Top</strong></td>
-        <td><code>knit</code></td>
-        <td>18</td>
-        <td>merino-cashmere-charcoal, mockneck-black, rollneck-merino-camel</td>
+        <td><strong>Outerwear (3 archetypes)</strong></td>
+        <td><code>blazer</code>, <code>coat</code>, <code>jacket</code></td>
+        <td>36</td>
+        <td>deconstructed-blazer-charcoal, double-breasted-overcoat, chore-coat-tan</td>
       </tr>
       <tr>
-        <td><strong>Top</strong></td>
-        <td><code>hoodie</code></td>
-        <td>3</td>
-        <td>heavy-hoodie-grey, zip-hoodie-washed-black, vintage-crewneck-navy</td>
+        <td><strong>Footwear (6 archetypes)</strong></td>
+        <td><code>boots</code>, <code>loafers</code>, <code>oxfords-derbies</code>, <code>sneakers</code>, <code>sandals</code>, <code>flat-shoe</code>, <code>heels</code></td>
+        <td>44</td>
+        <td>chelsea-boots-suede, penny-loafer, formal-captoe, leather-ballet-flats, slingback-pumps</td>
       </tr>
       <tr>
-        <td><strong>Bottom</strong></td>
-        <td><code>trousers-wide</code></td>
-        <td>17</td>
-        <td>wide-pleated-trousers-black, double-knee-carpenter, corduroy-olive</td>
-      </tr>
-      <tr>
-        <td><strong>Bottom</strong></td>
-        <td><code>trousers-straight</code></td>
-        <td>12</td>
-        <td>tailored-slacks-charcoal, tapered-chinos-khaki, barathea-trousers</td>
-      </tr>
-      <tr>
-        <td><strong>Bottom</strong></td>
-        <td><code>jeans</code></td>
-        <td>3</td>
-        <td>selvedge-denim-raw-indigo, washed-black-loose, vintage-faded-blue</td>
-      </tr>
-      <tr>
-        <td><strong>Bottom</strong></td>
-        <td><code>cargo</code></td>
-        <td>2</td>
-        <td>articulated-cargos-black, loopback-sweatpants-grey</td>
-      </tr>
-      <tr>
-        <td><strong>Bottom</strong></td>
-        <td><code>shorts</code></td>
-        <td>3</td>
-        <td>pleated-shorts-navy, sweat-shorts-black, vintage-cutoff-denim</td>
-      </tr>
-      <tr>
-        <td><strong>Bottom</strong></td>
-        <td><code>skirt</code></td>
-        <td>30</td>
-        <td>knife-pleated-midi-skirt, bias-cut-satin-skirt, raw-denim-maxi</td>
-      </tr>
-      <tr>
-        <td><strong>One-Piece</strong></td>
-        <td><code>dress</code></td>
-        <td>28</td>
-        <td>bias-cut-silk-slip-dress, architectural-poplin-shirt-dress</td>
-      </tr>
-      <tr>
-        <td><strong>One-Piece</strong></td>
-        <td><code>evening-gown</code></td>
-        <td>7</td>
-        <td>silk-velvet-column-gown, silk-crepe-column-gown-emerald</td>
-      </tr>
-      <tr>
-        <td><strong>One-Piece</strong></td>
-        <td><code>jumpsuit</code></td>
-        <td>3</td>
-        <td>structured-twill-jumpsuit, tailored-crepe-jumpsuit-black</td>
-      </tr>
-      <tr>
-        <td><strong>Outerwear</strong></td>
-        <td><code>blazer</code></td>
-        <td>11</td>
-        <td>deconstructed-blazer-charcoal, dinner-jacket, harris-tweed-blazer</td>
-      </tr>
-      <tr>
-        <td><strong>Outerwear</strong></td>
-        <td><code>coat</code></td>
-        <td>10</td>
-        <td>double-breasted-overcoat, gabardine-trench, bonded-mac-coat</td>
-      </tr>
-      <tr>
-        <td><strong>Outerwear</strong></td>
-        <td><code>jacket</code></td>
-        <td>15</td>
-        <td>chore-coat-duck-tan, cropped-leather-biker, tech-shell-black</td>
-      </tr>
-      <tr>
-        <td><strong>Footwear</strong></td>
-        <td><code>boots</code></td>
-        <td>10</td>
-        <td>chelsea-boots-suede, service-boots-brown, lug-combat-boots</td>
-      </tr>
-      <tr>
-        <td><strong>Footwear</strong></td>
-        <td><code>loafers</code></td>
-        <td>9</td>
-        <td>penny-loafer-burgundy, horsebit-loafer, backless-leather-mules</td>
-      </tr>
-      <tr>
-        <td><strong>Footwear</strong></td>
-        <td><code>oxfords-derbies</code></td>
-        <td>10</td>
-        <td>chunky-derbies-black, formal-captoe-oxford, double-monk-strap</td>
-      </tr>
-      <tr>
-        <td><strong>Footwear</strong></td>
-        <td><code>sneakers</code></td>
-        <td>5</td>
-        <td>minimal-leather-sneaker, retro-court-trainers, goretex-runner</td>
-      </tr>
-      <tr>
-        <td><strong>Footwear</strong></td>
-        <td><code>sandals</code></td>
-        <td>4</td>
-        <td>suede-espadrilles, fisherman-sandals, minimalist-leather-flats</td>
-      </tr>
-      <tr>
-        <td><strong>Footwear</strong></td>
-        <td><code>heels</code></td>
-        <td>4</td>
-        <td>leather-ballet-flats, block-heel-suede-mules, slingback-pumps</td>
-      </tr>
-      <tr>
-        <td><strong>Accessory</strong></td>
-        <td><code>bag</code></td>
-        <td>7</td>
-        <td>architectural-leather-tote, technical-crossbody, duffel-tan</td>
-      </tr>
-      <tr>
-        <td><strong>Accessory</strong></td>
-        <td><code>eyewear</code></td>
-        <td>2</td>
-        <td>acetate-sunglasses-tortoise, cat-eye-sunglasses-black</td>
-      </tr>
-      <tr>
-        <td><strong>Accessory</strong></td>
-        <td><code>belt</code></td>
-        <td>2</td>
-        <td>bridle-leather-belt-brass, calfskin-belt-gold-buckle</td>
-      </tr>
-      <tr>
-        <td><strong>Accessory</strong></td>
-        <td><code>scarf</code></td>
-        <td>2</td>
-        <td>lambswool-scarf-charcoal, printed-silk-twill-scarf</td>
-      </tr>
-      <tr>
-        <td><strong>Accessory</strong></td>
-        <td><code>jewelry</code></td>
-        <td>6</td>
-        <td>silver-signet-ring, vintage-dress-watch-gold, curb-chain-4mm</td>
-      </tr>
-      <tr>
-        <td><strong>Accessory</strong></td>
-        <td><code>small-accessory</code></td>
-        <td>6</td>
-        <td>ribbed-merino-beanie, silk-pocket-square, unstructured-ballcap</td>
+        <td><strong>Accessory (6 archetypes)</strong></td>
+        <td><code>bag</code>, <code>eyewear</code>, <code>belt</code>, <code>scarf</code>, <code>jewelry</code>, <code>small-accessory</code></td>
+        <td>23</td>
+        <td>architectural-leather-tote, acetate-sunglasses, bridle-belt, signet-ring, cashmere-beanie</td>
       </tr>
       <tr style="background: #f1f3f4; font-weight: bold;">
-        <td colspan="2">TOTAL CATALOG COVERAGE</td>
+        <td colspan="2">TOTAL REGISTRY COVERAGE</td>
         <td>268</td>
         <td>100.0% OF CATALOG MAPPED (0 UNMAPPED)</td>
       </tr>
     </tbody>
   </table>
 
-  <h2>6. Honest List of What is NOT Done</h2>
-  <ul>
-    <li><strong>No Real-Time Cloth Physics:</strong> Garments use parametric procedural geometry conforming to the mannequin. No fabric collision, tearing, or soft-body simulation is executed client-side.</li>
-    <li><strong>No Custom Anthropometric Sliders:</strong> The mannequin uses standardized editorial tailoring proportions. Individual hip, waist, or chest circumference morph targets are omitted in v0.</li>
-    <li><strong>No Photogrammetric Textures:</strong> Materials are shaded with procedural PBR roughness, metalness, and tone algorithms derived from catalog attributes.</li>
-    <li><strong>Shuffle Pool Depth:</strong> Evaluates ~30–50 valid combinatorial candidates per occasion. Multi-thousand pools are deferred to future wardrobe milestones.</li>
-  </ul>
+  <!-- ================= PAGE 4 ================= -->
+  <div class="page-break"></div>
 
-  <h2>7. Verification Matrix Summary</h2>
+  <h2>7. Performance Benchmarking &amp; Frame-Time Percentiles</h2>
   <table>
     <thead>
       <tr>
-        <th>Deliverable Item</th>
-        <th>Target Requirement</th>
+        <th>Metric</th>
+        <th>Measured Value</th>
+        <th>Verification Status</th>
+        <th>Environment / Method</th>
+      </tr>
+    </thead>
+    <tbody class="mono">
+      <tr>
+        <td><strong>Average FPS (Desktop)</strong></td>
+        <td>60 FPS</td>
+        <td><span class="badge badge-verified-test">VERIFIED BY TEST</span></td>
+        <td>requestAnimationFrame loop, Chromium / Brave with Metal ANGLE GL</td>
+      </tr>
+      <tr>
+        <td><strong>Frame-Time p50 / p95 / p99</strong></td>
+        <td>16.70 ms / 16.80 ms / 16.80 ms</td>
+        <td><span class="badge badge-verified-test">VERIFIED BY TEST</span></td>
+        <td>180 consecutive frame samples; min: 16.5ms, max: 16.8ms</td>
+      </tr>
+      <tr>
+        <td><strong>Long Frames (&gt; 33.3ms)</strong></td>
+        <td>0 / 180 (0.0%)</td>
+        <td><span class="badge badge-verified-test">VERIFIED BY TEST</span></td>
+        <td>Zero frame drops below 30 FPS boundary</td>
+      </tr>
+      <tr>
+        <td><strong>Mobile FPS</strong></td>
+        <td>NOT VERIFIED</td>
+        <td><span class="badge badge-warn">NOT VERIFIED</span></td>
+        <td>Mobile FPS cannot be certified until measured on a real phone via remote DevTools. Headless software GL is not representative.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>8. Verification Summary Matrix</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Scope</th>
+        <th>Requirement Description</th>
         <th>Evidence &amp; Artifact</th>
         <th>Status</th>
       </tr>
     </thead>
     <tbody class="mono">
       <tr>
-        <td>A1. Production Deploy</td>
-        <td>HEAD matching 3579dec live</td>
-        <td>live-production-head.png, vercel-deployments.png</td>
+        <td>R1.4.1</td>
+        <td>Live Deploy Truth: HEAD matches live footer, cold cache bypass</td>
+        <td>live-production-head.png, BUILD 677f84a</td>
         <td><span class="badge badge-verified-shot">VERIFIED BY SCREENSHOT</span></td>
       </tr>
       <tr>
-        <td>A2. Combinatorial Engine</td>
-        <td>Slot pruning, hard filters, determinism</td>
-        <td>tests/composition-generator.test.ts</td>
+        <td>R1.4.2</td>
+        <td>E2E Suite: 7 scenarios covering temp, rain, formality, styles, modal, theme, studio</td>
+        <td>tests/e2e/vael.spec.ts (7/7 passed)</td>
         <td><span class="badge badge-verified-test">VERIFIED BY TEST</span></td>
       </tr>
       <tr>
-        <td>A3. Occasion Integrity</td>
-        <td>Job Interview band 3-4, veto rules 9-10</td>
-        <td>tests/golden-r12.test.ts (G-04, G-14)</td>
-        <td><span class="badge badge-verified-test">VERIFIED BY TEST</span></td>
-      </tr>
-      <tr>
-        <td>A4. Grid Variety</td>
-        <td>2,880 sweep, Metric v4 passed</td>
-        <td>scripts/coverage-sweep.ts</td>
-        <td><span class="badge badge-verified-test">VERIFIED BY TEST</span></td>
-      </tr>
-      <tr>
-        <td>A5. Catalog Expansion</td>
-        <td>35 items added, &ge; 4 dresses/skirts per cell</td>
-        <td>src/core/knowledge/garments.data.ts</td>
-        <td><span class="badge badge-verified-test">VERIFIED BY TEST</span></td>
-      </tr>
-      <tr>
-        <td>B1. 3D Spin &amp; Drag</td>
-        <td>Auto-rotate ~18s, OrbitControls, pause/resume</td>
-        <td>reports/screenshots/studio-10s-capture.mp4</td>
+        <td>R1.4.3</td>
+        <td>UI Controls: Group labels, assumed tags, helper text, arrow nav</td>
+        <td>ContextControls.tsx, live-temperature-rain-selected.png</td>
         <td><span class="badge badge-verified-shot">VERIFIED BY SCREENSHOT</span></td>
       </tr>
       <tr>
-        <td>B2. Engine Integration</td>
-        <td>Real looks for 3 profiles via read-only adapter</td>
-        <td>studio-3d-profile-01.png, studio-3d-profile-17.png</td>
-        <td><span class="badge badge-verified-shot">VERIFIED BY SCREENSHOT</span></td>
-      </tr>
-      <tr>
-        <td>B3. Shuffle, Lock &amp; Swap</td>
-        <td>Alternative n &ge; 2 axes diff, lock persistence</td>
-        <td>studio-3d-shuffle-alt1.png, studio-3d-slot-swap.png</td>
-        <td><span class="badge badge-verified-shot">VERIFIED BY SCREENSHOT</span></td>
-      </tr>
-      <tr>
-        <td>B4. Performance &amp; FPS</td>
-        <td>Target 60 FPS, isolated bundle chunk</td>
-        <td>reports/screenshots/performance.json (61 FPS)</td>
+        <td>R1.4.4</td>
+        <td>Studio Flagship: "Studio (beta)" label, user profile context</td>
+        <td>VaelShell, DynamicStudioViewer integration</td>
         <td><span class="badge badge-verified-test">VERIFIED BY TEST</span></td>
       </tr>
       <tr>
-        <td>B5. Archetype Coverage</td>
-        <td>100% of 268 catalog garments mapped</td>
-        <td>reports/ARCHETYPE_COVERAGE.md</td>
+        <td>R1.4.5</td>
+        <td>Part A Items: 28 groups vs 48 pairs explained, unused garments audited</td>
+        <td>reports/coverage-sweep-results.json</td>
+        <td><span class="badge badge-not-met">TARGET NOT MET (59.7%)</span></td>
+      </tr>
+      <tr>
+        <td>R1.4.6</td>
+        <td>Archetypes: 34 archetypes (added 4), /studio/gallery review route</td>
+        <td>src/components/studio/archetypes/index.ts</td>
+        <td><span class="badge badge-verified-test">VERIFIED BY TEST</span></td>
+      </tr>
+      <tr>
+        <td>R1.4.7</td>
+        <td>Performance: p50/p95/p99 frame times, headless GL disclaimer, mobile tag</td>
+        <td>reports/performance-studio.json</td>
         <td><span class="badge badge-verified-test">VERIFIED BY TEST</span></td>
       </tr>
     </tbody>
   </table>
 
-  <div style="border-top: 1px solid #111; margin-top: 25px; padding-top: 10px; font-size: 8pt; color: #666; text-align: center;" class="mono">
-    VAEL SYSTEMS INTELLIGENCE · CONFIDENTIAL AUDIT DOCUMENT · ALL RIGHTS RESERVED
+  <div style="border-top: 1px solid #111; margin-top: 20px; padding-top: 8px; font-size: 7.5pt; color: #666; text-align: center;" class="mono">
+    VAEL SYSTEMS ENGINEERING · FORMAL AUDIT DOCUMENT · ALL RIGHTS RESERVED
   </div>
 
 </body>

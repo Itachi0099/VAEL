@@ -1,0 +1,22 @@
+{
+  "timestamp": "2026-10-15T11:58:05.972Z",
+  "environment": "Headless Chromium / Brave (Apple Metal ANGLE GL)",
+  "totalFramesSampled": 180,
+  "averageFps": 60,
+  "frameTime_ms": {
+    "p50": 16.7,
+    "p95": 16.8,
+    "p99": 16.8,
+    "min": 16.5,
+    "max": 16.8
+  },
+  "longFrames": {
+    "framesOver16ms": 111,
+    "framesOver33ms": 0,
+    "ratioOver16ms": "61.7%"
+  },
+  "disclaimers": {
+    "headlessSoftwareGL": "Headless software GL / CI virtualization is not representative of real hardware GPU rendering.",
+    "mobileStatus": "NOT VERIFIED (Mobile FPS cannot be certified until measured on a real phone via remote DevTools)."
+  }
+}

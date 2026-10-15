@@ -96,9 +96,18 @@ async function verifyLiveSite() {
     });
     console.log('Saved live-flagship-dark-mode.png');
 
-    // Switch to 3D STYLING AVATAR in Flagship
-    console.log('5. Clicking "3D STYLING AVATAR (SPIKE)" tab on live site...');
-    const studioTab = await page.waitForSelector('button ::-p-text(3D STYLING AVATAR (SPIKE))', { timeout: 5000 });
+    // Capture footer stamp
+    const footer = await page.$('footer');
+    if (footer) {
+      await footer.screenshot({
+        path: path.join(SCREENSHOT_DIR, 'live-production-head.png'),
+      });
+      console.log('Saved live-production-head.png');
+    }
+
+    // Switch to Studio (beta) in Flagship
+    console.log('5. Clicking "Studio (beta)" tab on live site...');
+    const studioTab = await page.waitForSelector('button ::-p-text(Studio (beta))', { timeout: 5000 });
     if (studioTab) {
       await studioTab.click();
       console.log('Waiting 4s for 3D Studio to initialize WebGL & materials...');
