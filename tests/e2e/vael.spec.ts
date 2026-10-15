@@ -192,6 +192,16 @@ test.describe('VAEL Live Interaction & E2E Suite (R1.4)', () => {
     await page.getByRole('button', { name: 'EXPORT' }).click();
     const download = await downloadPromise;
     expect(download.suggestedFilename()).toContain('.json');
+
+    // Test Import
+    const fileChooserPromise = page.waitForEvent('filechooser');
+    await page.getByRole('button', { name: 'IMPORT' }).click();
+    const fileChooser = await fileChooserPromise;
+    const downloadPath = await download.path();
+    if (downloadPath) {
+      await fileChooser.setFiles(downloadPath);
+      await expect(page.locator('text=YOUR PROFILE')).toBeVisible();
+    }
   });
 
   // (f) Theme: follows prefers-color-scheme on first load, toggle, persists on reload, no flash, axe contrast AA

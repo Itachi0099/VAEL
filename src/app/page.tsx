@@ -289,8 +289,8 @@ export default function VaelShell() {
 
     const newUser: User = {
       id: 'usr_manual_session',
-      name: 'Custom User',
-      handle: 'custom',
+      name: formData.handle || 'Custom User',
+      handle: formData.handle || 'custom',
       createdAt: new Date().toISOString(),
       visualProfile: updatedVisual,
       styleProfile: {

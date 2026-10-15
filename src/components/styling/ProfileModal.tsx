@@ -22,6 +22,7 @@ import {
 } from '@/core/domain';
 
 export interface ProfileFormData {
+  handle?: string;
   hairTexture: HairTexture;
   hairLength: HairLength;
   hairDensity: HairDensity;
@@ -55,6 +56,7 @@ interface ProfileModalProps {
 }
 
 const DEFAULT_PROFILE_FORM: ProfileFormData = {
+  handle: '',
   hairTexture: 'straight',
   hairLength: 'short',
   hairDensity: 'medium',
@@ -155,6 +157,26 @@ export function ProfileModal({
         </div>
 
         <form onSubmit={handleSubmit} className="space-y-6 text-xs">
+          {/* Identity & Handle Section */}
+          <div className="border border-neutral-200 dark:border-neutral-700 p-4 bg-neutral-50/50 dark:bg-neutral-800/40">
+            <span className="text-[11px] font-semibold text-neutral-800 dark:text-neutral-200 tracking-wider uppercase block mb-3">
+              PROFILE IDENTIFIER
+            </span>
+            <div>
+              <label htmlFor="profile-handle-input" className="block text-neutral-600 dark:text-neutral-400 mb-1.5 uppercase tracking-wide">
+                Handle / Username
+              </label>
+              <input
+                id="profile-handle-input"
+                type="text"
+                value={formData.handle || ''}
+                onChange={(e) => update('handle', e.target.value)}
+                placeholder="e.g. alex_c"
+                className="w-full px-3 py-1.5 border border-neutral-300 dark:border-neutral-700 text-[11px] bg-white dark:bg-neutral-800 text-neutral-900 dark:text-neutral-100 focus:outline-none focus:border-black dark:focus:border-white font-sans"
+              />
+            </div>
+          </div>
+
           {/* Hair Section */}
           <div className="border border-neutral-200 p-4 bg-neutral-50/50">
             <span className="text-[11px] font-semibold text-neutral-800 tracking-wider uppercase block mb-3">

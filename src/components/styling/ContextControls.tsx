@@ -163,7 +163,7 @@ export function ContextControls({
               </span>
             )}
           </div>
-          <span className="text-[10px] text-neutral-400 dark:text-neutral-500 uppercase">
+          <span className="text-[10px] text-neutral-600 dark:text-neutral-400 uppercase">
             OCCASION
           </span>
         </div>
@@ -204,7 +204,7 @@ export function ContextControls({
         {/* Sub-parameters for Workplace, Interview, and Wedding */}
         {currentOccasion.subParameters && onSelectSubParameter && (
           <div className="mt-3 flex items-center gap-2 pt-2 border-t border-neutral-100 dark:border-neutral-800">
-            <span className="text-[10px] text-neutral-400 dark:text-neutral-500 uppercase tracking-wide">
+            <span className="text-[10px] text-neutral-600 dark:text-neutral-400 uppercase tracking-wide">
               SUB-SETTING:
             </span>
             <div className="flex flex-wrap gap-1">
@@ -322,7 +322,7 @@ export function ContextControls({
                 );
               })}
             </div>
-            <span className="text-[10px] text-neutral-400 dark:text-neutral-500 italic hidden xl:inline">
+            <span className="text-[10px] text-neutral-600 dark:text-neutral-400 italic hidden xl:inline">
               Rain adds water-resistant outer layers and footwear
             </span>
           </div>
@@ -331,7 +331,7 @@ export function ContextControls({
         {/* Formality Slider with Occasion Band Enforced (F-04) */}
         {onSelectFormality && (
           <div className="flex items-center gap-2">
-            <span id="formality-group-label" className="text-[10px] uppercase tracking-wider text-neutral-400 dark:text-neutral-500">
+            <span id="formality-group-label" className="text-[10px] uppercase tracking-wider text-neutral-600 dark:text-neutral-400 font-medium">
               FORMALITY ({minAllowed}–{maxAllowed}):
             </span>
             <div
@@ -355,7 +355,7 @@ export function ContextControls({
                       isCurrent
                         ? 'border-neutral-900 bg-neutral-900 text-white dark:border-white dark:bg-white dark:text-black font-semibold'
                         : isOutOfBand
-                        ? 'border-dashed border-neutral-300 dark:border-neutral-700 bg-neutral-50 dark:bg-neutral-800/50 text-neutral-400 dark:text-neutral-500 hover:border-neutral-600'
+                        ? 'border-dashed border-neutral-300 dark:border-neutral-700 bg-neutral-50 dark:bg-neutral-800/50 text-neutral-600 dark:text-neutral-400 hover:border-neutral-600'
                         : 'border-neutral-200 dark:border-neutral-700 bg-white dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300 hover:border-neutral-400'
                     }`}
                     title={isOutOfBand ? `Outside usual ${currentOccasion.name} band (${minAllowed}-${maxAllowed})` : undefined}
@@ -368,7 +368,7 @@ export function ContextControls({
           </div>
         )}
       </div>
-      <div className="text-[10px] text-neutral-400 dark:text-neutral-500 italic xl:hidden">
+      <div className="text-[10px] text-neutral-600 dark:text-neutral-400 italic xl:hidden">
         Rain adds water-resistant outer layers and footwear
       </div>
 

@@ -102,7 +102,7 @@ export function StylePreferences({
                   className={`px-1.5 py-0.5 uppercase tracking-wider rounded-xs transition ${
                     isDisliked
                       ? 'bg-red-200 dark:bg-red-900 text-red-900 dark:text-red-100 font-semibold'
-                      : 'text-neutral-400 dark:text-neutral-500 hover:text-red-700'
+                      : 'text-neutral-600 dark:text-neutral-400 hover:text-red-700'
                   }`}
                 >
                   {isDisliked ? 'AVOIDED' : 'AVOID'}

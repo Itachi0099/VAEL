@@ -108,13 +108,13 @@ export function LookCard({ look, isExpanded = false }: LookCardProps) {
       {/* Outfit Breakdown */}
       <div className="p-5 space-y-4 grow">
         <div>
-          <span className="text-[10px] uppercase tracking-widest text-neutral-400 dark:text-neutral-500 font-semibold block mb-2.5">
+          <span className="text-[10px] uppercase tracking-widest text-neutral-600 dark:text-neutral-400 font-semibold block mb-2.5">
             OUTFIT COMPOSITION
           </span>
           <div className="space-y-2 text-[11px]">
             {topGarment && (
               <div className="flex items-start justify-between gap-2 pb-1.5 border-b border-neutral-100 dark:border-neutral-800">
-                <span className="text-neutral-500 dark:text-neutral-400 uppercase text-[10px] shrink-0">TOP</span>
+                <span className="text-neutral-600 dark:text-neutral-400 uppercase text-[10px] shrink-0">TOP</span>
                 <div className="text-right">
                   <span className="font-semibold text-neutral-900 dark:text-neutral-100 block">{topGarment.garment.name}</span>
                   {topGarment.stylingNote && (
@@ -173,28 +173,28 @@ export function LookCard({ look, isExpanded = false }: LookCardProps) {
 
         {/* Coordinated Hair & Grooming */}
         <div className="pt-2 border-t border-neutral-200 dark:border-neutral-800">
-          <span className="text-[10px] uppercase tracking-widest text-neutral-400 dark:text-neutral-500 font-semibold block mb-2">
+          <span className="text-[10px] uppercase tracking-widest text-neutral-600 dark:text-neutral-400 font-semibold block mb-2">
             COORDINATED HAIR & GROOMING
           </span>
           <div className="grid grid-cols-2 gap-2 text-[11px] bg-neutral-50 dark:bg-neutral-800/60 p-2.5 border border-neutral-200 dark:border-neutral-700">
             <div>
-              <span className="text-neutral-400 dark:text-neutral-500 block text-[9px] uppercase">HAIRSTYLE</span>
+              <span className="text-neutral-600 dark:text-neutral-400 block text-[9px] uppercase font-medium">HAIRSTYLE</span>
               <span className="font-semibold text-neutral-900 dark:text-neutral-100 block">
                 {hairStyle ? hairStyle.item.name : 'Natural texture preserved'}
               </span>
               {hairStyle?.reasons?.[0] && (
-                <span className="text-[9px] text-neutral-500 dark:text-neutral-400 line-clamp-1 mt-0.5 block">
+                <span className="text-[9px] text-neutral-600 dark:text-neutral-400 line-clamp-1 mt-0.5 block">
                   {hairStyle.reasons[0]}
                 </span>
               )}
             </div>
             <div>
-              <span className="text-neutral-400 dark:text-neutral-500 block text-[9px] uppercase">GROOMING</span>
+              <span className="text-neutral-600 dark:text-neutral-400 block text-[9px] uppercase font-medium">GROOMING</span>
               <span className="font-semibold text-neutral-900 dark:text-neutral-100 block">
                 {groomingStyle ? groomingStyle.item.name : 'Disciplined perimeter'}
               </span>
               {groomingStyle?.reasons?.[0] && (
-                <span className="text-[9px] text-neutral-500 dark:text-neutral-400 line-clamp-1 mt-0.5 block">
+                <span className="text-[9px] text-neutral-600 dark:text-neutral-400 line-clamp-1 mt-0.5 block">
                   {groomingStyle.reasons[0]}
                 </span>
               )}
@@ -204,14 +204,14 @@ export function LookCard({ look, isExpanded = false }: LookCardProps) {
 
         {/* Honest Reasons */}
         <div className="pt-2">
-          <span className="text-[10px] uppercase tracking-widest text-neutral-400 dark:text-neutral-500 font-semibold block mb-1.5">
+          <span className="text-[10px] uppercase tracking-widest text-neutral-600 dark:text-neutral-400 font-semibold block mb-1.5">
             WHY THIS WORKS (HONEST REASONS)
           </span>
           <ul className="space-y-1.5 text-[11px] text-neutral-700 dark:text-neutral-300">
             {look.traceableReasons && look.traceableReasons.length > 0 ? (
               look.traceableReasons.slice(0, 3).map((tr) => (
                 <li key={tr.reasonId} className="flex items-start gap-1.5">
-                  <span className="text-neutral-400 font-bold">•</span>
+                  <span className="text-neutral-600 dark:text-neutral-400 font-bold">•</span>
                   <div className="grow">
                     <span>{tr.text}</span>
                     {tr.isAssumed && (
@@ -246,7 +246,7 @@ export function LookCard({ look, isExpanded = false }: LookCardProps) {
         {/* Honest Confidence Calibration */}
         {confidence.toIncreaseConfidence && (
           <div className="bg-neutral-50 dark:bg-neutral-800/50 border border-neutral-200 dark:border-neutral-700 p-2.5 text-[10px] text-neutral-600 dark:text-neutral-400">
-            <span className="text-neutral-400 dark:text-neutral-500 uppercase tracking-wider font-semibold block mb-0.5">
+            <span className="text-neutral-600 dark:text-neutral-400 uppercase tracking-wider font-semibold block mb-0.5">
               TO INCREASE CONFIDENCE:
             </span>
             <p className="font-sans italic">{confidence.toIncreaseConfidence}</p>
